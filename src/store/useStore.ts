@@ -24,7 +24,7 @@ interface StoreState {
 
 export const useStore = create<StoreState>((set) => ({
   // Theme — read from localStorage or default to dark
-  theme: (typeof window !== 'undefined' && localStorage.getItem('pba-theme') as Theme) || 'dark',
+  theme: (typeof window !== 'undefined' ? (localStorage.getItem('pba-theme') as Theme | null) : null) || 'dark',
   toggleTheme: () => set((state) => {
     const next = state.theme === 'dark' ? 'light' : 'dark';
     localStorage.setItem('pba-theme', next);
