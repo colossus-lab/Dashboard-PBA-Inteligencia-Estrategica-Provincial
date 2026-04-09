@@ -114,12 +114,12 @@ function Sidebar() {
   return (
     <>
       <div
-        className="fixed inset-0 z-40 bg-black/50"
+        className="fixed inset-0 z-40"
+        style={{ background: 'rgba(0, 0, 0, 0.5)' }}
         onClick={() => setSidebarOpen(false)}
       />
-      <aside className="fixed left-0 top-16 bottom-0 w-72 z-50 overflow-y-auto sidebar slide-in-right" style={{
+      <aside className="sidebar-mobile z-50 overflow-y-auto sidebar slide-in-left" style={{
         background: 'var(--bg-secondary)',
-        borderRight: '1px solid var(--border-glass)',
       }}>
         <nav className="p-4">
           <h3 className="text-xs font-semibold uppercase tracking-wider mb-3" style={{ color: 'var(--text-tertiary)' }}>
