@@ -211,44 +211,44 @@ function findChartsForSection(charts: ChartConfig[], sectionSlug: string, sectio
   // Never assign charts to the intro section (no heading = index 0 with empty slug)
   if (sectionIndex === 0 || sectionSlug === '') return [];
 
-  // Try fuzzy matching: check if chart sectionId keywords overlap with section slug
+  // Common words that appear in many sections — not useful for matching
+  const stopWords = new Set(['los', 'las', 'del', 'por', 'con', 'una', 'que', 'mas', 'entre', 'sin']);
+
   const matched = charts.filter(chart => {
     if (!chart.sectionId || chart.sectionId.length === 0) return false;
-    const chartWords = chart.sectionId.split('-').filter(w => w.length > 2);
-    const sectionWords = sectionSlug.split('-').filter(w => w.length > 2);
-    // Check if any significant word from the chart sectionId is in the section slug
-    const overlap = chartWords.filter(w => sectionWords.includes(w));
-    if (overlap.length >= 1) return true;
-    // Also check direct substring matches (only if both are non-empty)
+
+    // Exact match first
+    if (sectionSlug === chart.sectionId) return true;
+
+    // Direct substring match (strict direction: sectionId contained in slug)
     if (sectionSlug.length > 3 && chart.sectionId.length > 3) {
-      if (sectionSlug.includes(chart.sectionId) || chart.sectionId.includes(sectionSlug)) return true;
+      if (sectionSlug.includes(chart.sectionId)) return true;
     }
-    return false;
+
+    // Word overlap matching (stricter: need significant overlap)
+    const chartWords = chart.sectionId.split('-').filter(w => w.length > 2 && !stopWords.has(w));
+    const sectionWords = sectionSlug.split('-').filter(w => w.length > 2 && !stopWords.has(w));
+    const overlap = chartWords.filter(w => sectionWords.includes(w));
+
+    // Require at least 2 overlapping words, OR majority of chart words must match
+    if (chartWords.length <= 2) {
+      return overlap.length >= chartWords.length; // all words must match for short IDs
+    }
+    return overlap.length >= 2 && overlap.length >= chartWords.length * 0.5;
   });
 
   if (matched.length > 0) return matched;
 
-  // Distribute unmatched charts across content sections (skip first which is intro)
+  // Fallback: distribute remaining unmatched charts only if NO chart has a sectionId at all
+  const anyHasSectionId = charts.some(chart => chart.sectionId && chart.sectionId.length > 0);
+  if (anyHasSectionId) return [];
+
   if (totalSections <= 1) return charts;
-  
-  const contentSectionIndex = sectionIndex - 1; // Skip the intro section
+  const contentSectionIndex = sectionIndex - 1;
   if (contentSectionIndex < 0) return [];
-  
-  // Simple distribution: assign chart i to section (i % contentSections)
   const contentSections = totalSections - 1;
   if (contentSections <= 0) return [];
-  
-  const myCharts = charts.filter((_, chartIdx) => {
-    return (chartIdx % contentSections) === contentSectionIndex;
-  });
-  
-  // Only return distributed charts if none were fuzzy-matched to any section
-  const anyFuzzyMatch = charts.some(chart => {
-    const chartWords = chart.sectionId.split('-').filter(w => w.length > 2);
-    return chartWords.length > 0;
-  });
-  
-  return anyFuzzyMatch ? [] : myCharts;
+  return charts.filter((_, chartIdx) => (chartIdx % contentSections) === contentSectionIndex);
 }
 
 // ─── Helpers ───

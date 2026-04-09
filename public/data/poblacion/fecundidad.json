@@ -66,38 +66,31 @@
       "title": "Distribución de mujeres por cantidad de hijos",
       "sectionId": "dimensionamiento",
       "data": [
-        {
-          "id": "Sin hijos",
-          "value": 2044540
-        },
-        {
-          "id": "1 hijo",
-          "value": 778592
-        },
-        {
-          "id": "2 hijos",
-          "value": 924829
-        },
-        {
-          "id": "3 hijos",
-          "value": 483809
-        },
-        {
-          "id": "4 hijos",
-          "value": 214097
-        },
-        {
-          "id": "5 o más",
-          "value": 223064
-        }
+        { "id": "Sin hijos", "value": 2044540 },
+        { "id": "1 hijo", "value": 778592 },
+        { "id": "2 hijos", "value": 924829 },
+        { "id": "3 hijos", "value": 483809 },
+        { "id": "4 hijos", "value": 214097 },
+        { "id": "5 o más", "value": 223064 }
       ]
     },
     {
       "id": "top-fecundidad",
       "type": "bar",
-      "title": "Top 15 municipios — Mayor fecundidad",
-      "sectionId": "mayor-fecundidad",
-      "data": [],
+      "title": "Top 10 municipios — Mayor fecundidad",
+      "sectionId": "mapa-de-fecundidad-por-partido",
+      "data": [
+        { "municipio": "Florencio Varela", "promedio_hijos": 1.7 },
+        { "municipio": "José C. Paz", "promedio_hijos": 1.7 },
+        { "municipio": "Presidente Perón", "promedio_hijos": 1.7 },
+        { "municipio": "Gral. Rodríguez", "promedio_hijos": 1.7 },
+        { "municipio": "San Pedro", "promedio_hijos": 1.7 },
+        { "municipio": "San Vicente", "promedio_hijos": 1.7 },
+        { "municipio": "F. Ameghino", "promedio_hijos": 1.7 },
+        { "municipio": "Moreno", "promedio_hijos": 1.6 },
+        { "municipio": "Ezeiza", "promedio_hijos": 1.6 },
+        { "municipio": "Marcos Paz", "promedio_hijos": 1.6 }
+      ],
       "config": {
         "xAxis": "municipio",
         "layout": "horizontal"
@@ -106,45 +99,53 @@
     {
       "id": "bottom-fecundidad",
       "type": "bar",
-      "title": "Top 10 municipios — Menor fecundidad",
-      "sectionId": "menor-fecundidad",
-      "data": [],
+      "title": "Top 9 municipios — Menor fecundidad",
+      "sectionId": "mapa-de-fecundidad-por-partido",
+      "data": [
+        { "municipio": "Vicente López", "promedio_hijos": 0.9 },
+        { "municipio": "Morón", "promedio_hijos": 1.0 },
+        { "municipio": "La Plata", "promedio_hijos": 1.1 },
+        { "municipio": "Bahía Blanca", "promedio_hijos": 1.1 },
+        { "municipio": "San Isidro", "promedio_hijos": 1.1 },
+        { "municipio": "Ituzaingó", "promedio_hijos": 1.1 },
+        { "municipio": "Tres de Febrero", "promedio_hijos": 1.1 },
+        { "municipio": "Tandil", "promedio_hijos": 1.2 },
+        { "municipio": "Gral. Pueyrredón", "promedio_hijos": 1.2 }
+      ],
       "config": {
         "xAxis": "municipio",
-        "layout": "horizontal",
-        "colorScheme": "greens"
+        "layout": "horizontal"
       }
     },
     {
       "id": "fecundidad-educacion",
       "type": "bar",
       "title": "Fecundidad por nivel educativo",
-      "sectionId": "fecundidad-educacion",
-      "data": [],
+      "sectionId": "fecundidad-y-educacion",
+      "data": [
+        { "nivel": "Primario", "promedio_hijos": 1.90 },
+        { "nivel": "Secundario", "promedio_hijos": 0.40 },
+        { "nivel": "Terciario", "promedio_hijos": 0.83 },
+        { "nivel": "Universitario", "promedio_hijos": 0.44 },
+        { "nivel": "Posgrado", "promedio_hijos": 1.02 }
+      ],
       "config": {
         "xAxis": "nivel"
       }
     },
     {
-      "id": "scatter-fecundidad",
-      "type": "scatter",
-      "title": "Fecundidad vs % sin hijos por municipio",
-      "sectionId": "brecha-fecundidad",
-      "data": [],
-      "config": {
-        "xAxis": "% sin hijos",
-        "yAxis": "Promedio hijos/mujer"
-      }
+      "id": "polarizacion",
+      "type": "pie",
+      "title": "Polarización: familias numerosas vs sin hijos",
+      "sectionId": "analisis-de-la-distribucion",
+      "data": [
+        { "id": "Sin hijos", "value": 2044540 },
+        { "id": "1-2 hijos", "value": 1703421 },
+        { "id": "3 hijos", "value": 483809 },
+        { "id": "4+ hijos", "value": 437161 }
+      ]
     }
   ],
-  "rankings": [
-    {
-      "id": "ranking-fecundidad",
-      "title": "Ranking de fecundidad por municipio",
-      "sectionId": "mapa-fecundidad",
-      "items": [],
-      "order": "desc"
-    }
-  ],
+  "rankings": [],
   "mapData": []
 }
