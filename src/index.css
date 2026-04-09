@@ -506,13 +506,21 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
 }
 
-/* Styled tables */
+/* Styled tables — wrapped for horizontal scroll */
+.markdown-content .table-scroll-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1rem 0;
+  border-radius: var(--radius-md);
+}
+
 .markdown-content table {
   width: 100%;
   border-collapse: collapse;
   font-size: 0.75rem;
-  table-layout: fixed;
-  margin: 1rem 0;
+  table-layout: auto;
+  margin: 0;
+  min-width: 100%;
 }
 
 .markdown-content table th,
@@ -520,8 +528,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 5px 6px;
   border: 1px solid var(--border-glass);
   text-align: left;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .markdown-content table th {
@@ -536,20 +543,29 @@ h1, h2, h3, h4, h5, h6 {
 
 .markdown-content table td {
   font-variant-numeric: tabular-nums;
+  white-space: normal;
+  min-width: 80px;
 }
 
 .markdown-content table tr:nth-child(even) {
   background: rgba(0, 188, 212, 0.04);
 }
 
-/* On mobile, allow table horizontal scroll */
+/* On mobile, ensure tables can scroll */
 @media (max-width: 767px) {
   .markdown-content {
-    overflow-x: auto;
+    overflow-x: visible;
+  }
+  .scrolly-split > .markdown-content {
+    overflow: visible;
   }
   .markdown-content table {
-    table-layout: auto;
-    min-width: 500px;
+    min-width: 480px;
+    font-size: 0.72rem;
+  }
+  .markdown-content table th,
+  .markdown-content table td {
+    padding: 4px 5px;
   }
 }
 
@@ -910,6 +926,7 @@ h1, h2, h3, h4, h5, h6 {
     position: sticky;
     top: 80px;
     min-width: 0;
+    z-index: 1; /* Below sidebar overlay (z-40) */
   }
 
   .scrolly-sticky > .chart-card + .chart-card {

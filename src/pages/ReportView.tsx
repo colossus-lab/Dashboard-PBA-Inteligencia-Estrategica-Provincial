@@ -10,6 +10,13 @@ import { MapaPBA } from '../components/charts/MapaPBA';
 import { useStore } from '../store/useStore';
 import type { ReportEntry, ChartConfig } from '../types/report';
 
+// Wrap tables in scrollable container for mobile
+const mdComponents = {
+  table: ({children, ...props}: React.ComponentPropsWithoutRef<'table'>) => (
+    <div className="table-scroll-wrapper"><table {...props}>{children}</table></div>
+  ),
+};
+
 export function ReportView() {
   const params = useParams();
   const slug = params['*'] || '';
@@ -129,7 +136,7 @@ function ReportContent({ reportEntry }: { reportEntry: ReportEntry }) {
                 {/* Desktop: split layout */}
                 <div className="scrolly-split desktop-only">
                   <div className="markdown-content">
-                    <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                    <ReactMarkdown remarkPlugins={[remarkGfm]} components={mdComponents}>
                       {section.content}
                     </ReactMarkdown>
                   </div>
@@ -145,7 +152,7 @@ function ReportContent({ reportEntry }: { reportEntry: ReportEntry }) {
                 {/* Mobile: inline flow (text then charts) */}
                 <div className="mobile-only">
                   <div className="markdown-content">
-                    <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                    <ReactMarkdown remarkPlugins={[remarkGfm]} components={mdComponents}>
                       {section.content}
                     </ReactMarkdown>
                   </div>
@@ -162,7 +169,7 @@ function ReportContent({ reportEntry }: { reportEntry: ReportEntry }) {
             ) : (
               // Full-width text only
               <div className="markdown-content max-w-3xl">
-                <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                <ReactMarkdown remarkPlugins={[remarkGfm]} components={mdComponents}>
                   {section.content}
                 </ReactMarkdown>
               </div>

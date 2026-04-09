@@ -66,6 +66,8 @@ export function ChartRenderer({ chart, height = 400 }: ChartRendererProps) {
       return <PieChartView chart={chart} height={height} />;
     case 'line':
       return <LineChartView chart={chart} height={height} />;
+    case 'pyramid':
+      return <PyramidChartView chart={chart} height={height} />;
     case 'map':
       return <MapaPBA mapData={chart.data} title={chart.title} height={height} />;
     default:
@@ -217,6 +219,93 @@ function LineChartView({ chart, height }: { chart: ChartConfig; height: number }
         animate={true}
         motionConfig="gentle"
         useMesh={true}
+      />
+    </div>
+  );
+}
+
+// ─── Pyramid Chart (Diverging Horizontal Bar) ───
+function PyramidChartView({ chart, height }: { chart: ChartConfig; height: number }) {
+  const { theme, isDark } = useChartTheme();
+  const mobile = useIsMobile();
+
+  const pyramidData = chart.data.map((d: Record<string, unknown>) => ({
+    grupo: String(d.grupo || d.group || d.id || ''),
+    Mujeres: Number(d.mujeres || d.Mujeres || 0),
+    Varones: -Number(d.varones || d.Varones || 0),
+  }));
+
+  const cappedHeight = Math.max(360, Math.min(height, pyramidData.length * (mobile ? 24 : 28) + 80));
+
+  return (
+    <div style={{ height: cappedHeight }}>
+      <ResponsiveBar
+        data={pyramidData}
+        keys={['Varones', 'Mujeres']}
+        indexBy="grupo"
+        layout="horizontal"
+        margin={{
+          top: 10,
+          right: mobile ? 10 : 20,
+          bottom: 50,
+          left: mobile ? 50 : 60,
+        }}
+        padding={0.2}
+        colors={[isDark ? '#60a5fa' : '#3b82f6', isDark ? '#f472b6' : '#ec4899']}
+        borderRadius={2}
+        axisBottom={{
+          tickSize: 0,
+          tickPadding: 5,
+          format: (v: number) => {
+            const abs = Math.abs(v);
+            if (abs >= 1_000_000) return `${(abs / 1_000_000).toFixed(1)}M`;
+            if (abs >= 1_000) return `${(abs / 1_000).toFixed(0)}K`;
+            return String(abs);
+          },
+        }}
+        axisLeft={{ tickSize: 0, tickPadding: 5 }}
+        enableGridX={true}
+        enableGridY={false}
+        theme={theme}
+        animate={true}
+        motionConfig="gentle"
+        labelSkipWidth={40}
+        labelTextColor="#ffffff"
+        label={d => {
+          const abs = Math.abs(Number(d.value));
+          if (abs >= 1_000_000) return `${(abs / 1_000_000).toFixed(1)}M`;
+          if (abs >= 1_000) return `${(abs / 1_000).toFixed(0)}K`;
+          return String(abs);
+        }}
+        tooltip={({ id, value, indexValue, color }) => (
+          <div style={{
+            padding: '8px 12px',
+            background: isDark ? '#1e293b' : '#fff',
+            color: isDark ? '#f1f5f9' : '#0f172a',
+            borderRadius: '8px',
+            boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+            fontSize: '13px',
+            border: `2px solid ${color}`,
+          }}>
+            <strong>{String(indexValue)}</strong><br />
+            {String(id)}: {Math.abs(Number(value)).toLocaleString('es-AR')}
+          </div>
+        )}
+        legends={[{
+          dataFrom: 'keys',
+          anchor: 'bottom',
+          direction: 'row',
+          translateY: 44,
+          itemWidth: 100,
+          itemHeight: 18,
+          itemTextColor: isDark ? '#94a3b8' : '#475569',
+          symbolSize: 10,
+          symbolShape: 'circle',
+          data: [
+            { id: 'Varones', label: 'Varones', color: isDark ? '#60a5fa' : '#3b82f6' },
+            { id: 'Mujeres', label: 'Mujeres', color: isDark ? '#f472b6' : '#ec4899' },
+          ],
+        }]}
       />
     </div>
   );
