@@ -1,0 +1,1796 @@
+{
+  "meta": {
+    "id": "poblacion-economia",
+    "title": "Características Económicas de la Población",
+    "category": "poblacion",
+    "subcategory": "economia",
+    "source": "INDEC — Censo Nacional 2022. Cuadro C1.2",
+    "date": "2022-05-18"
+  },
+  "kpis": [
+    {
+      "id": "pob14",
+      "label": "Población 14+ años",
+      "value": 13857399,
+      "formatted": "13.857.399",
+      "unit": "personas"
+    },
+    {
+      "id": "pea",
+      "label": "PEA",
+      "value": 8942700,
+      "formatted": "8.942.700",
+      "unit": "personas"
+    },
+    {
+      "id": "tasa-actividad",
+      "label": "Tasa de actividad",
+      "value": 64.5,
+      "formatted": "64,5%",
+      "unit": "%"
+    },
+    {
+      "id": "ocupados",
+      "label": "Ocupados",
+      "value": 8120465,
+      "formatted": "8.120.465",
+      "unit": "personas",
+      "status": "good"
+    },
+    {
+      "id": "desocupados",
+      "label": "Desocupados",
+      "value": 822235,
+      "formatted": "822.235",
+      "unit": "personas",
+      "status": "critical"
+    },
+    {
+      "id": "tasa-desocupacion",
+      "label": "Tasa de desocupación",
+      "value": 9.2,
+      "formatted": "9,2%",
+      "unit": "%",
+      "status": "critical"
+    },
+    {
+      "id": "pnea",
+      "label": "Inactivos (PNEA)",
+      "value": 4914699,
+      "formatted": "4.914.699",
+      "unit": "personas"
+    },
+    {
+      "id": "desocup-gba",
+      "label": "Desocupación GBA",
+      "value": 9.9,
+      "formatted": "9,9%",
+      "unit": "%",
+      "status": "critical"
+    },
+    {
+      "id": "desocup-interior",
+      "label": "Desocupación interior",
+      "value": 8.1,
+      "formatted": "8,1%",
+      "unit": "%",
+      "status": "warning"
+    }
+  ],
+  "charts": [
+    {
+      "id": "pea-pnea-donut",
+      "type": "pie",
+      "title": "Distribución PEA vs PNEA",
+      "sectionId": "dimensionamiento",
+      "data": [
+        {
+          "id": "PEA (Activos)",
+          "value": 8942700,
+          "label": "8.942.700 (64,5%)"
+        },
+        {
+          "id": "PNEA (Inactivos)",
+          "value": 4914699,
+          "label": "4.914.699 (35,5%)"
+        }
+      ]
+    },
+    {
+      "id": "gba-vs-interior",
+      "type": "bar",
+      "title": "Desocupación: GBA vs Interior",
+      "sectionId": "brecha-gba-interior",
+      "data": [
+        {
+          "zona": "GBA (24 partidos)",
+          "Tasa desocupación": 9.9,
+          "Tasa actividad": 64.6
+        },
+        {
+          "zona": "Interior PBA",
+          "Tasa desocupación": 8.1,
+          "Tasa actividad": 64.5
+        }
+      ],
+      "config": {
+        "xAxis": "zona",
+        "colorScheme": "set2"
+      }
+    },
+    {
+      "id": "top-desocupacion",
+      "type": "bar",
+      "title": "Top 15 municipios — Mayor desocupación",
+      "sectionId": "ranking-desocupacion",
+      "data": [
+        {
+          "municipio": "La Costa",
+          "Tasa desocupación (%)": 12.3
+        },
+        {
+          "municipio": "Zárate",
+          "Tasa desocupación (%)": 12.1
+        },
+        {
+          "municipio": "Malvinas Argentinas",
+          "Tasa desocupación (%)": 11.3
+        },
+        {
+          "municipio": "Campana",
+          "Tasa desocupación (%)": 11.3
+        },
+        {
+          "municipio": "José C. Paz",
+          "Tasa desocupación (%)": 11.2
+        },
+        {
+          "municipio": "Florencio Varela",
+          "Tasa desocupación (%)": 11.1
+        },
+        {
+          "municipio": "Berazategui",
+          "Tasa desocupación (%)": 10.7
+        },
+        {
+          "municipio": "Almirante Brown",
+          "Tasa desocupación (%)": 10.6
+        },
+        {
+          "municipio": "Esteban Echeverría",
+          "Tasa desocupación (%)": 10.4
+        },
+        {
+          "municipio": "Quilmes",
+          "Tasa desocupación (%)": 10.4
+        },
+        {
+          "municipio": "Avellaneda",
+          "Tasa desocupación (%)": 10.3
+        },
+        {
+          "municipio": "Merlo",
+          "Tasa desocupación (%)": 10.3
+        },
+        {
+          "municipio": "Hurlingham",
+          "Tasa desocupación (%)": 10.2
+        },
+        {
+          "municipio": "San Nicolás",
+          "Tasa desocupación (%)": 10.2
+        },
+        {
+          "municipio": "Berisso",
+          "Tasa desocupación (%)": 10.1
+        }
+      ],
+      "config": {
+        "xAxis": "municipio",
+        "layout": "horizontal"
+      }
+    },
+    {
+      "id": "bottom-desocupacion",
+      "type": "bar",
+      "title": "Top 10 municipios — Menor desocupación",
+      "sectionId": "municipios-menor-desocupacion",
+      "data": [
+        {
+          "municipio": "Salliqueló",
+          "Tasa desocupación (%)": 3.9
+        },
+        {
+          "municipio": "Tordillo",
+          "Tasa desocupación (%)": 3.9
+        },
+        {
+          "municipio": "Pila",
+          "Tasa desocupación (%)": 4
+        },
+        {
+          "municipio": "General Guido",
+          "Tasa desocupación (%)": 4.1
+        },
+        {
+          "municipio": "San Antonio de Areco",
+          "Tasa desocupación (%)": 4.1
+        },
+        {
+          "municipio": "Laprida",
+          "Tasa desocupación (%)": 4.2
+        },
+        {
+          "municipio": "Roque Pérez",
+          "Tasa desocupación (%)": 4.3
+        },
+        {
+          "municipio": "Saladillo",
+          "Tasa desocupación (%)": 4.4
+        },
+        {
+          "municipio": "Adolfo Alsina",
+          "Tasa desocupación (%)": 4.5
+        },
+        {
+          "municipio": "General Alvear",
+          "Tasa desocupación (%)": 4.5
+        }
+      ],
+      "config": {
+        "xAxis": "municipio",
+        "layout": "horizontal",
+        "colorScheme": "greens"
+      }
+    },
+    {
+      "id": "volumen-desocupados",
+      "type": "bar",
+      "title": "Municipios con más desocupados (absoluto)",
+      "sectionId": "volumen-desocupacion",
+      "data": [
+        {
+          "municipio": "La Matanza",
+          "Desocupados": 88352
+        },
+        {
+          "municipio": "Quilmes",
+          "Desocupados": 33176
+        },
+        {
+          "municipio": "Lomas de Zamora",
+          "Desocupados": 32662
+        },
+        {
+          "municipio": "La Plata",
+          "Desocupados": 32565
+        },
+        {
+          "municipio": "General Pueyrredón",
+          "Desocupados": 31101
+        },
+        {
+          "municipio": "Almirante Brown",
+          "Desocupados": 30973
+        },
+        {
+          "municipio": "Merlo",
+          "Desocupados": 29228
+        },
+        {
+          "municipio": "Moreno",
+          "Desocupados": 28240
+        },
+        {
+          "municipio": "Florencio Varela",
+          "Desocupados": 26019
+        },
+        {
+          "municipio": "Lanús",
+          "Desocupados": 24375
+        }
+      ],
+      "config": {
+        "xAxis": "municipio",
+        "layout": "horizontal"
+      }
+    }
+  ],
+  "rankings": [
+    {
+      "id": "ranking-desocupacion-full",
+      "title": "Ranking de desocupación por municipio",
+      "sectionId": "ranking-desocupacion",
+      "items": [
+        {
+          "name": "La Costa",
+          "value": 12.3,
+          "municipioId": "06420"
+        },
+        {
+          "name": "Zárate",
+          "value": 12.1,
+          "municipioId": "06882"
+        },
+        {
+          "name": "Malvinas Argentinas",
+          "value": 11.3,
+          "municipioId": "06515"
+        },
+        {
+          "name": "Campana",
+          "value": 11.3,
+          "municipioId": "06126"
+        },
+        {
+          "name": "José C. Paz",
+          "value": 11.2,
+          "municipioId": "06412"
+        },
+        {
+          "name": "Florencio Varela",
+          "value": 11.1,
+          "municipioId": "06274"
+        },
+        {
+          "name": "Berazategui",
+          "value": 10.7,
+          "municipioId": "06091"
+        },
+        {
+          "name": "Almirante Brown",
+          "value": 10.6,
+          "municipioId": "06028"
+        },
+        {
+          "name": "Esteban Echeverría",
+          "value": 10.4,
+          "municipioId": "06260"
+        },
+        {
+          "name": "Quilmes",
+          "value": 10.4,
+          "municipioId": "06658"
+        },
+        {
+          "name": "Avellaneda",
+          "value": 10.3,
+          "municipioId": "06035"
+        },
+        {
+          "name": "Merlo",
+          "value": 10.3,
+          "municipioId": "06539"
+        },
+        {
+          "name": "Hurlingham",
+          "value": 10.2,
+          "municipioId": "06408"
+        },
+        {
+          "name": "San Nicolás",
+          "value": 10.2,
+          "municipioId": "06763"
+        },
+        {
+          "name": "Berisso",
+          "value": 10.1,
+          "municipioId": "06098"
+        },
+        {
+          "name": "Lanús",
+          "value": 10,
+          "municipioId": "06434"
+        },
+        {
+          "name": "Coronel de Marina Leonardo\nRosales",
+          "value": 10,
+          "municipioId": "06182"
+        },
+        {
+          "name": "Ensenada",
+          "value": 10,
+          "municipioId": "06245"
+        },
+        {
+          "name": "Moreno",
+          "value": 9.9,
+          "municipioId": "06560"
+        },
+        {
+          "name": "Presidente Perón",
+          "value": 9.9,
+          "municipioId": "06648"
+        },
+        {
+          "name": "Ezeiza",
+          "value": 9.8,
+          "municipioId": "06270"
+        },
+        {
+          "name": "San Miguel",
+          "value": 9.8,
+          "municipioId": "06760"
+        },
+        {
+          "name": "General San Martín",
+          "value": 9.7,
+          "municipioId": "06371"
+        },
+        {
+          "name": "Ituzaingó",
+          "value": 9.6,
+          "municipioId": "06410"
+        },
+        {
+          "name": "La Matanza",
+          "value": 9.6,
+          "municipioId": "06427"
+        },
+        {
+          "name": "Pilar",
+          "value": 9.6,
+          "municipioId": "06638"
+        },
+        {
+          "name": "Villa Gesell",
+          "value": 9.5,
+          "municipioId": "06868"
+        },
+        {
+          "name": "San Fernando",
+          "value": 9.4,
+          "municipioId": "06749"
+        },
+        {
+          "name": "Escobar",
+          "value": 9.4,
+          "municipioId": "06252"
+        },
+        {
+          "name": "General Rodríguez",
+          "value": 9.4,
+          "municipioId": "06364"
+        },
+        {
+          "name": "Lomas de Zamora",
+          "value": 9.3,
+          "municipioId": "06490"
+        },
+        {
+          "name": "Morón",
+          "value": 9.3,
+          "municipioId": "06568"
+        },
+        {
+          "name": "Tigre",
+          "value": 9.3,
+          "municipioId": "06805"
+        },
+        {
+          "name": "Tres de Febrero",
+          "value": 9.2,
+          "municipioId": "06840"
+        },
+        {
+          "name": "Marcos Paz",
+          "value": 9.1,
+          "municipioId": "06525"
+        },
+        {
+          "name": "San Vicente",
+          "value": 9.1,
+          "municipioId": "06778"
+        },
+        {
+          "name": "General Pueyrredón",
+          "value": 9,
+          "municipioId": "06357"
+        },
+        {
+          "name": "Mar Chiquita",
+          "value": 8.9,
+          "municipioId": "06518"
+        },
+        {
+          "name": "Bahía Blanca",
+          "value": 8.8,
+          "municipioId": "06056"
+        },
+        {
+          "name": "Baradero",
+          "value": 8.8,
+          "municipioId": "06070"
+        },
+        {
+          "name": "General Alvarado",
+          "value": 8.7,
+          "municipioId": "06280"
+        },
+        {
+          "name": "Pinamar",
+          "value": 8.5,
+          "municipioId": "06644"
+        },
+        {
+          "name": "Necochea",
+          "value": 8.3,
+          "municipioId": "06581"
+        },
+        {
+          "name": "San Isidro",
+          "value": 8.2,
+          "municipioId": "06756"
+        },
+        {
+          "name": "San Pedro",
+          "value": 8.2,
+          "municipioId": "06770"
+        },
+        {
+          "name": "Luján",
+          "value": 8.1,
+          "municipioId": "06497"
+        },
+        {
+          "name": "Olavarría",
+          "value": 8.1,
+          "municipioId": "06595"
+        },
+        {
+          "name": "Azul",
+          "value": 8,
+          "municipioId": "06049"
+        },
+        {
+          "name": "General Viamonte",
+          "value": 8,
+          "municipioId": "06385"
+        },
+        {
+          "name": "La Plata",
+          "value": 7.9,
+          "municipioId": "06441"
+        },
+        {
+          "name": "Cañuelas",
+          "value": 7.8,
+          "municipioId": "06134"
+        },
+        {
+          "name": "Hipólito Yrigoyen",
+          "value": 7.8,
+          "municipioId": "06406"
+        },
+        {
+          "name": "Ramallo",
+          "value": 7.8,
+          "municipioId": "06665"
+        },
+        {
+          "name": "Vicente López",
+          "value": 7.7,
+          "municipioId": "06861"
+        },
+        {
+          "name": "Magdalena",
+          "value": 7.7,
+          "municipioId": "06505"
+        },
+        {
+          "name": "Pergamino",
+          "value": 7.7,
+          "municipioId": "06623"
+        },
+        {
+          "name": "Balcarce",
+          "value": 7.4,
+          "municipioId": "06063"
+        },
+        {
+          "name": "Dolores",
+          "value": 7.4,
+          "municipioId": "06238"
+        },
+        {
+          "name": "Chivilcoy",
+          "value": 7.3,
+          "municipioId": "06224"
+        },
+        {
+          "name": "Brandsen",
+          "value": 7.2,
+          "municipioId": "06119"
+        },
+        {
+          "name": "Colón",
+          "value": 7.2,
+          "municipioId": "06175"
+        },
+        {
+          "name": "Chascomús",
+          "value": 7.2,
+          "municipioId": "06218"
+        },
+        {
+          "name": "Salto",
+          "value": 7.2,
+          "municipioId": "06714"
+        },
+        {
+          "name": "Benito Juárez",
+          "value": 7,
+          "municipioId": "06084"
+        },
+        {
+          "name": "General Lavalle",
+          "value": 7,
+          "municipioId": "06336"
+        },
+        {
+          "name": "Tandil",
+          "value": 6.9,
+          "municipioId": "06791"
+        },
+        {
+          "name": "Junín",
+          "value": 6.8,
+          "municipioId": "06413"
+        },
+        {
+          "name": "Florentino Ameghino",
+          "value": 6.7,
+          "municipioId": "06277"
+        },
+        {
+          "name": "Mercedes",
+          "value": 6.7,
+          "municipioId": "06532"
+        },
+        {
+          "name": "Bragado",
+          "value": 6.6,
+          "municipioId": "06112"
+        },
+        {
+          "name": "Pehuajó",
+          "value": 6.6,
+          "municipioId": "06609"
+        },
+        {
+          "name": "Exaltación de la Cruz",
+          "value": 6.5,
+          "municipioId": "06266"
+        },
+        {
+          "name": "General Juan Madariaga",
+          "value": 6.5,
+          "municipioId": "06315"
+        },
+        {
+          "name": "General Las Heras",
+          "value": 6.5,
+          "municipioId": "06329"
+        },
+        {
+          "name": "Monte Hermoso",
+          "value": 6.5,
+          "municipioId": "06553"
+        },
+        {
+          "name": "Coronel Dorrego",
+          "value": 6.4,
+          "municipioId": "06189"
+        },
+        {
+          "name": "Monte",
+          "value": 6.4,
+          "municipioId": "06547"
+        },
+        {
+          "name": "Patagones",
+          "value": 6.3,
+          "municipioId": "06602"
+        },
+        {
+          "name": "Tres Arroyos",
+          "value": 6.3,
+          "municipioId": "06833"
+        },
+        {
+          "name": "Arrecifes",
+          "value": 6.2,
+          "municipioId": "06077"
+        },
+        {
+          "name": "Daireaux",
+          "value": 6.2,
+          "municipioId": "06231"
+        },
+        {
+          "name": "General Paz",
+          "value": 6.2,
+          "municipioId": "06343"
+        },
+        {
+          "name": "Lobos",
+          "value": 6.2,
+          "municipioId": "06483"
+        },
+        {
+          "name": "Ayacucho",
+          "value": 6.1,
+          "municipioId": "06042"
+        },
+        {
+          "name": "Capitán Sarmiento",
+          "value": 6.1,
+          "municipioId": "06140"
+        },
+        {
+          "name": "Carlos Tejedor",
+          "value": 6.1,
+          "municipioId": "06154"
+        },
+        {
+          "name": "General Belgrano",
+          "value": 6.1,
+          "municipioId": "06301"
+        },
+        {
+          "name": "Carmen de Areco",
+          "value": 6,
+          "municipioId": "06161"
+        },
+        {
+          "name": "Coronel Suárez",
+          "value": 6,
+          "municipioId": "06203"
+        },
+        {
+          "name": "Punta Indio",
+          "value": 6,
+          "municipioId": "06655"
+        },
+        {
+          "name": "Chacabuco",
+          "value": 5.9,
+          "municipioId": "06210"
+        },
+        {
+          "name": "General Villegas",
+          "value": 5.9,
+          "municipioId": "06392"
+        },
+        {
+          "name": "Las Flores",
+          "value": 5.9,
+          "municipioId": "06455"
+        },
+        {
+          "name": "Bolívar",
+          "value": 5.8,
+          "municipioId": "06105"
+        },
+        {
+          "name": "Tapalqué",
+          "value": 5.8,
+          "municipioId": "06798"
+        },
+        {
+          "name": "Rojas",
+          "value": 5.7,
+          "municipioId": "06686"
+        },
+        {
+          "name": "25 de Mayo",
+          "value": 5.7,
+          "municipioId": "06854"
+        },
+        {
+          "name": "Maipú",
+          "value": 5.6,
+          "municipioId": "06511"
+        },
+        {
+          "name": "Navarro",
+          "value": 5.6,
+          "municipioId": "06574"
+        },
+        {
+          "name": "General Pinto",
+          "value": 5.5,
+          "municipioId": "06351"
+        },
+        {
+          "name": "Lobería",
+          "value": 5.5,
+          "municipioId": "06476"
+        },
+        {
+          "name": "San Cayetano",
+          "value": 5.5,
+          "municipioId": "06742"
+        },
+        {
+          "name": "Villarino",
+          "value": 5.5,
+          "municipioId": "06875"
+        },
+        {
+          "name": "Adolfo Gonzales Chaves",
+          "value": 5.4,
+          "municipioId": "06014"
+        },
+        {
+          "name": "Coronel Pringles",
+          "value": 5.4,
+          "municipioId": "06196"
+        },
+        {
+          "name": "Lezama",
+          "value": 5.4,
+          "municipioId": "06466"
+        },
+        {
+          "name": "9 de Julio",
+          "value": 5.4,
+          "municipioId": "06588"
+        },
+        {
+          "name": "Suipacha",
+          "value": 5.4,
+          "municipioId": "06784"
+        },
+        {
+          "name": "Tornquist",
+          "value": 5.1,
+          "municipioId": "06819"
+        },
+        {
+          "name": "Pellegrini",
+          "value": 5,
+          "municipioId": "06616"
+        },
+        {
+          "name": "Lincoln",
+          "value": 4.9,
+          "municipioId": "06469"
+        },
+        {
+          "name": "Puan",
+          "value": 4.9,
+          "municipioId": "06651"
+        },
+        {
+          "name": "San Andres de Giles",
+          "value": 4.9,
+          "municipioId": "06728"
+        },
+        {
+          "name": "Trenque Lauquen",
+          "value": 4.9,
+          "municipioId": "06826"
+        },
+        {
+          "name": "Alberti",
+          "value": 4.8,
+          "municipioId": "06021"
+        },
+        {
+          "name": "Carlos Casares",
+          "value": 4.8,
+          "municipioId": "06147"
+        },
+        {
+          "name": "Rauch",
+          "value": 4.8,
+          "municipioId": "06672"
+        },
+        {
+          "name": "Castelli",
+          "value": 4.7,
+          "municipioId": "06168"
+        },
+        {
+          "name": "General Arenales",
+          "value": 4.7,
+          "municipioId": "06294"
+        },
+        {
+          "name": "Guaminí",
+          "value": 4.6,
+          "municipioId": "06399"
+        },
+        {
+          "name": "Rivadavia",
+          "value": 4.6,
+          "municipioId": "06679"
+        },
+        {
+          "name": "Saavedra",
+          "value": 4.6,
+          "municipioId": "06700"
+        },
+        {
+          "name": "Adolfo Alsina",
+          "value": 4.5,
+          "municipioId": "06007"
+        },
+        {
+          "name": "General Alvear",
+          "value": 4.5,
+          "municipioId": "06287"
+        },
+        {
+          "name": "General La Madrid",
+          "value": 4.5,
+          "municipioId": "06322"
+        },
+        {
+          "name": "Leandro N. Alem",
+          "value": 4.5,
+          "municipioId": "06462"
+        },
+        {
+          "name": "Tres Lomas",
+          "value": 4.5,
+          "municipioId": "06847"
+        },
+        {
+          "name": "Saladillo",
+          "value": 4.4,
+          "municipioId": "06707"
+        },
+        {
+          "name": "Roque Pérez",
+          "value": 4.3,
+          "municipioId": "06693"
+        },
+        {
+          "name": "Laprida",
+          "value": 4.2,
+          "municipioId": "06448"
+        },
+        {
+          "name": "General Guido",
+          "value": 4.1,
+          "municipioId": "06308"
+        },
+        {
+          "name": "San Antonio de Areco",
+          "value": 4.1,
+          "municipioId": "06735"
+        },
+        {
+          "name": "Pila",
+          "value": 4,
+          "municipioId": "06630"
+        },
+        {
+          "name": "Salliqueló",
+          "value": 3.9,
+          "municipioId": "06721"
+        },
+        {
+          "name": "Tordillo",
+          "value": 3.9,
+          "municipioId": "06812"
+        }
+      ],
+      "order": "desc"
+    }
+  ],
+  "mapData": [
+    {
+      "municipioId": "06028",
+      "municipioNombre": "Almirante Brown",
+      "value": 10.6,
+      "label": "10.6%"
+    },
+    {
+      "municipioId": "06035",
+      "municipioNombre": "Avellaneda",
+      "value": 10.3,
+      "label": "10.3%"
+    },
+    {
+      "municipioId": "06091",
+      "municipioNombre": "Berazategui",
+      "value": 10.7,
+      "label": "10.7%"
+    },
+    {
+      "municipioId": "06260",
+      "municipioNombre": "Esteban Echeverría",
+      "value": 10.4,
+      "label": "10.4%"
+    },
+    {
+      "municipioId": "06270",
+      "municipioNombre": "Ezeiza",
+      "value": 9.8,
+      "label": "9.8%"
+    },
+    {
+      "municipioId": "06274",
+      "municipioNombre": "Florencio Varela",
+      "value": 11.1,
+      "label": "11.1%"
+    },
+    {
+      "municipioId": "06371",
+      "municipioNombre": "General San Martín",
+      "value": 9.7,
+      "label": "9.7%"
+    },
+    {
+      "municipioId": "06408",
+      "municipioNombre": "Hurlingham",
+      "value": 10.2,
+      "label": "10.2%"
+    },
+    {
+      "municipioId": "06410",
+      "municipioNombre": "Ituzaingó",
+      "value": 9.6,
+      "label": "9.6%"
+    },
+    {
+      "municipioId": "06412",
+      "municipioNombre": "José C. Paz",
+      "value": 11.2,
+      "label": "11.2%"
+    },
+    {
+      "municipioId": "06427",
+      "municipioNombre": "La Matanza",
+      "value": 9.6,
+      "label": "9.6%"
+    },
+    {
+      "municipioId": "06434",
+      "municipioNombre": "Lanús",
+      "value": 10,
+      "label": "10%"
+    },
+    {
+      "municipioId": "06490",
+      "municipioNombre": "Lomas de Zamora",
+      "value": 9.3,
+      "label": "9.3%"
+    },
+    {
+      "municipioId": "06515",
+      "municipioNombre": "Malvinas Argentinas",
+      "value": 11.3,
+      "label": "11.3%"
+    },
+    {
+      "municipioId": "06539",
+      "municipioNombre": "Merlo",
+      "value": 10.3,
+      "label": "10.3%"
+    },
+    {
+      "municipioId": "06560",
+      "municipioNombre": "Moreno",
+      "value": 9.9,
+      "label": "9.9%"
+    },
+    {
+      "municipioId": "06568",
+      "municipioNombre": "Morón",
+      "value": 9.3,
+      "label": "9.3%"
+    },
+    {
+      "municipioId": "06658",
+      "municipioNombre": "Quilmes",
+      "value": 10.4,
+      "label": "10.4%"
+    },
+    {
+      "municipioId": "06749",
+      "municipioNombre": "San Fernando",
+      "value": 9.4,
+      "label": "9.4%"
+    },
+    {
+      "municipioId": "06756",
+      "municipioNombre": "San Isidro",
+      "value": 8.2,
+      "label": "8.2%"
+    },
+    {
+      "municipioId": "06760",
+      "municipioNombre": "San Miguel",
+      "value": 9.8,
+      "label": "9.8%"
+    },
+    {
+      "municipioId": "06805",
+      "municipioNombre": "Tigre",
+      "value": 9.3,
+      "label": "9.3%"
+    },
+    {
+      "municipioId": "06840",
+      "municipioNombre": "Tres de Febrero",
+      "value": 9.2,
+      "label": "9.2%"
+    },
+    {
+      "municipioId": "06861",
+      "municipioNombre": "Vicente López",
+      "value": 7.7,
+      "label": "7.7%"
+    },
+    {
+      "municipioId": "06007",
+      "municipioNombre": "Adolfo Alsina",
+      "value": 4.5,
+      "label": "4.5%"
+    },
+    {
+      "municipioId": "06014",
+      "municipioNombre": "Adolfo Gonzales Chaves",
+      "value": 5.4,
+      "label": "5.4%"
+    },
+    {
+      "municipioId": "06021",
+      "municipioNombre": "Alberti",
+      "value": 4.8,
+      "label": "4.8%"
+    },
+    {
+      "municipioId": "06042",
+      "municipioNombre": "Ayacucho",
+      "value": 6.1,
+      "label": "6.1%"
+    },
+    {
+      "municipioId": "06049",
+      "municipioNombre": "Azul",
+      "value": 8,
+      "label": "8%"
+    },
+    {
+      "municipioId": "06056",
+      "municipioNombre": "Bahía Blanca",
+      "value": 8.8,
+      "label": "8.8%"
+    },
+    {
+      "municipioId": "06063",
+      "municipioNombre": "Balcarce",
+      "value": 7.4,
+      "label": "7.4%"
+    },
+    {
+      "municipioId": "06070",
+      "municipioNombre": "Baradero",
+      "value": 8.8,
+      "label": "8.8%"
+    },
+    {
+      "municipioId": "06077",
+      "municipioNombre": "Arrecifes",
+      "value": 6.2,
+      "label": "6.2%"
+    },
+    {
+      "municipioId": "06084",
+      "municipioNombre": "Benito Juárez",
+      "value": 7,
+      "label": "7%"
+    },
+    {
+      "municipioId": "06098",
+      "municipioNombre": "Berisso",
+      "value": 10.1,
+      "label": "10.1%"
+    },
+    {
+      "municipioId": "06105",
+      "municipioNombre": "Bolívar",
+      "value": 5.8,
+      "label": "5.8%"
+    },
+    {
+      "municipioId": "06112",
+      "municipioNombre": "Bragado",
+      "value": 6.6,
+      "label": "6.6%"
+    },
+    {
+      "municipioId": "06119",
+      "municipioNombre": "Brandsen",
+      "value": 7.2,
+      "label": "7.2%"
+    },
+    {
+      "municipioId": "06126",
+      "municipioNombre": "Campana",
+      "value": 11.3,
+      "label": "11.3%"
+    },
+    {
+      "municipioId": "06134",
+      "municipioNombre": "Cañuelas",
+      "value": 7.8,
+      "label": "7.8%"
+    },
+    {
+      "municipioId": "06140",
+      "municipioNombre": "Capitán Sarmiento",
+      "value": 6.1,
+      "label": "6.1%"
+    },
+    {
+      "municipioId": "06147",
+      "municipioNombre": "Carlos Casares",
+      "value": 4.8,
+      "label": "4.8%"
+    },
+    {
+      "municipioId": "06154",
+      "municipioNombre": "Carlos Tejedor",
+      "value": 6.1,
+      "label": "6.1%"
+    },
+    {
+      "municipioId": "06161",
+      "municipioNombre": "Carmen de Areco",
+      "value": 6,
+      "label": "6%"
+    },
+    {
+      "municipioId": "06168",
+      "municipioNombre": "Castelli",
+      "value": 4.7,
+      "label": "4.7%"
+    },
+    {
+      "municipioId": "06175",
+      "municipioNombre": "Colón",
+      "value": 7.2,
+      "label": "7.2%"
+    },
+    {
+      "municipioId": "06182",
+      "municipioNombre": "Coronel de Marina Leonardo\nRosales",
+      "value": 10,
+      "label": "10%"
+    },
+    {
+      "municipioId": "06189",
+      "municipioNombre": "Coronel Dorrego",
+      "value": 6.4,
+      "label": "6.4%"
+    },
+    {
+      "municipioId": "06196",
+      "municipioNombre": "Coronel Pringles",
+      "value": 5.4,
+      "label": "5.4%"
+    },
+    {
+      "municipioId": "06203",
+      "municipioNombre": "Coronel Suárez",
+      "value": 6,
+      "label": "6%"
+    },
+    {
+      "municipioId": "06210",
+      "municipioNombre": "Chacabuco",
+      "value": 5.9,
+      "label": "5.9%"
+    },
+    {
+      "municipioId": "06218",
+      "municipioNombre": "Chascomús",
+      "value": 7.2,
+      "label": "7.2%"
+    },
+    {
+      "municipioId": "06224",
+      "municipioNombre": "Chivilcoy",
+      "value": 7.3,
+      "label": "7.3%"
+    },
+    {
+      "municipioId": "06231",
+      "municipioNombre": "Daireaux",
+      "value": 6.2,
+      "label": "6.2%"
+    },
+    {
+      "municipioId": "06238",
+      "municipioNombre": "Dolores",
+      "value": 7.4,
+      "label": "7.4%"
+    },
+    {
+      "municipioId": "06245",
+      "municipioNombre": "Ensenada",
+      "value": 10,
+      "label": "10%"
+    },
+    {
+      "municipioId": "06252",
+      "municipioNombre": "Escobar",
+      "value": 9.4,
+      "label": "9.4%"
+    },
+    {
+      "municipioId": "06266",
+      "municipioNombre": "Exaltación de la Cruz",
+      "value": 6.5,
+      "label": "6.5%"
+    },
+    {
+      "municipioId": "06277",
+      "municipioNombre": "Florentino Ameghino",
+      "value": 6.7,
+      "label": "6.7%"
+    },
+    {
+      "municipioId": "06280",
+      "municipioNombre": "General Alvarado",
+      "value": 8.7,
+      "label": "8.7%"
+    },
+    {
+      "municipioId": "06287",
+      "municipioNombre": "General Alvear",
+      "value": 4.5,
+      "label": "4.5%"
+    },
+    {
+      "municipioId": "06294",
+      "municipioNombre": "General Arenales",
+      "value": 4.7,
+      "label": "4.7%"
+    },
+    {
+      "municipioId": "06301",
+      "municipioNombre": "General Belgrano",
+      "value": 6.1,
+      "label": "6.1%"
+    },
+    {
+      "municipioId": "06308",
+      "municipioNombre": "General Guido",
+      "value": 4.1,
+      "label": "4.1%"
+    },
+    {
+      "municipioId": "06315",
+      "municipioNombre": "General Juan Madariaga",
+      "value": 6.5,
+      "label": "6.5%"
+    },
+    {
+      "municipioId": "06322",
+      "municipioNombre": "General La Madrid",
+      "value": 4.5,
+      "label": "4.5%"
+    },
+    {
+      "municipioId": "06329",
+      "municipioNombre": "General Las Heras",
+      "value": 6.5,
+      "label": "6.5%"
+    },
+    {
+      "municipioId": "06336",
+      "municipioNombre": "General Lavalle",
+      "value": 7,
+      "label": "7%"
+    },
+    {
+      "municipioId": "06343",
+      "municipioNombre": "General Paz",
+      "value": 6.2,
+      "label": "6.2%"
+    },
+    {
+      "municipioId": "06351",
+      "municipioNombre": "General Pinto",
+      "value": 5.5,
+      "label": "5.5%"
+    },
+    {
+      "municipioId": "06357",
+      "municipioNombre": "General Pueyrredón",
+      "value": 9,
+      "label": "9%"
+    },
+    {
+      "municipioId": "06364",
+      "municipioNombre": "General Rodríguez",
+      "value": 9.4,
+      "label": "9.4%"
+    },
+    {
+      "municipioId": "06385",
+      "municipioNombre": "General Viamonte",
+      "value": 8,
+      "label": "8%"
+    },
+    {
+      "municipioId": "06392",
+      "municipioNombre": "General Villegas",
+      "value": 5.9,
+      "label": "5.9%"
+    },
+    {
+      "municipioId": "06399",
+      "municipioNombre": "Guaminí",
+      "value": 4.6,
+      "label": "4.6%"
+    },
+    {
+      "municipioId": "06406",
+      "municipioNombre": "Hipólito Yrigoyen",
+      "value": 7.8,
+      "label": "7.8%"
+    },
+    {
+      "municipioId": "06413",
+      "municipioNombre": "Junín",
+      "value": 6.8,
+      "label": "6.8%"
+    },
+    {
+      "municipioId": "06420",
+      "municipioNombre": "La Costa",
+      "value": 12.3,
+      "label": "12.3%"
+    },
+    {
+      "municipioId": "06441",
+      "municipioNombre": "La Plata",
+      "value": 7.9,
+      "label": "7.9%"
+    },
+    {
+      "municipioId": "06448",
+      "municipioNombre": "Laprida",
+      "value": 4.2,
+      "label": "4.2%"
+    },
+    {
+      "municipioId": "06455",
+      "municipioNombre": "Las Flores",
+      "value": 5.9,
+      "label": "5.9%"
+    },
+    {
+      "municipioId": "06462",
+      "municipioNombre": "Leandro N. Alem",
+      "value": 4.5,
+      "label": "4.5%"
+    },
+    {
+      "municipioId": "06466",
+      "municipioNombre": "Lezama",
+      "value": 5.4,
+      "label": "5.4%"
+    },
+    {
+      "municipioId": "06469",
+      "municipioNombre": "Lincoln",
+      "value": 4.9,
+      "label": "4.9%"
+    },
+    {
+      "municipioId": "06476",
+      "municipioNombre": "Lobería",
+      "value": 5.5,
+      "label": "5.5%"
+    },
+    {
+      "municipioId": "06483",
+      "municipioNombre": "Lobos",
+      "value": 6.2,
+      "label": "6.2%"
+    },
+    {
+      "municipioId": "06497",
+      "municipioNombre": "Luján",
+      "value": 8.1,
+      "label": "8.1%"
+    },
+    {
+      "municipioId": "06505",
+      "municipioNombre": "Magdalena",
+      "value": 7.7,
+      "label": "7.7%"
+    },
+    {
+      "municipioId": "06511",
+      "municipioNombre": "Maipú",
+      "value": 5.6,
+      "label": "5.6%"
+    },
+    {
+      "municipioId": "06518",
+      "municipioNombre": "Mar Chiquita",
+      "value": 8.9,
+      "label": "8.9%"
+    },
+    {
+      "municipioId": "06525",
+      "municipioNombre": "Marcos Paz",
+      "value": 9.1,
+      "label": "9.1%"
+    },
+    {
+      "municipioId": "06532",
+      "municipioNombre": "Mercedes",
+      "value": 6.7,
+      "label": "6.7%"
+    },
+    {
+      "municipioId": "06547",
+      "municipioNombre": "Monte",
+      "value": 6.4,
+      "label": "6.4%"
+    },
+    {
+      "municipioId": "06553",
+      "municipioNombre": "Monte Hermoso",
+      "value": 6.5,
+      "label": "6.5%"
+    },
+    {
+      "municipioId": "06574",
+      "municipioNombre": "Navarro",
+      "value": 5.6,
+      "label": "5.6%"
+    },
+    {
+      "municipioId": "06581",
+      "municipioNombre": "Necochea",
+      "value": 8.3,
+      "label": "8.3%"
+    },
+    {
+      "municipioId": "06588",
+      "municipioNombre": "9 de Julio",
+      "value": 5.4,
+      "label": "5.4%"
+    },
+    {
+      "municipioId": "06595",
+      "municipioNombre": "Olavarría",
+      "value": 8.1,
+      "label": "8.1%"
+    },
+    {
+      "municipioId": "06602",
+      "municipioNombre": "Patagones",
+      "value": 6.3,
+      "label": "6.3%"
+    },
+    {
+      "municipioId": "06609",
+      "municipioNombre": "Pehuajó",
+      "value": 6.6,
+      "label": "6.6%"
+    },
+    {
+      "municipioId": "06616",
+      "municipioNombre": "Pellegrini",
+      "value": 5,
+      "label": "5%"
+    },
+    {
+      "municipioId": "06623",
+      "municipioNombre": "Pergamino",
+      "value": 7.7,
+      "label": "7.7%"
+    },
+    {
+      "municipioId": "06630",
+      "municipioNombre": "Pila",
+      "value": 4,
+      "label": "4%"
+    },
+    {
+      "municipioId": "06638",
+      "municipioNombre": "Pilar",
+      "value": 9.6,
+      "label": "9.6%"
+    },
+    {
+      "municipioId": "06644",
+      "municipioNombre": "Pinamar",
+      "value": 8.5,
+      "label": "8.5%"
+    },
+    {
+      "municipioId": "06648",
+      "municipioNombre": "Presidente Perón",
+      "value": 9.9,
+      "label": "9.9%"
+    },
+    {
+      "municipioId": "06651",
+      "municipioNombre": "Puan",
+      "value": 4.9,
+      "label": "4.9%"
+    },
+    {
+      "municipioId": "06655",
+      "municipioNombre": "Punta Indio",
+      "value": 6,
+      "label": "6%"
+    },
+    {
+      "municipioId": "06665",
+      "municipioNombre": "Ramallo",
+      "value": 7.8,
+      "label": "7.8%"
+    },
+    {
+      "municipioId": "06672",
+      "municipioNombre": "Rauch",
+      "value": 4.8,
+      "label": "4.8%"
+    },
+    {
+      "municipioId": "06679",
+      "municipioNombre": "Rivadavia",
+      "value": 4.6,
+      "label": "4.6%"
+    },
+    {
+      "municipioId": "06686",
+      "municipioNombre": "Rojas",
+      "value": 5.7,
+      "label": "5.7%"
+    },
+    {
+      "municipioId": "06693",
+      "municipioNombre": "Roque Pérez",
+      "value": 4.3,
+      "label": "4.3%"
+    },
+    {
+      "municipioId": "06700",
+      "municipioNombre": "Saavedra",
+      "value": 4.6,
+      "label": "4.6%"
+    },
+    {
+      "municipioId": "06707",
+      "municipioNombre": "Saladillo",
+      "value": 4.4,
+      "label": "4.4%"
+    },
+    {
+      "municipioId": "06714",
+      "municipioNombre": "Salto",
+      "value": 7.2,
+      "label": "7.2%"
+    },
+    {
+      "municipioId": "06721",
+      "municipioNombre": "Salliqueló",
+      "value": 3.9,
+      "label": "3.9%"
+    },
+    {
+      "municipioId": "06728",
+      "municipioNombre": "San Andres de Giles",
+      "value": 4.9,
+      "label": "4.9%"
+    },
+    {
+      "municipioId": "06735",
+      "municipioNombre": "San Antonio de Areco",
+      "value": 4.1,
+      "label": "4.1%"
+    },
+    {
+      "municipioId": "06742",
+      "municipioNombre": "San Cayetano",
+      "value": 5.5,
+      "label": "5.5%"
+    },
+    {
+      "municipioId": "06763",
+      "municipioNombre": "San Nicolás",
+      "value": 10.2,
+      "label": "10.2%"
+    },
+    {
+      "municipioId": "06770",
+      "municipioNombre": "San Pedro",
+      "value": 8.2,
+      "label": "8.2%"
+    },
+    {
+      "municipioId": "06778",
+      "municipioNombre": "San Vicente",
+      "value": 9.1,
+      "label": "9.1%"
+    },
+    {
+      "municipioId": "06784",
+      "municipioNombre": "Suipacha",
+      "value": 5.4,
+      "label": "5.4%"
+    },
+    {
+      "municipioId": "06791",
+      "municipioNombre": "Tandil",
+      "value": 6.9,
+      "label": "6.9%"
+    },
+    {
+      "municipioId": "06798",
+      "municipioNombre": "Tapalqué",
+      "value": 5.8,
+      "label": "5.8%"
+    },
+    {
+      "municipioId": "06812",
+      "municipioNombre": "Tordillo",
+      "value": 3.9,
+      "label": "3.9%"
+    },
+    {
+      "municipioId": "06819",
+      "municipioNombre": "Tornquist",
+      "value": 5.1,
+      "label": "5.1%"
+    },
+    {
+      "municipioId": "06826",
+      "municipioNombre": "Trenque Lauquen",
+      "value": 4.9,
+      "label": "4.9%"
+    },
+    {
+      "municipioId": "06833",
+      "municipioNombre": "Tres Arroyos",
+      "value": 6.3,
+      "label": "6.3%"
+    },
+    {
+      "municipioId": "06847",
+      "municipioNombre": "Tres Lomas",
+      "value": 4.5,
+      "label": "4.5%"
+    },
+    {
+      "municipioId": "06854",
+      "municipioNombre": "25 de Mayo",
+      "value": 5.7,
+      "label": "5.7%"
+    },
+    {
+      "municipioId": "06868",
+      "municipioNombre": "Villa Gesell",
+      "value": 9.5,
+      "label": "9.5%"
+    },
+    {
+      "municipioId": "06875",
+      "municipioNombre": "Villarino",
+      "value": 5.5,
+      "label": "5.5%"
+    },
+    {
+      "municipioId": "06882",
+      "municipioNombre": "Zárate",
+      "value": 12.1,
+      "label": "12.1%"
+    }
+  ]
+}

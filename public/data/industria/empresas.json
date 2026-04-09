@@ -1,0 +1,266 @@
+[
+  {
+    "anio": 2007,
+    "empresas": 181448,
+    "establecimientos": 187860,
+    "segmento": "PyME"
+  },
+  {
+    "anio": 2007,
+    "empresas": 1055,
+    "establecimientos": 1223,
+    "segmento": "Economía del Conocimiento"
+  },
+  {
+    "anio": 2008,
+    "empresas": 189029,
+    "establecimientos": 195636,
+    "segmento": "PyME"
+  },
+  {
+    "anio": 2008,
+    "empresas": 1148,
+    "establecimientos": 1339,
+    "segmento": "Economía del Conocimiento"
+  },
+  {
+    "anio": 2009,
+    "empresas": 191261,
+    "establecimientos": 197603,
+    "segmento": "PyME"
+  },
+  {
+    "anio": 2009,
+    "empresas": 1126,
+    "establecimientos": 1312,
+    "segmento": "Economía del Conocimiento"
+  },
+  {
+    "anio": 2010,
+    "empresas": 193457,
+    "establecimientos": 199758,
+    "segmento": "PyME"
+  },
+  {
+    "anio": 2010,
+    "empresas": 1111,
+    "establecimientos": 1313,
+    "segmento": "Economía del Conocimiento"
+  },
+  {
+    "anio": 2011,
+    "empresas": 196403,
+    "establecimientos": 202648,
+    "segmento": "PyME"
+  },
+  {
+    "anio": 2011,
+    "empresas": 1172,
+    "establecimientos": 1393,
+    "segmento": "Economía del Conocimiento"
+  },
+  {
+    "anio": 2012,
+    "empresas": 196616,
+    "establecimientos": 202988,
+    "segmento": "PyME"
+  },
+  {
+    "anio": 2012,
+    "empresas": 1156,
+    "establecimientos": 1370,
+    "segmento": "Economía del Conocimiento"
+  },
+  {
+    "anio": 2013,
+    "empresas": 196239,
+    "establecimientos": 202681,
+    "segmento": "PyME"
+  },
+  {
+    "anio": 2013,
+    "empresas": 1115,
+    "establecimientos": 1325,
+    "segmento": "Economía del Conocimiento"
+  },
+  {
+    "anio": 2014,
+    "empresas": 194775,
+    "establecimientos": 201334,
+    "segmento": "PyME"
+  },
+  {
+    "anio": 2014,
+    "empresas": 1128,
+    "establecimientos": 1357,
+    "segmento": "Economía del Conocimiento"
+  },
+  {
+    "anio": 2014,
+    "empresas": 96831,
+    "establecimientos": 98727,
+    "segmento": "Emprendedores"
+  },
+  {
+    "anio": 2015,
+    "empresas": 194653,
+    "establecimientos": 201253,
+    "segmento": "PyME"
+  },
+  {
+    "anio": 2015,
+    "empresas": 1215,
+    "establecimientos": 1448,
+    "segmento": "Economía del Conocimiento"
+  },
+  {
+    "anio": 2015,
+    "empresas": 93519,
+    "establecimientos": 95394,
+    "segmento": "Emprendedores"
+  },
+  {
+    "anio": 2016,
+    "empresas": 194107,
+    "establecimientos": 200750,
+    "segmento": "PyME"
+  },
+  {
+    "anio": 2016,
+    "empresas": 1410,
+    "establecimientos": 1657,
+    "segmento": "Economía del Conocimiento"
+  },
+  {
+    "anio": 2016,
+    "empresas": 91963,
+    "establecimientos": 93887,
+    "segmento": "Emprendedores"
+  },
+  {
+    "anio": 2017,
+    "empresas": 193955,
+    "establecimientos": 201983,
+    "segmento": "PyME"
+  },
+  {
+    "anio": 2017,
+    "empresas": 1414,
+    "establecimientos": 1705,
+    "segmento": "Economía del Conocimiento"
+  },
+  {
+    "anio": 2017,
+    "empresas": 90072,
+    "establecimientos": 92486,
+    "segmento": "Emprendedores"
+  },
+  {
+    "anio": 2018,
+    "empresas": 191100,
+    "establecimientos": 198723,
+    "segmento": "PyME"
+  },
+  {
+    "anio": 2018,
+    "empresas": 1371,
+    "establecimientos": 1667,
+    "segmento": "Economía del Conocimiento"
+  },
+  {
+    "anio": 2018,
+    "empresas": 86000,
+    "establecimientos": 88294,
+    "segmento": "Emprendedores"
+  },
+  {
+    "anio": 2019,
+    "empresas": 184015,
+    "establecimientos": 191575,
+    "segmento": "PyME"
+  },
+  {
+    "anio": 2019,
+    "empresas": 1433,
+    "establecimientos": 1773,
+    "segmento": "Economía del Conocimiento"
+  },
+  {
+    "anio": 2019,
+    "empresas": 79646,
+    "establecimientos": 81862,
+    "segmento": "Emprendedores"
+  },
+  {
+    "anio": 2020,
+    "empresas": 172497,
+    "establecimientos": 179427,
+    "segmento": "PyME"
+  },
+  {
+    "anio": 2020,
+    "empresas": 1383,
+    "establecimientos": 1721,
+    "segmento": "Economía del Conocimiento"
+  },
+  {
+    "anio": 2020,
+    "empresas": 69266,
+    "establecimientos": 71027,
+    "segmento": "Emprendedores"
+  },
+  {
+    "anio": 2021,
+    "empresas": 169723,
+    "establecimientos": 177059,
+    "segmento": "PyME"
+  },
+  {
+    "anio": 2021,
+    "empresas": 1367,
+    "establecimientos": 1730,
+    "segmento": "Economía del Conocimiento"
+  },
+  {
+    "anio": 2021,
+    "empresas": 67229,
+    "establecimientos": 69145,
+    "segmento": "Emprendedores"
+  },
+  {
+    "anio": 2022,
+    "empresas": 175618,
+    "establecimientos": 190622,
+    "segmento": "PyME"
+  },
+  {
+    "anio": 2022,
+    "empresas": 1383,
+    "establecimientos": 2074,
+    "segmento": "Economía del Conocimiento"
+  },
+  {
+    "anio": 2022,
+    "empresas": 71448,
+    "establecimientos": 76549,
+    "segmento": "Emprendedores"
+  },
+  {
+    "anio": 2023,
+    "empresas": 177474,
+    "establecimientos": 193209,
+    "segmento": "PyME"
+  },
+  {
+    "anio": 2023,
+    "empresas": 1526,
+    "establecimientos": 2136,
+    "segmento": "Economía del Conocimiento"
+  },
+  {
+    "anio": 2023,
+    "empresas": 72820,
+    "establecimientos": 79216,
+    "segmento": "Emprendedores"
+  }
+]

@@ -1,0 +1,1456 @@
+{
+  "meta": {
+    "id": "industria",
+    "title": "Sector Industrial",
+    "category": "industria",
+    "source": "CEP XXI, Ministerio de Producción PBA",
+    "date": "2023"
+  },
+  "kpis": [
+    {
+      "id": "empresas-total",
+      "label": "Empresas industriales (2023)",
+      "value": 251820,
+      "formatted": "251.820",
+      "unit": "empresas"
+    },
+    {
+      "id": "establecimientos",
+      "label": "Establecimientos",
+      "value": 274561,
+      "formatted": "274.561",
+      "unit": "establecimientos"
+    },
+    {
+      "id": "parques-total",
+      "label": "Parques industriales",
+      "value": 238,
+      "formatted": "238",
+      "unit": "parques"
+    },
+    {
+      "id": "municipios-parques",
+      "label": "Municipios con parques",
+      "value": 112,
+      "formatted": "112",
+      "unit": "municipios"
+    }
+  ],
+  "charts": [
+    {
+      "id": "empresas-temporal",
+      "type": "line",
+      "title": "Evolución de empresas industriales",
+      "sectionId": "evolucion-empresas",
+      "data": [
+        {
+          "año": 2007,
+          "Empresas": 182503
+        },
+        {
+          "año": 2008,
+          "Empresas": 190177
+        },
+        {
+          "año": 2009,
+          "Empresas": 192387
+        },
+        {
+          "año": 2010,
+          "Empresas": 194568
+        },
+        {
+          "año": 2011,
+          "Empresas": 197575
+        },
+        {
+          "año": 2012,
+          "Empresas": 197772
+        },
+        {
+          "año": 2013,
+          "Empresas": 197354
+        },
+        {
+          "año": 2014,
+          "Empresas": 292734
+        },
+        {
+          "año": 2015,
+          "Empresas": 289387
+        },
+        {
+          "año": 2016,
+          "Empresas": 287480
+        },
+        {
+          "año": 2017,
+          "Empresas": 285441
+        },
+        {
+          "año": 2018,
+          "Empresas": 278471
+        },
+        {
+          "año": 2019,
+          "Empresas": 265094
+        },
+        {
+          "año": 2020,
+          "Empresas": 243146
+        },
+        {
+          "año": 2021,
+          "Empresas": 238319
+        },
+        {
+          "año": 2022,
+          "Empresas": 248449
+        },
+        {
+          "año": 2023,
+          "Empresas": 251820
+        }
+      ],
+      "config": {
+        "xAxis": "año"
+      }
+    },
+    {
+      "id": "empresas-segmento",
+      "type": "pie",
+      "title": "Empresas por segmento (2023)",
+      "sectionId": "segmentos",
+      "data": [
+        {
+          "id": "PyME",
+          "value": 177474
+        },
+        {
+          "id": "Economía del Conocimiento",
+          "value": 1526
+        },
+        {
+          "id": "Emprendedores",
+          "value": 72820
+        }
+      ]
+    },
+    {
+      "id": "parques-municipio",
+      "type": "bar",
+      "title": "Municipios con más parques industriales",
+      "sectionId": "parques",
+      "data": [
+        {
+          "municipio": "Moreno",
+          "Parques": 15
+        },
+        {
+          "municipio": "Berazategui",
+          "Parques": 11
+        },
+        {
+          "municipio": "Pilar",
+          "Parques": 10
+        },
+        {
+          "municipio": "Malvinas Argentinas",
+          "Parques": 9
+        },
+        {
+          "municipio": "Escobar",
+          "Parques": 8
+        },
+        {
+          "municipio": "Tigre",
+          "Parques": 7
+        },
+        {
+          "municipio": "La Matanza",
+          "Parques": 6
+        },
+        {
+          "municipio": "General San Martín",
+          "Parques": 6
+        },
+        {
+          "municipio": "Vicente López",
+          "Parques": 6
+        },
+        {
+          "municipio": "Esteban Echeverría",
+          "Parques": 5
+        },
+        {
+          "municipio": "General Rodríguez",
+          "Parques": 5
+        },
+        {
+          "municipio": "Campana",
+          "Parques": 5
+        },
+        {
+          "municipio": "Ezeiza",
+          "Parques": 5
+        },
+        {
+          "municipio": "Avellaneda",
+          "Parques": 4
+        },
+        {
+          "municipio": "Zárate",
+          "Parques": 4
+        }
+      ],
+      "config": {
+        "xAxis": "municipio",
+        "layout": "horizontal"
+      }
+    }
+  ],
+  "rankings": [
+    {
+      "id": "ranking-parques",
+      "title": "Parques industriales por municipio",
+      "sectionId": "parques",
+      "items": [
+        {
+          "name": "Moreno",
+          "value": 15,
+          "municipioId": "06560"
+        },
+        {
+          "name": "Berazategui",
+          "value": 11,
+          "municipioId": "06091"
+        },
+        {
+          "name": "Pilar",
+          "value": 10,
+          "municipioId": "06638"
+        },
+        {
+          "name": "Malvinas Argentinas",
+          "value": 9,
+          "municipioId": "06515"
+        },
+        {
+          "name": "Escobar",
+          "value": 8,
+          "municipioId": "06252"
+        },
+        {
+          "name": "Tigre",
+          "value": 7,
+          "municipioId": "06805"
+        },
+        {
+          "name": "La Matanza",
+          "value": 6,
+          "municipioId": "06427"
+        },
+        {
+          "name": "General San Martín",
+          "value": 6,
+          "municipioId": "06371"
+        },
+        {
+          "name": "Vicente López",
+          "value": 6,
+          "municipioId": "06861"
+        },
+        {
+          "name": "Esteban Echeverría",
+          "value": 5,
+          "municipioId": "06260"
+        },
+        {
+          "name": "General Rodríguez",
+          "value": 5,
+          "municipioId": "06364"
+        },
+        {
+          "name": "Campana",
+          "value": 5,
+          "municipioId": "06126"
+        },
+        {
+          "name": "Ezeiza",
+          "value": 5,
+          "municipioId": "06270"
+        },
+        {
+          "name": "Avellaneda",
+          "value": 4,
+          "municipioId": "06035"
+        },
+        {
+          "name": "Zárate",
+          "value": 4,
+          "municipioId": "06882"
+        },
+        {
+          "name": "Exaltación de la Cruz",
+          "value": 4,
+          "municipioId": "06266"
+        },
+        {
+          "name": "Olavarría",
+          "value": 4,
+          "municipioId": "06595"
+        },
+        {
+          "name": "La Plata",
+          "value": 3,
+          "municipioId": "06441"
+        },
+        {
+          "name": "Morón",
+          "value": 3,
+          "municipioId": "06568"
+        },
+        {
+          "name": "Azul",
+          "value": 3,
+          "municipioId": "06049"
+        },
+        {
+          "name": "Lanús",
+          "value": 3,
+          "municipioId": "06434"
+        },
+        {
+          "name": "General Pueyrredón",
+          "value": 2,
+          "municipioId": "06357"
+        },
+        {
+          "name": "Quilmes",
+          "value": 2,
+          "municipioId": "06658"
+        },
+        {
+          "name": "Pergamino",
+          "value": 2,
+          "municipioId": "06623"
+        },
+        {
+          "name": "Merlo",
+          "value": 2,
+          "municipioId": "06539"
+        },
+        {
+          "name": "San Vicente",
+          "value": 2,
+          "municipioId": "06778"
+        },
+        {
+          "name": "Cañuelas",
+          "value": 2,
+          "municipioId": "06134"
+        },
+        {
+          "name": "Florencio Varela",
+          "value": 2,
+          "municipioId": "06274"
+        },
+        {
+          "name": "Luján",
+          "value": 2,
+          "municipioId": "06497"
+        },
+        {
+          "name": "Hurlingham",
+          "value": 2,
+          "municipioId": "06408"
+        },
+        {
+          "name": "Berisso",
+          "value": 2,
+          "municipioId": "06098"
+        },
+        {
+          "name": "Alberti",
+          "value": 2,
+          "municipioId": "06021"
+        },
+        {
+          "name": "Balcarce",
+          "value": 2,
+          "municipioId": "06063"
+        },
+        {
+          "name": "Baradero",
+          "value": 2,
+          "municipioId": "06070"
+        },
+        {
+          "name": "Bolívar",
+          "value": 2,
+          "municipioId": "06105"
+        },
+        {
+          "name": "San Isidro",
+          "value": 2,
+          "municipioId": "06756"
+        },
+        {
+          "name": "Adolfo Gonzales Chaves",
+          "value": 2,
+          "municipioId": "06014"
+        },
+        {
+          "name": "Coronel Suárez",
+          "value": 2,
+          "municipioId": "06203"
+        },
+        {
+          "name": "Ensenada",
+          "value": 2,
+          "municipioId": "06245"
+        },
+        {
+          "name": "Puán",
+          "value": 2,
+          "municipioId": "06651"
+        },
+        {
+          "name": "Mercedes",
+          "value": 2,
+          "municipioId": "06532"
+        },
+        {
+          "name": "Tornquist",
+          "value": 2,
+          "municipioId": "06819"
+        },
+        {
+          "name": "Almirante Brown",
+          "value": 1,
+          "municipioId": "06028"
+        },
+        {
+          "name": "Lomas de Zamora",
+          "value": 1,
+          "municipioId": "06490"
+        },
+        {
+          "name": "Chacabuco",
+          "value": 1,
+          "municipioId": "06210"
+        },
+        {
+          "name": "Bahía Blanca",
+          "value": 1,
+          "municipioId": "06056"
+        },
+        {
+          "name": "General Alvarado",
+          "value": 1,
+          "municipioId": "06280"
+        },
+        {
+          "name": "Necochea",
+          "value": 1,
+          "municipioId": "06581"
+        },
+        {
+          "name": "Junín",
+          "value": 1,
+          "municipioId": "06413"
+        },
+        {
+          "name": "Bragado",
+          "value": 1,
+          "municipioId": "06112"
+        },
+        {
+          "name": "Tandil",
+          "value": 1,
+          "municipioId": "06791"
+        },
+        {
+          "name": "9 de Julio",
+          "value": 1,
+          "municipioId": "06588"
+        },
+        {
+          "name": "Ramallo",
+          "value": 1,
+          "municipioId": "06665"
+        },
+        {
+          "name": "San Nicolás",
+          "value": 1,
+          "municipioId": "06763"
+        },
+        {
+          "name": "Pehuajó",
+          "value": 1,
+          "municipioId": "06609"
+        },
+        {
+          "name": "San Miguel",
+          "value": 1,
+          "municipioId": "06760"
+        },
+        {
+          "name": "Las Flores",
+          "value": 1,
+          "municipioId": "06455"
+        },
+        {
+          "name": "Coronel Pringles",
+          "value": 1,
+          "municipioId": "06196"
+        },
+        {
+          "name": "Lincoln",
+          "value": 1,
+          "municipioId": "06469"
+        },
+        {
+          "name": "Carmen de Areco",
+          "value": 1,
+          "municipioId": "06161"
+        },
+        {
+          "name": "Suipacha",
+          "value": 1,
+          "municipioId": "06784"
+        },
+        {
+          "name": "Villarino",
+          "value": 1,
+          "municipioId": "06875"
+        },
+        {
+          "name": "Maipú",
+          "value": 1,
+          "municipioId": "06511"
+        },
+        {
+          "name": "General Las Heras",
+          "value": 1,
+          "municipioId": "06329"
+        },
+        {
+          "name": "Tres de Febrero",
+          "value": 1,
+          "municipioId": "06840"
+        },
+        {
+          "name": "Benito Juárez",
+          "value": 1,
+          "municipioId": "06084"
+        },
+        {
+          "name": "Trenque Lauquen",
+          "value": 1,
+          "municipioId": "06826"
+        },
+        {
+          "name": "Ayacucho",
+          "value": 1,
+          "municipioId": "06042"
+        },
+        {
+          "name": "Brandsen",
+          "value": 1,
+          "municipioId": "06119"
+        },
+        {
+          "name": "Arrecifes",
+          "value": 1,
+          "municipioId": "06077"
+        },
+        {
+          "name": "Daireaux",
+          "value": 1,
+          "municipioId": "06231"
+        },
+        {
+          "name": "Castelli",
+          "value": 1,
+          "municipioId": "06168"
+        },
+        {
+          "name": "Carlos Casares",
+          "value": 1,
+          "municipioId": "06147"
+        },
+        {
+          "name": "Chascomús",
+          "value": 1,
+          "municipioId": "06218"
+        },
+        {
+          "name": "Coronel Dorrego",
+          "value": 1,
+          "municipioId": "06189"
+        },
+        {
+          "name": "General Belgrano",
+          "value": 1,
+          "municipioId": "06301"
+        },
+        {
+          "name": "Dolores",
+          "value": 1,
+          "municipioId": "06238"
+        },
+        {
+          "name": "Chivilcoy",
+          "value": 1,
+          "municipioId": "06224"
+        },
+        {
+          "name": "Laprida",
+          "value": 1,
+          "municipioId": "06448"
+        },
+        {
+          "name": "General Pinto",
+          "value": 1,
+          "municipioId": "06351"
+        },
+        {
+          "name": "General Alvear",
+          "value": 1,
+          "municipioId": "06287"
+        },
+        {
+          "name": "General La Madrid",
+          "value": 1,
+          "municipioId": "06322"
+        },
+        {
+          "name": "General Juan Madariaga",
+          "value": 1,
+          "municipioId": "06315"
+        },
+        {
+          "name": "General Paz",
+          "value": 1,
+          "municipioId": "06343"
+        },
+        {
+          "name": "Guaminí",
+          "value": 1,
+          "municipioId": "06399"
+        },
+        {
+          "name": "Leandro N. Alem",
+          "value": 1,
+          "municipioId": "06462"
+        },
+        {
+          "name": "Lobería",
+          "value": 1,
+          "municipioId": "06476"
+        },
+        {
+          "name": "La Costa",
+          "value": 1,
+          "municipioId": "06420"
+        },
+        {
+          "name": "Marcos Paz",
+          "value": 1,
+          "municipioId": "06525"
+        },
+        {
+          "name": "General Villegas",
+          "value": 1,
+          "municipioId": "06392"
+        },
+        {
+          "name": "Patagones",
+          "value": 1,
+          "municipioId": "06602"
+        },
+        {
+          "name": "Salto",
+          "value": 1,
+          "municipioId": "06714"
+        },
+        {
+          "name": "San Fernando",
+          "value": 1,
+          "municipioId": "06749"
+        },
+        {
+          "name": "San Pedro",
+          "value": 1,
+          "municipioId": "06770"
+        },
+        {
+          "name": "Navarro",
+          "value": 1,
+          "municipioId": "06574"
+        },
+        {
+          "name": "Pellegrini",
+          "value": 1,
+          "municipioId": "06616"
+        },
+        {
+          "name": "Monte",
+          "value": 1,
+          "municipioId": "06547"
+        },
+        {
+          "name": "Rivadavia",
+          "value": 1,
+          "municipioId": "06679"
+        },
+        {
+          "name": "Rojas",
+          "value": 1,
+          "municipioId": "06686"
+        },
+        {
+          "name": "Rauch",
+          "value": 1,
+          "municipioId": "06672"
+        },
+        {
+          "name": "Roque Pérez",
+          "value": 1,
+          "municipioId": "06693"
+        },
+        {
+          "name": "Saladillo",
+          "value": 1,
+          "municipioId": "06707"
+        },
+        {
+          "name": "San Antonio de Areco",
+          "value": 1,
+          "municipioId": "06735"
+        },
+        {
+          "name": "Saavedra",
+          "value": 1,
+          "municipioId": "06700"
+        },
+        {
+          "name": "San Andrés de Giles",
+          "value": 1,
+          "municipioId": "06728"
+        },
+        {
+          "name": "Tapalqué",
+          "value": 1,
+          "municipioId": "06798"
+        },
+        {
+          "name": "San Cayetano",
+          "value": 1,
+          "municipioId": "06742"
+        },
+        {
+          "name": "Salliqueló",
+          "value": 1,
+          "municipioId": "06721"
+        },
+        {
+          "name": "Hipólito Yrigoyen",
+          "value": 1,
+          "municipioId": "06406"
+        },
+        {
+          "name": "25 de Mayo",
+          "value": 1,
+          "municipioId": "06854"
+        },
+        {
+          "name": "Tres Lomas",
+          "value": 1,
+          "municipioId": "06847"
+        },
+        {
+          "name": "Tres Arroyos",
+          "value": 1,
+          "municipioId": "06833"
+        }
+      ],
+      "order": "desc"
+    }
+  ],
+  "mapData": [
+    {
+      "municipioId": "06560",
+      "municipioNombre": "Moreno",
+      "value": 15,
+      "label": "15 parques"
+    },
+    {
+      "municipioId": "06091",
+      "municipioNombre": "Berazategui",
+      "value": 11,
+      "label": "11 parques"
+    },
+    {
+      "municipioId": "06638",
+      "municipioNombre": "Pilar",
+      "value": 10,
+      "label": "10 parques"
+    },
+    {
+      "municipioId": "06515",
+      "municipioNombre": "Malvinas Argentinas",
+      "value": 9,
+      "label": "9 parques"
+    },
+    {
+      "municipioId": "06252",
+      "municipioNombre": "Escobar",
+      "value": 8,
+      "label": "8 parques"
+    },
+    {
+      "municipioId": "06805",
+      "municipioNombre": "Tigre",
+      "value": 7,
+      "label": "7 parques"
+    },
+    {
+      "municipioId": "06427",
+      "municipioNombre": "La Matanza",
+      "value": 6,
+      "label": "6 parques"
+    },
+    {
+      "municipioId": "06371",
+      "municipioNombre": "General San Martín",
+      "value": 6,
+      "label": "6 parques"
+    },
+    {
+      "municipioId": "06861",
+      "municipioNombre": "Vicente López",
+      "value": 6,
+      "label": "6 parques"
+    },
+    {
+      "municipioId": "06260",
+      "municipioNombre": "Esteban Echeverría",
+      "value": 5,
+      "label": "5 parques"
+    },
+    {
+      "municipioId": "06364",
+      "municipioNombre": "General Rodríguez",
+      "value": 5,
+      "label": "5 parques"
+    },
+    {
+      "municipioId": "06126",
+      "municipioNombre": "Campana",
+      "value": 5,
+      "label": "5 parques"
+    },
+    {
+      "municipioId": "06270",
+      "municipioNombre": "Ezeiza",
+      "value": 5,
+      "label": "5 parques"
+    },
+    {
+      "municipioId": "06035",
+      "municipioNombre": "Avellaneda",
+      "value": 4,
+      "label": "4 parques"
+    },
+    {
+      "municipioId": "06882",
+      "municipioNombre": "Zárate",
+      "value": 4,
+      "label": "4 parques"
+    },
+    {
+      "municipioId": "06266",
+      "municipioNombre": "Exaltación de la Cruz",
+      "value": 4,
+      "label": "4 parques"
+    },
+    {
+      "municipioId": "06595",
+      "municipioNombre": "Olavarría",
+      "value": 4,
+      "label": "4 parques"
+    },
+    {
+      "municipioId": "06441",
+      "municipioNombre": "La Plata",
+      "value": 3,
+      "label": "3 parques"
+    },
+    {
+      "municipioId": "06568",
+      "municipioNombre": "Morón",
+      "value": 3,
+      "label": "3 parques"
+    },
+    {
+      "municipioId": "06049",
+      "municipioNombre": "Azul",
+      "value": 3,
+      "label": "3 parques"
+    },
+    {
+      "municipioId": "06434",
+      "municipioNombre": "Lanús",
+      "value": 3,
+      "label": "3 parques"
+    },
+    {
+      "municipioId": "06357",
+      "municipioNombre": "General Pueyrredón",
+      "value": 2,
+      "label": "2 parques"
+    },
+    {
+      "municipioId": "06658",
+      "municipioNombre": "Quilmes",
+      "value": 2,
+      "label": "2 parques"
+    },
+    {
+      "municipioId": "06623",
+      "municipioNombre": "Pergamino",
+      "value": 2,
+      "label": "2 parques"
+    },
+    {
+      "municipioId": "06539",
+      "municipioNombre": "Merlo",
+      "value": 2,
+      "label": "2 parques"
+    },
+    {
+      "municipioId": "06778",
+      "municipioNombre": "San Vicente",
+      "value": 2,
+      "label": "2 parques"
+    },
+    {
+      "municipioId": "06134",
+      "municipioNombre": "Cañuelas",
+      "value": 2,
+      "label": "2 parques"
+    },
+    {
+      "municipioId": "06274",
+      "municipioNombre": "Florencio Varela",
+      "value": 2,
+      "label": "2 parques"
+    },
+    {
+      "municipioId": "06497",
+      "municipioNombre": "Luján",
+      "value": 2,
+      "label": "2 parques"
+    },
+    {
+      "municipioId": "06408",
+      "municipioNombre": "Hurlingham",
+      "value": 2,
+      "label": "2 parques"
+    },
+    {
+      "municipioId": "06098",
+      "municipioNombre": "Berisso",
+      "value": 2,
+      "label": "2 parques"
+    },
+    {
+      "municipioId": "06021",
+      "municipioNombre": "Alberti",
+      "value": 2,
+      "label": "2 parques"
+    },
+    {
+      "municipioId": "06063",
+      "municipioNombre": "Balcarce",
+      "value": 2,
+      "label": "2 parques"
+    },
+    {
+      "municipioId": "06070",
+      "municipioNombre": "Baradero",
+      "value": 2,
+      "label": "2 parques"
+    },
+    {
+      "municipioId": "06105",
+      "municipioNombre": "Bolívar",
+      "value": 2,
+      "label": "2 parques"
+    },
+    {
+      "municipioId": "06756",
+      "municipioNombre": "San Isidro",
+      "value": 2,
+      "label": "2 parques"
+    },
+    {
+      "municipioId": "06014",
+      "municipioNombre": "Adolfo Gonzales Chaves",
+      "value": 2,
+      "label": "2 parques"
+    },
+    {
+      "municipioId": "06203",
+      "municipioNombre": "Coronel Suárez",
+      "value": 2,
+      "label": "2 parques"
+    },
+    {
+      "municipioId": "06245",
+      "municipioNombre": "Ensenada",
+      "value": 2,
+      "label": "2 parques"
+    },
+    {
+      "municipioId": "06651",
+      "municipioNombre": "Puán",
+      "value": 2,
+      "label": "2 parques"
+    },
+    {
+      "municipioId": "06532",
+      "municipioNombre": "Mercedes",
+      "value": 2,
+      "label": "2 parques"
+    },
+    {
+      "municipioId": "06819",
+      "municipioNombre": "Tornquist",
+      "value": 2,
+      "label": "2 parques"
+    },
+    {
+      "municipioId": "06028",
+      "municipioNombre": "Almirante Brown",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06490",
+      "municipioNombre": "Lomas de Zamora",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06210",
+      "municipioNombre": "Chacabuco",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06056",
+      "municipioNombre": "Bahía Blanca",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06280",
+      "municipioNombre": "General Alvarado",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06581",
+      "municipioNombre": "Necochea",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06413",
+      "municipioNombre": "Junín",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06112",
+      "municipioNombre": "Bragado",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06791",
+      "municipioNombre": "Tandil",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06588",
+      "municipioNombre": "9 de Julio",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06665",
+      "municipioNombre": "Ramallo",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06763",
+      "municipioNombre": "San Nicolás",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06609",
+      "municipioNombre": "Pehuajó",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06760",
+      "municipioNombre": "San Miguel",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06455",
+      "municipioNombre": "Las Flores",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06196",
+      "municipioNombre": "Coronel Pringles",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06469",
+      "municipioNombre": "Lincoln",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06161",
+      "municipioNombre": "Carmen de Areco",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06784",
+      "municipioNombre": "Suipacha",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06875",
+      "municipioNombre": "Villarino",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06511",
+      "municipioNombre": "Maipú",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06329",
+      "municipioNombre": "General Las Heras",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06840",
+      "municipioNombre": "Tres de Febrero",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06084",
+      "municipioNombre": "Benito Juárez",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06826",
+      "municipioNombre": "Trenque Lauquen",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06042",
+      "municipioNombre": "Ayacucho",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06119",
+      "municipioNombre": "Brandsen",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06077",
+      "municipioNombre": "Arrecifes",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06231",
+      "municipioNombre": "Daireaux",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06168",
+      "municipioNombre": "Castelli",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06147",
+      "municipioNombre": "Carlos Casares",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06218",
+      "municipioNombre": "Chascomús",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06189",
+      "municipioNombre": "Coronel Dorrego",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06301",
+      "municipioNombre": "General Belgrano",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06238",
+      "municipioNombre": "Dolores",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06224",
+      "municipioNombre": "Chivilcoy",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06448",
+      "municipioNombre": "Laprida",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06351",
+      "municipioNombre": "General Pinto",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06287",
+      "municipioNombre": "General Alvear",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06322",
+      "municipioNombre": "General La Madrid",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06315",
+      "municipioNombre": "General Juan Madariaga",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06343",
+      "municipioNombre": "General Paz",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06399",
+      "municipioNombre": "Guaminí",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06462",
+      "municipioNombre": "Leandro N. Alem",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06476",
+      "municipioNombre": "Lobería",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06420",
+      "municipioNombre": "La Costa",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06525",
+      "municipioNombre": "Marcos Paz",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06392",
+      "municipioNombre": "General Villegas",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06602",
+      "municipioNombre": "Patagones",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06714",
+      "municipioNombre": "Salto",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06749",
+      "municipioNombre": "San Fernando",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06770",
+      "municipioNombre": "San Pedro",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06574",
+      "municipioNombre": "Navarro",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06616",
+      "municipioNombre": "Pellegrini",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06547",
+      "municipioNombre": "Monte",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06679",
+      "municipioNombre": "Rivadavia",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06686",
+      "municipioNombre": "Rojas",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06672",
+      "municipioNombre": "Rauch",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06693",
+      "municipioNombre": "Roque Pérez",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06707",
+      "municipioNombre": "Saladillo",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06735",
+      "municipioNombre": "San Antonio de Areco",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06700",
+      "municipioNombre": "Saavedra",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06728",
+      "municipioNombre": "San Andrés de Giles",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06798",
+      "municipioNombre": "Tapalqué",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06742",
+      "municipioNombre": "San Cayetano",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06721",
+      "municipioNombre": "Salliqueló",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06406",
+      "municipioNombre": "Hipólito Yrigoyen",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06854",
+      "municipioNombre": "25 de Mayo",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06847",
+      "municipioNombre": "Tres Lomas",
+      "value": 1,
+      "label": "1 parques"
+    },
+    {
+      "municipioId": "06833",
+      "municipioNombre": "Tres Arroyos",
+      "value": 1,
+      "label": "1 parques"
+    }
+  ]
+}

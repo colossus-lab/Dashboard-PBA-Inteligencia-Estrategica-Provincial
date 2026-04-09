@@ -1,0 +1,29 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "framework": "vite",
+  "rewrites": [
+    { "source": "/((?!assets|data|reports).*)", "destination": "/index.html" }
+  ],
+  "headers": [
+    {
+      "source": "/data/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=86400, s-maxage=86400" }
+      ]
+    },
+    {
+      "source": "/reports/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=86400, s-maxage=86400" }
+      ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    }
+  ]
+}

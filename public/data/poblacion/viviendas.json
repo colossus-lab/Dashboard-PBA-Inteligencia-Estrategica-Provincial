@@ -1,0 +1,73 @@
+{
+  "meta": {
+    "id": "poblacion-viviendas",
+    "title": "Stock Habitacional",
+    "category": "poblacion",
+    "subcategory": "viviendas",
+    "source": "INDEC — Censo 2022. Cuadros C1-C3",
+    "date": "2022-05-18"
+  },
+  "kpis": [
+    {
+      "id": "viviendas-total",
+      "label": "Total viviendas PBA",
+      "value": 6738041,
+      "formatted": "6.738.041",
+      "unit": "viviendas"
+    },
+    {
+      "id": "ocupadas",
+      "label": "Viviendas ocupadas",
+      "value": 5963078,
+      "formatted": "5.963.078",
+      "unit": "88,5%"
+    },
+    {
+      "id": "desocupadas",
+      "label": "Viviendas desocupadas",
+      "value": 774963,
+      "formatted": "774.963",
+      "unit": "11,5%",
+      "status": "warning"
+    },
+    {
+      "id": "temporales",
+      "label": "Uso temporal",
+      "value": 236801,
+      "formatted": "236.801",
+      "unit": "viviendas"
+    },
+    {
+      "id": "casillas-ranchos",
+      "label": "Casillas + ranchos",
+      "value": 131211,
+      "formatted": "131.211",
+      "unit": "2,2%",
+      "status": "critical"
+    }
+  ],
+  "charts": [
+    {
+      "id": "ocupacion-viviendas",
+      "type": "pie",
+      "title": "Condición de ocupación",
+      "sectionId": "ocupacion",
+      "data": [
+        {
+          "id": "Ocupadas con personas",
+          "value": 5963078
+        },
+        {
+          "id": "Desocupadas",
+          "value": 538162
+        },
+        {
+          "id": "Uso temporal",
+          "value": 236801
+        }
+      ]
+    }
+  ],
+  "rankings": [],
+  "mapData": []
+}

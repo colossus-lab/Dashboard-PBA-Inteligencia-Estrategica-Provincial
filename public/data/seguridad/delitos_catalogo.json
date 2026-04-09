@@ -1,0 +1,450 @@
+[
+  {
+    "codigo": "1",
+    "nombre": "Homicidios dolosos"
+  },
+  {
+    "codigo": "2",
+    "nombre": "Homicidios dolosos en grado de tentativa"
+  },
+  {
+    "codigo": "3",
+    "nombre": "Muertes en accidentes viales"
+  },
+  {
+    "codigo": "4",
+    "nombre": "Homicidios culposos por otros hechos"
+  },
+  {
+    "codigo": "5",
+    "nombre": "Lesiones dolosas"
+  },
+  {
+    "codigo": "6",
+    "nombre": "Lesiones culposas en Accidentes Viales"
+  },
+  {
+    "codigo": "7",
+    "nombre": "Lesiones culposas por otros hechos"
+  },
+  {
+    "codigo": "8",
+    "nombre": "Otros delitos contra las personas"
+  },
+  {
+    "codigo": "9",
+    "nombre": "Delitos contra el honor"
+  },
+  {
+    "codigo": "10",
+    "nombre": "Abusos sexuales con acceso carnal (violaciones)"
+  },
+  {
+    "codigo": "11",
+    "nombre": "Otros delitos contra la integridad sexual"
+  },
+  {
+    "codigo": "11_1",
+    "nombre": "Tentativa de abuso sexual con acceso carnal"
+  },
+  {
+    "codigo": "11_2",
+    "nombre": "Abuso sexual simple"
+  },
+  {
+    "codigo": "11_3",
+    "nombre": "Abuso sexual agravado"
+  },
+  {
+    "codigo": "11_4",
+    "nombre": "Ciberdelitos sexuales vinculados a menores"
+  },
+  {
+    "codigo": "11_5",
+    "nombre": "Otros delitos contra la integridad sexual"
+  },
+  {
+    "codigo": "12",
+    "nombre": "Delitos contra el estado civil"
+  },
+  {
+    "codigo": "13",
+    "nombre": "Amenazas"
+  },
+  {
+    "codigo": "14",
+    "nombre": "Otros delitos contra la libertad"
+  },
+  {
+    "codigo": "14_1",
+    "nombre": "Trata de personas simple"
+  },
+  {
+    "codigo": "14_2",
+    "nombre": "Trata de personas agravado"
+  },
+  {
+    "codigo": "14_3",
+    "nombre": "Otros delitos contra la libertad"
+  },
+  {
+    "codigo": "15",
+    "nombre": "Robos (excluye los agravados por el resultado de lesiones y/o muertes)"
+  },
+  {
+    "codigo": "16",
+    "nombre": "Tentativas de robo (excluye las agravadas por el res. de lesiones y/o muerte)"
+  },
+  {
+    "codigo": "17",
+    "nombre": "Robos agravados por el resultado de lesiones y/o muertes"
+  },
+  {
+    "codigo": "18",
+    "nombre": "Tentativas de robo agravado por el resultado de lesiones y/o muertes"
+  },
+  {
+    "codigo": "19",
+    "nombre": "Hurtos"
+  },
+  {
+    "codigo": "20",
+    "nombre": "Tentativas de hurto"
+  },
+  {
+    "codigo": "21",
+    "nombre": "Otros delitos contra la propiedad"
+  },
+  {
+    "codigo": "21_1",
+    "nombre": "Extorsiones"
+  },
+  {
+    "codigo": "21_2",
+    "nombre": "Secuestros extorsivos"
+  },
+  {
+    "codigo": "21_3",
+    "nombre": "Estafas y defraudaciones (no incluye virtuales) y usura"
+  },
+  {
+    "codigo": "21_4",
+    "nombre": "Estafas y defraudaciones asistidas virtualmente"
+  },
+  {
+    "codigo": "21_5",
+    "nombre": "Daños (no incluye informáticos)"
+  },
+  {
+    "codigo": "21_6",
+    "nombre": "Acceso ilegal a sistemas informáticos y daños informáticos"
+  },
+  {
+    "codigo": "21_7",
+    "nombre": "Otros delitos contra la propiedad"
+  },
+  {
+    "codigo": "22",
+    "nombre": "Delitos contra la seguridad pública"
+  },
+  {
+    "codigo": "22_1",
+    "nombre": "Fabricación adquisición transferencia y tenencia de explosivos y otros materiales peligrosos"
+  },
+  {
+    "codigo": "22_2",
+    "nombre": "Tenencia ilegal de armas de fuego"
+  },
+  {
+    "codigo": "22_3",
+    "nombre": "Portación ilegal de armas de fuego"
+  },
+  {
+    "codigo": "22_4",
+    "nombre": "Acopio y fabricación ilegal de armas piezas y municiones"
+  },
+  {
+    "codigo": "22_5",
+    "nombre": "Entrega y comercialización ilegal de armas de fuego"
+  },
+  {
+    "codigo": "22_6",
+    "nombre": "Omisión adulteración y supresión de marcaje"
+  },
+  {
+    "codigo": "22_7",
+    "nombre": "Otros delitos contra la seguridad pública"
+  },
+  {
+    "codigo": "23",
+    "nombre": "Delitos contra el orden público"
+  },
+  {
+    "codigo": "24",
+    "nombre": "Delitos contra la seguridad de la nación"
+  },
+  {
+    "codigo": "25",
+    "nombre": "Delitos contra los poderes públicos y el orden constitucional"
+  },
+  {
+    "codigo": "26",
+    "nombre": "Delitos contra la administración pública"
+  },
+  {
+    "codigo": "27",
+    "nombre": "Delitos contra la fe pública"
+  },
+  {
+    "codigo": "28",
+    "nombre": "Ley 23.737 (estupefacientes)"
+  },
+  {
+    "codigo": "28_1",
+    "nombre": "Siembra y producción de estupefacientes"
+  },
+  {
+    "codigo": "28_2",
+    "nombre": "Comercialización y entrega de estupefacientes"
+  },
+  {
+    "codigo": "28_3",
+    "nombre": "Tenencia o entrega atenuada de estupefacientes"
+  },
+  {
+    "codigo": "28_4",
+    "nombre": "Desvío de Importación de estupefacientes"
+  },
+  {
+    "codigo": "28_5",
+    "nombre": "Organización y financiación de estupefacientes"
+  },
+  {
+    "codigo": "28_6",
+    "nombre": "Tenencia simple de estupefacientes"
+  },
+  {
+    "codigo": "28_7",
+    "nombre": "Tenencia simple atenuada para uso personal de estupefacientes"
+  },
+  {
+    "codigo": "28_8",
+    "nombre": "Confabulación de estupefacientes"
+  },
+  {
+    "codigo": "28_9",
+    "nombre": "Contrabando de estupefacientes"
+  },
+  {
+    "codigo": "28_10",
+    "nombre": "Otros delitos previstos en la ley 23.737"
+  },
+  {
+    "codigo": "29",
+    "nombre": "Delitos previstos en otras leyes"
+  },
+  {
+    "codigo": "29_1",
+    "nombre": "Ley de residuos peligrosos"
+  },
+  {
+    "codigo": "29_2",
+    "nombre": "Ley de fauna"
+  },
+  {
+    "codigo": "29_3",
+    "nombre": "Delitos migratorios"
+  },
+  {
+    "codigo": "29_4",
+    "nombre": "Obstrucción del código aduanero"
+  },
+  {
+    "codigo": "29_5",
+    "nombre": "Contrabando Simple"
+  },
+  {
+    "codigo": "29_6",
+    "nombre": "Contrabando Agravado"
+  },
+  {
+    "codigo": "29_7",
+    "nombre": "Contrabando de elementos nucleares agresivos químicos armas y municiones"
+  },
+  {
+    "codigo": "29_8",
+    "nombre": "Otros delitos previstos en leyes especiales"
+  },
+  {
+    "codigo": "30",
+    "nombre": "Contravenciones"
+  },
+  {
+    "codigo": "31",
+    "nombre": "Suicidios (consumados)"
+  },
+  {
+    "codigo": "32",
+    "nombre": "Delitos contra el orden económico y financiero"
+  },
+  {
+    "codigo": "111",
+    "nombre": "Tentativa de abuso sexual con acceso carnal"
+  },
+  {
+    "codigo": "112",
+    "nombre": "Abuso sexual simple"
+  },
+  {
+    "codigo": "113",
+    "nombre": "Abuso sexual agravado"
+  },
+  {
+    "codigo": "114",
+    "nombre": "Ciberdelitos sexuales vinculados a menores"
+  },
+  {
+    "codigo": "115",
+    "nombre": "Otros delitos contra la integridad sexual"
+  },
+  {
+    "codigo": "141",
+    "nombre": "Trata de personas simple"
+  },
+  {
+    "codigo": "142",
+    "nombre": "Trata de personas agravado"
+  },
+  {
+    "codigo": "143",
+    "nombre": "Otros delitos contra la libertad"
+  },
+  {
+    "codigo": "211",
+    "nombre": "Extorsiones"
+  },
+  {
+    "codigo": "212",
+    "nombre": "Secuestros extorsivos"
+  },
+  {
+    "codigo": "213",
+    "nombre": "Estafas y defraudaciones (no incluye virtuales) y usura"
+  },
+  {
+    "codigo": "214",
+    "nombre": "Estafas y defraudaciones asistidas virtualmente"
+  },
+  {
+    "codigo": "215",
+    "nombre": "Daños (no incluye informáticos)"
+  },
+  {
+    "codigo": "216",
+    "nombre": "Acceso ilegal a sistemas informáticos y daños informáticos"
+  },
+  {
+    "codigo": "217",
+    "nombre": "Otros delitos contra la propiedad"
+  },
+  {
+    "codigo": "221",
+    "nombre": "Fabricación adquisición transferencia y tenencia de explosivos y otros materiales peligrosos"
+  },
+  {
+    "codigo": "222",
+    "nombre": "Tenencia ilegal de armas de fuego"
+  },
+  {
+    "codigo": "223",
+    "nombre": "Portación ilegal de armas de fuego"
+  },
+  {
+    "codigo": "224",
+    "nombre": "Acopio y fabricación ilegal de armas piezas y municiones"
+  },
+  {
+    "codigo": "225",
+    "nombre": "Entrega y comercialización ilegal de armas de fuego"
+  },
+  {
+    "codigo": "226",
+    "nombre": "Omisión adulteración y supresión de marcaje"
+  },
+  {
+    "codigo": "227",
+    "nombre": "Otros delitos contra la seguridad pública"
+  },
+  {
+    "codigo": "281",
+    "nombre": "Siembra y producción de estupefacientes"
+  },
+  {
+    "codigo": "282",
+    "nombre": "Comercialización y entrega de estupefacientes"
+  },
+  {
+    "codigo": "283",
+    "nombre": "Tenencia o entrega atenuada de estupefacientes"
+  },
+  {
+    "codigo": "284",
+    "nombre": "Desvío de Importación de estupefacientes"
+  },
+  {
+    "codigo": "285",
+    "nombre": "Organización y financiación de estupefacientes"
+  },
+  {
+    "codigo": "286",
+    "nombre": "Tenencia simple de estupefacientes"
+  },
+  {
+    "codigo": "287",
+    "nombre": "Tenencia simple atenuada para uso personal de estupefacientes"
+  },
+  {
+    "codigo": "288",
+    "nombre": "Confabulación de estupefacientes"
+  },
+  {
+    "codigo": "289",
+    "nombre": "Contrabando de estupefacientes"
+  },
+  {
+    "codigo": "291",
+    "nombre": "Ley de residuos peligrosos"
+  },
+  {
+    "codigo": "292",
+    "nombre": "Ley de fauna"
+  },
+  {
+    "codigo": "293",
+    "nombre": "Delitos migratorios"
+  },
+  {
+    "codigo": "294",
+    "nombre": "Obstrucción del código aduanero"
+  },
+  {
+    "codigo": "295",
+    "nombre": "Contrabando Simple"
+  },
+  {
+    "codigo": "296",
+    "nombre": "Contrabando Agravado"
+  },
+  {
+    "codigo": "297",
+    "nombre": "Contrabando de elementos nucleares agresivos químicos armas y municiones"
+  },
+  {
+    "codigo": "298",
+    "nombre": "Otros delitos previstos en leyes especiales"
+  },
+  {
+    "codigo": "2810",
+    "nombre": "Otros delitos previstos en la ley 23.737"
+  }
+]

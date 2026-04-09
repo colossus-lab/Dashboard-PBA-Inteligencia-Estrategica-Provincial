@@ -1,0 +1,5582 @@
+[
+  {
+    "anio": 2017,
+    "municipio_id": "06007",
+    "municipio_nombre": "Adolfo Alsina",
+    "cantidad": 1
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06014",
+    "municipio_nombre": "Adolfo Gonzales Chaves",
+    "cantidad": 1
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06021",
+    "municipio_nombre": "Alberti",
+    "cantidad": 1
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06028",
+    "municipio_nombre": "Almirante Brown",
+    "cantidad": 61
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06035",
+    "municipio_nombre": "Avellaneda",
+    "cantidad": 40
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06042",
+    "municipio_nombre": "Ayacucho",
+    "cantidad": 4
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06049",
+    "municipio_nombre": "Azul",
+    "cantidad": 2
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06056",
+    "municipio_nombre": "Bahía Blanca",
+    "cantidad": 18
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06063",
+    "municipio_nombre": "Balcarce",
+    "cantidad": 4
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06070",
+    "municipio_nombre": "Baradero",
+    "cantidad": 2
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06077",
+    "municipio_nombre": "Arrecifes",
+    "cantidad": 4
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06084",
+    "municipio_nombre": "Benito Juárez",
+    "cantidad": 2
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06091",
+    "municipio_nombre": "Berazategui",
+    "cantidad": 38
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06098",
+    "municipio_nombre": "Berisso",
+    "cantidad": 5
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06105",
+    "municipio_nombre": "Bolívar",
+    "cantidad": 2
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06112",
+    "municipio_nombre": "Bragado",
+    "cantidad": 6
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06119",
+    "municipio_nombre": "Brandsen",
+    "cantidad": 3
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06126",
+    "municipio_nombre": "Campana",
+    "cantidad": 8
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06134",
+    "municipio_nombre": "Cañuelas",
+    "cantidad": 2
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06140",
+    "municipio_nombre": "Capitán Sarmiento",
+    "cantidad": 0
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06147",
+    "municipio_nombre": "Carlos Casares",
+    "cantidad": 1
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06154",
+    "municipio_nombre": "Carlos Tejedor",
+    "cantidad": 1
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06161",
+    "municipio_nombre": "Carmen de Areco",
+    "cantidad": 0
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06168",
+    "municipio_nombre": "Castelli",
+    "cantidad": 0
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06175",
+    "municipio_nombre": "Colón",
+    "cantidad": 2
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06182",
+    "municipio_nombre": "Coronel de Marina Leonardo Rosales",
+    "cantidad": 5
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06189",
+    "municipio_nombre": "Coronel Dorrego",
+    "cantidad": 0
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06196",
+    "municipio_nombre": "Coronel Pringles",
+    "cantidad": 2
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06203",
+    "municipio_nombre": "Coronel Suárez",
+    "cantidad": 2
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06210",
+    "municipio_nombre": "Chacabuco",
+    "cantidad": 2
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06218",
+    "municipio_nombre": "Chascomús",
+    "cantidad": 2
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06224",
+    "municipio_nombre": "Chivilcoy",
+    "cantidad": 11
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06231",
+    "municipio_nombre": "Daireaux",
+    "cantidad": 2
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06238",
+    "municipio_nombre": "Dolores",
+    "cantidad": 3
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06245",
+    "municipio_nombre": "Ensenada",
+    "cantidad": 5
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06252",
+    "municipio_nombre": "Escobar",
+    "cantidad": 19
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06260",
+    "municipio_nombre": "Esteban Echeverría",
+    "cantidad": 40
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06266",
+    "municipio_nombre": "Exaltación de la Cruz",
+    "cantidad": 2
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06270",
+    "municipio_nombre": "Ezeiza",
+    "cantidad": 27
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06274",
+    "municipio_nombre": "Florencio Varela",
+    "cantidad": 65
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06277",
+    "municipio_nombre": "Florentino Ameghino",
+    "cantidad": 0
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06280",
+    "municipio_nombre": "General Alvarado",
+    "cantidad": 6
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06287",
+    "municipio_nombre": "General Alvear",
+    "cantidad": 2
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06294",
+    "municipio_nombre": "General Arenales",
+    "cantidad": 0
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06301",
+    "municipio_nombre": "General Belgrano",
+    "cantidad": 2
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06308",
+    "municipio_nombre": "General Guido",
+    "cantidad": 1
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06315",
+    "municipio_nombre": "General Juan Madariaga",
+    "cantidad": 2
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06322",
+    "municipio_nombre": "General La Madrid",
+    "cantidad": 0
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06329",
+    "municipio_nombre": "General Las Heras",
+    "cantidad": 0
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06336",
+    "municipio_nombre": "General Lavalle",
+    "cantidad": 0
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06343",
+    "municipio_nombre": "General Paz",
+    "cantidad": 2
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06351",
+    "municipio_nombre": "General Pinto",
+    "cantidad": 1
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06357",
+    "municipio_nombre": "General Pueyrredón",
+    "cantidad": 51
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06364",
+    "municipio_nombre": "General Rodríguez",
+    "cantidad": 5
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06371",
+    "municipio_nombre": "General San Martín",
+    "cantidad": 38
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06385",
+    "municipio_nombre": "General Viamonte",
+    "cantidad": 1
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06392",
+    "municipio_nombre": "General Villegas",
+    "cantidad": 1
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06399",
+    "municipio_nombre": "Guaminí",
+    "cantidad": 0
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06406",
+    "municipio_nombre": "Hipólito Yrigoyen",
+    "cantidad": 0
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06408",
+    "municipio_nombre": "Hurlingham",
+    "cantidad": 8
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06410",
+    "municipio_nombre": "Ituzaingó",
+    "cantidad": 11
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06412",
+    "municipio_nombre": "José C. Paz",
+    "cantidad": 43
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06413",
+    "municipio_nombre": "Junín",
+    "cantidad": 8
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06420",
+    "municipio_nombre": "La Costa",
+    "cantidad": 9
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06427",
+    "municipio_nombre": "La Matanza",
+    "cantidad": 196
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06434",
+    "municipio_nombre": "Lanús",
+    "cantidad": 55
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06441",
+    "municipio_nombre": "La Plata",
+    "cantidad": 68
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06448",
+    "municipio_nombre": "Laprida",
+    "cantidad": 1
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06455",
+    "municipio_nombre": "Las Flores",
+    "cantidad": 0
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06462",
+    "municipio_nombre": "Leandro N. Alem",
+    "cantidad": 0
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06466",
+    "municipio_nombre": "Lezama",
+    "cantidad": 1
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06469",
+    "municipio_nombre": "Lincoln",
+    "cantidad": 2
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06476",
+    "municipio_nombre": "Lobería",
+    "cantidad": 0
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06483",
+    "municipio_nombre": "Lobos",
+    "cantidad": 2
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06490",
+    "municipio_nombre": "Lomas de Zamora",
+    "cantidad": 117
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06497",
+    "municipio_nombre": "Luján",
+    "cantidad": 13
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06505",
+    "municipio_nombre": "Magdalena",
+    "cantidad": 2
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06511",
+    "municipio_nombre": "Maipú",
+    "cantidad": 0
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06515",
+    "municipio_nombre": "Malvinas Argentinas",
+    "cantidad": 34
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06518",
+    "municipio_nombre": "Mar Chiquita",
+    "cantidad": 0
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06525",
+    "municipio_nombre": "Marcos Paz",
+    "cantidad": 8
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06532",
+    "municipio_nombre": "Mercedes",
+    "cantidad": 7
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06539",
+    "municipio_nombre": "Merlo",
+    "cantidad": 56
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06547",
+    "municipio_nombre": "Monte",
+    "cantidad": 1
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06553",
+    "municipio_nombre": "Monte Hermoso",
+    "cantidad": 0
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06560",
+    "municipio_nombre": "Moreno",
+    "cantidad": 64
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06568",
+    "municipio_nombre": "Morón",
+    "cantidad": 12
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06574",
+    "municipio_nombre": "Navarro",
+    "cantidad": 3
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06581",
+    "municipio_nombre": "Necochea",
+    "cantidad": 7
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06588",
+    "municipio_nombre": "9 de Julio",
+    "cantidad": 4
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06595",
+    "municipio_nombre": "Olavarría",
+    "cantidad": 1
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06602",
+    "municipio_nombre": "Patagones",
+    "cantidad": 4
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06609",
+    "municipio_nombre": "Pehuajó",
+    "cantidad": 6
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06616",
+    "municipio_nombre": "Pellegrini",
+    "cantidad": 2
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06623",
+    "municipio_nombre": "Pergamino",
+    "cantidad": 10
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06630",
+    "municipio_nombre": "Pila",
+    "cantidad": 0
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06638",
+    "municipio_nombre": "Pilar",
+    "cantidad": 47
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06644",
+    "municipio_nombre": "Pinamar",
+    "cantidad": 2
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06648",
+    "municipio_nombre": "Presidente Perón",
+    "cantidad": 18
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06651",
+    "municipio_nombre": "Puán",
+    "cantidad": 1
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06655",
+    "municipio_nombre": "Punta Indio",
+    "cantidad": 1
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06658",
+    "municipio_nombre": "Quilmes",
+    "cantidad": 86
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06665",
+    "municipio_nombre": "Ramallo",
+    "cantidad": 5
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06672",
+    "municipio_nombre": "Rauch",
+    "cantidad": 0
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06679",
+    "municipio_nombre": "Rivadavia",
+    "cantidad": 2
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06686",
+    "municipio_nombre": "Rojas",
+    "cantidad": 3
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06693",
+    "municipio_nombre": "Roque Pérez",
+    "cantidad": 3
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06700",
+    "municipio_nombre": "Saavedra",
+    "cantidad": 1
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06707",
+    "municipio_nombre": "Saladillo",
+    "cantidad": 2
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06714",
+    "municipio_nombre": "Salto",
+    "cantidad": 5
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06721",
+    "municipio_nombre": "Salliqueló",
+    "cantidad": 0
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06728",
+    "municipio_nombre": "San Andrés de Giles",
+    "cantidad": 2
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06735",
+    "municipio_nombre": "San Antonio de Areco",
+    "cantidad": 3
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06742",
+    "municipio_nombre": "San Cayetano",
+    "cantidad": 1
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06749",
+    "municipio_nombre": "San Fernando",
+    "cantidad": 18
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06756",
+    "municipio_nombre": "San Isidro",
+    "cantidad": 23
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06760",
+    "municipio_nombre": "San Miguel",
+    "cantidad": 47
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06763",
+    "municipio_nombre": "San Nicolás",
+    "cantidad": 10
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06770",
+    "municipio_nombre": "San Pedro",
+    "cantidad": 11
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06778",
+    "municipio_nombre": "San Vicente",
+    "cantidad": 7
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06784",
+    "municipio_nombre": "Suipacha",
+    "cantidad": 0
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06791",
+    "municipio_nombre": "Tandil",
+    "cantidad": 6
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06798",
+    "municipio_nombre": "Tapalqué",
+    "cantidad": 0
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06805",
+    "municipio_nombre": "Tigre",
+    "cantidad": 47
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06812",
+    "municipio_nombre": "Tordillo",
+    "cantidad": 0
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06819",
+    "municipio_nombre": "Tornquist",
+    "cantidad": 2
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06826",
+    "municipio_nombre": "Trenque Lauquen",
+    "cantidad": 5
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06833",
+    "municipio_nombre": "Tres Arroyos",
+    "cantidad": 7
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06840",
+    "municipio_nombre": "Tres de Febrero",
+    "cantidad": 32
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06847",
+    "municipio_nombre": "Tres Lomas",
+    "cantidad": 0
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06854",
+    "municipio_nombre": "25 de Mayo",
+    "cantidad": 2
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06861",
+    "municipio_nombre": "Vicente López",
+    "cantidad": 8
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06868",
+    "municipio_nombre": "Villa Gesell",
+    "cantidad": 0
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06875",
+    "municipio_nombre": "Villarino",
+    "cantidad": 2
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06882",
+    "municipio_nombre": "Zárate",
+    "cantidad": 19
+  },
+  {
+    "anio": 2017,
+    "municipio_id": "06999",
+    "municipio_nombre": "Ignorado",
+    "cantidad": 361
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06007",
+    "municipio_nombre": "Adolfo Alsina",
+    "cantidad": 1
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06014",
+    "municipio_nombre": "Adolfo Gonzales Chaves",
+    "cantidad": 1
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06021",
+    "municipio_nombre": "Alberti",
+    "cantidad": 0
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06028",
+    "municipio_nombre": "Almirante Brown",
+    "cantidad": 65
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06035",
+    "municipio_nombre": "Avellaneda",
+    "cantidad": 35
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06042",
+    "municipio_nombre": "Ayacucho",
+    "cantidad": 1
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06049",
+    "municipio_nombre": "Azul",
+    "cantidad": 1
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06056",
+    "municipio_nombre": "Bahía Blanca",
+    "cantidad": 26
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06063",
+    "municipio_nombre": "Balcarce",
+    "cantidad": 4
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06070",
+    "municipio_nombre": "Baradero",
+    "cantidad": 2
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06077",
+    "municipio_nombre": "Arrecifes",
+    "cantidad": 1
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06084",
+    "municipio_nombre": "Benito Juárez",
+    "cantidad": 2
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06091",
+    "municipio_nombre": "Berazategui",
+    "cantidad": 41
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06098",
+    "municipio_nombre": "Berisso",
+    "cantidad": 9
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06105",
+    "municipio_nombre": "Bolívar",
+    "cantidad": 1
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06112",
+    "municipio_nombre": "Bragado",
+    "cantidad": 7
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06119",
+    "municipio_nombre": "Brandsen",
+    "cantidad": 2
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06126",
+    "municipio_nombre": "Campana",
+    "cantidad": 9
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06134",
+    "municipio_nombre": "Cañuelas",
+    "cantidad": 5
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06140",
+    "municipio_nombre": "Capitán Sarmiento",
+    "cantidad": 1
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06147",
+    "municipio_nombre": "Carlos Casares",
+    "cantidad": 0
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06154",
+    "municipio_nombre": "Carlos Tejedor",
+    "cantidad": 2
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06161",
+    "municipio_nombre": "Carmen de Areco",
+    "cantidad": 1
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06168",
+    "municipio_nombre": "Castelli",
+    "cantidad": 2
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06175",
+    "municipio_nombre": "Colón",
+    "cantidad": 1
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06182",
+    "municipio_nombre": "Coronel de Marina Leonardo Rosales",
+    "cantidad": 0
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06189",
+    "municipio_nombre": "Coronel Dorrego",
+    "cantidad": 0
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06196",
+    "municipio_nombre": "Coronel Pringles",
+    "cantidad": 2
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06203",
+    "municipio_nombre": "Coronel Suárez",
+    "cantidad": 0
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06210",
+    "municipio_nombre": "Chacabuco",
+    "cantidad": 3
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06218",
+    "municipio_nombre": "Chascomús",
+    "cantidad": 3
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06224",
+    "municipio_nombre": "Chivilcoy",
+    "cantidad": 9
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06231",
+    "municipio_nombre": "Daireaux",
+    "cantidad": 1
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06238",
+    "municipio_nombre": "Dolores",
+    "cantidad": 3
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06245",
+    "municipio_nombre": "Ensenada",
+    "cantidad": 6
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06252",
+    "municipio_nombre": "Escobar",
+    "cantidad": 15
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06260",
+    "municipio_nombre": "Esteban Echeverría",
+    "cantidad": 44
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06266",
+    "municipio_nombre": "Exaltación de la Cruz",
+    "cantidad": 4
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06270",
+    "municipio_nombre": "Ezeiza",
+    "cantidad": 25
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06274",
+    "municipio_nombre": "Florencio Varela",
+    "cantidad": 91
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06277",
+    "municipio_nombre": "Florentino Ameghino",
+    "cantidad": 0
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06280",
+    "municipio_nombre": "General Alvarado",
+    "cantidad": 3
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06287",
+    "municipio_nombre": "General Alvear",
+    "cantidad": 0
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06294",
+    "municipio_nombre": "General Arenales",
+    "cantidad": 1
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06301",
+    "municipio_nombre": "General Belgrano",
+    "cantidad": 0
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06308",
+    "municipio_nombre": "General Guido",
+    "cantidad": 0
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06315",
+    "municipio_nombre": "General Juan Madariaga",
+    "cantidad": 1
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06322",
+    "municipio_nombre": "General La Madrid",
+    "cantidad": 1
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06329",
+    "municipio_nombre": "General Las Heras",
+    "cantidad": 0
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06336",
+    "municipio_nombre": "General Lavalle",
+    "cantidad": 0
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06343",
+    "municipio_nombre": "General Paz",
+    "cantidad": 0
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06351",
+    "municipio_nombre": "General Pinto",
+    "cantidad": 0
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06357",
+    "municipio_nombre": "General Pueyrredón",
+    "cantidad": 63
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06364",
+    "municipio_nombre": "General Rodríguez",
+    "cantidad": 4
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06371",
+    "municipio_nombre": "General San Martín",
+    "cantidad": 26
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06385",
+    "municipio_nombre": "General Viamonte",
+    "cantidad": 0
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06392",
+    "municipio_nombre": "General Villegas",
+    "cantidad": 5
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06399",
+    "municipio_nombre": "Guaminí",
+    "cantidad": 1
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06406",
+    "municipio_nombre": "Hipólito Yrigoyen",
+    "cantidad": 0
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06408",
+    "municipio_nombre": "Hurlingham",
+    "cantidad": 9
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06410",
+    "municipio_nombre": "Ituzaingó",
+    "cantidad": 9
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06412",
+    "municipio_nombre": "José C. Paz",
+    "cantidad": 40
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06413",
+    "municipio_nombre": "Junín",
+    "cantidad": 6
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06420",
+    "municipio_nombre": "La Costa",
+    "cantidad": 7
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06427",
+    "municipio_nombre": "La Matanza",
+    "cantidad": 186
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06434",
+    "municipio_nombre": "Lanús",
+    "cantidad": 53
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06441",
+    "municipio_nombre": "La Plata",
+    "cantidad": 70
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06448",
+    "municipio_nombre": "Laprida",
+    "cantidad": 0
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06455",
+    "municipio_nombre": "Las Flores",
+    "cantidad": 0
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06462",
+    "municipio_nombre": "Leandro N. Alem",
+    "cantidad": 0
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06466",
+    "municipio_nombre": "Lezama",
+    "cantidad": 1
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06469",
+    "municipio_nombre": "Lincoln",
+    "cantidad": 3
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06476",
+    "municipio_nombre": "Lobería",
+    "cantidad": 0
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06483",
+    "municipio_nombre": "Lobos",
+    "cantidad": 1
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06490",
+    "municipio_nombre": "Lomas de Zamora",
+    "cantidad": 107
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06497",
+    "municipio_nombre": "Luján",
+    "cantidad": 3
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06505",
+    "municipio_nombre": "Magdalena",
+    "cantidad": 1
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06511",
+    "municipio_nombre": "Maipú",
+    "cantidad": 0
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06515",
+    "municipio_nombre": "Malvinas Argentinas",
+    "cantidad": 43
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06518",
+    "municipio_nombre": "Mar Chiquita",
+    "cantidad": 2
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06525",
+    "municipio_nombre": "Marcos Paz",
+    "cantidad": 6
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06532",
+    "municipio_nombre": "Mercedes",
+    "cantidad": 6
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06539",
+    "municipio_nombre": "Merlo",
+    "cantidad": 53
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06547",
+    "municipio_nombre": "Monte",
+    "cantidad": 0
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06553",
+    "municipio_nombre": "Monte Hermoso",
+    "cantidad": 0
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06560",
+    "municipio_nombre": "Moreno",
+    "cantidad": 61
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06568",
+    "municipio_nombre": "Morón",
+    "cantidad": 16
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06574",
+    "municipio_nombre": "Navarro",
+    "cantidad": 2
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06581",
+    "municipio_nombre": "Necochea",
+    "cantidad": 5
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06588",
+    "municipio_nombre": "9 de Julio",
+    "cantidad": 4
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06595",
+    "municipio_nombre": "Olavarría",
+    "cantidad": 0
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06602",
+    "municipio_nombre": "Patagones",
+    "cantidad": 2
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06609",
+    "municipio_nombre": "Pehuajó",
+    "cantidad": 4
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06616",
+    "municipio_nombre": "Pellegrini",
+    "cantidad": 1
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06623",
+    "municipio_nombre": "Pergamino",
+    "cantidad": 2
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06630",
+    "municipio_nombre": "Pila",
+    "cantidad": 1
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06638",
+    "municipio_nombre": "Pilar",
+    "cantidad": 49
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06644",
+    "municipio_nombre": "Pinamar",
+    "cantidad": 1
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06648",
+    "municipio_nombre": "Presidente Perón",
+    "cantidad": 9
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06651",
+    "municipio_nombre": "Puán",
+    "cantidad": 0
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06655",
+    "municipio_nombre": "Punta Indio",
+    "cantidad": 0
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06658",
+    "municipio_nombre": "Quilmes",
+    "cantidad": 87
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06665",
+    "municipio_nombre": "Ramallo",
+    "cantidad": 2
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06672",
+    "municipio_nombre": "Rauch",
+    "cantidad": 0
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06679",
+    "municipio_nombre": "Rivadavia",
+    "cantidad": 2
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06686",
+    "municipio_nombre": "Rojas",
+    "cantidad": 0
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06693",
+    "municipio_nombre": "Roque Pérez",
+    "cantidad": 1
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06700",
+    "municipio_nombre": "Saavedra",
+    "cantidad": 1
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06707",
+    "municipio_nombre": "Saladillo",
+    "cantidad": 1
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06714",
+    "municipio_nombre": "Salto",
+    "cantidad": 3
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06721",
+    "municipio_nombre": "Salliqueló",
+    "cantidad": 0
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06728",
+    "municipio_nombre": "San Andrés de Giles",
+    "cantidad": 0
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06735",
+    "municipio_nombre": "San Antonio de Areco",
+    "cantidad": 5
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06742",
+    "municipio_nombre": "San Cayetano",
+    "cantidad": 0
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06749",
+    "municipio_nombre": "San Fernando",
+    "cantidad": 19
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06756",
+    "municipio_nombre": "San Isidro",
+    "cantidad": 28
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06760",
+    "municipio_nombre": "San Miguel",
+    "cantidad": 50
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06763",
+    "municipio_nombre": "San Nicolás",
+    "cantidad": 7
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06770",
+    "municipio_nombre": "San Pedro",
+    "cantidad": 8
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06778",
+    "municipio_nombre": "San Vicente",
+    "cantidad": 4
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06784",
+    "municipio_nombre": "Suipacha",
+    "cantidad": 1
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06791",
+    "municipio_nombre": "Tandil",
+    "cantidad": 6
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06798",
+    "municipio_nombre": "Tapalqué",
+    "cantidad": 2
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06805",
+    "municipio_nombre": "Tigre",
+    "cantidad": 38
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06812",
+    "municipio_nombre": "Tordillo",
+    "cantidad": 0
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06819",
+    "municipio_nombre": "Tornquist",
+    "cantidad": 5
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06826",
+    "municipio_nombre": "Trenque Lauquen",
+    "cantidad": 4
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06833",
+    "municipio_nombre": "Tres Arroyos",
+    "cantidad": 1
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06840",
+    "municipio_nombre": "Tres de Febrero",
+    "cantidad": 40
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06847",
+    "municipio_nombre": "Tres Lomas",
+    "cantidad": 0
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06854",
+    "municipio_nombre": "25 de Mayo",
+    "cantidad": 4
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06861",
+    "municipio_nombre": "Vicente López",
+    "cantidad": 17
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06868",
+    "municipio_nombre": "Villa Gesell",
+    "cantidad": 3
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06875",
+    "municipio_nombre": "Villarino",
+    "cantidad": 2
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06882",
+    "municipio_nombre": "Zárate",
+    "cantidad": 12
+  },
+  {
+    "anio": 2018,
+    "municipio_id": "06999",
+    "municipio_nombre": "Ignorado",
+    "cantidad": 49
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06007",
+    "municipio_nombre": "Adolfo Alsina",
+    "cantidad": 0
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06014",
+    "municipio_nombre": "Adolfo Gonzales Chaves",
+    "cantidad": 1
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06021",
+    "municipio_nombre": "Alberti",
+    "cantidad": 0
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06028",
+    "municipio_nombre": "Almirante Brown",
+    "cantidad": 60
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06035",
+    "municipio_nombre": "Avellaneda",
+    "cantidad": 36
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06042",
+    "municipio_nombre": "Ayacucho",
+    "cantidad": 0
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06049",
+    "municipio_nombre": "Azul",
+    "cantidad": 1
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06056",
+    "municipio_nombre": "Bahía Blanca",
+    "cantidad": 19
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06063",
+    "municipio_nombre": "Balcarce",
+    "cantidad": 2
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06070",
+    "municipio_nombre": "Baradero",
+    "cantidad": 0
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06077",
+    "municipio_nombre": "Arrecifes",
+    "cantidad": 3
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06084",
+    "municipio_nombre": "Benito Juárez",
+    "cantidad": 0
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06091",
+    "municipio_nombre": "Berazategui",
+    "cantidad": 36
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06098",
+    "municipio_nombre": "Berisso",
+    "cantidad": 6
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06105",
+    "municipio_nombre": "Bolívar",
+    "cantidad": 1
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06112",
+    "municipio_nombre": "Bragado",
+    "cantidad": 1
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06119",
+    "municipio_nombre": "Brandsen",
+    "cantidad": 2
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06126",
+    "municipio_nombre": "Campana",
+    "cantidad": 7
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06134",
+    "municipio_nombre": "Cañuelas",
+    "cantidad": 6
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06140",
+    "municipio_nombre": "Capitán Sarmiento",
+    "cantidad": 0
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06147",
+    "municipio_nombre": "Carlos Casares",
+    "cantidad": 0
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06154",
+    "municipio_nombre": "Carlos Tejedor",
+    "cantidad": 0
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06161",
+    "municipio_nombre": "Carmen de Areco",
+    "cantidad": 1
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06168",
+    "municipio_nombre": "Castelli",
+    "cantidad": 0
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06175",
+    "municipio_nombre": "Colón",
+    "cantidad": 0
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06182",
+    "municipio_nombre": "Coronel de Marina Leonardo Rosales",
+    "cantidad": 1
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06189",
+    "municipio_nombre": "Coronel Dorrego",
+    "cantidad": 1
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06196",
+    "municipio_nombre": "Coronel Pringles",
+    "cantidad": 0
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06203",
+    "municipio_nombre": "Coronel Suárez",
+    "cantidad": 1
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06210",
+    "municipio_nombre": "Chacabuco",
+    "cantidad": 5
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06218",
+    "municipio_nombre": "Chascomús",
+    "cantidad": 1
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06224",
+    "municipio_nombre": "Chivilcoy",
+    "cantidad": 3
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06231",
+    "municipio_nombre": "Daireaux",
+    "cantidad": 0
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06238",
+    "municipio_nombre": "Dolores",
+    "cantidad": 0
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06245",
+    "municipio_nombre": "Ensenada",
+    "cantidad": 10
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06252",
+    "municipio_nombre": "Escobar",
+    "cantidad": 19
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06260",
+    "municipio_nombre": "Esteban Echeverría",
+    "cantidad": 40
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06266",
+    "municipio_nombre": "Exaltación de la Cruz",
+    "cantidad": 2
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06270",
+    "municipio_nombre": "Ezeiza",
+    "cantidad": 22
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06274",
+    "municipio_nombre": "Florencio Varela",
+    "cantidad": 44
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06277",
+    "municipio_nombre": "Florentino Ameghino",
+    "cantidad": 1
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06280",
+    "municipio_nombre": "General Alvarado",
+    "cantidad": 1
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06287",
+    "municipio_nombre": "General Alvear",
+    "cantidad": 0
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06294",
+    "municipio_nombre": "General Arenales",
+    "cantidad": 0
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06301",
+    "municipio_nombre": "General Belgrano",
+    "cantidad": 0
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06308",
+    "municipio_nombre": "General Guido",
+    "cantidad": 0
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06315",
+    "municipio_nombre": "General Juan Madariaga",
+    "cantidad": 0
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06322",
+    "municipio_nombre": "General La Madrid",
+    "cantidad": 0
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06329",
+    "municipio_nombre": "General Las Heras",
+    "cantidad": 1
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06336",
+    "municipio_nombre": "General Lavalle",
+    "cantidad": 0
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06343",
+    "municipio_nombre": "General Paz",
+    "cantidad": 0
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06351",
+    "municipio_nombre": "General Pinto",
+    "cantidad": 0
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06357",
+    "municipio_nombre": "General Pueyrredón",
+    "cantidad": 26
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06364",
+    "municipio_nombre": "General Rodríguez",
+    "cantidad": 1
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06371",
+    "municipio_nombre": "General San Martín",
+    "cantidad": 20
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06385",
+    "municipio_nombre": "General Viamonte",
+    "cantidad": 0
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06392",
+    "municipio_nombre": "General Villegas",
+    "cantidad": 0
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06399",
+    "municipio_nombre": "Guaminí",
+    "cantidad": 0
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06406",
+    "municipio_nombre": "Hipólito Yrigoyen",
+    "cantidad": 0
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06408",
+    "municipio_nombre": "Hurlingham",
+    "cantidad": 8
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06410",
+    "municipio_nombre": "Ituzaingó",
+    "cantidad": 8
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06412",
+    "municipio_nombre": "José C. Paz",
+    "cantidad": 21
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06413",
+    "municipio_nombre": "Junín",
+    "cantidad": 3
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06420",
+    "municipio_nombre": "La Costa",
+    "cantidad": 2
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06427",
+    "municipio_nombre": "La Matanza",
+    "cantidad": 131
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06434",
+    "municipio_nombre": "Lanús",
+    "cantidad": 34
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06441",
+    "municipio_nombre": "La Plata",
+    "cantidad": 52
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06448",
+    "municipio_nombre": "Laprida",
+    "cantidad": 1
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06455",
+    "municipio_nombre": "Las Flores",
+    "cantidad": 0
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06462",
+    "municipio_nombre": "Leandro N. Alem",
+    "cantidad": 0
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06466",
+    "municipio_nombre": "Lezama",
+    "cantidad": 0
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06469",
+    "municipio_nombre": "Lincoln",
+    "cantidad": 0
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06476",
+    "municipio_nombre": "Lobería",
+    "cantidad": 1
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06483",
+    "municipio_nombre": "Lobos",
+    "cantidad": 3
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06490",
+    "municipio_nombre": "Lomas de Zamora",
+    "cantidad": 89
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06497",
+    "municipio_nombre": "Luján",
+    "cantidad": 0
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06505",
+    "municipio_nombre": "Magdalena",
+    "cantidad": 0
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06511",
+    "municipio_nombre": "Maipú",
+    "cantidad": 1
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06515",
+    "municipio_nombre": "Malvinas Argentinas",
+    "cantidad": 29
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06518",
+    "municipio_nombre": "Mar Chiquita",
+    "cantidad": 0
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06525",
+    "municipio_nombre": "Marcos Paz",
+    "cantidad": 4
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06532",
+    "municipio_nombre": "Mercedes",
+    "cantidad": 1
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06539",
+    "municipio_nombre": "Merlo",
+    "cantidad": 47
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06547",
+    "municipio_nombre": "Monte",
+    "cantidad": 0
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06553",
+    "municipio_nombre": "Monte Hermoso",
+    "cantidad": 2
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06560",
+    "municipio_nombre": "Moreno",
+    "cantidad": 44
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06568",
+    "municipio_nombre": "Morón",
+    "cantidad": 14
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06574",
+    "municipio_nombre": "Navarro",
+    "cantidad": 1
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06581",
+    "municipio_nombre": "Necochea",
+    "cantidad": 3
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06588",
+    "municipio_nombre": "9 de Julio",
+    "cantidad": 1
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06595",
+    "municipio_nombre": "Olavarría",
+    "cantidad": 0
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06602",
+    "municipio_nombre": "Patagones",
+    "cantidad": 1
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06609",
+    "municipio_nombre": "Pehuajó",
+    "cantidad": 1
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06616",
+    "municipio_nombre": "Pellegrini",
+    "cantidad": 0
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06623",
+    "municipio_nombre": "Pergamino",
+    "cantidad": 6
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06630",
+    "municipio_nombre": "Pila",
+    "cantidad": 0
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06638",
+    "municipio_nombre": "Pilar",
+    "cantidad": 58
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06644",
+    "municipio_nombre": "Pinamar",
+    "cantidad": 3
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06648",
+    "municipio_nombre": "Presidente Perón",
+    "cantidad": 14
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06651",
+    "municipio_nombre": "Puán",
+    "cantidad": 0
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06655",
+    "municipio_nombre": "Punta Indio",
+    "cantidad": 0
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06658",
+    "municipio_nombre": "Quilmes",
+    "cantidad": 71
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06665",
+    "municipio_nombre": "Ramallo",
+    "cantidad": 3
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06672",
+    "municipio_nombre": "Rauch",
+    "cantidad": 0
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06679",
+    "municipio_nombre": "Rivadavia",
+    "cantidad": 0
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06686",
+    "municipio_nombre": "Rojas",
+    "cantidad": 0
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06693",
+    "municipio_nombre": "Roque Pérez",
+    "cantidad": 0
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06700",
+    "municipio_nombre": "Saavedra",
+    "cantidad": 1
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06707",
+    "municipio_nombre": "Saladillo",
+    "cantidad": 1
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06714",
+    "municipio_nombre": "Salto",
+    "cantidad": 1
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06721",
+    "municipio_nombre": "Salliqueló",
+    "cantidad": 1
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06728",
+    "municipio_nombre": "San Andrés de Giles",
+    "cantidad": 2
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06735",
+    "municipio_nombre": "San Antonio de Areco",
+    "cantidad": 1
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06742",
+    "municipio_nombre": "San Cayetano",
+    "cantidad": 0
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06749",
+    "municipio_nombre": "San Fernando",
+    "cantidad": 14
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06756",
+    "municipio_nombre": "San Isidro",
+    "cantidad": 17
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06760",
+    "municipio_nombre": "San Miguel",
+    "cantidad": 14
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06763",
+    "municipio_nombre": "San Nicolás",
+    "cantidad": 9
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06770",
+    "municipio_nombre": "San Pedro",
+    "cantidad": 1
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06778",
+    "municipio_nombre": "San Vicente",
+    "cantidad": 4
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06784",
+    "municipio_nombre": "Suipacha",
+    "cantidad": 1
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06791",
+    "municipio_nombre": "Tandil",
+    "cantidad": 8
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06798",
+    "municipio_nombre": "Tapalqué",
+    "cantidad": 1
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06805",
+    "municipio_nombre": "Tigre",
+    "cantidad": 37
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06812",
+    "municipio_nombre": "Tordillo",
+    "cantidad": 0
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06819",
+    "municipio_nombre": "Tornquist",
+    "cantidad": 0
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06826",
+    "municipio_nombre": "Trenque Lauquen",
+    "cantidad": 3
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06833",
+    "municipio_nombre": "Tres Arroyos",
+    "cantidad": 2
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06840",
+    "municipio_nombre": "Tres de Febrero",
+    "cantidad": 26
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06847",
+    "municipio_nombre": "Tres Lomas",
+    "cantidad": 0
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06854",
+    "municipio_nombre": "25 de Mayo",
+    "cantidad": 1
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06861",
+    "municipio_nombre": "Vicente López",
+    "cantidad": 11
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06868",
+    "municipio_nombre": "Villa Gesell",
+    "cantidad": 1
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06875",
+    "municipio_nombre": "Villarino",
+    "cantidad": 0
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06882",
+    "municipio_nombre": "Zárate",
+    "cantidad": 7
+  },
+  {
+    "anio": 2019,
+    "municipio_id": "06999",
+    "municipio_nombre": "Ignorado",
+    "cantidad": 204
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06007",
+    "municipio_nombre": "Adolfo Alsina",
+    "cantidad": 0
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06014",
+    "municipio_nombre": "Adolfo Gonzales Chaves",
+    "cantidad": 1
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06021",
+    "municipio_nombre": "Alberti",
+    "cantidad": 0
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06028",
+    "municipio_nombre": "Almirante Brown",
+    "cantidad": 41
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06035",
+    "municipio_nombre": "Avellaneda",
+    "cantidad": 21
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06042",
+    "municipio_nombre": "Ayacucho",
+    "cantidad": 2
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06049",
+    "municipio_nombre": "Azul",
+    "cantidad": 0
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06056",
+    "municipio_nombre": "Bahía Blanca",
+    "cantidad": 12
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06063",
+    "municipio_nombre": "Balcarce",
+    "cantidad": 1
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06070",
+    "municipio_nombre": "Baradero",
+    "cantidad": 0
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06077",
+    "municipio_nombre": "Arrecifes",
+    "cantidad": 1
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06084",
+    "municipio_nombre": "Benito Juárez",
+    "cantidad": 1
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06091",
+    "municipio_nombre": "Berazategui",
+    "cantidad": 30
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06098",
+    "municipio_nombre": "Berisso",
+    "cantidad": 4
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06105",
+    "municipio_nombre": "Bolívar",
+    "cantidad": 2
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06112",
+    "municipio_nombre": "Bragado",
+    "cantidad": 3
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06119",
+    "municipio_nombre": "Brandsen",
+    "cantidad": 4
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06126",
+    "municipio_nombre": "Campana",
+    "cantidad": 5
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06134",
+    "municipio_nombre": "Cañuelas",
+    "cantidad": 1
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06140",
+    "municipio_nombre": "Capitán Sarmiento",
+    "cantidad": 0
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06147",
+    "municipio_nombre": "Carlos Casares",
+    "cantidad": 0
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06154",
+    "municipio_nombre": "Carlos Tejedor",
+    "cantidad": 2
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06161",
+    "municipio_nombre": "Carmen de Areco",
+    "cantidad": 2
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06168",
+    "municipio_nombre": "Castelli",
+    "cantidad": 0
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06175",
+    "municipio_nombre": "Colón",
+    "cantidad": 0
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06182",
+    "municipio_nombre": "Coronel de Marina Leonardo Rosales",
+    "cantidad": 2
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06189",
+    "municipio_nombre": "Coronel Dorrego",
+    "cantidad": 1
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06196",
+    "municipio_nombre": "Coronel Pringles",
+    "cantidad": 0
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06203",
+    "municipio_nombre": "Coronel Suárez",
+    "cantidad": 0
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06210",
+    "municipio_nombre": "Chacabuco",
+    "cantidad": 4
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06218",
+    "municipio_nombre": "Chascomús",
+    "cantidad": 2
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06224",
+    "municipio_nombre": "Chivilcoy",
+    "cantidad": 2
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06231",
+    "municipio_nombre": "Daireaux",
+    "cantidad": 0
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06238",
+    "municipio_nombre": "Dolores",
+    "cantidad": 0
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06245",
+    "municipio_nombre": "Ensenada",
+    "cantidad": 4
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06252",
+    "municipio_nombre": "Escobar",
+    "cantidad": 27
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06260",
+    "municipio_nombre": "Esteban Echeverría",
+    "cantidad": 25
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06266",
+    "municipio_nombre": "Exaltación de la Cruz",
+    "cantidad": 0
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06270",
+    "municipio_nombre": "Ezeiza",
+    "cantidad": 18
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06274",
+    "municipio_nombre": "Florencio Varela",
+    "cantidad": 58
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06277",
+    "municipio_nombre": "Florentino Ameghino",
+    "cantidad": 0
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06280",
+    "municipio_nombre": "General Alvarado",
+    "cantidad": 1
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06287",
+    "municipio_nombre": "General Alvear",
+    "cantidad": 0
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06294",
+    "municipio_nombre": "General Arenales",
+    "cantidad": 1
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06301",
+    "municipio_nombre": "General Belgrano",
+    "cantidad": 0
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06308",
+    "municipio_nombre": "General Guido",
+    "cantidad": 0
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06315",
+    "municipio_nombre": "General Juan Madariaga",
+    "cantidad": 1
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06322",
+    "municipio_nombre": "General La Madrid",
+    "cantidad": 0
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06329",
+    "municipio_nombre": "General Las Heras",
+    "cantidad": 1
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06336",
+    "municipio_nombre": "General Lavalle",
+    "cantidad": 0
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06343",
+    "municipio_nombre": "General Paz",
+    "cantidad": 0
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06351",
+    "municipio_nombre": "General Pinto",
+    "cantidad": 0
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06357",
+    "municipio_nombre": "General Pueyrredón",
+    "cantidad": 12
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06364",
+    "municipio_nombre": "General Rodríguez",
+    "cantidad": 10
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06371",
+    "municipio_nombre": "General San Martín",
+    "cantidad": 20
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06385",
+    "municipio_nombre": "General Viamonte",
+    "cantidad": 0
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06392",
+    "municipio_nombre": "General Villegas",
+    "cantidad": 1
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06399",
+    "municipio_nombre": "Guaminí",
+    "cantidad": 0
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06406",
+    "municipio_nombre": "Hipólito Yrigoyen",
+    "cantidad": 0
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06408",
+    "municipio_nombre": "Hurlingham",
+    "cantidad": 4
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06410",
+    "municipio_nombre": "Ituzaingó",
+    "cantidad": 6
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06412",
+    "municipio_nombre": "José C. Paz",
+    "cantidad": 29
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06413",
+    "municipio_nombre": "Junín",
+    "cantidad": 3
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06420",
+    "municipio_nombre": "La Costa",
+    "cantidad": 5
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06427",
+    "municipio_nombre": "La Matanza",
+    "cantidad": 138
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06434",
+    "municipio_nombre": "Lanús",
+    "cantidad": 30
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06441",
+    "municipio_nombre": "La Plata",
+    "cantidad": 50
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06448",
+    "municipio_nombre": "Laprida",
+    "cantidad": 0
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06455",
+    "municipio_nombre": "Las Flores",
+    "cantidad": 0
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06462",
+    "municipio_nombre": "Leandro N. Alem",
+    "cantidad": 2
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06466",
+    "municipio_nombre": "Lezama",
+    "cantidad": 0
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06469",
+    "municipio_nombre": "Lincoln",
+    "cantidad": 1
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06476",
+    "municipio_nombre": "Lobería",
+    "cantidad": 0
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06483",
+    "municipio_nombre": "Lobos",
+    "cantidad": 1
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06490",
+    "municipio_nombre": "Lomas de Zamora",
+    "cantidad": 60
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06497",
+    "municipio_nombre": "Luján",
+    "cantidad": 7
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06505",
+    "municipio_nombre": "Magdalena",
+    "cantidad": 0
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06511",
+    "municipio_nombre": "Maipú",
+    "cantidad": 0
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06515",
+    "municipio_nombre": "Malvinas Argentinas",
+    "cantidad": 15
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06518",
+    "municipio_nombre": "Mar Chiquita",
+    "cantidad": 0
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06525",
+    "municipio_nombre": "Marcos Paz",
+    "cantidad": 0
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06532",
+    "municipio_nombre": "Mercedes",
+    "cantidad": 0
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06539",
+    "municipio_nombre": "Merlo",
+    "cantidad": 34
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06547",
+    "municipio_nombre": "Monte",
+    "cantidad": 0
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06553",
+    "municipio_nombre": "Monte Hermoso",
+    "cantidad": 1
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06560",
+    "municipio_nombre": "Moreno",
+    "cantidad": 35
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06568",
+    "municipio_nombre": "Morón",
+    "cantidad": 6
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06574",
+    "municipio_nombre": "Navarro",
+    "cantidad": 1
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06581",
+    "municipio_nombre": "Necochea",
+    "cantidad": 2
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06588",
+    "municipio_nombre": "9 de Julio",
+    "cantidad": 2
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06595",
+    "municipio_nombre": "Olavarría",
+    "cantidad": 2
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06602",
+    "municipio_nombre": "Patagones",
+    "cantidad": 1
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06609",
+    "municipio_nombre": "Pehuajó",
+    "cantidad": 0
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06616",
+    "municipio_nombre": "Pellegrini",
+    "cantidad": 0
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06623",
+    "municipio_nombre": "Pergamino",
+    "cantidad": 3
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06630",
+    "municipio_nombre": "Pila",
+    "cantidad": 0
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06638",
+    "municipio_nombre": "Pilar",
+    "cantidad": 45
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06644",
+    "municipio_nombre": "Pinamar",
+    "cantidad": 1
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06648",
+    "municipio_nombre": "Presidente Perón",
+    "cantidad": 12
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06651",
+    "municipio_nombre": "Puán",
+    "cantidad": 0
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06655",
+    "municipio_nombre": "Punta Indio",
+    "cantidad": 2
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06658",
+    "municipio_nombre": "Quilmes",
+    "cantidad": 39
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06665",
+    "municipio_nombre": "Ramallo",
+    "cantidad": 1
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06672",
+    "municipio_nombre": "Rauch",
+    "cantidad": 0
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06679",
+    "municipio_nombre": "Rivadavia",
+    "cantidad": 1
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06686",
+    "municipio_nombre": "Rojas",
+    "cantidad": 0
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06693",
+    "municipio_nombre": "Roque Pérez",
+    "cantidad": 0
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06700",
+    "municipio_nombre": "Saavedra",
+    "cantidad": 0
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06707",
+    "municipio_nombre": "Saladillo",
+    "cantidad": 1
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06714",
+    "municipio_nombre": "Salto",
+    "cantidad": 0
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06721",
+    "municipio_nombre": "Salliqueló",
+    "cantidad": 0
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06728",
+    "municipio_nombre": "San Andrés de Giles",
+    "cantidad": 0
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06735",
+    "municipio_nombre": "San Antonio de Areco",
+    "cantidad": 0
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06742",
+    "municipio_nombre": "San Cayetano",
+    "cantidad": 0
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06749",
+    "municipio_nombre": "San Fernando",
+    "cantidad": 15
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06756",
+    "municipio_nombre": "San Isidro",
+    "cantidad": 13
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06760",
+    "municipio_nombre": "San Miguel",
+    "cantidad": 22
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06763",
+    "municipio_nombre": "San Nicolás",
+    "cantidad": 3
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06770",
+    "municipio_nombre": "San Pedro",
+    "cantidad": 2
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06778",
+    "municipio_nombre": "San Vicente",
+    "cantidad": 8
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06784",
+    "municipio_nombre": "Suipacha",
+    "cantidad": 0
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06791",
+    "municipio_nombre": "Tandil",
+    "cantidad": 3
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06798",
+    "municipio_nombre": "Tapalqué",
+    "cantidad": 0
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06805",
+    "municipio_nombre": "Tigre",
+    "cantidad": 27
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06812",
+    "municipio_nombre": "Tordillo",
+    "cantidad": 0
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06819",
+    "municipio_nombre": "Tornquist",
+    "cantidad": 0
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06826",
+    "municipio_nombre": "Trenque Lauquen",
+    "cantidad": 0
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06833",
+    "municipio_nombre": "Tres Arroyos",
+    "cantidad": 1
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06840",
+    "municipio_nombre": "Tres de Febrero",
+    "cantidad": 10
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06847",
+    "municipio_nombre": "Tres Lomas",
+    "cantidad": 0
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06854",
+    "municipio_nombre": "25 de Mayo",
+    "cantidad": 0
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06861",
+    "municipio_nombre": "Vicente López",
+    "cantidad": 9
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06868",
+    "municipio_nombre": "Villa Gesell",
+    "cantidad": 1
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06875",
+    "municipio_nombre": "Villarino",
+    "cantidad": 2
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06882",
+    "municipio_nombre": "Zárate",
+    "cantidad": 3
+  },
+  {
+    "anio": 2020,
+    "municipio_id": "06999",
+    "municipio_nombre": "Ignorado",
+    "cantidad": 45
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06028",
+    "municipio_nombre": "Almirante Brown",
+    "cantidad": 57
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06035",
+    "municipio_nombre": "Avellaneda",
+    "cantidad": 35
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06042",
+    "municipio_nombre": "Ayacucho",
+    "cantidad": 1
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06049",
+    "municipio_nombre": "Azul",
+    "cantidad": 4
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06056",
+    "municipio_nombre": "Bahía Blanca",
+    "cantidad": 3
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06063",
+    "municipio_nombre": "Balcarce",
+    "cantidad": 2
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06070",
+    "municipio_nombre": "Baradero",
+    "cantidad": 4
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06077",
+    "municipio_nombre": "Arrecifes",
+    "cantidad": 2
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06084",
+    "municipio_nombre": "Benito Juárez",
+    "cantidad": 1
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06091",
+    "municipio_nombre": "Berazategui",
+    "cantidad": 26
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06098",
+    "municipio_nombre": "Berisso",
+    "cantidad": 6
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06112",
+    "municipio_nombre": "Bragado",
+    "cantidad": 2
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06119",
+    "municipio_nombre": "Brandsen",
+    "cantidad": 2
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06126",
+    "municipio_nombre": "Campana",
+    "cantidad": 6
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06134",
+    "municipio_nombre": "Cañuelas",
+    "cantidad": 3
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06154",
+    "municipio_nombre": "Carlos Tejedor",
+    "cantidad": 1
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06168",
+    "municipio_nombre": "Castelli",
+    "cantidad": 1
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06175",
+    "municipio_nombre": "Colón",
+    "cantidad": 1
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06182",
+    "municipio_nombre": "Coronel de Marina Leonardo Rosales",
+    "cantidad": 1
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06196",
+    "municipio_nombre": "Coronel Pringles",
+    "cantidad": 4
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06203",
+    "municipio_nombre": "Coronel Suárez",
+    "cantidad": 3
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06210",
+    "municipio_nombre": "Chacabuco",
+    "cantidad": 1
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06218",
+    "municipio_nombre": "Chascomús",
+    "cantidad": 3
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06224",
+    "municipio_nombre": "Chivilcoy",
+    "cantidad": 3
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06245",
+    "municipio_nombre": "Ensenada",
+    "cantidad": 6
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06252",
+    "municipio_nombre": "Escobar",
+    "cantidad": 19
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06260",
+    "municipio_nombre": "Esteban Echeverría",
+    "cantidad": 33
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06270",
+    "municipio_nombre": "Ezeiza",
+    "cantidad": 18
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06274",
+    "municipio_nombre": "Florencio Varela",
+    "cantidad": 43
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06277",
+    "municipio_nombre": "Florentino Ameghino",
+    "cantidad": 1
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06280",
+    "municipio_nombre": "General Alvarado",
+    "cantidad": 2
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06315",
+    "municipio_nombre": "General Juan Madariaga",
+    "cantidad": 1
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06322",
+    "municipio_nombre": "General La Madrid",
+    "cantidad": 1
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06329",
+    "municipio_nombre": "General Las Heras",
+    "cantidad": 2
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06343",
+    "municipio_nombre": "General Paz",
+    "cantidad": 1
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06357",
+    "municipio_nombre": "General Pueyrredón",
+    "cantidad": 31
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06364",
+    "municipio_nombre": "General Rodríguez",
+    "cantidad": 9
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06371",
+    "municipio_nombre": "General San Martín",
+    "cantidad": 26
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06385",
+    "municipio_nombre": "General Viamonte",
+    "cantidad": 1
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06406",
+    "municipio_nombre": "Hipólito Yrigoyen",
+    "cantidad": 2
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06408",
+    "municipio_nombre": "Hurlingham",
+    "cantidad": 6
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06410",
+    "municipio_nombre": "Ituzaingó",
+    "cantidad": 8
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06412",
+    "municipio_nombre": "José C. Paz",
+    "cantidad": 20
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06413",
+    "municipio_nombre": "Junín",
+    "cantidad": 6
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06420",
+    "municipio_nombre": "La Costa",
+    "cantidad": 1
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06427",
+    "municipio_nombre": "La Matanza",
+    "cantidad": 140
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06434",
+    "municipio_nombre": "Lanús",
+    "cantidad": 38
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06441",
+    "municipio_nombre": "La Plata",
+    "cantidad": 63
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06448",
+    "municipio_nombre": "Laprida",
+    "cantidad": 1
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06462",
+    "municipio_nombre": "Leandro N. Alem",
+    "cantidad": 1
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06466",
+    "municipio_nombre": "Lezama",
+    "cantidad": 1
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06469",
+    "municipio_nombre": "Lincoln",
+    "cantidad": 1
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06483",
+    "municipio_nombre": "Lobos",
+    "cantidad": 4
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06490",
+    "municipio_nombre": "Lomas de Zamora",
+    "cantidad": 65
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06497",
+    "municipio_nombre": "Luján",
+    "cantidad": 9
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06511",
+    "municipio_nombre": "Maipú",
+    "cantidad": 1
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06515",
+    "municipio_nombre": "Malvinas Argentinas",
+    "cantidad": 22
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06525",
+    "municipio_nombre": "Marcos Paz",
+    "cantidad": 7
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06532",
+    "municipio_nombre": "Mercedes",
+    "cantidad": 3
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06539",
+    "municipio_nombre": "Merlo",
+    "cantidad": 48
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06547",
+    "municipio_nombre": "Monte",
+    "cantidad": 3
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06553",
+    "municipio_nombre": "Monte Hermoso",
+    "cantidad": 1
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06560",
+    "municipio_nombre": "Moreno",
+    "cantidad": 49
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06568",
+    "municipio_nombre": "Morón",
+    "cantidad": 9
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06581",
+    "municipio_nombre": "Necochea",
+    "cantidad": 8
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06588",
+    "municipio_nombre": "9 de Julio",
+    "cantidad": 5
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06602",
+    "municipio_nombre": "Patagones",
+    "cantidad": 1
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06616",
+    "municipio_nombre": "Pellegrini",
+    "cantidad": 1
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06623",
+    "municipio_nombre": "Pergamino",
+    "cantidad": 8
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06638",
+    "municipio_nombre": "Pilar",
+    "cantidad": 50
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06644",
+    "municipio_nombre": "Pinamar",
+    "cantidad": 3
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06648",
+    "municipio_nombre": "Presidente Perón",
+    "cantidad": 9
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06651",
+    "municipio_nombre": "Puán",
+    "cantidad": 1
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06658",
+    "municipio_nombre": "Quilmes",
+    "cantidad": 57
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06665",
+    "municipio_nombre": "Ramallo",
+    "cantidad": 3
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06686",
+    "municipio_nombre": "Rojas",
+    "cantidad": 3
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06693",
+    "municipio_nombre": "Roque Pérez",
+    "cantidad": 1
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06700",
+    "municipio_nombre": "Saavedra",
+    "cantidad": 2
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06707",
+    "municipio_nombre": "Saladillo",
+    "cantidad": 3
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06714",
+    "municipio_nombre": "Salto",
+    "cantidad": 1
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06742",
+    "municipio_nombre": "San Cayetano",
+    "cantidad": 1
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06749",
+    "municipio_nombre": "San Fernando",
+    "cantidad": 12
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06756",
+    "municipio_nombre": "San Isidro",
+    "cantidad": 15
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06760",
+    "municipio_nombre": "San Miguel",
+    "cantidad": 28
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06763",
+    "municipio_nombre": "San Nicolás",
+    "cantidad": 2
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06770",
+    "municipio_nombre": "San Pedro",
+    "cantidad": 3
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06778",
+    "municipio_nombre": "San Vicente",
+    "cantidad": 7
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06784",
+    "municipio_nombre": "Suipacha",
+    "cantidad": 1
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06791",
+    "municipio_nombre": "Tandil",
+    "cantidad": 8
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06805",
+    "municipio_nombre": "Tigre",
+    "cantidad": 29
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06819",
+    "municipio_nombre": "Tornquist",
+    "cantidad": 1
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06826",
+    "municipio_nombre": "Trenque Lauquen",
+    "cantidad": 3
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06833",
+    "municipio_nombre": "Tres Arroyos",
+    "cantidad": 3
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06840",
+    "municipio_nombre": "Tres de Febrero",
+    "cantidad": 19
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06854",
+    "municipio_nombre": "25 de Mayo",
+    "cantidad": 2
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06861",
+    "municipio_nombre": "Vicente López",
+    "cantidad": 9
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06868",
+    "municipio_nombre": "Villa Gesell",
+    "cantidad": 1
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06875",
+    "municipio_nombre": "Villarino",
+    "cantidad": 1
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06882",
+    "municipio_nombre": "Zárate",
+    "cantidad": 5
+  },
+  {
+    "anio": 2021,
+    "municipio_id": "06999",
+    "municipio_nombre": "Ignorado",
+    "cantidad": 41
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06007",
+    "municipio_nombre": "Adolfo Alsina",
+    "cantidad": 3
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06021",
+    "municipio_nombre": "Alberti",
+    "cantidad": 12
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06028",
+    "municipio_nombre": "Almirante Brown",
+    "cantidad": 46
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06035",
+    "municipio_nombre": "Avellaneda",
+    "cantidad": 25
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06042",
+    "municipio_nombre": "Ayacucho",
+    "cantidad": 2
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06049",
+    "municipio_nombre": "Azul",
+    "cantidad": 1
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06056",
+    "municipio_nombre": "Bahía Blanca",
+    "cantidad": 18
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06063",
+    "municipio_nombre": "Balcarce",
+    "cantidad": 1
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06077",
+    "municipio_nombre": "Arrecifes",
+    "cantidad": 1
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06091",
+    "municipio_nombre": "Berazategui",
+    "cantidad": 23
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06098",
+    "municipio_nombre": "Berisso",
+    "cantidad": 9
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06105",
+    "municipio_nombre": "Bolívar",
+    "cantidad": 1
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06112",
+    "municipio_nombre": "Bragado",
+    "cantidad": 6
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06119",
+    "municipio_nombre": "Brandsen",
+    "cantidad": 1
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06126",
+    "municipio_nombre": "Campana",
+    "cantidad": 10
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06134",
+    "municipio_nombre": "Cañuelas",
+    "cantidad": 1
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06140",
+    "municipio_nombre": "Capitán Sarmiento",
+    "cantidad": 2
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06161",
+    "municipio_nombre": "Carmen de Areco",
+    "cantidad": 1
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06175",
+    "municipio_nombre": "Colón",
+    "cantidad": 2
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06182",
+    "municipio_nombre": "Coronel de Marina Leonardo Rosales",
+    "cantidad": 2
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06196",
+    "municipio_nombre": "Coronel Pringles",
+    "cantidad": 1
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06203",
+    "municipio_nombre": "Coronel Suárez",
+    "cantidad": 1
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06210",
+    "municipio_nombre": "Chacabuco",
+    "cantidad": 2
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06218",
+    "municipio_nombre": "Chascomús",
+    "cantidad": 2
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06224",
+    "municipio_nombre": "Chivilcoy",
+    "cantidad": 1
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06245",
+    "municipio_nombre": "Ensenada",
+    "cantidad": 5
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06252",
+    "municipio_nombre": "Escobar",
+    "cantidad": 19
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06260",
+    "municipio_nombre": "Esteban Echeverría",
+    "cantidad": 29
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06270",
+    "municipio_nombre": "Ezeiza",
+    "cantidad": 10
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06274",
+    "municipio_nombre": "Florencio Varela",
+    "cantidad": 59
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06277",
+    "municipio_nombre": "Florentino Ameghino",
+    "cantidad": 1
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06280",
+    "municipio_nombre": "General Alvarado",
+    "cantidad": 1
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06294",
+    "municipio_nombre": "General Arenales",
+    "cantidad": 1
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06301",
+    "municipio_nombre": "General Belgrano",
+    "cantidad": 5
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06315",
+    "municipio_nombre": "General Juan Madariaga",
+    "cantidad": 1
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06329",
+    "municipio_nombre": "General Las Heras",
+    "cantidad": 2
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06357",
+    "municipio_nombre": "General Pueyrredón",
+    "cantidad": 43
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06364",
+    "municipio_nombre": "General Rodríguez",
+    "cantidad": 13
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06371",
+    "municipio_nombre": "General San Martín",
+    "cantidad": 16
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06399",
+    "municipio_nombre": "Guaminí",
+    "cantidad": 1
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06406",
+    "municipio_nombre": "Hipólito Yrigoyen",
+    "cantidad": 7
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06408",
+    "municipio_nombre": "Hurlingham",
+    "cantidad": 15
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06410",
+    "municipio_nombre": "Ituzaingó",
+    "cantidad": 5
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06412",
+    "municipio_nombre": "José C. Paz",
+    "cantidad": 24
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06413",
+    "municipio_nombre": "Junín",
+    "cantidad": 5
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06420",
+    "municipio_nombre": "La Costa",
+    "cantidad": 7
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06427",
+    "municipio_nombre": "La Matanza",
+    "cantidad": 93
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06434",
+    "municipio_nombre": "Lanús",
+    "cantidad": 20
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06441",
+    "municipio_nombre": "La Plata",
+    "cantidad": 53
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06455",
+    "municipio_nombre": "Las Flores",
+    "cantidad": 2
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06462",
+    "municipio_nombre": "Leandro N. Alem",
+    "cantidad": 1
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06469",
+    "municipio_nombre": "Lincoln",
+    "cantidad": 2
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06483",
+    "municipio_nombre": "Lobos",
+    "cantidad": 2
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06490",
+    "municipio_nombre": "Lomas de Zamora",
+    "cantidad": 89
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06497",
+    "municipio_nombre": "Luján",
+    "cantidad": 9
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06505",
+    "municipio_nombre": "Magdalena",
+    "cantidad": 3
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06511",
+    "municipio_nombre": "Maipú",
+    "cantidad": 1
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06515",
+    "municipio_nombre": "Malvinas Argentinas",
+    "cantidad": 26
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06518",
+    "municipio_nombre": "Mar Chiquita",
+    "cantidad": 1
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06525",
+    "municipio_nombre": "Marcos Paz",
+    "cantidad": 8
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06532",
+    "municipio_nombre": "Mercedes",
+    "cantidad": 3
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06539",
+    "municipio_nombre": "Merlo",
+    "cantidad": 53
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06547",
+    "municipio_nombre": "Monte",
+    "cantidad": 1
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06553",
+    "municipio_nombre": "Monte Hermoso",
+    "cantidad": 1
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06560",
+    "municipio_nombre": "Moreno",
+    "cantidad": 43
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06568",
+    "municipio_nombre": "Morón",
+    "cantidad": 10
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06581",
+    "municipio_nombre": "Necochea",
+    "cantidad": 2
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06602",
+    "municipio_nombre": "Patagones",
+    "cantidad": 1
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06623",
+    "municipio_nombre": "Pergamino",
+    "cantidad": 3
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06638",
+    "municipio_nombre": "Pilar",
+    "cantidad": 29
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06644",
+    "municipio_nombre": "Pinamar",
+    "cantidad": 1
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06648",
+    "municipio_nombre": "Presidente Perón",
+    "cantidad": 10
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06655",
+    "municipio_nombre": "Punta Indio",
+    "cantidad": 2
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06658",
+    "municipio_nombre": "Quilmes",
+    "cantidad": 53
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06665",
+    "municipio_nombre": "Ramallo",
+    "cantidad": 4
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06672",
+    "municipio_nombre": "Rauch",
+    "cantidad": 1
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06700",
+    "municipio_nombre": "Saavedra",
+    "cantidad": 1
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06707",
+    "municipio_nombre": "Saladillo",
+    "cantidad": 5
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06714",
+    "municipio_nombre": "Salto",
+    "cantidad": 1
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06749",
+    "municipio_nombre": "San Fernando",
+    "cantidad": 16
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06756",
+    "municipio_nombre": "San Isidro",
+    "cantidad": 14
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06760",
+    "municipio_nombre": "San Miguel",
+    "cantidad": 22
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06763",
+    "municipio_nombre": "San Nicolás",
+    "cantidad": 2
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06770",
+    "municipio_nombre": "San Pedro",
+    "cantidad": 4
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06778",
+    "municipio_nombre": "San Vicente",
+    "cantidad": 11
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06784",
+    "municipio_nombre": "Suipacha",
+    "cantidad": 1
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06791",
+    "municipio_nombre": "Tandil",
+    "cantidad": 3
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06805",
+    "municipio_nombre": "Tigre",
+    "cantidad": 32
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06826",
+    "municipio_nombre": "Trenque Lauquen",
+    "cantidad": 5
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06833",
+    "municipio_nombre": "Tres Arroyos",
+    "cantidad": 3
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06840",
+    "municipio_nombre": "Tres de Febrero",
+    "cantidad": 15
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06854",
+    "municipio_nombre": "25 de Mayo",
+    "cantidad": 3
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06861",
+    "municipio_nombre": "Vicente López",
+    "cantidad": 6
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06868",
+    "municipio_nombre": "Villa Gesell",
+    "cantidad": 1
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06875",
+    "municipio_nombre": "Villarino",
+    "cantidad": 5
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06882",
+    "municipio_nombre": "Zárate",
+    "cantidad": 5
+  },
+  {
+    "anio": 2022,
+    "municipio_id": "06999",
+    "municipio_nombre": "Ignorado",
+    "cantidad": 237
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06854",
+    "municipio_nombre": "25 de Mayo",
+    "cantidad": 3
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06007",
+    "municipio_nombre": "Adolfo Alsina",
+    "cantidad": 1
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06021",
+    "municipio_nombre": "Alberti",
+    "cantidad": 6
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06028",
+    "municipio_nombre": "Almirante Brown",
+    "cantidad": 49
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06077",
+    "municipio_nombre": "Arrecifes",
+    "cantidad": 2
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06035",
+    "municipio_nombre": "Avellaneda",
+    "cantidad": 17
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06042",
+    "municipio_nombre": "Ayacucho",
+    "cantidad": 1
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06056",
+    "municipio_nombre": "Bahía Blanca",
+    "cantidad": 22
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06070",
+    "municipio_nombre": "Baradero",
+    "cantidad": 2
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06091",
+    "municipio_nombre": "Berazategui",
+    "cantidad": 18
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06098",
+    "municipio_nombre": "Berisso",
+    "cantidad": 10
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06105",
+    "municipio_nombre": "Bolívar",
+    "cantidad": 1
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06112",
+    "municipio_nombre": "Bragado",
+    "cantidad": 1
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06119",
+    "municipio_nombre": "Brandsen",
+    "cantidad": 6
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06126",
+    "municipio_nombre": "Campana",
+    "cantidad": 3
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06134",
+    "municipio_nombre": "Cañuelas",
+    "cantidad": 2
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06161",
+    "municipio_nombre": "Carmen de Areco",
+    "cantidad": 4
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06210",
+    "municipio_nombre": "Chacabuco",
+    "cantidad": 2
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06218",
+    "municipio_nombre": "Chascomús",
+    "cantidad": 4
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06224",
+    "municipio_nombre": "Chivilcoy",
+    "cantidad": 1
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06175",
+    "municipio_nombre": "Colón",
+    "cantidad": 2
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06182",
+    "municipio_nombre": "Coronel de Marina Leonardo Rosales",
+    "cantidad": 6
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06189",
+    "municipio_nombre": "Coronel Dorrego",
+    "cantidad": 1
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06196",
+    "municipio_nombre": "Coronel Pringles",
+    "cantidad": 1
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06203",
+    "municipio_nombre": "Coronel Suárez",
+    "cantidad": 4
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06245",
+    "municipio_nombre": "Ensenada",
+    "cantidad": 6
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06252",
+    "municipio_nombre": "Escobar",
+    "cantidad": 23
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06260",
+    "municipio_nombre": "Esteban Echeverría",
+    "cantidad": 23
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06266",
+    "municipio_nombre": "Exaltación de la Cruz",
+    "cantidad": 3
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06270",
+    "municipio_nombre": "Ezeiza",
+    "cantidad": 19
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06274",
+    "municipio_nombre": "Florencio Varela",
+    "cantidad": 34
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06277",
+    "municipio_nombre": "Florentino Ameghino",
+    "cantidad": 1
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06280",
+    "municipio_nombre": "General Alvarado",
+    "cantidad": 6
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06287",
+    "municipio_nombre": "General Alvear",
+    "cantidad": 1
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06315",
+    "municipio_nombre": "General Juan Madariaga",
+    "cantidad": 1
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06343",
+    "municipio_nombre": "General Paz",
+    "cantidad": 2
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06351",
+    "municipio_nombre": "General Pinto",
+    "cantidad": 2
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06357",
+    "municipio_nombre": "General Pueyrredón",
+    "cantidad": 24
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06364",
+    "municipio_nombre": "General Rodríguez",
+    "cantidad": 4
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06371",
+    "municipio_nombre": "General San Martín",
+    "cantidad": 10
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06392",
+    "municipio_nombre": "General Villegas",
+    "cantidad": 1
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06406",
+    "municipio_nombre": "Hipólito Yrigoyen",
+    "cantidad": 2
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06408",
+    "municipio_nombre": "Hurlingham",
+    "cantidad": 6
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06999",
+    "municipio_nombre": "Ignorado",
+    "cantidad": 38
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06410",
+    "municipio_nombre": "Ituzaingó",
+    "cantidad": 6
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06412",
+    "municipio_nombre": "José C. Paz",
+    "cantidad": 14
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06413",
+    "municipio_nombre": "Junín",
+    "cantidad": 3
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06420",
+    "municipio_nombre": "La Costa",
+    "cantidad": 6
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06427",
+    "municipio_nombre": "La Matanza",
+    "cantidad": 96
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06441",
+    "municipio_nombre": "La Plata",
+    "cantidad": 62
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06434",
+    "municipio_nombre": "Lanús",
+    "cantidad": 27
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06448",
+    "municipio_nombre": "Laprida",
+    "cantidad": 2
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06466",
+    "municipio_nombre": "Lezama",
+    "cantidad": 1
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06476",
+    "municipio_nombre": "Lobería",
+    "cantidad": 2
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06483",
+    "municipio_nombre": "Lobos",
+    "cantidad": 2
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06490",
+    "municipio_nombre": "Lomas de Zamora",
+    "cantidad": 55
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06497",
+    "municipio_nombre": "Luján",
+    "cantidad": 8
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06505",
+    "municipio_nombre": "Magdalena",
+    "cantidad": 3
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06515",
+    "municipio_nombre": "Malvinas Argentinas",
+    "cantidad": 19
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06518",
+    "municipio_nombre": "Mar Chiquita",
+    "cantidad": 5
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06525",
+    "municipio_nombre": "Marcos Paz",
+    "cantidad": 5
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06532",
+    "municipio_nombre": "Mercedes",
+    "cantidad": 2
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06539",
+    "municipio_nombre": "Merlo",
+    "cantidad": 37
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06547",
+    "municipio_nombre": "Monte",
+    "cantidad": 1
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06560",
+    "municipio_nombre": "Moreno",
+    "cantidad": 43
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06568",
+    "municipio_nombre": "Morón",
+    "cantidad": 4
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06581",
+    "municipio_nombre": "Necochea",
+    "cantidad": 5
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06595",
+    "municipio_nombre": "Olavarría",
+    "cantidad": 1
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06623",
+    "municipio_nombre": "Pergamino",
+    "cantidad": 4
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06638",
+    "municipio_nombre": "Pilar",
+    "cantidad": 16
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06648",
+    "municipio_nombre": "Presidente Perón",
+    "cantidad": 7
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06651",
+    "municipio_nombre": "Puán",
+    "cantidad": 4
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06658",
+    "municipio_nombre": "Quilmes",
+    "cantidad": 48
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06665",
+    "municipio_nombre": "Ramallo",
+    "cantidad": 3
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06686",
+    "municipio_nombre": "Rojas",
+    "cantidad": 2
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06693",
+    "municipio_nombre": "Roque Pérez",
+    "cantidad": 2
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06700",
+    "municipio_nombre": "Saavedra",
+    "cantidad": 1
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06707",
+    "municipio_nombre": "Saladillo",
+    "cantidad": 3
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06714",
+    "municipio_nombre": "Salto",
+    "cantidad": 2
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06728",
+    "municipio_nombre": "San Andrés de Giles",
+    "cantidad": 1
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06735",
+    "municipio_nombre": "San Antonio de Areco",
+    "cantidad": 2
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06742",
+    "municipio_nombre": "San Cayetano",
+    "cantidad": 1
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06749",
+    "municipio_nombre": "San Fernando",
+    "cantidad": 6
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06756",
+    "municipio_nombre": "San Isidro",
+    "cantidad": 15
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06760",
+    "municipio_nombre": "San Miguel",
+    "cantidad": 17
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06763",
+    "municipio_nombre": "San Nicolás",
+    "cantidad": 4
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06770",
+    "municipio_nombre": "San Pedro",
+    "cantidad": 5
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06778",
+    "municipio_nombre": "San Vicente",
+    "cantidad": 5
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06791",
+    "municipio_nombre": "Tandil",
+    "cantidad": 4
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06805",
+    "municipio_nombre": "Tigre",
+    "cantidad": 14
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06819",
+    "municipio_nombre": "Tornquist",
+    "cantidad": 2
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06826",
+    "municipio_nombre": "Trenque Lauquen",
+    "cantidad": 5
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06833",
+    "municipio_nombre": "Tres Arroyos",
+    "cantidad": 5
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06840",
+    "municipio_nombre": "Tres de Febrero",
+    "cantidad": 19
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06861",
+    "municipio_nombre": "Vicente López",
+    "cantidad": 2
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06868",
+    "municipio_nombre": "Villa Gesell",
+    "cantidad": 3
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06875",
+    "municipio_nombre": "Villarino",
+    "cantidad": 4
+  },
+  {
+    "anio": 2023,
+    "municipio_id": "06882",
+    "municipio_nombre": "Zárate",
+    "cantidad": 14
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06854",
+    "municipio_nombre": "25 de Mayo",
+    "cantidad": 3
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06021",
+    "municipio_nombre": "Alberti",
+    "cantidad": 9
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06028",
+    "municipio_nombre": "Almirante Brown",
+    "cantidad": 50
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06035",
+    "municipio_nombre": "Avellaneda",
+    "cantidad": 21
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06049",
+    "municipio_nombre": "Azul",
+    "cantidad": 2
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06056",
+    "municipio_nombre": "Bahía Blanca",
+    "cantidad": 13
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06063",
+    "municipio_nombre": "Balcarce",
+    "cantidad": 1
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06070",
+    "municipio_nombre": "Baradero",
+    "cantidad": 3
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06091",
+    "municipio_nombre": "Berazategui",
+    "cantidad": 30
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06098",
+    "municipio_nombre": "Berisso",
+    "cantidad": 6
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06105",
+    "municipio_nombre": "Bolívar",
+    "cantidad": 3
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06112",
+    "municipio_nombre": "Bragado",
+    "cantidad": 5
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06119",
+    "municipio_nombre": "Brandsen",
+    "cantidad": 1
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06126",
+    "municipio_nombre": "Campana",
+    "cantidad": 7
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06134",
+    "municipio_nombre": "Cañuelas",
+    "cantidad": 2
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06161",
+    "municipio_nombre": "Carmen de Areco",
+    "cantidad": 1
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06210",
+    "municipio_nombre": "Chacabuco",
+    "cantidad": 1
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06218",
+    "municipio_nombre": "Chascomús",
+    "cantidad": 4
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06175",
+    "municipio_nombre": "Colón",
+    "cantidad": 2
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06182",
+    "municipio_nombre": "Coronel de Marina Leonardo Rosales",
+    "cantidad": 2
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06196",
+    "municipio_nombre": "Coronel Pringles",
+    "cantidad": 1
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06203",
+    "municipio_nombre": "Coronel Suárez",
+    "cantidad": 2
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06238",
+    "municipio_nombre": "Dolores",
+    "cantidad": 1
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06245",
+    "municipio_nombre": "Ensenada",
+    "cantidad": 9
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06252",
+    "municipio_nombre": "Escobar",
+    "cantidad": 14
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06260",
+    "municipio_nombre": "Esteban Echeverría",
+    "cantidad": 21
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06266",
+    "municipio_nombre": "Exaltación de la Cruz",
+    "cantidad": 6
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06270",
+    "municipio_nombre": "Ezeiza",
+    "cantidad": 11
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06274",
+    "municipio_nombre": "Florencio Varela",
+    "cantidad": 41
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06280",
+    "municipio_nombre": "General Alvarado",
+    "cantidad": 3
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06294",
+    "municipio_nombre": "General Arenales",
+    "cantidad": 1
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06301",
+    "municipio_nombre": "General Belgrano",
+    "cantidad": 5
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06329",
+    "municipio_nombre": "General Las Heras",
+    "cantidad": 1
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06343",
+    "municipio_nombre": "General Paz",
+    "cantidad": 2
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06357",
+    "municipio_nombre": "General Pueyrredón",
+    "cantidad": 28
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06364",
+    "municipio_nombre": "General Rodríguez",
+    "cantidad": 7
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06371",
+    "municipio_nombre": "General San Martín",
+    "cantidad": 22
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06385",
+    "municipio_nombre": "General Viamonte",
+    "cantidad": 1
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06392",
+    "municipio_nombre": "General Villegas",
+    "cantidad": 1
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06406",
+    "municipio_nombre": "Hipólito Yrigoyen",
+    "cantidad": 4
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06408",
+    "municipio_nombre": "Hurlingham",
+    "cantidad": 6
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06999",
+    "municipio_nombre": "Ignorado",
+    "cantidad": 14
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06410",
+    "municipio_nombre": "Ituzaingó",
+    "cantidad": 2
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06412",
+    "municipio_nombre": "José C. Paz",
+    "cantidad": 18
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06413",
+    "municipio_nombre": "Junín",
+    "cantidad": 3
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06420",
+    "municipio_nombre": "La Costa",
+    "cantidad": 12
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06427",
+    "municipio_nombre": "La Matanza",
+    "cantidad": 76
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06441",
+    "municipio_nombre": "La Plata",
+    "cantidad": 43
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06434",
+    "municipio_nombre": "Lanús",
+    "cantidad": 19
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06469",
+    "municipio_nombre": "Lincoln",
+    "cantidad": 1
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06483",
+    "municipio_nombre": "Lobos",
+    "cantidad": 4
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06490",
+    "municipio_nombre": "Lomas de Zamora",
+    "cantidad": 58
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06497",
+    "municipio_nombre": "Luján",
+    "cantidad": 6
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06505",
+    "municipio_nombre": "Magdalena",
+    "cantidad": 2
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06515",
+    "municipio_nombre": "Malvinas Argentinas",
+    "cantidad": 24
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06518",
+    "municipio_nombre": "Mar Chiquita",
+    "cantidad": 3
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06525",
+    "municipio_nombre": "Marcos Paz",
+    "cantidad": 6
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06532",
+    "municipio_nombre": "Mercedes",
+    "cantidad": 4
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06539",
+    "municipio_nombre": "Merlo",
+    "cantidad": 37
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06553",
+    "municipio_nombre": "Monte Hermoso",
+    "cantidad": 2
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06560",
+    "municipio_nombre": "Moreno",
+    "cantidad": 41
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06568",
+    "municipio_nombre": "Morón",
+    "cantidad": 12
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06581",
+    "municipio_nombre": "Necochea",
+    "cantidad": 1
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06602",
+    "municipio_nombre": "Patagones",
+    "cantidad": 2
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06609",
+    "municipio_nombre": "Pehuajó",
+    "cantidad": 2
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06623",
+    "municipio_nombre": "Pergamino",
+    "cantidad": 4
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06638",
+    "municipio_nombre": "Pilar",
+    "cantidad": 17
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06644",
+    "municipio_nombre": "Pinamar",
+    "cantidad": 2
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06648",
+    "municipio_nombre": "Presidente Perón",
+    "cantidad": 9
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06658",
+    "municipio_nombre": "Quilmes",
+    "cantidad": 41
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06665",
+    "municipio_nombre": "Ramallo",
+    "cantidad": 2
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06672",
+    "municipio_nombre": "Rauch",
+    "cantidad": 1
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06707",
+    "municipio_nombre": "Saladillo",
+    "cantidad": 3
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06714",
+    "municipio_nombre": "Salto",
+    "cantidad": 1
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06728",
+    "municipio_nombre": "San Andrés de Giles",
+    "cantidad": 1
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06749",
+    "municipio_nombre": "San Fernando",
+    "cantidad": 4
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06756",
+    "municipio_nombre": "San Isidro",
+    "cantidad": 13
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06760",
+    "municipio_nombre": "San Miguel",
+    "cantidad": 33
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06763",
+    "municipio_nombre": "San Nicolás",
+    "cantidad": 3
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06770",
+    "municipio_nombre": "San Pedro",
+    "cantidad": 5
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06778",
+    "municipio_nombre": "San Vicente",
+    "cantidad": 9
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06791",
+    "municipio_nombre": "Tandil",
+    "cantidad": 3
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06805",
+    "municipio_nombre": "Tigre",
+    "cantidad": 10
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06812",
+    "municipio_nombre": "Tordillo",
+    "cantidad": 1
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06826",
+    "municipio_nombre": "Trenque Lauquen",
+    "cantidad": 3
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06833",
+    "municipio_nombre": "Tres Arroyos",
+    "cantidad": 4
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06840",
+    "municipio_nombre": "Tres de Febrero",
+    "cantidad": 14
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06861",
+    "municipio_nombre": "Vicente López",
+    "cantidad": 5
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06868",
+    "municipio_nombre": "Villa Gesell",
+    "cantidad": 2
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06875",
+    "municipio_nombre": "Villarino",
+    "cantidad": 3
+  },
+  {
+    "anio": 2024,
+    "municipio_id": "06882",
+    "municipio_nombre": "Zárate",
+    "cantidad": 6
+  }
+]

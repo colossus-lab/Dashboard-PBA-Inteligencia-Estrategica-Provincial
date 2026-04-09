@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "id": "poblacion-hab-hogares",
+    "title": "Condiciones Habitacionales de los Hogares",
+    "category": "poblacion",
+    "subcategory": "habitacional-hogares",
+    "source": "INDEC — Censo 2022",
+    "date": "2022-05-18"
+  },
+  "kpis": [
+    {
+      "id": "hogares-total",
+      "label": "Total hogares PBA",
+      "value": 5979469,
+      "formatted": "5.979.469",
+      "unit": "hogares"
+    },
+    {
+      "id": "calmat-1",
+      "label": "CALMAT I (calidad satisfactoria)",
+      "value": 64.2,
+      "formatted": "64,2%",
+      "unit": "%",
+      "status": "good"
+    },
+    {
+      "id": "calmat-4",
+      "label": "CALMAT IV (calidad insuficiente)",
+      "value": 2.8,
+      "formatted": "2,8%",
+      "unit": "%",
+      "status": "critical"
+    },
+    {
+      "id": "sin-gas-red",
+      "label": "Sin gas de red",
+      "value": 38.5,
+      "formatted": "38,5%",
+      "unit": "%",
+      "status": "warning"
+    }
+  ],
+  "charts": [],
+  "rankings": [],
+  "mapData": []
+}

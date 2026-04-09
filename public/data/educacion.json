@@ -1,0 +1,157 @@
+{
+  "meta": {
+    "id": "educacion",
+    "title": "Análisis del Sistema Educativo",
+    "category": "educacion",
+    "source": "Evaluación Aprender 2024, DGCyE PBA",
+    "date": "2024"
+  },
+  "kpis": [
+    {
+      "id": "matricula-total",
+      "label": "Matrícula total PBA",
+      "value": 5200000,
+      "formatted": "~5.200.000",
+      "unit": "alumnos"
+    },
+    {
+      "id": "aprender-lengua-prim",
+      "label": "Lengua Primaria (básico+debajo)",
+      "value": 34.2,
+      "formatted": "34,2%",
+      "unit": "%",
+      "status": "critical"
+    },
+    {
+      "id": "aprender-mate-prim",
+      "label": "Matemática Primaria (básico+debajo)",
+      "value": 44.5,
+      "formatted": "44,5%",
+      "unit": "%",
+      "status": "critical"
+    },
+    {
+      "id": "aprender-lengua-sec",
+      "label": "Lengua Secundaria (básico+debajo)",
+      "value": 53.5,
+      "formatted": "53,5%",
+      "unit": "%",
+      "status": "critical"
+    },
+    {
+      "id": "aprender-mate-sec",
+      "label": "Matemática Secundaria (básico+debajo)",
+      "value": 78.4,
+      "formatted": "78,4%",
+      "unit": "%",
+      "status": "critical"
+    }
+  ],
+  "charts": [
+    {
+      "id": "aprender-primaria",
+      "type": "bar",
+      "title": "Evaluación Aprender 2024 — Primaria",
+      "sectionId": "aprender",
+      "data": [
+        {
+          "area": "Lengua",
+          "Por debajo del básico": 10.7,
+          "Básico": 23.5,
+          "Satisfactorio": 39.7,
+          "Avanzado": 26.1
+        },
+        {
+          "area": "Matemática",
+          "Por debajo del básico": 14,
+          "Básico": 30.5,
+          "Satisfactorio": 38.2,
+          "Avanzado": 17.3
+        }
+      ],
+      "config": {
+        "xAxis": "area",
+        "stacked": true
+      }
+    },
+    {
+      "id": "aprender-secundaria",
+      "type": "bar",
+      "title": "Evaluación Aprender 2024 — Secundaria",
+      "sectionId": "aprender",
+      "data": [
+        {
+          "area": "Lengua",
+          "Por debajo del básico": 22.7,
+          "Básico": 30.8,
+          "Satisfactorio": 33.6,
+          "Avanzado": 12.9
+        },
+        {
+          "area": "Matemática",
+          "Por debajo del básico": 40.8,
+          "Básico": 37.6,
+          "Satisfactorio": 17.2,
+          "Avanzado": 4.4
+        }
+      ],
+      "config": {
+        "xAxis": "area",
+        "stacked": true
+      }
+    },
+    {
+      "id": "trayectoria-sobreedad",
+      "type": "line",
+      "title": "Evolución de sobreedad escolar",
+      "sectionId": "trayectoria",
+      "data": [
+        {
+          "año": 2013,
+          "Tasa sobreedad (%)": 10.4
+        },
+        {
+          "año": 2014,
+          "Tasa sobreedad (%)": 8.6
+        },
+        {
+          "año": 2015,
+          "Tasa sobreedad (%)": 7.5
+        },
+        {
+          "año": 2016,
+          "Tasa sobreedad (%)": 6.9
+        },
+        {
+          "año": 2017,
+          "Tasa sobreedad (%)": 6.7
+        },
+        {
+          "año": 2018,
+          "Tasa sobreedad (%)": 6.7
+        },
+        {
+          "año": 2019,
+          "Tasa sobreedad (%)": 6.2
+        },
+        {
+          "año": 2020,
+          "Tasa sobreedad (%)": 5.6
+        },
+        {
+          "año": 2021,
+          "Tasa sobreedad (%)": 4.2
+        },
+        {
+          "año": 2022,
+          "Tasa sobreedad (%)": 4.4
+        }
+      ],
+      "config": {
+        "xAxis": "año"
+      }
+    }
+  ],
+  "rankings": [],
+  "mapData": []
+}

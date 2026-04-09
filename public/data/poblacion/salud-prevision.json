@@ -1,0 +1,44 @@
+{
+  "meta": {
+    "id": "poblacion-salud",
+    "title": "Salud y Previsión Social",
+    "category": "poblacion",
+    "subcategory": "salud-prevision",
+    "source": "INDEC — Censo 2022",
+    "date": "2022-05-18"
+  },
+  "kpis": [
+    {
+      "id": "sin-cobertura",
+      "label": "Sin cobertura de salud",
+      "value": 36.5,
+      "formatted": "36,5%",
+      "unit": "%",
+      "status": "critical"
+    },
+    {
+      "id": "obra-social",
+      "label": "Obra social",
+      "value": 42.8,
+      "formatted": "42,8%",
+      "unit": "%"
+    },
+    {
+      "id": "prepaga",
+      "label": "Prepaga",
+      "value": 12.3,
+      "formatted": "12,3%",
+      "unit": "%"
+    },
+    {
+      "id": "jubilados",
+      "label": "Jubilados/Pensionados",
+      "value": 2200000,
+      "formatted": "~2.200.000",
+      "unit": "personas"
+    }
+  ],
+  "charts": [],
+  "rankings": [],
+  "mapData": []
+}

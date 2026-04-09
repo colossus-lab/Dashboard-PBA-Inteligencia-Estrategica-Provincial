@@ -1,0 +1,161 @@
+{
+  "meta": {
+    "id": "poblacion-estructura",
+    "title": "Estructura por Sexo y Edad",
+    "category": "poblacion",
+    "subcategory": "estructura",
+    "source": "INDEC — Censo 2022. Cuadros C1-C5",
+    "date": "2022-05-18"
+  },
+  "kpis": [
+    {
+      "id": "pob-total",
+      "label": "Población total PBA",
+      "value": 17541141,
+      "formatted": "17.541.141",
+      "unit": "personas"
+    },
+    {
+      "id": "mujeres",
+      "label": "Mujeres",
+      "value": 9097215,
+      "formatted": "9.097.215",
+      "unit": "52,0%"
+    },
+    {
+      "id": "varones",
+      "label": "Varones",
+      "value": 8443926,
+      "formatted": "8.443.926",
+      "unit": "48,0%"
+    },
+    {
+      "id": "indice-masc",
+      "label": "Índice de masculinidad",
+      "value": 92.8,
+      "formatted": "92,8",
+      "unit": "varones/100 mujeres"
+    },
+    {
+      "id": "pob-65-mas",
+      "label": "Población 65+ años",
+      "value": 2330447,
+      "formatted": "2.330.447",
+      "unit": "13,3%"
+    },
+    {
+      "id": "mediana-edad",
+      "label": "Mediana de edad",
+      "value": 33,
+      "formatted": "33 años",
+      "unit": "años"
+    }
+  ],
+  "charts": [
+    {
+      "id": "piramide",
+      "type": "pyramid",
+      "title": "Pirámide poblacional PBA 2022",
+      "sectionId": "piramide",
+      "data": [
+        {
+          "grupo": "0-4",
+          "mujeres": 519688,
+          "varones": 533718
+        },
+        {
+          "grupo": "5-9",
+          "mujeres": 673163,
+          "varones": 695050
+        },
+        {
+          "grupo": "10-14",
+          "mujeres": 692196,
+          "varones": 714855
+        },
+        {
+          "grupo": "15-19",
+          "mujeres": 678031,
+          "varones": 689507
+        },
+        {
+          "grupo": "20-24",
+          "mujeres": 650447,
+          "varones": 642915
+        },
+        {
+          "grupo": "25-29",
+          "mujeres": 663239,
+          "varones": 633539
+        },
+        {
+          "grupo": "30-34",
+          "mujeres": 664450,
+          "varones": 628463
+        },
+        {
+          "grupo": "35-39",
+          "mujeres": 638533,
+          "varones": 603143
+        },
+        {
+          "grupo": "40-44",
+          "mujeres": 654967,
+          "varones": 612238
+        },
+        {
+          "grupo": "45-49",
+          "mujeres": 582675,
+          "varones": 538415
+        },
+        {
+          "grupo": "50-54",
+          "mujeres": 506689,
+          "varones": 465209
+        },
+        {
+          "grupo": "55-59",
+          "mujeres": 446821,
+          "varones": 402033
+        },
+        {
+          "grupo": "60-64",
+          "mujeres": 408891,
+          "varones": 356947
+        },
+        {
+          "grupo": "65-69",
+          "mujeres": 365257,
+          "varones": 303487
+        },
+        {
+          "grupo": "70-74",
+          "mujeres": 313810,
+          "varones": 242925
+        },
+        {
+          "grupo": "75-79",
+          "mujeres": 240930,
+          "varones": 166778
+        },
+        {
+          "grupo": "80-84",
+          "mujeres": 161618,
+          "varones": 94653
+        },
+        {
+          "grupo": "85-89",
+          "mujeres": 95251,
+          "varones": 46219
+        },
+        {
+          "grupo": "90+",
+          "mujeres": 58831,
+          "varones": 23325
+        }
+      ]
+    }
+  ],
+  "rankings": [],
+  "mapData": []
+}

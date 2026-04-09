@@ -1,0 +1,1813 @@
+{
+  "meta": {
+    "id": "economia-fiscal",
+    "title": "Economía y Finanzas Provinciales",
+    "category": "economia-fiscal",
+    "source": "Ministerio de Economía PBA, INDEC",
+    "date": "2026"
+  },
+  "kpis": [
+    {
+      "id": "recaudacion-total",
+      "label": "Recaudación total (2026)",
+      "value": 1313663504,
+      "formatted": "1.313.663.504",
+      "unit": "$"
+    },
+    {
+      "id": "pbg-sectores",
+      "label": "Sectores PBG analizados",
+      "value": 10,
+      "formatted": "10",
+      "unit": "sectores"
+    },
+    {
+      "id": "municipios-transfer",
+      "label": "Municipios con transferencias",
+      "value": 135,
+      "formatted": "135",
+      "unit": "municipios"
+    },
+    {
+      "id": "top-transfer",
+      "label": "Mayor transfer.: La Matanza",
+      "value": 30292490087,
+      "formatted": "30.292.490.087",
+      "unit": "$"
+    }
+  ],
+  "charts": [
+    {
+      "id": "recaudacion-temporal",
+      "type": "line",
+      "title": "Evolución recaudación tributaria PBA",
+      "sectionId": "recaudacion",
+      "data": [
+        {
+          "año": 1999,
+          "Recaudación total": 4128798
+        },
+        {
+          "año": 2000,
+          "Recaudación total": 3838104
+        },
+        {
+          "año": 2001,
+          "Recaudación total": 3354636
+        },
+        {
+          "año": 2002,
+          "Recaudación total": 4059857
+        },
+        {
+          "año": 2003,
+          "Recaudación total": 5508778
+        },
+        {
+          "año": 2004,
+          "Recaudación total": 6988263
+        },
+        {
+          "año": 2005,
+          "Recaudación total": 8374657
+        },
+        {
+          "año": 2006,
+          "Recaudación total": 10354402
+        },
+        {
+          "año": 2007,
+          "Recaudación total": 12946008
+        },
+        {
+          "año": 2008,
+          "Recaudación total": 17331958
+        },
+        {
+          "año": 2009,
+          "Recaudación total": 20779473
+        },
+        {
+          "año": 2010,
+          "Recaudación total": 26058733
+        },
+        {
+          "año": 2011,
+          "Recaudación total": 34831402
+        },
+        {
+          "año": 2012,
+          "Recaudación total": 45710997
+        },
+        {
+          "año": 2013,
+          "Recaudación total": 67079226
+        },
+        {
+          "año": 2014,
+          "Recaudación total": 88731124
+        },
+        {
+          "año": 2015,
+          "Recaudación total": 117907326
+        },
+        {
+          "año": 2016,
+          "Recaudación total": 158081736
+        },
+        {
+          "año": 2017,
+          "Recaudación total": 217184381
+        },
+        {
+          "año": 2018,
+          "Recaudación total": 274274871
+        },
+        {
+          "año": 2019,
+          "Recaudación total": 366005391
+        },
+        {
+          "año": 2020,
+          "Recaudación total": 467016831
+        },
+        {
+          "año": 2021,
+          "Recaudación total": 791478716
+        },
+        {
+          "año": 2022,
+          "Recaudación total": 1408769204
+        },
+        {
+          "año": 2023,
+          "Recaudación total": 3040410054
+        },
+        {
+          "año": 2024,
+          "Recaudación total": 8678957467
+        },
+        {
+          "año": 2025,
+          "Recaudación total": 13006204150
+        },
+        {
+          "año": 2026,
+          "Recaudación total": 1313663504
+        }
+      ],
+      "config": {
+        "xAxis": "año"
+      }
+    },
+    {
+      "id": "pbg-sectores",
+      "type": "pie",
+      "title": "PBG por sector (2023)",
+      "sectionId": "pbg",
+      "data": [
+        {
+          "id": "Industria Manufacturera",
+          "value": 14368362
+        },
+        {
+          "id": "IVA y otros impuestos a los productos",
+          "value": 11290719
+        },
+        {
+          "id": "Comercio al por mayor, al por menor, rep...",
+          "value": 10912296
+        },
+        {
+          "id": "Servicios inmobiliarios, empresariales y...",
+          "value": 5903242
+        },
+        {
+          "id": "Agricultura, ganadería, caza y silvicult...",
+          "value": 4634735
+        },
+        {
+          "id": "Servicio de transporte, de almacenamient...",
+          "value": 3365805
+        },
+        {
+          "id": "Construcción",
+          "value": 3337229
+        },
+        {
+          "id": "Enseñanza",
+          "value": 3176900
+        },
+        {
+          "id": "Administración pública, defensa y seguri...",
+          "value": 2962001
+        },
+        {
+          "id": "Servicios sociales y de salud",
+          "value": 2890529
+        }
+      ]
+    },
+    {
+      "id": "exportaciones-rubros",
+      "type": "bar",
+      "title": "Exportaciones por rubro (2025)",
+      "sectionId": "exportaciones",
+      "data": [
+        {
+          "rubro": "Total",
+          "Valor (USD)": 162700
+        },
+        {
+          "rubro": "Manufacturas de Origen Industrial",
+          "Valor (USD)": 118885
+        },
+        {
+          "rubro": "Manufacturas de Origen Agropecuario",
+          "Valor (USD)": 100782
+        },
+        {
+          "rubro": "Productos Primarios",
+          "Valor (USD)": 71271
+        },
+        {
+          "rubro": "Combustible y Energía",
+          "Valor (USD)": 34457
+        }
+      ],
+      "config": {
+        "xAxis": "rubro",
+        "layout": "horizontal"
+      }
+    },
+    {
+      "id": "transferencias-municipio",
+      "type": "bar",
+      "title": "Top 15 municipios — Transferencias (2026)",
+      "sectionId": "transferencias",
+      "data": [
+        {
+          "municipio": "La Matanza",
+          "Total transferido": 30292490087
+        },
+        {
+          "municipio": "La Plata",
+          "Total transferido": 14413298782
+        },
+        {
+          "municipio": "Lomas de Zamora",
+          "Total transferido": 14008647000
+        },
+        {
+          "municipio": "Malvinas Argentinas",
+          "Total transferido": 13462762755
+        },
+        {
+          "municipio": "Merlo",
+          "Total transferido": 13460451433
+        },
+        {
+          "municipio": "Pilar",
+          "Total transferido": 10513862484
+        },
+        {
+          "municipio": "Moreno",
+          "Total transferido": 10261482602
+        },
+        {
+          "municipio": "General Pueyrredón",
+          "Total transferido": 10222645532
+        },
+        {
+          "municipio": "General San Martín",
+          "Total transferido": 9837479381
+        },
+        {
+          "municipio": "Almirante Brown",
+          "Total transferido": 9656764309
+        },
+        {
+          "municipio": "Quilmes",
+          "Total transferido": 9649958894
+        },
+        {
+          "municipio": "Florencio Varela",
+          "Total transferido": 9441466123
+        },
+        {
+          "municipio": "José C. Paz",
+          "Total transferido": 8336314457
+        },
+        {
+          "municipio": "Tigre",
+          "Total transferido": 8165885935
+        },
+        {
+          "municipio": "San Miguel",
+          "Total transferido": 8110742480
+        }
+      ],
+      "config": {
+        "xAxis": "municipio",
+        "layout": "horizontal"
+      }
+    }
+  ],
+  "rankings": [
+    {
+      "id": "ranking-transferencias",
+      "title": "Transferencias por municipio",
+      "sectionId": "transferencias",
+      "items": [
+        {
+          "name": "La Matanza",
+          "value": 30292490087,
+          "municipioId": "06427"
+        },
+        {
+          "name": "La Plata",
+          "value": 14413298782,
+          "municipioId": "06441"
+        },
+        {
+          "name": "Lomas de Zamora",
+          "value": 14008647000,
+          "municipioId": "06490"
+        },
+        {
+          "name": "Malvinas Argentinas",
+          "value": 13462762755,
+          "municipioId": "06515"
+        },
+        {
+          "name": "Merlo",
+          "value": 13460451433,
+          "municipioId": "06539"
+        },
+        {
+          "name": "Pilar",
+          "value": 10513862484,
+          "municipioId": "06638"
+        },
+        {
+          "name": "Moreno",
+          "value": 10261482602,
+          "municipioId": "06560"
+        },
+        {
+          "name": "General Pueyrredón",
+          "value": 10222645532,
+          "municipioId": "06357"
+        },
+        {
+          "name": "General San Martín",
+          "value": 9837479381,
+          "municipioId": "06371"
+        },
+        {
+          "name": "Almirante Brown",
+          "value": 9656764309,
+          "municipioId": "06028"
+        },
+        {
+          "name": "Quilmes",
+          "value": 9649958894,
+          "municipioId": "06658"
+        },
+        {
+          "name": "Florencio Varela",
+          "value": 9441466123,
+          "municipioId": "06274"
+        },
+        {
+          "name": "José C. Paz",
+          "value": 8336314457,
+          "municipioId": "06412"
+        },
+        {
+          "name": "Tigre",
+          "value": 8165885935,
+          "municipioId": "06805"
+        },
+        {
+          "name": "San Miguel",
+          "value": 8110742480,
+          "municipioId": "06760"
+        },
+        {
+          "name": "Lanús",
+          "value": 7745973895,
+          "municipioId": "06434"
+        },
+        {
+          "name": "Escobar",
+          "value": 7734796866,
+          "municipioId": "06252"
+        },
+        {
+          "name": "San Isidro",
+          "value": 7697769934,
+          "municipioId": "06756"
+        },
+        {
+          "name": "Berazategui",
+          "value": 7632793321,
+          "municipioId": "06091"
+        },
+        {
+          "name": "Esteban Echeverría",
+          "value": 7125450059,
+          "municipioId": "06260"
+        },
+        {
+          "name": "Vicente López",
+          "value": 6463929008,
+          "municipioId": "06861"
+        },
+        {
+          "name": "La Costa",
+          "value": 6145571968,
+          "municipioId": "06420"
+        },
+        {
+          "name": "Bahía Blanca",
+          "value": 6010977806,
+          "municipioId": "06056"
+        },
+        {
+          "name": "Avellaneda",
+          "value": 5678412289,
+          "municipioId": "06035"
+        },
+        {
+          "name": "Morón",
+          "value": 5068206204,
+          "municipioId": "06568"
+        },
+        {
+          "name": "Tres de Febrero",
+          "value": 4718925562,
+          "municipioId": "06840"
+        },
+        {
+          "name": "Tandil",
+          "value": 4572566752,
+          "municipioId": "06791"
+        },
+        {
+          "name": "Olavarría",
+          "value": 4528464204,
+          "municipioId": "06595"
+        },
+        {
+          "name": "Chacabuco",
+          "value": 4031238799,
+          "municipioId": "06210"
+        },
+        {
+          "name": "San Fernando",
+          "value": 4020801000,
+          "municipioId": "06749"
+        },
+        {
+          "name": "Hurlingham",
+          "value": 3719297072,
+          "municipioId": "06408"
+        },
+        {
+          "name": "Campana",
+          "value": 3408214072,
+          "municipioId": "06126"
+        },
+        {
+          "name": "Trenque Lauquen",
+          "value": 3349948278,
+          "municipioId": "06826"
+        },
+        {
+          "name": "Luján",
+          "value": 3290573404,
+          "municipioId": "06497"
+        },
+        {
+          "name": "Azul",
+          "value": 3278863106,
+          "municipioId": "06049"
+        },
+        {
+          "name": "Pehuajó",
+          "value": 3240183669,
+          "municipioId": "06609"
+        },
+        {
+          "name": "Necochea",
+          "value": 3203096135,
+          "municipioId": "06581"
+        },
+        {
+          "name": "Patagones",
+          "value": 3164772806,
+          "municipioId": "06602"
+        },
+        {
+          "name": "Berisso",
+          "value": 3132854580,
+          "municipioId": "06098"
+        },
+        {
+          "name": "General Villegas",
+          "value": 3086249353,
+          "municipioId": "06392"
+        },
+        {
+          "name": "Ezeiza",
+          "value": 3033634933,
+          "municipioId": "06270"
+        },
+        {
+          "name": "Chivilcoy",
+          "value": 2995146152,
+          "municipioId": "06224"
+        },
+        {
+          "name": "Tres Arroyos",
+          "value": 2940213374,
+          "municipioId": "06833"
+        },
+        {
+          "name": "Coronel Suárez",
+          "value": 2889482313,
+          "municipioId": "06203"
+        },
+        {
+          "name": "Mercedes",
+          "value": 2806879336,
+          "municipioId": "06532"
+        },
+        {
+          "name": "Lincoln",
+          "value": 2755833328,
+          "municipioId": "06469"
+        },
+        {
+          "name": "San Nicolás",
+          "value": 2753137651,
+          "municipioId": "06763"
+        },
+        {
+          "name": "San Pedro",
+          "value": 2699559994,
+          "municipioId": "06770"
+        },
+        {
+          "name": "Zárate",
+          "value": 2632981330,
+          "municipioId": "06882"
+        },
+        {
+          "name": "Bolívar",
+          "value": 2607333482,
+          "municipioId": "06105"
+        },
+        {
+          "name": "Ituzaingó",
+          "value": 2461085409,
+          "municipioId": "06410"
+        },
+        {
+          "name": "General Rodríguez",
+          "value": 2460765032,
+          "municipioId": "06364"
+        },
+        {
+          "name": "Puán",
+          "value": 2442032513,
+          "municipioId": "06651"
+        },
+        {
+          "name": "Balcarce",
+          "value": 2417414255,
+          "municipioId": "06063"
+        },
+        {
+          "name": "Bragado",
+          "value": 2366843636,
+          "municipioId": "06112"
+        },
+        {
+          "name": "Villarino",
+          "value": 2343413585,
+          "municipioId": "06875"
+        },
+        {
+          "name": "Pergamino",
+          "value": 2240098888,
+          "municipioId": "06623"
+        },
+        {
+          "name": "Carlos Casares",
+          "value": 2234064789,
+          "municipioId": "06147"
+        },
+        {
+          "name": "Chascomús",
+          "value": 2197684928,
+          "municipioId": "06218"
+        },
+        {
+          "name": "Mar Chiquita",
+          "value": 2159696698,
+          "municipioId": "06518"
+        },
+        {
+          "name": "Marcos Paz",
+          "value": 2147864101,
+          "municipioId": "06525"
+        },
+        {
+          "name": "25 de Mayo",
+          "value": 2133295526,
+          "municipioId": "06854"
+        },
+        {
+          "name": "Presidente Perón",
+          "value": 2085360171,
+          "municipioId": "06648"
+        },
+        {
+          "name": "Benito Juárez",
+          "value": 2077566785,
+          "municipioId": "06084"
+        },
+        {
+          "name": "Dolores",
+          "value": 2040292418,
+          "municipioId": "06238"
+        },
+        {
+          "name": "Adolfo Alsina",
+          "value": 1991081206,
+          "municipioId": "06007"
+        },
+        {
+          "name": "Junín",
+          "value": 1951388584,
+          "municipioId": "06413"
+        },
+        {
+          "name": "Villa Gesell",
+          "value": 1921119345,
+          "municipioId": "06868"
+        },
+        {
+          "name": "Saavedra",
+          "value": 1920309293,
+          "municipioId": "06700"
+        },
+        {
+          "name": "Exaltación de la Cruz",
+          "value": 1911586079,
+          "municipioId": "06266"
+        },
+        {
+          "name": "Ayacucho",
+          "value": 1910886263,
+          "municipioId": "06042"
+        },
+        {
+          "name": "Daireaux",
+          "value": 1904775874,
+          "municipioId": "06231"
+        },
+        {
+          "name": "Tornquist",
+          "value": 1900007467,
+          "municipioId": "06819"
+        },
+        {
+          "name": "Coronel Pringles",
+          "value": 1805288348,
+          "municipioId": "06196"
+        },
+        {
+          "name": "San Vicente",
+          "value": 1751066832,
+          "municipioId": "06778"
+        },
+        {
+          "name": "Rivadavia",
+          "value": 1743359840,
+          "municipioId": "06679"
+        },
+        {
+          "name": "9 de Julio",
+          "value": 1733089658,
+          "municipioId": "06588"
+        },
+        {
+          "name": "General Viamonte",
+          "value": 1701155583,
+          "municipioId": "06385"
+        },
+        {
+          "name": "Coronel Dorrego",
+          "value": 1697509955,
+          "municipioId": "06189"
+        },
+        {
+          "name": "General Alvarado",
+          "value": 1689733341,
+          "municipioId": "06280"
+        },
+        {
+          "name": "Lobería",
+          "value": 1626768943,
+          "municipioId": "06476"
+        },
+        {
+          "name": "Pinamar",
+          "value": 1625504417,
+          "municipioId": "06644"
+        },
+        {
+          "name": "General La Madrid",
+          "value": 1557563311,
+          "municipioId": "06322"
+        },
+        {
+          "name": "Colón",
+          "value": 1555772026,
+          "municipioId": "06175"
+        },
+        {
+          "name": "San Andrés de Giles",
+          "value": 1537900953,
+          "municipioId": "06728"
+        },
+        {
+          "name": "Coronel de Marina Leonardo Rosales",
+          "value": 1532064136,
+          "municipioId": "06182"
+        },
+        {
+          "name": "Rojas",
+          "value": 1502523139,
+          "municipioId": "06686"
+        },
+        {
+          "name": "Guaminí",
+          "value": 1480915733,
+          "municipioId": "06399"
+        },
+        {
+          "name": "Cañuelas",
+          "value": 1441264447,
+          "municipioId": "06134"
+        },
+        {
+          "name": "Magdalena",
+          "value": 1415829364,
+          "municipioId": "06505"
+        },
+        {
+          "name": "Salto",
+          "value": 1378181184,
+          "municipioId": "06714"
+        },
+        {
+          "name": "Saladillo",
+          "value": 1363089953,
+          "municipioId": "06707"
+        },
+        {
+          "name": "Leandro N. Alem",
+          "value": 1352055774,
+          "municipioId": "06462"
+        },
+        {
+          "name": "Baradero",
+          "value": 1334021871,
+          "municipioId": "06070"
+        },
+        {
+          "name": "General Juan Madariaga",
+          "value": 1328189419,
+          "municipioId": "06315"
+        },
+        {
+          "name": "Carlos Tejedor",
+          "value": 1318376915,
+          "municipioId": "06154"
+        },
+        {
+          "name": "Ensenada",
+          "value": 1301359987,
+          "municipioId": "06245"
+        },
+        {
+          "name": "General Pinto",
+          "value": 1295282462,
+          "municipioId": "06351"
+        },
+        {
+          "name": "Las Flores",
+          "value": 1279120171,
+          "municipioId": "06455"
+        },
+        {
+          "name": "General Paz",
+          "value": 1260277882,
+          "municipioId": "06343"
+        },
+        {
+          "name": "Tapalqué",
+          "value": 1252901759,
+          "municipioId": "06798"
+        },
+        {
+          "name": "Laprida",
+          "value": 1242817932,
+          "municipioId": "06448"
+        },
+        {
+          "name": "Arrecifes",
+          "value": 1223723865,
+          "municipioId": "06077"
+        },
+        {
+          "name": "San Cayetano",
+          "value": 1216662158,
+          "municipioId": "06742"
+        },
+        {
+          "name": "Rauch",
+          "value": 1215563145,
+          "municipioId": "06672"
+        },
+        {
+          "name": "General Belgrano",
+          "value": 1182786048,
+          "municipioId": "06301"
+        },
+        {
+          "name": "Adolfo Gonzales Chaves",
+          "value": 1113044524,
+          "municipioId": "06014"
+        },
+        {
+          "name": "Alberti",
+          "value": 1103635153,
+          "municipioId": "06021"
+        },
+        {
+          "name": "Maipú",
+          "value": 1070535798,
+          "municipioId": "06511"
+        },
+        {
+          "name": "Ramallo",
+          "value": 1066884963,
+          "municipioId": "06665"
+        },
+        {
+          "name": "General Alvear",
+          "value": 1040489435,
+          "municipioId": "06287"
+        },
+        {
+          "name": "San Antonio de Areco",
+          "value": 1002080553,
+          "municipioId": "06735"
+        },
+        {
+          "name": "General Arenales",
+          "value": 1002049270,
+          "municipioId": "06294"
+        },
+        {
+          "name": "Navarro",
+          "value": 983510637,
+          "municipioId": "06574"
+        },
+        {
+          "name": "Punta Indio",
+          "value": 929339152,
+          "municipioId": "06655"
+        },
+        {
+          "name": "Lobos",
+          "value": 916483138,
+          "municipioId": "06483"
+        },
+        {
+          "name": "Roque Pérez",
+          "value": 890338294,
+          "municipioId": "06693"
+        },
+        {
+          "name": "Brandsen",
+          "value": 864349717,
+          "municipioId": "06119"
+        },
+        {
+          "name": "Florentino Ameghino",
+          "value": 814602150,
+          "municipioId": "06277"
+        },
+        {
+          "name": "Hipólito Yrigoyen",
+          "value": 801809034,
+          "municipioId": "06406"
+        },
+        {
+          "name": "Castelli",
+          "value": 776586671,
+          "municipioId": "06168"
+        },
+        {
+          "name": "Monte Hermoso",
+          "value": 756439038,
+          "municipioId": "06553"
+        },
+        {
+          "name": "General Las Heras",
+          "value": 729284458,
+          "municipioId": "06329"
+        },
+        {
+          "name": "Suipacha",
+          "value": 719487547,
+          "municipioId": "06784"
+        },
+        {
+          "name": "Monte",
+          "value": 705445672,
+          "municipioId": "06547"
+        },
+        {
+          "name": "Pellegrini",
+          "value": 705239738,
+          "municipioId": "06616"
+        },
+        {
+          "name": "Pila",
+          "value": 702859389,
+          "municipioId": "06630"
+        },
+        {
+          "name": "Salliqueló",
+          "value": 687597573,
+          "municipioId": "06721"
+        },
+        {
+          "name": "Tres Lomas",
+          "value": 675818899,
+          "municipioId": "06847"
+        },
+        {
+          "name": "Capitán Sarmiento",
+          "value": 668565027,
+          "municipioId": "06140"
+        },
+        {
+          "name": "General Lavalle",
+          "value": 562543504,
+          "municipioId": "06336"
+        },
+        {
+          "name": "Carmen de Areco",
+          "value": 554738025,
+          "municipioId": "06161"
+        },
+        {
+          "name": "Lezama",
+          "value": 510891293,
+          "municipioId": "06466"
+        },
+        {
+          "name": "General Guido",
+          "value": 441545602,
+          "municipioId": "06308"
+        },
+        {
+          "name": "Tordillo",
+          "value": 275153787,
+          "municipioId": "06812"
+        }
+      ],
+      "order": "desc"
+    }
+  ],
+  "mapData": [
+    {
+      "municipioId": "06427",
+      "municipioNombre": "La Matanza",
+      "value": 30292490087,
+      "label": "$30.292.490.087"
+    },
+    {
+      "municipioId": "06441",
+      "municipioNombre": "La Plata",
+      "value": 14413298782,
+      "label": "$14.413.298.782"
+    },
+    {
+      "municipioId": "06490",
+      "municipioNombre": "Lomas de Zamora",
+      "value": 14008647000,
+      "label": "$14.008.647.000"
+    },
+    {
+      "municipioId": "06515",
+      "municipioNombre": "Malvinas Argentinas",
+      "value": 13462762755,
+      "label": "$13.462.762.755"
+    },
+    {
+      "municipioId": "06539",
+      "municipioNombre": "Merlo",
+      "value": 13460451433,
+      "label": "$13.460.451.433"
+    },
+    {
+      "municipioId": "06638",
+      "municipioNombre": "Pilar",
+      "value": 10513862484,
+      "label": "$10.513.862.484"
+    },
+    {
+      "municipioId": "06560",
+      "municipioNombre": "Moreno",
+      "value": 10261482602,
+      "label": "$10.261.482.602"
+    },
+    {
+      "municipioId": "06357",
+      "municipioNombre": "General Pueyrredón",
+      "value": 10222645532,
+      "label": "$10.222.645.532"
+    },
+    {
+      "municipioId": "06371",
+      "municipioNombre": "General San Martín",
+      "value": 9837479381,
+      "label": "$9.837.479.381"
+    },
+    {
+      "municipioId": "06028",
+      "municipioNombre": "Almirante Brown",
+      "value": 9656764309,
+      "label": "$9.656.764.309"
+    },
+    {
+      "municipioId": "06658",
+      "municipioNombre": "Quilmes",
+      "value": 9649958894,
+      "label": "$9.649.958.894"
+    },
+    {
+      "municipioId": "06274",
+      "municipioNombre": "Florencio Varela",
+      "value": 9441466123,
+      "label": "$9.441.466.123"
+    },
+    {
+      "municipioId": "06412",
+      "municipioNombre": "José C. Paz",
+      "value": 8336314457,
+      "label": "$8.336.314.457"
+    },
+    {
+      "municipioId": "06805",
+      "municipioNombre": "Tigre",
+      "value": 8165885935,
+      "label": "$8.165.885.935"
+    },
+    {
+      "municipioId": "06760",
+      "municipioNombre": "San Miguel",
+      "value": 8110742480,
+      "label": "$8.110.742.480"
+    },
+    {
+      "municipioId": "06434",
+      "municipioNombre": "Lanús",
+      "value": 7745973895,
+      "label": "$7.745.973.895"
+    },
+    {
+      "municipioId": "06252",
+      "municipioNombre": "Escobar",
+      "value": 7734796866,
+      "label": "$7.734.796.866"
+    },
+    {
+      "municipioId": "06756",
+      "municipioNombre": "San Isidro",
+      "value": 7697769934,
+      "label": "$7.697.769.934"
+    },
+    {
+      "municipioId": "06091",
+      "municipioNombre": "Berazategui",
+      "value": 7632793321,
+      "label": "$7.632.793.321"
+    },
+    {
+      "municipioId": "06260",
+      "municipioNombre": "Esteban Echeverría",
+      "value": 7125450059,
+      "label": "$7.125.450.059"
+    },
+    {
+      "municipioId": "06861",
+      "municipioNombre": "Vicente López",
+      "value": 6463929008,
+      "label": "$6.463.929.008"
+    },
+    {
+      "municipioId": "06420",
+      "municipioNombre": "La Costa",
+      "value": 6145571968,
+      "label": "$6.145.571.968"
+    },
+    {
+      "municipioId": "06056",
+      "municipioNombre": "Bahía Blanca",
+      "value": 6010977806,
+      "label": "$6.010.977.806"
+    },
+    {
+      "municipioId": "06035",
+      "municipioNombre": "Avellaneda",
+      "value": 5678412289,
+      "label": "$5.678.412.289"
+    },
+    {
+      "municipioId": "06568",
+      "municipioNombre": "Morón",
+      "value": 5068206204,
+      "label": "$5.068.206.204"
+    },
+    {
+      "municipioId": "06840",
+      "municipioNombre": "Tres de Febrero",
+      "value": 4718925562,
+      "label": "$4.718.925.562"
+    },
+    {
+      "municipioId": "06791",
+      "municipioNombre": "Tandil",
+      "value": 4572566752,
+      "label": "$4.572.566.752"
+    },
+    {
+      "municipioId": "06595",
+      "municipioNombre": "Olavarría",
+      "value": 4528464204,
+      "label": "$4.528.464.204"
+    },
+    {
+      "municipioId": "06210",
+      "municipioNombre": "Chacabuco",
+      "value": 4031238799,
+      "label": "$4.031.238.799"
+    },
+    {
+      "municipioId": "06749",
+      "municipioNombre": "San Fernando",
+      "value": 4020801000,
+      "label": "$4.020.801.000"
+    },
+    {
+      "municipioId": "06408",
+      "municipioNombre": "Hurlingham",
+      "value": 3719297072,
+      "label": "$3.719.297.072"
+    },
+    {
+      "municipioId": "06126",
+      "municipioNombre": "Campana",
+      "value": 3408214072,
+      "label": "$3.408.214.072"
+    },
+    {
+      "municipioId": "06826",
+      "municipioNombre": "Trenque Lauquen",
+      "value": 3349948278,
+      "label": "$3.349.948.278"
+    },
+    {
+      "municipioId": "06497",
+      "municipioNombre": "Luján",
+      "value": 3290573404,
+      "label": "$3.290.573.404"
+    },
+    {
+      "municipioId": "06049",
+      "municipioNombre": "Azul",
+      "value": 3278863106,
+      "label": "$3.278.863.106"
+    },
+    {
+      "municipioId": "06609",
+      "municipioNombre": "Pehuajó",
+      "value": 3240183669,
+      "label": "$3.240.183.669"
+    },
+    {
+      "municipioId": "06581",
+      "municipioNombre": "Necochea",
+      "value": 3203096135,
+      "label": "$3.203.096.135"
+    },
+    {
+      "municipioId": "06602",
+      "municipioNombre": "Patagones",
+      "value": 3164772806,
+      "label": "$3.164.772.806"
+    },
+    {
+      "municipioId": "06098",
+      "municipioNombre": "Berisso",
+      "value": 3132854580,
+      "label": "$3.132.854.580"
+    },
+    {
+      "municipioId": "06392",
+      "municipioNombre": "General Villegas",
+      "value": 3086249353,
+      "label": "$3.086.249.353"
+    },
+    {
+      "municipioId": "06270",
+      "municipioNombre": "Ezeiza",
+      "value": 3033634933,
+      "label": "$3.033.634.933"
+    },
+    {
+      "municipioId": "06224",
+      "municipioNombre": "Chivilcoy",
+      "value": 2995146152,
+      "label": "$2.995.146.152"
+    },
+    {
+      "municipioId": "06833",
+      "municipioNombre": "Tres Arroyos",
+      "value": 2940213374,
+      "label": "$2.940.213.374"
+    },
+    {
+      "municipioId": "06203",
+      "municipioNombre": "Coronel Suárez",
+      "value": 2889482313,
+      "label": "$2.889.482.313"
+    },
+    {
+      "municipioId": "06532",
+      "municipioNombre": "Mercedes",
+      "value": 2806879336,
+      "label": "$2.806.879.336"
+    },
+    {
+      "municipioId": "06469",
+      "municipioNombre": "Lincoln",
+      "value": 2755833328,
+      "label": "$2.755.833.328"
+    },
+    {
+      "municipioId": "06763",
+      "municipioNombre": "San Nicolás",
+      "value": 2753137651,
+      "label": "$2.753.137.651"
+    },
+    {
+      "municipioId": "06770",
+      "municipioNombre": "San Pedro",
+      "value": 2699559994,
+      "label": "$2.699.559.994"
+    },
+    {
+      "municipioId": "06882",
+      "municipioNombre": "Zárate",
+      "value": 2632981330,
+      "label": "$2.632.981.330"
+    },
+    {
+      "municipioId": "06105",
+      "municipioNombre": "Bolívar",
+      "value": 2607333482,
+      "label": "$2.607.333.482"
+    },
+    {
+      "municipioId": "06410",
+      "municipioNombre": "Ituzaingó",
+      "value": 2461085409,
+      "label": "$2.461.085.409"
+    },
+    {
+      "municipioId": "06364",
+      "municipioNombre": "General Rodríguez",
+      "value": 2460765032,
+      "label": "$2.460.765.032"
+    },
+    {
+      "municipioId": "06651",
+      "municipioNombre": "Puán",
+      "value": 2442032513,
+      "label": "$2.442.032.513"
+    },
+    {
+      "municipioId": "06063",
+      "municipioNombre": "Balcarce",
+      "value": 2417414255,
+      "label": "$2.417.414.255"
+    },
+    {
+      "municipioId": "06112",
+      "municipioNombre": "Bragado",
+      "value": 2366843636,
+      "label": "$2.366.843.636"
+    },
+    {
+      "municipioId": "06875",
+      "municipioNombre": "Villarino",
+      "value": 2343413585,
+      "label": "$2.343.413.585"
+    },
+    {
+      "municipioId": "06623",
+      "municipioNombre": "Pergamino",
+      "value": 2240098888,
+      "label": "$2.240.098.888"
+    },
+    {
+      "municipioId": "06147",
+      "municipioNombre": "Carlos Casares",
+      "value": 2234064789,
+      "label": "$2.234.064.789"
+    },
+    {
+      "municipioId": "06218",
+      "municipioNombre": "Chascomús",
+      "value": 2197684928,
+      "label": "$2.197.684.928"
+    },
+    {
+      "municipioId": "06518",
+      "municipioNombre": "Mar Chiquita",
+      "value": 2159696698,
+      "label": "$2.159.696.698"
+    },
+    {
+      "municipioId": "06525",
+      "municipioNombre": "Marcos Paz",
+      "value": 2147864101,
+      "label": "$2.147.864.101"
+    },
+    {
+      "municipioId": "06854",
+      "municipioNombre": "25 de Mayo",
+      "value": 2133295526,
+      "label": "$2.133.295.526"
+    },
+    {
+      "municipioId": "06648",
+      "municipioNombre": "Presidente Perón",
+      "value": 2085360171,
+      "label": "$2.085.360.171"
+    },
+    {
+      "municipioId": "06084",
+      "municipioNombre": "Benito Juárez",
+      "value": 2077566785,
+      "label": "$2.077.566.785"
+    },
+    {
+      "municipioId": "06238",
+      "municipioNombre": "Dolores",
+      "value": 2040292418,
+      "label": "$2.040.292.418"
+    },
+    {
+      "municipioId": "06007",
+      "municipioNombre": "Adolfo Alsina",
+      "value": 1991081206,
+      "label": "$1.991.081.206"
+    },
+    {
+      "municipioId": "06413",
+      "municipioNombre": "Junín",
+      "value": 1951388584,
+      "label": "$1.951.388.584"
+    },
+    {
+      "municipioId": "06868",
+      "municipioNombre": "Villa Gesell",
+      "value": 1921119345,
+      "label": "$1.921.119.345"
+    },
+    {
+      "municipioId": "06700",
+      "municipioNombre": "Saavedra",
+      "value": 1920309293,
+      "label": "$1.920.309.293"
+    },
+    {
+      "municipioId": "06266",
+      "municipioNombre": "Exaltación de la Cruz",
+      "value": 1911586079,
+      "label": "$1.911.586.079"
+    },
+    {
+      "municipioId": "06042",
+      "municipioNombre": "Ayacucho",
+      "value": 1910886263,
+      "label": "$1.910.886.263"
+    },
+    {
+      "municipioId": "06231",
+      "municipioNombre": "Daireaux",
+      "value": 1904775874,
+      "label": "$1.904.775.874"
+    },
+    {
+      "municipioId": "06819",
+      "municipioNombre": "Tornquist",
+      "value": 1900007467,
+      "label": "$1.900.007.467"
+    },
+    {
+      "municipioId": "06196",
+      "municipioNombre": "Coronel Pringles",
+      "value": 1805288348,
+      "label": "$1.805.288.348"
+    },
+    {
+      "municipioId": "06778",
+      "municipioNombre": "San Vicente",
+      "value": 1751066832,
+      "label": "$1.751.066.832"
+    },
+    {
+      "municipioId": "06679",
+      "municipioNombre": "Rivadavia",
+      "value": 1743359840,
+      "label": "$1.743.359.840"
+    },
+    {
+      "municipioId": "06588",
+      "municipioNombre": "9 de Julio",
+      "value": 1733089658,
+      "label": "$1.733.089.658"
+    },
+    {
+      "municipioId": "06385",
+      "municipioNombre": "General Viamonte",
+      "value": 1701155583,
+      "label": "$1.701.155.583"
+    },
+    {
+      "municipioId": "06189",
+      "municipioNombre": "Coronel Dorrego",
+      "value": 1697509955,
+      "label": "$1.697.509.955"
+    },
+    {
+      "municipioId": "06280",
+      "municipioNombre": "General Alvarado",
+      "value": 1689733341,
+      "label": "$1.689.733.341"
+    },
+    {
+      "municipioId": "06476",
+      "municipioNombre": "Lobería",
+      "value": 1626768943,
+      "label": "$1.626.768.943"
+    },
+    {
+      "municipioId": "06644",
+      "municipioNombre": "Pinamar",
+      "value": 1625504417,
+      "label": "$1.625.504.417"
+    },
+    {
+      "municipioId": "06322",
+      "municipioNombre": "General La Madrid",
+      "value": 1557563311,
+      "label": "$1.557.563.311"
+    },
+    {
+      "municipioId": "06175",
+      "municipioNombre": "Colón",
+      "value": 1555772026,
+      "label": "$1.555.772.026"
+    },
+    {
+      "municipioId": "06728",
+      "municipioNombre": "San Andrés de Giles",
+      "value": 1537900953,
+      "label": "$1.537.900.953"
+    },
+    {
+      "municipioId": "06182",
+      "municipioNombre": "Coronel de Marina Leonardo Rosales",
+      "value": 1532064136,
+      "label": "$1.532.064.136"
+    },
+    {
+      "municipioId": "06686",
+      "municipioNombre": "Rojas",
+      "value": 1502523139,
+      "label": "$1.502.523.139"
+    },
+    {
+      "municipioId": "06399",
+      "municipioNombre": "Guaminí",
+      "value": 1480915733,
+      "label": "$1.480.915.733"
+    },
+    {
+      "municipioId": "06134",
+      "municipioNombre": "Cañuelas",
+      "value": 1441264447,
+      "label": "$1.441.264.447"
+    },
+    {
+      "municipioId": "06505",
+      "municipioNombre": "Magdalena",
+      "value": 1415829364,
+      "label": "$1.415.829.364"
+    },
+    {
+      "municipioId": "06714",
+      "municipioNombre": "Salto",
+      "value": 1378181184,
+      "label": "$1.378.181.184"
+    },
+    {
+      "municipioId": "06707",
+      "municipioNombre": "Saladillo",
+      "value": 1363089953,
+      "label": "$1.363.089.953"
+    },
+    {
+      "municipioId": "06462",
+      "municipioNombre": "Leandro N. Alem",
+      "value": 1352055774,
+      "label": "$1.352.055.774"
+    },
+    {
+      "municipioId": "06070",
+      "municipioNombre": "Baradero",
+      "value": 1334021871,
+      "label": "$1.334.021.871"
+    },
+    {
+      "municipioId": "06315",
+      "municipioNombre": "General Juan Madariaga",
+      "value": 1328189419,
+      "label": "$1.328.189.419"
+    },
+    {
+      "municipioId": "06154",
+      "municipioNombre": "Carlos Tejedor",
+      "value": 1318376915,
+      "label": "$1.318.376.915"
+    },
+    {
+      "municipioId": "06245",
+      "municipioNombre": "Ensenada",
+      "value": 1301359987,
+      "label": "$1.301.359.987"
+    },
+    {
+      "municipioId": "06351",
+      "municipioNombre": "General Pinto",
+      "value": 1295282462,
+      "label": "$1.295.282.462"
+    },
+    {
+      "municipioId": "06455",
+      "municipioNombre": "Las Flores",
+      "value": 1279120171,
+      "label": "$1.279.120.171"
+    },
+    {
+      "municipioId": "06343",
+      "municipioNombre": "General Paz",
+      "value": 1260277882,
+      "label": "$1.260.277.882"
+    },
+    {
+      "municipioId": "06798",
+      "municipioNombre": "Tapalqué",
+      "value": 1252901759,
+      "label": "$1.252.901.759"
+    },
+    {
+      "municipioId": "06448",
+      "municipioNombre": "Laprida",
+      "value": 1242817932,
+      "label": "$1.242.817.932"
+    },
+    {
+      "municipioId": "06077",
+      "municipioNombre": "Arrecifes",
+      "value": 1223723865,
+      "label": "$1.223.723.865"
+    },
+    {
+      "municipioId": "06742",
+      "municipioNombre": "San Cayetano",
+      "value": 1216662158,
+      "label": "$1.216.662.158"
+    },
+    {
+      "municipioId": "06672",
+      "municipioNombre": "Rauch",
+      "value": 1215563145,
+      "label": "$1.215.563.145"
+    },
+    {
+      "municipioId": "06301",
+      "municipioNombre": "General Belgrano",
+      "value": 1182786048,
+      "label": "$1.182.786.048"
+    },
+    {
+      "municipioId": "06014",
+      "municipioNombre": "Adolfo Gonzales Chaves",
+      "value": 1113044524,
+      "label": "$1.113.044.524"
+    },
+    {
+      "municipioId": "06021",
+      "municipioNombre": "Alberti",
+      "value": 1103635153,
+      "label": "$1.103.635.153"
+    },
+    {
+      "municipioId": "06511",
+      "municipioNombre": "Maipú",
+      "value": 1070535798,
+      "label": "$1.070.535.798"
+    },
+    {
+      "municipioId": "06665",
+      "municipioNombre": "Ramallo",
+      "value": 1066884963,
+      "label": "$1.066.884.963"
+    },
+    {
+      "municipioId": "06287",
+      "municipioNombre": "General Alvear",
+      "value": 1040489435,
+      "label": "$1.040.489.435"
+    },
+    {
+      "municipioId": "06735",
+      "municipioNombre": "San Antonio de Areco",
+      "value": 1002080553,
+      "label": "$1.002.080.553"
+    },
+    {
+      "municipioId": "06294",
+      "municipioNombre": "General Arenales",
+      "value": 1002049270,
+      "label": "$1.002.049.270"
+    },
+    {
+      "municipioId": "06574",
+      "municipioNombre": "Navarro",
+      "value": 983510637,
+      "label": "$983.510.637"
+    },
+    {
+      "municipioId": "06655",
+      "municipioNombre": "Punta Indio",
+      "value": 929339152,
+      "label": "$929.339.152"
+    },
+    {
+      "municipioId": "06483",
+      "municipioNombre": "Lobos",
+      "value": 916483138,
+      "label": "$916.483.138"
+    },
+    {
+      "municipioId": "06693",
+      "municipioNombre": "Roque Pérez",
+      "value": 890338294,
+      "label": "$890.338.294"
+    },
+    {
+      "municipioId": "06119",
+      "municipioNombre": "Brandsen",
+      "value": 864349717,
+      "label": "$864.349.717"
+    },
+    {
+      "municipioId": "06277",
+      "municipioNombre": "Florentino Ameghino",
+      "value": 814602150,
+      "label": "$814.602.150"
+    },
+    {
+      "municipioId": "06406",
+      "municipioNombre": "Hipólito Yrigoyen",
+      "value": 801809034,
+      "label": "$801.809.034"
+    },
+    {
+      "municipioId": "06168",
+      "municipioNombre": "Castelli",
+      "value": 776586671,
+      "label": "$776.586.671"
+    },
+    {
+      "municipioId": "06553",
+      "municipioNombre": "Monte Hermoso",
+      "value": 756439038,
+      "label": "$756.439.038"
+    },
+    {
+      "municipioId": "06329",
+      "municipioNombre": "General Las Heras",
+      "value": 729284458,
+      "label": "$729.284.458"
+    },
+    {
+      "municipioId": "06784",
+      "municipioNombre": "Suipacha",
+      "value": 719487547,
+      "label": "$719.487.547"
+    },
+    {
+      "municipioId": "06547",
+      "municipioNombre": "Monte",
+      "value": 705445672,
+      "label": "$705.445.672"
+    },
+    {
+      "municipioId": "06616",
+      "municipioNombre": "Pellegrini",
+      "value": 705239738,
+      "label": "$705.239.738"
+    },
+    {
+      "municipioId": "06630",
+      "municipioNombre": "Pila",
+      "value": 702859389,
+      "label": "$702.859.389"
+    },
+    {
+      "municipioId": "06721",
+      "municipioNombre": "Salliqueló",
+      "value": 687597573,
+      "label": "$687.597.573"
+    },
+    {
+      "municipioId": "06847",
+      "municipioNombre": "Tres Lomas",
+      "value": 675818899,
+      "label": "$675.818.899"
+    },
+    {
+      "municipioId": "06140",
+      "municipioNombre": "Capitán Sarmiento",
+      "value": 668565027,
+      "label": "$668.565.027"
+    },
+    {
+      "municipioId": "06336",
+      "municipioNombre": "General Lavalle",
+      "value": 562543504,
+      "label": "$562.543.504"
+    },
+    {
+      "municipioId": "06161",
+      "municipioNombre": "Carmen de Areco",
+      "value": 554738025,
+      "label": "$554.738.025"
+    },
+    {
+      "municipioId": "06466",
+      "municipioNombre": "Lezama",
+      "value": 510891293,
+      "label": "$510.891.293"
+    },
+    {
+      "municipioId": "06308",
+      "municipioNombre": "General Guido",
+      "value": 441545602,
+      "label": "$441.545.602"
+    },
+    {
+      "municipioId": "06812",
+      "municipioNombre": "Tordillo",
+      "value": 275153787,
+      "label": "$275.153.787"
+    }
+  ]
+}

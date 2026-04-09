@@ -1,0 +1,150 @@
+{
+  "meta": {
+    "id": "poblacion-fecundidad",
+    "title": "Fecundidad",
+    "category": "poblacion",
+    "subcategory": "fecundidad",
+    "source": "INDEC — Censo Nacional 2022. Cuadros C1.2 y C12.2",
+    "date": "2022-05-18"
+  },
+  "kpis": [
+    {
+      "id": "mujeres-14-49",
+      "label": "Mujeres 14-49 años",
+      "value": 4668931,
+      "formatted": "4.668.931",
+      "unit": "mujeres"
+    },
+    {
+      "id": "promedio-hijos",
+      "label": "Promedio hijos/mujer",
+      "value": 1.4,
+      "formatted": "1,4",
+      "unit": "hijos/mujer"
+    },
+    {
+      "id": "pct-sin-hijos",
+      "label": "Sin hijos",
+      "value": 43.8,
+      "formatted": "43,8%",
+      "unit": "%"
+    },
+    {
+      "id": "pct-5mas",
+      "label": "5+ hijos",
+      "value": 4.8,
+      "formatted": "4,8%",
+      "unit": "%",
+      "status": "warning"
+    },
+    {
+      "id": "min-fecundidad",
+      "label": "Menor: Vicente López",
+      "value": 0.9,
+      "formatted": "0,9",
+      "status": "good"
+    },
+    {
+      "id": "max-fecundidad",
+      "label": "Mayor: F.Varela/JCPaz",
+      "value": 1.7,
+      "formatted": "1,7",
+      "status": "critical"
+    },
+    {
+      "id": "brecha",
+      "label": "Brecha máx/mín",
+      "value": 1.9,
+      "formatted": "1,9x",
+      "status": "critical"
+    }
+  ],
+  "charts": [
+    {
+      "id": "distribucion-hijos",
+      "type": "pie",
+      "title": "Distribución de mujeres por cantidad de hijos",
+      "sectionId": "dimensionamiento",
+      "data": [
+        {
+          "id": "Sin hijos",
+          "value": 2044540
+        },
+        {
+          "id": "1 hijo",
+          "value": 778592
+        },
+        {
+          "id": "2 hijos",
+          "value": 924829
+        },
+        {
+          "id": "3 hijos",
+          "value": 483809
+        },
+        {
+          "id": "4 hijos",
+          "value": 214097
+        },
+        {
+          "id": "5 o más",
+          "value": 223064
+        }
+      ]
+    },
+    {
+      "id": "top-fecundidad",
+      "type": "bar",
+      "title": "Top 15 municipios — Mayor fecundidad",
+      "sectionId": "mayor-fecundidad",
+      "data": [],
+      "config": {
+        "xAxis": "municipio",
+        "layout": "horizontal"
+      }
+    },
+    {
+      "id": "bottom-fecundidad",
+      "type": "bar",
+      "title": "Top 10 municipios — Menor fecundidad",
+      "sectionId": "menor-fecundidad",
+      "data": [],
+      "config": {
+        "xAxis": "municipio",
+        "layout": "horizontal",
+        "colorScheme": "greens"
+      }
+    },
+    {
+      "id": "fecundidad-educacion",
+      "type": "bar",
+      "title": "Fecundidad por nivel educativo",
+      "sectionId": "fecundidad-educacion",
+      "data": [],
+      "config": {
+        "xAxis": "nivel"
+      }
+    },
+    {
+      "id": "scatter-fecundidad",
+      "type": "scatter",
+      "title": "Fecundidad vs % sin hijos por municipio",
+      "sectionId": "brecha-fecundidad",
+      "data": [],
+      "config": {
+        "xAxis": "% sin hijos",
+        "yAxis": "Promedio hijos/mujer"
+      }
+    }
+  ],
+  "rankings": [
+    {
+      "id": "ranking-fecundidad",
+      "title": "Ranking de fecundidad por municipio",
+      "sectionId": "mapa-fecundidad",
+      "items": [],
+      "order": "desc"
+    }
+  ],
+  "mapData": []
+}

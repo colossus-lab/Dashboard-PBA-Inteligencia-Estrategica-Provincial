@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "id": "poblacion-hab-personas",
+    "title": "Condiciones Habitacionales de la Población",
+    "category": "poblacion",
+    "subcategory": "habitacional-personas",
+    "source": "INDEC — Censo 2022",
+    "date": "2022-05-18"
+  },
+  "kpis": [
+    {
+      "id": "pob-viviendas",
+      "label": "Población en viviendas particulares",
+      "value": 17408906,
+      "formatted": "17.408.906",
+      "unit": "personas"
+    },
+    {
+      "id": "hacinamiento",
+      "label": "Hacinamiento crítico",
+      "value": 4.2,
+      "formatted": "4,2%",
+      "unit": "%",
+      "status": "critical"
+    },
+    {
+      "id": "sin-agua-red",
+      "label": "Sin agua de red",
+      "value": 15.8,
+      "formatted": "15,8%",
+      "unit": "%",
+      "status": "critical"
+    },
+    {
+      "id": "sin-cloacas",
+      "label": "Sin desagüe cloacal",
+      "value": 42.3,
+      "formatted": "42,3%",
+      "unit": "%",
+      "status": "critical"
+    }
+  ],
+  "charts": [],
+  "rankings": [],
+  "mapData": []
+}

@@ -1,0 +1,1857 @@
+{
+  "meta": {
+    "id": "seguridad",
+    "title": "Seguridad Ciudadana",
+    "category": "seguridad",
+    "source": "SNIC — Ministerio de Seguridad",
+    "date": "2024"
+  },
+  "kpis": [
+    {
+      "id": "hechos-total",
+      "label": "Hechos delictivos (2024)",
+      "value": 678943,
+      "formatted": "678.943",
+      "unit": "hechos",
+      "status": "critical"
+    },
+    {
+      "id": "victimas-total",
+      "label": "Víctimas totales (2024)",
+      "value": 157204,
+      "formatted": "157.204",
+      "unit": "víctimas",
+      "status": "critical"
+    },
+    {
+      "id": "homicidios",
+      "label": "Homicidios dolosos",
+      "value": 1597,
+      "formatted": "1.597",
+      "unit": "casos",
+      "status": "critical"
+    },
+    {
+      "id": "municipios-analizados",
+      "label": "Municipios con datos",
+      "value": 135,
+      "formatted": "135",
+      "unit": "municipios"
+    },
+    {
+      "id": "peor-municipio",
+      "label": "Mayor tasa: Tordillo",
+      "value": 52648,
+      "formatted": "52.648",
+      "unit": "hechos/100k"
+    }
+  ],
+  "charts": [
+    {
+      "id": "delitos-temporal",
+      "type": "line",
+      "title": "Evolución de hechos delictivos PBA",
+      "sectionId": "evolucion-delitos",
+      "data": [
+        {
+          "año": 2000,
+          "Hechos delictivos": 358476,
+          "Víctimas": 65691
+        },
+        {
+          "año": 2001,
+          "Hechos delictivos": 342379,
+          "Víctimas": 66689
+        },
+        {
+          "año": 2002,
+          "Hechos delictivos": 393817,
+          "Víctimas": 66456
+        },
+        {
+          "año": 2003,
+          "Hechos delictivos": 359013,
+          "Víctimas": 67193
+        },
+        {
+          "año": 2004,
+          "Hechos delictivos": 336953,
+          "Víctimas": 74398
+        },
+        {
+          "año": 2005,
+          "Hechos delictivos": 285882,
+          "Víctimas": 72179
+        },
+        {
+          "año": 2006,
+          "Hechos delictivos": 292718,
+          "Víctimas": 73959
+        },
+        {
+          "año": 2007,
+          "Hechos delictivos": 283509,
+          "Víctimas": 77789
+        },
+        {
+          "año": 2008,
+          "Hechos delictivos": 348174,
+          "Víctimas": 91935
+        },
+        {
+          "año": 2009,
+          "Hechos delictivos": 266182,
+          "Víctimas": 49831
+        },
+        {
+          "año": 2010,
+          "Hechos delictivos": 287494,
+          "Víctimas": 49989
+        },
+        {
+          "año": 2011,
+          "Hechos delictivos": 335012,
+          "Víctimas": 65094
+        },
+        {
+          "año": 2012,
+          "Hechos delictivos": 378372,
+          "Víctimas": 68520
+        },
+        {
+          "año": 2013,
+          "Hechos delictivos": 408266,
+          "Víctimas": 69067
+        },
+        {
+          "año": 2014,
+          "Hechos delictivos": 413557,
+          "Víctimas": 117289
+        },
+        {
+          "año": 2015,
+          "Hechos delictivos": 396264,
+          "Víctimas": 116236
+        },
+        {
+          "año": 2016,
+          "Hechos delictivos": 361515,
+          "Víctimas": 92106
+        },
+        {
+          "año": 2017,
+          "Hechos delictivos": 449081,
+          "Víctimas": 96410
+        },
+        {
+          "año": 2018,
+          "Hechos delictivos": 494520,
+          "Víctimas": 96986
+        },
+        {
+          "año": 2019,
+          "Hechos delictivos": 606554,
+          "Víctimas": 99809
+        },
+        {
+          "año": 2020,
+          "Hechos delictivos": 515934,
+          "Víctimas": 101631
+        },
+        {
+          "año": 2021,
+          "Hechos delictivos": 584956,
+          "Víctimas": 135541
+        },
+        {
+          "año": 2022,
+          "Hechos delictivos": 601663,
+          "Víctimas": 144741
+        },
+        {
+          "año": 2023,
+          "Hechos delictivos": 693429,
+          "Víctimas": 159688
+        },
+        {
+          "año": 2024,
+          "Hechos delictivos": 678943,
+          "Víctimas": 157204
+        }
+      ],
+      "config": {
+        "xAxis": "año"
+      }
+    },
+    {
+      "id": "delitos-tipo",
+      "type": "pie",
+      "title": "Distribución por tipo de delito (2024)",
+      "sectionId": "tipos-delitos",
+      "data": [
+        {
+          "id": "Robos (excluye los agravados por el resultado de lesiones y/o muertes)",
+          "value": 120692
+        },
+        {
+          "id": "Hurtos",
+          "value": 91215
+        },
+        {
+          "id": "Amenazas",
+          "value": 69294
+        },
+        {
+          "id": "Lesiones dolosas",
+          "value": 66484
+        },
+        {
+          "id": "Otros delitos contra la propiedad",
+          "value": 52011
+        },
+        {
+          "id": "Ley 23.737 (estupefacientes)",
+          "value": 38727
+        },
+        {
+          "id": "Lesiones culposas en Accidentes Viales",
+          "value": 34749
+        },
+        {
+          "id": "Tenencia simple atenuada para uso personal de estupefacientes",
+          "value": 28774
+        },
+        {
+          "id": "Daños (no incluye informáticos)",
+          "value": 18601
+        },
+        {
+          "id": "Delitos contra la administración pública",
+          "value": 17535
+        }
+      ]
+    },
+    {
+      "id": "top-municipios-delitos",
+      "type": "bar",
+      "title": "Top 15 municipios — Mayor tasa delictiva",
+      "sectionId": "ranking-delitos",
+      "data": [
+        {
+          "municipio": "Tordillo",
+          "Tasa hechos": 52648
+        },
+        {
+          "municipio": "General Lavalle",
+          "Tasa hechos": 19604
+        },
+        {
+          "municipio": "General Guido",
+          "Tasa hechos": 19175
+        },
+        {
+          "municipio": "Pinamar",
+          "Tasa hechos": 10961
+        },
+        {
+          "municipio": "Maipú",
+          "Tasa hechos": 10384
+        },
+        {
+          "municipio": "General Alvear",
+          "Tasa hechos": 10236
+        },
+        {
+          "municipio": "Dolores",
+          "Tasa hechos": 9519
+        },
+        {
+          "municipio": "Castelli",
+          "Tasa hechos": 9382
+        },
+        {
+          "municipio": "Villa Gesell",
+          "Tasa hechos": 8203
+        },
+        {
+          "municipio": "La Costa",
+          "Tasa hechos": 7384
+        },
+        {
+          "municipio": "Monte Hermoso",
+          "Tasa hechos": 6980
+        },
+        {
+          "municipio": "San Pedro",
+          "Tasa hechos": 6867
+        },
+        {
+          "municipio": "Lezama",
+          "Tasa hechos": 6440
+        },
+        {
+          "municipio": "Mar Chiquita",
+          "Tasa hechos": 6315
+        },
+        {
+          "municipio": "General Alvarado",
+          "Tasa hechos": 6185
+        }
+      ],
+      "config": {
+        "xAxis": "municipio",
+        "layout": "horizontal"
+      }
+    },
+    {
+      "id": "bottom-municipios-delitos",
+      "type": "bar",
+      "title": "Top 10 municipios — Menor tasa delictiva",
+      "sectionId": "municipios-seguros",
+      "data": [
+        {
+          "municipio": "Carlos Tejedor",
+          "Tasa hechos": 1432
+        },
+        {
+          "municipio": "Adolfo Alsina",
+          "Tasa hechos": 1624
+        },
+        {
+          "municipio": "Salliqueló",
+          "Tasa hechos": 1639
+        },
+        {
+          "municipio": "General Paz",
+          "Tasa hechos": 1677
+        },
+        {
+          "municipio": "General Arenales",
+          "Tasa hechos": 1680
+        },
+        {
+          "municipio": "Daireaux",
+          "Tasa hechos": 1691
+        },
+        {
+          "municipio": "Hipólito Yrigoyen",
+          "Tasa hechos": 1765
+        },
+        {
+          "municipio": "Coronel Suárez",
+          "Tasa hechos": 1897
+        },
+        {
+          "municipio": "La Matanza",
+          "Tasa hechos": 2064
+        },
+        {
+          "municipio": "Roque Pérez",
+          "Tasa hechos": 2085
+        }
+      ],
+      "config": {
+        "xAxis": "municipio",
+        "layout": "horizontal",
+        "colorScheme": "greens"
+      }
+    }
+  ],
+  "rankings": [
+    {
+      "id": "ranking-delitos-full",
+      "title": "Ranking delictivo por municipio",
+      "sectionId": "ranking-delitos",
+      "items": [
+        {
+          "name": "Tordillo",
+          "value": 52648,
+          "municipioId": "06812"
+        },
+        {
+          "name": "General Lavalle",
+          "value": 19604,
+          "municipioId": "06336"
+        },
+        {
+          "name": "General Guido",
+          "value": 19175,
+          "municipioId": "06308"
+        },
+        {
+          "name": "Pinamar",
+          "value": 10961,
+          "municipioId": "06644"
+        },
+        {
+          "name": "Maipú",
+          "value": 10384,
+          "municipioId": "06511"
+        },
+        {
+          "name": "General Alvear",
+          "value": 10236,
+          "municipioId": "06287"
+        },
+        {
+          "name": "Dolores",
+          "value": 9519,
+          "municipioId": "06238"
+        },
+        {
+          "name": "Castelli",
+          "value": 9382,
+          "municipioId": "06168"
+        },
+        {
+          "name": "Villa Gesell",
+          "value": 8203,
+          "municipioId": "06868"
+        },
+        {
+          "name": "La Costa",
+          "value": 7384,
+          "municipioId": "06420"
+        },
+        {
+          "name": "Monte Hermoso",
+          "value": 6980,
+          "municipioId": "06553"
+        },
+        {
+          "name": "San Pedro",
+          "value": 6867,
+          "municipioId": "06770"
+        },
+        {
+          "name": "Lezama",
+          "value": 6440,
+          "municipioId": "06466"
+        },
+        {
+          "name": "Mar Chiquita",
+          "value": 6315,
+          "municipioId": "06518"
+        },
+        {
+          "name": "General Alvarado",
+          "value": 6185,
+          "municipioId": "06280"
+        },
+        {
+          "name": "Junín",
+          "value": 5997,
+          "municipioId": "06413"
+        },
+        {
+          "name": "Ramallo",
+          "value": 5914,
+          "municipioId": "06665"
+        },
+        {
+          "name": "Carmen de Areco",
+          "value": 5035,
+          "municipioId": "06161"
+        },
+        {
+          "name": "Pergamino",
+          "value": 4796,
+          "municipioId": "06623"
+        },
+        {
+          "name": "Chascomús",
+          "value": 4775,
+          "municipioId": "06217"
+        },
+        {
+          "name": "General Pinto",
+          "value": 4593,
+          "municipioId": "06351"
+        },
+        {
+          "name": "Cañuelas",
+          "value": 4586,
+          "municipioId": "06134"
+        },
+        {
+          "name": "San Nicolás",
+          "value": 4492,
+          "municipioId": "06763"
+        },
+        {
+          "name": "Tres Arroyos",
+          "value": 4438,
+          "municipioId": "06833"
+        },
+        {
+          "name": "General Juan Madariaga",
+          "value": 4335,
+          "municipioId": "06315"
+        },
+        {
+          "name": "Necochea",
+          "value": 4280,
+          "municipioId": "06581"
+        },
+        {
+          "name": "Baradero",
+          "value": 4274,
+          "municipioId": "06070"
+        },
+        {
+          "name": "Rojas",
+          "value": 4259,
+          "municipioId": "06686"
+        },
+        {
+          "name": "Colón",
+          "value": 4237,
+          "municipioId": "06175"
+        },
+        {
+          "name": "Morón",
+          "value": 4230,
+          "municipioId": "06568"
+        },
+        {
+          "name": "General La Madrid",
+          "value": 4171,
+          "municipioId": "06322"
+        },
+        {
+          "name": "Adolfo Gonzales Chaves",
+          "value": 4159,
+          "municipioId": "06014"
+        },
+        {
+          "name": "Lobería",
+          "value": 4135,
+          "municipioId": "06476"
+        },
+        {
+          "name": "Mercedes",
+          "value": 4126,
+          "municipioId": "06532"
+        },
+        {
+          "name": "Balcarce",
+          "value": 3961,
+          "municipioId": "06063"
+        },
+        {
+          "name": "Brandsen",
+          "value": 3900,
+          "municipioId": "06119"
+        },
+        {
+          "name": "Luján",
+          "value": 3884,
+          "municipioId": "06497"
+        },
+        {
+          "name": "Patagones",
+          "value": 3821,
+          "municipioId": "06602"
+        },
+        {
+          "name": "Coronel Pringles",
+          "value": 3817,
+          "municipioId": "06196"
+        },
+        {
+          "name": "San Vicente",
+          "value": 3786,
+          "municipioId": "06778"
+        },
+        {
+          "name": "General Pueyrredón",
+          "value": 3769,
+          "municipioId": "06357"
+        },
+        {
+          "name": "Benito Juárez",
+          "value": 3768,
+          "municipioId": "06084"
+        },
+        {
+          "name": "General Rodríguez",
+          "value": 3727,
+          "municipioId": "06364"
+        },
+        {
+          "name": "Pehuajó",
+          "value": 3633,
+          "municipioId": "06609"
+        },
+        {
+          "name": "Pila",
+          "value": 3633,
+          "municipioId": "06630"
+        },
+        {
+          "name": "General San Martín",
+          "value": 3627,
+          "municipioId": "06371"
+        },
+        {
+          "name": "Florentino Ameghino",
+          "value": 3627,
+          "municipioId": "06277"
+        },
+        {
+          "name": "Campana",
+          "value": 3616,
+          "municipioId": "06126"
+        },
+        {
+          "name": "Las Flores",
+          "value": 3565,
+          "municipioId": "06455"
+        },
+        {
+          "name": "Lanús",
+          "value": 3496,
+          "municipioId": "06434"
+        },
+        {
+          "name": "Navarro",
+          "value": 3472,
+          "municipioId": "06574"
+        },
+        {
+          "name": "Bahía Blanca",
+          "value": 3466,
+          "municipioId": "06056"
+        },
+        {
+          "name": "Berisso",
+          "value": 3463,
+          "municipioId": "06098"
+        },
+        {
+          "name": "Trenque Lauquen",
+          "value": 3393,
+          "municipioId": "06826"
+        },
+        {
+          "name": "Avellaneda",
+          "value": 3385,
+          "municipioId": "06035"
+        },
+        {
+          "name": "Ensenada",
+          "value": 3351,
+          "municipioId": "06245"
+        },
+        {
+          "name": "San Antonio de Areco",
+          "value": 3294,
+          "municipioId": "06735"
+        },
+        {
+          "name": "Tres de Febrero",
+          "value": 3294,
+          "municipioId": "06840"
+        },
+        {
+          "name": "Exaltación de la Cruz",
+          "value": 3276,
+          "municipioId": "06266"
+        },
+        {
+          "name": "Laprida",
+          "value": 3254,
+          "municipioId": "06448"
+        },
+        {
+          "name": "Coronel de Marina L. Rosales",
+          "value": 3220,
+          "municipioId": "06182"
+        },
+        {
+          "name": "Rivadavia",
+          "value": 3214,
+          "municipioId": "06679"
+        },
+        {
+          "name": "General Belgrano",
+          "value": 3168,
+          "municipioId": "06301"
+        },
+        {
+          "name": "Marcos Paz",
+          "value": 3166,
+          "municipioId": "06525"
+        },
+        {
+          "name": "Arrecifes",
+          "value": 3162,
+          "municipioId": "06077"
+        },
+        {
+          "name": "José C. Paz",
+          "value": 3148,
+          "municipioId": "06412"
+        },
+        {
+          "name": "Magdalena",
+          "value": 3145,
+          "municipioId": "06505"
+        },
+        {
+          "name": "La Plata",
+          "value": 3143,
+          "municipioId": "06441"
+        },
+        {
+          "name": "Ituzaingó",
+          "value": 3138,
+          "municipioId": "06410"
+        },
+        {
+          "name": "Olavarría",
+          "value": 3135,
+          "municipioId": "06595"
+        },
+        {
+          "name": "Malvinas Argentinas",
+          "value": 3114,
+          "municipioId": "06515"
+        },
+        {
+          "name": "Chacabuco",
+          "value": 3106,
+          "municipioId": "06210"
+        },
+        {
+          "name": "Azul",
+          "value": 3047,
+          "municipioId": "06049"
+        },
+        {
+          "name": "Lobos",
+          "value": 3046,
+          "municipioId": "06483"
+        },
+        {
+          "name": "Monte",
+          "value": 3028,
+          "municipioId": "06547"
+        },
+        {
+          "name": "Capitán Sarmiento",
+          "value": 2958,
+          "municipioId": "06140"
+        },
+        {
+          "name": "9 de Julio",
+          "value": 2949,
+          "municipioId": "06588"
+        },
+        {
+          "name": "Berazategui",
+          "value": 2944,
+          "municipioId": "06091"
+        },
+        {
+          "name": "San Isidro",
+          "value": 2937,
+          "municipioId": "06756"
+        },
+        {
+          "name": "Esteban Echeverría",
+          "value": 2935,
+          "municipioId": "06260"
+        },
+        {
+          "name": "Bragado",
+          "value": 2918,
+          "municipioId": "06112"
+        },
+        {
+          "name": "Bolívar",
+          "value": 2912,
+          "municipioId": "06105"
+        },
+        {
+          "name": "Ezeiza",
+          "value": 2909,
+          "municipioId": "06270"
+        },
+        {
+          "name": "Ayacucho",
+          "value": 2880,
+          "municipioId": "06042"
+        },
+        {
+          "name": "Tandil",
+          "value": 2828,
+          "municipioId": "06791"
+        },
+        {
+          "name": "Presidente Perón",
+          "value": 2820,
+          "municipioId": "06648"
+        },
+        {
+          "name": "Escobar",
+          "value": 2793,
+          "municipioId": "06252"
+        },
+        {
+          "name": "Saladillo",
+          "value": 2779,
+          "municipioId": "06707"
+        },
+        {
+          "name": "Lomas de Zamora",
+          "value": 2764,
+          "municipioId": "06490"
+        },
+        {
+          "name": "Almirante Brown",
+          "value": 2740,
+          "municipioId": "06028"
+        },
+        {
+          "name": "Suipacha",
+          "value": 2740,
+          "municipioId": "06784"
+        },
+        {
+          "name": "Rauch",
+          "value": 2707,
+          "municipioId": "06672"
+        },
+        {
+          "name": "Punta Indio",
+          "value": 2704,
+          "municipioId": "06655"
+        },
+        {
+          "name": "San Miguel",
+          "value": 2694,
+          "municipioId": "06760"
+        },
+        {
+          "name": "Lincoln",
+          "value": 2684,
+          "municipioId": "06469"
+        },
+        {
+          "name": "Quilmes",
+          "value": 2683,
+          "municipioId": "06058"
+        },
+        {
+          "name": "San Andrés de Giles",
+          "value": 2666,
+          "municipioId": "06728"
+        },
+        {
+          "name": "Zárate",
+          "value": 2659,
+          "municipioId": "06882"
+        },
+        {
+          "name": "Moreno",
+          "value": 2634,
+          "municipioId": "06560"
+        },
+        {
+          "name": "Pilar",
+          "value": 2607,
+          "municipioId": "06638"
+        },
+        {
+          "name": "Tornquist",
+          "value": 2601,
+          "municipioId": "06819"
+        },
+        {
+          "name": "Pellegrini",
+          "value": 2601,
+          "municipioId": "06616"
+        },
+        {
+          "name": "Tigre",
+          "value": 2550,
+          "municipioId": "06805"
+        },
+        {
+          "name": "Villarino",
+          "value": 2508,
+          "municipioId": "06875"
+        },
+        {
+          "name": "Merlo",
+          "value": 2495,
+          "municipioId": "06539"
+        },
+        {
+          "name": "Coronel Dorrego",
+          "value": 2493,
+          "municipioId": "06189"
+        },
+        {
+          "name": "Saavedra",
+          "value": 2480,
+          "municipioId": "06700"
+        },
+        {
+          "name": "Alberti",
+          "value": 2463,
+          "municipioId": "06021"
+        },
+        {
+          "name": "Hurlingham",
+          "value": 2458,
+          "municipioId": "06408"
+        },
+        {
+          "name": "Chivilcoy",
+          "value": 2395,
+          "municipioId": "06224"
+        },
+        {
+          "name": "Leandro N. Alem",
+          "value": 2389,
+          "municipioId": "06462"
+        },
+        {
+          "name": "Vicente López",
+          "value": 2372,
+          "municipioId": "06861"
+        },
+        {
+          "name": "Tres Lomas",
+          "value": 2365,
+          "municipioId": "06847"
+        },
+        {
+          "name": "Puán",
+          "value": 2335,
+          "municipioId": "06651"
+        },
+        {
+          "name": "General Villegas",
+          "value": 2300,
+          "municipioId": "06392"
+        },
+        {
+          "name": "Florencio Varela",
+          "value": 2252,
+          "municipioId": "06274"
+        },
+        {
+          "name": "General Viamonte",
+          "value": 2243,
+          "municipioId": "06385"
+        },
+        {
+          "name": "Guaminí",
+          "value": 2238,
+          "municipioId": "06399"
+        },
+        {
+          "name": "General Las Heras",
+          "value": 2231,
+          "municipioId": "06329"
+        },
+        {
+          "name": "25 de Mayo",
+          "value": 2190,
+          "municipioId": "06854"
+        },
+        {
+          "name": "Salto",
+          "value": 2157,
+          "municipioId": "06714"
+        },
+        {
+          "name": "San Cayetano",
+          "value": 2131,
+          "municipioId": "06742"
+        },
+        {
+          "name": "Carlos Casares",
+          "value": 2127,
+          "municipioId": "06147"
+        },
+        {
+          "name": "San Fernando",
+          "value": 2101,
+          "municipioId": "06749"
+        },
+        {
+          "name": "Tapalqué",
+          "value": 2095,
+          "municipioId": "06798"
+        },
+        {
+          "name": "Roque Pérez",
+          "value": 2085,
+          "municipioId": "06693"
+        },
+        {
+          "name": "La Matanza",
+          "value": 2064,
+          "municipioId": "06427"
+        },
+        {
+          "name": "Coronel Suárez",
+          "value": 1897,
+          "municipioId": "06203"
+        },
+        {
+          "name": "Hipólito Yrigoyen",
+          "value": 1765,
+          "municipioId": "06406"
+        },
+        {
+          "name": "Daireaux",
+          "value": 1691,
+          "municipioId": "06231"
+        },
+        {
+          "name": "General Arenales",
+          "value": 1680,
+          "municipioId": "06294"
+        },
+        {
+          "name": "General Paz",
+          "value": 1677,
+          "municipioId": "06343"
+        },
+        {
+          "name": "Salliqueló",
+          "value": 1639,
+          "municipioId": "06721"
+        },
+        {
+          "name": "Adolfo Alsina",
+          "value": 1624,
+          "municipioId": "06007"
+        },
+        {
+          "name": "Carlos Tejedor",
+          "value": 1432,
+          "municipioId": "06154"
+        }
+      ],
+      "order": "desc"
+    }
+  ],
+  "mapData": [
+    {
+      "municipioId": "06007",
+      "municipioNombre": "Adolfo Alsina",
+      "value": 1624,
+      "label": "1624 hechos/100k"
+    },
+    {
+      "municipioId": "06014",
+      "municipioNombre": "Adolfo Gonzales Chaves",
+      "value": 4159,
+      "label": "4159 hechos/100k"
+    },
+    {
+      "municipioId": "06021",
+      "municipioNombre": "Alberti",
+      "value": 2463,
+      "label": "2463 hechos/100k"
+    },
+    {
+      "municipioId": "06028",
+      "municipioNombre": "Almirante Brown",
+      "value": 2740,
+      "label": "2740 hechos/100k"
+    },
+    {
+      "municipioId": "06035",
+      "municipioNombre": "Avellaneda",
+      "value": 3385,
+      "label": "3385 hechos/100k"
+    },
+    {
+      "municipioId": "06042",
+      "municipioNombre": "Ayacucho",
+      "value": 2880,
+      "label": "2880 hechos/100k"
+    },
+    {
+      "municipioId": "06049",
+      "municipioNombre": "Azul",
+      "value": 3047,
+      "label": "3047 hechos/100k"
+    },
+    {
+      "municipioId": "06056",
+      "municipioNombre": "Bahía Blanca",
+      "value": 3466,
+      "label": "3466 hechos/100k"
+    },
+    {
+      "municipioId": "06058",
+      "municipioNombre": "Quilmes",
+      "value": 2683,
+      "label": "2683 hechos/100k"
+    },
+    {
+      "municipioId": "06063",
+      "municipioNombre": "Balcarce",
+      "value": 3961,
+      "label": "3961 hechos/100k"
+    },
+    {
+      "municipioId": "06070",
+      "municipioNombre": "Baradero",
+      "value": 4274,
+      "label": "4274 hechos/100k"
+    },
+    {
+      "municipioId": "06077",
+      "municipioNombre": "Arrecifes",
+      "value": 3162,
+      "label": "3162 hechos/100k"
+    },
+    {
+      "municipioId": "06084",
+      "municipioNombre": "Benito Juárez",
+      "value": 3768,
+      "label": "3768 hechos/100k"
+    },
+    {
+      "municipioId": "06091",
+      "municipioNombre": "Berazategui",
+      "value": 2944,
+      "label": "2944 hechos/100k"
+    },
+    {
+      "municipioId": "06098",
+      "municipioNombre": "Berisso",
+      "value": 3463,
+      "label": "3463 hechos/100k"
+    },
+    {
+      "municipioId": "06105",
+      "municipioNombre": "Bolívar",
+      "value": 2912,
+      "label": "2912 hechos/100k"
+    },
+    {
+      "municipioId": "06112",
+      "municipioNombre": "Bragado",
+      "value": 2918,
+      "label": "2918 hechos/100k"
+    },
+    {
+      "municipioId": "06119",
+      "municipioNombre": "Brandsen",
+      "value": 3900,
+      "label": "3900 hechos/100k"
+    },
+    {
+      "municipioId": "06126",
+      "municipioNombre": "Campana",
+      "value": 3616,
+      "label": "3616 hechos/100k"
+    },
+    {
+      "municipioId": "06134",
+      "municipioNombre": "Cañuelas",
+      "value": 4586,
+      "label": "4586 hechos/100k"
+    },
+    {
+      "municipioId": "06140",
+      "municipioNombre": "Capitán Sarmiento",
+      "value": 2958,
+      "label": "2958 hechos/100k"
+    },
+    {
+      "municipioId": "06147",
+      "municipioNombre": "Carlos Casares",
+      "value": 2127,
+      "label": "2127 hechos/100k"
+    },
+    {
+      "municipioId": "06154",
+      "municipioNombre": "Carlos Tejedor",
+      "value": 1432,
+      "label": "1432 hechos/100k"
+    },
+    {
+      "municipioId": "06161",
+      "municipioNombre": "Carmen de Areco",
+      "value": 5035,
+      "label": "5035 hechos/100k"
+    },
+    {
+      "municipioId": "06168",
+      "municipioNombre": "Castelli",
+      "value": 9382,
+      "label": "9382 hechos/100k"
+    },
+    {
+      "municipioId": "06175",
+      "municipioNombre": "Colón",
+      "value": 4237,
+      "label": "4237 hechos/100k"
+    },
+    {
+      "municipioId": "06182",
+      "municipioNombre": "Coronel de Marina L. Rosales",
+      "value": 3220,
+      "label": "3220 hechos/100k"
+    },
+    {
+      "municipioId": "06189",
+      "municipioNombre": "Coronel Dorrego",
+      "value": 2493,
+      "label": "2493 hechos/100k"
+    },
+    {
+      "municipioId": "06196",
+      "municipioNombre": "Coronel Pringles",
+      "value": 3817,
+      "label": "3817 hechos/100k"
+    },
+    {
+      "municipioId": "06203",
+      "municipioNombre": "Coronel Suárez",
+      "value": 1897,
+      "label": "1897 hechos/100k"
+    },
+    {
+      "municipioId": "06210",
+      "municipioNombre": "Chacabuco",
+      "value": 3106,
+      "label": "3106 hechos/100k"
+    },
+    {
+      "municipioId": "06217",
+      "municipioNombre": "Chascomús",
+      "value": 4775,
+      "label": "4775 hechos/100k"
+    },
+    {
+      "municipioId": "06224",
+      "municipioNombre": "Chivilcoy",
+      "value": 2395,
+      "label": "2395 hechos/100k"
+    },
+    {
+      "municipioId": "06231",
+      "municipioNombre": "Daireaux",
+      "value": 1691,
+      "label": "1691 hechos/100k"
+    },
+    {
+      "municipioId": "06238",
+      "municipioNombre": "Dolores",
+      "value": 9519,
+      "label": "9519 hechos/100k"
+    },
+    {
+      "municipioId": "06245",
+      "municipioNombre": "Ensenada",
+      "value": 3351,
+      "label": "3351 hechos/100k"
+    },
+    {
+      "municipioId": "06252",
+      "municipioNombre": "Escobar",
+      "value": 2793,
+      "label": "2793 hechos/100k"
+    },
+    {
+      "municipioId": "06260",
+      "municipioNombre": "Esteban Echeverría",
+      "value": 2935,
+      "label": "2935 hechos/100k"
+    },
+    {
+      "municipioId": "06266",
+      "municipioNombre": "Exaltación de la Cruz",
+      "value": 3276,
+      "label": "3276 hechos/100k"
+    },
+    {
+      "municipioId": "06270",
+      "municipioNombre": "Ezeiza",
+      "value": 2909,
+      "label": "2909 hechos/100k"
+    },
+    {
+      "municipioId": "06274",
+      "municipioNombre": "Florencio Varela",
+      "value": 2252,
+      "label": "2252 hechos/100k"
+    },
+    {
+      "municipioId": "06277",
+      "municipioNombre": "Florentino Ameghino",
+      "value": 3627,
+      "label": "3627 hechos/100k"
+    },
+    {
+      "municipioId": "06280",
+      "municipioNombre": "General Alvarado",
+      "value": 6185,
+      "label": "6185 hechos/100k"
+    },
+    {
+      "municipioId": "06287",
+      "municipioNombre": "General Alvear",
+      "value": 10236,
+      "label": "10236 hechos/100k"
+    },
+    {
+      "municipioId": "06294",
+      "municipioNombre": "General Arenales",
+      "value": 1680,
+      "label": "1680 hechos/100k"
+    },
+    {
+      "municipioId": "06301",
+      "municipioNombre": "General Belgrano",
+      "value": 3168,
+      "label": "3168 hechos/100k"
+    },
+    {
+      "municipioId": "06308",
+      "municipioNombre": "General Guido",
+      "value": 19175,
+      "label": "19175 hechos/100k"
+    },
+    {
+      "municipioId": "06315",
+      "municipioNombre": "General Juan Madariaga",
+      "value": 4335,
+      "label": "4335 hechos/100k"
+    },
+    {
+      "municipioId": "06322",
+      "municipioNombre": "General La Madrid",
+      "value": 4171,
+      "label": "4171 hechos/100k"
+    },
+    {
+      "municipioId": "06329",
+      "municipioNombre": "General Las Heras",
+      "value": 2231,
+      "label": "2231 hechos/100k"
+    },
+    {
+      "municipioId": "06336",
+      "municipioNombre": "General Lavalle",
+      "value": 19604,
+      "label": "19604 hechos/100k"
+    },
+    {
+      "municipioId": "06343",
+      "municipioNombre": "General Paz",
+      "value": 1677,
+      "label": "1677 hechos/100k"
+    },
+    {
+      "municipioId": "06351",
+      "municipioNombre": "General Pinto",
+      "value": 4593,
+      "label": "4593 hechos/100k"
+    },
+    {
+      "municipioId": "06357",
+      "municipioNombre": "General Pueyrredón",
+      "value": 3769,
+      "label": "3769 hechos/100k"
+    },
+    {
+      "municipioId": "06364",
+      "municipioNombre": "General Rodríguez",
+      "value": 3727,
+      "label": "3727 hechos/100k"
+    },
+    {
+      "municipioId": "06371",
+      "municipioNombre": "General San Martín",
+      "value": 3627,
+      "label": "3627 hechos/100k"
+    },
+    {
+      "municipioId": "06385",
+      "municipioNombre": "General Viamonte",
+      "value": 2243,
+      "label": "2243 hechos/100k"
+    },
+    {
+      "municipioId": "06392",
+      "municipioNombre": "General Villegas",
+      "value": 2300,
+      "label": "2300 hechos/100k"
+    },
+    {
+      "municipioId": "06399",
+      "municipioNombre": "Guaminí",
+      "value": 2238,
+      "label": "2238 hechos/100k"
+    },
+    {
+      "municipioId": "06406",
+      "municipioNombre": "Hipólito Yrigoyen",
+      "value": 1765,
+      "label": "1765 hechos/100k"
+    },
+    {
+      "municipioId": "06408",
+      "municipioNombre": "Hurlingham",
+      "value": 2458,
+      "label": "2458 hechos/100k"
+    },
+    {
+      "municipioId": "06410",
+      "municipioNombre": "Ituzaingó",
+      "value": 3138,
+      "label": "3138 hechos/100k"
+    },
+    {
+      "municipioId": "06412",
+      "municipioNombre": "José C. Paz",
+      "value": 3148,
+      "label": "3148 hechos/100k"
+    },
+    {
+      "municipioId": "06413",
+      "municipioNombre": "Junín",
+      "value": 5997,
+      "label": "5997 hechos/100k"
+    },
+    {
+      "municipioId": "06420",
+      "municipioNombre": "La Costa",
+      "value": 7384,
+      "label": "7384 hechos/100k"
+    },
+    {
+      "municipioId": "06427",
+      "municipioNombre": "La Matanza",
+      "value": 2064,
+      "label": "2064 hechos/100k"
+    },
+    {
+      "municipioId": "06434",
+      "municipioNombre": "Lanús",
+      "value": 3496,
+      "label": "3496 hechos/100k"
+    },
+    {
+      "municipioId": "06441",
+      "municipioNombre": "La Plata",
+      "value": 3143,
+      "label": "3143 hechos/100k"
+    },
+    {
+      "municipioId": "06448",
+      "municipioNombre": "Laprida",
+      "value": 3254,
+      "label": "3254 hechos/100k"
+    },
+    {
+      "municipioId": "06455",
+      "municipioNombre": "Las Flores",
+      "value": 3565,
+      "label": "3565 hechos/100k"
+    },
+    {
+      "municipioId": "06462",
+      "municipioNombre": "Leandro N. Alem",
+      "value": 2389,
+      "label": "2389 hechos/100k"
+    },
+    {
+      "municipioId": "06466",
+      "municipioNombre": "Lezama",
+      "value": 6440,
+      "label": "6440 hechos/100k"
+    },
+    {
+      "municipioId": "06469",
+      "municipioNombre": "Lincoln",
+      "value": 2684,
+      "label": "2684 hechos/100k"
+    },
+    {
+      "municipioId": "06476",
+      "municipioNombre": "Lobería",
+      "value": 4135,
+      "label": "4135 hechos/100k"
+    },
+    {
+      "municipioId": "06483",
+      "municipioNombre": "Lobos",
+      "value": 3046,
+      "label": "3046 hechos/100k"
+    },
+    {
+      "municipioId": "06490",
+      "municipioNombre": "Lomas de Zamora",
+      "value": 2764,
+      "label": "2764 hechos/100k"
+    },
+    {
+      "municipioId": "06497",
+      "municipioNombre": "Luján",
+      "value": 3884,
+      "label": "3884 hechos/100k"
+    },
+    {
+      "municipioId": "06505",
+      "municipioNombre": "Magdalena",
+      "value": 3145,
+      "label": "3145 hechos/100k"
+    },
+    {
+      "municipioId": "06511",
+      "municipioNombre": "Maipú",
+      "value": 10384,
+      "label": "10384 hechos/100k"
+    },
+    {
+      "municipioId": "06515",
+      "municipioNombre": "Malvinas Argentinas",
+      "value": 3114,
+      "label": "3114 hechos/100k"
+    },
+    {
+      "municipioId": "06518",
+      "municipioNombre": "Mar Chiquita",
+      "value": 6315,
+      "label": "6315 hechos/100k"
+    },
+    {
+      "municipioId": "06525",
+      "municipioNombre": "Marcos Paz",
+      "value": 3166,
+      "label": "3166 hechos/100k"
+    },
+    {
+      "municipioId": "06532",
+      "municipioNombre": "Mercedes",
+      "value": 4126,
+      "label": "4126 hechos/100k"
+    },
+    {
+      "municipioId": "06539",
+      "municipioNombre": "Merlo",
+      "value": 2495,
+      "label": "2495 hechos/100k"
+    },
+    {
+      "municipioId": "06547",
+      "municipioNombre": "Monte",
+      "value": 3028,
+      "label": "3028 hechos/100k"
+    },
+    {
+      "municipioId": "06553",
+      "municipioNombre": "Monte Hermoso",
+      "value": 6980,
+      "label": "6980 hechos/100k"
+    },
+    {
+      "municipioId": "06560",
+      "municipioNombre": "Moreno",
+      "value": 2634,
+      "label": "2634 hechos/100k"
+    },
+    {
+      "municipioId": "06568",
+      "municipioNombre": "Morón",
+      "value": 4230,
+      "label": "4230 hechos/100k"
+    },
+    {
+      "municipioId": "06574",
+      "municipioNombre": "Navarro",
+      "value": 3472,
+      "label": "3472 hechos/100k"
+    },
+    {
+      "municipioId": "06581",
+      "municipioNombre": "Necochea",
+      "value": 4280,
+      "label": "4280 hechos/100k"
+    },
+    {
+      "municipioId": "06588",
+      "municipioNombre": "9 de Julio",
+      "value": 2949,
+      "label": "2949 hechos/100k"
+    },
+    {
+      "municipioId": "06595",
+      "municipioNombre": "Olavarría",
+      "value": 3135,
+      "label": "3135 hechos/100k"
+    },
+    {
+      "municipioId": "06602",
+      "municipioNombre": "Patagones",
+      "value": 3821,
+      "label": "3821 hechos/100k"
+    },
+    {
+      "municipioId": "06609",
+      "municipioNombre": "Pehuajó",
+      "value": 3633,
+      "label": "3633 hechos/100k"
+    },
+    {
+      "municipioId": "06616",
+      "municipioNombre": "Pellegrini",
+      "value": 2601,
+      "label": "2601 hechos/100k"
+    },
+    {
+      "municipioId": "06623",
+      "municipioNombre": "Pergamino",
+      "value": 4796,
+      "label": "4796 hechos/100k"
+    },
+    {
+      "municipioId": "06630",
+      "municipioNombre": "Pila",
+      "value": 3633,
+      "label": "3633 hechos/100k"
+    },
+    {
+      "municipioId": "06638",
+      "municipioNombre": "Pilar",
+      "value": 2607,
+      "label": "2607 hechos/100k"
+    },
+    {
+      "municipioId": "06644",
+      "municipioNombre": "Pinamar",
+      "value": 10961,
+      "label": "10961 hechos/100k"
+    },
+    {
+      "municipioId": "06648",
+      "municipioNombre": "Presidente Perón",
+      "value": 2820,
+      "label": "2820 hechos/100k"
+    },
+    {
+      "municipioId": "06651",
+      "municipioNombre": "Puán",
+      "value": 2335,
+      "label": "2335 hechos/100k"
+    },
+    {
+      "municipioId": "06655",
+      "municipioNombre": "Punta Indio",
+      "value": 2704,
+      "label": "2704 hechos/100k"
+    },
+    {
+      "municipioId": "06665",
+      "municipioNombre": "Ramallo",
+      "value": 5914,
+      "label": "5914 hechos/100k"
+    },
+    {
+      "municipioId": "06672",
+      "municipioNombre": "Rauch",
+      "value": 2707,
+      "label": "2707 hechos/100k"
+    },
+    {
+      "municipioId": "06679",
+      "municipioNombre": "Rivadavia",
+      "value": 3214,
+      "label": "3214 hechos/100k"
+    },
+    {
+      "municipioId": "06686",
+      "municipioNombre": "Rojas",
+      "value": 4259,
+      "label": "4259 hechos/100k"
+    },
+    {
+      "municipioId": "06693",
+      "municipioNombre": "Roque Pérez",
+      "value": 2085,
+      "label": "2085 hechos/100k"
+    },
+    {
+      "municipioId": "06700",
+      "municipioNombre": "Saavedra",
+      "value": 2480,
+      "label": "2480 hechos/100k"
+    },
+    {
+      "municipioId": "06707",
+      "municipioNombre": "Saladillo",
+      "value": 2779,
+      "label": "2779 hechos/100k"
+    },
+    {
+      "municipioId": "06714",
+      "municipioNombre": "Salto",
+      "value": 2157,
+      "label": "2157 hechos/100k"
+    },
+    {
+      "municipioId": "06721",
+      "municipioNombre": "Salliqueló",
+      "value": 1639,
+      "label": "1639 hechos/100k"
+    },
+    {
+      "municipioId": "06728",
+      "municipioNombre": "San Andrés de Giles",
+      "value": 2666,
+      "label": "2666 hechos/100k"
+    },
+    {
+      "municipioId": "06735",
+      "municipioNombre": "San Antonio de Areco",
+      "value": 3294,
+      "label": "3294 hechos/100k"
+    },
+    {
+      "municipioId": "06742",
+      "municipioNombre": "San Cayetano",
+      "value": 2131,
+      "label": "2131 hechos/100k"
+    },
+    {
+      "municipioId": "06749",
+      "municipioNombre": "San Fernando",
+      "value": 2101,
+      "label": "2101 hechos/100k"
+    },
+    {
+      "municipioId": "06756",
+      "municipioNombre": "San Isidro",
+      "value": 2937,
+      "label": "2937 hechos/100k"
+    },
+    {
+      "municipioId": "06760",
+      "municipioNombre": "San Miguel",
+      "value": 2694,
+      "label": "2694 hechos/100k"
+    },
+    {
+      "municipioId": "06763",
+      "municipioNombre": "San Nicolás",
+      "value": 4492,
+      "label": "4492 hechos/100k"
+    },
+    {
+      "municipioId": "06770",
+      "municipioNombre": "San Pedro",
+      "value": 6867,
+      "label": "6867 hechos/100k"
+    },
+    {
+      "municipioId": "06778",
+      "municipioNombre": "San Vicente",
+      "value": 3786,
+      "label": "3786 hechos/100k"
+    },
+    {
+      "municipioId": "06784",
+      "municipioNombre": "Suipacha",
+      "value": 2740,
+      "label": "2740 hechos/100k"
+    },
+    {
+      "municipioId": "06791",
+      "municipioNombre": "Tandil",
+      "value": 2828,
+      "label": "2828 hechos/100k"
+    },
+    {
+      "municipioId": "06798",
+      "municipioNombre": "Tapalqué",
+      "value": 2095,
+      "label": "2095 hechos/100k"
+    },
+    {
+      "municipioId": "06805",
+      "municipioNombre": "Tigre",
+      "value": 2550,
+      "label": "2550 hechos/100k"
+    },
+    {
+      "municipioId": "06812",
+      "municipioNombre": "Tordillo",
+      "value": 52648,
+      "label": "52648 hechos/100k"
+    },
+    {
+      "municipioId": "06819",
+      "municipioNombre": "Tornquist",
+      "value": 2601,
+      "label": "2601 hechos/100k"
+    },
+    {
+      "municipioId": "06826",
+      "municipioNombre": "Trenque Lauquen",
+      "value": 3393,
+      "label": "3393 hechos/100k"
+    },
+    {
+      "municipioId": "06833",
+      "municipioNombre": "Tres Arroyos",
+      "value": 4438,
+      "label": "4438 hechos/100k"
+    },
+    {
+      "municipioId": "06840",
+      "municipioNombre": "Tres de Febrero",
+      "value": 3294,
+      "label": "3294 hechos/100k"
+    },
+    {
+      "municipioId": "06847",
+      "municipioNombre": "Tres Lomas",
+      "value": 2365,
+      "label": "2365 hechos/100k"
+    },
+    {
+      "municipioId": "06854",
+      "municipioNombre": "25 de Mayo",
+      "value": 2190,
+      "label": "2190 hechos/100k"
+    },
+    {
+      "municipioId": "06861",
+      "municipioNombre": "Vicente López",
+      "value": 2372,
+      "label": "2372 hechos/100k"
+    },
+    {
+      "municipioId": "06868",
+      "municipioNombre": "Villa Gesell",
+      "value": 8203,
+      "label": "8203 hechos/100k"
+    },
+    {
+      "municipioId": "06875",
+      "municipioNombre": "Villarino",
+      "value": 2508,
+      "label": "2508 hechos/100k"
+    },
+    {
+      "municipioId": "06882",
+      "municipioNombre": "Zárate",
+      "value": 2659,
+      "label": "2659 hechos/100k"
+    }
+  ]
+}

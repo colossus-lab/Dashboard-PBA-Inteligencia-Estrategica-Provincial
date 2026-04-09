@@ -1,0 +1,61 @@
+{
+  "name": "dashboard-pba",
+  "version": "1.0.0",
+  "description": "Dashboard interactivo de datos abiertos de la Provincia de Buenos Aires — Inteligencia Estratégica Provincial",
+  "type": "module",
+  "license": "MIT",
+  "author": "Laboratorio Colossus",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/colossus-lab/dashboard-pba.git"
+  },
+  "homepage": "https://dashboard-pba.vercel.app",
+  "keywords": [
+    "dashboard",
+    "buenos-aires",
+    "datos-abiertos",
+    "open-data",
+    "argentina",
+    "react",
+    "vite",
+    "nivo",
+    "data-visualization"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "build-data": "node scripts/build-data.cjs",
+    "prebuild": "node scripts/build-data.cjs"
+  },
+  "dependencies": {
+    "@nivo/bar": "^0.88.0",
+    "@nivo/core": "^0.88.0",
+    "@nivo/geo": "^0.88.0",
+    "@nivo/heatmap": "^0.88.0",
+    "@nivo/line": "^0.88.0",
+    "@nivo/pie": "^0.88.0",
+    "@nivo/tooltip": "^0.88.0",
+    "@types/d3-geo": "^3.1.0",
+    "@types/topojson-client": "^3.1.5",
+    "d3-geo": "^3.1.1",
+    "papaparse": "^5.5.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-markdown": "^10.1.0",
+    "react-router-dom": "^7.1.0",
+    "remark-gfm": "^4.0.0",
+    "topojson-client": "^3.1.0",
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz",
+    "zustand": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/papaparse": "^5.3.15",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^4.3.0",
+    "typescript": "~5.7.0",
+    "vite": "^6.1.0"
+  }
+}
+

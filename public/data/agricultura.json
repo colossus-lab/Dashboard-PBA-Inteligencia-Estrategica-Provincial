@@ -1,0 +1,258 @@
+{
+  "meta": {
+    "id": "agricultura",
+    "title": "Sector Agropecuario y Pesquero",
+    "category": "agricultura",
+    "source": "MAGyP, SENASA, SSPyA",
+    "date": "2023"
+  },
+  "kpis": [
+    {
+      "id": "stock-bovino",
+      "label": "Stock bovino ()",
+      "value": 0,
+      "formatted": "0",
+      "unit": "cabezas"
+    },
+    {
+      "id": "produccion-total",
+      "label": "Producción total (2024/25)",
+      "value": 65323605,
+      "formatted": "65.323.605",
+      "unit": "toneladas"
+    },
+    {
+      "id": "cultivos-analizados",
+      "label": "Cultivos principales",
+      "value": 8,
+      "formatted": "8",
+      "unit": "cultivos"
+    },
+    {
+      "id": "top-ganadero",
+      "label": "Mayor stock: -",
+      "value": 0,
+      "formatted": "0",
+      "unit": "cabezas"
+    }
+  ],
+  "charts": [
+    {
+      "id": "stock-bovino-temporal",
+      "type": "line",
+      "title": "Evolución del stock bovino PBA",
+      "sectionId": "evolucion-stock",
+      "data": [
+        {
+          "año": 2010,
+          "Stock bovino": 15982834
+        },
+        {
+          "año": 2011,
+          "Stock bovino": 16248861
+        },
+        {
+          "año": 2012,
+          "Stock bovino": 16706237
+        },
+        {
+          "año": 2013,
+          "Stock bovino": 16612689
+        },
+        {
+          "año": 2014,
+          "Stock bovino": 17476258
+        },
+        {
+          "año": 2015,
+          "Stock bovino": 17355106
+        },
+        {
+          "año": 2016,
+          "Stock bovino": 17904929
+        },
+        {
+          "año": 2017,
+          "Stock bovino": 18615034
+        },
+        {
+          "año": 2018,
+          "Stock bovino": 18845516
+        },
+        {
+          "año": 2019,
+          "Stock bovino": 19128655
+        },
+        {
+          "año": 2020,
+          "Stock bovino": 19188065
+        },
+        {
+          "año": 2021,
+          "Stock bovino": 20113912
+        },
+        {
+          "año": 2022,
+          "Stock bovino": 20311057
+        },
+        {
+          "año": 2023,
+          "Stock bovino": 19737872
+        },
+        {
+          "año": null,
+          "Stock bovino": 0
+        }
+      ],
+      "config": {
+        "xAxis": "año"
+      }
+    },
+    {
+      "id": "produccion-cultivo",
+      "type": "bar",
+      "title": "Producción por cultivo (2024/25)",
+      "sectionId": "produccion",
+      "data": [
+        {
+          "cultivo": "Maíz",
+          "Producción (tn)": 17196317
+        },
+        {
+          "cultivo": "Soja total",
+          "Producción (tn)": 15533596
+        },
+        {
+          "cultivo": "Soja 1ra",
+          "Producción (tn)": 10369117
+        },
+        {
+          "cultivo": "Trigo total",
+          "Producción (tn)": 9265428
+        },
+        {
+          "cultivo": "Soja 2da",
+          "Producción (tn)": 5164479
+        },
+        {
+          "cultivo": "Cebada total",
+          "Producción (tn)": 4590520
+        },
+        {
+          "cultivo": "Girasol",
+          "Producción (tn)": 2774333
+        },
+        {
+          "cultivo": "Avena",
+          "Producción (tn)": 429815
+        }
+      ],
+      "config": {
+        "xAxis": "cultivo",
+        "layout": "horizontal"
+      }
+    },
+    {
+      "id": "superficie-cultivos",
+      "type": "pie",
+      "title": "Superficie sembrada por cultivo (2024/25)",
+      "sectionId": "superficie",
+      "data": [
+        {
+          "id": "Soja total",
+          "value": 5487037
+        },
+        {
+          "id": "Soja 1ra",
+          "value": 3270695
+        },
+        {
+          "id": "Maíz",
+          "value": 3130724
+        },
+        {
+          "id": "Trigo total",
+          "value": 2620117
+        },
+        {
+          "id": "Soja 2da",
+          "value": 2216342
+        },
+        {
+          "id": "Cebada total",
+          "value": 1502660
+        },
+        {
+          "id": "Girasol",
+          "value": 1173852
+        },
+        {
+          "id": "Avena",
+          "value": 912681
+        }
+      ]
+    },
+    {
+      "id": "capturas-pesqueras",
+      "type": "bar",
+      "title": "Capturas pesqueras (2024)",
+      "sectionId": "pesca",
+      "data": [
+        {
+          "especie": "Merluza hubbsi",
+          "Capturas": 211593.93
+        },
+        {
+          "especie": "Calamar Illex",
+          "Capturas": 74300.17
+        },
+        {
+          "especie": "Corvina blanca",
+          "Capturas": 36625.54
+        },
+        {
+          "especie": "Langostino",
+          "Capturas": 17418.49
+        },
+        {
+          "especie": "Pescadilla",
+          "Capturas": 8604.16
+        },
+        {
+          "especie": "Rayas nep",
+          "Capturas": 8237.59
+        },
+        {
+          "especie": "Pez palo",
+          "Capturas": 6393.47
+        },
+        {
+          "especie": "Vieira (callos)",
+          "Capturas": 5438.94
+        },
+        {
+          "especie": "Caballa",
+          "Capturas": 5235.24
+        },
+        {
+          "especie": "Besugo",
+          "Capturas": 4784.56
+        }
+      ],
+      "config": {
+        "xAxis": "especie",
+        "layout": "horizontal"
+      }
+    }
+  ],
+  "rankings": [
+    {
+      "id": "ranking-stock",
+      "title": "Stock bovino por municipio",
+      "sectionId": "ranking-ganadero",
+      "items": [],
+      "order": "desc"
+    }
+  ],
+  "mapData": []
+}

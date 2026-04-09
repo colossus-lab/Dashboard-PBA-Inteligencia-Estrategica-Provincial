@@ -1,0 +1,297 @@
+{
+  "meta": {
+    "id": "poblacion-educacion-censal",
+    "title": "Asistencia Educativa de la Población",
+    "category": "poblacion",
+    "subcategory": "educacion-censal",
+    "source": "INDEC — Censo Nacional 2022. Cuadro C2.2",
+    "date": "2022-05-18"
+  },
+  "kpis": [
+    {
+      "id": "pob-total",
+      "label": "Población PBA",
+      "value": 17408906,
+      "formatted": "17.408.906",
+      "unit": "personas"
+    },
+    {
+      "id": "asistentes",
+      "label": "Asisten al sistema educativo",
+      "value": 5926948,
+      "formatted": "5.926.948",
+      "unit": "personas"
+    },
+    {
+      "id": "tasa-general",
+      "label": "Tasa asistencia general",
+      "value": 34,
+      "formatted": "34,0%",
+      "unit": "%"
+    },
+    {
+      "id": "cobertura-0-2",
+      "label": "Cobertura 0-2 años",
+      "value": 22.3,
+      "formatted": "22,3%",
+      "unit": "%",
+      "status": "critical"
+    },
+    {
+      "id": "cobertura-4",
+      "label": "Cobertura 4 años",
+      "value": 93.3,
+      "formatted": "93,3%",
+      "unit": "%",
+      "status": "good"
+    },
+    {
+      "id": "tasa-17",
+      "label": "Asistencia 17 años",
+      "value": 87.8,
+      "formatted": "87,8%",
+      "unit": "%",
+      "status": "warning"
+    },
+    {
+      "id": "tasa-19",
+      "label": "Asistencia 19 años",
+      "value": 55.7,
+      "formatted": "55,7%",
+      "unit": "%",
+      "status": "critical"
+    },
+    {
+      "id": "jovenes-fuera",
+      "label": "Jóvenes 17-19 fuera",
+      "value": 240841,
+      "formatted": "240.841",
+      "unit": "personas",
+      "status": "critical"
+    },
+    {
+      "id": "brecha-genero-19",
+      "label": "Brecha género 19 años",
+      "value": 12.6,
+      "formatted": "+12,6 pp",
+      "unit": "pp",
+      "comparison": "Mujeres 62,1% vs Varones 49,5%"
+    },
+    {
+      "id": "universitarios",
+      "label": "Universitarios",
+      "value": 808850,
+      "formatted": "808.850",
+      "unit": "personas"
+    },
+    {
+      "id": "ratio-mujeres-superior",
+      "label": "Mujeres/Varones superior",
+      "value": 1.73,
+      "formatted": "1,73:1"
+    }
+  ],
+  "charts": [
+    {
+      "id": "desgranamiento",
+      "type": "line",
+      "title": "Curva de desgranamiento: tasa de asistencia por edad",
+      "sectionId": "curva-desgranamiento",
+      "data": [
+        {
+          "edad": "6 años",
+          "Tasa asistencia (%)": 97.8
+        },
+        {
+          "edad": "7 años",
+          "Tasa asistencia (%)": 97.7
+        },
+        {
+          "edad": "8 años",
+          "Tasa asistencia (%)": 97.7
+        },
+        {
+          "edad": "9 años",
+          "Tasa asistencia (%)": 97.5
+        },
+        {
+          "edad": "10 años",
+          "Tasa asistencia (%)": 97.5
+        },
+        {
+          "edad": "11 años",
+          "Tasa asistencia (%)": 97.6
+        },
+        {
+          "edad": "12 años",
+          "Tasa asistencia (%)": 96.8
+        },
+        {
+          "edad": "13 años",
+          "Tasa asistencia (%)": 96.1
+        },
+        {
+          "edad": "14 años",
+          "Tasa asistencia (%)": 95.1
+        },
+        {
+          "edad": "15 años",
+          "Tasa asistencia (%)": 94.4
+        },
+        {
+          "edad": "16 años",
+          "Tasa asistencia (%)": 93.4
+        },
+        {
+          "edad": "17 años",
+          "Tasa asistencia (%)": 87.8
+        },
+        {
+          "edad": "18 años",
+          "Tasa asistencia (%)": 67.5
+        },
+        {
+          "edad": "19 años",
+          "Tasa asistencia (%)": 55.7
+        },
+        {
+          "edad": "20 años",
+          "Tasa asistencia (%)": 49.6
+        },
+        {
+          "edad": "25 años",
+          "Tasa asistencia (%)": 28
+        }
+      ],
+      "config": {
+        "xAxis": "edad",
+        "yAxis": "Tasa asistencia (%)"
+      }
+    },
+    {
+      "id": "brecha-genero",
+      "type": "bar",
+      "title": "Brecha de género en secundario (13-19 años)",
+      "sectionId": "brecha-genero-secundario",
+      "data": [
+        {
+          "edad": "13 años",
+          "Mujeres": 96.3,
+          "Varones": 96
+        },
+        {
+          "edad": "14 años",
+          "Mujeres": 95.2,
+          "Varones": 94.9
+        },
+        {
+          "edad": "15 años",
+          "Mujeres": 95,
+          "Varones": 93.9
+        },
+        {
+          "edad": "16 años",
+          "Mujeres": 94.2,
+          "Varones": 92.5
+        },
+        {
+          "edad": "17 años",
+          "Mujeres": 89.5,
+          "Varones": 86.1
+        },
+        {
+          "edad": "18 años",
+          "Mujeres": 70.7,
+          "Varones": 64.4
+        },
+        {
+          "edad": "19 años",
+          "Mujeres": 62.1,
+          "Varones": 49.5
+        }
+      ],
+      "config": {
+        "xAxis": "edad",
+        "grouped": true
+      }
+    },
+    {
+      "id": "distribucion-nivel",
+      "type": "pie",
+      "title": "Distribución de asistentes por nivel educativo",
+      "sectionId": "distribucion-nivel",
+      "data": [
+        {
+          "id": "Jardín maternal (0-3)",
+          "value": 317369
+        },
+        {
+          "id": "Preescolar (4-5)",
+          "value": 427672
+        },
+        {
+          "id": "Primario",
+          "value": 1858066
+        },
+        {
+          "id": "Secundario",
+          "value": 1996891
+        },
+        {
+          "id": "Terciario",
+          "value": 425248
+        },
+        {
+          "id": "Universitario",
+          "value": 808850
+        },
+        {
+          "id": "Posgrado",
+          "value": 92852
+        }
+      ]
+    },
+    {
+      "id": "nivel-stacked",
+      "type": "bar",
+      "title": "Asistentes por nivel educativo",
+      "sectionId": "distribucion-nivel",
+      "data": [
+        {
+          "nivel": "Jardín maternal (0-3)",
+          "Asistentes": 317369
+        },
+        {
+          "nivel": "Preescolar (4-5)",
+          "Asistentes": 427672
+        },
+        {
+          "nivel": "Primario",
+          "Asistentes": 1858066
+        },
+        {
+          "nivel": "Secundario",
+          "Asistentes": 1996891
+        },
+        {
+          "nivel": "Terciario",
+          "Asistentes": 425248
+        },
+        {
+          "nivel": "Universitario",
+          "Asistentes": 808850
+        },
+        {
+          "nivel": "Posgrado",
+          "Asistentes": 92852
+        }
+      ],
+      "config": {
+        "xAxis": "nivel",
+        "layout": "horizontal"
+      }
+    }
+  ],
+  "rankings": [],
+  "mapData": []
+}

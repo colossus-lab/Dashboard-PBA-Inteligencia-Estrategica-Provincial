@@ -1,0 +1,119 @@
+[
+  {
+    "id": "agricultura-capturas",
+    "title": "Capturas Pesqueras",
+    "source": "SSPyA",
+    "rows": 445,
+    "columns": 3,
+    "municipios": 0,
+    "file": "agricultura-capturas.json"
+  },
+  {
+    "id": "agricultura-estimaciones",
+    "title": "Estimaciones Agrícolas",
+    "source": "MAGyP",
+    "rows": 53317,
+    "columns": 8,
+    "municipios": 112,
+    "file": "agricultura-estimaciones.json"
+  },
+  {
+    "id": "agricultura-stock",
+    "title": "Stock Bovino por Municipio",
+    "source": "SENASA",
+    "rows": 1987,
+    "columns": 4,
+    "municipios": 135,
+    "file": "agricultura-stock.json"
+  },
+  {
+    "id": "economia-exportaciones",
+    "title": "Exportaciones por Rubro",
+    "source": "INDEC",
+    "rows": 9741,
+    "columns": 5,
+    "municipios": 0,
+    "file": "economia-exportaciones.json"
+  },
+  {
+    "id": "economia-pbg",
+    "title": "Producto Bruto Geográfico",
+    "source": "INDEC",
+    "rows": 340,
+    "columns": 6,
+    "municipios": 0,
+    "file": "economia-pbg.json"
+  },
+  {
+    "id": "economia-recaudacion",
+    "title": "Recaudación Tributaria PBA",
+    "source": "Ministerio de Economía PBA",
+    "rows": 3074,
+    "columns": 4,
+    "municipios": 0,
+    "file": "economia-recaudacion.json"
+  },
+  {
+    "id": "economia-transferencias",
+    "title": "Transferencias a Municipios",
+    "source": "Ministerio de Economía PBA",
+    "rows": 2294,
+    "columns": 5,
+    "municipios": 136,
+    "file": "economia-transferencias.json"
+  },
+  {
+    "id": "educacion-trayectoria",
+    "title": "Trayectoria Escolar",
+    "source": "DGCyE PBA",
+    "rows": 1485,
+    "columns": 21,
+    "municipios": 135,
+    "file": "educacion-trayectoria.json"
+  },
+  {
+    "id": "industria-empresas",
+    "title": "Empresas Industriales",
+    "source": "CEP XXI",
+    "rows": 44,
+    "columns": 4,
+    "municipios": 0,
+    "file": "industria-empresas.json"
+  },
+  {
+    "id": "industria-parques",
+    "title": "Parques Industriales",
+    "source": "Ministerio de Producción PBA",
+    "rows": 238,
+    "columns": 8,
+    "municipios": 112,
+    "file": "industria-parques.json"
+  },
+  {
+    "id": "salud-defunciones",
+    "title": "Defunciones Neonatales",
+    "source": "DEIS — Ministerio de Salud",
+    "rows": 3346,
+    "columns": 6,
+    "municipios": 138,
+    "file": "salud-defunciones.json"
+  },
+  {
+    "id": "salud-nacidos",
+    "title": "Nacidos Vivos por Municipio",
+    "source": "DEIS — Ministerio de Salud",
+    "rows": 2714,
+    "columns": 4,
+    "municipios": 137,
+    "file": "salud-nacidos.json"
+  },
+  {
+    "id": "seguridad",
+    "title": "Hechos Delictivos por Municipio",
+    "source": "SNIC — Ministerio de Seguridad",
+    "rows": 3390,
+    "columns": 6,
+    "municipios": 136,
+    "file": "seguridad.json"
+  }
+]
