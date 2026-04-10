@@ -152,7 +152,10 @@ export function Landing() {
           <a href="https://colossuslab.org" target="_blank" rel="noopener noreferrer" className="footer-link">
             ColossusLab.org
           </a>{' '}
-          • Gobernación Provincia de Buenos Aires
+          •{' '}
+          <a href="https://openarg.org" target="_blank" rel="noopener noreferrer" className="footer-link">
+            OpenArg.org
+          </a>
         </p>
       </footer>
     </div>
