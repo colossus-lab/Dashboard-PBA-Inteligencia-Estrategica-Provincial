@@ -172,7 +172,7 @@
       "id": "brecha-genero",
       "type": "bar",
       "title": "Brecha de género en secundario (13-19 años)",
-      "sectionId": "brecha-genero-secundario",
+      "sectionId": "nivel-secundario",
       "data": [
         {
           "edad": "13 años",
@@ -219,7 +219,7 @@
       "id": "distribucion-nivel",
       "type": "pie",
       "title": "Distribución de asistentes por nivel educativo",
-      "sectionId": "distribucion-nivel",
+      "sectionId": "dimensionamiento",
       "data": [
         {
           "id": "Jardín maternal (0-3)",
@@ -255,7 +255,7 @@
       "id": "nivel-stacked",
       "type": "bar",
       "title": "Asistentes por nivel educativo",
-      "sectionId": "distribucion-nivel",
+      "sectionId": "nivel-primario",
       "data": [
         {
           "nivel": "Jardín maternal (0-3)",

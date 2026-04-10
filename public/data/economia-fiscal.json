@@ -164,7 +164,7 @@
       "id": "pbg-sectores",
       "type": "pie",
       "title": "PBG por sector (2023)",
-      "sectionId": "pbg",
+      "sectionId": "producto-bruto-geografico",
       "data": [
         {
           "id": "Industria Manufacturera",

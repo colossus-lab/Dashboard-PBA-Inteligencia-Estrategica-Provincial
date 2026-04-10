@@ -1,0 +1,56 @@
+﻿=== public/reports/agricultura.md ===
+  informe-ejecutivo-para-la-gobernacion
+  1-la-potencia-agricola-56-anos-de-revolucion-productiva
+  2-ganaderia-bovina-el-rodeo-bonaerense
+  3-pesca-el-recurso-marino-bonaerense
+  4-cruces-estrategicos
+  5-prioridades-para-la-gobernacion
+
+=== public/reports/economia-fiscal.md ===
+  informe-ejecutivo-para-la-gobernacion
+  1-recaudacion-tributaria-provincial
+  2-transferencias-a-municipios-el-flujo-vital-del-federalismo-intra-provincial
+  3-exportaciones-la-potencia-productiva-provincial
+  4-producto-bruto-geografico-la-radiografia-de-la-economia-real
+  5-transferencias-a-consejos-escolares
+  6-cruce-de-indicadores-donde-estan-las-tensiones-fiscales
+  7-prioridades-para-la-gobernacion
+
+=== public/reports/industria.md ===
+  informe-ejecutivo-para-la-gobernacion
+  1-el-tejido-empresarial-bonaerense-radiografia-y-tendencias
+  2-parques-industriales-la-infraestructura-productiva
+  3-cruces-estrategicos-con-otros-analisis
+  4-prioridades-para-la-gobernacion
+
+=== public/reports/salud.md ===
+  informe-ejecutivo-para-la-gobernacion
+  1-la-crisis-silenciosa-el-desplome-de-la-natalidad
+  2-bajo-peso-al-nacer-un-indicador-estructural-estancado
+  3-mortalidad-infantil-descenso-sostenido-pero-con-senales-de-alerta
+  4-mortalidad-materna-la-herida-abierta
+  5-mortalidad-fetal-senal-de-acceso-a-control-prenatal
+  6-mapa-de-riesgo-materno-infantil
+  7-prioridades-para-la-gobernacion
+
+=== public/reports/poblacion/educacion-censal.md ===
+  informe-ejecutivo-para-la-gobernacion
+  1-dimensionamiento-cuantos-bonaerenses-asisten-al-sistema-educativo
+  2-nivel-inicial-la-primera-brecha
+  3-nivel-primario-cobertura-casi-universal-5-12-anos
+  4-nivel-secundario-la-gran-hemorragia-educativa-13-19-anos
+  5-nivel-superior-la-universidad-como-ascensor-social-parcialmente-bloqueado
+  6-la-educacion-de-adultos-el-sistema-que-nunca-cierra
+  7-analisis-de-cohorte-la-curva-de-desgranamiento
+  8-mapeo-de-brechas-criticas
+  9-prioridades-para-la-gobernacion
+
+=== public/reports/poblacion/viviendas.md ===
+  informe-ejecutivo-para-la-gobernacion
+  1-el-parque-habitacional-6-7-millones-de-viviendas
+  2-densificacion-hogares-por-vivienda-c2
+  3-tipologia-de-viviendas-que-tipo-de-vivienda-habitan-los-bonaerenses-c3
+  4-viviendas-colectivas
+  5-cruces-estrategicos
+  6-prioridades-para-la-gobernacion
+

@@ -1,0 +1,66 @@
+﻿
+=== agricultura (4 charts, 6 headings) ===
+  Ô£à stock-bovino-temporal [ganaderia-bovina] -> SUBSTRING on "2-ganaderia-bovina-el-rodeo-bonaerense"
+  Ô£à produccion-cultivo [potencia-agricola] -> SUBSTRING on "1-la-potencia-agricola-56-anos-de-revolucion-productiva"
+  Ô£à superficie-cultivos [potencia-agricola] -> SUBSTRING on "1-la-potencia-agricola-56-anos-de-revolucion-productiva"
+  Ô£à capturas-pesqueras [pesca] -> SUBSTRING on "3-pesca-el-recurso-marino-bonaerense"
+
+=== economia-fiscal (4 charts, 8 headings) ===
+  Ô£à recaudacion-temporal [recaudacion] -> SUBSTRING on "1-recaudacion-tributaria-provincial"
+  Ô£à pbg-sectores [producto-bruto-geografico] -> SUBSTRING on "4-producto-bruto-geografico-la-radiografia-de-la-economia-real"
+  Ô£à exportaciones-rubros [exportaciones] -> SUBSTRING on "3-exportaciones-la-potencia-productiva-provincial"
+  Ô£à transferencias-municipio [transferencias] -> SUBSTRING on "2-transferencias-a-municipios-el-flujo-vital-del-federalismo-intra-provincial"
+
+=== educacion (3 charts, 7 headings) ===
+  Ô£à aprender-primaria [aprender] -> SUBSTRING on "4-evaluacion-aprender-2024-la-verdad-sobre-que-aprenden-los-alumnos"
+  Ô£à aprender-secundaria [aprender] -> SUBSTRING on "4-evaluacion-aprender-2024-la-verdad-sobre-que-aprenden-los-alumnos"
+  Ô£à trayectoria-sobreedad [trayectoria] -> SUBSTRING on "3-trayectorias-educativas-la-historia-que-cuentan-los-indicadores"
+
+=== industria (3 charts, 5 headings) ===
+  Ô£à empresas-temporal [tejido-empresarial] -> SUBSTRING on "1-el-tejido-empresarial-bonaerense-radiografia-y-tendencias"
+  Ô£à empresas-segmento [tejido-empresarial] -> SUBSTRING on "1-el-tejido-empresarial-bonaerense-radiografia-y-tendencias"
+  Ô£à parques-municipio [parques] -> SUBSTRING on "2-parques-industriales-la-infraestructura-productiva"
+
+=== salud (4 charts, 8 headings) ===
+  Ô£à tmi-temporal [mortalidad-infantil] -> SUBSTRING on "3-mortalidad-infantil-descenso-sostenido-pero-con-senales-de-alerta"
+  Ô£à nacidos-peso [peso-nacer] -> WORD_MATCH on "2-bajo-peso-al-nacer-un-indicador-estructural-estancado"
+  Ô£à defunciones-municipio [mapa-riesgo-materno-infantil] -> WORD_MATCH on "6-mapa-de-riesgo-materno-infantil"
+  Ô£à bajo-peso-temporal [crisis-silenciosa-natalidad] -> WORD_MATCH on "1-la-crisis-silenciosa-el-desplome-de-la-natalidad"
+
+=== seguridad (4 charts, 10 headings) ===
+  Ô£à delitos-temporal [panorama-general] -> SUBSTRING on "1-panorama-general-una-provincia-bajo-presion-creciente"
+  Ô£à delitos-tipo [seis-delitos-dominantes] -> SUBSTRING on "2-los-seis-delitos-dominantes"
+  Ô£à top-municipios-delitos [alertas-rojas-delitos] -> WORD_MATCH on "3-alertas-rojas-los-delitos-que-mas-crecen"
+  Ô£à bottom-municipios-delitos [senales-positivas] -> SUBSTRING on "4-senales-positivas"
+
+=== poblacion/economia (5 charts, 10 headings) ===
+  Ô£à pea-pnea-donut [dimensionamiento] -> SUBSTRING on "1-dimensionamiento-la-fuerza-laboral-bonaerense"
+  Ô£à gba-vs-interior [brecha-gba-interior] -> WORD_MATCH on "2-la-brecha-gba-vs-interior"
+  Ô£à top-desocupacion [ranking-desocupacion] -> WORD_MATCH on "3-ranking-de-desocupacion-los-municipios-mas-afectados"
+  Ô£à bottom-desocupacion [municipios-menor-desocupacion] -> WORD_MATCH on "3-ranking-de-desocupacion-los-municipios-mas-afectados"
+  Ô£à volumen-desocupados [volumen-desocupacion] -> WORD_MATCH on "4-volumen-de-desocupacion-los-grandes-numeros"
+
+=== poblacion/educacion-censal (4 charts, 10 headings) ===
+  Ô£à desgranamiento [curva-desgranamiento] -> WORD_MATCH on "7-analisis-de-cohorte-la-curva-de-desgranamiento"
+  Ô£à brecha-genero [nivel-secundario] -> SUBSTRING on "4-nivel-secundario-la-gran-hemorragia-educativa-13-19-anos"
+  Ô£à distribucion-nivel [dimensionamiento] -> SUBSTRING on "1-dimensionamiento-cuantos-bonaerenses-asisten-al-sistema-educativo"
+  Ô£à nivel-stacked [nivel-primario] -> SUBSTRING on "3-nivel-primario-cobertura-casi-universal-5-12-anos"
+
+=== poblacion/estructura (1 charts, 8 headings) ===
+  Ô£à piramide [piramide] -> SUBSTRING on "5-estructura-etaria-la-piramide-que-envejece"
+
+=== poblacion/fecundidad (5 charts, 9 headings) ===
+  Ô£à distribucion-hijos [dimensionamiento] -> SUBSTRING on "1-dimensionamiento-la-fecundidad-bonaerense-en-cifras"
+  Ô£à top-fecundidad [mapa-de-fecundidad-por-partido] -> SUBSTRING on "2-mapa-de-fecundidad-por-partido"
+  Ô£à bottom-fecundidad [mapa-de-fecundidad-por-partido] -> SUBSTRING on "2-mapa-de-fecundidad-por-partido"
+  Ô£à fecundidad-educacion [fecundidad-y-educacion] -> SUBSTRING on "4-fecundidad-y-educacion-el-vinculo-mas-potente"
+  Ô£à polarizacion [analisis-de-la-distribucion] -> SUBSTRING on "6-analisis-de-la-distribucion-familias-numerosas-vs-sin-hijos"
+poblacion/habitacional-hogares: NO CHARTS
+poblacion/habitacional-personas: NO CHARTS
+poblacion/salud-prevision: NO CHARTS
+
+=== poblacion/viviendas (1 charts, 7 headings) ===
+  Ô£à ocupacion-viviendas [densificacion-hogares] -> SUBSTRING on "2-densificacion-hogares-por-vivienda-c2"
+
+==================================================
+Total issues: 0
