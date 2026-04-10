@@ -312,23 +312,3 @@ Los 11,5 millones de personas en edad productiva (15–64) son la fuerza laboral
 
 ---
 
-## 7. Prioridades para la Gobernación
-
-### Planificación territorial (urgencia máxima)
-
-1. **Plan de infraestructura para municipios de alto crecimiento**: San Vicente (+65%), General Rodríguez (+63,7%), Pilar (+32%) crecieron sin una expansión proporcional de servicios públicos. Se requiere un plan de inversión focalizado en agua, cloacas, caminos y transporte público.
-2. **Política de equilibrio territorial**: El interior crece más rápido (+16,9%) que el GBA (+9,4%) por primera vez en décadas. Aprovechar esta tendencia con incentivos para desconcentrar actividades del conurbano hacia ciudades intermedias (Bahía Blanca, Mar del Plata, Tandil, Junín, Pergamino).
-
-### Demografía y futuro
-
-3. **Prepararse para el envejecimiento**: 2 millones de adultos mayores (65+) con tendencia al alza. Necesita ampliación de la red geriátrica, programas de cuidado domiciliario y ajustes en el sistema previsional provincial.
-4. **Reconvertir infraestructura educativa**: En 10 años habrá ~350.000 estudiantes menos en nivel primario. Las escuelas excedentes pueden reconvertirse en centros de formación profesional, centros comunitarios o espacios de cuidado para adultos mayores.
-
-### Vulnerabilidad social
-
-5. **Plan de vivienda focalizado**: 1.426 personas en situación de calle (subregistro) concentradas en La Matanza (379), Mar del Plata (238) y Lomas de Zamora (156).
-6. **Auditoría del sistema penitenciario**: General Alvear (19,6% en viviendas colectivas) y Magdalena (14,9%) tienen su estructura poblacional completamente distorsionada por las cárceles. Evaluar el impacto socioeconómico de los complejos penitenciarios en las comunidades que los alojan.
-
----
-
----
