@@ -6,6 +6,7 @@ import { ExplorerIndex } from './pages/ExplorerIndex';
 import { ExplorerDetail } from './pages/ExplorerDetail';
 import { Chat } from './pages/Chat';
 import React from 'react';
+import { Analytics } from '@vercel/analytics/react';
 
 class ErrorBoundary extends React.Component<
   { children: React.ReactNode },
@@ -83,6 +84,7 @@ export default function App() {
           </Routes>
         </Layout>
       </BrowserRouter>
+      <Analytics />
     </ErrorBoundary>
   );
 }
