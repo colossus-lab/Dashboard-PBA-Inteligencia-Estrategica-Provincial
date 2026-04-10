@@ -4,7 +4,8 @@
   "outputDirectory": "dist",
   "framework": "vite",
   "rewrites": [
-    { "source": "/((?!assets|data|reports).*)", "destination": "/index.html" }
+    { "source": "/api/:path*", "destination": "/api/:path*" },
+    { "source": "/((?!assets|data|reports|api).*)", "destination": "/index.html" }
   ],
   "headers": [
     {

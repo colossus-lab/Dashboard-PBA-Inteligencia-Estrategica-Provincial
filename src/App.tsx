@@ -4,6 +4,7 @@ import { Landing } from './pages/Landing';
 import { ReportView } from './pages/ReportView';
 import { ExplorerIndex } from './pages/ExplorerIndex';
 import { ExplorerDetail } from './pages/ExplorerDetail';
+import { Chat } from './pages/Chat';
 import React from 'react';
 import { Analytics } from '@vercel/analytics/react';
 
@@ -76,6 +77,7 @@ export default function App() {
         <Layout>
           <Routes>
             <Route path="/" element={<Landing />} />
+            <Route path="/chat" element={<Chat />} />
             <Route path="/explorar" element={<ExplorerIndex />} />
             <Route path="/explorar/:datasetId" element={<ExplorerDetail />} />
             <Route path="/*" element={<ReportView />} />

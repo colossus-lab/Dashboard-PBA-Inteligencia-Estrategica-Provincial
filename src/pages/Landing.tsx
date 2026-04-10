@@ -115,33 +115,52 @@ export function Landing() {
         </section>
       </SectionReveal>
 
-      {/* ─── Data Explorer CTA ─── */}
+      {/* ─── Explora los Datos ─── */}
       <SectionReveal>
         <section className="landing-section">
           <div className="section-header">
             <div className="section-number">03</div>
             <div>
-              <h2 className="section-title">Data Explorer</h2>
-              <p className="section-desc">Explorá los datasets completos: tablas interactivas, auto-charts y perfiles municipales.</p>
+              <h2 className="section-title">Explora los Datos</h2>
+              <p className="section-desc">Accede a los datasets completos o consulta la informacion mediante inteligencia artificial.</p>
             </div>
           </div>
-          <Link to="/explorar" className="explorer-banner">
-            <div className="explorer-banner-glow" aria-hidden="true" />
-            <div className="explorer-banner-content">
-              <div className="explorer-banner-icon">🔍</div>
-              <div className="explorer-banner-text">
-                <span className="explorer-banner-title">Abrir Data Explorer</span>
-                <span className="explorer-banner-desc">
-                  13 datasets • +80.000 registros • 135 municipios
-                </span>
+          <div className="explore-options">
+            <Link to="/explorar" className="explorer-banner">
+              <div className="explorer-banner-glow" aria-hidden="true" />
+              <div className="explorer-banner-content">
+                <div className="explorer-banner-icon">🔍</div>
+                <div className="explorer-banner-text">
+                  <span className="explorer-banner-title">Abrir Data Explorer</span>
+                  <span className="explorer-banner-desc">
+                    13 datasets • +80.000 registros • 135 municipios
+                  </span>
+                </div>
               </div>
-            </div>
-            <div className="explorer-banner-arrow">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M5 12h14M12 5l7 7-7 7"/>
-              </svg>
-            </div>
-          </Link>
+              <div className="explorer-banner-arrow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </div>
+            </Link>
+            <Link to="/chat" className="ai-banner">
+              <div className="ai-banner-glow" aria-hidden="true" />
+              <div className="explorer-banner-content">
+                <div className="ai-banner-icon">🤖</div>
+                <div className="explorer-banner-text">
+                  <span className="explorer-banner-title">Abrir Asistente IA</span>
+                  <span className="explorer-banner-desc">
+                    14 informes • 13 datasets • Consultas en lenguaje natural
+                  </span>
+                </div>
+              </div>
+              <div className="explorer-banner-arrow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </div>
+            </Link>
+          </div>
         </section>
       </SectionReveal>
 
