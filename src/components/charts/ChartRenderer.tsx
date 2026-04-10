@@ -90,6 +90,21 @@ function BarChartView({ chart, height }: { chart: ChartConfig; height: number })
     ? Math.min(height, Math.max(280, Math.min(dataCount, maxItems) * (mobile ? 28 : 30) + 60))
     : height;
 
+  // On mobile, rotate labels more and skip some ticks when there are many data points
+  const mobileBottomAxis = () => {
+    if (isHorizontal) return { tickSize: 0, tickPadding: 5 };
+    if (mobile) {
+      return {
+        tickSize: 0,
+        tickPadding: 5,
+        tickRotation: dataCount > 3 ? -55 : -30,
+        // Show every Nth tick on mobile to prevent overlap
+        ...(dataCount > 8 ? { tickValues: chart.data.filter((_: unknown, i: number) => i % Math.ceil(dataCount / 6) === 0).map((d: Record<string, unknown>) => d[indexBy]) } : {}),
+      };
+    }
+    return { tickSize: 0, tickPadding: 5, tickRotation: dataCount > 4 ? -40 : 0 };
+  };
+
   return (
     <div style={{ height: cappedHeight }}>
       <ResponsiveBar
@@ -99,21 +114,17 @@ function BarChartView({ chart, height }: { chart: ChartConfig; height: number })
         margin={{
           top: 10,
           right: mobile ? 10 : 20,
-          bottom: isHorizontal ? 40 : (mobile ? 60 : 70),
-          left: isHorizontal ? (mobile ? 110 : 160) : (mobile ? 40 : 50),
+          bottom: isHorizontal ? 40 : (mobile ? 70 : 70),
+          left: isHorizontal ? (mobile ? 110 : 160) : (mobile ? 45 : 50),
         }}
         padding={0.3}
         layout={isHorizontal ? 'horizontal' : 'vertical'}
         colors={COLORS}
         borderRadius={3}
-        axisBottom={
-          isHorizontal
-            ? { tickSize: 0, tickPadding: 5 }
-            : { tickSize: 0, tickPadding: 5, tickRotation: dataCount > 4 ? -40 : 0 }
-        }
+        axisBottom={mobileBottomAxis()}
         axisLeft={
           isHorizontal
-            ? { tickSize: 0, tickPadding: 8, format: (v: string) => v.length > 20 ? v.slice(0, 18) + '…' : v }
+            ? { tickSize: 0, tickPadding: 8, format: (v: string) => mobile ? (v.length > 14 ? v.slice(0, 12) + '…' : v) : (v.length > 20 ? v.slice(0, 18) + '…' : v) }
             : { tickSize: 0, tickPadding: 5 }
         }
         enableGridX={isHorizontal}
@@ -122,7 +133,7 @@ function BarChartView({ chart, height }: { chart: ChartConfig; height: number })
         theme={theme}
         animate={true}
         motionConfig="gentle"
-        labelSkipWidth={30}
+        labelSkipWidth={mobile ? 40 : 30}
         labelSkipHeight={18}
         labelTextColor={labelColor}
       />
@@ -134,6 +145,7 @@ function BarChartView({ chart, height }: { chart: ChartConfig; height: number })
 function PieChartView({ chart, height }: { chart: ChartConfig; height: number }) {
   const { theme, isDark } = useChartTheme();
   const mobile = useIsMobile();
+  const dataCount = chart.data.length;
 
   // Format large numbers in arc labels
   const formatValue = (v: number) => {
@@ -142,12 +154,18 @@ function PieChartView({ chart, height }: { chart: ChartConfig; height: number })
     return v.toString();
   };
 
+  // On mobile: keep legends below in column layout, make container tall enough
+  // so the legend doesn't overlap the donut
+  const legendRows = dataCount;
+  const mobileLegendHeight = legendRows * 20 + 16; // ~20px per legend row + padding
+  const mobileHeight = 260 + mobileLegendHeight; // donut area + legend area
+
   return (
-    <div style={{ height: Math.min(height, mobile ? 280 : 340) }}>
+    <div style={{ height: mobile ? mobileHeight : Math.min(height, 380) }}>
       <ResponsivePie
         data={chart.data}
         margin={mobile
-          ? { top: 20, right: 20, bottom: 50, left: 20 }
+          ? { top: 20, right: 20, bottom: mobileLegendHeight + 20, left: 20 }
           : { top: 30, right: 100, bottom: 40, left: 100 }
         }
         innerRadius={0.5}
@@ -162,19 +180,34 @@ function PieChartView({ chart, height }: { chart: ChartConfig; height: number })
         arcLinkLabelsThickness={2}
         arcLinkLabelsDiagonalLength={16}
         arcLinkLabelsStraightLength={20}
-        arcLabelsSkipAngle={mobile ? 20 : 15}
+        arcLabelsSkipAngle={mobile ? 25 : 15}
         arcLabelsTextColor="#ffffff"
         arcLabel={d => formatValue(d.value)}
         theme={theme}
         animate={true}
         motionConfig="gentle"
+        tooltip={({ datum }) => (
+          <div style={{
+            padding: '8px 12px',
+            background: isDark ? '#1e293b' : '#fff',
+            color: isDark ? '#f1f5f9' : '#0f172a',
+            borderRadius: '8px',
+            boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+            fontSize: '13px',
+            border: `2px solid ${datum.color}`,
+            maxWidth: '200px',
+          }}>
+            <strong>{datum.label}</strong><br />
+            {formatValue(datum.value)} ({((datum.arc.endAngle - datum.arc.startAngle) / (2 * Math.PI) * 100).toFixed(1)}%)
+          </div>
+        )}
         legends={[
           {
             anchor: 'bottom',
             direction: mobile ? 'column' : 'row',
-            translateY: mobile ? 45 : 36,
-            itemWidth: mobile ? 160 : 120,
-            itemHeight: 18,
+            translateY: mobile ? mobileLegendHeight + 10 : 36,
+            itemWidth: mobile ? 200 : 120,
+            itemHeight: 20,
             itemTextColor: isDark ? '#94a3b8' : '#475569',
             symbolSize: 10,
             symbolShape: 'circle',
@@ -188,8 +221,10 @@ function PieChartView({ chart, height }: { chart: ChartConfig; height: number })
 // ─── Line Chart ───
 function LineChartView({ chart, height }: { chart: ChartConfig; height: number }) {
   const { theme } = useChartTheme();
+  const mobile = useIsMobile();
   const xKey = chart.config?.xAxis || Object.keys(chart.data[0] || {})[0];
   const yKeys = Object.keys(chart.data[0] || {}).filter(k => k !== xKey);
+  const dataCount = chart.data.length;
 
   const lineData = yKeys.map((key, i) => ({
     id: key,
@@ -197,23 +232,50 @@ function LineChartView({ chart, height }: { chart: ChartConfig; height: number }
     data: chart.data.map(d => ({ x: d[xKey], y: d[key] })),
   }));
 
+  // On mobile with many data points, show only every Nth tick to avoid overlap
+  const getBottomAxis = () => {
+    if (mobile) {
+      const step = Math.ceil(dataCount / 6);
+      const tickVals = dataCount > 8
+        ? chart.data.filter((_: unknown, i: number) => i % step === 0 || i === dataCount - 1).map((d: Record<string, unknown>) => d[xKey])
+        : undefined;
+      return {
+        tickSize: 0,
+        tickPadding: 6,
+        tickRotation: -55,
+        ...(tickVals ? { tickValues: tickVals } : {}),
+      };
+    }
+    return { tickSize: 0, tickPadding: 8, tickRotation: dataCount > 10 ? -45 : -35 };
+  };
+
+  // Compact Y-axis labels on mobile
+  const formatYAxis = (v: number) => {
+    if (Math.abs(v) >= 1_000_000) return `${(v / 1_000_000).toFixed(1)}M`;
+    if (Math.abs(v) >= 1_000) return `${(v / 1_000).toFixed(0)}K`;
+    return String(v);
+  };
+
   return (
-    <div style={{ height }}>
+    <div style={{ height: mobile ? Math.min(height, 320) : height }}>
       <ResponsiveLine
         data={lineData}
-        margin={{ top: 20, right: 30, bottom: 60, left: 60 }}
+        margin={mobile
+          ? { top: 15, right: 15, bottom: 65, left: 48 }
+          : { top: 20, right: 30, bottom: 60, left: 60 }
+        }
         xScale={{ type: 'point' }}
         yScale={{ type: 'linear', min: 'auto', max: 'auto' }}
         curve="monotoneX"
         colors={COLORS}
-        pointSize={8}
+        pointSize={mobile ? 5 : 8}
         pointColor={{ theme: 'background' }}
         pointBorderWidth={2}
         pointBorderColor={{ from: 'serieColor' }}
         enableArea={true}
         areaOpacity={0.06}
-        axisBottom={{ tickSize: 0, tickPadding: 8, tickRotation: -35 }}
-        axisLeft={{ tickSize: 0, tickPadding: 8 }}
+        axisBottom={getBottomAxis()}
+        axisLeft={{ tickSize: 0, tickPadding: 6, format: formatYAxis }}
         enableGridX={false}
         theme={theme}
         animate={true}
