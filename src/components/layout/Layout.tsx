@@ -45,7 +45,7 @@ function TopBar() {
       }}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            {!isHome && (
+            {(
               <button
                 onClick={toggleSidebar}
                 className="p-2 rounded-lg hover:opacity-80 transition-opacity lg:hidden"
@@ -117,7 +117,7 @@ function Sidebar() {
         className="fixed inset-0 z-40 bg-black/50"
         onClick={() => setSidebarOpen(false)}
       />
-      <aside className="fixed left-0 top-16 bottom-0 w-72 z-50 overflow-y-auto sidebar slide-in-right" style={{
+      <aside className="fixed left-0 top-16 bottom-0 w-72 z-50 overflow-y-auto slide-in-left" style={{
         background: 'var(--bg-secondary)',
         borderRight: '1px solid var(--border-glass)',
       }}>
