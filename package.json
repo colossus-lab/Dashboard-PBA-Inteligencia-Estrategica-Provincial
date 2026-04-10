@@ -29,6 +29,7 @@
     "prebuild": "node scripts/build-data.cjs"
   },
   "dependencies": {
+    "@ai-sdk/react": "^3.0.159",
     "@nivo/bar": "^0.88.0",
     "@nivo/core": "^0.88.0",
     "@nivo/geo": "^0.88.0",
@@ -38,6 +39,7 @@
     "@nivo/tooltip": "^0.88.0",
     "@types/d3-geo": "^3.1.0",
     "@types/topojson-client": "^3.1.5",
+    "ai": "^6.0.157",
     "d3-geo": "^3.1.1",
     "papaparse": "^5.5.3",
     "react": "^19.0.0",

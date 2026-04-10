@@ -122,7 +122,7 @@ export function Landing() {
             <div className="section-number">03</div>
             <div>
               <h2 className="section-title">Data Explorer</h2>
-              <p className="section-desc">Explorá los datasets completos: tablas interactivas, auto-charts y perfiles municipales.</p>
+              <p className="section-desc">Explora los datasets completos: tablas interactivas, auto-charts y perfiles municipales.</p>
             </div>
           </div>
           <Link to="/explorar" className="explorer-banner">
@@ -133,6 +133,36 @@ export function Landing() {
                 <span className="explorer-banner-title">Abrir Data Explorer</span>
                 <span className="explorer-banner-desc">
                   13 datasets • +80.000 registros • 135 municipios
+                </span>
+              </div>
+            </div>
+            <div className="explorer-banner-arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </div>
+          </Link>
+        </section>
+      </SectionReveal>
+
+      {/* ─── AI Assistant CTA ─── */}
+      <SectionReveal>
+        <section className="landing-section">
+          <div className="section-header">
+            <div className="section-number">04</div>
+            <div>
+              <h2 className="section-title">Asistente de Inteligencia Artificial</h2>
+              <p className="section-desc">Consulta los datos e informes del Dashboard mediante lenguaje natural.</p>
+            </div>
+          </div>
+          <Link to="/chat" className="ai-banner">
+            <div className="ai-banner-glow" aria-hidden="true" />
+            <div className="explorer-banner-content">
+              <div className="ai-banner-icon">🤖</div>
+              <div className="explorer-banner-text">
+                <span className="explorer-banner-title">Abrir Asistente IA</span>
+                <span className="explorer-banner-desc">
+                  14 informes • 13 datasets • Consultas en lenguaje natural
                 </span>
               </div>
             </div>
