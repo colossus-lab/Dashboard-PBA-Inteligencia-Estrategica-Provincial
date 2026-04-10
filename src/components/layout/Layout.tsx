@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ThemeToggle } from '../ui/ThemeToggle';
 import { useStore } from '../../store/useStore';
@@ -8,10 +9,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
   const { theme, sidebarOpen } = useStore();
   const progress = useScrollProgress();
 
-  // Apply theme on mount
-  if (typeof document !== 'undefined') {
+  // Apply theme when it changes
+  useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
-  }
+  }, [theme]);
 
   return (
     <div className="min-h-screen" style={{ background: 'var(--bg-primary)' }}>
@@ -59,6 +60,7 @@ function TopBar() {
           {(
             <button
               onClick={toggleSidebar}
+              aria-label="Menú de navegación"
               className="p-2 rounded-lg hover:opacity-80 transition-opacity lg:hidden"
               style={{ color: 'var(--text-secondary)' }}
             >

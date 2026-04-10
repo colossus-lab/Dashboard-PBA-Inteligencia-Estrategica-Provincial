@@ -24,16 +24,17 @@ interface StoreState {
 
 export const useStore = create<StoreState>((set) => ({
   // Theme — read from localStorage or default to dark
-  theme: (typeof window !== 'undefined' && localStorage.getItem('pba-theme') as Theme) || 'dark',
+  theme: (() => {
+    try { return (localStorage.getItem('pba-theme') as Theme) || 'dark'; }
+    catch { return 'dark'; }
+  })(),
   toggleTheme: () => set((state) => {
     const next = state.theme === 'dark' ? 'light' : 'dark';
-    localStorage.setItem('pba-theme', next);
-    document.documentElement.setAttribute('data-theme', next);
+    try { localStorage.setItem('pba-theme', next); } catch {}
     return { theme: next };
   }),
   setTheme: (theme) => {
-    localStorage.setItem('pba-theme', theme);
-    document.documentElement.setAttribute('data-theme', theme);
+    try { localStorage.setItem('pba-theme', theme); } catch {}
     set({ theme });
   },
 
