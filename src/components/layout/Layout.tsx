@@ -5,7 +5,7 @@ import { REPORTS, getPoblacionReports, getSectorialReports } from '../../data/re
 import { useScrollProgress } from '../../hooks/useIntersectionObserver';
 
 export function Layout({ children }: { children: React.ReactNode }) {
-  const { theme } = useStore();
+  const { theme, sidebarOpen } = useStore();
   const progress = useScrollProgress();
 
   // Apply theme on mount
@@ -23,6 +23,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
       {/* TopBar */}
       <TopBar />
 
+      {/* Sidebar — rendered at root level to avoid iOS fixed positioning bugs */}
+      {sidebarOpen && <Sidebar />}
+
       {/* Main content */}
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
         {children}
@@ -33,53 +36,57 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
 function TopBar() {
   const location = useLocation();
-  const { sidebarOpen, toggleSidebar } = useStore();
+  const { toggleSidebar } = useStore();
   const isHome = location.pathname === '/';
 
   return (
-    <>
-      <header className="fixed top-0 left-0 right-0 z-50 topbar" style={{
+    <header
+      className="topbar"
+      style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        right: 0,
+        zIndex: 50,
         background: 'var(--bg-secondary)',
         borderBottom: '1px solid var(--border-glass)',
         backdropFilter: 'blur(20px)',
-      }}>
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            {(
-              <button
-                onClick={toggleSidebar}
-                className="p-2 rounded-lg hover:opacity-80 transition-opacity lg:hidden"
-                style={{ color: 'var(--text-secondary)' }}
-              >
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
-                  <path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" strokeWidth="1.5" fill="none" />
-                </svg>
-              </button>
-            )}
-            <Link to="/" className="flex items-center gap-2 no-underline">
-              <span className="text-xl">📊</span>
-              <h1 className="text-lg font-bold" style={{
-                fontFamily: 'var(--font-heading)',
-                background: 'linear-gradient(135deg, var(--accent-cyan), var(--accent-purple, #8b5cf6))',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
-              }}>
-                Dashboard PBA
-              </h1>
-            </Link>
+        WebkitBackdropFilter: 'blur(20px)',
+      }}
+    >
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        <div className="flex items-center gap-3">
+          {(
+            <button
+              onClick={toggleSidebar}
+              className="p-2 rounded-lg hover:opacity-80 transition-opacity lg:hidden"
+              style={{ color: 'var(--text-secondary)' }}
+            >
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" strokeWidth="1.5" fill="none" />
+              </svg>
+            </button>
+          )}
+          <Link to="/" className="flex items-center gap-2 no-underline">
+            <span className="text-xl">📊</span>
+            <h1 className="text-lg font-bold" style={{
+              fontFamily: 'var(--font-heading)',
+              background: 'linear-gradient(135deg, var(--accent-cyan), var(--accent-purple, #8b5cf6))',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+            }}>
+              Dashboard PBA
+            </h1>
+          </Link>
 
-            {/* Breadcrumb */}
-            {!isHome && <Breadcrumb />}
-          </div>
-
-          <ThemeToggle />
+          {/* Breadcrumb */}
+          {!isHome && <Breadcrumb />}
         </div>
-      </header>
 
-      {/* Mobile sidebar overlay */}
-      {sidebarOpen && <Sidebar />}
-    </>
+        <ThemeToggle />
+      </div>
+    </header>
   );
 }
 
@@ -113,14 +120,35 @@ function Sidebar() {
 
   return (
     <>
+      {/* Backdrop */}
       <div
-        className="fixed inset-0 z-40 bg-black/50"
         onClick={() => setSidebarOpen(false)}
+        style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          zIndex: 998,
+          background: 'rgba(0,0,0,0.5)',
+        }}
       />
-      <aside className="fixed left-0 top-16 bottom-0 w-72 z-50 overflow-y-auto slide-in-left" style={{
-        background: 'var(--bg-secondary)',
-        borderRight: '1px solid var(--border-glass)',
-      }}>
+      {/* Panel */}
+      <aside
+        className="slide-in-left"
+        style={{
+          position: 'fixed',
+          top: '4rem',
+          left: 0,
+          bottom: 0,
+          width: '18rem',
+          zIndex: 999,
+          overflowY: 'auto',
+          background: 'var(--bg-secondary)',
+          borderRight: '1px solid var(--border-glass)',
+          WebkitOverflowScrolling: 'touch',
+        }}
+      >
         <nav className="p-4">
           <h3 className="text-xs font-semibold uppercase tracking-wider mb-3" style={{ color: 'var(--text-tertiary)' }}>
             Población
@@ -160,3 +188,4 @@ function Sidebar() {
     </>
   );
 }
+
