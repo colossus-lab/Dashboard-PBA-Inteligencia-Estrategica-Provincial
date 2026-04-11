@@ -129,14 +129,78 @@ Ejemplos de preguntas que puedes responder:
 - "¿Qué municipios tienen mayor crecimiento de transferencias?"
 `;
 
+// Sistema simple de rate limiting (en memoria por instancia)
+const rateLimit = new Map<string, { count: number; timestamp: number }>();
+const RATE_LIMIT_WINDOW = 60 * 1000; // 1 minuto
+const MAX_REQUESTS = 10; // 10 peticiones por minuto por IP para permitir un chat fluido pero evitar spam
+
+function checkRateLimit(ip: string): boolean {
+  if (ip === 'unknown') return true;
+  const now = Date.now();
+  const record = rateLimit.get(ip);
+  if (!record) {
+    rateLimit.set(ip, { count: 1, timestamp: now });
+    return true;
+  }
+  if (now - record.timestamp > RATE_LIMIT_WINDOW) {
+    rateLimit.set(ip, { count: 1, timestamp: now });
+    return true;
+  }
+  if (record.count >= MAX_REQUESTS) {
+    return false;
+  }
+  record.count++;
+  return true;
+}
+
 export async function POST(request: Request) {
   try {
+    // 1. Protección CORS - Verificar Origin / Referer
+    const origin = request.headers.get('origin') || request.headers.get('referer') || '';
+    const isLocalhost = origin.includes('localhost') || origin.includes('127.0.0.1');
+    const isVercel = origin.includes('dashboard-pba') || origin.includes('colossus-lab.github.io');
+    
+    // Bloquear si no viene de orígenes permitidos
+    if (process.env.NODE_ENV === 'production' && origin !== '' && !isLocalhost && !isVercel) {
+      console.warn('Petición bloqueada por CORS origin:', origin);
+      return new Response(JSON.stringify({ error: 'Acceso denegado (CORS origin inválido).' }), { 
+        status: 403, 
+        headers: { 'Content-Type': 'application/json' } 
+      });
+    }
+
+    // 2. IP Rate Limiting
+    const ip = request.headers.get('x-forwarded-for') || 'unknown';
+    if (!checkRateLimit(ip)) {
+      console.warn('Rate limit superado para IP:', ip);
+      return new Response(JSON.stringify({ error: 'Demasiadas peticiones. Por favor, espera un momento.' }), { 
+        status: 429, 
+        headers: { 'Content-Type': 'application/json' } 
+      });
+    }
+
     const { messages }: { messages: UIMessage[] } = await request.json();
+
+    // 3. Protección de Payload Size y formato
+    if (!messages || !Array.isArray(messages) || messages.length === 0) {
+      return new Response(JSON.stringify({ error: 'Payload de mensajes inválido.' }), { status: 400 });
+    }
+    
+    // Limitar "memoria" a los últimos 10 mensajes para ahorrar tokens y prevenir inyecciones masivas de contexto
+    const MAX_MESSAGES = 10;
+    const truncatedMessages = messages.slice(-MAX_MESSAGES);
+    
+    // Limitar longitud de los mensajes (max 350 caracteres por mensaje para prevenir prompt injection)
+    const MAX_CHAR_LENGTH = 350;
+    const hasOversizedMessage = truncatedMessages.some(m => m.content && m.content.length > MAX_CHAR_LENGTH);
+    if (hasOversizedMessage) {
+      return new Response(JSON.stringify({ error: 'El mensaje supera la longitud máxima permitida.' }), { status: 400 });
+    }
 
     const result = streamText({
       model: 'google/gemini-2.0-flash',
       system: SYSTEM_PROMPT,
-      messages: await convertToModelMessages(messages),
+      messages: await convertToModelMessages(truncatedMessages),
       maxOutputTokens: 2048,
     });
 
