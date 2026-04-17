@@ -5,9 +5,29 @@
   "framework": "vite",
   "rewrites": [
     { "source": "/api/:path*", "destination": "/api/:path*" },
-    { "source": "/((?!assets|data|reports|api).*)", "destination": "/index.html" }
+    { "source": "/((?!assets|data|reports|api|\\.well-known).*)", "destination": "/index.html" }
+  ],
+  "redirects": [
+    { "source": "/.env", "destination": "/", "statusCode": 404 },
+    { "source": "/.env.:ext", "destination": "/", "statusCode": 404 },
+    { "source": "/.git/:path*", "destination": "/", "statusCode": 404 },
+    { "source": "/package.json", "destination": "/", "statusCode": 404 },
+    { "source": "/package-lock.json", "destination": "/", "statusCode": 404 },
+    { "source": "/pnpm-lock.yaml", "destination": "/", "statusCode": 404 },
+    { "source": "/tsconfig.json", "destination": "/", "statusCode": 404 },
+    { "source": "/vite.config.:ext", "destination": "/", "statusCode": 404 }
   ],
   "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "Strict-Transport-Security", "value": "max-age=63072000; includeSubDomains; preload" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "Permissions-Policy", "value": "geolocation=(), microphone=(), camera=(), payment=(), usb=(), magnetometer=(), gyroscope=()" },
+        { "key": "Content-Security-Policy", "value": "default-src 'self'; script-src 'self' https://va.vercel-scripts.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self' https://vitals.vercel-insights.com https://va.vercel-scripts.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'" }
+      ]
+    },
     {
       "source": "/data/(.*)",
       "headers": [
@@ -24,6 +44,13 @@
       "source": "/assets/(.*)",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/.well-known/security.txt",
+      "headers": [
+        { "key": "Content-Type", "value": "text/plain; charset=utf-8" },
+        { "key": "Cache-Control", "value": "public, max-age=86400" }
       ]
     }
   ]
