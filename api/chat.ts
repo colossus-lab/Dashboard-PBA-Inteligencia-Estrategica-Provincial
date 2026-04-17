@@ -1,4 +1,18 @@
 import { streamText, convertToModelMessages, UIMessage } from 'ai';
+import { createHash } from 'node:crypto';
+
+function getMessageText(m: UIMessage): string {
+  if (!Array.isArray(m.parts)) return '';
+  return m.parts
+    .filter((p): p is { type: 'text'; text: string } => p.type === 'text')
+    .map((p) => p.text)
+    .join('');
+}
+
+function hashIp(ip: string): string {
+  const salt = process.env.IP_HASH_SALT || 'pba-dashboard';
+  return createHash('sha256').update(ip + salt).digest('hex').slice(0, 12);
+}
 
 // Resumen de informes para el contexto del asistente
 const INFORMES_RESUMEN = `
@@ -201,32 +215,52 @@ export async function POST(request: Request) {
       });
     }
 
-    // 2. IP Rate Limiting
-    const ip = request.headers.get('x-forwarded-for') || 'unknown';
+    // 2. IP Rate Limiting (primer IP del XFF para evitar spoofing por lista)
+    const xff = request.headers.get('x-forwarded-for') || '';
+    const ip = xff.split(',')[0].trim() || request.headers.get('x-real-ip') || 'unknown';
     if (!checkRateLimit(ip)) {
-      console.warn('Rate limit superado para IP:', ip);
-      return new Response(JSON.stringify({ error: 'Demasiadas peticiones. Por favor, espera un momento.' }), { 
-        status: 429, 
-        headers: { 'Content-Type': 'application/json' } 
+      console.warn('Rate limit superado para IP(hash):', ip === 'unknown' ? 'unknown' : hashIp(ip));
+      return new Response(JSON.stringify({ error: 'Demasiadas peticiones. Por favor, espera un momento.' }), {
+        status: 429,
+        headers: { 'Content-Type': 'application/json' }
       });
+    }
+
+    // 3. Cota dura de body size antes de parsear
+    const MAX_BODY_BYTES = 64 * 1024;
+    const contentLength = Number(request.headers.get('content-length') || 0);
+    if (contentLength > MAX_BODY_BYTES) {
+      return new Response(JSON.stringify({ error: 'Payload demasiado grande.' }), { status: 413 });
     }
 
     const { messages }: { messages: UIMessage[] } = await request.json();
 
-    // 3. Protección de Payload Size y formato
+    // 4. Validación de formato
     if (!messages || !Array.isArray(messages) || messages.length === 0) {
       return new Response(JSON.stringify({ error: 'Payload de mensajes inválido.' }), { status: 400 });
     }
-    
+
     // Limitar "memoria" a los últimos 10 mensajes para ahorrar tokens y prevenir inyecciones masivas de contexto
     const MAX_MESSAGES = 10;
     const truncatedMessages = messages.slice(-MAX_MESSAGES);
-    
-    // Limitar longitud de los mensajes (max 350 caracteres por mensaje para prevenir prompt injection)
-    const MAX_CHAR_LENGTH = 350;
-    const hasOversizedMessage = truncatedMessages.some(m => m.content && m.content.length > MAX_CHAR_LENGTH);
-    if (hasOversizedMessage) {
-      return new Response(JSON.stringify({ error: 'El mensaje supera la longitud máxima permitida.' }), { status: 400 });
+
+    // 5. Validación de contenido: partes por mensaje, longitud por mensaje, longitud total
+    const MAX_PARTS_PER_MESSAGE = 20;
+    const MAX_CHAR_PER_MESSAGE = 2000;
+    const MAX_TOTAL_CHARS = 6000;
+    let totalChars = 0;
+    for (const m of truncatedMessages) {
+      if (Array.isArray(m.parts) && m.parts.length > MAX_PARTS_PER_MESSAGE) {
+        return new Response(JSON.stringify({ error: 'Mensaje con demasiadas partes.' }), { status: 400 });
+      }
+      const text = getMessageText(m);
+      if (text.length > MAX_CHAR_PER_MESSAGE) {
+        return new Response(JSON.stringify({ error: 'El mensaje supera la longitud máxima permitida.' }), { status: 400 });
+      }
+      totalChars += text.length;
+    }
+    if (totalChars > MAX_TOTAL_CHARS) {
+      return new Response(JSON.stringify({ error: 'La conversación supera la longitud máxima permitida.' }), { status: 400 });
     }
 
     const result = streamText({
