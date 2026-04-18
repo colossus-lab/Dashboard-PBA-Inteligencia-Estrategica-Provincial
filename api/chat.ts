@@ -292,13 +292,24 @@ export async function POST(request: Request) {
       messages: await convertToModelMessages(truncatedMessages),
       maxOutputTokens: 700,
       timeout: STREAM_TIMEOUT_MS,
+      onError: ({ error }) => {
+        console.error('[API Chat Stream Error]', error);
+      },
     });
 
-    return result.toUIMessageStreamResponse();
+    return result.toUIMessageStreamResponse({
+      onError: (error: unknown) => {
+        console.error('[API Chat Response Error]', error);
+        return error instanceof Error ? error.message : 'Error en el stream';
+      },
+    });
   } catch (error) {
-    console.error('[API Chat Error]', error);
+    console.error('[API Chat Handler Error]', error);
     return new Response(
-      JSON.stringify({ error: 'Error al procesar la solicitud' }),
+      JSON.stringify({
+        error: 'Error al procesar la solicitud',
+        detail: error instanceof Error ? error.message : String(error),
+      }),
       { status: 500, headers: { 'Content-Type': 'application/json' } }
     );
   }
