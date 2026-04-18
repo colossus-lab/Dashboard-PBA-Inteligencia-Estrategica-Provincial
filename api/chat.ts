@@ -283,22 +283,15 @@ export async function POST(request: Request) {
       return new Response(JSON.stringify({ error: 'La conversación supera la longitud máxima permitida.' }), { status: 400 });
     }
 
-    // 7. Timeout duro con AbortController para cortar el stream si Gemini se
-    // cuelga. El timer se libera en onFinish / onError para no mantener la
-    // función serverless viva innecesariamente.
-    const abortController = new AbortController();
-    const timeoutId = setTimeout(() => abortController.abort(), STREAM_TIMEOUT_MS);
-    const clearTimer = () => clearTimeout(timeoutId);
-
+    // 7. Timeout nativo de AI SDK: corta el stream si Gemini se cuelga,
+    // evitando que la función serverless quede viva hasta el timeout de
+    // plataforma (costo + DoS amplificado).
     const result = streamText({
       model: 'google/gemini-2.0-flash',
       system: SYSTEM_PROMPT,
       messages: await convertToModelMessages(truncatedMessages),
       maxOutputTokens: 700,
-      abortSignal: abortController.signal,
-      onFinish: clearTimer,
-      onError: clearTimer,
-      onAbort: clearTimer,
+      timeout: STREAM_TIMEOUT_MS,
     });
 
     return result.toUIMessageStreamResponse();
