@@ -1,6 +1,6 @@
 import { streamText, convertToModelMessages, UIMessage } from 'ai';
 import { createHash } from 'node:crypto';
-import { checkRateLimit, isUsingUpstash } from './_lib/rateLimit';
+import { checkRateLimit, isUsingUpstash } from './_lib/rateLimit.js';
 
 function getMessageText(m: UIMessage): string {
   if (!Array.isArray(m.parts)) return '';

@@ -63,6 +63,10 @@ function parseNumber(val) {
 
 function parseCSV(filePath, delimiter) {
   console.log(`\nParsing: ${path.basename(filePath)}`);
+  if (!fs.existsSync(filePath)) {
+    console.warn(`  ⚠ Archivo no encontrado, se omite: ${filePath}`);
+    return [];
+  }
   const raw = fs.readFileSync(filePath, "utf-8");
   const result = Papa.parse(raw, {
     header: true,
