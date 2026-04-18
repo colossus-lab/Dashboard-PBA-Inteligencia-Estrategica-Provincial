@@ -207,10 +207,15 @@ export async function POST(request: Request) {
       }
     }
 
-    const isAllowed =
-      rawOrigin === '' ||
-      ALLOWED_HOSTS.has(originHost) ||
-      ALLOWED_HOST_SUFFIXES.some((suf) => originHost.endsWith(suf));
+    const isOriginAllowed =
+      originHost !== '' &&
+      (ALLOWED_HOSTS.has(originHost) ||
+        ALLOWED_HOST_SUFFIXES.some((suf) => originHost.endsWith(suf)));
+
+    // Deny-by-default en prod si falta Origin/Referer: los browsers siempre los
+    // envían en POST cross-origin/same-origin, así que sólo afecta a clientes
+    // no-browser (curl, scripts) — el tráfico que el control busca bloquear.
+    const isAllowed = IS_PROD ? isOriginAllowed : (rawOrigin === '' || isOriginAllowed);
 
     if (IS_PROD && !isAllowed) {
       console.warn('Petición bloqueada por CORS origin:', sanitizeForLog(rawOrigin));
