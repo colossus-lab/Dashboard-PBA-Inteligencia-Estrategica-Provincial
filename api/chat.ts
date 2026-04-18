@@ -283,13 +283,12 @@ export async function POST(request: Request) {
       return new Response(JSON.stringify({ error: 'La conversación supera la longitud máxima permitida.' }), { status: 400 });
     }
 
-    // 7. AbortController para cortar el stream si el LLM se cuelga
+    // 7. Timeout duro con AbortController para cortar el stream si Gemini se
+    // cuelga. El timer se libera en onFinish / onError para no mantener la
+    // función serverless viva innecesariamente.
     const abortController = new AbortController();
-    const timeoutId = setTimeout(() => {
-      abortController.abort();
-    }, STREAM_TIMEOUT_MS);
-    // Limpiamos el timeout cuando el cliente desconecta o terminamos
-    request.signal?.addEventListener('abort', () => abortController.abort(), { once: true });
+    const timeoutId = setTimeout(() => abortController.abort(), STREAM_TIMEOUT_MS);
+    const clearTimer = () => clearTimeout(timeoutId);
 
     const result = streamText({
       model: 'google/gemini-2.0-flash',
@@ -297,8 +296,9 @@ export async function POST(request: Request) {
       messages: await convertToModelMessages(truncatedMessages),
       maxOutputTokens: 700,
       abortSignal: abortController.signal,
-      onFinish: () => clearTimeout(timeoutId),
-      onError: () => clearTimeout(timeoutId),
+      onFinish: clearTimer,
+      onError: clearTimer,
+      onAbort: clearTimer,
     });
 
     return result.toUIMessageStreamResponse();

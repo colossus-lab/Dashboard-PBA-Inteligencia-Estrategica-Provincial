@@ -1,14 +1,16 @@
-import { Ratelimit } from '@upstash/ratelimit';
-import { Redis } from '@upstash/redis';
-
 /**
  * Rate limiter distribuido con fallback a memoria.
  *
- * - Si UPSTASH_REDIS_REST_URL y UPSTASH_REDIS_REST_TOKEN están configurados,
- *   usa @upstash/ratelimit (sliding window) para persistir entre cold starts
- *   y entre instancias serverless.
- * - Si no lo están, hace fallback a un Map en memoria (solo por instancia).
- *   Útil en desarrollo local; en producción conviene configurar Upstash.
+ * - Si UPSTASH_REDIS_REST_URL/KV_REST_API_URL y UPSTASH_REDIS_REST_TOKEN/
+ *   KV_REST_API_TOKEN están configurados, usa @upstash/ratelimit (sliding
+ *   window) para persistir entre cold starts y entre instancias serverless.
+ * - Si no lo están (o si la inicialización falla), hace fallback a un Map
+ *   en memoria (solo por instancia). Útil en desarrollo local.
+ *
+ * La inicialización de Upstash es LAZY: se intenta en la primera llamada
+ * a checkRateLimit(). Así, cualquier fallo al importar o instanciar el
+ * cliente de Upstash queda capturado en el handler en vez de romper el
+ * load del módulo serverless con FUNCTION_INVOCATION_FAILED.
  */
 
 const WINDOW_MS = 60 * 1000; // 1 minuto
@@ -17,37 +19,59 @@ const MAX_UNKNOWN = 3;
 
 type Kind = 'known' | 'unknown';
 
-// ---- Upstash (preferido) -----------------------------------------------------
+// ---- Upstash (preferido, lazy) ----------------------------------------------
 
 type Limiter = { limit: (key: string) => Promise<{ success: boolean }> };
+type UpstashState =
+  | { status: 'uninitialized' }
+  | { status: 'unavailable' }
+  | { status: 'ready'; known: Limiter; unknown: Limiter };
 
-function buildUpstashLimiters(): { known: Limiter; unknown: Limiter } | null {
+let upstashState: UpstashState = { status: 'uninitialized' };
+
+async function getUpstashLimiters(): Promise<{ known: Limiter; unknown: Limiter } | null> {
+  if (upstashState.status === 'ready') {
+    return { known: upstashState.known, unknown: upstashState.unknown };
+  }
+  if (upstashState.status === 'unavailable') {
+    return null;
+  }
+
   const url = process.env.UPSTASH_REDIS_REST_URL || process.env.KV_REST_API_URL;
   const token = process.env.UPSTASH_REDIS_REST_TOKEN || process.env.KV_REST_API_TOKEN;
-  if (!url || !token) return null;
+  if (!url || !token) {
+    upstashState = { status: 'unavailable' };
+    return null;
+  }
 
   try {
+    // Import dinámico: si el módulo no está disponible en runtime, no rompe el load.
+    const [{ Ratelimit }, { Redis }] = await Promise.all([
+      import('@upstash/ratelimit'),
+      import('@upstash/redis'),
+    ]);
+
     const redis = new Redis({ url, token });
-    const known = new Ratelimit({
+    const known: Limiter = new Ratelimit({
       redis,
       limiter: Ratelimit.slidingWindow(MAX_KNOWN, '60 s'),
       prefix: 'pba:chat:known',
       analytics: false,
     });
-    const unknown = new Ratelimit({
+    const unknown: Limiter = new Ratelimit({
       redis,
       limiter: Ratelimit.slidingWindow(MAX_UNKNOWN, '60 s'),
       prefix: 'pba:chat:unknown',
       analytics: false,
     });
+    upstashState = { status: 'ready', known, unknown };
     return { known, unknown };
   } catch (err) {
     console.warn('[rateLimit] No se pudo inicializar Upstash, usando memoria:', err);
+    upstashState = { status: 'unavailable' };
     return null;
   }
 }
-
-const upstashLimiters = buildUpstashLimiters();
 
 // ---- Fallback en memoria -----------------------------------------------------
 
@@ -76,9 +100,10 @@ export async function checkRateLimit(ip: string, kind: Kind): Promise<boolean> {
   const max = kind === 'unknown' ? MAX_UNKNOWN : MAX_KNOWN;
   const key = kind === 'unknown' ? 'unknown' : ip;
 
-  if (upstashLimiters) {
+  const limiters = await getUpstashLimiters();
+  if (limiters) {
     try {
-      const limiter = kind === 'unknown' ? upstashLimiters.unknown : upstashLimiters.known;
+      const limiter = kind === 'unknown' ? limiters.unknown : limiters.known;
       const { success } = await limiter.limit(key);
       return success;
     } catch (err) {
@@ -90,6 +115,10 @@ export async function checkRateLimit(ip: string, kind: Kind): Promise<boolean> {
   return checkMemory(key, max);
 }
 
+/**
+ * Indica si el rate limiter está usando Upstash. Solo es informativo para
+ * logs; como la init es lazy, puede devolver false hasta la primera llamada.
+ */
 export function isUsingUpstash(): boolean {
-  return upstashLimiters !== null;
+  return upstashState.status === 'ready';
 }
