@@ -26,8 +26,8 @@
     {
       "id": "homicidios",
       "label": "Homicidios dolosos",
-      "value": 1597,
-      "formatted": "1.597",
+      "value": 790,
+      "formatted": "790",
       "unit": "casos",
       "status": "critical"
     },

@@ -11,37 +11,37 @@
     {
       "id": "pob-total",
       "label": "Población total PBA",
-      "value": 17541141,
-      "formatted": "17.541.141",
+      "value": 17523996,
+      "formatted": "17.523.996",
       "unit": "personas"
     },
     {
       "id": "mujeres",
       "label": "Mujeres",
-      "value": 9097215,
-      "formatted": "9.097.215",
-      "unit": "52,0%"
+      "value": 9053427,
+      "formatted": "9.053.427",
+      "unit": "51,7%"
     },
     {
       "id": "varones",
       "label": "Varones",
-      "value": 8443926,
-      "formatted": "8.443.926",
-      "unit": "48,0%"
+      "value": 8470569,
+      "formatted": "8.470.569",
+      "unit": "48,3%"
     },
     {
       "id": "indice-masc",
       "label": "Índice de masculinidad",
-      "value": 92.8,
-      "formatted": "92,8",
+      "value": 93.6,
+      "formatted": "93,6",
       "unit": "varones/100 mujeres"
     },
     {
       "id": "pob-65-mas",
       "label": "Población 65+ años",
-      "value": 2330447,
-      "formatted": "2.330.447",
-      "unit": "13,3%"
+      "value": 2058624,
+      "formatted": "2.058.624",
+      "unit": "11,7%"
     },
     {
       "id": "mediana-edad",

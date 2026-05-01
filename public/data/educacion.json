@@ -10,39 +10,39 @@
     {
       "id": "matricula-total",
       "label": "Matrícula total PBA",
-      "value": 5200000,
-      "formatted": "~5.200.000",
+      "value": 5001120,
+      "formatted": "5.001.120",
       "unit": "alumnos"
     },
     {
-      "id": "aprender-lengua-prim",
-      "label": "Lengua Primaria (básico+debajo)",
-      "value": 34.2,
-      "formatted": "34,2%",
+      "id": "aprender-lectura-prim",
+      "label": "Lectura 3° grado (≤Nivel II)",
+      "value": 32,
+      "formatted": "32,0%",
       "unit": "%",
       "status": "critical"
     },
     {
-      "id": "aprender-mate-prim",
-      "label": "Matemática Primaria (básico+debajo)",
-      "value": 44.5,
-      "formatted": "44,5%",
+      "id": "aprender-lectura-prim-graves",
+      "label": "Lectura 3° grado (graves: ≤Nivel I)",
+      "value": 12.7,
+      "formatted": "12,7%",
       "unit": "%",
       "status": "critical"
     },
     {
       "id": "aprender-lengua-sec",
-      "label": "Lengua Secundaria (básico+debajo)",
-      "value": 53.5,
-      "formatted": "53,5%",
+      "label": "Lengua Secundaria (≤Básico)",
+      "value": 42.7,
+      "formatted": "42,7%",
       "unit": "%",
       "status": "critical"
     },
     {
       "id": "aprender-mate-sec",
-      "label": "Matemática Secundaria (básico+debajo)",
-      "value": 78.4,
-      "formatted": "78,4%",
+      "label": "Matemática Secundaria (≤Básico)",
+      "value": 83.1,
+      "formatted": "83,1%",
       "unit": "%",
       "status": "critical"
     }

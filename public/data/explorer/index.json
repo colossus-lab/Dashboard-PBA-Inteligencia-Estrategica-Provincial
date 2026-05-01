@@ -59,7 +59,7 @@
     "source": "Ministerio de Economía PBA",
     "rows": 2294,
     "columns": 5,
-    "municipios": 135,
+    "municipios": 136,
     "file": "economia-transferencias.json"
   },
   {
@@ -95,7 +95,7 @@
     "source": "DEIS — Ministerio de Salud",
     "rows": 3346,
     "columns": 6,
-    "municipios": 135,
+    "municipios": 138,
     "file": "salud-defunciones.json"
   },
   {
@@ -104,7 +104,7 @@
     "source": "DEIS — Ministerio de Salud",
     "rows": 2714,
     "columns": 4,
-    "municipios": 135,
+    "municipios": 137,
     "file": "salud-nacidos.json"
   },
   {
@@ -113,7 +113,7 @@
     "source": "SNIC — Ministerio de Seguridad",
     "rows": 3390,
     "columns": 6,
-    "municipios": 135,
+    "municipios": 136,
     "file": "seguridad.json"
   }
 ]

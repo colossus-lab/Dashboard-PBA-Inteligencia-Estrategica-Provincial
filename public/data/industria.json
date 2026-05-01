@@ -41,7 +41,7 @@
       "id": "empresas-temporal",
       "type": "line",
       "title": "Evolución de empresas industriales",
-      "sectionId": "tejido-empresarial",
+      "sectionId": "evolucion-empresas",
       "data": [
         {
           "año": 2007,
@@ -120,7 +120,7 @@
       "id": "empresas-segmento",
       "type": "pie",
       "title": "Empresas por segmento (2023)",
-      "sectionId": "tejido-empresarial",
+      "sectionId": "segmentos",
       "data": [
         {
           "id": "PyME",

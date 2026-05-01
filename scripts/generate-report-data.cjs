@@ -613,7 +613,7 @@ function generateSeguridad() {
   // --- KPIs from real data ---
   const totalHechos = sumField(lastYearProv, 'cantidad_hechos');
   const totalVictimas = sumField(lastYearProv, 'cantidad_victimas');
-  const homicidios = lastYearProv.filter(r => r.delito_nombre && r.delito_nombre.toLowerCase().includes('homicidio'));
+  const homicidios = lastYearProv.filter(r => r.delito_nombre && r.delito_nombre.toLowerCase().trim() === 'homicidios dolosos');
   const totalHomicidios = sumField(homicidios, 'cantidad_hechos');
 
   writeJson('seguridad.json', {
@@ -739,11 +739,11 @@ function generateEducacionSectorial() {
   writeJson('educacion.json', {
     meta: { id: 'educacion', title: 'Análisis del Sistema Educativo', category: 'educacion', source: 'Evaluación Aprender 2024, DGCyE PBA', date: '2024' },
     kpis: [
-      { id: 'matricula-total', label: 'Matrícula total PBA', value: 5200000, formatted: '~5.200.000', unit: 'alumnos' },
-      { id: 'aprender-lengua-prim', label: 'Lengua Primaria (básico+debajo)', value: 34.2, formatted: '34,2%', unit: '%', status: 'critical' },
-      { id: 'aprender-mate-prim', label: 'Matemática Primaria (básico+debajo)', value: 44.5, formatted: '44,5%', unit: '%', status: 'critical' },
-      { id: 'aprender-lengua-sec', label: 'Lengua Secundaria (básico+debajo)', value: 53.5, formatted: '53,5%', unit: '%', status: 'critical' },
-      { id: 'aprender-mate-sec', label: 'Matemática Secundaria (básico+debajo)', value: 78.4, formatted: '78,4%', unit: '%', status: 'critical' },
+      { id: 'matricula-total', label: 'Matrícula total PBA', value: 5001120, formatted: '5.001.120', unit: 'alumnos' },
+      { id: 'aprender-lectura-prim', label: 'Lectura 3° grado (≤Nivel II)', value: 32.0, formatted: '32,0%', unit: '%', status: 'critical' },
+      { id: 'aprender-lectura-prim-graves', label: 'Lectura 3° grado (graves: ≤Nivel I)', value: 12.7, formatted: '12,7%', unit: '%', status: 'critical' },
+      { id: 'aprender-lengua-sec', label: 'Lengua Secundaria (≤Básico)', value: 42.7, formatted: '42,7%', unit: '%', status: 'critical' },
+      { id: 'aprender-mate-sec', label: 'Matemática Secundaria (≤Básico)', value: 83.1, formatted: '83,1%', unit: '%', status: 'critical' },
     ],
     charts: [
       { id: 'aprender-primaria', type: 'bar', title: 'Evaluación Aprender 2024 — Primaria', sectionId: 'aprender', data: [
@@ -771,9 +771,26 @@ function generateEconomiaFiscal() {
   const transferencias = readIntermediate('economia/transferencias.json');
   const exportaciones = readIntermediate('economia/exportaciones.json');
 
-  // --- Recaudación anual ---
+  // Helper: pick last year with at least 12 months of data (full year),
+  // skipping current-year partial data (e.g. enero-2026 sólo tiene 1 mes).
+  function lastFullYear(rows) {
+    const monthsByYear = {};
+    for (const r of rows) {
+      const y = r.anio; if (y == null) continue;
+      monthsByYear[y] = monthsByYear[y] || new Set();
+      if (r.mes != null) monthsByYear[y].add(r.mes);
+    }
+    const fullYears = Object.entries(monthsByYear)
+      .filter(([, m]) => m.size >= 12)
+      .map(([y]) => Number(y))
+      .sort();
+    return fullYears[fullYears.length - 1] ?? Math.max(...Object.keys(monthsByYear).map(Number));
+  }
+
+  // --- Recaudación anual (sólo años con 12 meses) ---
+  const recFullLast = lastFullYear(recaudacion);
   const recByYear = groupBy(recaudacion, 'anio');
-  const recYears = Object.keys(recByYear).map(Number).sort();
+  const recYears = Object.keys(recByYear).map(Number).filter(y => y <= recFullLast).sort();
   const recTemporal = recYears.map(y => ({ año: y, 'Recaudación total': Math.round(sumField(recByYear[y], 'monto')) }));
 
   // --- PBG por sector (último año) ---
@@ -785,18 +802,16 @@ function generateEconomiaFiscal() {
     .map(([sector, rows]) => ({ id: sector.length > 40 ? sector.substring(0, 40) + '...' : sector, value: Math.round(sumField(rows, 'valor_corrientes')) }))
     .filter(d => d.value > 0).sort((a, b) => b.value - a.value).slice(0, 10);
 
-  // --- Transferencias per cápita por municipio (último año) ---
-  const transYears = [...new Set(transferencias.map(r => r.anio))].sort();
-  const transLastYear = transYears[transYears.length - 1];
+  // --- Transferencias por municipio (último año cerrado) ---
+  const transLastYear = lastFullYear(transferencias);
   const transLast = transferencias.filter(r => r.anio === transLastYear);
   const transByMuni = groupBy(transLast, 'municipio_id');
   const muniTrans = Object.entries(transByMuni)
     .map(([id, rows]) => ({ municipioId: id, municipioNombre: rows[0].municipio_nombre, total: Math.round(sumField(rows, 'monto')) }))
     .filter(m => m.total > 0).sort((a, b) => b.total - a.total);
 
-  // --- Exportaciones por rubro (último año) ---
-  const expYears = [...new Set(exportaciones.map(r => r.anio))].sort();
-  const expLastYear = expYears[expYears.length - 1];
+  // --- Exportaciones por rubro (último año cerrado) ---
+  const expLastYear = lastFullYear(exportaciones);
   const expLast = exportaciones.filter(r => r.anio === expLastYear);
   const byRubro = groupBy(expLast, 'grandes_rubros');
   const expRubroData = Object.entries(byRubro)
@@ -808,7 +823,7 @@ function generateEconomiaFiscal() {
   writeJson('economia-fiscal.json', {
     meta: { id: 'economia-fiscal', title: 'Economía y Finanzas Provinciales', category: 'economia-fiscal', source: 'Ministerio de Economía PBA, INDEC', date: String(transLastYear || '2023') },
     kpis: [
-      { id: 'recaudacion-total', label: `Recaudación total (${recYears[recYears.length - 1] || ''})`, value: totalRec, formatted: fmt(totalRec), unit: '$' },
+      { id: 'recaudacion-total', label: `Recaudación total (${recFullLast || ''})`, value: totalRec, formatted: fmt(totalRec), unit: '$' },
       { id: 'pbg-sectores', label: 'Sectores PBG analizados', value: pbgSectorData.length, formatted: String(pbgSectorData.length), unit: 'sectores' },
       { id: 'municipios-transfer', label: 'Municipios con transferencias', value: muniTrans.length, formatted: String(muniTrans.length), unit: 'municipios' },
       { id: 'top-transfer', label: `Mayor transfer.: ${muniTrans[0]?.municipioNombre || '-'}`, value: muniTrans[0]?.total || 0, formatted: fmt(muniTrans[0]?.total || 0), unit: '$' },
@@ -948,11 +963,11 @@ function generatePoblacionStubs() {
   writeJson('poblacion/estructura.json', {
     meta: { id: 'poblacion-estructura', title: 'Estructura por Sexo y Edad', category: 'poblacion', subcategory: 'estructura', source: 'INDEC — Censo 2022. Cuadros C1-C5', date: '2022-05-18' },
     kpis: [
-      { id: 'pob-total', label: 'Población total PBA', value: 17541141, formatted: '17.541.141', unit: 'personas' },
-      { id: 'mujeres', label: 'Mujeres', value: 9097215, formatted: '9.097.215', unit: '52,0%' },
-      { id: 'varones', label: 'Varones', value: 8443926, formatted: '8.443.926', unit: '48,0%' },
-      { id: 'indice-masc', label: 'Índice de masculinidad', value: 92.8, formatted: '92,8', unit: 'varones/100 mujeres' },
-      { id: 'pob-65-mas', label: 'Población 65+ años', value: 2330447, formatted: '2.330.447', unit: '13,3%' },
+      { id: 'pob-total', label: 'Población total PBA', value: 17523996, formatted: '17.523.996', unit: 'personas' },
+      { id: 'mujeres', label: 'Mujeres', value: 9053427, formatted: '9.053.427', unit: '51,7%' },
+      { id: 'varones', label: 'Varones', value: 8470569, formatted: '8.470.569', unit: '48,3%' },
+      { id: 'indice-masc', label: 'Índice de masculinidad', value: 93.6, formatted: '93,6', unit: 'varones/100 mujeres' },
+      { id: 'pob-65-mas', label: 'Población 65+ años', value: 2058624, formatted: '2.058.624', unit: '11,7%' },
       { id: 'mediana-edad', label: 'Mediana de edad', value: 33, formatted: '33 años', unit: 'años' },
     ],
     charts: [
@@ -1012,10 +1027,10 @@ function generatePoblacionStubs() {
   writeJson('poblacion/salud-prevision.json', {
     meta: { id: 'poblacion-salud', title: 'Salud y Previsión Social', category: 'poblacion', subcategory: 'salud-prevision', source: 'INDEC — Censo 2022', date: '2022-05-18' },
     kpis: [
-      { id: 'sin-cobertura', label: 'Sin cobertura de salud', value: 36.5, formatted: '36,5%', unit: '%', status: 'critical' },
-      { id: 'obra-social', label: 'Obra social', value: 42.8, formatted: '42,8%', unit: '%' },
-      { id: 'prepaga', label: 'Prepaga', value: 12.3, formatted: '12,3%', unit: '%' },
-      { id: 'jubilados', label: 'Jubilados/Pensionados', value: 2200000, formatted: '~2.200.000', unit: 'personas' },
+      { id: 'sin-cobertura', label: 'Sin cobertura de salud', value: 35.1, formatted: '35,1%', unit: '%', status: 'critical' },
+      { id: 'obra-social-prepaga', label: 'Obra social o prepaga (incluye PAMI)', value: 62.3, formatted: '62,3%', unit: '%' },
+      { id: 'plan-estatal', label: 'Programas o planes estatales de salud', value: 2.6, formatted: '2,6%', unit: '%' },
+      { id: 'sin-cobertura-abs', label: 'Sin cobertura (absoluto)', value: 6111393, formatted: '6.111.393', unit: 'personas', status: 'critical' },
     ],
     charts: [], rankings: [], mapData: [],
   });
@@ -1030,7 +1045,7 @@ function generatePoblacionStubs() {
   writeJson('poblacion/habitacional-hogares.json', {
     meta: { id: 'poblacion-hab-hogares', title: 'Condiciones Habitacionales de los Hogares', category: 'poblacion', subcategory: 'habitacional-hogares', source: 'INDEC — Censo 2022', date: '2022-05-18' },
     kpis: [
-      { id: 'hogares-total', label: 'Total hogares PBA', value: 5979469, formatted: '5.979.469', unit: 'hogares' },
+      { id: 'hogares-total', label: 'Total hogares PBA', value: 6051550, formatted: '6.051.550', unit: 'hogares' },
       { id: 'calmat-1', label: 'CALMAT I (calidad satisfactoria)', value: 64.2, formatted: '64,2%', unit: '%', status: 'good' },
       { id: 'calmat-4', label: 'CALMAT IV (calidad insuficiente)', value: 2.8, formatted: '2,8%', unit: '%', status: 'critical' },
       { id: 'sin-gas-red', label: 'Sin gas de red', value: 38.5, formatted: '38,5%', unit: '%', status: 'warning' },
@@ -1048,8 +1063,8 @@ function generatePoblacionStubs() {
   writeJson('poblacion/viviendas.json', {
     meta: { id: 'poblacion-viviendas', title: 'Stock Habitacional', category: 'poblacion', subcategory: 'viviendas', source: 'INDEC — Censo 2022. Cuadros C1-C3', date: '2022-05-18' },
     kpis: [
-      { id: 'viviendas-total', label: 'Total viviendas PBA', value: 6738041, formatted: '6.738.041', unit: 'viviendas' },
-      { id: 'ocupadas', label: 'Viviendas ocupadas', value: 5963078, formatted: '5.963.078', unit: '88,5%' },
+      { id: 'viviendas-total', label: 'Total viviendas PBA', value: 6749094, formatted: '6.749.094', unit: 'viviendas' },
+      { id: 'ocupadas', label: 'Viviendas ocupadas', value: 5970702, formatted: '5.970.702', unit: '88,5%' },
       { id: 'desocupadas', label: 'Viviendas desocupadas', value: 774963, formatted: '774.963', unit: '11,5%', status: 'warning' },
       { id: 'temporales', label: 'Uso temporal', value: 236801, formatted: '236.801', unit: 'viviendas' },
       { id: 'casillas-ranchos', label: 'Casillas + ranchos', value: 131211, formatted: '131.211', unit: '2,2%', status: 'critical' },

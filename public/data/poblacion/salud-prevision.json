@@ -11,31 +11,32 @@
     {
       "id": "sin-cobertura",
       "label": "Sin cobertura de salud",
-      "value": 36.5,
-      "formatted": "36,5%",
+      "value": 35.1,
+      "formatted": "35,1%",
       "unit": "%",
       "status": "critical"
     },
     {
-      "id": "obra-social",
-      "label": "Obra social",
-      "value": 42.8,
-      "formatted": "42,8%",
+      "id": "obra-social-prepaga",
+      "label": "Obra social o prepaga (incluye PAMI)",
+      "value": 62.3,
+      "formatted": "62,3%",
       "unit": "%"
     },
     {
-      "id": "prepaga",
-      "label": "Prepaga",
-      "value": 12.3,
-      "formatted": "12,3%",
+      "id": "plan-estatal",
+      "label": "Programas o planes estatales de salud",
+      "value": 2.6,
+      "formatted": "2,6%",
       "unit": "%"
     },
     {
-      "id": "jubilados",
-      "label": "Jubilados/Pensionados",
-      "value": 2200000,
-      "formatted": "~2.200.000",
-      "unit": "personas"
+      "id": "sin-cobertura-abs",
+      "label": "Sin cobertura (absoluto)",
+      "value": 6111393,
+      "formatted": "6.111.393",
+      "unit": "personas",
+      "status": "critical"
     }
   ],
   "charts": [],
