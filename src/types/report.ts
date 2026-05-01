@@ -47,6 +47,7 @@ export interface RankingConfig {
     name: string;
     value: number;
     municipioId?: string;
+    meta?: string;
   }>;
   order: 'asc' | 'desc';
 }
@@ -56,6 +57,7 @@ export interface MapDataItem {
   municipioNombre: string;
   value: number;
   label: string;
+  touristic?: boolean;
 }
 
 export interface ReportData {
