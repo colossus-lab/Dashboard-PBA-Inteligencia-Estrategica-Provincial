@@ -254,29 +254,6 @@ A partir de 2023, el SNIC introdujo nuevas subcategorías: abuso sexual simple (
 
 ---
 
-## 9. Prioridades para la Gobernación
-
-### Urgencia máxima (acción inmediata)
-
-1. **Robos en La Matanza**: 21.567 robos en un solo municipio. Requiere intervención operativa focalizada.
-2. **Estafas virtuales**: De 0 a 6.271 en un año. Necesita unidad cibernética provincial dedicada.
-3. **Robos agravados con lesiones/muertes**: +200% en 5 años. El robo se está volviendo más violento.
-4. **Tigre**: +28,1% interanual en un municipio de 400K habitantes. Anomalía que requiere diagnóstico.
-
-### Prioridad alta (políticas estructurales)
-
-5. **Lesiones dolosas y violencia de género**: 66.484 casos, 60% víctimas mujeres. Refuerzo cruzado con políticas de género.
-6. **Comercialización de estupefacientes**: Duplicación en 5 años. Estrategia territorial contra redes de distribución.
-7. **Mar del Plata y drogas**: Concentración atípica de tenencia para uso personal. Políticas de salud pública + seguridad.
-
-### Monitoreo continuo
-
-8. **Municipios costeros en temporada**: Villa Gesell y La Costa requieren refuerzo estacional policial.
-9. **Suicidios**: 1.264 en 2024 (+47,3% en 5 años). No es un dato de "seguridad" stricto sensu, pero es un indicador de salud social que la Gobernación debe cruzar con políticas de salud mental.
-10. **Homicidios dolosos**: Tendencia descendente sostenida (-13,7% en 5 años). Mantener las políticas que lo facilitan.
-
----
-
 ---
 
 *Datos procesados del Sistema Nacional de Información Criminal (SNIC). Los valores presentados corresponden exclusivamente a la Provincia de Buenos Aires (código 06). Los análisis de crecimiento interanual y tendencias de 5 años se basan en las categorías delictivas primarias del SNIC, con las salvedades metodológicas señaladas en la sección 8.*
