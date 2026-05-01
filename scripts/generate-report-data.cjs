@@ -10,6 +10,7 @@
 const XLSX = require('xlsx');
 const fs = require('fs');
 const path = require('path');
+const { COASTAL_TOURIST_MUNICIPIOS } = require('./data/municipios-turisticos-costeros.cjs');
 
 const ROOT = path.join(__dirname, '..');
 const OUT_DATA = path.join(ROOT, 'public', 'data');
@@ -593,8 +594,21 @@ function generateSeguridad() {
     hechos: sumField(rows, 'cantidad_hechos'),
     tasa: rows.reduce((s, r) => s + (r.tasa_hechos || 0), 0),
   }));
-  const byTasaDesc = [...muniAgg].sort((a, b) => b.tasa - a.tasa);
-  const byTasaAsc = [...muniAgg].sort((a, b) => a.tasa - b.tasa);
+
+  // Particionar costeros turísticos: el denominador del SNIC es población residente
+  // y en estos municipios la población de hecho se multiplica en verano, inflando
+  // su tasa. Se los excluye del ranking principal y se reportan por separado.
+  const muniAggNoCostero = muniAgg.filter(m => !COASTAL_TOURIST_MUNICIPIOS[m.municipioId]);
+  const muniAggCosteros  = muniAgg
+    .filter(m => COASTAL_TOURIST_MUNICIPIOS[m.municipioId])
+    .map(m => {
+      const t = COASTAL_TOURIST_MUNICIPIOS[m.municipioId];
+      return { ...m, factorEstival: t.factorEstival, tasaAjustada: Math.round(m.tasa / t.factorEstival) };
+    });
+
+  const byTasaDesc = [...muniAggNoCostero].sort((a, b) => b.tasa - a.tasa);
+  const byTasaAsc  = [...muniAggNoCostero].sort((a, b) => a.tasa - b.tasa);
+  const costerosByTasaDesc = [...muniAggCosteros].sort((a, b) => b.tasa - a.tasa);
 
   // --- KPIs from real data ---
   const totalHechos = sumField(lastYearProv, 'cantidad_hechos');
@@ -609,16 +623,34 @@ function generateSeguridad() {
       { id: 'victimas-total', label: `Víctimas totales (${lastYear})`, value: totalVictimas, formatted: fmt(totalVictimas), unit: 'víctimas', status: 'critical' },
       { id: 'homicidios', label: 'Homicidios dolosos', value: totalHomicidios, formatted: fmt(totalHomicidios), unit: 'casos', status: 'critical' },
       { id: 'municipios-analizados', label: 'Municipios con datos', value: muniAgg.length, formatted: String(muniAgg.length), unit: 'municipios' },
-      { id: 'peor-municipio', label: `Mayor tasa: ${byTasaDesc[0]?.municipioNombre || '-'}`, value: Math.round(byTasaDesc[0]?.tasa || 0), formatted: fmt(Math.round(byTasaDesc[0]?.tasa || 0)), unit: 'hechos/100k' },
+      { id: 'peor-municipio', label: `Mayor tasa (excl. costeros): ${byTasaDesc[0]?.municipioNombre || '-'}`, value: Math.round(byTasaDesc[0]?.tasa || 0), formatted: fmt(Math.round(byTasaDesc[0]?.tasa || 0)), unit: 'hechos/100k' },
+      { id: 'municipios-turisticos-aparte', label: 'Municipios costeros (analizados aparte)', value: muniAggCosteros.length, formatted: String(muniAggCosteros.length), unit: 'municipios' },
     ],
     charts: [
       { id: 'delitos-temporal', type: 'line', title: 'Evolución de hechos delictivos PBA', sectionId: 'evolucion-delitos', data: temporalData, config: { xAxis: 'año' } },
       { id: 'delitos-tipo', type: 'pie', title: `Distribución por tipo de delito (${lastYear})`, sectionId: 'tipos-delitos', data: delitoDistrib },
-      { id: 'top-municipios-delitos', type: 'bar', title: 'Top 15 municipios — Mayor tasa delictiva', sectionId: 'ranking-delitos', data: byTasaDesc.slice(0, 15).map(m => ({ municipio: m.municipioNombre, 'Tasa hechos': Math.round(m.tasa) })), config: { xAxis: 'municipio', layout: 'horizontal' } },
+      { id: 'top-municipios-delitos', type: 'bar', title: 'Top 15 municipios — Mayor tasa delictiva (excluye costeros turísticos)', sectionId: 'ranking-delitos', data: byTasaDesc.slice(0, 15).map(m => ({ municipio: m.municipioNombre, 'Tasa hechos': Math.round(m.tasa) })), config: { xAxis: 'municipio', layout: 'horizontal' } },
       { id: 'bottom-municipios-delitos', type: 'bar', title: 'Top 10 municipios — Menor tasa delictiva', sectionId: 'municipios-seguros', data: byTasaAsc.slice(0, 10).map(m => ({ municipio: m.municipioNombre, 'Tasa hechos': Math.round(m.tasa) })), config: { xAxis: 'municipio', layout: 'horizontal', colorScheme: 'greens' } },
+      { id: 'costeros-tasa-cruda', type: 'bar', title: 'Municipios costeros — Tasa cruda (denominador censal)', sectionId: 'municipios-turisticos', data: costerosByTasaDesc.map(m => ({ municipio: m.municipioNombre, 'Tasa hechos': Math.round(m.tasa) })), config: { xAxis: 'municipio', layout: 'horizontal' } },
+      { id: 'costeros-tasa-ajustada', type: 'bar', title: 'Municipios costeros — Tasa ajustada por población estival (estimada)', sectionId: 'municipios-turisticos', data: costerosByTasaDesc.map(m => ({ municipio: `${m.municipioNombre} (×${m.factorEstival})`, 'Tasa ajustada': m.tasaAjustada })), config: { xAxis: 'municipio', layout: 'horizontal', colorScheme: 'greens' } },
     ],
-    rankings: [{ id: 'ranking-delitos-full', title: 'Ranking delictivo por municipio', sectionId: 'ranking-delitos', items: byTasaDesc.map(m => ({ name: m.municipioNombre, value: Math.round(m.tasa), municipioId: m.municipioId })), order: 'desc' }],
-    mapData: muniAgg.map(m => ({ municipioId: m.municipioId, municipioNombre: m.municipioNombre, value: Math.round(m.tasa), label: `${Math.round(m.tasa)} hechos/100k` })),
+    rankings: [
+      { id: 'ranking-delitos-full', title: 'Ranking delictivo por municipio (excluye costeros turísticos)', sectionId: 'ranking-delitos', items: byTasaDesc.map(m => ({ name: m.municipioNombre, value: Math.round(m.tasa), municipioId: m.municipioId })), order: 'desc' },
+      { id: 'ranking-costeros', title: 'Municipios costeros (ranking aparte por estacionalidad turística)', sectionId: 'municipios-turisticos', items: costerosByTasaDesc.map(m => ({ name: m.municipioNombre, value: Math.round(m.tasa), municipioId: m.municipioId, meta: `Factor estival ×${m.factorEstival} → tasa ajustada ${m.tasaAjustada}` })), order: 'desc' },
+    ],
+    mapData: muniAgg.map(m => {
+      const t = COASTAL_TOURIST_MUNICIPIOS[m.municipioId];
+      const valor = Math.round(m.tasa);
+      return {
+        municipioId: m.municipioId,
+        municipioNombre: m.municipioNombre,
+        value: valor,
+        label: t
+          ? `${valor} hechos/100k (turístico — ajustada ≈${Math.round(m.tasa / t.factorEstival)})`
+          : `${valor} hechos/100k`,
+        touristic: Boolean(t),
+      };
+    }),
   });
   copyReport(path.join(ROOT, '4- Seguridad', fs.readdirSync(path.join(ROOT, '4- Seguridad')).find(f => f.endsWith('.md')) || ''), 'seguridad.md');
 }

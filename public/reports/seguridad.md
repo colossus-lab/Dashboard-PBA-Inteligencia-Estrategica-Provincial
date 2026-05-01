@@ -211,6 +211,29 @@ General Pueyrredón (Mar del Plata) aparece como epicentro atípico: el 7,4% de 
 
 ---
 
+## Municipios turísticos costeros: aclaración metodológica
+
+La métrica `tasa_hechos` (delitos cada 100.000 habitantes) que publica el SNIC usa como denominador la **población residente** del Censo 2022. En los municipios costeros bonaerenses la **población de hecho se multiplica varias veces** durante la temporada estival (diciembre–marzo), pero el denominador no se ajusta. El resultado es que estos municipios aparecen sistemáticamente al tope del ranking provincial sin que ello refleje necesariamente una realidad delictiva más grave por habitante real presente.
+
+Por ese motivo, el ranking principal de mayor tasa delictiva los **excluye** y se reportan en una sección aparte. Los factores estivales utilizados son estimaciones públicas:
+
+| Municipio | Residentes (Censo 2022) | Factor estival anual | Fuente |
+|---|---|---|---|
+| La Costa | ~100.700 | ×2,0 | Sec. Turismo La Costa (~6M turistas/año) |
+| Pinamar | ~40.300 | ×1,8 | 1,6–2M arribos dic–mar |
+| Villa Gesell | ~38.600 | ×2,0 | Municipio (~250k peak estival) |
+| Monte Hermoso | ~8.800 | ×2,2 | Municipio (~70–100k peak) |
+| General Pueyrredón (MDP) | ~650.000 | ×1,20 | Emturyc MDP (~8M turistas/año) |
+| Mar Chiquita | ~21.000 | ×1,3 | Estimación |
+| General Alvarado (Miramar) | ~40.000 | ×1,3 | Estimación |
+| Necochea | ~100.000 | ×1,2 | Estimación |
+
+La "tasa ajustada" mostrada en los gráficos es **una estimación referencial** (tasa cruda dividida por el factor estival), no un dato oficial. Se incluye únicamente para permitir una comparación más justa con el resto de los municipios.
+
+En el mapa coroplético, los municipios costeros se identifican con un **borde celeste punteado**.
+
+---
+
 ## 8. Calidad del dato: Advertencias metodológicas
 
 ### Registros "Sin determinar" (código 06999)
@@ -230,4 +253,31 @@ El incremento de registros sin municipio asignado en 2024 (+29,8%) requiere aten
 A partir de 2023, el SNIC introdujo nuevas subcategorías: abuso sexual simple (antes incluido en "Otros delitos contra la integridad sexual"), estafas virtuales (antes diluidas en "Otros delitos contra la propiedad"), daños (ídem), y extorsiones. Estas reclasificaciones impiden comparaciones directas 2022→2023 en esas subcategorías, pero no afectan las categorías agregadas padre.
 
 ---
+
+## 9. Prioridades para la Gobernación
+
+### Urgencia máxima (acción inmediata)
+
+1. **Robos en La Matanza**: 21.567 robos en un solo municipio. Requiere intervención operativa focalizada.
+2. **Estafas virtuales**: De 0 a 6.271 en un año. Necesita unidad cibernética provincial dedicada.
+3. **Robos agravados con lesiones/muertes**: +200% en 5 años. El robo se está volviendo más violento.
+4. **Tigre**: +28,1% interanual en un municipio de 400K habitantes. Anomalía que requiere diagnóstico.
+
+### Prioridad alta (políticas estructurales)
+
+5. **Lesiones dolosas y violencia de género**: 66.484 casos, 60% víctimas mujeres. Refuerzo cruzado con políticas de género.
+6. **Comercialización de estupefacientes**: Duplicación en 5 años. Estrategia territorial contra redes de distribución.
+7. **Mar del Plata y drogas**: Concentración atípica de tenencia para uso personal. Políticas de salud pública + seguridad.
+
+### Monitoreo continuo
+
+8. **Municipios costeros en temporada**: Villa Gesell y La Costa requieren refuerzo estacional policial.
+9. **Suicidios**: 1.264 en 2024 (+47,3% en 5 años). No es un dato de "seguridad" stricto sensu, pero es un indicador de salud social que la Gobernación debe cruzar con políticas de salud mental.
+10. **Homicidios dolosos**: Tendencia descendente sostenida (-13,7% en 5 años). Mantener las políticas que lo facilitan.
+
+---
+
+---
+
+*Datos procesados del Sistema Nacional de Información Criminal (SNIC). Los valores presentados corresponden exclusivamente a la Provincia de Buenos Aires (código 06). Los análisis de crecimiento interanual y tendencias de 5 años se basan en las categorías delictivas primarias del SNIC, con las salvedades metodológicas señaladas en la sección 8.*
 
