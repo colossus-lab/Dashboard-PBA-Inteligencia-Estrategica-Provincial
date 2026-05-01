@@ -277,3 +277,33 @@ Los municipios costeros con 40-60% de viviendas temporales deben mantener redes 
 
 ---
 
+## 6. Prioridades para la Gobernación
+
+### Emergencia habitacional (urgencia máxima)
+
+1. **Programa de reemplazo de viviendas precarias**: **131.211 casillas y ranchos** (~420.000 personas) requieren intervención directa. Priorizar La Matanza (19.515), La Plata (14.097), Florencio Varela (7.051), Moreno (6.146) y Merlo (5.406). Programa de viviendas de reemplazo con módulos prefabricados o construcción progresiva.
+
+2. **Reclasificación de locales no habitacionales**: **12.249 viviendas en locales** — galpones, depósitos y estructuras inadecuadas. Relevamiento municipal urgente para identificar condiciones de insalubridad y riesgo.
+
+3. **Piezas de inquilinato y pensiones**: **49.348 viviendas** en esta categoría — regular condiciones edilicias, verificar habilitaciones y proteger derechos de habitantes. Concentradas en GBA (35.520, 72%).
+
+### Gestión del stock (prioridad alta)
+
+4. **Política de viviendas desocupadas**: **774.963 viviendas vacías** — analizar incentivos fiscales para puesta en alquiler, especialmente las **143.150 en alquiler/venta** y **121.699 en "otra situación"**. 
+
+5. **Planificación de la densificación**: Los **71.571 hogares en viviendas compartidas** son una señal temprana de déficit. Programas de lotes con servicios y viviendas semilla en los municipios con mayor presión: Malvinas Argentinas, Florencio Varela, Merlo, Moreno.
+
+6. **Infraestructura para demanda estacional**: Los municipios costeros (La Costa, Pinamar, Villa Gesell, Monte Hermoso) necesitan esquemas de financiamiento que reconozcan la **asimetría población permanente vs. demanda estacional**. Las redes de servicios deben dimensionarse para 3-5x la población censal.
+
+### Urbanización (prioridad media-alta)
+
+7. **Gestión de la expansión urbana**: Los municipios con mayor construcción nueva (La Matanza 6.223, La Plata 5.432, Moreno 4.230) necesitan planificación urbana integrada: lotes con servicios, vialidad y transporte antes de la consolidación.
+
+8. **Regularización de viviendas precarias periurbanas**: Bahía Blanca (1.847 casillas y ranchos), San Nicolás (1.202), Ensenada (1.348) y Berisso (2.385) muestran bolsones significativos de precariedad en ciudades intermedias del interior.
+
+---
+
+---
+
+*Datos procesados del Censo Nacional de Población, Hogares y Viviendas 2022 (INDEC). Resultados definitivos, actualizados en septiembre 2024. Cuadros C1.2 a C3.2 — Viviendas de la Provincia de Buenos Aires, con desagregación por los 135 partidos. Los indicadores sintéticos y estimaciones cruzadas han sido elaborados a partir de los microdatos censales disponibles.*
+

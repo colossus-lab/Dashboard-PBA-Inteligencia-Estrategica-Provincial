@@ -37,7 +37,7 @@ Buenos Aires es, por lejos, la **primera provincia agrícola de Argentina**. La 
 | 2023/24 | 19,66M ha | 64,45M tn | Recuperación fuerte |
 | **2024/25** | **20,88M ha** | **66,65M tn** | 📈 **Récord de superficie** |
 
-> **La sequía de 2022/23**: La producción cayó un **36%** en una sola campaña (de 61,77M a 43,59M tn) — una pérdida de 18 millones de toneladas. Esto representa pérdida de ingresos por exportación del orden de **USD 5.000–7.000 millones** para la provincia, con impacto directo en la recaudación de Ingresos Brutos y en la actividad económica de más de 80 municipios rurales.
+> **La sequía de 2022/23**: La producción cayó un **29%** en una sola campaña (de 61,77M a 43,59M tn) — una pérdida de 18 millones de toneladas. Esto representa pérdida de ingresos por exportación del orden de **USD 5.000–7.000 millones** para la provincia, con impacto directo en la recaudación de Ingresos Brutos y en la actividad económica de más de 80 municipios rurales.
 
 ### 1.3. La campaña 2024/25: Radiografía productiva
 
@@ -231,4 +231,32 @@ Los municipios más afectados por la liquidación ganadera son los mismos que ti
 Los municipios ganaderos más grandes (Ayacucho, Olavarría, Azul) están entre los que **menos transfencias per cápita reciben** del régimen de coparticipación, dado su baja densidad poblacional. Sin embargo, la riqueza productiva que generan contribuye enormemente a la recaudación provincial vía Ingresos Brutos.
 
 ---
+
+## 5. Prioridades para la Gobernación
+
+### Política agrícola (alta prioridad)
+
+1. **Gestión del riesgo climático**: Las sequías (2008/09, 2017/18, 2022/23) causan pérdidas de hasta 18M tn. La provincia debiera impulsar seguros agrícolas paramétricos vinculados a índices de lluvia y rendimiento.
+2. **Chicharrita del maíz**: El 23,3% de pérdida de maíz en 2024/25 es una señal de alarma. La plaga *Dalbulus maidis* requiere vigilancia fitosanitaria activa y coordinación con SENASA.
+3. **Valor agregado local**: Con 66,6M tn de producción, la industrialización in situ (crushing, molienda, bioenergía) debe ser la prioridad nro. 1 del Ministerio de Desarrollo Agrario.
+
+### Política ganadera
+
+4. **Recomposición post-sequía**: El stock perdió 573K cabezas en 2023. Líneas de crédito para retención de vientres en los municipios ganaderos centrales (Ayacucho, Azul, Olavarría).
+5. **Feedlots y trazabilidad**: Buenos Aires tiene más de 20M de cabezas. El control de la cadena de valor cárnica y la calidad sanitaria para exportación son ventajas competitivas a profundizar.
+
+### Política pesquera
+
+6. **Diversificación de capturas**: La dependencia del 53% en merluza hubbsi expone a la industria al colapso de un solo recurso. Fomentar el desarrollo de pesquerías de langostino, calamar y corvina.
+7. **Monitoreo de calamar Illex**: La caída del 33,8% desde 2020 requiere evaluación científica para determinar si responde a sobrepesca o a variabilidad oceanográfica.
+
+### Infraestructura
+
+8. **Puertos agro-exportadores**: Bahía Blanca y Quequén son las salidas naturales de la producción cerealera bonaerense. La expansión de capacidad portuaria y logística ferroviaria es crítica para capturar mayor valor.
+
+---
+
+---
+
+*Datos procesados de fuentes oficiales del Ministerio de Desarrollo Agrario de la Provincia de Buenos Aires, SENASA e INDEC. Las estimaciones agrícolas usan el sistema campaña (julio a junio). El stock ganadero se releva a marzo de cada año. Las capturas pesqueras corresponden a desembarques en puertos bonaerenses.*
 

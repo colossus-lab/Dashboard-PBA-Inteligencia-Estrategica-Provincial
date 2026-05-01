@@ -17,7 +17,7 @@ Buenos Aires administra el **sistema educativo subnacional más grande de Améri
 | Indicador | Valor |
 |-----------|-------|
 | **Establecimientos educativos** | **21.668** |
-| **Matrícula total** | **5.000.120 alumnos** |
+| **Matrícula total** | **5.001.120 alumnos** |
 | Municipios cubiertos | **135** (100%) |
 | Sector estatal | 15.520 establecimientos (71,6%) |
 | Sector privado | 6.148 establecimientos (28,4%) |
@@ -38,7 +38,7 @@ Buenos Aires administra el **sistema educativo subnacional más grande de Améri
 | Formación Integral | 45.759 | 0,9% |
 | Otros | 79.602 | 1,6% |
 
-> **Dato clave**: La matrícula secundaria (1,81M) ya superó a la primaria (1,75M). Esto refleja dos fenómenos: la caída de natalidad (ver informe de Salud: -44% en 10 años) que reduce el ingreso a primaria, y la mayor retención en secundaria — un logro relativo del sistema.
+> **Dato clave**: La matrícula secundaria (1,81M) ya superó a la primaria (1,75M). Esto refleja dos fenómenos: la caída de natalidad (ver informe de Salud: -50% en 10 años) que reduce el ingreso a primaria, y la mayor retención en secundaria — un logro relativo del sistema.
 
 ### 1.3. Modalidades educativas
 
@@ -533,15 +533,42 @@ Los municipios con peor desempeño educativo (escuelas estatales del conurbano c
 
 ### 5.2. Educación + Salud
 
-La caída de natalidad (-44% en 10 años) ya se refleja en Aprender 2024: la cohorte de 3.° grado (19.620 evaluados en PBA) es significativamente menor a las anteriores. En 2027–2030, las cohortes que ingresen a nivel inicial serán **aún más pequeñas**, permitiendo reconvertir infraestructura educativa. Dato clave de Aprender 2024: el **4,4% de los niños de 3.° grado NO asistió al jardín** — correlación directa con peores resultados de salud materno-infantil.
+La caída de natalidad (-50% en 10 años) ya se refleja en Aprender 2024: la cohorte de 3.° grado (19.620 evaluados en PBA) es significativamente menor a las anteriores. En 2027–2030, las cohortes que ingresen a nivel inicial serán **aún más pequeñas**, permitiendo reconvertir infraestructura educativa. Dato clave de Aprender 2024: el **4,4% de los niños de 3.° grado NO asistió al jardín** — correlación directa con peores resultados de salud materno-infantil.
 
 ### 5.3. Educación + Industria
 
-Los **503 Centros de Formación Profesional** y **358 Escuelas Técnicas Secundarias** son la cantera del sector industrial. Con solo el **16,9% de los egresantes secundarios** alcanzando nivel Satisfactorio en matemática (Aprender 2024), los 612 parques industriales (ver informe Industrial) enfrentan una crisis de capital humano. La articulación educación técnica–parques industriales es urgente, con foco en jornada extendida (escuelas de 7+ horas logran 33% Sat.+Av. vs 5,1% en escuelas de 5 horas).
+Los **503 Centros de Formación Profesional** y **358 Escuelas Técnicas Secundarias** son la cantera del sector industrial. Con solo el **16,9% de los egresantes secundarios** alcanzando nivel Satisfactorio en matemática (Aprender 2024), los 238 parques industriales (ver informe Industrial) enfrentan una crisis de capital humano. La articulación educación técnica–parques industriales es urgente, con foco en jornada extendida (escuelas de 7+ horas logran 33% Sat.+Av. vs 5,1% en escuelas de 5 horas).
 
 ### 5.4. Educación + Población
 
 La estructura etaria de PBA (ver informe Población: franja 0–4 con 25% menos que 10–14) anticipa una reducción sostenida de la matrícula primaria. Los municipios de alto crecimiento (San Vicente +65%, Pilar +32%, Moreno +27%) necesitan más escuelas, mientras los del interior (25 de Mayo -0,8%, Guaminí -0,2%) podrían cerrar establecimientos.
 
 ---
+
+## 6. Prioridades para la Gobernación
+
+### Emergencia pedagógica (urgencia máxima)
+
+1. **Plan de rescate en matemática**: El **55,2% de los egresantes secundarios por debajo del básico** (Aprender 2024) confirma un deterioro de 20,7 pp en 11 años. Se requiere una intervención sistémica: formación docente intensiva en didáctica de la matemática, extensión de jornada escolar (el factor de mayor impacto: 6,5x), y tutoría personalizada focalizada en los quintiles Q1 y Q2.
+2. **Cerrar la brecha estatal/privado**: El 64,3% de alumnos estatales por debajo del básico en matemática (vs 38,7% privado) es una emergencia de equidad. Política de directores titulares (brecha de 30 pp en Lengua), mejora salarial y estabilidad laboral docente.
+3. **Plan Nacional de Alfabetización — nivel provincial**: El **32% de los alumnos de 3.° grado** no comprende textos de complejidad media. Implementar con urgencia el equipamiento tecnológico en el 44,9% de escuelas sin dispositivos, y programas de lectura familiar para el 37,6% de niños sin acceso a lectura hogareña.
+
+### Trayectorias (prioridad alta)
+
+4. **Consolidar la caída de sobreedad**: De 35,3% a 19,8% en secundaria es un gran logro, pero la sobreedad es un predictor de fracaso (solo 5,6% de Sat.+Av. en matemática con 2+ años de sobreedad). Necesita monitoreo estricto.
+5. **Combatir el abandono rural**: Carlos Tejedor (10,7%), Laprida (7,5%), Leandro N. Alem (7,3%) son municipios rurales donde el trabajo agropecuario compite con la escuela. Programas de alternancia (escuela + campo) y becas de retención.
+6. **Nivel inicial obligatorio efectivo**: El **4,4% que no asistió al jardín** sufre un déficit de -50 puntos en lectura. Garantizar cobertura total de sala de 3 en municipios con menor asistencia.
+
+### Infraestructura y gestión
+
+7. **Jornada extendida masiva**: El hallazgo más contundente de Aprender 2024 es que la jornada de 7+ horas multiplica por 6,5 los resultados en matemática. Extender la jornada escolar, priorizando escuelas estatales del conurbano.
+8. **Equipamiento tecnológico**: 44,9% de escuelas primarias sin dispositivos y 31,1% de hogares estatales sin libros. Plan de provisión de tablets/notebooks y bibliotecas de aula.
+9. **Protección digital de adolescentes**: 20,6% participa en apuestas online, 53,2% acepta desconocidos, solo 6,3% con control parental. Se necesita legislación y programas de concientización urgentes.
+10. **Equilibrio público/privado**: Pilar (46,8% estatal) y Tigre (52,4%) muestran retirada del Estado del sistema educativo. Construir nuevas escuelas estatales donde crece la población.
+
+---
+
+---
+
+*Datos procesados de la Dirección General de Cultura y Educación de la Provincia de Buenos Aires (padrón de establecimientos marzo 2026), indicadores de trayectoria escolar del Relevamiento Anual (RA) 2012–2022, y Evaluación Nacional Aprender 2024 — Resultados jurisdiccionales Primaria (Alfabetización 3.° grado, nov. 2024) y Secundaria (Lengua y Matemática 5.°/6.° año, oct. 2024), Secretaría de Educación, Ministerio de Capital Humano de la Nación. Serie histórica secundaria ONE 2013–Aprender 2024.*
 
