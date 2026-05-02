@@ -353,32 +353,5 @@ Los municipios de mayor crecimiento demográfico (San Vicente +65%, Pilar +32%, 
 
 ---
 
-## 7. Prioridades para la Gobernación
-
-### Emergencia infraestructural (urgencia máxima)
-
-1. **Plan de cloacas masivo**: **7,8 millones de personas (44,6%)** sin conexión a cloacas es la mayor deuda infraestructural de PBA. Priorizar el segundo y tercer cordón del conurbano donde la contaminación de napas es un riesgo sanitario activo. Inversión estimada: obra pública de gran escala con financiamiento multilateral.
-2. **Extensión de red de gas**: **6,6 millones de personas cocinan con garrafa** (38%). Focalizar en Gral. Rodríguez (73,3%), Cañuelas (68,3%), Moreno (65,9%), Marcos Paz (64,4%) y Pilar (61,2%). Cada hogar conectado a gas de red ahorra hasta un 70% en gasto energético.
-3. **Emergencia habitacional extrema**: **~200.000 personas** en viviendas irrecuperables (cartón/paja sin cielorraso + tierra). Programa de viviendas de emergencia y relocalización.
-
-### Regularización dominial (prioridad alta)
-
-4. **Programa masivo de escrituración**: **1.492.556 personas** dicen ser propietarias pero no tienen documentación. La regularización dominial es la base para el acceso al crédito, la herencia legal y la seguridad jurídica. Priorizar La Matanza (220.230 sin doc.), Lomas de Zamora (94.601), Quilmes (84.698) y Moreno (79.751).
-5. **Relevamiento de "otra situación" habitacional**: **1.132.116 personas** en régimen no clasificado — probablemente asentamientos, ocupaciones y situaciones de precariedad extrema. Requiere relevamiento municipal caso por caso.
-
-### Conectividad digital
-
-6. **Cierre de brecha digital**: **2,8 millones sin internet en casa** y **~300.000 en exclusión digital total**. Programa de acceso a internet subsidiado en el tercer cordón y puntos digitales comunitarios.
-7. **Provisión de dispositivos**: Si se quiere que la política educativa digital funcione (ver informe Educación), hay que cerrar el gap del 26,8% de hogares con internet pero sin computadora.
-
-### Calidad de vida
-
-8. **Programa de techos y cielorrasos**: **2,1 millones de personas** bajo chapa sin cielorraso. Un cielorraso de telgopor/poliestireno es una intervención de bajo costo con alto impacto en confort térmico — ideal para un programa masivo de mejoramiento habitacional.
-9. **Los 99.187 sin baño**: Equivale a una ciudad entera. Programa específico de construcción de núcleos sanitarios en viviendas existentes.
-
----
-
----
-
 *Datos procesados del Censo Nacional de Población, Hogares y Viviendas 2022 (INDEC). Resultados definitivos, actualizados en septiembre 2024. Cuadros 1.2 a 7.2 — Condiciones habitacionales de la Provincia de Buenos Aires, con desagregación por los 135 partidos. Los indicadores sintéticos y estimaciones cruzadas han sido elaborados a partir de los microdatos censales disponibles.*
 
