@@ -47,7 +47,7 @@ export default function ConurbanoSeguridad() {
           <Tab label="Panorama" id="panorama" tab={tab} setTab={setTab} />
           <Tab label="Vista 3D" id="vista3d" tab={tab} setTab={setTab} />
           <Tab label="Comparador" id="comparador" tab={tab} setTab={setTab} />
-          <Tab label="Scrollytelling" id="scrolly" tab={tab} setTab={setTab} />
+          <Tab label="Informe" id="scrolly" tab={tab} setTab={setTab} />
         </div>
 
         <div style={{ marginTop: '1.25rem' }}>
