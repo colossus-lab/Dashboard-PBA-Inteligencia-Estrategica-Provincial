@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useEffect, useRef, useState, useCallback } from 'react';
-import { getPoblacionReports, getSectorialReports } from '../data/reportRegistry';
+import { getPoblacionReports, getSectorialReports, getConurbanoReports } from '../data/reportRegistry';
 import { SectionReveal } from '../components/ui/SectionReveal';
 import type { ReportEntry } from '../types/report';
 
@@ -9,7 +9,7 @@ const HERO_STATS = [
   { value: 17569053, label: 'Habitantes', suffix: '' },
   { value: 135, label: 'Municipios', suffix: '' },
   { value: 80000, label: 'Registros', suffix: '+' },
-  { value: 15, label: 'Reportes', suffix: '' },
+  { value: 16, label: 'Reportes', suffix: '' },
 ];
 
 // ─── Mini-stats per report (contextual data for cards) ───
@@ -28,11 +28,14 @@ const MINI_STATS: Record<string, string> = {
   'economia-fiscal': '$11,8B PBG',
   'agricultura': '14,3M hectáreas',
   'industria': '38% del PBI ind.',
+  'conurbano-educacion': '24 partidos · 8.843 escuelas',
+  'conurbano-seguridad': '24 partidos · 25 años',
 };
 
 export function Landing() {
   const poblacion = getPoblacionReports();
   const sectoriales = getSectorialReports();
+  const conurbano = getConurbanoReports();
 
   return (
     <div className="landing-page">
@@ -115,11 +118,29 @@ export function Landing() {
         </section>
       </SectionReveal>
 
-      {/* ─── Explora los Datos ─── */}
+      {/* ─── Conurbano Grid ─── */}
       <SectionReveal>
         <section className="landing-section">
           <div className="section-header">
             <div className="section-number">03</div>
+            <div>
+              <h2 className="section-title">Conurbano</h2>
+              <p className="section-desc">Análisis territorial focalizado en los 24 partidos del Gran Buenos Aires.</p>
+            </div>
+          </div>
+          <div className="report-grid">
+            {conurbano.map((report, i) => (
+              <ReportCard key={report.id} report={report} index={i} />
+            ))}
+          </div>
+        </section>
+      </SectionReveal>
+
+      {/* ─── Explora los Datos ─── */}
+      <SectionReveal>
+        <section className="landing-section">
+          <div className="section-header">
+            <div className="section-number">04</div>
             <div>
               <h2 className="section-title">Explora los Datos</h2>
               <p className="section-desc">Accede a los datasets completos o consulta la informacion mediante inteligencia artificial.</p>
@@ -150,7 +171,7 @@ export function Landing() {
                 <div className="explorer-banner-text">
                   <span className="explorer-banner-title">Abrir Asistente IA</span>
                   <span className="explorer-banner-desc">
-                    14 informes • 13 datasets • Consultas en lenguaje natural
+                    16 informes • 13 datasets • Consultas en lenguaje natural
                   </span>
                 </div>
               </div>

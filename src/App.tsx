@@ -5,8 +5,19 @@ import { ReportView } from './pages/ReportView';
 import { ExplorerIndex } from './pages/ExplorerIndex';
 import { ExplorerDetail } from './pages/ExplorerDetail';
 import { Chat } from './pages/Chat';
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Analytics } from '@vercel/analytics/react';
+
+const ConurbanoEducacion = React.lazy(() => import('./pages/conurbano/ConurbanoEducacion'));
+const ConurbanoSeguridad = React.lazy(() => import('./pages/conurbano/ConurbanoSeguridad'));
+
+function ConurbanoFallback() {
+  return (
+    <div className="text-center py-20" style={{ color: 'var(--text-tertiary)' }}>
+      Cargando mapa…
+    </div>
+  );
+}
 
 class ErrorBoundary extends React.Component<
   { children: React.ReactNode },
@@ -80,6 +91,22 @@ export default function App() {
             <Route path="/chat" element={<Chat />} />
             <Route path="/explorar" element={<ExplorerIndex />} />
             <Route path="/explorar/:datasetId" element={<ExplorerDetail />} />
+            <Route
+              path="/conurbano/educacion"
+              element={
+                <Suspense fallback={<ConurbanoFallback />}>
+                  <ConurbanoEducacion />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/conurbano/seguridad"
+              element={
+                <Suspense fallback={<ConurbanoFallback />}>
+                  <ConurbanoSeguridad />
+                </Suspense>
+              }
+            />
             <Route path="/*" element={<ReportView />} />
           </Routes>
         </Layout>
