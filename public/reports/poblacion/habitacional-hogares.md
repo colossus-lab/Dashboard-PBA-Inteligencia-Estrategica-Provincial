@@ -386,39 +386,5 @@ Los **645.619 hogares de 1 habitación** hacen imposible la tarea escolar, el es
 
 ---
 
-## 9. Prioridades para la Gobernación
-
-### Emergencia infraestructural (urgencia máxima)
-
-1. **Plan masivo de cloacas**: **2.457.758 hogares (40,6%)** sin conexión a cloaca. Priorizar el segundo y tercer cordón del conurbano donde la contaminación cruzada pozos-napas es un riesgo sanitario activo. Inversión de obra pública de gran escala con financiamiento multilateral.
-
-2. **Extensión de red de gas**: **2.013.878 hogares (33,3%)** cocinan con garrafa. Focalizar en Gral. Rodríguez (61,9%), Cañuelas (63,0%), Moreno (58,4%), José C. Paz (56,5%). Cada conexión ahorra al hogar hasta 70% en gasto energético.
-
-3. **Emergencia habitacional extrema**: ~50.000 hogares en condiciones irrecuperables (cartón/paja sin cielorraso + tierra). Programa de viviendas de emergencia y relocalización.
-
-### Mejoramiento habitacional (prioridad alta)
-
-4. **Programa masivo de cielorraso**: **614.276 hogares** con chapa sin cielorraso. Un cielorraso de poliestireno es la intervención de menor costo con mayor impacto en confort térmico — ideal para escala masiva.
-
-5. **Núcleos sanitarios**: **34.387 hogares sin baño** + **26.483 con desagüe a hoyo**. Programa de construcción de módulos sanitarios prefabricados con conexión a sistema de desagüe adecuado.
-
-6. **Acceso al agua segura**: **46.254 hogares** con agua de pozo sin bomba o fuentes superficiales. Programa de perforaciones con bomba + filtrado para zonas sin red pública viable.
-
-### Regularización dominial (prioridad media-alta)
-
-7. **Programa masivo de escrituración**: **437.930 hogares** propietarios sin documentación. Priorizar La Matanza (62.506), Lomas de Zamora (27.622), Quilmes (24.882) y Moreno (23.172). La escritura habilita crédito hipotecario, herencia legal y seguridad jurídica.
-
-8. **Relevamiento de "otra situación"**: **369.872 hogares** en régimen no clasificado — asentamientos, ocupaciones y precariedad extrema. Requiere censo municipal específico.
-
-### Conectividad digital
-
-9. **Cierre de brecha digital**: **1,1 millones de hogares sin internet** y **~150.000 en exclusión total**. Programa de Internet subsidiado y puntos digitales comunitarios.
-
-10. **Provisión de dispositivos**: **1.547.174 hogares** tienen internet pero no computadora/tablet. Esta brecha anula el impacto de cualquier política educativa o laboral digital.
-
----
-
----
-
 *Datos procesados del Censo Nacional de Población, Hogares y Viviendas 2022 (INDEC). Resultados definitivos, actualizados en septiembre 2024. Cuadros C1.2 a C7.2 — Condiciones habitacionales de los hogares de la Provincia de Buenos Aires, con desagregación por los 135 partidos. Los indicadores sintéticos y estimaciones cruzadas han sido elaborados a partir de los microdatos censales disponibles.*
 
