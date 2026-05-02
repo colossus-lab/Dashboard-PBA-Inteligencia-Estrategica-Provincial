@@ -26,8 +26,8 @@
     {
       "id": "homicidios",
       "label": "Homicidios dolosos",
-      "value": 1597,
-      "formatted": "1.597",
+      "value": 790,
+      "formatted": "790",
       "unit": "casos",
       "status": "critical"
     },
@@ -40,10 +40,17 @@
     },
     {
       "id": "peor-municipio",
-      "label": "Mayor tasa: Tordillo",
+      "label": "Mayor tasa (excl. costeros): Tordillo",
       "value": 52648,
       "formatted": "52.648",
       "unit": "hechos/100k"
+    },
+    {
+      "id": "municipios-turisticos-aparte",
+      "label": "Municipios costeros (analizados aparte)",
+      "value": 8,
+      "formatted": "8",
+      "unit": "municipios"
     }
   ],
   "charts": [
@@ -234,7 +241,7 @@
     {
       "id": "top-municipios-delitos",
       "type": "bar",
-      "title": "Top 15 municipios — Mayor tasa delictiva",
+      "title": "Top 15 municipios — Mayor tasa delictiva (excluye costeros turísticos)",
       "sectionId": "ranking-delitos",
       "data": [
         {
@@ -248,10 +255,6 @@
         {
           "municipio": "General Guido",
           "Tasa hechos": 19175
-        },
-        {
-          "municipio": "Pinamar",
-          "Tasa hechos": 10961
         },
         {
           "municipio": "Maipú",
@@ -270,18 +273,6 @@
           "Tasa hechos": 9382
         },
         {
-          "municipio": "Villa Gesell",
-          "Tasa hechos": 8203
-        },
-        {
-          "municipio": "La Costa",
-          "Tasa hechos": 7384
-        },
-        {
-          "municipio": "Monte Hermoso",
-          "Tasa hechos": 6980
-        },
-        {
           "municipio": "San Pedro",
           "Tasa hechos": 6867
         },
@@ -290,12 +281,28 @@
           "Tasa hechos": 6440
         },
         {
-          "municipio": "Mar Chiquita",
-          "Tasa hechos": 6315
+          "municipio": "Junín",
+          "Tasa hechos": 5997
         },
         {
-          "municipio": "General Alvarado",
-          "Tasa hechos": 6185
+          "municipio": "Ramallo",
+          "Tasa hechos": 5914
+        },
+        {
+          "municipio": "Carmen de Areco",
+          "Tasa hechos": 5035
+        },
+        {
+          "municipio": "Pergamino",
+          "Tasa hechos": 4796
+        },
+        {
+          "municipio": "Chascomús",
+          "Tasa hechos": 4775
+        },
+        {
+          "municipio": "General Pinto",
+          "Tasa hechos": 4593
         }
       ],
       "config": {
@@ -355,12 +362,101 @@
         "layout": "horizontal",
         "colorScheme": "greens"
       }
+    },
+    {
+      "id": "costeros-tasa-cruda",
+      "type": "bar",
+      "title": "Municipios costeros — Tasa cruda (denominador censal)",
+      "sectionId": "municipios-turisticos",
+      "data": [
+        {
+          "municipio": "Pinamar",
+          "Tasa hechos": 10961
+        },
+        {
+          "municipio": "Villa Gesell",
+          "Tasa hechos": 8203
+        },
+        {
+          "municipio": "La Costa",
+          "Tasa hechos": 7384
+        },
+        {
+          "municipio": "Monte Hermoso",
+          "Tasa hechos": 6980
+        },
+        {
+          "municipio": "Mar Chiquita",
+          "Tasa hechos": 6315
+        },
+        {
+          "municipio": "General Alvarado",
+          "Tasa hechos": 6185
+        },
+        {
+          "municipio": "Necochea",
+          "Tasa hechos": 4280
+        },
+        {
+          "municipio": "General Pueyrredón",
+          "Tasa hechos": 3769
+        }
+      ],
+      "config": {
+        "xAxis": "municipio",
+        "layout": "horizontal"
+      }
+    },
+    {
+      "id": "costeros-tasa-ajustada",
+      "type": "bar",
+      "title": "Municipios costeros — Tasa ajustada por población estival (estimada)",
+      "sectionId": "municipios-turisticos",
+      "data": [
+        {
+          "municipio": "Pinamar (×1.8)",
+          "Tasa ajustada": 6089
+        },
+        {
+          "municipio": "Villa Gesell (×2)",
+          "Tasa ajustada": 4101
+        },
+        {
+          "municipio": "La Costa (×2)",
+          "Tasa ajustada": 3692
+        },
+        {
+          "municipio": "Monte Hermoso (×2.2)",
+          "Tasa ajustada": 3173
+        },
+        {
+          "municipio": "Mar Chiquita (×1.3)",
+          "Tasa ajustada": 4858
+        },
+        {
+          "municipio": "General Alvarado (×1.3)",
+          "Tasa ajustada": 4758
+        },
+        {
+          "municipio": "Necochea (×1.2)",
+          "Tasa ajustada": 3566
+        },
+        {
+          "municipio": "General Pueyrredón (×1.2)",
+          "Tasa ajustada": 3141
+        }
+      ],
+      "config": {
+        "xAxis": "municipio",
+        "layout": "horizontal",
+        "colorScheme": "greens"
+      }
     }
   ],
   "rankings": [
     {
       "id": "ranking-delitos-full",
-      "title": "Ranking delictivo por municipio",
+      "title": "Ranking delictivo por municipio (excluye costeros turísticos)",
       "sectionId": "ranking-delitos",
       "items": [
         {
@@ -377,11 +473,6 @@
           "name": "General Guido",
           "value": 19175,
           "municipioId": "06308"
-        },
-        {
-          "name": "Pinamar",
-          "value": 10961,
-          "municipioId": "06644"
         },
         {
           "name": "Maipú",
@@ -404,21 +495,6 @@
           "municipioId": "06168"
         },
         {
-          "name": "Villa Gesell",
-          "value": 8203,
-          "municipioId": "06868"
-        },
-        {
-          "name": "La Costa",
-          "value": 7384,
-          "municipioId": "06420"
-        },
-        {
-          "name": "Monte Hermoso",
-          "value": 6980,
-          "municipioId": "06553"
-        },
-        {
           "name": "San Pedro",
           "value": 6867,
           "municipioId": "06770"
@@ -427,16 +503,6 @@
           "name": "Lezama",
           "value": 6440,
           "municipioId": "06466"
-        },
-        {
-          "name": "Mar Chiquita",
-          "value": 6315,
-          "municipioId": "06518"
-        },
-        {
-          "name": "General Alvarado",
-          "value": 6185,
-          "municipioId": "06280"
         },
         {
           "name": "Junín",
@@ -487,11 +553,6 @@
           "name": "General Juan Madariaga",
           "value": 4335,
           "municipioId": "06315"
-        },
-        {
-          "name": "Necochea",
-          "value": 4280,
-          "municipioId": "06581"
         },
         {
           "name": "Baradero",
@@ -562,11 +623,6 @@
           "name": "San Vicente",
           "value": 3786,
           "municipioId": "06778"
-        },
-        {
-          "name": "General Pueyrredón",
-          "value": 3769,
-          "municipioId": "06357"
         },
         {
           "name": "Benito Juárez",
@@ -1040,6 +1096,62 @@
         }
       ],
       "order": "desc"
+    },
+    {
+      "id": "ranking-costeros",
+      "title": "Municipios costeros (ranking aparte por estacionalidad turística)",
+      "sectionId": "municipios-turisticos",
+      "items": [
+        {
+          "name": "Pinamar",
+          "value": 10961,
+          "municipioId": "06644",
+          "meta": "Factor estival ×1.8 → tasa ajustada 6089"
+        },
+        {
+          "name": "Villa Gesell",
+          "value": 8203,
+          "municipioId": "06868",
+          "meta": "Factor estival ×2 → tasa ajustada 4101"
+        },
+        {
+          "name": "La Costa",
+          "value": 7384,
+          "municipioId": "06420",
+          "meta": "Factor estival ×2 → tasa ajustada 3692"
+        },
+        {
+          "name": "Monte Hermoso",
+          "value": 6980,
+          "municipioId": "06553",
+          "meta": "Factor estival ×2.2 → tasa ajustada 3173"
+        },
+        {
+          "name": "Mar Chiquita",
+          "value": 6315,
+          "municipioId": "06518",
+          "meta": "Factor estival ×1.3 → tasa ajustada 4858"
+        },
+        {
+          "name": "General Alvarado",
+          "value": 6185,
+          "municipioId": "06280",
+          "meta": "Factor estival ×1.3 → tasa ajustada 4758"
+        },
+        {
+          "name": "Necochea",
+          "value": 4280,
+          "municipioId": "06581",
+          "meta": "Factor estival ×1.2 → tasa ajustada 3566"
+        },
+        {
+          "name": "General Pueyrredón",
+          "value": 3769,
+          "municipioId": "06357",
+          "meta": "Factor estival ×1.2 → tasa ajustada 3141"
+        }
+      ],
+      "order": "desc"
     }
   ],
   "mapData": [
@@ -1047,811 +1159,946 @@
       "municipioId": "06007",
       "municipioNombre": "Adolfo Alsina",
       "value": 1624,
-      "label": "1624 hechos/100k"
+      "label": "1624 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06014",
       "municipioNombre": "Adolfo Gonzales Chaves",
       "value": 4159,
-      "label": "4159 hechos/100k"
+      "label": "4159 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06021",
       "municipioNombre": "Alberti",
       "value": 2463,
-      "label": "2463 hechos/100k"
+      "label": "2463 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06028",
       "municipioNombre": "Almirante Brown",
       "value": 2740,
-      "label": "2740 hechos/100k"
+      "label": "2740 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06035",
       "municipioNombre": "Avellaneda",
       "value": 3385,
-      "label": "3385 hechos/100k"
+      "label": "3385 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06042",
       "municipioNombre": "Ayacucho",
       "value": 2880,
-      "label": "2880 hechos/100k"
+      "label": "2880 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06049",
       "municipioNombre": "Azul",
       "value": 3047,
-      "label": "3047 hechos/100k"
+      "label": "3047 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06056",
       "municipioNombre": "Bahía Blanca",
       "value": 3466,
-      "label": "3466 hechos/100k"
+      "label": "3466 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06058",
       "municipioNombre": "Quilmes",
       "value": 2683,
-      "label": "2683 hechos/100k"
+      "label": "2683 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06063",
       "municipioNombre": "Balcarce",
       "value": 3961,
-      "label": "3961 hechos/100k"
+      "label": "3961 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06070",
       "municipioNombre": "Baradero",
       "value": 4274,
-      "label": "4274 hechos/100k"
+      "label": "4274 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06077",
       "municipioNombre": "Arrecifes",
       "value": 3162,
-      "label": "3162 hechos/100k"
+      "label": "3162 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06084",
       "municipioNombre": "Benito Juárez",
       "value": 3768,
-      "label": "3768 hechos/100k"
+      "label": "3768 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06091",
       "municipioNombre": "Berazategui",
       "value": 2944,
-      "label": "2944 hechos/100k"
+      "label": "2944 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06098",
       "municipioNombre": "Berisso",
       "value": 3463,
-      "label": "3463 hechos/100k"
+      "label": "3463 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06105",
       "municipioNombre": "Bolívar",
       "value": 2912,
-      "label": "2912 hechos/100k"
+      "label": "2912 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06112",
       "municipioNombre": "Bragado",
       "value": 2918,
-      "label": "2918 hechos/100k"
+      "label": "2918 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06119",
       "municipioNombre": "Brandsen",
       "value": 3900,
-      "label": "3900 hechos/100k"
+      "label": "3900 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06126",
       "municipioNombre": "Campana",
       "value": 3616,
-      "label": "3616 hechos/100k"
+      "label": "3616 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06134",
       "municipioNombre": "Cañuelas",
       "value": 4586,
-      "label": "4586 hechos/100k"
+      "label": "4586 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06140",
       "municipioNombre": "Capitán Sarmiento",
       "value": 2958,
-      "label": "2958 hechos/100k"
+      "label": "2958 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06147",
       "municipioNombre": "Carlos Casares",
       "value": 2127,
-      "label": "2127 hechos/100k"
+      "label": "2127 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06154",
       "municipioNombre": "Carlos Tejedor",
       "value": 1432,
-      "label": "1432 hechos/100k"
+      "label": "1432 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06161",
       "municipioNombre": "Carmen de Areco",
       "value": 5035,
-      "label": "5035 hechos/100k"
+      "label": "5035 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06168",
       "municipioNombre": "Castelli",
       "value": 9382,
-      "label": "9382 hechos/100k"
+      "label": "9382 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06175",
       "municipioNombre": "Colón",
       "value": 4237,
-      "label": "4237 hechos/100k"
+      "label": "4237 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06182",
       "municipioNombre": "Coronel de Marina L. Rosales",
       "value": 3220,
-      "label": "3220 hechos/100k"
+      "label": "3220 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06189",
       "municipioNombre": "Coronel Dorrego",
       "value": 2493,
-      "label": "2493 hechos/100k"
+      "label": "2493 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06196",
       "municipioNombre": "Coronel Pringles",
       "value": 3817,
-      "label": "3817 hechos/100k"
+      "label": "3817 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06203",
       "municipioNombre": "Coronel Suárez",
       "value": 1897,
-      "label": "1897 hechos/100k"
+      "label": "1897 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06210",
       "municipioNombre": "Chacabuco",
       "value": 3106,
-      "label": "3106 hechos/100k"
+      "label": "3106 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06217",
       "municipioNombre": "Chascomús",
       "value": 4775,
-      "label": "4775 hechos/100k"
+      "label": "4775 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06224",
       "municipioNombre": "Chivilcoy",
       "value": 2395,
-      "label": "2395 hechos/100k"
+      "label": "2395 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06231",
       "municipioNombre": "Daireaux",
       "value": 1691,
-      "label": "1691 hechos/100k"
+      "label": "1691 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06238",
       "municipioNombre": "Dolores",
       "value": 9519,
-      "label": "9519 hechos/100k"
+      "label": "9519 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06245",
       "municipioNombre": "Ensenada",
       "value": 3351,
-      "label": "3351 hechos/100k"
+      "label": "3351 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06252",
       "municipioNombre": "Escobar",
       "value": 2793,
-      "label": "2793 hechos/100k"
+      "label": "2793 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06260",
       "municipioNombre": "Esteban Echeverría",
       "value": 2935,
-      "label": "2935 hechos/100k"
+      "label": "2935 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06266",
       "municipioNombre": "Exaltación de la Cruz",
       "value": 3276,
-      "label": "3276 hechos/100k"
+      "label": "3276 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06270",
       "municipioNombre": "Ezeiza",
       "value": 2909,
-      "label": "2909 hechos/100k"
+      "label": "2909 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06274",
       "municipioNombre": "Florencio Varela",
       "value": 2252,
-      "label": "2252 hechos/100k"
+      "label": "2252 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06277",
       "municipioNombre": "Florentino Ameghino",
       "value": 3627,
-      "label": "3627 hechos/100k"
+      "label": "3627 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06280",
       "municipioNombre": "General Alvarado",
       "value": 6185,
-      "label": "6185 hechos/100k"
+      "label": "6185 hechos/100k (turístico — ajustada ≈4758)",
+      "touristic": true
     },
     {
       "municipioId": "06287",
       "municipioNombre": "General Alvear",
       "value": 10236,
-      "label": "10236 hechos/100k"
+      "label": "10236 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06294",
       "municipioNombre": "General Arenales",
       "value": 1680,
-      "label": "1680 hechos/100k"
+      "label": "1680 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06301",
       "municipioNombre": "General Belgrano",
       "value": 3168,
-      "label": "3168 hechos/100k"
+      "label": "3168 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06308",
       "municipioNombre": "General Guido",
       "value": 19175,
-      "label": "19175 hechos/100k"
+      "label": "19175 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06315",
       "municipioNombre": "General Juan Madariaga",
       "value": 4335,
-      "label": "4335 hechos/100k"
+      "label": "4335 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06322",
       "municipioNombre": "General La Madrid",
       "value": 4171,
-      "label": "4171 hechos/100k"
+      "label": "4171 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06329",
       "municipioNombre": "General Las Heras",
       "value": 2231,
-      "label": "2231 hechos/100k"
+      "label": "2231 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06336",
       "municipioNombre": "General Lavalle",
       "value": 19604,
-      "label": "19604 hechos/100k"
+      "label": "19604 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06343",
       "municipioNombre": "General Paz",
       "value": 1677,
-      "label": "1677 hechos/100k"
+      "label": "1677 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06351",
       "municipioNombre": "General Pinto",
       "value": 4593,
-      "label": "4593 hechos/100k"
+      "label": "4593 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06357",
       "municipioNombre": "General Pueyrredón",
       "value": 3769,
-      "label": "3769 hechos/100k"
+      "label": "3769 hechos/100k (turístico — ajustada ≈3141)",
+      "touristic": true
     },
     {
       "municipioId": "06364",
       "municipioNombre": "General Rodríguez",
       "value": 3727,
-      "label": "3727 hechos/100k"
+      "label": "3727 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06371",
       "municipioNombre": "General San Martín",
       "value": 3627,
-      "label": "3627 hechos/100k"
+      "label": "3627 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06385",
       "municipioNombre": "General Viamonte",
       "value": 2243,
-      "label": "2243 hechos/100k"
+      "label": "2243 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06392",
       "municipioNombre": "General Villegas",
       "value": 2300,
-      "label": "2300 hechos/100k"
+      "label": "2300 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06399",
       "municipioNombre": "Guaminí",
       "value": 2238,
-      "label": "2238 hechos/100k"
+      "label": "2238 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06406",
       "municipioNombre": "Hipólito Yrigoyen",
       "value": 1765,
-      "label": "1765 hechos/100k"
+      "label": "1765 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06408",
       "municipioNombre": "Hurlingham",
       "value": 2458,
-      "label": "2458 hechos/100k"
+      "label": "2458 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06410",
       "municipioNombre": "Ituzaingó",
       "value": 3138,
-      "label": "3138 hechos/100k"
+      "label": "3138 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06412",
       "municipioNombre": "José C. Paz",
       "value": 3148,
-      "label": "3148 hechos/100k"
+      "label": "3148 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06413",
       "municipioNombre": "Junín",
       "value": 5997,
-      "label": "5997 hechos/100k"
+      "label": "5997 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06420",
       "municipioNombre": "La Costa",
       "value": 7384,
-      "label": "7384 hechos/100k"
+      "label": "7384 hechos/100k (turístico — ajustada ≈3692)",
+      "touristic": true
     },
     {
       "municipioId": "06427",
       "municipioNombre": "La Matanza",
       "value": 2064,
-      "label": "2064 hechos/100k"
+      "label": "2064 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06434",
       "municipioNombre": "Lanús",
       "value": 3496,
-      "label": "3496 hechos/100k"
+      "label": "3496 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06441",
       "municipioNombre": "La Plata",
       "value": 3143,
-      "label": "3143 hechos/100k"
+      "label": "3143 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06448",
       "municipioNombre": "Laprida",
       "value": 3254,
-      "label": "3254 hechos/100k"
+      "label": "3254 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06455",
       "municipioNombre": "Las Flores",
       "value": 3565,
-      "label": "3565 hechos/100k"
+      "label": "3565 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06462",
       "municipioNombre": "Leandro N. Alem",
       "value": 2389,
-      "label": "2389 hechos/100k"
+      "label": "2389 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06466",
       "municipioNombre": "Lezama",
       "value": 6440,
-      "label": "6440 hechos/100k"
+      "label": "6440 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06469",
       "municipioNombre": "Lincoln",
       "value": 2684,
-      "label": "2684 hechos/100k"
+      "label": "2684 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06476",
       "municipioNombre": "Lobería",
       "value": 4135,
-      "label": "4135 hechos/100k"
+      "label": "4135 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06483",
       "municipioNombre": "Lobos",
       "value": 3046,
-      "label": "3046 hechos/100k"
+      "label": "3046 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06490",
       "municipioNombre": "Lomas de Zamora",
       "value": 2764,
-      "label": "2764 hechos/100k"
+      "label": "2764 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06497",
       "municipioNombre": "Luján",
       "value": 3884,
-      "label": "3884 hechos/100k"
+      "label": "3884 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06505",
       "municipioNombre": "Magdalena",
       "value": 3145,
-      "label": "3145 hechos/100k"
+      "label": "3145 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06511",
       "municipioNombre": "Maipú",
       "value": 10384,
-      "label": "10384 hechos/100k"
+      "label": "10384 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06515",
       "municipioNombre": "Malvinas Argentinas",
       "value": 3114,
-      "label": "3114 hechos/100k"
+      "label": "3114 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06518",
       "municipioNombre": "Mar Chiquita",
       "value": 6315,
-      "label": "6315 hechos/100k"
+      "label": "6315 hechos/100k (turístico — ajustada ≈4858)",
+      "touristic": true
     },
     {
       "municipioId": "06525",
       "municipioNombre": "Marcos Paz",
       "value": 3166,
-      "label": "3166 hechos/100k"
+      "label": "3166 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06532",
       "municipioNombre": "Mercedes",
       "value": 4126,
-      "label": "4126 hechos/100k"
+      "label": "4126 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06539",
       "municipioNombre": "Merlo",
       "value": 2495,
-      "label": "2495 hechos/100k"
+      "label": "2495 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06547",
       "municipioNombre": "Monte",
       "value": 3028,
-      "label": "3028 hechos/100k"
+      "label": "3028 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06553",
       "municipioNombre": "Monte Hermoso",
       "value": 6980,
-      "label": "6980 hechos/100k"
+      "label": "6980 hechos/100k (turístico — ajustada ≈3173)",
+      "touristic": true
     },
     {
       "municipioId": "06560",
       "municipioNombre": "Moreno",
       "value": 2634,
-      "label": "2634 hechos/100k"
+      "label": "2634 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06568",
       "municipioNombre": "Morón",
       "value": 4230,
-      "label": "4230 hechos/100k"
+      "label": "4230 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06574",
       "municipioNombre": "Navarro",
       "value": 3472,
-      "label": "3472 hechos/100k"
+      "label": "3472 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06581",
       "municipioNombre": "Necochea",
       "value": 4280,
-      "label": "4280 hechos/100k"
+      "label": "4280 hechos/100k (turístico — ajustada ≈3566)",
+      "touristic": true
     },
     {
       "municipioId": "06588",
       "municipioNombre": "9 de Julio",
       "value": 2949,
-      "label": "2949 hechos/100k"
+      "label": "2949 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06595",
       "municipioNombre": "Olavarría",
       "value": 3135,
-      "label": "3135 hechos/100k"
+      "label": "3135 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06602",
       "municipioNombre": "Patagones",
       "value": 3821,
-      "label": "3821 hechos/100k"
+      "label": "3821 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06609",
       "municipioNombre": "Pehuajó",
       "value": 3633,
-      "label": "3633 hechos/100k"
+      "label": "3633 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06616",
       "municipioNombre": "Pellegrini",
       "value": 2601,
-      "label": "2601 hechos/100k"
+      "label": "2601 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06623",
       "municipioNombre": "Pergamino",
       "value": 4796,
-      "label": "4796 hechos/100k"
+      "label": "4796 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06630",
       "municipioNombre": "Pila",
       "value": 3633,
-      "label": "3633 hechos/100k"
+      "label": "3633 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06638",
       "municipioNombre": "Pilar",
       "value": 2607,
-      "label": "2607 hechos/100k"
+      "label": "2607 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06644",
       "municipioNombre": "Pinamar",
       "value": 10961,
-      "label": "10961 hechos/100k"
+      "label": "10961 hechos/100k (turístico — ajustada ≈6089)",
+      "touristic": true
     },
     {
       "municipioId": "06648",
       "municipioNombre": "Presidente Perón",
       "value": 2820,
-      "label": "2820 hechos/100k"
+      "label": "2820 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06651",
       "municipioNombre": "Puán",
       "value": 2335,
-      "label": "2335 hechos/100k"
+      "label": "2335 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06655",
       "municipioNombre": "Punta Indio",
       "value": 2704,
-      "label": "2704 hechos/100k"
+      "label": "2704 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06665",
       "municipioNombre": "Ramallo",
       "value": 5914,
-      "label": "5914 hechos/100k"
+      "label": "5914 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06672",
       "municipioNombre": "Rauch",
       "value": 2707,
-      "label": "2707 hechos/100k"
+      "label": "2707 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06679",
       "municipioNombre": "Rivadavia",
       "value": 3214,
-      "label": "3214 hechos/100k"
+      "label": "3214 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06686",
       "municipioNombre": "Rojas",
       "value": 4259,
-      "label": "4259 hechos/100k"
+      "label": "4259 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06693",
       "municipioNombre": "Roque Pérez",
       "value": 2085,
-      "label": "2085 hechos/100k"
+      "label": "2085 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06700",
       "municipioNombre": "Saavedra",
       "value": 2480,
-      "label": "2480 hechos/100k"
+      "label": "2480 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06707",
       "municipioNombre": "Saladillo",
       "value": 2779,
-      "label": "2779 hechos/100k"
+      "label": "2779 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06714",
       "municipioNombre": "Salto",
       "value": 2157,
-      "label": "2157 hechos/100k"
+      "label": "2157 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06721",
       "municipioNombre": "Salliqueló",
       "value": 1639,
-      "label": "1639 hechos/100k"
+      "label": "1639 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06728",
       "municipioNombre": "San Andrés de Giles",
       "value": 2666,
-      "label": "2666 hechos/100k"
+      "label": "2666 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06735",
       "municipioNombre": "San Antonio de Areco",
       "value": 3294,
-      "label": "3294 hechos/100k"
+      "label": "3294 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06742",
       "municipioNombre": "San Cayetano",
       "value": 2131,
-      "label": "2131 hechos/100k"
+      "label": "2131 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06749",
       "municipioNombre": "San Fernando",
       "value": 2101,
-      "label": "2101 hechos/100k"
+      "label": "2101 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06756",
       "municipioNombre": "San Isidro",
       "value": 2937,
-      "label": "2937 hechos/100k"
+      "label": "2937 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06760",
       "municipioNombre": "San Miguel",
       "value": 2694,
-      "label": "2694 hechos/100k"
+      "label": "2694 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06763",
       "municipioNombre": "San Nicolás",
       "value": 4492,
-      "label": "4492 hechos/100k"
+      "label": "4492 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06770",
       "municipioNombre": "San Pedro",
       "value": 6867,
-      "label": "6867 hechos/100k"
+      "label": "6867 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06778",
       "municipioNombre": "San Vicente",
       "value": 3786,
-      "label": "3786 hechos/100k"
+      "label": "3786 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06784",
       "municipioNombre": "Suipacha",
       "value": 2740,
-      "label": "2740 hechos/100k"
+      "label": "2740 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06791",
       "municipioNombre": "Tandil",
       "value": 2828,
-      "label": "2828 hechos/100k"
+      "label": "2828 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06798",
       "municipioNombre": "Tapalqué",
       "value": 2095,
-      "label": "2095 hechos/100k"
+      "label": "2095 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06805",
       "municipioNombre": "Tigre",
       "value": 2550,
-      "label": "2550 hechos/100k"
+      "label": "2550 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06812",
       "municipioNombre": "Tordillo",
       "value": 52648,
-      "label": "52648 hechos/100k"
+      "label": "52648 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06819",
       "municipioNombre": "Tornquist",
       "value": 2601,
-      "label": "2601 hechos/100k"
+      "label": "2601 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06826",
       "municipioNombre": "Trenque Lauquen",
       "value": 3393,
-      "label": "3393 hechos/100k"
+      "label": "3393 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06833",
       "municipioNombre": "Tres Arroyos",
       "value": 4438,
-      "label": "4438 hechos/100k"
+      "label": "4438 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06840",
       "municipioNombre": "Tres de Febrero",
       "value": 3294,
-      "label": "3294 hechos/100k"
+      "label": "3294 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06847",
       "municipioNombre": "Tres Lomas",
       "value": 2365,
-      "label": "2365 hechos/100k"
+      "label": "2365 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06854",
       "municipioNombre": "25 de Mayo",
       "value": 2190,
-      "label": "2190 hechos/100k"
+      "label": "2190 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06861",
       "municipioNombre": "Vicente López",
       "value": 2372,
-      "label": "2372 hechos/100k"
+      "label": "2372 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06868",
       "municipioNombre": "Villa Gesell",
       "value": 8203,
-      "label": "8203 hechos/100k"
+      "label": "8203 hechos/100k (turístico — ajustada ≈4101)",
+      "touristic": true
     },
     {
       "municipioId": "06875",
       "municipioNombre": "Villarino",
       "value": 2508,
-      "label": "2508 hechos/100k"
+      "label": "2508 hechos/100k",
+      "touristic": false
     },
     {
       "municipioId": "06882",
       "municipioNombre": "Zárate",
       "value": 2659,
-      "label": "2659 hechos/100k"
+      "label": "2659 hechos/100k",
+      "touristic": false
     }
   ]
 }

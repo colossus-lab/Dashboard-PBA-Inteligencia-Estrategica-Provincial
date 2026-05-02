@@ -331,3 +331,28 @@ Los municipios del tercer cordón (Marcos Paz +49,1%, Gral. Rodríguez +44,6%, E
 
 ---
 
+## 7. Prioridades para la Gobernación
+
+### Urgencia fiscal (acción inmediata)
+
+1. **Diversificación tributaria**: La dependencia del 76,2% en Ingresos Brutos es insostenible. Evaluar expansión de Inmobiliario (edificado + rural), que está subexplotado.
+2. **Actualización de fórmulas de coparticipación**: Los municipios del tercer cordón crecen al doble que los del interior. Las fórmulas deben reflejar demografía actual.
+3. **Monitoreo de Sellos**: El crecimiento del 1.942% en 4 años requiere vigilancia — puede indicar burbuja inmobiliaria o formalización acelerada.
+
+### Política productiva (mediano plazo)
+
+4. **Revitalización industrial**: El PBG industrial creció apenas +29,6% real en 19 años. Necesita incentivos sectoriales focalizados.
+5. **Potenciar el complejo automotriz-exportador**: El material de transporte terrestre ya es el principal rubro de exportación. Ampliar incentivos a Zárate-Pacheco-Escobar.
+6. **Agroindustria con valor agregado**: Las MOA (31,1% de exportaciones) deben crecer más que los primarios (21,8%). Inversión en procesamiento de oleaginosas y proteínas.
+
+### Infraestructura y territorio
+
+7. **Acompañar el boom del tercer cordón**: Marcos Paz, Gral. Rodríguez, Cañuelas, Ezeiza, San Vicente muestran los mayores crecimientos de transferencias. Necesitan infraestructura que acompañe la urbanización.
+8. **Educación**: El salto de +267% en transferencias a Consejos Escolares en 2024 sugiere deuda infraestructural acumulada. Verificar ejecución real y estado de obras.
+
+---
+
+---
+
+*Datos procesados de fuentes oficiales del Ministerio de Economía de la Provincia de Buenos Aires, ARBA, e INDEC. Los valores nominales deben interpretarse en contexto inflacionario. El PBG a precios constantes de 2004 es la única serie que permite comparación real intertemporal. Las transferencias están expresadas en pesos corrientes de cada año.*
+

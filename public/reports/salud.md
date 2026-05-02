@@ -280,3 +280,30 @@ Cruzando todos los indicadores, se identifica un **patrón territorial claro**:
 
 ---
 
+## 7. Prioridades para la Gobernación
+
+### Urgencia máxima (acción inmediata)
+
+1. **Investigar el repunte de TMI en 2024**: De 7,6‰ a 8,4‰. Convocar al Ministerio de Salud Provincial para auditoría perinatal.
+2. **José C. Paz**: TMI de 13,4‰ con 47 muertes infantiles. Requiere intervención directa en su red de maternidades.
+3. **Repunte de mortalidad materna**: De 22,8 a 39,4/100K NV. ¿Qué pasó en 2024 que revirtió la tendencia?
+4. **Quilmes + Malvinas Argentinas**: Combinación de alto bajo peso al nacer (9,2–9,6%) y alto volumen. Focalizar programa de nutrición materna.
+
+### Políticas estructurales (mediano plazo)
+
+5. **Régimen de incentivos por Región Sanitaria**: Las Regiones VI y V concentran el 47% de la mortalidad infantil. Recursos adicionales condicionados a metas de reducción.
+6. **Control prenatal hipertensivo**: Los trastornos hipertensivos fueron la 2da causa de muerte materna en 2024. Protocolo obligatorio de detección y tratamiento en CAPS.
+7. **Bajo peso al nacer**: 20 años estancado en 7,4%. Programa provincial de suplementación nutricional para embarazadas de riesgo (hierro, ácido fólico, proteína).
+8. **Monitorear impacto de la Ley IVE**: La caída de muertes por aborto (de ~15/año a 4 en 2024) puede ser uno de los logros sanitarios más significativos. Reforzar acceso en municipios del conurbano.
+
+### Demografía y prospectiva
+
+9. **Crisis de natalidad**: -50% en 10 años. No es un problema de salud pública aislado, sino un fenómeno socioeconómico (costo de crianza, postergación de la maternidad, incertidumbre). Requiere abordaje interministerial (Economía, Trabajo, Desarrollo Social).
+10. **Planificación de infraestructura**: Con 147K nacidos vs. 294K hace 10 años, la capacidad ociosa de maternidades en municipios pequeños puede reconvertirse en centros de salud geriátrica o de cuidados crónicos.
+
+---
+
+---
+
+*Datos procesados de la Dirección de Información Sistematizada del Ministerio de Salud de la Provincia de Buenos Aires. Todos los registros corresponden exclusivamente a la Provincia de Buenos Aires. La TMI se calcula como defunciones menores de 1 año / nacidos vivos × 1000. La RMM se calcula como defunciones maternas / nacidos vivos × 100.000.*
+

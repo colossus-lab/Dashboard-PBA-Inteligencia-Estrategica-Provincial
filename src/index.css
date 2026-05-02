@@ -2696,3 +2696,720 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0.75rem 1rem;
   }
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   Conurbano — mapas interactivos (Educación + Seguridad)
+   ═══════════════════════════════════════════════════════════════ */
+
+.conu-tab-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+@media (min-width: 1024px) {
+  .conu-tab-grid { grid-template-columns: 1fr 360px; gap: 20px; }
+}
+
+.conu-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-lg, 12px);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 16px;
+}
+
+.conu-panel {
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-md, 10px);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 12px;
+}
+
+.conu-eyebrow {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+}
+
+.conu-map-wrap {
+  position: relative;
+  height: min(70vh, 620px);
+  border-radius: var(--radius-lg, 12px);
+  overflow: hidden;
+  border: 1px solid var(--border-glass);
+  background: var(--bg-secondary);
+}
+
+/* KPIs */
+.conu-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+@media (min-width: 768px) {
+  .conu-kpi-grid { grid-template-columns: repeat(4, 1fr); }
+}
+.conu-kpi {
+  border: 1px solid var(--border-glass);
+  background: var(--bg-card);
+  border-radius: var(--radius-md, 10px);
+  padding: 10px 14px;
+}
+.conu-kpi-value {
+  margin-top: 4px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.1;
+  color: var(--text-primary);
+}
+.conu-kpi-sub {
+  margin-top: 4px;
+  font-size: 10.5px;
+  color: var(--text-tertiary);
+}
+
+/* Pills (metric selector) */
+.conu-pill {
+  border-radius: 6px;
+  border: 1px solid var(--border-glass);
+  background: transparent;
+  padding: 4px 10px;
+  font-size: 12px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 150ms ease;
+}
+.conu-pill:hover { border-color: var(--accent-cyan); color: var(--text-primary); }
+.conu-pill[data-active="true"] {
+  background: var(--accent-cyan);
+  border-color: var(--accent-cyan);
+  color: var(--bg-primary);
+  font-weight: 600;
+}
+
+/* Selects */
+.conu-select {
+  border-radius: 6px;
+  border: 1px solid var(--border-glass);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  padding: 5px 8px;
+  font-size: 12px;
+  font-family: inherit;
+}
+.conu-select:focus { outline: 1px solid var(--accent-cyan); }
+
+/* Ghost button */
+.conu-btn-ghost {
+  border-radius: 6px;
+  border: 1px solid var(--border-glass);
+  background: transparent;
+  padding: 5px 10px;
+  font-size: 11.5px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 150ms ease;
+}
+.conu-btn-ghost:hover { background: var(--bg-card); color: var(--text-primary); }
+
+/* Chips (niveles) */
+.conu-chip {
+  border-radius: 6px;
+  border: 1px solid var(--border-glass);
+  background: var(--bg-secondary);
+  padding: 2px 6px;
+  font-size: 10.5px;
+  color: var(--text-tertiary);
+}
+
+/* Alert (confianza) */
+.conu-alert {
+  margin-top: 16px;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 12px;
+  border: 1px solid;
+}
+.conu-alert[data-severity="medium"] {
+  border-color: rgba(245, 158, 11, 0.4);
+  background: rgba(245, 158, 11, 0.08);
+  color: #fbbf24;
+}
+.conu-alert[data-severity="high"] {
+  border-color: rgba(239, 68, 68, 0.4);
+  background: rgba(239, 68, 68, 0.08);
+  color: #fca5a5;
+}
+[data-theme="light"] .conu-alert[data-severity="medium"] { color: #92400e; }
+[data-theme="light"] .conu-alert[data-severity="high"] { color: #7f1d1d; }
+
+/* Tooltip flotante sobre el mapa */
+.conu-tooltip {
+  position: absolute;
+  z-index: 10;
+  width: 280px;
+  border-radius: 8px;
+  border: 1px solid var(--border-glass);
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 12px;
+  font-size: 12px;
+  pointer-events: none;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  color: var(--text-secondary);
+}
+.conu-tooltip-title {
+  margin-top: 2px;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--text-primary);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.conu-tooltip-sub {
+  margin-top: 4px;
+  font-size: 11px;
+  color: var(--text-tertiary);
+}
+.conu-tooltip-big {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--text-primary);
+}
+.conu-tooltip-grid {
+  margin-top: 8px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2px 12px;
+  border-top: 1px solid var(--border-glass);
+  padding-top: 8px;
+  font-size: 11px;
+  color: var(--text-tertiary);
+}
+
+/* Leyenda flotante */
+.conu-legend {
+  position: absolute;
+  z-index: 5;
+  border-radius: 8px;
+  border: 1px solid var(--border-glass);
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 10px 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+.conu-legend-title {
+  margin-bottom: 8px;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.conu-legend-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+.conu-legend-swatch {
+  display: inline-block;
+  height: 12px;
+  width: 24px;
+  border-radius: 2px;
+}
+
+/* Ranking row */
+.conu-rank-row {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 8px 16px;
+  text-align: left;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  transition: background 120ms ease;
+  font-family: inherit;
+}
+.conu-rank-row:hover { background: var(--bg-card); }
+.conu-rank-row[data-selected="true"] {
+  background: rgba(0, 212, 255, 0.08);
+  box-shadow: inset 2px 0 0 var(--accent-cyan);
+}
+
+.conu-decile-badge {
+  margin-top: 2px;
+  display: inline-block;
+  border-radius: 3px;
+  padding: 1px 5px;
+  font-size: 9.5px;
+  font-weight: 600;
+}
+.conu-decile-badge[data-tier="green"]  { background: rgba(22, 163, 74, 0.18); color: #4ade80; }
+.conu-decile-badge[data-tier="lime"]   { background: rgba(132, 204, 22, 0.18); color: #a3e635; }
+.conu-decile-badge[data-tier="amber"]  { background: rgba(245, 158, 11, 0.20); color: #fbbf24; }
+.conu-decile-badge[data-tier="orange"] { background: rgba(249, 115, 22, 0.20); color: #fb923c; }
+.conu-decile-badge[data-tier="red"]    { background: rgba(220, 38, 38, 0.20); color: #fca5a5; }
+
+/* MapLibre overrides: integrar attribution con el theme */
+.maplibregl-ctrl-attrib,
+.maplibregl-ctrl-attrib.maplibregl-compact {
+  background: rgba(10, 15, 28, 0.7) !important;
+  color: var(--text-tertiary) !important;
+  font-size: 10px;
+}
+.maplibregl-ctrl-attrib a { color: var(--accent-cyan) !important; }
+[data-theme="light"] .maplibregl-ctrl-attrib,
+[data-theme="light"] .maplibregl-ctrl-attrib.maplibregl-compact {
+  background: rgba(255, 255, 255, 0.85) !important;
+}
+.maplibregl-ctrl-group {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border-glass) !important;
+}
+.maplibregl-ctrl-group button { color: var(--text-secondary) !important; }
+
+/* ─── Conurbano shell tabs (Mapa | Serie EPH | etc) ─── */
+.conu-shell-tabs {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 6px;
+  border-bottom: 1px solid var(--border-glass);
+}
+.conu-shell-tab {
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-tertiary);
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: all 150ms ease;
+  font-family: inherit;
+  margin-bottom: -1px;
+}
+.conu-shell-tab:hover { color: var(--text-secondary); }
+.conu-shell-tab[data-active="true"] {
+  color: var(--accent-cyan);
+  border-bottom-color: var(--accent-cyan);
+}
+
+/* ─── Vista 3D · paneles flotantes ─── */
+.conu-3d-legend {
+  pointer-events: none;
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  width: 300px;
+  border-radius: 8px;
+  border: 1px solid rgba(6, 78, 59, 0.5);
+  background: rgba(10, 18, 32, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  z-index: 5;
+}
+
+.conu-3d-tooltip {
+  pointer-events: none;
+  position: absolute;
+  z-index: 10;
+  width: 280px;
+  border-radius: 8px;
+  border: 1px solid rgba(6, 78, 59, 0.5);
+  background: rgba(10, 18, 32, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 12px;
+  font-size: 12px;
+  color: rgba(110, 231, 183, 0.85);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+.conu-3d-eyebrow {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #34d399;
+}
+.conu-3d-title {
+  margin-top: 2px;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #fff;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.conu-3d-sub {
+  margin-top: 4px;
+  font-size: 11px;
+  color: rgba(110, 231, 183, 0.85);
+}
+.conu-3d-big {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1;
+  color: #fff;
+}
+.conu-3d-grid {
+  margin-top: 8px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2px 12px;
+  border-top: 1px solid rgba(6, 78, 59, 0.4);
+  padding-top: 8px;
+  font-size: 11px;
+  color: rgba(110, 231, 183, 0.85);
+}
+
+.conu-3d-reset {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  border-radius: 6px;
+  border: 1px solid rgba(6, 78, 59, 0.5);
+  background: rgba(10, 18, 32, 0.92);
+  padding: 6px 12px;
+  font-size: 11px;
+  font-weight: 500;
+  color: #6ee7b7;
+  cursor: pointer;
+  transition: all 150ms ease;
+  font-family: inherit;
+  z-index: 5;
+}
+.conu-3d-reset:hover { background: rgba(6, 95, 70, 0.6); color: #fff; }
+
+.conu-3d-help {
+  pointer-events: none;
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  max-width: 440px;
+  border-radius: 6px;
+  border: 1px solid rgba(6, 78, 59, 0.5);
+  background: rgba(10, 18, 32, 0.92);
+  padding: 6px 12px;
+  font-size: 10.5px;
+  line-height: 1.5;
+  color: rgba(110, 231, 183, 0.8);
+  z-index: 5;
+}
+.conu-3d-help strong { color: #a7f3d0; font-weight: 600; }
+
+/* ─── Conurbano · Seguridad (controles + comparador) ─── */
+.conu-controls-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 768px) {
+  .conu-controls-grid {
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  }
+}
+
+.conu-toggle-group {
+  display: inline-flex;
+  gap: 2px;
+  padding: 2px;
+  border: 1px solid var(--border-glass);
+  border-radius: 8px;
+  background: var(--bg-secondary);
+  overflow: hidden;
+}
+
+/* Chip botón seleccionable (lista "En comparación") */
+.conu-chip-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 999px;
+  border: 1px solid var(--border-glass);
+  background: var(--bg-card);
+  padding: 4px 12px;
+  font-size: 12.5px;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 150ms ease;
+  font-family: inherit;
+}
+.conu-chip-btn:hover { border-color: var(--accent-cyan); }
+
+/* Grid de tarjetas de partidos */
+.conu-partidos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+@media (min-width: 640px) { .conu-partidos-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 768px) { .conu-partidos-grid { grid-template-columns: repeat(4, 1fr); } }
+@media (min-width: 1024px) { .conu-partidos-grid { grid-template-columns: repeat(6, 1fr); } }
+
+.conu-partido-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border-glass);
+  background: var(--bg-secondary);
+  text-align: left;
+  cursor: pointer;
+  transition: all 150ms ease;
+  font-family: inherit;
+}
+.conu-partido-card:hover {
+  border-color: var(--accent-cyan);
+  background: var(--bg-card);
+}
+.conu-partido-card[data-selected="true"] {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Tabla del comparador */
+.conu-comparador-table {
+  width: 100%;
+  font-size: 13px;
+  border-collapse: collapse;
+}
+.conu-comparador-table thead th {
+  padding: 10px 12px;
+  background: var(--bg-secondary);
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  border-bottom: 1px solid var(--border-glass);
+}
+.conu-comparador-table thead th:first-child { padding-left: 20px; }
+.conu-comparador-table thead th:last-child { padding-right: 20px; }
+.conu-comparador-table tbody td {
+  padding: 10px 12px;
+  border-top: 1px solid var(--border-glass);
+  color: var(--text-secondary);
+}
+.conu-comparador-table tbody td:first-child { padding-left: 20px; color: var(--text-primary); }
+.conu-comparador-table tbody td:last-child { padding-right: 20px; }
+.conu-comparador-table tbody tr:hover { background: var(--bg-card); }
+
+/* ─── Scrollytelling ─── */
+.conu-scrolly-grid {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 1024px) {
+  .conu-scrolly-grid { grid-template-columns: minmax(0, 45%) minmax(0, 55%); }
+}
+.conu-scrolly-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 55vh;
+  padding-top: 18vh;
+  padding-bottom: 35vh;
+}
+.conu-scrolly-mobile-viz {
+  margin-top: 24px;
+  height: 380px;
+  border-radius: 12px;
+  border: 1px solid var(--border-glass);
+  background: var(--bg-card);
+  padding: 8px;
+}
+@media (min-width: 1024px) {
+  .conu-scrolly-mobile-viz { display: none; }
+}
+.conu-scrolly-sticky-wrap { display: none; }
+@media (min-width: 1024px) {
+  .conu-scrolly-sticky-wrap { display: block; }
+}
+.conu-scrolly-sticky {
+  position: sticky;
+  top: 12vh;
+  height: 76vh;
+  border-radius: 12px;
+  border: 1px solid var(--border-glass);
+  background: var(--bg-card);
+  padding: 16px;
+}
+
+/* ─── Panorama ─── */
+.conu-insights-grid {
+  display: grid;
+  gap: 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border-glass);
+  background: var(--bg-secondary);
+  padding: 20px;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 768px) {
+  .conu-insights-grid { grid-template-columns: repeat(3, 1fr); }
+}
+.conu-panorama-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 1024px) {
+  .conu-panorama-grid { grid-template-columns: minmax(0, 1fr) 340px; }
+}
+.conu-radiografia-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 1024px) {
+  .conu-radiografia-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+}
+
+/* ─── Intro carousel ─── */
+.conu-intro-carousel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid var(--border-glass);
+  background: var(--bg-card);
+  min-height: 460px;
+}
+.conu-intro-skip {
+  position: absolute;
+  right: 20px;
+  top: 16px;
+  z-index: 20;
+  font-size: 11.5px;
+  color: var(--text-tertiary);
+  background: transparent;
+  border: 0;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  cursor: pointer;
+  font-family: inherit;
+}
+.conu-intro-skip:hover { color: var(--text-primary); }
+.conu-intro-counter {
+  position: absolute;
+  left: 20px;
+  top: 16px;
+  z-index: 20;
+  font-size: 11px;
+  color: var(--text-tertiary);
+  font-variant-numeric: tabular-nums;
+}
+.conu-intro-stage {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px 56px;
+}
+@media (min-width: 768px) {
+  .conu-intro-stage { padding-left: 40px; padding-right: 40px; }
+}
+.conu-intro-content {
+  display: flex;
+  width: 100%;
+  max-width: 880px;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+.conu-intro-title {
+  margin: 0;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+}
+@media (min-width: 768px) {
+  .conu-intro-title { font-size: 30px; }
+}
+.conu-intro-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 20;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 999px;
+  border: 1px solid var(--border-glass);
+  background: var(--bg-card);
+  padding: 8px;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 150ms ease;
+  font-family: inherit;
+}
+.conu-intro-arrow:hover { background: var(--bg-secondary); border-color: var(--accent-cyan); }
+.conu-intro-cta {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  z-index: 20;
+  transform: translateX(-50%);
+  border-radius: 999px;
+  background: var(--accent-cyan);
+  color: var(--bg-primary);
+  border: 0;
+  padding: 12px 24px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 150ms ease;
+  font-family: inherit;
+  box-shadow: 0 8px 24px rgba(0, 212, 255, 0.3);
+}
+.conu-intro-cta:hover { background: var(--text-primary); color: var(--bg-primary); }
+.conu-intro-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  z-index: 20;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+}
+.conu-intro-dot {
+  height: 6px;
+  width: 6px;
+  border-radius: 999px;
+  border: 0;
+  background: var(--border-glass);
+  cursor: pointer;
+  transition: all 200ms ease;
+}
+.conu-intro-dot[data-active="true"] {
+  width: 24px;
+  background: var(--accent-cyan);
+}

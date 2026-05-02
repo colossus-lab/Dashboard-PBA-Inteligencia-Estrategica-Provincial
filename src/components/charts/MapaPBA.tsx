@@ -177,9 +177,12 @@ export function MapaPBA({ mapData, title, height = 500 }: MapaPBAProps) {
             ? getValueColor(item.value, minVal, maxVal, isDark)
             : isDark ? 'rgba(255,255,255,0.04)' : 'rgba(0,0,0,0.04)';
 
+          const isTouristic = item?.touristic === true;
           const strokeColor = isHovered
             ? '#ffffff'
-            : isDark ? 'rgba(255,255,255,0.15)' : 'rgba(0,0,0,0.15)';
+            : isTouristic
+              ? (isDark ? '#38bdf8' : '#0284c7')
+              : isDark ? 'rgba(255,255,255,0.15)' : 'rgba(0,0,0,0.15)';
 
           return (
             <path
@@ -187,7 +190,8 @@ export function MapaPBA({ mapData, title, height = 500 }: MapaPBAProps) {
               d={pathGenerator(feat as GeoPermissibleObjects) || ''}
               fill={fillColor}
               stroke={strokeColor}
-              strokeWidth={isHovered ? 2.5 : 0.5}
+              strokeWidth={isHovered ? 2.5 : isTouristic ? 1.5 : 0.5}
+              strokeDasharray={isTouristic && !isHovered ? '3,2' : undefined}
               style={{
                 cursor: 'pointer',
                 transition: 'fill 0.2s ease, stroke-width 0.15s ease',

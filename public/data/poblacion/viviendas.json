@@ -11,15 +11,15 @@
     {
       "id": "viviendas-total",
       "label": "Total viviendas PBA",
-      "value": 6738041,
-      "formatted": "6.738.041",
+      "value": 6749094,
+      "formatted": "6.749.094",
       "unit": "viviendas"
     },
     {
       "id": "ocupadas",
       "label": "Viviendas ocupadas",
-      "value": 5963078,
-      "formatted": "5.963.078",
+      "value": 5970702,
+      "formatted": "5.970.702",
       "unit": "88,5%"
     },
     {

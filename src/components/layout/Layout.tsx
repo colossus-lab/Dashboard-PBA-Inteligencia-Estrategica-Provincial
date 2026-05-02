@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ThemeToggle } from '../ui/ThemeToggle';
 import { useStore } from '../../store/useStore';
-import { REPORTS, getPoblacionReports, getSectorialReports } from '../../data/reportRegistry';
+import { REPORTS, getPoblacionReports, getSectorialReports, getConurbanoReports } from '../../data/reportRegistry';
 import { useScrollProgress } from '../../hooks/useIntersectionObserver';
 
 export function Layout({ children }: { children: React.ReactNode }) {
@@ -119,6 +119,7 @@ function Sidebar() {
   const { setSidebarOpen } = useStore();
   const poblacion = getPoblacionReports();
   const sectoriales = getSectorialReports();
+  const conurbano = getConurbanoReports();
 
   return (
     <>
@@ -174,6 +175,24 @@ function Sidebar() {
             Sectorial
           </h3>
           {sectoriales.map(r => (
+            <Link
+              key={r.id}
+              to={`/${r.slug}`}
+              onClick={() => setSidebarOpen(false)}
+              className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm no-underline mb-1 transition-colors hover:opacity-90"
+              style={{ color: 'var(--text-secondary)' }}
+            >
+              <span>{r.icon}</span>
+              <span>{r.shortTitle}</span>
+            </Link>
+          ))}
+
+          <hr className="my-4" style={{ borderColor: 'var(--border-glass)' }} />
+
+          <h3 className="text-xs font-semibold uppercase tracking-wider mb-3" style={{ color: 'var(--text-tertiary)' }}>
+            Conurbano
+          </h3>
+          {conurbano.map(r => (
             <Link
               key={r.id}
               to={`/${r.slug}`}
