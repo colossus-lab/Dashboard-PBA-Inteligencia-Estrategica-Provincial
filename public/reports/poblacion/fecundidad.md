@@ -259,33 +259,5 @@ Las mujeres dominan el nivel superior (63,4%) y las que estudian tienen baja fec
 
 ---
 
-## 8. Prioridades para la Gobernación
-
-### Emergencia demográfica
-
-1. **Sistema de cuidados para madres que estudian**: 1.545.722 mujeres de 14-49 en el sistema educativo, con 852.723 hijos. La falta de jardines maternales (solo 22% de cobertura 0-2 años) expulsa madres del sistema educativo. Programa de guarderías en escuelas secundarias y universidades del conurbano.
-
-2. **Prevención del embarazo adolescente en el 2do/3er cordón**: los municipios con mayor fecundidad adolescente coinciden con los de mayor abandono escolar masculino y femenino. Programas integrales de educación sexual y acceso a métodos anticonceptivos en Florencio Varela, José C. Paz, Moreno y Presidente Perón.
-
-3. **Programa de apoyo a familias numerosas vulnerables**: 437.161 mujeres con 4+ hijos (223.064 con 5+), concentradas en el conurbano sur y oeste. Transferencias condicionadas a escolarización, controles prenatales y vacunación.
-
-### Prioridad alta
-
-4. **Articulación fecundidad-vivienda**: las familias numerosas del 3er cordón necesitan vivienda social con 3-4 dormitorios — no monoambientes. Los programas habitacionales deben dimensionarse según la composición familiar real del territorio.
-
-5. **Reducción de la mortalidad infantil en madres de baja escolarización**: la brecha de sobrevivencia (97,1% vs 97,9%) entre primario y posgrado es un indicador de inequidad sanitaria. Programas focalizados de seguimiento perinatal en barrios con alta proporción de madres con primario incompleto.
-
-6. **Incentivos a la maternidad en municipios de baja fecundidad**: Vicente López (0,9), Morón (1,0), La Plata (1,1) están por debajo del nivel de reemplazo. Si bien esto no es una "emergencia", la caída sostenida puede generar presión fiscal por envejecimiento acelerado.
-
-### Prioridad media
-
-7. **Observatorio de fecundidad municipal**: monitoreo anual del promedio de hijos por mujer en los 20 municipios más populosos, cruzado con indicadores de educación, empleo y vivienda.
-
-8. **Investigación sobre postergación voluntaria de la maternidad**: el grupo de "sin hijos" (43,8%) incluye tanto jóvenes que aún no son madres como adultas que eligen no serlo. Encuesta cualitativa para diferenciar estos perfiles y diseñar políticas apropiadas.
-
----
-
----
-
 *Datos procesados del Censo Nacional de Población, Hogares y Viviendas 2022 (INDEC). Resultados definitivos, actualizados en septiembre 2024. Cuadros C1.2 y C12.2 — Fecundidad de mujeres de 14-49 años por partido y por nivel educativo. Los análisis de correlación, ratios y cruces estratégicos son elaboración propia sobre los microdatos censales.*
 
