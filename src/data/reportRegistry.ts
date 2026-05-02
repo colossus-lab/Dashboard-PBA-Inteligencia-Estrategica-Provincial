@@ -184,6 +184,31 @@ export const REPORTS: ReportEntry[] = [
     dataPath: '/data/industria.json',
     order: 14,
   },
+  // ─── Grupo 3: Conurbano (mapas interactivos custom) ───
+  {
+    id: 'conurbano-educacion',
+    slug: 'conurbano/educacion',
+    title: 'Vulnerabilidad Escolar en el Conurbano',
+    shortTitle: 'Educación · Conurbano',
+    category: 'Conurbano',
+    icon: '🏫',
+    color: '#10b981',
+    mdPath: '',
+    dataPath: '',
+    order: 15,
+  },
+  {
+    id: 'conurbano-seguridad',
+    slug: 'conurbano/seguridad',
+    title: 'Inseguridad en el Conurbano (SNIC 2000-2024)',
+    shortTitle: 'Seguridad · Conurbano',
+    category: 'Conurbano',
+    icon: '🛡️',
+    color: '#ef4444',
+    mdPath: '',
+    dataPath: '',
+    order: 16,
+  },
 ];
 
 export function getReportBySlug(slug: string): ReportEntry | undefined {
@@ -199,5 +224,9 @@ export function getPoblacionReports(): ReportEntry[] {
 }
 
 export function getSectorialReports(): ReportEntry[] {
-  return REPORTS.filter(r => r.category !== 'Población');
+  return REPORTS.filter(r => r.category !== 'Población' && r.category !== 'Conurbano');
+}
+
+export function getConurbanoReports(): ReportEntry[] {
+  return REPORTS.filter(r => r.category === 'Conurbano');
 }
