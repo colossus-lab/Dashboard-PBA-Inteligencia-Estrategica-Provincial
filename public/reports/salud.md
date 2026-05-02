@@ -13,7 +13,7 @@
 
 ### 1.1. Caída sostenida de nacidos vivos
 
-La Provincia de Buenos Aires registró **147.081 nacidos vivos** en 2024, un descenso del **44% en 10 años** respecto al pico de 294.329 en 2014. Esta es la tendencia demográfica más significativa que enfrenta la provincia:
+La Provincia de Buenos Aires registró **147.081 nacidos vivos** en 2024, un descenso del **50% en 10 años** respecto al pico de 294.329 en 2014. Esta es la tendencia demográfica más significativa que enfrenta la provincia:
 
 | Año | Nacidos vivos | Variación | Contexto |
 |-----|--------------|-----------|----------|

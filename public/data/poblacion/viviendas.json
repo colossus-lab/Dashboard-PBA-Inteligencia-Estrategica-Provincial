@@ -51,7 +51,7 @@
       "id": "ocupacion-viviendas",
       "type": "pie",
       "title": "Condición de ocupación",
-      "sectionId": "densificacion-hogares",
+      "sectionId": "ocupacion",
       "data": [
         {
           "id": "Ocupadas con personas",

@@ -93,18 +93,18 @@ La **caída sostenida de homicidios dolosos** (-13,7% en 5 años, de 915 a 790) 
 
 ### 5.1. Por volumen absoluto de hechos (2024)
 
-| # | Municipio | Hechos | Víctimas | Población aprox. |
-|---|-----------|--------|----------|-----------------|
-| 1 | **La Matanza** | 50.858 | 9.664 | ~2.400.000 |
-| 2 | **General Pueyrredón** | 25.184 | 5.008 | ~660.000 |
-| 3 | **La Plata** | 23.060 | 5.585 | ~730.000 |
-| 4 | **Quilmes** | 18.598 | 5.384 | ~600.000 |
-| 5 | **Lomas de Zamora** | 18.161 | 5.094 | ~620.000 |
-| 6 | **Almirante Brown** | 16.776 | 4.561 | ~580.000 |
-| 7 | **Lanús** | 16.170 | 4.453 | ~460.000 |
-| 8 | **Merlo** | 15.802 | 4.620 | ~540.000 |
-| 9 | **General San Martín** | 15.516 | 3.669 | ~440.000 |
-| 10 | **Moreno** | 15.117 | 3.814 | ~530.000 |
+| # | Municipio | Hechos | Víctimas | Población (Censo 2022) |
+|---|-----------|--------|----------|-----------------------|
+| 1 | **La Matanza** | 50.858 | 9.664 | 1.841.247 |
+| 2 | **General Pueyrredón** | 25.184 | 5.008 | 667.082 |
+| 3 | **La Plata** | 23.060 | 5.585 | 768.547 |
+| 4 | **Quilmes** | 18.598 | 5.384 | 633.391 |
+| 5 | **Lomas de Zamora** | 18.161 | 5.094 | 690.480 |
+| 6 | **Almirante Brown** | 16.776 | 4.561 | 584.827 |
+| 7 | **Lanús** | 16.170 | 4.453 | 461.267 |
+| 8 | **Merlo** | 15.802 | 4.620 | 582.486 |
+| 9 | **General San Martín** | 15.516 | 3.669 | 450.518 |
+| 10 | **Moreno** | 15.117 | 3.814 | 576.632 |
 
 > **Observación crítica**: La Matanza concentra el **7,5% de todos los hechos delictivos de la provincia** con 50.858 casos. Es —por lejos— el municipio más problemático en términos absolutos.
 
@@ -211,6 +211,29 @@ General Pueyrredón (Mar del Plata) aparece como epicentro atípico: el 7,4% de 
 
 ---
 
+## Municipios turísticos costeros: aclaración metodológica
+
+La métrica `tasa_hechos` (delitos cada 100.000 habitantes) que publica el SNIC usa como denominador la **población residente** del Censo 2022. En los municipios costeros bonaerenses la **población de hecho se multiplica varias veces** durante la temporada estival (diciembre–marzo), pero el denominador no se ajusta. El resultado es que estos municipios aparecen sistemáticamente al tope del ranking provincial sin que ello refleje necesariamente una realidad delictiva más grave por habitante real presente.
+
+Por ese motivo, el ranking principal de mayor tasa delictiva los **excluye** y se reportan en una sección aparte. Los factores estivales utilizados son estimaciones públicas:
+
+| Municipio | Residentes (Censo 2022) | Factor estival anual | Fuente |
+|---|---|---|---|
+| La Costa | ~100.700 | ×2,0 | Sec. Turismo La Costa (~6M turistas/año) |
+| Pinamar | ~40.300 | ×1,8 | 1,6–2M arribos dic–mar |
+| Villa Gesell | ~38.600 | ×2,0 | Municipio (~250k peak estival) |
+| Monte Hermoso | ~8.800 | ×2,2 | Municipio (~70–100k peak) |
+| General Pueyrredón (MDP) | ~650.000 | ×1,20 | Emturyc MDP (~8M turistas/año) |
+| Mar Chiquita | ~33.100 | ×1,3 | Estimación |
+| General Alvarado (Miramar) | ~40.000 | ×1,3 | Estimación |
+| Necochea | ~100.000 | ×1,2 | Estimación |
+
+La "tasa ajustada" mostrada en los gráficos es **una estimación referencial** (tasa cruda dividida por el factor estival), no un dato oficial. Se incluye únicamente para permitir una comparación más justa con el resto de los municipios.
+
+En el mapa coroplético, los municipios costeros se identifican con un **borde celeste punteado**.
+
+---
+
 ## 8. Calidad del dato: Advertencias metodológicas
 
 ### Registros "Sin determinar" (código 06999)
@@ -230,4 +253,8 @@ El incremento de registros sin municipio asignado en 2024 (+29,8%) requiere aten
 A partir de 2023, el SNIC introdujo nuevas subcategorías: abuso sexual simple (antes incluido en "Otros delitos contra la integridad sexual"), estafas virtuales (antes diluidas en "Otros delitos contra la propiedad"), daños (ídem), y extorsiones. Estas reclasificaciones impiden comparaciones directas 2022→2023 en esas subcategorías, pero no afectan las categorías agregadas padre.
 
 ---
+
+---
+
+*Datos procesados del Sistema Nacional de Información Criminal (SNIC). Los valores presentados corresponden exclusivamente a la Provincia de Buenos Aires (código 06). Los análisis de crecimiento interanual y tendencias de 5 años se basan en las categorías delictivas primarias del SNIC, con las salvedades metodológicas señaladas en la sección 8.*
 

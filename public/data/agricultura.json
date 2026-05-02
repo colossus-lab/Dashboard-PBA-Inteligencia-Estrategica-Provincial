@@ -41,7 +41,7 @@
       "id": "stock-bovino-temporal",
       "type": "line",
       "title": "Evolución del stock bovino PBA",
-      "sectionId": "ganaderia-bovina",
+      "sectionId": "evolucion-stock",
       "data": [
         {
           "año": 2010,
@@ -112,7 +112,7 @@
       "id": "produccion-cultivo",
       "type": "bar",
       "title": "Producción por cultivo (2024/25)",
-      "sectionId": "potencia-agricola",
+      "sectionId": "produccion",
       "data": [
         {
           "cultivo": "Maíz",
@@ -156,7 +156,7 @@
       "id": "superficie-cultivos",
       "type": "pie",
       "title": "Superficie sembrada por cultivo (2024/25)",
-      "sectionId": "potencia-agricola",
+      "sectionId": "superficie",
       "data": [
         {
           "id": "Soja total",
@@ -249,7 +249,7 @@
     {
       "id": "ranking-stock",
       "title": "Stock bovino por municipio",
-      "sectionId": "cruces-estrategicos",
+      "sectionId": "ranking-ganadero",
       "items": [],
       "order": "desc"
     }

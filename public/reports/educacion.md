@@ -17,7 +17,7 @@ Buenos Aires administra el **sistema educativo subnacional más grande de Améri
 | Indicador | Valor |
 |-----------|-------|
 | **Establecimientos educativos** | **21.668** |
-| **Matrícula total** | **5.000.120 alumnos** |
+| **Matrícula total** | **5.001.120 alumnos** |
 | Municipios cubiertos | **135** (100%) |
 | Sector estatal | 15.520 establecimientos (71,6%) |
 | Sector privado | 6.148 establecimientos (28,4%) |
@@ -38,7 +38,7 @@ Buenos Aires administra el **sistema educativo subnacional más grande de Améri
 | Formación Integral | 45.759 | 0,9% |
 | Otros | 79.602 | 1,6% |
 
-> **Dato clave**: La matrícula secundaria (1,81M) ya superó a la primaria (1,75M). Esto refleja dos fenómenos: la caída de natalidad (ver informe de Salud: -44% en 10 años) que reduce el ingreso a primaria, y la mayor retención en secundaria — un logro relativo del sistema.
+> **Dato clave**: La matrícula secundaria (1,81M) ya superó a la primaria (1,75M). Esto refleja dos fenómenos: la caída de natalidad (ver informe de Salud: -50% en 10 años) que reduce el ingreso a primaria, y la mayor retención en secundaria — un logro relativo del sistema.
 
 ### 1.3. Modalidades educativas
 
@@ -533,11 +533,11 @@ Los municipios con peor desempeño educativo (escuelas estatales del conurbano c
 
 ### 5.2. Educación + Salud
 
-La caída de natalidad (-44% en 10 años) ya se refleja en Aprender 2024: la cohorte de 3.° grado (19.620 evaluados en PBA) es significativamente menor a las anteriores. En 2027–2030, las cohortes que ingresen a nivel inicial serán **aún más pequeñas**, permitiendo reconvertir infraestructura educativa. Dato clave de Aprender 2024: el **4,4% de los niños de 3.° grado NO asistió al jardín** — correlación directa con peores resultados de salud materno-infantil.
+La caída de natalidad (-50% en 10 años) ya se refleja en Aprender 2024: la cohorte de 3.° grado (19.620 evaluados en PBA) es significativamente menor a las anteriores. En 2027–2030, las cohortes que ingresen a nivel inicial serán **aún más pequeñas**, permitiendo reconvertir infraestructura educativa. Dato clave de Aprender 2024: el **4,4% de los niños de 3.° grado NO asistió al jardín** — correlación directa con peores resultados de salud materno-infantil.
 
 ### 5.3. Educación + Industria
 
-Los **503 Centros de Formación Profesional** y **358 Escuelas Técnicas Secundarias** son la cantera del sector industrial. Con solo el **16,9% de los egresantes secundarios** alcanzando nivel Satisfactorio en matemática (Aprender 2024), los 612 parques industriales (ver informe Industrial) enfrentan una crisis de capital humano. La articulación educación técnica–parques industriales es urgente, con foco en jornada extendida (escuelas de 7+ horas logran 33% Sat.+Av. vs 5,1% en escuelas de 5 horas).
+Los **503 Centros de Formación Profesional** y **358 Escuelas Técnicas Secundarias** son la cantera del sector industrial. Con solo el **16,9% de los egresantes secundarios** alcanzando nivel Satisfactorio en matemática (Aprender 2024), los 238 parques industriales (ver informe Industrial) enfrentan una crisis de capital humano. La articulación educación técnica–parques industriales es urgente, con foco en jornada extendida (escuelas de 7+ horas logran 33% Sat.+Av. vs 5,1% en escuelas de 5 horas).
 
 ### 5.4. Educación + Población
 

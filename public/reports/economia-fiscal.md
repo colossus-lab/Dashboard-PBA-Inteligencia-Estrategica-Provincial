@@ -12,7 +12,7 @@
 
 ### 1.1. Una máquina recaudatoria en expansión nominal explosiva
 
-La provincia recaudó **$13,01 billones** en 2025 (parcial), proyectando superar el cierre de 2024 ($8,68B). La evolución de la última década muestra un crecimiento nominal vertiginoso, aunque la lectura debe hacerse en contexto inflacionario:
+La provincia recaudó **$13,01 billones** en 2025, superando ampliamente el cierre de 2024 ($8,68B). La evolución de la última década muestra un crecimiento nominal vertiginoso, aunque la lectura debe hacerse en contexto inflacionario:
 
 | Período | Recaudación anual | Crecimiento nominal YoY |
 |---------|-------------------|------------------------|
@@ -22,9 +22,7 @@ La provincia recaudó **$13,01 billones** en 2025 (parcial), proyectando superar
 | 2022 | $1,41B | **+78,0%** |
 | 2023 | $3,04B | **+115,8%** |
 | 2024 | $8,68B | **+185,5%** |
-| 2025* | $13,01B | +49,9%* |
-
-*2025 parcial (enero–marzo según datos disponibles).
+| 2025 | $13,01B | +49,9% |
 
 > **Lectura ejecutiva**: El salto de 2023→2024 (+185,5%) refleja la aceleración inflacionaria y las actualizaciones valuatorias de ARBA. El crecimiento nominal del 185% supera ampliamente la inflación acumulada del período (~211%), lo que sugiere que la **recaudación en términos reales descendió levemente**, pero la base tributaria se mantiene sólida.
 
@@ -231,24 +229,24 @@ Buenos Aires es una **provincia manufacturera-agroindustrial** en su perfil expo
 
 El PBG a precios constantes permite evaluar el **crecimiento real** de la economía provincial, eliminando el efecto inflación:
 
-| Año | PBG constante | Variación real |
-|-----|--------------|----------------|
-| 2004 | $170.000M | Base |
-| 2007 | $223.000M | +10,4% (pico pre-crisis) |
-| 2008 | $231.000M | +3,7% |
-| 2009 | $211.000M | **-8,6%** (crisis financiera global) |
-| 2010 | $238.000M | +12,9% (rebote) |
-| 2011 | $255.000M | **Máximo histórico** |
-| 2014 | $257.000M | Estancamiento |
-| 2016 | $254.000M | -1,9% (recesión) |
-| 2018 | $249.000M | -4,1% (crisis cambiaria) |
-| 2019 | $245.000M | -1,8% |
-| 2020 | $221.000M | **-9,6%** (pandemia) |
-| 2021 | $246.000M | +11,3% (rebote) |
-| 2022 | $261.000M | **+6,1% (nuevo máximo)** |
-| 2023 | $258.000M | -1,2% |
+| Año | PBG constante (M $ de 2004) | Variación real YoY |
+|-----|----------------------------|--------------------|
+| 2004 | $94.272M | Base |
+| 2007 | $128.497M | +12,2% (pico pre-crisis) |
+| 2008 | $133.096M | +3,6% |
+| 2009 | $119.786M | **-10,0%** (crisis financiera global) |
+| 2010 | $133.282M | +11,3% (rebote) |
+| 2011 | $144.232M | +8,2% **(máximo de la primera década)** |
+| 2014 | $145.862M | Estancamiento |
+| 2016 | $138.646M | -4,3% (recesión) |
+| 2018 | $137.926M | -4,2% (crisis cambiaria) |
+| 2019 | $130.867M | -5,1% |
+| 2020 | $116.786M | **-10,8%** (pandemia) |
+| 2021 | $133.807M | +14,6% (rebote) |
+| 2022 | $142.622M | +6,6% |
+| 2023 | $142.427M | -0,1% |
 
-> **Lectura ejecutiva**: Después de 11 años de estancamiento (2011–2021), la economía bonaerense logró en 2022 **superar marginalmente su máximo histórico de 2011**. Sin embargo, la caída de 2023 (-1,2%) señala fragilidad en la recuperación. En **19 años** (2004–2023), el PBG real creció un **51,8%**, un promedio de **2,2% anual real** — modesto para una economía emergente.
+> **Lectura ejecutiva**: Después de 12 años (2011–2023), la economía bonaerense **aún no recuperó su máximo de 2011** ($144.232M): 2022 quedó 1,1% por debajo y 2023 cerró prácticamente igual. Es una década perdida en términos de PBG real. En **19 años** (2004–2023), el PBG real creció un **51,1%**, un promedio de **2,2% anual real** — modesto para una economía emergente.
 
 ### 4.2. Estructura productiva: Los 17 sectores
 

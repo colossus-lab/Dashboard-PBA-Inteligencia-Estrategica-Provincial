@@ -37,7 +37,7 @@ Buenos Aires es, por lejos, la **primera provincia agrícola de Argentina**. La 
 | 2023/24 | 19,66M ha | 64,45M tn | Recuperación fuerte |
 | **2024/25** | **20,88M ha** | **66,65M tn** | 📈 **Récord de superficie** |
 
-> **La sequía de 2022/23**: La producción cayó un **36%** en una sola campaña (de 61,77M a 43,59M tn) — una pérdida de 18 millones de toneladas. Esto representa pérdida de ingresos por exportación del orden de **USD 5.000–7.000 millones** para la provincia, con impacto directo en la recaudación de Ingresos Brutos y en la actividad económica de más de 80 municipios rurales.
+> **La sequía de 2022/23**: La producción cayó un **29%** en una sola campaña (de 61,77M a 43,59M tn) — una pérdida de 18 millones de toneladas. Esto representa pérdida de ingresos por exportación del orden de **USD 5.000–7.000 millones** para la provincia, con impacto directo en la recaudación de Ingresos Brutos y en la actividad económica de más de 80 municipios rurales.
 
 ### 1.3. La campaña 2024/25: Radiografía productiva
 

@@ -43,7 +43,7 @@
       "id": "tmi-temporal",
       "type": "line",
       "title": "Evolución de defunciones infantiles",
-      "sectionId": "mortalidad-infantil",
+      "sectionId": "evolucion-mortalidad",
       "data": [
         {
           "año": 2009,
@@ -194,7 +194,7 @@
       "id": "defunciones-municipio",
       "type": "bar",
       "title": "Top 15 municipios — Defunciones infantiles (prom. 3 años)",
-      "sectionId": "mapa-riesgo-materno-infantil",
+      "sectionId": "ranking-mortalidad",
       "data": [
         {
           "municipio": "La Matanza",
@@ -266,7 +266,7 @@
       "id": "bajo-peso-temporal",
       "type": "line",
       "title": "Nacidos vivos totales por año",
-      "sectionId": "crisis-silenciosa-natalidad",
+      "sectionId": "evolucion-nacidos",
       "data": [
         {
           "año": 2005,
@@ -358,7 +358,7 @@
     {
       "id": "ranking-mortalidad",
       "title": "Defunciones infantiles por municipio",
-      "sectionId": "mortalidad-materna",
+      "sectionId": "ranking-mortalidad",
       "items": [
         {
           "name": "La Matanza",

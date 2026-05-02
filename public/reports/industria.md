@@ -4,7 +4,7 @@
 
 **Fuentes**: Ministerio de Producción, Ciencia e Innovación Tecnológica de la Provincia de Buenos Aires — Registro Nacional de Parques Industriales (RENPI).
 **Períodos**: Empresas por segmento (2007–2023), Parques industriales (corte actual).
-**Registros procesados**: 44 registros anuales de segmentos empresariales, 612 parques industriales en 112 municipios.
+**Registros procesados**: 44 registros anuales de segmentos empresariales, 238 parques industriales en 112 municipios.
 
 ---
 
@@ -97,17 +97,17 @@ Los emprendedores (microempresas y unipersonales formales) se miden desde 2014:
 
 ### 2.1. El mapa industrial de Buenos Aires
 
-La provincia cuenta con **612 parques, zonas y sectores industriales** distribuidos en **112 municipios**, convirtiéndola en la jurisdicción con mayor infraestructura industrial planificada de Argentina.
+La provincia cuenta con **238 parques, zonas y sectores industriales** distribuidos en **112 municipios**, convirtiéndola en la jurisdicción con mayor infraestructura industrial planificada de Argentina.
 
 | Indicador | Valor |
 |-----------|-------|
-| Total parques industriales | **612** |
+| Total parques industriales | **238** |
 | Municipios con al menos un parque | **112** de 135 (83%) |
-| Parques inscriptos en RENPI | 125 (20,4%) |
+| Parques inscriptos en RENPI | 125 (52,5%) |
 | Superficie relevada | 11.221 ha (en 202 parques con datos) |
-| Parques con georeferenciación | 238 (38,9%) |
+| Parques con georeferenciación | 238 (100%) |
 
-> **Dato clave**: Solo el **20,4%** de los parques industriales están inscriptos en el Registro Nacional de Parques Industriales (RENPI). Esto significa que el 80% opera de facto pero sin la certificación formal que les permite acceder a beneficios fiscales nacionales, créditos preferenciales y exenciones.
+> **Dato clave**: Solo el **52,5%** de los parques industriales están inscriptos en el Registro Nacional de Parques Industriales (RENPI). Los 113 restantes operan de facto pero sin la certificación formal que les permite acceder a beneficios fiscales nacionales, créditos preferenciales y exenciones.
 
 ### 2.2. Concentración territorial: El eje industrial del conurbano
 
@@ -183,7 +183,7 @@ Las exportaciones de material de transporte terrestre (USD 34M) y productos quí
 
 ### 3.4. Emprendedores + Natalidad
 
-La caída de emprendedores (-24,8% en 9 años) coincide temporalmente con la caída de natalidad (-44% en 10 años). Ambas reflejan un **factor demográfico-económico subyacente**: las cohortes más jóvenes postergan tanto la formación de familia como la toma de riesgo empresarial por incertidumbre macroeconómica.
+La caída de emprendedores (-24,8% en 9 años) coincide temporalmente con la caída de natalidad (-50% en 10 años). Ambas reflejan un **factor demográfico-económico subyacente**: las cohortes más jóvenes postergan tanto la formación de familia como la toma de riesgo empresarial por incertidumbre macroeconómica.
 
 ---
 

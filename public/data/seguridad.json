@@ -51,7 +51,7 @@
       "id": "delitos-temporal",
       "type": "line",
       "title": "Evolución de hechos delictivos PBA",
-      "sectionId": "panorama-general",
+      "sectionId": "evolucion-delitos",
       "data": [
         {
           "año": 2000,
@@ -187,7 +187,7 @@
       "id": "delitos-tipo",
       "type": "pie",
       "title": "Distribución por tipo de delito (2024)",
-      "sectionId": "seis-delitos-dominantes",
+      "sectionId": "tipos-delitos",
       "data": [
         {
           "id": "Robos (excluye los agravados por el resultado de lesiones y/o muertes)",
@@ -235,7 +235,7 @@
       "id": "top-municipios-delitos",
       "type": "bar",
       "title": "Top 15 municipios — Mayor tasa delictiva",
-      "sectionId": "alertas-rojas-delitos",
+      "sectionId": "ranking-delitos",
       "data": [
         {
           "municipio": "Tordillo",
@@ -307,7 +307,7 @@
       "id": "bottom-municipios-delitos",
       "type": "bar",
       "title": "Top 10 municipios — Menor tasa delictiva",
-      "sectionId": "senales-positivas",
+      "sectionId": "municipios-seguros",
       "data": [
         {
           "municipio": "Carlos Tejedor",
@@ -361,7 +361,7 @@
     {
       "id": "ranking-delitos-full",
       "title": "Ranking delictivo por municipio",
-      "sectionId": "mapa-delito-municipios",
+      "sectionId": "ranking-delitos",
       "items": [
         {
           "name": "Tordillo",

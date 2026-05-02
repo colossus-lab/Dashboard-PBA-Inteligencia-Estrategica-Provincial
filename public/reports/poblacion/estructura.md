@@ -18,7 +18,7 @@
 | 24 Partidos del GBA | — | 10.849.398 | +9,4% |
 | Resto de Buenos Aires | — | 6.674.598 | +16,9% |
 
-> **Lectura ejecutiva**: Buenos Aires creció a un ritmo del 12,2% intercensal (12 años), significativamente menor al 12,8% del período 2001–2010. La desaceleración del crecimiento refleja la **caída sostenida de la natalidad** (ver informe de Salud: -44% en 10 años). Sin embargo, PBA sigue siendo la provincia más grande con el **38,5% de la población nacional** (45,5 millones).
+> **Lectura ejecutiva**: Buenos Aires creció a un ritmo del 12,2% intercensal (12 años), significativamente menor al 12,8% del período 2001–2010. La desaceleración del crecimiento refleja la **caída sostenida de la natalidad** (ver informe de Salud: -50% en 10 años). Sin embargo, PBA sigue siendo la provincia más grande con el **38,1% de la población nacional** (46,0 millones — Censo 2022).
 
 > **Dato crítico**: El **interior de la provincia creció más** (+16,9%) que el Gran Buenos Aires (+9,4%). Esto revierte una tendencia histórica de concentración urbana y refleja migraciones internas hacia municipios del segundo y tercer cordón, ciudades intermedias y la costa atlántica.
 
@@ -29,7 +29,7 @@
 | **Superficie total** | **305.907 km²** |
 | **Densidad promedio** | **57,3 hab/km²** |
 
-> Buenos Aires ocupa el 11% del territorio argentino pero concentra el 38,5% de la población. La densidad promedio de 57 hab/km² esconde un contraste brutal entre Lanús (9.189 hab/km²) y Pila (1,3 hab/km²) — una diferencia de **7.000 veces**.
+> Buenos Aires ocupa el 11% del territorio argentino pero concentra el 38,1% de la población. La densidad promedio de 57 hab/km² esconde un contraste brutal entre Lanús (9.189 hab/km²) y Pila (1,3 hab/km²) — una diferencia de **7.000 veces**.
 
 ---
 
@@ -308,7 +308,7 @@ La caída del grupo 0–4 anticipa una reducción de la demanda materno-infantil
 
 ### 6.4. Población + Industria
 
-Los 11,5 millones de personas en edad productiva (15–64) son la fuerza laboral que alimenta a los 612 parques industriales de la provincia. La concentración demográfica en el conurbano facilita el reclutamiento, pero dificulta la formación técnica de calidad.
+Los 11,5 millones de personas en edad productiva (15–64) son la fuerza laboral que alimenta a los 238 parques industriales de la provincia. La concentración demográfica en el conurbano facilita el reclutamiento, pero dificulta la formación técnica de calidad.
 
 ---
 
