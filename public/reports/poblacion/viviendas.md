@@ -257,49 +257,13 @@
 
 ## 5. Cruces estratégicos
 
-### 5.1. Stock desocupado × Déficit habitacional
-
-La provincia tiene **774.963 viviendas particulares desocupadas** y al mismo tiempo **~131.000 viviendas precarias** (casillas + ranchos) y **~645.000 hogares en hacinamiento** (1 habitación). Hay un desbalance territorial masivo: el stock vacío está en la costa atlántica (uso temporal), mientras la demanda insatisfecha está en el segundo/tercer cordón del conurbano.
-
-> **No alcanza con "reasignar" viviendas vacías** — están en el lugar equivocado. La solución requiere construcción nueva en los municipios deficitarios.
-
-### 5.2. Tipología × Servicios
+### 5.1. Tipología × Servicios
 
 Las **131.211 casillas y ranchos** son los mismos hogares que carecen de cloacas, agua de red y gas natural (ver informes de condiciones habitacionales). La casilla no es solo un tipo de vivienda: es un **indicador de acumulación de déficits** — precariedad constructiva + precariedad de servicios + precariedad de tenencia.
 
-### 5.3. Densificación × Presión demográfica
+### 5.2. Densificación × Presión demográfica
 
 Los municipios con mayor densificación (Malvinas Argentinas 1,9%, Florencio Varela 1,6%, José C. Paz 1,6%) son los mismos que tuvieron mayor crecimiento demográfico intercensal. La presión poblacional se traduce en **subdivisión informal de viviendas** — familias que agregan habitaciones, construyen al fondo del terreno o subdividen departamentos.
-
-### 5.4. Viviendas temporales × Infraestructura estacional
-
-Los municipios costeros con 40-60% de viviendas temporales deben mantener redes de servicios (agua, cloacas, electricidad, recolección de residuos) dimensionadas para la **demanda pico de enero** — que puede ser 3-5 veces la población permanente. Esto genera costos fijos anuales altísimos sobre una base tributaria pequeña.
-
----
-
-## 6. Prioridades para la Gobernación
-
-### Emergencia habitacional (urgencia máxima)
-
-1. **Programa de reemplazo de viviendas precarias**: **131.211 casillas y ranchos** (~420.000 personas) requieren intervención directa. Priorizar La Matanza (19.515), La Plata (14.097), Florencio Varela (7.051), Moreno (6.146) y Merlo (5.406). Programa de viviendas de reemplazo con módulos prefabricados o construcción progresiva.
-
-2. **Reclasificación de locales no habitacionales**: **12.249 viviendas en locales** — galpones, depósitos y estructuras inadecuadas. Relevamiento municipal urgente para identificar condiciones de insalubridad y riesgo.
-
-3. **Piezas de inquilinato y pensiones**: **49.348 viviendas** en esta categoría — regular condiciones edilicias, verificar habilitaciones y proteger derechos de habitantes. Concentradas en GBA (35.520, 72%).
-
-### Gestión del stock (prioridad alta)
-
-4. **Política de viviendas desocupadas**: **774.963 viviendas vacías** — analizar incentivos fiscales para puesta en alquiler, especialmente las **143.150 en alquiler/venta** y **121.699 en "otra situación"**. 
-
-5. **Planificación de la densificación**: Los **71.571 hogares en viviendas compartidas** son una señal temprana de déficit. Programas de lotes con servicios y viviendas semilla en los municipios con mayor presión: Malvinas Argentinas, Florencio Varela, Merlo, Moreno.
-
-6. **Infraestructura para demanda estacional**: Los municipios costeros (La Costa, Pinamar, Villa Gesell, Monte Hermoso) necesitan esquemas de financiamiento que reconozcan la **asimetría población permanente vs. demanda estacional**. Las redes de servicios deben dimensionarse para 3-5x la población censal.
-
-### Urbanización (prioridad media-alta)
-
-7. **Gestión de la expansión urbana**: Los municipios con mayor construcción nueva (La Matanza 6.223, La Plata 5.432, Moreno 4.230) necesitan planificación urbana integrada: lotes con servicios, vialidad y transporte antes de la consolidación.
-
-8. **Regularización de viviendas precarias periurbanas**: Bahía Blanca (1.847 casillas y ranchos), San Nicolás (1.202), Ensenada (1.348) y Berisso (2.385) muestran bolsones significativos de precariedad en ciudades intermedias del interior.
 
 ---
 
