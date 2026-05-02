@@ -187,28 +187,5 @@ La caída de emprendedores (-24,8% en 9 años) coincide temporalmente con la ca�
 
 ---
 
-## 4. Prioridades para la Gobernación
-
-### Rescate PyME (urgencia alta)
-
-1. **Programa de reactivación PyME**: La provincia perdió 19.142 PyMEs netas desde 2012. La prioridad es **detener la destrucción** y revertirla. Líneas de crédito blandas y simplificación impositiva (Ingresos Brutos escalonados por facturación).
-2. **Emprendedores**: El segmento más golpeado (-24,8%). Necesita programas de incubación municipales con apoyo provincial en los 112 municipios con parques industriales.
-3. **Formalización de parques no-RENPI**: Solo 125 de 238 parques están en el RENPI. Los 113 restantes pierden beneficios fiscales y acceso a crédito. Plan rápido de inscripción masiva.
-
-### Política industrial estratégica
-
-4. **Corredor norte como zona especial**: Pilar–Escobar–Campana–Zárate ya tiene la masa crítica (27 parques, 1.400+ ha). Crear un régimen unificado de promoción industrial con ventajas impositivas provinciales.
-5. **EdC: Escalar o perder la oportunidad**: De 1.055 a 1.526 empresas en 16 años es crecimiento tibio. La provincia necesita un "SiliconBA" con incentivos reales: exención de IIBB por 5 años para empresas EdC que se radiquen en el conurbano.
-6. **Moreno como nuevo polo**: Con 15 parques industriales, es el municipio con más infraestructura. Conectar con formación técnica (CFPs, escuelas técnicas) para garantizar mano de obra calificada local.
-
-### Infraestructura y datos
-
-7. **Completar el padrón provincial**: el padrón actual del Ministerio de Producción registra 238 parques con georreferenciación; verificar contra relevamientos territoriales y RENPI nacional para detectar parques operativos no registrados.
-8. **Completar datos de superficie**: Solo 202 de 238 parques tienen datos de hectáreas. Censo industrial urgente.
-
----
-
----
-
 *Datos procesados del Ministerio de Producción, Ciencia e Innovación Tecnológica de la Provincia de Buenos Aires y del Registro Nacional de Parques Industriales (RENPI). Los datos de segmentos empresariales provienen del GPS de Empresas de la SEPYME/Ministerio de Economía de la Nación, filtrados para la Provincia de Buenos Aires. El segmento "Emprendedores" se releva desde 2014.*
 
