@@ -1,9 +1,8 @@
-import { useEffect, useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useEducacionStore } from './store';
 import {
-  loadRadios,
-  loadRadiosGeo,
-  loadSchools,
+  loadEducacionBundle,
+  type BundleProgress,
 } from '../../../lib/conurbano/educacion/data';
 import {
   RADIO_METRICS,
@@ -15,6 +14,7 @@ import ColegiosMap2D from './ColegiosMap2D';
 import ColegiosFilters from './ColegiosFilters';
 import ColegiosRanking from './ColegiosRanking';
 import SchoolDetail from './SchoolDetail';
+import { LazyMount } from '../../ui/LazyMount';
 
 const ColegiosMap3D = lazy(() => import('./ColegiosMap3D'));
 
@@ -35,12 +35,16 @@ export default function ColegiosTab() {
     setColegiosViewMode,
   } = useEducacionStore();
 
+  const [progress, setProgress] = useState<BundleProgress | null>(null);
+
   useEffect(() => {
     if (radios && radiosGeo && schools) return;
     let cancelled = false;
     setLoadingColegios(true);
-    Promise.all([loadRadios(), loadRadiosGeo(), loadSchools()])
-      .then(([r, g, s]) => {
+    loadEducacionBundle((p) => {
+      if (!cancelled) setProgress(p);
+    })
+      .then(({ radios: r, radiosGeo: g, schools: s }) => {
         if (!cancelled) setLoadedColegios(r, g, s);
       })
       .catch((err) => {
@@ -80,17 +84,23 @@ export default function ColegiosTab() {
   }
 
   if (loadingColegios || !radios || !radiosGeo || !schools) {
+    const labelMap: Record<string, string> = {
+      censo: 'Datos censales por radio',
+      radios: 'Polígonos de radios censales',
+      colegios: 'Padrón de colegios',
+      done: 'Listo',
+    };
+    const stage = progress ? labelMap[progress.label] ?? progress.label : 'Iniciando…';
     return (
-      <div
-        style={{
-          minHeight: 400,
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          color: 'var(--text-tertiary)',
-        }}
-      >
-        Cargando radios censales y colegios…
+      <div className="conu-loading">
+        <div className="conu-spinner" aria-hidden="true" />
+        <div className="conu-loading-text">
+          <div className="conu-loading-title">Cargando datos del Conurbano</div>
+          <div className="conu-loading-stage">{stage}</div>
+          <div className="conu-loading-hint">
+            Procesamos ~12 MB de censo y mapas en segundo plano para no congelar la pantalla.
+          </div>
+        </div>
       </div>
     );
   }
@@ -153,36 +163,38 @@ export default function ColegiosTab() {
           </div>
         </div>
 
-        <div
-          className="conu-map-wrap"
-          style={
-            colegiosViewMode === '3d'
-              ? { background: '#0a1220', borderColor: 'rgba(6, 78, 59, 0.5)' }
-              : undefined
-          }
-        >
-          {colegiosViewMode === '3d' ? (
-            <Suspense
-              fallback={
-                <div
-                  style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    height: '100%',
-                    color: 'rgba(110, 231, 183, 0.7)',
-                  }}
-                >
-                  Cargando vista 3D…
-                </div>
-              }
-            >
-              <ColegiosMap3D radiosGeo={radiosGeo} radios={radios} schools={filteredSchools} />
-            </Suspense>
-          ) : (
-            <ColegiosMap2D radiosGeo={radiosGeo} radios={radios} schools={filteredSchools} />
-          )}
-        </div>
+        <LazyMount minHeight={420} rootMargin="100px">
+          <div
+            className="conu-map-wrap"
+            style={
+              colegiosViewMode === '3d'
+                ? { background: '#0a1220', borderColor: 'rgba(6, 78, 59, 0.5)' }
+                : undefined
+            }
+          >
+            {colegiosViewMode === '3d' ? (
+              <Suspense
+                fallback={
+                  <div
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      height: '100%',
+                      color: 'rgba(110, 231, 183, 0.7)',
+                    }}
+                  >
+                    Cargando vista 3D…
+                  </div>
+                }
+              >
+                <ColegiosMap3D radiosGeo={radiosGeo} radios={radios} schools={filteredSchools} />
+              </Suspense>
+            ) : (
+              <ColegiosMap2D radiosGeo={radiosGeo} radios={radios} schools={filteredSchools} />
+            )}
+          </div>
+        </LazyMount>
 
         <div className="conu-card" style={{ padding: '12px 16px', fontSize: 12.5 }}>
           <span style={{ fontWeight: 600, color: 'var(--text-secondary)' }}>{spec.label}.</span>{' '}
