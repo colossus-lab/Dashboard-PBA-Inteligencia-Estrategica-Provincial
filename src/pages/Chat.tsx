@@ -53,6 +53,17 @@ function getMessageText(message: UIMessage): string {
     .join('');
 }
 
+// Bloquea schemes peligrosos en URLs emitidas por el modelo (markdown del
+// asistente). react-markdown sanitiza javascript:/vbscript:/data: por defecto
+// en versiones recientes, pero lo reforzamos explícitamente: el modelo es una
+// fuente no-confiable y un prompt injection podría intentar emitir links que
+// ejecuten JS al click.
+const SAFE_URL_RE = /^(?:https?:|mailto:|tel:|#|\/|\.\/|\.\.\/|\?)/i;
+function safeUrlTransform(url: string): string {
+  if (!url) return '';
+  return SAFE_URL_RE.test(url.trim()) ? url : '';
+}
+
 export function Chat() {
   const [input, setInput] = useState('');
   const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -177,11 +188,17 @@ export function Chat() {
                   <div className="chat-message-text">
                     {message.role === 'assistant' ? (
                       <ReactMarkdown
+                        urlTransform={safeUrlTransform}
                         components={{
                           table: ({ children }) => (
                             <div className="chat-table-wrapper">
                               <table>{children}</table>
                             </div>
+                          ),
+                          a: ({ href, children, ...rest }) => (
+                            <a href={href} target="_blank" rel="noopener noreferrer ugc" {...rest}>
+                              {children}
+                            </a>
                           ),
                         }}
                       >
