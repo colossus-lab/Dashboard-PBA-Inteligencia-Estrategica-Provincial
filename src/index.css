@@ -4373,6 +4373,22 @@ body[data-route="presentacion"] main {
   .conu-map-wrap {
     height: min(50vh, 380px);
   }
+  /* Legend 3D: en mobile la versión completa tapa el mapa */
+  .conu-3d-legend {
+    left: 8px;
+    top: 8px;
+    width: auto;
+    max-width: calc(100% - 80px);
+    padding: 8px 10px;
+  }
+  .conu-3d-legend-desc { display: none; }
+  /* La barra de ayuda (rueda, click derecho, Ctrl+arrastrar) no aplica en touch */
+  .conu-3d-help { display: none; }
+  .conu-3d-reset {
+    bottom: 8px;
+    right: 8px;
+    padding: 6px 10px;
+  }
 }
 
 /* KPI grid en mobile chico: KPIs largos rompen */

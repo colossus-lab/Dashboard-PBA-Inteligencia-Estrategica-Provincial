@@ -482,6 +482,7 @@ export default function ColegiosMap3D({ radiosGeo, radios, schools }: Props) {
           <span>mayor</span>
         </div>
         <div
+          className="conu-3d-legend-desc"
           style={{
             marginTop: 12,
             borderTop: '1px solid rgba(6, 78, 59, 0.4)',
