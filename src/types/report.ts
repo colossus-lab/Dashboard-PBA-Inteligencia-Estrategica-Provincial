@@ -84,4 +84,7 @@ export interface ReportEntry {
   mdPath: string;      // path to .md in public/reports/
   dataPath: string;    // path to data.json in public/data/
   order: number;
+  // Si true, oculta el mapa coroplético "Distribución Municipal" en la
+  // vista del informe aunque `data.mapData` venga con datos.
+  hideMap?: boolean;
 }

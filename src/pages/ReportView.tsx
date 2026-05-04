@@ -170,7 +170,7 @@ function ReportContent({ reportEntry }: { reportEntry: ReportEntry }) {
           )}
 
           {/* Contextual Map */}
-          {data.mapData && data.mapData.length > 0 && (
+          {!reportEntry.hideMap && data.mapData && data.mapData.length > 0 && (
             <SectionReveal>
               <div className="chart-card map-section">
                 <h3 className="map-section-title">
