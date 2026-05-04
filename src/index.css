@@ -1165,14 +1165,23 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/* En xl (1280-1535) competimos por ancho con sidebar y TOC, mantenemos el
+   chart compacto para que la columna de texto sea legible (≥350px). */
 @media (min-width: 1280px) {
   .scrolly-split {
-    grid-template-columns: 1fr minmax(0, 480px);
+    grid-template-columns: 1fr minmax(0, 380px);
+    gap: 32px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .scrolly-split {
+    grid-template-columns: 1fr minmax(0, 460px);
     gap: 40px;
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1700px) {
   .scrolly-split {
     grid-template-columns: 1fr minmax(0, 520px);
     gap: 48px;
@@ -3963,8 +3972,11 @@ main { padding-bottom: 6rem; }
 @media (min-width: 1280px) {
   .report-layout {
     display: grid;
-    grid-template-columns: 1fr 14rem;
-    gap: 2rem;
+    /* TOC más estrecho en 1280-1535 para no ahogar la columna de texto del
+       scrolly-split, que ya pelea espacio con el sidebar persistente y el
+       chart sticky. A 2xl (≥1536px) volvemos al ancho cómodo. */
+    grid-template-columns: 1fr 11rem;
+    gap: 1.5rem;
     align-items: start;
   }
   .report-toc-wrap {
@@ -3975,6 +3987,12 @@ main { padding-bottom: 6rem; }
   .report-main {
     order: 1;
     min-width: 0;
+  }
+}
+@media (min-width: 1536px) {
+  .report-layout {
+    grid-template-columns: 1fr 14rem;
+    gap: 2rem;
   }
 }
 

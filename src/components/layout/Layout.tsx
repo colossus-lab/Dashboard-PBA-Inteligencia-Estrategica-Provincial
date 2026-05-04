@@ -31,6 +31,14 @@ export function Layout({ children }: { children: React.ReactNode }) {
     ? (sidebarCollapsed ? 'lg:pl-20' : 'lg:pl-72')
     : '';
 
+  // Las rutas de informe coexisten con sidebar persistente (288px) + TOC
+  // (≥1280px) + chart sticky en scrolly-split. Con max-w-6xl la columna de
+  // texto queda <320px y el contenido se quiebra cada pocas palabras.
+  // Subimos el cap solo en estas rutas.
+  const mainMaxWidthClass = isReportRoute
+    ? 'max-w-6xl xl:max-w-7xl 2xl:max-w-[90rem]'
+    : 'max-w-6xl';
+
   return (
     <div className="min-h-screen" style={{ background: 'var(--bg-primary)' }}>
       {/* Skip to content (a11y) */}
@@ -54,7 +62,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <main
         id="main-content"
         role="main"
-        className={`max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16 ${mainPaddingClass}`}
+        className={`${mainMaxWidthClass} mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16 ${mainPaddingClass}`}
       >
         {children}
       </main>
