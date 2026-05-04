@@ -11,7 +11,7 @@ interface Slide {
 
 const HERO_SLIDES: Slide[] = [
   { eyebrow: 'Provincia de Buenos Aires', value: '17,5M', label: 'Habitantes', description: 'Censo Nacional 2022 · INDEC', color: '#00d4ff' },
-  { eyebrow: 'Territorio', value: '134', label: 'Municipios', description: 'Provincia de Buenos Aires', color: '#8b5cf6' },
+  { eyebrow: 'Territorio', value: '135', label: 'Municipios', description: 'Provincia de Buenos Aires', color: '#8b5cf6' },
   { eyebrow: 'Datos abiertos', value: '80K+', label: 'Registros', description: 'En 13 datasets navegables', color: '#10b981' },
   { eyebrow: 'Inteligencia estratégica', value: '16', label: 'Informes ejecutivos', description: 'Análisis basado en datos oficiales', color: '#f59e0b' },
 ];

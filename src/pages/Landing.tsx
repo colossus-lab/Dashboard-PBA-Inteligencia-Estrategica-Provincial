@@ -10,7 +10,7 @@ import type { ReportEntry } from '../types/report';
 // ─── Macro KPIs for the hero ───
 const HERO_STATS = [
   { value: 17569053, label: 'Habitantes', suffix: '', tooltip: 'Censo Nacional 2022 · INDEC' },
-  { value: 134, label: 'Municipios', suffix: '', tooltip: 'Provincia de Buenos Aires' },
+  { value: 135, label: 'Municipios', suffix: '', tooltip: 'Provincia de Buenos Aires' },
   { value: 80000, label: 'Registros', suffix: '+', tooltip: 'Distribuidos en 13 datasets navegables' },
   { value: 16, label: 'Informes', suffix: '', tooltip: '16 informes ejecutivos basados en datos abiertos' },
 ];
@@ -46,7 +46,7 @@ export function Landing() {
         <title>Dashboard PBA · Inteligencia Estratégica Provincial</title>
         <meta
           name="description"
-          content="Plataforma de datos abiertos con análisis interactivo de la Provincia de Buenos Aires. 17,5M habitantes, 134 municipios, 16 informes ejecutivos."
+          content="Plataforma de datos abiertos con análisis interactivo de la Provincia de Buenos Aires. 17,5M habitantes, 135 municipios, 16 informes ejecutivos."
         />
         <link rel="canonical" href="https://pba.openarg.org" />
         <meta property="og:image" content="https://pba.openarg.org/api/og" />
@@ -72,7 +72,7 @@ export function Landing() {
             </h1>
             <p className="hero-subtitle">
               Explorá <span className="hero-highlight">17,5M habitantes</span> y{' '}
-              <span className="hero-highlight">134 municipios</span> con 16 informes ejecutivos
+              <span className="hero-highlight">135 municipios</span> con 16 informes ejecutivos
               basados en datos oficiales del INDEC, Censo 2022, SNIC, SIPA y EPH.
             </p>
             <p className="hero-attribution">
@@ -170,7 +170,7 @@ export function Landing() {
                 <div className="explorer-banner-text">
                   <span className="explorer-banner-title">Catálogo de Datos</span>
                   <span className="explorer-banner-desc">
-                    13 datasets navegables · 80.000+ registros · 134 municipios
+                    13 datasets navegables · 80.000+ registros · 135 municipios
                   </span>
                 </div>
               </div>
