@@ -526,6 +526,7 @@ function VizConcentracion({ story }: { story: ReturnType<typeof buildStoryData> 
               width={130}
               axisLine={false}
               tickLine={false}
+              interval={0}
             />
             <Tooltip
               contentStyle={t.tooltipStyle}
@@ -679,6 +680,7 @@ function VizGanadoresPerdedores({ story }: { story: ReturnType<typeof buildStory
               width={140}
               axisLine={false}
               tickLine={false}
+              interval={0}
             />
             <Tooltip
               contentStyle={t.tooltipStyle}
