@@ -4348,13 +4348,20 @@ body[data-route="presentacion"] main {
     align-items: stretch;
   }
   .conu-toolbar-pills {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    flex-wrap: nowrap;
-    padding-bottom: 4px;
+    flex-wrap: wrap;
+    overflow-x: visible;
+    padding-bottom: 0;
+    row-gap: 6px;
+  }
+  /* Label "Métrica del radio" en su propia fila arriba (no comprimido) */
+  .conu-toolbar-pills > .conu-eyebrow {
+    flex-basis: 100%;
+    margin: 0;
+    white-space: nowrap;
   }
   .conu-toolbar-pills .conu-pill {
-    flex-shrink: 0;
+    flex-shrink: 1;
+    min-width: 0;
   }
   .conu-toolbar-toggle {
     align-self: flex-end;
