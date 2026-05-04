@@ -63,7 +63,7 @@ export function Landing() {
               <a href="https://colossuslab.org" target="_blank" rel="noopener noreferrer" className="hero-link">
                 ColossusLab.org
               </a>{' '}
-              — Datos Abiertos vía <span className="hero-highlight">OpenArg</span> 🇦🇷
+              — Datos Abiertos vía <span className="hero-highlight">OpenArg</span>
             </p>
 
             {/* ─── Count-up Stats ─── */}
@@ -80,6 +80,25 @@ export function Landing() {
             </div>
           </div>
         </header>
+      </SectionReveal>
+
+      {/* ─── Conurbano · Análisis Especial (highlight) ─── */}
+      <SectionReveal>
+        <section className="conurbano-highlight" aria-labelledby="conurbano-highlight-title">
+          <div className="conurbano-highlight-header">
+            <span className="conurbano-highlight-badge">Análisis Especial</span>
+            <h2 id="conurbano-highlight-title" className="conurbano-highlight-title">Conurbano Bonaerense</h2>
+            <p className="conurbano-highlight-desc">
+              Análisis territorial focalizado en los 24 partidos del Gran Buenos Aires —
+              mapas interactivos de educación y seguridad con datos a nivel radio censal.
+            </p>
+          </div>
+          <div className="conurbano-highlight-grid">
+            {conurbano.map((report, i) => (
+              <ReportCard key={report.id} report={report} index={i} variant="featured" />
+            ))}
+          </div>
+        </section>
       </SectionReveal>
 
       {/* ─── Población Grid ─── */}
@@ -118,60 +137,30 @@ export function Landing() {
         </section>
       </SectionReveal>
 
-      {/* ─── Conurbano Grid ─── */}
+      {/* ─── Explora los Datos ─── */}
       <SectionReveal>
         <section className="landing-section">
           <div className="section-header">
             <div className="section-number">03</div>
             <div>
-              <h2 className="section-title">Conurbano</h2>
-              <p className="section-desc">Análisis territorial focalizado en los 24 partidos del Gran Buenos Aires.</p>
-            </div>
-          </div>
-          <div className="report-grid">
-            {conurbano.map((report, i) => (
-              <ReportCard key={report.id} report={report} index={i} />
-            ))}
-          </div>
-        </section>
-      </SectionReveal>
-
-      {/* ─── Explora los Datos ─── */}
-      <SectionReveal>
-        <section className="landing-section">
-          <div className="section-header">
-            <div className="section-number">04</div>
-            <div>
               <h2 className="section-title">Explora los Datos</h2>
-              <p className="section-desc">Accede a los datasets completos o consulta la informacion mediante inteligencia artificial.</p>
+              <p className="section-desc">Accede a los datasets completos de la Provincia.</p>
             </div>
           </div>
           <div className="explore-options">
             <Link to="/explorar" className="explorer-banner">
               <div className="explorer-banner-glow" aria-hidden="true" />
               <div className="explorer-banner-content">
-                <div className="explorer-banner-icon">🔍</div>
+                <div className="explorer-banner-icon" aria-hidden="true">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <circle cx="11" cy="11" r="8"/>
+                    <path d="m21 21-4.3-4.3"/>
+                  </svg>
+                </div>
                 <div className="explorer-banner-text">
                   <span className="explorer-banner-title">Abrir Data Explorer</span>
                   <span className="explorer-banner-desc">
                     13 datasets • +80.000 registros • 135 municipios
-                  </span>
-                </div>
-              </div>
-              <div className="explorer-banner-arrow">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M5 12h14M12 5l7 7-7 7"/>
-                </svg>
-              </div>
-            </Link>
-            <Link to="/chat" className="ai-banner">
-              <div className="ai-banner-glow" aria-hidden="true" />
-              <div className="explorer-banner-content">
-                <div className="ai-banner-icon">🤖</div>
-                <div className="explorer-banner-text">
-                  <span className="explorer-banner-title">Abrir Asistente IA</span>
-                  <span className="explorer-banner-desc">
-                    16 informes • 13 datasets • Consultas en lenguaje natural
                   </span>
                 </div>
               </div>
@@ -204,13 +193,17 @@ export function Landing() {
 
 // ═══════ Components ═══════
 
-function ReportCard({ report, index }: { report: ReportEntry; index: number }) {
+function ReportCard({ report, index, variant = 'default' }: {
+  report: ReportEntry;
+  index: number;
+  variant?: 'default' | 'featured';
+}) {
   const miniStat = MINI_STATS[report.id] || '';
 
   return (
     <Link
       to={`/${report.slug}`}
-      className="report-card"
+      className={`report-card${variant === 'featured' ? ' report-card-featured' : ''}`}
       style={{
         '--card-color': report.color,
         animationDelay: `${index * 80}ms`,
@@ -218,7 +211,7 @@ function ReportCard({ report, index }: { report: ReportEntry; index: number }) {
     >
       <div className="report-card-glow" aria-hidden="true" />
       <div className="report-card-header">
-        <span className="report-card-icon">{report.icon}</span>
+        <span className="report-card-number">{String(report.order).padStart(2, '0')}</span>
         <span className="report-card-arrow">→</span>
       </div>
       <div className="report-card-body">
@@ -270,7 +263,7 @@ function CountUp({ target, suffix = '' }: { target: number; suffix?: string }) {
   const formatted = value >= 1000000
     ? `${(value / 1000000).toFixed(value >= 10000000 ? 1 : 1).replace('.', ',')}M`
     : value >= 1000
-    ? `${(value / 1000).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, '.')}` 
+    ? `${(value / 1000).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, '.')}`
     : `${value}`;
 
   return (

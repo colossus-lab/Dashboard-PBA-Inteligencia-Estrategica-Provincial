@@ -63,7 +63,7 @@ function ReportContent({ reportEntry }: { reportEntry: ReportEntry }) {
       <SectionReveal>
         <div className="report-hero">
           <div className="report-hero-header">
-            <span className="report-hero-icon">{reportEntry.icon}</span>
+            <span className="report-hero-number">{String(reportEntry.order).padStart(2, '0')}</span>
             <div>
               <h1
                 className="report-hero-title"
@@ -185,16 +185,16 @@ function ReportContent({ reportEntry }: { reportEntry: ReportEntry }) {
             {prevReport && (
               <Link to={`/${prevReport.slug}`} className="glass-card p-5 flex-1 no-underline">
                 <span className="text-xs" style={{ color: 'var(--text-tertiary)' }}>← Anterior</span>
-                <p className="font-semibold mt-1 flex items-center gap-2" style={{ color: 'var(--text-primary)' }}>
-                  <span>{prevReport.icon}</span> {prevReport.shortTitle}
+                <p className="font-semibold mt-1" style={{ color: 'var(--text-primary)' }}>
+                  {prevReport.shortTitle}
                 </p>
               </Link>
             )}
             {nextReport && (
               <Link to={`/${nextReport.slug}`} className="glass-card p-5 flex-1 no-underline text-right">
                 <span className="text-xs" style={{ color: 'var(--text-tertiary)' }}>Siguiente →</span>
-                <p className="font-semibold mt-1 flex items-center justify-end gap-2" style={{ color: 'var(--text-primary)' }}>
-                  {nextReport.shortTitle} <span>{nextReport.icon}</span>
+                <p className="font-semibold mt-1 text-right" style={{ color: 'var(--text-primary)' }}>
+                  {nextReport.shortTitle}
                 </p>
               </Link>
             )}
