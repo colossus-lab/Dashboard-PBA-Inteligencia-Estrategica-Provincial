@@ -46,6 +46,13 @@ function ReportContent({ reportEntry }: { reportEntry: ReportEntry }) {
   const { markdown, data, loading, error } = useReportData(reportEntry.mdPath, reportEntry.dataPath);
   const { setActiveSection } = useStore();
 
+  // ALL hooks MUST be called unconditionally before any early return.
+  const sections = useMemo(() => splitMarkdownSections(markdown || ''), [markdown]);
+  const tocSections = useMemo(
+    () => sections.filter(s => s.heading).map(s => ({ id: slugify(s.heading), heading: s.heading })),
+    [sections],
+  );
+
   if (loading) return <LoadingSkeleton />;
   if (error || !data) {
     return (
@@ -63,13 +70,6 @@ function ReportContent({ reportEntry }: { reportEntry: ReportEntry }) {
   const currentIndex = REPORTS.findIndex(r => r.id === reportEntry.id);
   const prevReport = currentIndex > 0 ? REPORTS[currentIndex - 1] : null;
   const nextReport = currentIndex < REPORTS.length - 1 ? REPORTS[currentIndex + 1] : null;
-
-  // Extract sections from markdown
-  const sections = splitMarkdownSections(markdown || '');
-  const tocSections = useMemo(
-    () => sections.filter(s => s.heading).map(s => ({ id: slugify(s.heading), heading: s.heading })),
-    [sections],
-  );
 
   const ogImageUrl = `https://pba.openarg.org/api/og?slug=${encodeURIComponent(reportEntry.slug)}`;
   const canonical = `https://pba.openarg.org/${reportEntry.slug}`;
