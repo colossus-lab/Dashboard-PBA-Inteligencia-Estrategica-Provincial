@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ThemeToggle } from '../ui/ThemeToggle';
+import { AIChatFab } from '../ui/AIChatFab';
 import { useStore } from '../../store/useStore';
 import { REPORTS, getPoblacionReports, getSectorialReports, getConurbanoReports } from '../../data/reportRegistry';
 import { useScrollProgress } from '../../hooks/useIntersectionObserver';
@@ -31,6 +32,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
         {children}
       </main>
+
+      {/* Floating AI Assistant — present across all routes except /chat */}
+      <AIChatFab />
     </div>
   );
 }
@@ -57,26 +61,24 @@ function TopBar() {
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          {(
-            <button
-              onClick={toggleSidebar}
-              aria-label="Menú de navegación"
-              className="p-2 rounded-lg hover:opacity-80 transition-opacity lg:hidden"
-              style={{ color: 'var(--text-secondary)' }}
-            >
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
-                <path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" strokeWidth="1.5" fill="none" />
-              </svg>
-            </button>
-          )}
+          <button
+            onClick={toggleSidebar}
+            aria-label="Menú de navegación"
+            className="p-2 rounded-lg hover:opacity-80 transition-opacity lg:hidden"
+            style={{ color: 'var(--text-secondary)' }}
+          >
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" strokeWidth="1.5" fill="none" />
+            </svg>
+          </button>
           <Link to="/" className="flex items-center gap-2 no-underline">
-            <span className="text-xl">📊</span>
             <h1 className="text-lg font-bold" style={{
               fontFamily: 'var(--font-heading)',
               background: 'linear-gradient(135deg, var(--accent-cyan), var(--accent-purple, #8b5cf6))',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text',
+              letterSpacing: '0.02em',
             }}>
               Dashboard PBA
             </h1>
@@ -121,6 +123,9 @@ function Sidebar() {
   const sectoriales = getSectorialReports();
   const conurbano = getConurbanoReports();
 
+  const sidebarLinkStyle = { color: 'var(--text-secondary)' };
+  const sidebarLinkClass = 'block px-3 py-2 rounded-lg text-sm no-underline mb-1 transition-colors hover:opacity-90';
+
   return (
     <>
       {/* Backdrop */}
@@ -154,6 +159,23 @@ function Sidebar() {
       >
         <nav className="p-4">
           <h3 className="text-xs font-semibold uppercase tracking-wider mb-3" style={{ color: 'var(--text-tertiary)' }}>
+            Análisis Especial · Conurbano
+          </h3>
+          {conurbano.map(r => (
+            <Link
+              key={r.id}
+              to={`/${r.slug}`}
+              onClick={() => setSidebarOpen(false)}
+              className={sidebarLinkClass}
+              style={sidebarLinkStyle}
+            >
+              {r.shortTitle}
+            </Link>
+          ))}
+
+          <hr className="my-4" style={{ borderColor: 'var(--border-glass)' }} />
+
+          <h3 className="text-xs font-semibold uppercase tracking-wider mb-3" style={{ color: 'var(--text-tertiary)' }}>
             Población
           </h3>
           {poblacion.map(r => (
@@ -161,11 +183,10 @@ function Sidebar() {
               key={r.id}
               to={`/${r.slug}`}
               onClick={() => setSidebarOpen(false)}
-              className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm no-underline mb-1 transition-colors hover:opacity-90"
-              style={{ color: 'var(--text-secondary)' }}
+              className={sidebarLinkClass}
+              style={sidebarLinkStyle}
             >
-              <span>{r.icon}</span>
-              <span>{r.shortTitle}</span>
+              {r.shortTitle}
             </Link>
           ))}
 
@@ -179,29 +200,10 @@ function Sidebar() {
               key={r.id}
               to={`/${r.slug}`}
               onClick={() => setSidebarOpen(false)}
-              className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm no-underline mb-1 transition-colors hover:opacity-90"
-              style={{ color: 'var(--text-secondary)' }}
+              className={sidebarLinkClass}
+              style={sidebarLinkStyle}
             >
-              <span>{r.icon}</span>
-              <span>{r.shortTitle}</span>
-            </Link>
-          ))}
-
-          <hr className="my-4" style={{ borderColor: 'var(--border-glass)' }} />
-
-          <h3 className="text-xs font-semibold uppercase tracking-wider mb-3" style={{ color: 'var(--text-tertiary)' }}>
-            Conurbano
-          </h3>
-          {conurbano.map(r => (
-            <Link
-              key={r.id}
-              to={`/${r.slug}`}
-              onClick={() => setSidebarOpen(false)}
-              className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm no-underline mb-1 transition-colors hover:opacity-90"
-              style={{ color: 'var(--text-secondary)' }}
-            >
-              <span>{r.icon}</span>
-              <span>{r.shortTitle}</span>
+              {r.shortTitle}
             </Link>
           ))}
         </nav>
@@ -209,4 +211,3 @@ function Sidebar() {
     </>
   );
 }
-

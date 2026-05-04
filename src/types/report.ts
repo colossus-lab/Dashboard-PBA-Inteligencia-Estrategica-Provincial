@@ -79,7 +79,7 @@ export interface ReportEntry {
   shortTitle: string;
   category: string;
   subcategory?: string;
-  icon: string;
+  icon?: string;
   color: string;
   mdPath: string;      // path to .md in public/reports/
   dataPath: string;    // path to data.json in public/data/
