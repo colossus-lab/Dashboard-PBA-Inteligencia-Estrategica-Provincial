@@ -110,42 +110,27 @@ export default function ColegiosTab() {
         <ColegiosKpis radios={radios} schools={schools} filteredCount={filteredSchools.length} />
         <ColegiosFilters />
         <div className="conu-panel">
-          <div
-            style={{
-              display: 'flex',
-              flexWrap: 'wrap',
-              alignItems: 'center',
-              gap: 8,
-            }}
-          >
-            <span className="conu-eyebrow" style={{ marginRight: 4 }}>
-              Métrica del radio
-            </span>
-            {RADIO_METRICS.map((m) => {
-              const active = radioMetric === m.id;
-              return (
-                <button
-                  key={m.id}
-                  onClick={() => useEducacionStore.getState().setRadioMetric(m.id)}
-                  className="conu-pill"
-                  data-active={active ? 'true' : 'false'}
-                  title={m.description}
-                >
-                  {m.label}
-                </button>
-              );
-            })}
-            <div
-              style={{
-                marginLeft: 'auto',
-                display: 'flex',
-                gap: 4,
-                padding: 2,
-                border: '1px solid var(--border-glass)',
-                borderRadius: 8,
-                background: 'var(--bg-secondary)',
-              }}
-            >
+          <div className="conu-toolbar">
+            <div className="conu-toolbar-pills">
+              <span className="conu-eyebrow" style={{ marginRight: 4 }}>
+                Métrica del radio
+              </span>
+              {RADIO_METRICS.map((m) => {
+                const active = radioMetric === m.id;
+                return (
+                  <button
+                    key={m.id}
+                    onClick={() => useEducacionStore.getState().setRadioMetric(m.id)}
+                    className="conu-pill"
+                    data-active={active ? 'true' : 'false'}
+                    title={m.description}
+                  >
+                    {m.label}
+                  </button>
+                );
+              })}
+            </div>
+            <div className="conu-toolbar-toggle">
               <button
                 onClick={() => setColegiosViewMode('2d')}
                 className="conu-pill"

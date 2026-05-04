@@ -11,7 +11,7 @@ export default function ConurbanoEducacion() {
     <div className="landing-page">
       <section className="landing-section">
         <div className="section-header">
-          <div className="section-number">🏫</div>
+          <div className="section-number">15</div>
           <div>
             <h2 className="section-title">Vulnerabilidad Escolar en el Conurbano</h2>
             <p className="section-desc">

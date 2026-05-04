@@ -4304,3 +4304,138 @@ body[data-route="presentacion"] main {
   color: #475569;
 }
 
+/* ═══════ Conurbano · Adaptaciones mobile ═══════ */
+
+/* Tabs (Mapa / Serie EPH) — scroll horizontal en mobile chico */
+.conu-shell-tabs {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+.conu-shell-tab {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Toolbar: pills de métrica + toggle 2D/3D */
+.conu-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+.conu-toolbar-pills {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.conu-toolbar-toggle {
+  display: flex;
+  gap: 4px;
+  padding: 2px;
+  border: 1px solid var(--border-glass);
+  border-radius: 8px;
+  background: var(--bg-secondary);
+  flex-shrink: 0;
+}
+@media (max-width: 767px) {
+  .conu-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .conu-toolbar-pills {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    flex-wrap: nowrap;
+    padding-bottom: 4px;
+  }
+  .conu-toolbar-pills .conu-pill {
+    flex-shrink: 0;
+  }
+  .conu-toolbar-toggle {
+    align-self: flex-end;
+  }
+}
+
+/* Mapa: en mobile el alto fijo de 70vh es excesivo */
+@media (max-width: 767px) {
+  .conu-map-wrap {
+    height: min(50vh, 380px);
+  }
+}
+
+/* KPI grid en mobile chico: KPIs largos rompen */
+@media (max-width: 480px) {
+  .conu-kpi-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .conu-kpi {
+    padding: 8px 10px;
+  }
+  .conu-kpi-value {
+    font-size: 16px;
+  }
+}
+
+/* Ranking aside: maxHeight responsive (era 820 inline) */
+.conu-ranking-aside {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+.conu-ranking-card {
+  padding: 0;
+}
+.conu-ranking-list {
+  max-height: 820px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+@media (max-width: 1023px) {
+  /* Mobile/tablet: el ranking aparece debajo del mapa, limitar altura */
+  .conu-ranking-list {
+    max-height: 480px;
+  }
+}
+@media (max-width: 480px) {
+  .conu-ranking-list {
+    max-height: 360px;
+  }
+}
+
+/* Section header dentro de páginas de Conurbano: número/spacing más prolijo en mobile */
+@media (max-width: 640px) {
+  .landing-section .section-header {
+    gap: 0.65rem;
+  }
+  .landing-section .section-number {
+    font-size: 1.5rem;
+  }
+  .landing-section .section-title {
+    font-size: 1.15rem;
+    line-height: 1.25;
+  }
+  .landing-section .section-desc {
+    font-size: 0.82rem;
+  }
+}
+
+/* Alert dentro del KPI grid no debe forzar overflow */
+.conu-alert {
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+/* SchoolDetail card: padding y overflow en mobile */
+@media (max-width: 640px) {
+  .conu-card {
+    padding: 12px;
+  }
+}
+
