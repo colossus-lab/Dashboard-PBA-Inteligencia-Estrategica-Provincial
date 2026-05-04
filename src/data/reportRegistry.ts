@@ -136,6 +136,7 @@ export const REPORTS: ReportEntry[] = [
     mdPath: '/reports/seguridad.md',
     dataPath: '/data/seguridad.json',
     order: 11,
+    hideMap: true,
   },
   {
     id: 'economia-fiscal',
