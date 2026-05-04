@@ -10,6 +10,15 @@ function getMessageText(m: UIMessage): string {
     .join('');
 }
 
+// Solo aceptamos partes de tipo 'text' en mensajes entrantes. Tipos como
+// 'image' o 'file' no son necesarios para este chat y permitirían eludir
+// los caps de longitud (que solo cuentan partes de texto) o consumir tokens
+// desmedidamente con data URLs grandes.
+function hasOnlyTextParts(m: UIMessage): boolean {
+  if (!Array.isArray(m.parts)) return false;
+  return m.parts.every((p) => p && typeof p === 'object' && (p as { type?: unknown }).type === 'text');
+}
+
 // Fallo explícito si falta IP_HASH_SALT en producción: un salt público en el
 // bundle permitiría correlacionar IPs hasheadas. En dev se permite el fallback.
 const IS_PROD = process.env.NODE_ENV === 'production';
@@ -196,7 +205,20 @@ export async function POST(request: Request) {
       'localhost',
       '127.0.0.1',
     ]);
-    const ALLOWED_HOST_SUFFIXES = ['.vercel.app']; // previews de Vercel
+    // Previews de Vercel: en lugar de aceptar cualquier *.vercel.app (lo que
+    // permitiría a *cualquier* deploy de Vercel hacer requests cross-origin
+    // contra nuestra API y consumir nuestros tokens), exigimos que matcheen
+    // el patrón de deploys de este proyecto. Configurable por env var para
+    // poder ajustarse sin redeploy si Vercel cambia el formato.
+    // Default: deploys del proyecto "dashboard-pba" o "pba-*" del owner colossus-lab.
+    const PREVIEW_REGEX = (() => {
+      const raw = process.env.ALLOWED_PREVIEW_HOST_REGEX;
+      try {
+        return raw ? new RegExp(raw) : /^(dashboard-pba|pba)[a-z0-9-]*-colossus-lab\.vercel\.app$/i;
+      } catch {
+        return /^$/;
+      }
+    })();
 
     let originHost = '';
     if (rawOrigin) {
@@ -209,8 +231,7 @@ export async function POST(request: Request) {
 
     const isOriginAllowed =
       originHost !== '' &&
-      (ALLOWED_HOSTS.has(originHost) ||
-        ALLOWED_HOST_SUFFIXES.some((suf) => originHost.endsWith(suf)));
+      (ALLOWED_HOSTS.has(originHost) || PREVIEW_REGEX.test(originHost));
 
     // Deny-by-default en prod si falta Origin/Referer: los browsers siempre los
     // envían en POST cross-origin/same-origin, así que sólo afecta a clientes
@@ -235,9 +256,19 @@ export async function POST(request: Request) {
       });
     }
 
-    // 3. IP Rate Limiting (primer IP del XFF para evitar spoofing por lista)
+    // 3. IP Rate Limiting.
+    // Vercel agrega el IP real del cliente al final del XFF y expone
+    // x-real-ip y x-vercel-forwarded-for como headers de confianza.
+    // Tomar el *primer* IP del XFF es spoofeable: el cliente puede mandar
+    // X-Forwarded-For: 1.2.3.4 y aparecer con esa IP.
+    // Preferimos x-real-ip y x-vercel-forwarded-for; si solo hay XFF, tomamos
+    // el último (el agregado por nuestro edge, no el provisto por el cliente).
+    const xRealIp = request.headers.get('x-real-ip') || '';
+    const xVercelFf = request.headers.get('x-vercel-forwarded-for') || '';
     const xff = request.headers.get('x-forwarded-for') || '';
-    const ip = xff.split(',')[0].trim() || request.headers.get('x-real-ip') || 'unknown';
+    const xffParts = xff.split(',').map((s) => s.trim()).filter(Boolean);
+    const xffLast = xffParts.length > 0 ? xffParts[xffParts.length - 1] : '';
+    const ip = xRealIp || xVercelFf.split(',').map((s) => s.trim()).filter(Boolean).pop() || xffLast || 'unknown';
     const kind = ip === 'unknown' ? 'unknown' : 'known';
     const allowed = await checkRateLimit(ip, kind);
     if (!allowed) {
@@ -251,14 +282,30 @@ export async function POST(request: Request) {
       );
     }
 
-    // 4. Cota dura de body size antes de parsear
+    // 4. Cota dura de body size — verificada al consumir el stream, no solo
+    // por Content-Length. Un cliente puede mandar un header pequeño y un body
+    // grande (chunked, o sin Content-Length); leemos el texto y validamos
+    // longitud real antes de parsear JSON.
     const MAX_BODY_BYTES = 64 * 1024;
-    const contentLength = Number(request.headers.get('content-length') || 0);
-    if (contentLength > MAX_BODY_BYTES) {
+    const declaredLength = Number(request.headers.get('content-length') || 0);
+    if (declaredLength > MAX_BODY_BYTES) {
+      return new Response(JSON.stringify({ error: 'Payload demasiado grande.' }), { status: 413 });
+    }
+    const rawBody = await request.text();
+    if (rawBody.length > MAX_BODY_BYTES) {
       return new Response(JSON.stringify({ error: 'Payload demasiado grande.' }), { status: 413 });
     }
 
-    const { messages }: { messages: UIMessage[] } = await request.json();
+    let parsed: { messages?: UIMessage[] };
+    try {
+      parsed = JSON.parse(rawBody);
+    } catch {
+      return new Response(JSON.stringify({ error: 'JSON inválido.' }), {
+        status: 400,
+        headers: { 'Content-Type': 'application/json' },
+      });
+    }
+    const { messages }: { messages?: UIMessage[] } = parsed;
 
     // 5. Validación de formato
     if (!messages || !Array.isArray(messages) || messages.length === 0) {
@@ -269,12 +316,16 @@ export async function POST(request: Request) {
     const MAX_MESSAGES = 10;
     const truncatedMessages = messages.slice(-MAX_MESSAGES);
 
-    // 6. Validación de contenido: partes por mensaje, longitud por mensaje, longitud total
+    // 6. Validación de contenido: tipo de partes, partes por mensaje,
+    // longitud por mensaje, longitud total.
     const MAX_PARTS_PER_MESSAGE = 20;
     const MAX_CHAR_PER_MESSAGE = 2000;
     const MAX_TOTAL_CHARS = 6000;
     let totalChars = 0;
     for (const m of truncatedMessages) {
+      if (!hasOnlyTextParts(m)) {
+        return new Response(JSON.stringify({ error: 'Solo se permiten mensajes de texto.' }), { status: 400 });
+      }
       if (Array.isArray(m.parts) && m.parts.length > MAX_PARTS_PER_MESSAGE) {
         return new Response(JSON.stringify({ error: 'Mensaje con demasiadas partes.' }), { status: 400 });
       }
@@ -308,7 +359,12 @@ export async function POST(request: Request) {
 
     return result.toUIMessageStreamResponse();
   } catch (error) {
-    console.error('[API Chat Error]', error);
+    // No loguear el error completo: el SDK puede incluir el body del request
+    // (mensajes del usuario) en el stack/cause, lo que filtraría conversaciones
+    // a los logs de la plataforma. Loguear solo nombre + mensaje sanitizado.
+    const name = error instanceof Error ? error.name : 'UnknownError';
+    const msg = error instanceof Error ? error.message : String(error);
+    console.error('[API Chat Error]', name, sanitizeForLog(msg, 300));
     return new Response(
       JSON.stringify({ error: 'Error al procesar la solicitud' }),
       { status: 500, headers: { 'Content-Type': 'application/json' } }

@@ -69,8 +69,13 @@ function checkMemory(key: string, limit: number): boolean {
 
 /**
  * Devuelve true si la petición está permitida, false si se superó el límite.
- * En caso de error de red con Upstash, falla-abierto (permite) para no
- * bloquear el servicio ante caídas del proveedor.
+ *
+ * Si Upstash falla, hacemos fail-closed-suave: caemos al limitador en
+ * memoria (per-instancia) en vez de permitir todo. Es menos estricto que
+ * el sliding window distribuido, pero evita que un atacante que pueda
+ * inducir errores en Upstash (timeouts, exceso de cuota) desactive el
+ * límite globalmente. Antes esto retornaba `true` (fail-open), un riesgo
+ * documentado en el audit de seguridad.
  */
 export async function checkRateLimit(ip: string, kind: Kind): Promise<boolean> {
   const max = kind === 'unknown' ? MAX_UNKNOWN : MAX_KNOWN;
@@ -82,8 +87,8 @@ export async function checkRateLimit(ip: string, kind: Kind): Promise<boolean> {
       const { success } = await limiter.limit(key);
       return success;
     } catch (err) {
-      console.warn('[rateLimit] Fallo Upstash, fail-open:', err);
-      return true;
+      console.warn('[rateLimit] Fallo Upstash, fail-closed-soft a memoria:', err);
+      return checkMemory(key, max);
     }
   }
 
