@@ -166,7 +166,7 @@ function PieChartView({ chart, height }: { chart: ChartConfig; height: number })
         data={chart.data}
         margin={mobile
           ? { top: 20, right: 20, bottom: mobileLegendHeight + 20, left: 20 }
-          : { top: 30, right: 100, bottom: 40, left: 100 }
+          : { top: 30, right: 90, bottom: 20, left: 90 }
         }
         innerRadius={0.5}
         padAngle={2}
@@ -201,18 +201,18 @@ function PieChartView({ chart, height }: { chart: ChartConfig; height: number })
             {formatValue(datum.value)} ({((datum.arc.endAngle - datum.arc.startAngle) / (2 * Math.PI) * 100).toFixed(1)}%)
           </div>
         )}
-        legends={[
+        legends={mobile ? [
           {
             anchor: 'bottom',
-            direction: mobile ? 'column' : 'row',
-            translateY: mobile ? mobileLegendHeight + 10 : 36,
-            itemWidth: mobile ? 200 : 120,
+            direction: 'column',
+            translateY: mobileLegendHeight + 10,
+            itemWidth: 200,
             itemHeight: 20,
             itemTextColor: isDark ? '#94a3b8' : '#475569',
             symbolSize: 10,
             symbolShape: 'circle',
           },
-        ]}
+        ] : []}
       />
     </div>
   );
