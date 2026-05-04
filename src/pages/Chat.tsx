@@ -4,11 +4,14 @@ import { DefaultChatTransport } from 'ai';
 import type { UIMessage } from 'ai';
 import { Link } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
+import { Helmet } from 'react-helmet-async';
+import { Sparkles, ArrowLeft, Send, User } from 'lucide-react';
+import { getCategoryIcon, type IconComp } from '../lib/categoryIcons';
 
-const SUGGESTED_QUESTIONS = [
+const SUGGESTED_QUESTIONS: { category: string; iconKey: string; questions: string[] }[] = [
   {
-    category: 'Economia',
-    icon: '📊',
+    category: 'Economía',
+    iconKey: 'economia',
     questions: [
       '¿Cuánto recaudó la provincia en 2025?',
       '¿Qué porcentaje representa Ingresos Brutos?',
@@ -17,7 +20,7 @@ const SUGGESTED_QUESTIONS = [
   },
   {
     category: 'Municipios',
-    icon: '🏛️',
+    iconKey: 'municipios',
     questions: [
       '¿Qué municipio recibe más transferencias?',
       '¿Cuáles municipios crecieron más en 2024-2025?',
@@ -26,7 +29,7 @@ const SUGGESTED_QUESTIONS = [
   },
   {
     category: 'Seguridad',
-    icon: '🛡️',
+    iconKey: 'seguridad',
     questions: [
       '¿Cuáles son los municipios con más hechos delictivos?',
       '¿Qué tipos de delitos son más frecuentes?',
@@ -34,7 +37,7 @@ const SUGGESTED_QUESTIONS = [
   },
   {
     category: 'Agricultura',
-    icon: '🌾',
+    iconKey: 'agricultura',
     questions: [
       '¿Cuáles son los principales cultivos de la provincia?',
       '¿Cuántas cabezas de ganado hay?',
@@ -86,19 +89,24 @@ export function Chat() {
 
   return (
     <div className="chat-container">
+      <Helmet>
+        <title>Asistente IA · Dashboard PBA</title>
+        <meta name="description" content="Consultá los 16 informes y 13 datasets de la Provincia de Buenos Aires en lenguaje natural." />
+        <link rel="canonical" href="https://pba.openarg.org/chat" />
+      </Helmet>
       {/* Header */}
       <div className="chat-header">
-        <Link to="/" className="chat-back-link">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
-            <path fillRule="evenodd" d="M17 10a.75.75 0 01-.75.75H5.612l4.158 3.96a.75.75 0 11-1.04 1.08l-5.5-5.25a.75.75 0 010-1.08l5.5-5.25a.75.75 0 111.04 1.08L5.612 9.25H16.25A.75.75 0 0117 10z" />
-          </svg>
+        <Link to="/" className="chat-back-link" aria-label="Volver al dashboard">
+          <ArrowLeft size={18} />
           <span>Volver</span>
         </Link>
         <div className="chat-header-title">
-          <span className="chat-header-icon">🤖</span>
+          <span className="chat-header-icon" aria-hidden="true">
+            <Sparkles size={22} />
+          </span>
           <div>
-            <h1>Asistente de Inteligencia Estrategica</h1>
-            <p>Consulta los datos e informes del Dashboard PBA</p>
+            <h1>Asistente de Inteligencia Estratégica</h1>
+            <p>Consultá los datos e informes del Dashboard PBA</p>
           </div>
         </div>
         <div className="chat-header-status">
@@ -112,37 +120,44 @@ export function Chat() {
       </div>
 
       {/* Messages Area */}
-      <div className="chat-messages">
+      <div className="chat-messages" aria-live="polite" aria-atomic="false">
         {messages.length === 0 ? (
           <div className="chat-welcome">
-            <div className="chat-welcome-icon">🤖</div>
-            <h2>Bienvenido al Asistente de Inteligencia Estrategica</h2>
+            <div className="chat-welcome-icon" aria-hidden="true">
+              <Sparkles size={56} />
+            </div>
+            <h2>Bienvenido al Asistente de Inteligencia Estratégica</h2>
             <p>
               Puedo ayudarte a explorar los datos de la Provincia de Buenos Aires.
-              Tengo acceso a 14 informes ejecutivos y 13 bases de datos con mas de 82,000 registros.
+              Tengo acceso a 16 informes ejecutivos y 13 bases de datos con más de 80.000 registros.
             </p>
 
             <div className="chat-suggestions">
-              {SUGGESTED_QUESTIONS.map((group) => (
-                <div key={group.category} className="chat-suggestion-group">
-                  <h3>
-                    <span>{group.icon}</span>
-                    {group.category}
-                  </h3>
-                  <div className="chat-suggestion-list">
-                    {group.questions.map((q) => (
-                      <button
-                        key={q}
-                        onClick={() => handleSuggestionClick(q)}
-                        className="chat-suggestion-btn"
-                        disabled={isLoading}
-                      >
-                        {q}
-                      </button>
-                    ))}
+              {SUGGESTED_QUESTIONS.map((group) => {
+                const Icon: IconComp = getCategoryIcon(group.iconKey);
+                return (
+                  <div key={group.category} className="chat-suggestion-group">
+                    <h3>
+                      <span className="chat-suggestion-icon" aria-hidden="true">
+                        <Icon size={16} />
+                      </span>
+                      {group.category}
+                    </h3>
+                    <div className="chat-suggestion-list">
+                      {group.questions.map((q) => (
+                        <button
+                          key={q}
+                          onClick={() => handleSuggestionClick(q)}
+                          className="chat-suggestion-btn"
+                          disabled={isLoading}
+                        >
+                          {q}
+                        </button>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         ) : (
@@ -152,12 +167,12 @@ export function Chat() {
                 key={message.id}
                 className={`chat-message ${message.role === 'user' ? 'chat-message-user' : 'chat-message-assistant'}`}
               >
-                <div className="chat-message-avatar">
-                  {message.role === 'user' ? '👤' : '🤖'}
+                <div className="chat-message-avatar" aria-hidden="true">
+                  {message.role === 'user' ? <User size={18} /> : <Sparkles size={18} />}
                 </div>
                 <div className="chat-message-content">
                   <div className="chat-message-role">
-                    {message.role === 'user' ? 'Tu' : 'Asistente'}
+                    {message.role === 'user' ? 'Tú' : 'Asistente'}
                   </div>
                   <div className="chat-message-text">
                     {message.role === 'assistant' ? (
@@ -181,7 +196,9 @@ export function Chat() {
             ))}
             {isLoading && messages[messages.length - 1]?.role === 'user' && (
               <div className="chat-message chat-message-assistant">
-                <div className="chat-message-avatar">🤖</div>
+                <div className="chat-message-avatar" aria-hidden="true">
+                  <Sparkles size={18} />
+                </div>
                 <div className="chat-message-content">
                   <div className="chat-message-role">Asistente</div>
                   <div className="chat-typing-indicator">
@@ -199,7 +216,7 @@ export function Chat() {
 
       {/* Error display */}
       {error && (
-        <div className="chat-error">
+        <div className="chat-error" role="alert">
           <span>Error: {error.message || 'No se pudo procesar tu mensaje'}</span>
         </div>
       )}
@@ -212,15 +229,17 @@ export function Chat() {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={handleKeyDown}
-            placeholder="Escribe tu pregunta sobre los datos de la provincia..."
+            placeholder="Escribí tu pregunta sobre los datos de la provincia..."
             rows={1}
             disabled={isLoading}
             className="chat-input"
+            aria-label="Escribir pregunta"
           />
           <button
             type="submit"
             disabled={!input.trim() || isLoading}
             className="chat-submit-btn"
+            aria-label="Enviar pregunta"
           >
             {isLoading ? (
               <svg className="chat-spinner" viewBox="0 0 24 24" fill="none">
@@ -228,14 +247,12 @@ export function Chat() {
                 <path d="M12 2a10 10 0 0 1 10 10" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
               </svg>
             ) : (
-              <svg viewBox="0 0 24 24" fill="currentColor">
-                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
-              </svg>
+              <Send size={18} />
             )}
           </button>
         </div>
         <p className="chat-input-hint">
-          Presiona Enter para enviar, Shift+Enter para nueva linea
+          Presioná Enter para enviar, Shift+Enter para nueva línea
         </p>
       </form>
     </div>

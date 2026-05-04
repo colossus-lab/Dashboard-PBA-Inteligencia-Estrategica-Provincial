@@ -1,15 +1,18 @@
 import { Link } from 'react-router-dom';
 import { useEffect, useRef, useState, useCallback } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, Search } from 'lucide-react';
 import { getPoblacionReports, getSectorialReports, getConurbanoReports } from '../data/reportRegistry';
 import { SectionReveal } from '../components/ui/SectionReveal';
+import { SiteFooter } from '../components/layout/SiteFooter';
 import type { ReportEntry } from '../types/report';
 
 // ─── Macro KPIs for the hero ───
 const HERO_STATS = [
-  { value: 17569053, label: 'Habitantes', suffix: '' },
-  { value: 135, label: 'Municipios', suffix: '' },
-  { value: 80000, label: 'Registros', suffix: '+' },
-  { value: 16, label: 'Reportes', suffix: '' },
+  { value: 17569053, label: 'Habitantes', suffix: '', tooltip: 'Censo Nacional 2022 · INDEC' },
+  { value: 134, label: 'Municipios', suffix: '', tooltip: 'Provincia de Buenos Aires' },
+  { value: 80000, label: 'Registros', suffix: '+', tooltip: 'Distribuidos en 13 datasets navegables' },
+  { value: 16, label: 'Informes', suffix: '', tooltip: '16 informes ejecutivos basados en datos abiertos' },
 ];
 
 // ─── Mini-stats per report (contextual data for cards) ───
@@ -39,6 +42,15 @@ export function Landing() {
 
   return (
     <div className="landing-page">
+      <Helmet>
+        <title>Dashboard PBA · Inteligencia Estratégica Provincial</title>
+        <meta
+          name="description"
+          content="Plataforma de datos abiertos con análisis interactivo de la Provincia de Buenos Aires. 17,5M habitantes, 134 municipios, 16 informes ejecutivos."
+        />
+        <link rel="canonical" href="https://pba.openarg.org" />
+        <meta property="og:image" content="https://pba.openarg.org/api/og" />
+      </Helmet>
       {/* ─── Animated Hero ─── */}
       <SectionReveal>
         <header className="landing-hero">
@@ -59,11 +71,19 @@ export function Landing() {
               <span className="hero-title-light">de la Provincia de Buenos Aires</span>
             </h1>
             <p className="hero-subtitle">
+              Explorá <span className="hero-highlight">17,5M habitantes</span> y{' '}
+              <span className="hero-highlight">134 municipios</span> con 16 informes ejecutivos
+              basados en datos oficiales del INDEC, Censo 2022, SNIC, SIPA y EPH.
+            </p>
+            <p className="hero-attribution">
               Powered by{' '}
               <a href="https://colossuslab.org" target="_blank" rel="noopener noreferrer" className="hero-link">
                 ColossusLab.org
               </a>{' '}
-              — Datos Abiertos vía <span className="hero-highlight">OpenArg</span>
+              · Datos vía{' '}
+              <a href="https://openarg.org" target="_blank" rel="noopener noreferrer" className="hero-link">
+                OpenArg
+              </a>
             </p>
 
             {/* ─── Count-up Stats ─── */}
@@ -71,7 +91,7 @@ export function Landing() {
               {HERO_STATS.map((stat, i) => (
                 <div key={stat.label}>
                   {i > 0 && <span className="hero-stat-divider" />}
-                  <div className="hero-stat">
+                  <div className="hero-stat" title={stat.tooltip}>
                     <CountUp target={stat.value} suffix={stat.suffix} />
                     <span className="hero-stat-label">{stat.label}</span>
                   </div>
@@ -137,37 +157,25 @@ export function Landing() {
         </section>
       </SectionReveal>
 
-      {/* ─── Explora los Datos ─── */}
+      {/* ─── Catálogo de Datos (compact) ─── */}
       <SectionReveal>
-        <section className="landing-section">
-          <div className="section-header">
-            <div className="section-number">03</div>
-            <div>
-              <h2 className="section-title">Explora los Datos</h2>
-              <p className="section-desc">Accede a los datasets completos de la Provincia.</p>
-            </div>
-          </div>
+        <section className="landing-section landing-section-compact">
           <div className="explore-options">
-            <Link to="/explorar" className="explorer-banner">
+            <Link to="/explorar" className="explorer-banner explorer-banner-large">
               <div className="explorer-banner-glow" aria-hidden="true" />
               <div className="explorer-banner-content">
                 <div className="explorer-banner-icon" aria-hidden="true">
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <circle cx="11" cy="11" r="8"/>
-                    <path d="m21 21-4.3-4.3"/>
-                  </svg>
+                  <Search size={32} />
                 </div>
                 <div className="explorer-banner-text">
-                  <span className="explorer-banner-title">Abrir Data Explorer</span>
+                  <span className="explorer-banner-title">Catálogo de Datos</span>
                   <span className="explorer-banner-desc">
-                    13 datasets • +80.000 registros • 135 municipios
+                    13 datasets navegables · 80.000+ registros · 134 municipios
                   </span>
                 </div>
               </div>
               <div className="explorer-banner-arrow">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M5 12h14M12 5l7 7-7 7"/>
-                </svg>
+                <ArrowRight size={24} />
               </div>
             </Link>
           </div>
@@ -175,18 +183,7 @@ export function Landing() {
       </SectionReveal>
 
       {/* ─── Footer ─── */}
-      <footer className="landing-footer">
-        <div className="footer-rule" />
-        <p>
-          <a href="https://colossuslab.org" target="_blank" rel="noopener noreferrer" className="footer-link">
-            ColossusLab.org
-          </a>{' '}
-          •{' '}
-          <a href="https://openarg.org" target="_blank" rel="noopener noreferrer" className="footer-link">
-            OpenArg.org
-          </a>
-        </p>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }
@@ -236,12 +233,16 @@ function CountUp({ target, suffix = '' }: { target: number; suffix?: string }) {
   const animate = useCallback(() => {
     if (hasAnimated.current) return;
     hasAnimated.current = true;
+    const reduce = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+    if (reduce) {
+      setValue(target);
+      return;
+    }
     const duration = 2000;
     const startTime = performance.now();
     const step = (now: number) => {
       const elapsed = now - startTime;
       const progress = Math.min(elapsed / duration, 1);
-      // Ease-out cubic
       const eased = 1 - Math.pow(1 - progress, 3);
       setValue(Math.floor(eased * target));
       if (progress < 1) requestAnimationFrame(step);

@@ -10,6 +10,7 @@ import { Analytics } from '@vercel/analytics/react';
 
 const ConurbanoEducacion = React.lazy(() => import('./pages/conurbano/ConurbanoEducacion'));
 const ConurbanoSeguridad = React.lazy(() => import('./pages/conurbano/ConurbanoSeguridad'));
+const PresentationMode = React.lazy(() => import('./pages/PresentationMode'));
 
 function ConurbanoFallback() {
   return (
@@ -43,7 +44,7 @@ class ErrorBoundary extends React.Component<
           background: '#0a0f1c',
           minHeight: '100vh',
         }}>
-          <h1 style={{ color: '#ef4444', fontSize: '2rem' }}>⚠️ Error de renderizado</h1>
+          <h1 style={{ color: '#ef4444', fontSize: '2rem' }}>Error de renderizado</h1>
           <pre style={{
             background: '#1e293b',
             padding: '20px',
@@ -104,6 +105,14 @@ export default function App() {
               element={
                 <Suspense fallback={<ConurbanoFallback />}>
                   <ConurbanoSeguridad />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/presentacion"
+              element={
+                <Suspense fallback={<ConurbanoFallback />}>
+                  <PresentationMode />
                 </Suspense>
               }
             />

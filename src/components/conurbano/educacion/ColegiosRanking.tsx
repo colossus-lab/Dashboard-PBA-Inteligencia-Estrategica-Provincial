@@ -21,8 +21,8 @@ export default function ColegiosRanking({ schools }: { schools: School[] }) {
     : 'Mejores primero (mayor cobertura)';
 
   return (
-    <aside style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-      <div className="conu-card" style={{ padding: 0 }}>
+    <aside className="conu-ranking-aside">
+      <div className="conu-card conu-ranking-card">
         <div
           style={{
             borderBottom: '1px solid var(--border-glass)',
@@ -52,7 +52,7 @@ export default function ColegiosRanking({ schools }: { schools: School[] }) {
             )}
           </div>
         </div>
-        <div style={{ maxHeight: 820, overflowY: 'auto' }}>
+        <div className="conu-ranking-list">
           <ol style={{ listStyle: 'none', margin: 0, padding: 0 }}>
             {ranking.slice(0, 500).map(({ s, v }, i) => {
               const isSel = selectedSchoolCue === s.cue;
