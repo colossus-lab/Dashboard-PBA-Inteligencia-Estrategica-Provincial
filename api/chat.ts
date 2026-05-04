@@ -207,14 +207,13 @@ export async function POST(request: Request) {
     ]);
     // Previews de Vercel: en lugar de aceptar cualquier *.vercel.app (lo que
     // permitiría a *cualquier* deploy de Vercel hacer requests cross-origin
-    // contra nuestra API y consumir nuestros tokens), exigimos que matcheen
-    // el patrón de deploys de este proyecto. Configurable por env var para
-    // poder ajustarse sin redeploy si Vercel cambia el formato.
-    // Default: deploys del proyecto "dashboard-pba" o "pba-*" del owner colossus-lab.
+    // contra nuestra API y consumir nuestros tokens), restringimos a deploys
+    // del propio team. Configurable por env var.
+    // Default: cualquier proyecto del team `colossus-lab`.
     const PREVIEW_REGEX = (() => {
       const raw = process.env.ALLOWED_PREVIEW_HOST_REGEX;
       try {
-        return raw ? new RegExp(raw) : /^(dashboard-pba|pba)[a-z0-9-]*-colossus-lab\.vercel\.app$/i;
+        return raw ? new RegExp(raw) : /^[a-z0-9-]+-colossus-lab\.vercel\.app$/i;
       } catch {
         return /^$/;
       }
@@ -229,9 +228,16 @@ export async function POST(request: Request) {
       }
     }
 
+    // Same-origin: si el Origin/Referer coincide con el Host al que llegó el
+    // request, es por definición el propio deploy invocando su propia API.
+    // Esto cubre cualquier preview/branch/dominio custom sin tener que
+    // enumerarlos en allowlist o regex.
+    const requestHost = (request.headers.get('host') || '').toLowerCase();
+    const isSameOrigin = originHost !== '' && originHost.toLowerCase() === requestHost;
+
     const isOriginAllowed =
       originHost !== '' &&
-      (ALLOWED_HOSTS.has(originHost) || PREVIEW_REGEX.test(originHost));
+      (isSameOrigin || ALLOWED_HOSTS.has(originHost) || PREVIEW_REGEX.test(originHost));
 
     // Deny-by-default en prod si falta Origin/Referer: los browsers siempre los
     // envían en POST cross-origin/same-origin, así que sólo afecta a clientes
