@@ -5,6 +5,10 @@ import { ResponsiveBar } from '@nivo/bar';
 import { ResponsivePie } from '@nivo/pie';
 import { SectionReveal } from '../components/ui/SectionReveal';
 import { useStore } from '../store/useStore';
+import {
+  ArrowLeft, Database, BarChart3, Building2, FileText,
+  TrendingUp, PieChart, AlertCircle,
+} from 'lucide-react';
 import type { ExplorerDataset, ExplorerColumn } from '../types/explorer';
 
 type SortDir = 'asc' | 'desc';
@@ -152,10 +156,12 @@ export function ExplorerDetail() {
 
   if (error || !data) return (
     <div className="explorer-page">
-      <div className="explorer-empty">
-        <span>❌</span>
+      <div className="explorer-empty" role="status">
+        <span aria-hidden="true"><AlertCircle size={36} /></span>
         <p>Dataset no encontrado</p>
-        <Link to="/explorar" className="explorer-back">← Volver al catálogo</Link>
+        <Link to="/explorar" className="btn-secondary">
+          <ArrowLeft size={14} aria-hidden="true" /> Volver al catálogo
+        </Link>
       </div>
     </div>
   );
@@ -164,14 +170,24 @@ export function ExplorerDetail() {
     <div className="explorer-page">
       <SectionReveal>
         <header className="explorer-detail-header">
-          <Link to="/explorar" className="explorer-back">← Catálogo de Datos</Link>
+          <Link to="/explorar" className="explorer-back">
+            <ArrowLeft size={14} aria-hidden="true" /> Catálogo de Datos
+          </Link>
           <h1 className="explorer-detail-title">{data.title}</h1>
           <div className="explorer-detail-meta">
-            <span className="explorer-meta-badge">📋 {data.source}</span>
-            <span className="explorer-meta-badge">📊 {data.totalRows.toLocaleString('es-AR')} registros</span>
-            <span className="explorer-meta-badge">📐 {data.columns.length} columnas</span>
+            <span className="explorer-meta-badge">
+              <FileText size={14} aria-hidden="true" /> {data.source}
+            </span>
+            <span className="explorer-meta-badge">
+              <Database size={14} aria-hidden="true" /> {data.totalRows.toLocaleString('es-AR')} registros
+            </span>
+            <span className="explorer-meta-badge">
+              <BarChart3 size={14} aria-hidden="true" /> {data.columns.length} columnas
+            </span>
             {data.municipios.length > 0 && (
-              <span className="explorer-meta-badge">🏛️ {data.municipios.length} municipios</span>
+              <span className="explorer-meta-badge">
+                <Building2 size={14} aria-hidden="true" /> {data.municipios.length} municipios
+              </span>
             )}
           </div>
         </header>
@@ -181,15 +197,32 @@ export function ExplorerDetail() {
       {autoChartData && (
         <SectionReveal>
           <section className="explorer-charts-section">
-            <div className="explorer-chart-tabs">
-              <button className={`explorer-chart-tab ${chartTab === 'line' ? 'active' : ''}`} onClick={() => setChartTab('line')}>
-                📈 Temporal
+            <div className="explorer-chart-tabs" role="tablist">
+              <button
+                role="tab"
+                aria-selected={chartTab === 'line'}
+                className={`explorer-chart-tab ${chartTab === 'line' ? 'active' : ''}`}
+                onClick={() => setChartTab('line')}
+              >
+                <TrendingUp size={14} aria-hidden="true" /> Temporal
               </button>
-              <button className={`explorer-chart-tab ${chartTab === 'bar' ? 'active' : ''}`} onClick={() => setChartTab('bar')} disabled={autoChartData.barData.length === 0}>
-                📊 Ranking
+              <button
+                role="tab"
+                aria-selected={chartTab === 'bar'}
+                className={`explorer-chart-tab ${chartTab === 'bar' ? 'active' : ''}`}
+                onClick={() => setChartTab('bar')}
+                disabled={autoChartData.barData.length === 0}
+              >
+                <BarChart3 size={14} aria-hidden="true" /> Ranking
               </button>
-              <button className={`explorer-chart-tab ${chartTab === 'pie' ? 'active' : ''}`} onClick={() => setChartTab('pie')} disabled={autoChartData.pieData.length === 0}>
-                🥧 Distribución
+              <button
+                role="tab"
+                aria-selected={chartTab === 'pie'}
+                className={`explorer-chart-tab ${chartTab === 'pie' ? 'active' : ''}`}
+                onClick={() => setChartTab('pie')}
+                disabled={autoChartData.pieData.length === 0}
+              >
+                <PieChart size={14} aria-hidden="true" /> Distribución
               </button>
             </div>
             <div className="explorer-chart-container">
