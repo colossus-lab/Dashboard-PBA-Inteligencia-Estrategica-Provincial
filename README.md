@@ -8,147 +8,190 @@
 
 # 📊 Dashboard PBA — Inteligencia Estratégica Provincial
 
-**Dashboard interactivo de datos abiertos de la Provincia de Buenos Aires.** Análisis de 7 áreas estratégicas con informes ejecutivos, visualizaciones dinámicas, mapas coropléticos y exploración tabular de datasets.
+**La provincia de Buenos Aires, en datos.** Una plataforma para explorar 16 informes ejecutivos, 13 datasets municipales, mapas 3D interactivos y un asistente de IA que responde preguntas sobre datos públicos.
 
-> 🇦🇷 Proyecto de datos abiertos que transforma información pública en inteligencia ejecutiva para la toma de decisiones.
-
----
-
-## ✨ Funcionalidades
-
-### 📋 Informes Ejecutivos
-- **7 categorías principales**: Población, Educación, Salud, Seguridad, Economía, Agricultura, Industria
-- **8 sub-informes censales**: Estructura poblacional, condiciones habitacionales, fecundidad, viviendas, educación censal, economía, salud/previsión
-- Renderizado Markdown con tablas estilizadas y blockquotes interpretativos
-- KPI counters animados y navegación entre informes
-
-### 📈 Visualizaciones Dinámicas
-- Charts auto-generados por sección (bar, pie, line) via **Nivo**
-- Layout split: texto a la izquierda, charts sticky a la derecha
-- Tema claro/oscuro con transiciones suaves
-- Mapas coropléticos SVG de los 135 municipios bonaerenses
-
-### 🔍 Data Explorer
-- Catálogo de **13 datasets** con búsqueda y filtrado por categoría
-- Tablas interactivas con ordenamiento, paginación y filtros por columna
-- Auto-charts generados dinámicamente según tipo de datos
-- Exportación y exploración granular
-
-### 🎨 Diseño
-- Glassmorphism + gradientes premium
-- Dark/Light mode con toggle persistente
-- Responsive: optimizado para desktop, tablet y mobile
-- Tipografía: Inter + Outfit via Google Fonts
-- Micro-animaciones y secciones con reveal on-scroll
+> 🇦🇷 Convertimos datos abiertos del Estado argentino en inteligencia estratégica accesible para periodistas, funcionarios, investigadores y ciudadanía.
 
 ---
 
-## 🏗️ Arquitectura
+## 🧭 Guía rápida
 
+Cuatro grandes ejes para navegar la plataforma:
+
+| Eje | Qué encontrás | Ruta |
+|-----|---------------|------|
+| 📋 **Informes ejecutivos** | 16 informes con análisis, KPIs y charts | `/poblacion/...`, `/educacion`, `/salud`, ... |
+| 🌆 **Conurbano** | Mapa 3D educativo + scrollytelling de seguridad (2000-2024) | `/conurbano/educacion`, `/conurbano/seguridad` |
+| 🔍 **Explorador de datos** | Catálogo de 13 datasets tabulares, filtrables y descargables | `/explorar` |
+| 💬 **Chat con IA** | Preguntas en lenguaje natural sobre los datos | `/chat` |
+
+---
+
+## 🏠 Inicio (`/`)
+
+La landing presenta la plataforma con cuatro KPIs macro (17,5M habitantes, 135 municipios, 16 informes, 80K+ registros), accesos directos a las secciones principales y un recorrido por las categorías disponibles. Desde acá podés saltar a cualquier informe o al explorador en un click.
+
+---
+
+## 📋 Informes ejecutivos
+
+Cada informe combina **texto narrativo en Markdown** + **KPIs animados** + **charts auto-generados** (barras, torta, líneas) + **mapa coroplético** de los 135 municipios cuando aplica. El layout es split: análisis a la izquierda, visualizaciones sticky a la derecha.
+
+### Población (`/poblacion/...`) — 8 sub-informes basados en Censo 2022 INDEC
+
+| Sub-informe | Ruta |
+|-------------|------|
+| Estructura por sexo y edad | `/poblacion/estructura` |
+| Hábitat — personas | `/poblacion/habitacional-personas` |
+| Hábitat — hogares | `/poblacion/habitacional-hogares` |
+| Stock de viviendas | `/poblacion/viviendas` |
+| Asistencia educativa | `/poblacion/educacion-censal` |
+| Características económicas | `/poblacion/economia` |
+| Salud y previsión social | `/poblacion/salud-prevision` |
+| Fecundidad | `/poblacion/fecundidad` |
+
+### Sectoriales — 6 informes
+
+| Informe | Ruta | Foco |
+|---------|------|------|
+| 📚 Educación | `/educacion` | Sistema educativo provincial + Aprender 2024 |
+| 🏥 Salud | `/salud` | Mortalidad materno-infantil |
+| 🔒 Seguridad | `/seguridad` | Hechos delictivos por municipio |
+| 💰 Economía & Fiscal | `/economia-fiscal` | Recaudación, coparticipación, empleo |
+| 🌾 Agro & Pesca | `/agricultura` | Stock bovino, pesca, oleaginosas |
+| 🏭 Industria | `/industria` | Parques industriales |
+
+---
+
+## 🌆 Conurbano (visualizaciones especiales)
+
+### Vulnerabilidad Escolar — `/conurbano/educacion`
+**Mapa 3D** que cruza radios censales con escuelas en los 24 partidos del Conurbano. Permite identificar zonas con alta densidad poblacional y baja oferta educativa. Optimizado para mobile con renderizado bajo demanda (Web Worker + TopoJSON simplificado).
+
+### Inseguridad 2000-2024 — `/conurbano/seguridad`
+**Scrollytelling interactivo** que recorre 25 años de evolución delictiva en el Conurbano usando datos del SNIC. La narrativa se va revelando a medida que scrolleás, con charts y mapas que se actualizan según el momento histórico.
+
+---
+
+## 🔍 Explorador de datos (`/explorar`)
+
+Un catálogo de **13 datasets** abiertos con interfaz tipo data warehouse:
+
+- **Búsqueda** por nombre, fuente o categoría
+- **Filtros** por área temática (Seguridad, Salud, Economía, Agro, Educación, Conurbano)
+- **Tabla interactiva** (`/explorar/:datasetId`) con ordenamiento, paginación y filtros por columna
+- **Auto-charts** generados según el tipo de datos del dataset
+- **Citación de fuentes** oficiales en cada vista
+
+Datasets destacados: delitos por tipo y municipio, nacimientos y mortalidad, PBG y exportaciones, capturas pesqueras, stock bovino, establecimientos educativos, pruebas Aprender, radios censales del GBA.
+
+---
+
+## 💬 Chat con IA (`/chat`)
+
+Asistente conversacional con contexto de la plataforma. Respondé preguntas como:
+
+- *"¿Qué municipios tienen mayor recaudación de ingresos brutos?"*
+- *"Mostrame la evolución de delitos contra la propiedad en La Matanza"*
+- *"¿Cuántas escuelas hay en el Conurbano sur?"*
+
+Trae **preguntas sugeridas** por categoría (Economía, Municipios, Seguridad, Agricultura) para arrancar.
+
+---
+
+## 🎤 Modo presentación (`/presentacion`)
+
+Vista full-screen para mostrar la plataforma en eventos, charlas o reuniones. Ideal para proyectar.
+
+---
+
+## 💡 Tips de uso
+
+- 🌓 **Dark/Light mode**: toggle en la navbar, persiste entre sesiones.
+- 🔎 **Búsqueda global** en la navbar para saltar entre informes y datasets.
+- 📱 **Mobile-friendly**: el mapa 3D del Conurbano y los charts se adaptan a pantalla chica.
+- 📑 **Citá las fuentes**: cada dataset y cada informe muestra el organismo público de origen.
+- ⌨️ **Navegación por teclado** entre sub-informes de Población.
+
+---
+
+## 📊 Fuentes oficiales
+
+| Categoría | Fuente |
+|-----------|--------|
+| Población, Hogares, Viviendas | Censo 2022 — INDEC |
+| Educación | DGCyE PBA + Min. Capital Humano (Aprender) |
+| Salud | Ministerio de Salud PBA |
+| Seguridad | Min. Seguridad PBA + SNIC (Min. Seguridad Nación) |
+| Economía & Fiscal | ARBA + MECON |
+| Agricultura | MAGyP + SENASA |
+| Industria | Min. Producción PBA |
+| Series Conurbano | EPH (INDEC) + radios censales |
+
+---
+
+## 👨‍💻 Para desarrolladores
+
+<details>
+<summary>Setup local, stack y pipeline de datos</summary>
+
+### Requisitos
+- Node.js 18+
+- npm 9+
+
+### Instalación
+```bash
+git clone https://github.com/colossus-lab/dashboard-pba.git
+cd dashboard-pba
+npm install
+npm run dev
 ```
-dashboard-pba/
-├── public/
-│   ├── data/              # JSONs pre-procesados (KPIs, charts, mapas)
-│   │   ├── explorer/      # 13 datasets tabulares para Data Explorer
-│   │   └── *.json         # Datos por categoría + topojson del mapa
-│   └── reports/           # Markdown de informes (.md)
-│       └── poblacion/     # Sub-informes censales
-├── scripts/
-│   ├── generate-report-data.cjs  # Pipeline maestro de datos
-│   ├── build-data.cjs            # Orquestador npm run build-data
-│   └── process-*.cjs             # Procesadores por categoría
-├── src/
-│   ├── components/
-│   │   ├── charts/        # ChartRenderer, MapaPBA
-│   │   ├── layout/        # Layout, Navbar, Footer
-│   │   └── ui/            # KPICounter, SectionReveal
-│   ├── data/              # reportRegistry (metadata de informes)
-│   ├── hooks/             # useReportData, useIntersectionObserver
-│   ├── pages/             # Landing, ReportView, ExplorerIndex/Detail
-│   ├── store/             # Zustand (tema, sección activa)
-│   ├── types/             # TypeScript interfaces
-│   └── index.css          # Sistema de diseño completo
-├── vercel.json            # Config de deploy
-└── package.json
-```
+
+### Stack
+| Capa | Tecnología |
+|------|-----------|
+| Framework | React 19 + TypeScript 5.7 |
+| Bundler | Vite 6 |
+| Routing | React Router 7 |
+| State | Zustand 5 |
+| Charts | Nivo (Bar, Pie, Line) |
+| Mapas | D3-geo + TopoJSON |
+| Markdown | react-markdown + remark-gfm |
+| Chat IA | @ai-sdk/react |
+| Deploy | Vercel |
 
 ### Pipeline de datos
-
-```
-CSVs/Excel originales
-       ↓
- scripts/process-*.cjs      → Parsea y normaliza
-       ↓
- scripts/generate-report-data.cjs  → Genera JSONs enriquecidos
-       ↓
- public/data/*.json          → KPIs + Charts + MapData
- public/data/explorer/*.json → Datasets tabulares + index.json
-```
-
-Ejecutar el pipeline:
+Los CSVs/Excel originales se procesan vía scripts en `scripts/process-*.cjs` y se consolidan con:
 ```bash
 npm run build-data
 ```
+Esto regenera los JSONs en `public/data/` (KPIs, charts, mapas) y `public/data/explorer/` (datasets tabulares).
 
----
+### Estructura
+```
+public/
+  data/        # JSONs de informes + explorer + topojson
+  reports/     # Markdown de cada informe
+src/
+  pages/       # Landing, ReportView, Explorer, Chat, Conurbano
+  components/  # charts/, layout/, ui/, report/
+  data/        # reportRegistry (metadata)
+  store/       # Zustand (tema, navegación)
+```
 
-## 🛠️ Stack Tecnológico
-
-| Capa | Tecnología |
-|------|-----------|
-| **Framework** | React 19 + TypeScript 5.7 |
-| **Bundler** | Vite 6 |
-| **Routing** | React Router 7 |
-| **State** | Zustand 5 |
-| **Charts** | Nivo (Bar, Pie, Line) |
-| **Mapas** | D3-geo + TopoJSON custom |
-| **Markdown** | react-markdown + remark-gfm |
-| **Data Pipeline** | Node.js + PapaParse + SheetJS |
-| **Styling** | Vanilla CSS (design tokens) |
-| **Deploy** | Vercel |
-
----
-
-## 📊 Datasets incluidos
-
-| Categoría | Informe | Fuente |
-|-----------|---------|--------|
-| 🏘️ Población | Estructura, viviendas, hogares, fecundidad | Censo 2022 INDEC |
-| 📚 Educación | Sistema educativo + Aprender 2024 | DGCyE + MCapHum |
-| 🏥 Salud | Mortalidad materno-infantil | Min. Salud PBA |
-| 🔒 Seguridad | Hechos delictivos 2024 | Min. Seguridad PBA |
-| 💰 Economía | Recaudación, coparticipación, empleo | ARBA + MECON |
-| 🌾 Agricultura | Stock bovino, pesca, oleaginosas | MAGyP + SENASA |
-| 🏭 Industria | Parques industriales | Min. Producción PBA |
+</details>
 
 ---
 
 ## 🤝 Contribuir
 
-¡Las contribuciones son bienvenidas! Podés:
-
-1. **Fork** del repositorio
-2. Crear una branch (`git checkout -b feature/nueva-funcionalidad`)
-3. Commit de cambios (`git commit -m 'Agrega nueva funcionalidad'`)
-4. Push a la branch (`git push origin feature/nueva-funcionalidad`)
-5. Abrir un **Pull Request**
-
-### Ideas para contribuir
-
-- 🗺️ Agregar nuevos datasets provinciales
-- 📊 Nuevos tipos de visualización
-- 🌐 Internacionalización (i18n)
-- 📱 Mejoras de UX mobile
-- ♿ Accesibilidad (a11y)
-- 🧪 Tests unitarios y E2E
+Las contribuciones son bienvenidas: nuevos datasets, visualizaciones, mejoras de accesibilidad o tests. Hacé un fork, abrí una branch y mandá un PR.
 
 ---
 
 ## 📝 Licencia
 
-Este proyecto está bajo la [Licencia MIT](LICENSE).
-
-Los datos utilizados son de **fuentes públicas** del Estado argentino (INDEC, Ministerios, Organismos Provinciales). Este proyecto no tiene afiliación oficial con el Gobierno de la Provincia de Buenos Aires.
+Proyecto bajo [Licencia MIT](LICENSE). Los datos son de **fuentes públicas oficiales** del Estado argentino. Sin afiliación con el Gobierno de la Provincia de Buenos Aires.
 
 ---
 
@@ -159,5 +202,5 @@ Desarrollado por **[Laboratorio Colossus](https://github.com/colossus-lab)** —
 ---
 
 <p align="center">
-  <strong>⭐ Si este proyecto te resulta útil, dejá una estrella en GitHub ⭐</strong>
+  <strong>⭐ Si te resulta útil, dejá una estrella en GitHub ⭐</strong>
 </p>
