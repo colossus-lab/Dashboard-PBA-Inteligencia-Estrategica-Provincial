@@ -219,7 +219,7 @@ Por ese motivo, el ranking principal de mayor tasa delictiva los **excluye** y s
 
 | Municipio | Residentes (Censo 2022) | Factor estival anual | Fuente |
 |---|---|---|---|
-| La Costa | ~100.700 | ×2,0 | Sec. Turismo La Costa (~6M turistas/año) |
+| La Costa | ~100.700 | ×2,0 | Sec. Turismo La Costa (~1,3M habitantes pico dic–feb) |
 | Pinamar | ~40.300 | ×1,8 | 1,6–2M arribos dic–mar |
 | Villa Gesell | ~38.600 | ×2,0 | Municipio (~250k peak estival) |
 | Monte Hermoso | ~8.800 | ×2,2 | Municipio (~70–100k peak) |
@@ -227,8 +227,6 @@ Por ese motivo, el ranking principal de mayor tasa delictiva los **excluye** y s
 | Mar Chiquita | ~33.100 | ×1,3 | Estimación |
 | General Alvarado (Miramar) | ~40.000 | ×1,3 | Estimación |
 | Necochea | ~100.000 | ×1,2 | Estimación |
-
-La "tasa ajustada" mostrada en los gráficos es **una estimación referencial** (tasa cruda dividida por el factor estival), no un dato oficial. Se incluye únicamente para permitir una comparación más justa con el resto de los municipios.
 
 En el mapa coroplético, los municipios costeros se identifican con un **borde celeste punteado**.
 
