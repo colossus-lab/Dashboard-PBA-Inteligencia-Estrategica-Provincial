@@ -1,20 +1,10 @@
 import { ResponsiveBar } from '@nivo/bar';
 import { ResponsivePie } from '@nivo/pie';
 import { ResponsiveLine } from '@nivo/line';
-import { useState, useEffect } from 'react';
 import { useStore } from '../../store/useStore';
+import { useIsMobile } from '../../lib/useIsMobile';
 import { MapaPBA } from './MapaPBA';
 import type { ChartConfig } from '../../types/report';
-
-function useIsMobile(breakpoint = 768) {
-  const [isMobile, setIsMobile] = useState(typeof window !== 'undefined' ? window.innerWidth < breakpoint : false);
-  useEffect(() => {
-    const handler = () => setIsMobile(window.innerWidth < breakpoint);
-    window.addEventListener('resize', handler);
-    return () => window.removeEventListener('resize', handler);
-  }, [breakpoint]);
-  return isMobile;
-}
 
 // ═══════════════════════════════════════════════════════════════
 // ChartRenderer — Universal chart component (theme-aware)

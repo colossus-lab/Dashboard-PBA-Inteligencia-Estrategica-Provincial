@@ -5,6 +5,7 @@ import { ResponsiveBar } from '@nivo/bar';
 import { ResponsivePie } from '@nivo/pie';
 import { SectionReveal } from '../components/ui/SectionReveal';
 import { useStore } from '../store/useStore';
+import { useIsMobile } from '../lib/useIsMobile';
 import {
   ArrowLeft, Database, BarChart3, Building2, FileText,
   TrendingUp, PieChart, AlertCircle,
@@ -13,6 +14,15 @@ import type { ExplorerDataset, ExplorerColumn } from '../types/explorer';
 
 type SortDir = 'asc' | 'desc';
 const PAGE_SIZE = 25;
+
+// Columnas numéricas que no son métricas (IDs, fechas, coordenadas).
+const ID_LIKE = /(^|_)(id|anio|year|mes|month|campania|lat|latitud|lon|long|longitud|cod|codigo)$/i;
+// Keywords que típicamente identifican una métrica real.
+const METRIC_KEYWORDS = [
+  'produccion', 'monto', 'valor', 'cantidad', 'empresas', 'establecimientos',
+  'hechos', 'victimas', 'superficie', 'stock', 'nacidos', 'tasa', 'rendimiento',
+];
+const MUNI_COLS = ['municipio_nombre', 'departamento_nombre'];
 
 export function ExplorerDetail() {
   const { datasetId } = useParams<{ datasetId: string }>();
@@ -26,6 +36,7 @@ export function ExplorerDetail() {
   const [selectedMuni, setSelectedMuni] = useState('');
   const [chartTab, setChartTab] = useState<'line' | 'bar' | 'pie'>('line');
   const theme = useStore(s => s.theme);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     setLoading(true);
@@ -41,6 +52,17 @@ export function ExplorerDetail() {
   const hasYear = useMemo(() => data?.columns.some(c => c.name === 'anio' || c.name === 'campania'), [data]);
   const yearCol = useMemo(() => data?.columns.find(c => c.name === 'anio' || c.name === 'campania')?.name || '', [data]);
   const muniCol = useMemo(() => data?.columns.find(c => c.name.includes('municipio_nombre') || c.name.includes('departamento_nombre'))?.name || '', [data]);
+
+  // Métrica real: numérica, no ID/fecha/coordenada, priorizando keywords.
+  const metric = useMemo<ExplorerColumn | null>(() => {
+    if (!data) return null;
+    const candidates = numericCols.filter(c => !ID_LIKE.test(c.name));
+    if (candidates.length === 0) return null;
+    const byKeyword = candidates.find(c =>
+      METRIC_KEYWORDS.some(k => c.name.toLowerCase().includes(k))
+    );
+    return byKeyword || candidates[0];
+  }, [data, numericCols]);
 
   // Filter + sort rows
   const processedRows = useMemo(() => {
@@ -87,23 +109,33 @@ export function ExplorerDetail() {
 
   // Auto-chart data generation
   const autoChartData = useMemo(() => {
-    if (!data || !hasYear || numericCols.length === 0) return null;
+    if (!data || !metric) return null;
 
-    const metric = numericCols[0];
-    const years = [...new Set(processedRows.map(r => String(r[yearCol])))].sort();
+    const years = hasYear
+      ? [...new Set(processedRows.map(r => String(r[yearCol])))].sort()
+      : [];
 
-    // Line chart: aggregate metric by year
-    const lineData = [{
+    // Line chart: aggregate metric by year (solo si hay yearCol).
+    const lineData = hasYear ? [{
       id: metric.label,
       data: years.map(y => {
         const yRows = processedRows.filter(r => String(r[yearCol]) === y);
         const sum = yRows.reduce((s, r) => s + (Number(r[metric.name]) || 0), 0);
         return { x: y, y: sum };
       }),
-    }];
+    }] : [];
 
-    // Bar chart: top 10 items by string field (if available)
-    const groupCol = stringCols.find(c => !c.name.includes('id') && c.name !== yearCol);
+    // groupCol: preferir columnas con cardinalidad baja (2-30); descartar muni si
+    // ya hay filtro de muni activo, y filas tipo identificador.
+    const groupCandidates = stringCols.filter(c => !c.name.includes('id') && c.name !== yearCol);
+    const sized = groupCandidates
+      .filter(c => !(selectedMuni && MUNI_COLS.includes(c.name)))
+      .map(c => ({ c, n: new Set(processedRows.map(r => r[c.name])).size }));
+    const groupCol =
+      sized.find(({ n }) => n >= 2 && n <= 30)?.c
+      || sized.find(({ n }) => n >= 2)?.c;
+
+    // Bar chart: top 10 items por groupCol (suma de la métrica).
     let barData: { id: string; value: number }[] = [];
     if (groupCol) {
       const groups: Record<string, number> = {};
@@ -117,24 +149,42 @@ export function ExplorerDetail() {
         .map(([id, value]) => ({ id, value }));
     }
 
-    // Pie chart: category distribution by latest year
-    const latestYear = years[years.length - 1];
-    const latestRows = processedRows.filter(r => String(r[yearCol]) === latestYear);
+    // Pie chart: distribución por groupCol. Si hay yearCol, usar último año;
+    // si no, usar todas las filas.
+    const pieRows = hasYear && years.length > 0
+      ? processedRows.filter(r => String(r[yearCol]) === years[years.length - 1])
+      : processedRows;
     let pieData: { id: string; label: string; value: number }[] = [];
     if (groupCol) {
       const groups: Record<string, number> = {};
-      for (const r of latestRows) {
+      for (const r of pieRows) {
         const key = String(r[groupCol.name] || 'Sin dato');
         groups[key] = (groups[key] || 0) + (Number(r[metric.name]) || 0);
       }
       pieData = Object.entries(groups)
+        .filter(([, v]) => v > 0)
         .sort((a, b) => b[1] - a[1])
         .slice(0, 8)
         .map(([id, value]) => ({ id, label: id.length > 20 ? id.substring(0, 20) + '…' : id, value }));
     }
 
     return { lineData, barData, pieData, metric, groupCol };
-  }, [data, processedRows, hasYear, yearCol, numericCols, stringCols]);
+  }, [data, processedRows, hasYear, yearCol, metric, stringCols, selectedMuni]);
+
+  // Si el tab activo se queda sin datos (p. ej. dataset sin yearCol), saltar al
+  // primer tab disponible. Evita pantalla en blanco.
+  useEffect(() => {
+    if (!autoChartData) return;
+    const empty = {
+      line: autoChartData.lineData.length === 0 || (autoChartData.lineData[0]?.data.length ?? 0) === 0,
+      bar: autoChartData.barData.length === 0,
+      pie: autoChartData.pieData.length === 0,
+    };
+    if (empty[chartTab]) {
+      const fallback = (['line', 'bar', 'pie'] as const).find(t => !empty[t]);
+      if (fallback) setChartTab(fallback);
+    }
+  }, [autoChartData, chartTab]);
 
   const isDark = theme === 'dark';
   const nivoTheme = {
@@ -203,6 +253,7 @@ export function ExplorerDetail() {
                 aria-selected={chartTab === 'line'}
                 className={`explorer-chart-tab ${chartTab === 'line' ? 'active' : ''}`}
                 onClick={() => setChartTab('line')}
+                disabled={(autoChartData.lineData[0]?.data.length ?? 0) === 0}
               >
                 <TrendingUp size={14} aria-hidden="true" /> Temporal
               </button>
@@ -226,63 +277,92 @@ export function ExplorerDetail() {
               </button>
             </div>
             <div className="explorer-chart-container">
-              {chartTab === 'line' && (
-                <ResponsiveLine
-                  data={autoChartData.lineData}
-                  theme={nivoTheme}
-                  margin={{ top: 20, right: 30, bottom: 50, left: 70 }}
-                  xScale={{ type: 'point' }}
-                  yScale={{ type: 'linear', min: 'auto', max: 'auto' }}
-                  curve="monotoneX"
-                  colors={['var(--accent-cyan)']}
-                  lineWidth={3}
-                  pointSize={8}
-                  pointColor={{ from: 'color' }}
-                  pointBorderWidth={2}
-                  pointBorderColor={{ from: 'serieColor' }}
-                  enableGridX={false}
-                  axisBottom={{ tickRotation: -45 }}
-                  axisLeft={{ format: v => Number(v) >= 1000 ? `${(Number(v) / 1000).toFixed(0)}K` : String(v) }}
-                  useMesh
-                  enableArea
-                  areaOpacity={0.1}
-                />
-              )}
-              {chartTab === 'bar' && autoChartData.barData.length > 0 && (
-                <ResponsiveBar
-                  data={autoChartData.barData.map(d => ({ ...d, [autoChartData.metric.label]: d.value }))}
-                  keys={[autoChartData.metric.label]}
-                  indexBy="id"
-                  theme={nivoTheme}
-                  margin={{ top: 20, right: 30, bottom: 80, left: 70 }}
-                  padding={0.3}
-                  colors={['var(--accent-cyan)']}
-                  borderRadius={4}
-                  axisBottom={{ tickRotation: -45 }}
-                  axisLeft={{ format: v => Number(v) >= 1000 ? `${(Number(v) / 1000).toFixed(0)}K` : String(v) }}
-                  labelSkipWidth={40}
-                  labelSkipHeight={16}
-                  enableLabel={false}
-                  layout="vertical"
-                />
-              )}
-              {chartTab === 'pie' && autoChartData.pieData.length > 0 && (
-                <ResponsivePie
-                  data={autoChartData.pieData}
-                  theme={nivoTheme}
-                  margin={{ top: 20, right: 80, bottom: 20, left: 80 }}
-                  innerRadius={0.5}
-                  padAngle={1}
-                  cornerRadius={4}
-                  colors={{ scheme: 'paired' }}
-                  borderWidth={1}
-                  borderColor={{ from: 'color', modifiers: [['darker', 0.2]] }}
-                  arcLabelsSkipAngle={15}
-                  arcLinkLabelsSkipAngle={10}
-                  arcLinkLabelsTextColor={isDark ? '#94a3b8' : '#475569'}
-                  arcLinkLabelsThickness={2}
-                  arcLinkLabelsColor={{ from: 'color' }}
-                />
+              {processedRows.length === 0 ? (
+                <div className="explorer-empty" role="status">
+                  <span aria-hidden="true"><AlertCircle size={28} /></span>
+                  <p>Sin datos para mostrar con los filtros actuales</p>
+                </div>
+              ) : (
+                <>
+                  {chartTab === 'line' && (autoChartData.lineData[0]?.data.length ?? 0) > 0 && (
+                    <ResponsiveLine
+                      data={autoChartData.lineData}
+                      theme={nivoTheme}
+                      margin={isMobile
+                        ? { top: 10, right: 12, bottom: 60, left: 44 }
+                        : { top: 20, right: 30, bottom: 50, left: 70 }}
+                      xScale={{ type: 'point' }}
+                      yScale={{ type: 'linear', min: 'auto', max: 'auto' }}
+                      curve="monotoneX"
+                      colors={['var(--accent-cyan)']}
+                      lineWidth={isMobile ? 2 : 3}
+                      pointSize={isMobile ? 5 : 8}
+                      pointColor={{ from: 'color' }}
+                      pointBorderWidth={2}
+                      pointBorderColor={{ from: 'serieColor' }}
+                      enableGridX={false}
+                      axisBottom={{ tickRotation: isMobile ? -60 : -45 }}
+                      axisLeft={{
+                        format: v => Number(v) >= 1000 ? `${(Number(v) / 1000).toFixed(0)}K` : String(v),
+                        tickValues: isMobile ? 4 : undefined,
+                      }}
+                      useMesh
+                      enableArea
+                      areaOpacity={0.1}
+                    />
+                  )}
+                  {chartTab === 'bar' && autoChartData.barData.length > 0 && (
+                    <ResponsiveBar
+                      data={autoChartData.barData
+                        .slice(0, isMobile ? 6 : 10)
+                        .map(d => ({ ...d, [autoChartData.metric.label]: d.value }))}
+                      keys={[autoChartData.metric.label]}
+                      indexBy="id"
+                      theme={nivoTheme}
+                      margin={isMobile
+                        ? { top: 10, right: 12, bottom: 90, left: 44 }
+                        : { top: 20, right: 30, bottom: 80, left: 70 }}
+                      padding={0.3}
+                      colors={['var(--accent-cyan)']}
+                      borderRadius={4}
+                      axisBottom={{ tickRotation: isMobile ? -60 : -45 }}
+                      axisLeft={{ format: v => Number(v) >= 1000 ? `${(Number(v) / 1000).toFixed(0)}K` : String(v) }}
+                      labelSkipWidth={40}
+                      labelSkipHeight={16}
+                      enableLabel={false}
+                      layout="vertical"
+                    />
+                  )}
+                  {chartTab === 'pie' && autoChartData.pieData.length > 0 && (
+                    <ResponsivePie
+                      data={autoChartData.pieData}
+                      theme={nivoTheme}
+                      margin={isMobile
+                        ? { top: 12, right: 12, bottom: 60, left: 12 }
+                        : { top: 20, right: 80, bottom: 20, left: 80 }}
+                      innerRadius={isMobile ? 0.4 : 0.5}
+                      padAngle={1}
+                      cornerRadius={4}
+                      colors={{ scheme: 'paired' }}
+                      borderWidth={1}
+                      borderColor={{ from: 'color', modifiers: [['darker', 0.2]] }}
+                      arcLabelsSkipAngle={isMobile ? 20 : 15}
+                      arcLinkLabelsSkipAngle={10}
+                      arcLinkLabelsTextColor={isDark ? '#94a3b8' : '#475569'}
+                      arcLinkLabelsThickness={2}
+                      arcLinkLabelsColor={{ from: 'color' }}
+                      enableArcLinkLabels={!isMobile}
+                      legends={isMobile ? [{
+                        anchor: 'bottom',
+                        direction: 'row',
+                        itemWidth: 70,
+                        itemHeight: 14,
+                        symbolSize: 10,
+                        translateY: 50,
+                      }] : []}
+                    />
+                  )}
+                </>
               )}
             </div>
           </section>
@@ -320,38 +400,45 @@ export function ExplorerDetail() {
       {/* Interactive Table */}
       <SectionReveal>
         <div className="explorer-table-wrap">
-          <table className="explorer-table">
-            <thead>
-              <tr>
-                {data.columns.map(col => (
-                  <th
-                    key={col.name}
-                    className={`explorer-th ${sortCol === col.name ? 'sorted' : ''} ${col.type === 'number' ? 'num' : ''}`}
-                    onClick={() => handleSort(col.name)}
-                  >
-                    {col.label}
-                    <span className="explorer-sort-icon">
-                      {sortCol === col.name ? (sortDir === 'asc' ? ' ↑' : ' ↓') : ' ⇅'}
-                    </span>
-                  </th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {pageRows.map((row, i) => (
-                <tr key={i} className="explorer-tr">
+          {processedRows.length === 0 ? (
+            <div className="explorer-empty" role="status">
+              <span aria-hidden="true"><AlertCircle size={28} /></span>
+              <p>Sin registros para los filtros actuales</p>
+            </div>
+          ) : (
+            <table className="explorer-table">
+              <thead>
+                <tr>
                   {data.columns.map(col => (
-                    <td
+                    <th
                       key={col.name}
-                      className={`explorer-td ${col.type === 'number' ? 'num' : ''}`}
+                      className={`explorer-th ${sortCol === col.name ? 'sorted' : ''} ${col.type === 'number' ? 'num' : ''}`}
+                      onClick={() => handleSort(col.name)}
                     >
-                      {formatCell(row[col.name], col)}
-                    </td>
+                      {col.label}
+                      <span className="explorer-sort-icon">
+                        {sortCol === col.name ? (sortDir === 'asc' ? ' ↑' : ' ↓') : ' ⇅'}
+                      </span>
+                    </th>
                   ))}
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {pageRows.map((row, i) => (
+                  <tr key={i} className="explorer-tr">
+                    {data.columns.map(col => (
+                      <td
+                        key={col.name}
+                        className={`explorer-td ${col.type === 'number' ? 'num' : ''}`}
+                      >
+                        {formatCell(row[col.name], col)}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          )}
         </div>
       </SectionReveal>
 
