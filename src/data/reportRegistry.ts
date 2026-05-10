@@ -171,6 +171,17 @@ export const REPORTS: ReportEntry[] = [
     dataPath: '/data/industria.json',
     order: 14,
   },
+  {
+    id: 'politica-elecciones',
+    slug: 'politica/elecciones',
+    title: 'Política y Elecciones',
+    shortTitle: 'Política',
+    category: 'Política',
+    color: '#9333ea',
+    mdPath: '/reports/politica.md',
+    dataPath: '/data/politica.json',
+    order: 15,
+  },
   // ─── Grupo 3: Conurbano (mapas interactivos custom) ───
   {
     id: 'conurbano-educacion',
@@ -181,7 +192,7 @@ export const REPORTS: ReportEntry[] = [
     color: '#10b981',
     mdPath: '',
     dataPath: '',
-    order: 15,
+    order: 16,
   },
   {
     id: 'conurbano-seguridad',
@@ -192,7 +203,7 @@ export const REPORTS: ReportEntry[] = [
     color: '#ef4444',
     mdPath: '',
     dataPath: '',
-    order: 16,
+    order: 17,
   },
 ];
 
