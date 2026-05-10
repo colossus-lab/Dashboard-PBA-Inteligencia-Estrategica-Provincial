@@ -306,6 +306,22 @@ function aggregate(rows, groupKeys, opts = {}) {
 
 function main() {
   console.log("=== process-politica.cjs ===");
+
+  // Guard: las CSVs fuente viven fuera del repo (Pipeline OpenArg/datos_pba).
+  // En entornos de build (Vercel, CI) ese directorio no existe — entonces no
+  // regeneramos los outputs y dejamos los archivos commiteados intactos.
+  const sources = [F_PROV_GEN, F_PROV_PASO, F_NACIONALES, F_BALLOTAGE, F_SECCIONES_GEOJSON];
+  const missing = sources.filter((p) => !fs.existsSync(p));
+  if (missing.length > 0) {
+    console.warn(
+      `  ⚠ Fuentes electorales no disponibles (${missing.length}/${sources.length}). ` +
+        `Se mantienen los outputs commiteados en public/data/politica*.\n` +
+        `  Para regenerar localmente: clonar Pipeline OpenArg/datos_pba como ` +
+        `directorio hermano del repo.`
+    );
+    return;
+  }
+
   ensureDir(OUT_DATA);
   ensureDir(OUT_POLITICA);
   ensureDir(OUT_EXPLORER);
