@@ -1364,6 +1364,402 @@ function main() {
     }
   }
 
+  // ═══════════════════════════════════════════════════════════════════════
+  // ANÁLISIS BATCH E — Bancas, Descomposición ballotage, Clusters, Blanco/Nulo
+  // ═══════════════════════════════════════════════════════════════════════
+
+  // ─── E1. BANCAS (D'Hondt) + ÍNDICE GALLAGHER ───────────────────────────
+  // Magnitudes oficiales de renovación 2023 de la Cámara de Diputados PBA
+  // (la mitad de la cámara se renueva cada 2 años; estas son las del ciclo 2023).
+  // Fuente: Ley Electoral PBA, ciclo 2023.
+  const MAGNITUDES_DIP_2023 = {
+    I: 8, II: 3, III: 8, IV: 4, V: 3, VI: 3, VII: 2, VIII: 3,
+  };
+
+  function dHondt(votosPorFuerza, escanios) {
+    // votosPorFuerza: {fuerza: votos}
+    const seats = {};
+    for (const f of Object.keys(votosPorFuerza)) seats[f] = 0;
+    for (let i = 0; i < escanios; i++) {
+      let bestF = null, bestQ = -1;
+      for (const f of Object.keys(votosPorFuerza)) {
+        const q = votosPorFuerza[f] / (seats[f] + 1);
+        if (q > bestQ) {
+          bestQ = q;
+          bestF = f;
+        }
+      }
+      if (bestF) seats[bestF]++;
+    }
+    return seats;
+  }
+
+  function gallagher(votosPorFuerza, escaniosPorFuerza, totalVotos, totalEscanios) {
+    let sumSq = 0;
+    const fuerzas = new Set([
+      ...Object.keys(votosPorFuerza),
+      ...Object.keys(escaniosPorFuerza),
+    ]);
+    for (const f of fuerzas) {
+      const v = ((votosPorFuerza[f] || 0) / (totalVotos || 1)) * 100;
+      const s = ((escaniosPorFuerza[f] || 0) / (totalEscanios || 1)) * 100;
+      sumSq += (v - s) ** 2;
+    }
+    return Math.round(Math.sqrt(0.5 * sumSq) * 100) / 100;
+  }
+
+  const dipProv = provGen.filter(
+    (r) => /diputados provinciales/i.test(r.cargo) && r.año === 2023
+  );
+  const bancasPorSeccion = {}; // sec → {fuerza: bancas}
+  const votosPorSeccion = {}; // sec → {fuerza: votos}
+  {
+    for (const r of dipProv) {
+      const sec = muniToSeccion[normalizeName(r.municipio || "")];
+      if (!sec) continue;
+      const familia = familiaPolitica(r.agrupacion || "");
+      if (!votosPorSeccion[sec]) votosPorSeccion[sec] = {};
+      votosPorSeccion[sec][familia] =
+        (votosPorSeccion[sec][familia] || 0) + (r.votos || 0);
+    }
+    for (const sec of Object.keys(votosPorSeccion)) {
+      const mag = MAGNITUDES_DIP_2023[sec] || 0;
+      if (mag === 0) continue;
+      bancasPorSeccion[sec] = dHondt(votosPorSeccion[sec], mag);
+    }
+  }
+
+  const gallagherBySec = []; // [{seccion, Gallagher}]
+  let totalVotosProv = 0, totalEscanios = 0;
+  const totalVotosFuerza = {}, totalBancasFuerza = {};
+  for (const sec of SECCIONES_ORDEN) {
+    if (!votosPorSeccion[sec]) continue;
+    const tV = Object.values(votosPorSeccion[sec]).reduce((s, x) => s + x, 0);
+    const tE = Object.values(bancasPorSeccion[sec] || {}).reduce(
+      (s, x) => s + x,
+      0
+    );
+    gallagherBySec.push({
+      seccion: sec,
+      Gallagher: gallagher(
+        votosPorSeccion[sec],
+        bancasPorSeccion[sec] || {},
+        tV,
+        tE
+      ),
+    });
+    totalVotosProv += tV;
+    totalEscanios += tE;
+    for (const f of Object.keys(votosPorSeccion[sec])) {
+      totalVotosFuerza[f] = (totalVotosFuerza[f] || 0) + votosPorSeccion[sec][f];
+    }
+    for (const f of Object.keys(bancasPorSeccion[sec] || {})) {
+      totalBancasFuerza[f] =
+        (totalBancasFuerza[f] || 0) + bancasPorSeccion[sec][f];
+    }
+  }
+  const gallagherGlobal2023 = gallagher(
+    totalVotosFuerza,
+    totalBancasFuerza,
+    totalVotosProv,
+    totalEscanios
+  );
+
+  // Composición de bancas por sección (stacked bar, top fuerzas)
+  const bancasStacked = [];
+  for (const sec of SECCIONES_ORDEN) {
+    if (!bancasPorSeccion[sec]) continue;
+    const row = { seccion: sec };
+    for (const f of Object.keys(bancasPorSeccion[sec])) row[f] = bancasPorSeccion[sec][f];
+    bancasStacked.push(row);
+  }
+
+  // Bar: votos % vs bancas % por familia (todas las secciones combinadas)
+  const proporcionalidadChart = [];
+  for (const f of Object.keys(totalVotosFuerza)) {
+    proporcionalidadChart.push({
+      fuerza: f,
+      "% votos": Math.round((totalVotosFuerza[f] / totalVotosProv) * 1000) / 10,
+      "% bancas":
+        Math.round(((totalBancasFuerza[f] || 0) / totalEscanios) * 1000) / 10,
+    });
+  }
+  proporcionalidadChart.sort((a, b) => b["% votos"] - a["% votos"]);
+
+  // ─── E2. DESCOMPOSICIÓN BALLOTAGE 2023 ─────────────────────────────────
+  // Por municipio: cuánto creció cada fuerza entre 1ra vuelta y ballotage,
+  // y correlación con los votos "no-finalistas" en 1ra vuelta (Bullrich
+  // [JxC], Schiaretti [HUP], izquierda y otros). Modelo agregado, no
+  // transferencia individual real.
+  const fuerzasNoFinal = /bullrich|juntos por el cambio|schiaretti|hacemos por nuestro pa(í|i)s|hacemos unidos|izquierda|bregman|consenso federal/i;
+
+  const aporteBallotage = []; // [{muni, llaPV, llaBallot, deltaLLA, uxpPV, uxpBallot, deltaUxP, noFinalPV}]
+  const llaPV = pctByMuniFuerzaYear(presPrimeraAggMuni, LLA_RX, 2023);
+  const uxpPV = pctByMuniFuerzaYear(presPrimeraAggMuni, PERONISMO_RX, 2023);
+  const llaBallot = pctByMuniFuerzaYear(ballotageMuni, LLA_RX, 2023);
+  const uxpBallot = pctByMuniFuerzaYear(ballotageMuni, PERONISMO_RX, 2023);
+  const noFinalPV = pctByMuniFuerzaYear(
+    presPrimeraAggMuni,
+    fuerzasNoFinal,
+    2023
+  );
+  for (const [muni, e] of llaPV) {
+    const llaB = llaBallot.get(muni);
+    const uxpP = uxpPV.get(muni);
+    const uxpB = uxpBallot.get(muni);
+    const nF = noFinalPV.get(muni);
+    if (!llaB || !uxpP || !uxpB) continue;
+    aporteBallotage.push({
+      municipio: e.name,
+      muniNorm: muni,
+      llaPV: e.pct,
+      llaBallot: llaB.pct,
+      deltaLLA: Math.round((llaB.pct - e.pct) * 10) / 10,
+      uxpPV: uxpP.pct,
+      uxpBallot: uxpB.pct,
+      deltaUxP: Math.round((uxpB.pct - uxpP.pct) * 10) / 10,
+      noFinalPV: nF ? nF.pct : 0,
+    });
+  }
+
+  // Scatter: voto Bullrich/Schiaretti/otros 1ra vuelta (x) vs incremento LLA en ballotage (y)
+  const scatterAporteLLA = aporteBallotage.map((r) => ({
+    municipio: r.municipio,
+    x: r.noFinalPV,
+    y: r.deltaLLA,
+  }));
+  const regAporteLLA = regression(scatterAporteLLA);
+
+  // Bar comparativo PBA total: PV vs ballotage (votos absolutos)
+  const totalPV = {
+    LLA: 0,
+    UxP: 0,
+    OtrosNoFinal: 0,
+    Blanco: 0,
+  };
+  for (const r of presPrimera.filter((x) => x.año === 2023)) {
+    const agr = r.agrupacion || "";
+    if (LLA_RX.test(agr)) totalPV.LLA += r.votos || 0;
+    else if (PERONISMO_RX.test(agr)) totalPV.UxP += r.votos || 0;
+    else if (fuerzasNoFinal.test(agr)) totalPV.OtrosNoFinal += r.votos || 0;
+  }
+  const totalBallot = { LLA: 0, UxP: 0, BlancoNulo: 0 };
+  for (const r of ballotageRaw.filter((x) => x.año === 2023)) {
+    const agr = r.agrupacion || "";
+    const tipo = r.votosTipo || "";
+    if (tipo === "POSITIVO") {
+      if (LLA_RX.test(agr)) totalBallot.LLA += r.votos || 0;
+      else if (PERONISMO_RX.test(agr)) totalBallot.UxP += r.votos || 0;
+    } else if (tipo === "BLANCO" || tipo === "NULO") {
+      totalBallot.BlancoNulo += r.votos || 0;
+    }
+  }
+  const aporteBars = [
+    {
+      etapa: "1ra vuelta",
+      LLA: totalPV.LLA,
+      UxP: totalPV.UxP,
+      "Bullrich/Schiaretti/etc": totalPV.OtrosNoFinal,
+    },
+    {
+      etapa: "Ballotage",
+      LLA: totalBallot.LLA,
+      UxP: totalBallot.UxP,
+      "Bullrich/Schiaretti/etc": 0,
+    },
+  ];
+
+  // ─── E3. CLUSTERS K-MEANS DE MUNICIPIOS ────────────────────────────────
+  // Vector por muni: [%peronismo, %JxC, %LLA, %otros] en gobernador 2023
+  function vectorByMuniGob2023() {
+    const byMuni = new Map();
+    for (const r of gobAggMuni.filter((x) => x.año === 2023)) {
+      const k = normalizeName(r.municipio || "");
+      if (!k) continue;
+      if (!byMuni.has(k)) byMuni.set(k, { name: r.municipio, fams: {}, total: 0 });
+      const e = byMuni.get(k);
+      const fam = familiaPolitica(r.agrupacion || "");
+      e.fams[fam] = (e.fams[fam] || 0) + (r.votos || 0);
+      e.total += r.votos || 0;
+    }
+    const out = [];
+    for (const [k, e] of byMuni) {
+      if (e.total <= 0) continue;
+      out.push({
+        muniNorm: k,
+        name: e.name,
+        vec: [
+          ((e.fams["Peronismo"] || 0) / e.total) * 100,
+          ((e.fams["Cambiemos/JxC/UCR"] || 0) / e.total) * 100,
+          ((e.fams["LLA"] || 0) / e.total) * 100,
+          ((e.fams["Izquierda"] || 0) / e.total) * 100 +
+            ((e.fams["Otros"] || 0) / e.total) * 100,
+        ],
+      });
+    }
+    return out;
+  }
+  function kMeans(points, k, maxIter = 30) {
+    if (points.length < k) return null;
+    // init: take k points evenly spaced
+    let centroids = [];
+    const step = Math.floor(points.length / k);
+    for (let i = 0; i < k; i++) {
+      centroids.push([...points[i * step].vec]);
+    }
+    function dist(a, b) {
+      let s = 0;
+      for (let i = 0; i < a.length; i++) s += (a[i] - b[i]) ** 2;
+      return Math.sqrt(s);
+    }
+    let assignment = new Array(points.length).fill(-1);
+    for (let iter = 0; iter < maxIter; iter++) {
+      let changed = false;
+      // assign
+      for (let i = 0; i < points.length; i++) {
+        let best = 0, bestD = Infinity;
+        for (let c = 0; c < k; c++) {
+          const d = dist(points[i].vec, centroids[c]);
+          if (d < bestD) {
+            bestD = d;
+            best = c;
+          }
+        }
+        if (assignment[i] !== best) {
+          assignment[i] = best;
+          changed = true;
+        }
+      }
+      // update centroids
+      for (let c = 0; c < k; c++) {
+        const cluster = points
+          .map((_, idx) => ({ p: points[idx], a: assignment[idx] }))
+          .filter((x) => x.a === c);
+        if (cluster.length === 0) continue;
+        const newC = new Array(points[0].vec.length).fill(0);
+        for (const x of cluster) {
+          for (let i = 0; i < newC.length; i++) newC[i] += x.p.vec[i];
+        }
+        for (let i = 0; i < newC.length; i++) newC[i] /= cluster.length;
+        centroids[c] = newC;
+      }
+      if (!changed) break;
+    }
+    return { centroids, assignment };
+  }
+
+  const muniVectors = vectorByMuniGob2023();
+  const kmResult = kMeans(muniVectors, 5);
+  const clustersData = []; // mapData
+  const clusterDescriptions = []; // [{cluster, members, centroide, label}]
+  if (kmResult) {
+    const labelsBase = ["Peronismo", "JxC", "LLA", "Otros"];
+    // Reorder clusters by descending peronismo % first (stable label order)
+    const clusterStats = [];
+    for (let c = 0; c < kmResult.centroids.length; c++) {
+      const members = muniVectors
+        .map((p, i) => ({ p, a: kmResult.assignment[i] }))
+        .filter((x) => x.a === c)
+        .map((x) => x.p);
+      const cent = kmResult.centroids[c];
+      // Label by dominant fuerza
+      const maxIdx = cent.indexOf(Math.max(...cent));
+      const dominant = labelsBase[maxIdx];
+      const label = `Cluster ${c + 1} · dom. ${dominant} (${Math.round(
+        cent[maxIdx]
+      )}%) — n=${members.length}`;
+      clusterStats.push({ c, cent, members, dominant, label });
+    }
+    // Assign palette codes 1..5 in stable order
+    clusterStats.sort((a, b) => b.cent[0] - a.cent[0]);
+    for (let i = 0; i < clusterStats.length; i++) {
+      clusterStats[i].displayCode = i + 1;
+    }
+    for (const cs of clusterStats) {
+      clusterDescriptions.push({
+        cluster: cs.displayCode,
+        n_municipios: cs.members.length,
+        dominante: cs.dominant,
+        peronismo_avg: Math.round(cs.cent[0] * 10) / 10,
+        jxc_avg: Math.round(cs.cent[1] * 10) / 10,
+        lla_avg: Math.round(cs.cent[2] * 10) / 10,
+        otros_avg: Math.round(cs.cent[3] * 10) / 10,
+        label: cs.label,
+        muestra: cs.members.slice(0, 5).map((m) => m.name).join(", "),
+      });
+    }
+    for (const cs of clusterStats) {
+      for (const m of cs.members) {
+        clustersData.push({
+          municipioId: m.muniNorm,
+          municipioNombre: m.name,
+          value: cs.displayCode,
+          label: `Cluster ${cs.displayCode} · dom. ${cs.dominant} (${m.vec
+            .map((v, i) => `${labelsBase[i]} ${Math.round(v)}%`)
+            .join(", ")})`,
+        });
+      }
+    }
+  }
+
+  // ─── E4. VOTO BLANCO/NULO HISTÓRICO (BALLOTAGE) ────────────────────────
+  // Solo ballotage 2015 y 2023 tienen votos_tipo desagregado. Para otras
+  // elecciones del dataset, votos_tipo no es uniforme; nos limitamos a
+  // ballotage en este chart.
+  const blancoNuloByYear = []; // [{año, "% Blanco", "% Nulo", "% Positivo"}]
+  {
+    const byYear = new Map();
+    for (const r of ballotageRaw) {
+      if (!r.año) continue;
+      if (!byYear.has(r.año))
+        byYear.set(r.año, { POSITIVO: 0, BLANCO: 0, NULO: 0, OTRO: 0 });
+      const e = byYear.get(r.año);
+      const t = r.votosTipo || "OTRO";
+      if (t === "POSITIVO" || t === "BLANCO" || t === "NULO") {
+        e[t] += r.votos || 0;
+      } else {
+        e.OTRO += r.votos || 0;
+      }
+    }
+    for (const [año, e] of byYear) {
+      const tot = e.POSITIVO + e.BLANCO + e.NULO + e.OTRO || 1;
+      blancoNuloByYear.push({
+        año,
+        "% Blanco": Math.round((e.BLANCO / tot) * 1000) / 10,
+        "% Nulo": Math.round((e.NULO / tot) * 1000) / 10,
+        "% Recurr./Impugn.": Math.round((e.OTRO / tot) * 1000) / 10,
+      });
+    }
+    blancoNuloByYear.sort((a, b) => a.año - b.año);
+  }
+
+  // Por municipio % blanco+nulo en ballotage 2023 (mapa)
+  const blancoNuloMuni2023 = [];
+  {
+    const byMuni = new Map();
+    for (const r of ballotageRaw.filter((x) => x.año === 2023)) {
+      const k = normalizeName(r.municipio || "");
+      if (!k) continue;
+      if (!byMuni.has(k))
+        byMuni.set(k, { name: r.municipio, POSITIVO: 0, BLANCO: 0, NULO: 0 });
+      const e = byMuni.get(k);
+      const t = r.votosTipo || "";
+      if (t === "POSITIVO") e.POSITIVO += r.votos || 0;
+      else if (t === "BLANCO") e.BLANCO += r.votos || 0;
+      else if (t === "NULO") e.NULO += r.votos || 0;
+    }
+    for (const [k, e] of byMuni) {
+      const tot = e.POSITIVO + e.BLANCO + e.NULO || 1;
+      const pctBN = Math.round(((e.BLANCO + e.NULO) / tot) * 1000) / 10;
+      blancoNuloMuni2023.push({
+        municipioId: k,
+        municipioNombre: e.name,
+        value: pctBN,
+        label: `Blanco+Nulo ${pctBN}% (B: ${e.BLANCO} / N: ${e.NULO} / Pos: ${e.POSITIVO})`,
+      });
+    }
+  }
+
   // ─── D14. SANKEY PASO → GENERALES 2023 (PRESIDENTE) ────────────────────
   // Modelo simple: para cada fuerza top-5 común a PASO y Generales, el flujo
   // mismo→mismo = min(votosPaso, votosGen). El "residual" (la fuerza creció)
@@ -1545,6 +1941,45 @@ function main() {
       value: persistRacha5,
       formatted: String(persistRacha5),
       unit: "municipios",
+    },
+    {
+      id: "gallagher-2023",
+      label: "Índice Gallagher · diputados provinciales 2023",
+      value: gallagherGlobal2023,
+      formatted: String(gallagherGlobal2023),
+      unit: "desproporcionalidad",
+      status: gallagherGlobal2023 > 8 ? "warning" : undefined,
+    },
+    {
+      id: "bancas-totales-2023",
+      label: "Diputados provinciales renovados 2023",
+      value: totalEscanios,
+      formatted: String(totalEscanios),
+      unit: "bancas",
+    },
+    {
+      id: "blanco-nulo-ballotage-2023",
+      label: "Voto blanco + nulo · ballotage 2023",
+      value:
+        blancoNuloByYear.find((r) => r.año === 2023)
+          ? (blancoNuloByYear.find((r) => r.año === 2023)["% Blanco"] +
+            blancoNuloByYear.find((r) => r.año === 2023)["% Nulo"])
+          : 0,
+      formatted:
+        blancoNuloByYear.find((r) => r.año === 2023)
+          ? `${(
+              blancoNuloByYear.find((r) => r.año === 2023)["% Blanco"] +
+              blancoNuloByYear.find((r) => r.año === 2023)["% Nulo"]
+            ).toFixed(1)}%`
+          : "—",
+      unit: "del total",
+    },
+    {
+      id: "clusters-detectados",
+      label: "Tipologías electorales (k-means, k=5)",
+      value: clusterDescriptions.length,
+      formatted: String(clusterDescriptions.length),
+      unit: "clusters",
     },
   ].filter(Boolean);
 
@@ -1912,6 +2347,104 @@ function main() {
     });
   }
 
+  // ─── E1. Bancas (D'Hondt) + Gallagher ─────────────────────────────────
+  if (bancasStacked.length) {
+    charts.push({
+      id: "bancas-por-seccion",
+      type: "bar",
+      title:
+        "Bancas de diputados provinciales 2023 por sección (asignación D'Hondt sobre familias)",
+      sectionId: "bancas",
+      data: bancasStacked,
+      config: { xAxis: "seccion", stacked: true },
+    });
+  }
+  if (proporcionalidadChart.length) {
+    charts.push({
+      id: "votos-vs-bancas-2023",
+      type: "bar",
+      title:
+        "Desproporcionalidad votos → bancas (diputados provinciales 2023, total PBA)",
+      sectionId: "bancas",
+      data: proporcionalidadChart,
+      config: { xAxis: "fuerza", grouped: true, layout: "horizontal" },
+    });
+  }
+  if (gallagherBySec.length) {
+    charts.push({
+      id: "gallagher-por-seccion",
+      type: "bar",
+      title:
+        "Índice de Gallagher por sección — desproporcionalidad votos vs bancas",
+      sectionId: "bancas",
+      data: gallagherBySec,
+      config: { xAxis: "seccion", layout: "horizontal" },
+    });
+  }
+
+  // ─── E2. Descomposición ballotage 2023 ────────────────────────────────
+  if (scatterAporteLLA.length) {
+    charts.push({
+      id: "scatter-aporte-lla",
+      type: "scatter",
+      title:
+        "Aporte al ballotage · % no-finalistas en 1ra vuelta vs incremento de LLA en ballotage 2023",
+      sectionId: "decomposicion",
+      data: scatterAporteLLA,
+      config: {
+        xAxis: "% Bullrich + Schiaretti + otros (1ra vuelta)",
+        yAxis: "Δ LLA (ballotage − 1ra vuelta) (pp)",
+        regression: regAporteLLA,
+      },
+    });
+  }
+  if (aporteBars.length) {
+    charts.push({
+      id: "aporte-bars-2023",
+      type: "bar",
+      title:
+        "Composición del voto presidencial PBA · 1ra vuelta vs ballotage 2023 (votos absolutos)",
+      sectionId: "decomposicion",
+      data: aporteBars,
+      config: { xAxis: "etapa", grouped: true },
+    });
+  }
+
+  // ─── E3. Clusters k-means ─────────────────────────────────────────────
+  if (clustersData.length) {
+    charts.push({
+      id: "mapa-clusters",
+      type: "map",
+      title:
+        "Tipologías electorales · clusters k-means (k=5) sobre voto a gobernador 2023",
+      sectionId: "clusters",
+      data: clustersData,
+    });
+  }
+
+  // ─── E4. Voto blanco/nulo histórico ───────────────────────────────────
+  if (blancoNuloByYear.length) {
+    charts.push({
+      id: "blanco-nulo-ballotage",
+      type: "bar",
+      title:
+        "Voto blanco, nulo e impugnado · ballotages 2015 y 2023 (% sobre total)",
+      sectionId: "blancos",
+      data: blancoNuloByYear,
+      config: { xAxis: "año", grouped: true },
+    });
+  }
+  if (blancoNuloMuni2023.length) {
+    charts.push({
+      id: "mapa-blanco-nulo-2023",
+      type: "map",
+      title:
+        "% Blanco + Nulo por municipio · ballotage 2023",
+      sectionId: "blancos",
+      data: blancoNuloMuni2023,
+    });
+  }
+
   // Rankings: municipios por porcentaje del ganador en ballotage 2023
   const ranking = mapaPresBallotage2023
     .map((r) => ({
@@ -1931,6 +2464,166 @@ function main() {
     label: d.label,
   }));
 
+  // ═══════════════════════════════════════════════════════════════════════
+  // SUB-SECCIONES — split en 5 sub-rutas, cada una con KPIs/charts focalizados
+  // ═══════════════════════════════════════════════════════════════════════
+
+  const ALL_RANKINGS = [
+    {
+      id: "ranking-ballotage-2023",
+      title:
+        "Municipios — % del ganador en el ballotage 2023 (de mayor a menor)",
+      sectionId: "geografia",
+      items: ranking,
+      order: "desc",
+    },
+    {
+      id: "ranking-corte-boleta-2023",
+      title:
+        "Top 10 municipios — mayor corte de boleta peronismo presidente vs gobernador 2023",
+      sectionId: "corte",
+      items: corteTop10,
+      order: "desc",
+    },
+  ];
+
+  function pick(arr, ids) {
+    const s = new Set(ids);
+    return arr.filter((x) => s.has(x.id));
+  }
+
+  function pickBySec(arr, sectionIds) {
+    const s = new Set(sectionIds);
+    return arr.filter((c) => s.has(c.sectionId));
+  }
+
+  function buildSubreport({
+    id,
+    title,
+    date,
+    kpiIds,
+    sectionIds,
+    rankingIds,
+    mapDataOverride,
+    extraMeta,
+  }) {
+    const subKpis = pick(kpis, kpiIds);
+    const subCharts = pickBySec(charts, sectionIds);
+    const subRankings = pick(ALL_RANKINGS, rankingIds || []);
+    return {
+      meta: {
+        id,
+        title,
+        category: "politica",
+        source:
+          "Junta Electoral PBA · Cámara Nacional Electoral · Datos Abiertos PBA",
+        date: date || "2023",
+        ...(extraMeta || {}),
+      },
+      kpis: subKpis,
+      charts: subCharts,
+      rankings: subRankings,
+      mapData: mapDataOverride !== undefined ? mapDataOverride : [],
+    };
+  }
+
+  const panorama = buildSubreport({
+    id: "politica-panorama",
+    title: "Panorama Electoral PBA · 2005–2023",
+    kpiIds: [
+      "elecciones-cubiertas",
+      "padron-2023",
+      "participacion-prom",
+      "fuerzas-relevantes",
+      "secciones-electorales",
+      "municipios-mapeados",
+    ],
+    sectionIds: ["participacion", "peso", "geografia"],
+    rankingIds: ["ranking-ballotage-2023"],
+    mapDataOverride: mapData, // ganador ballotage 2023
+  });
+  writeJSON(
+    path.join(OUT_POLITICA, "panorama.json"),
+    panorama,
+    "politica/panorama.json"
+  );
+
+  const presidente = buildSubreport({
+    id: "politica-presidente",
+    title: "Presidente · primera vuelta, ballotage y descomposición",
+    kpiIds: ["blanco-nulo-ballotage-2023", "padron-2023"],
+    sectionIds: ["presidente", "sankey", "decomposicion", "blancos"],
+    rankingIds: [],
+    mapDataOverride: blancoNuloMuni2023, // mapa principal: blanco+nulo ballotage
+  });
+  writeJSON(
+    path.join(OUT_POLITICA, "presidente.json"),
+    presidente,
+    "politica/presidente.json"
+  );
+
+  const gobernador = buildSubreport({
+    id: "politica-gobernador",
+    title: "Gobernador · evolución, bancas y persistencia de intendentes",
+    kpiIds: [
+      "gallagher-2023",
+      "bancas-totales-2023",
+      "persist-intendentes",
+    ],
+    sectionIds: ["gobernador", "bancas", "intendentes", "timeline"],
+    rankingIds: [],
+    mapDataOverride: persistData, // mapa principal: persistencia intendentes
+  });
+  writeJSON(
+    path.join(OUT_POLITICA, "gobernador.json"),
+    gobernador,
+    "politica/gobernador.json"
+  );
+
+  const competitividad = buildSubreport({
+    id: "politica-competitividad",
+    title: "Volatilidad, competitividad y swing",
+    kpiIds: [
+      "volatilidad-pres-1923",
+      "nep-gob-2023",
+      "competitivos-2023",
+      "corte-boleta",
+    ],
+    sectionIds: [
+      "volatilidad",
+      "fragmentacion",
+      "competitividad",
+      "swing",
+      "corte",
+      "brecha",
+    ],
+    rankingIds: ["ranking-corte-boleta-2023"],
+    mapDataOverride: mapDataMargen, // mapa principal: margen
+  });
+  writeJSON(
+    path.join(OUT_POLITICA, "competitividad.json"),
+    competitividad,
+    "politica/competitividad.json"
+  );
+
+  const cruces = buildSubreport({
+    id: "politica-cruces",
+    title: "Cruces socioeconómicos, heatmap y tipologías",
+    kpiIds: ["clusters-detectados"],
+    sectionIds: [
+      "agro",
+      "trayectoria",
+      "inseguridad",
+      "transferencias",
+      "heatmap",
+      "clusters",
+    ],
+    rankingIds: [],
+    mapDataOverride: clustersData, // mapa principal: clusters
+  });
+  writeJSON(path.join(OUT_POLITICA, "cruces.json"), cruces, "politica/cruces.json");
+
+  // Backward-compat: archivo monolítico (por si quedan referencias)
   const finalJson = {
     meta: {
       id: "politica",
@@ -1942,24 +2635,7 @@ function main() {
     },
     kpis,
     charts,
-    rankings: [
-      {
-        id: "ranking-ballotage-2023",
-        title:
-          "Municipios — % del ganador en el ballotage 2023 (de mayor a menor)",
-        sectionId: "geografia",
-        items: ranking,
-        order: "desc",
-      },
-      {
-        id: "ranking-corte-boleta-2023",
-        title:
-          "Top 10 municipios — mayor corte de boleta peronismo presidente vs gobernador 2023",
-        sectionId: "corte",
-        items: corteTop10,
-        order: "desc",
-      },
-    ],
+    rankings: ALL_RANKINGS,
     mapData,
     legend: {
       mapaPresBallotage2023: mapPresMuni.legend,

@@ -1,0 +1,2620 @@
+{
+  "meta": {
+    "id": "politica-presidente",
+    "title": "Presidente · primera vuelta, ballotage y descomposición",
+    "category": "politica",
+    "source": "Junta Electoral PBA · Cámara Nacional Electoral · Datos Abiertos PBA",
+    "date": "2023"
+  },
+  "kpis": [
+    {
+      "id": "padron-2023",
+      "label": "Padrón electoral PBA (2023)",
+      "value": 14059933,
+      "formatted": "14.059.933",
+      "unit": "electores habilitados"
+    },
+    {
+      "id": "blanco-nulo-ballotage-2023",
+      "label": "Voto blanco + nulo · ballotage 2023",
+      "value": 1.4,
+      "formatted": "1.4%",
+      "unit": "del total"
+    }
+  ],
+  "charts": [
+    {
+      "id": "pres-primera-2023",
+      "type": "bar",
+      "title": "Presidente — Primera vuelta 2023 (% sobre top 5)",
+      "sectionId": "presidente",
+      "data": [
+        {
+          "agrupacion": "Union por la Patria",
+          "% votos": 41.5
+        },
+        {
+          "agrupacion": "La Libertad Avanza",
+          "% votos": 24.9
+        },
+        {
+          "agrupacion": "Juntos por el Cambio",
+          "% votos": 23.2
+        },
+        {
+          "agrupacion": "Hacemos por Nuestro Pais",
+          "% votos": 3.6
+        },
+        {
+          "agrupacion": "Fte. de Izquierda y de Trabaj-unidad",
+          "% votos": 3.5
+        }
+      ],
+      "config": {
+        "xAxis": "agrupacion",
+        "layout": "horizontal"
+      }
+    },
+    {
+      "id": "pres-ballotage-2023",
+      "type": "bar",
+      "title": "Presidente — Ballotage 2023 (% sobre positivos)",
+      "sectionId": "presidente",
+      "data": [
+        {
+          "agrupacion": "Union por la Patria",
+          "% votos": 50.7
+        },
+        {
+          "agrupacion": "La Libertad Avanza",
+          "% votos": 49.3
+        }
+      ],
+      "config": {
+        "xAxis": "agrupacion",
+        "layout": "horizontal"
+      }
+    },
+    {
+      "id": "pres-ballotage-2015",
+      "type": "bar",
+      "title": "Presidente — Ballotage 2015 (% sobre positivos)",
+      "sectionId": "presidente",
+      "data": [
+        {
+          "agrupacion": "Frente Para la Victoria",
+          "% votos": 51.1
+        },
+        {
+          "agrupacion": "Cambiemos",
+          "% votos": 48.9
+        }
+      ],
+      "config": {
+        "xAxis": "agrupacion",
+        "layout": "horizontal"
+      }
+    },
+    {
+      "id": "evol-presidencial",
+      "type": "line",
+      "title": "Evolución del voto presidencial (primera vuelta) · top 5 fuerzas",
+      "sectionId": "presidente",
+      "data": [
+        {
+          "año": 2015,
+          "Alianza Frente Para la Victoria": 36.2,
+          "Alianza Cambiemos Buenos Aires": 31.8
+        },
+        {
+          "año": 2019,
+          "Frente de Todos": 51.1,
+          "Juntos por el Cambio": 35.1
+        },
+        {
+          "año": 2023,
+          "Union por la Patria": 41.5,
+          "Juntos por el Cambio": 23.2
+        }
+      ],
+      "config": {
+        "xAxis": "año"
+      }
+    },
+    {
+      "id": "sankey-paso-gen-2023",
+      "type": "sankey",
+      "title": "Transferencia de votos PASO → Generales 2023 (presidente, modelo agregado)",
+      "sectionId": "sankey",
+      "data": {
+        "nodes": [
+          {
+            "id": "PASO · Otros / no votó"
+          },
+          {
+            "id": "PASO · Lista a Libertad por Siempre"
+          },
+          {
+            "id": "PASO · Lista a Celeste y Blanca"
+          },
+          {
+            "id": "PASO · Lista b la Fuerza del Cambio"
+          },
+          {
+            "id": "PASO · Lista a el Cambio de Nuestras Vidas"
+          },
+          {
+            "id": "PASO · Lista b Justa y Soberana"
+          },
+          {
+            "id": "PASO · Union por la Patria"
+          },
+          {
+            "id": "PASO · La Libertad Avanza"
+          },
+          {
+            "id": "PASO · Juntos por el Cambio"
+          },
+          {
+            "id": "PASO · Hacemos por Nuestro Pais"
+          },
+          {
+            "id": "PASO · Fte. de Izquierda y de Trabaj-unidad"
+          },
+          {
+            "id": "Gen · Lista a Libertad por Siempre"
+          },
+          {
+            "id": "Gen · Lista a Celeste y Blanca"
+          },
+          {
+            "id": "Gen · Lista b la Fuerza del Cambio"
+          },
+          {
+            "id": "Gen · Lista a el Cambio de Nuestras Vidas"
+          },
+          {
+            "id": "Gen · Lista b Justa y Soberana"
+          },
+          {
+            "id": "Gen · Union por la Patria"
+          },
+          {
+            "id": "Gen · La Libertad Avanza"
+          },
+          {
+            "id": "Gen · Juntos por el Cambio"
+          },
+          {
+            "id": "Gen · Hacemos por Nuestro Pais"
+          },
+          {
+            "id": "Gen · Fte. de Izquierda y de Trabaj-unidad"
+          },
+          {
+            "id": "Gen · Otros / no votó"
+          }
+        ],
+        "links": [
+          {
+            "source": "PASO · Lista a Libertad por Siempre",
+            "target": "Gen · Otros / no votó",
+            "value": 2256030
+          },
+          {
+            "source": "PASO · Lista a Celeste y Blanca",
+            "target": "Gen · Otros / no votó",
+            "value": 2164686
+          },
+          {
+            "source": "PASO · Lista b la Fuerza del Cambio",
+            "target": "Gen · Otros / no votó",
+            "value": 1500846
+          },
+          {
+            "source": "PASO · Lista a el Cambio de Nuestras Vidas",
+            "target": "Gen · Otros / no votó",
+            "value": 1158900
+          },
+          {
+            "source": "PASO · Lista b Justa y Soberana",
+            "target": "Gen · Otros / no votó",
+            "value": 797087
+          },
+          {
+            "source": "PASO · Otros / no votó",
+            "target": "Gen · Union por la Patria",
+            "value": 4313969
+          },
+          {
+            "source": "PASO · Otros / no votó",
+            "target": "Gen · La Libertad Avanza",
+            "value": 2581930
+          },
+          {
+            "source": "PASO · Otros / no votó",
+            "target": "Gen · Juntos por el Cambio",
+            "value": 2414879
+          },
+          {
+            "source": "PASO · Otros / no votó",
+            "target": "Gen · Hacemos por Nuestro Pais",
+            "value": 372360
+          },
+          {
+            "source": "PASO · Otros / no votó",
+            "target": "Gen · Fte. de Izquierda y de Trabaj-unidad",
+            "value": 358656
+          }
+        ]
+      }
+    },
+    {
+      "id": "scatter-aporte-lla",
+      "type": "scatter",
+      "title": "Aporte al ballotage · % no-finalistas en 1ra vuelta vs incremento de LLA en ballotage 2023",
+      "sectionId": "decomposicion",
+      "data": [
+        {
+          "municipio": "25 de Mayo",
+          "x": 36.3,
+          "y": 35.2
+        },
+        {
+          "municipio": "9 de Julio",
+          "x": 40.2,
+          "y": 33.7
+        },
+        {
+          "municipio": "Adolfo Alsina",
+          "x": 39.3,
+          "y": 34.3
+        },
+        {
+          "municipio": "Adolfo Gonzales Chaves",
+          "x": 29.8,
+          "y": 26.9
+        },
+        {
+          "municipio": "Alberti",
+          "x": 34.6,
+          "y": 30.7
+        },
+        {
+          "municipio": "Almirante Brown",
+          "x": 25.4,
+          "y": 18.8
+        },
+        {
+          "municipio": "Arrecifes",
+          "x": 32.9,
+          "y": 29.5
+        },
+        {
+          "municipio": "Avellaneda",
+          "x": 29.7,
+          "y": 22.5
+        },
+        {
+          "municipio": "Ayacucho",
+          "x": 38.1,
+          "y": 29.6
+        },
+        {
+          "municipio": "Azul",
+          "x": 34.8,
+          "y": 28.2
+        },
+        {
+          "municipio": "Bahía Blanca",
+          "x": 36.8,
+          "y": 31.6
+        },
+        {
+          "municipio": "Balcarce",
+          "x": 39.5,
+          "y": 33.4
+        },
+        {
+          "municipio": "Baradero",
+          "x": 25.7,
+          "y": 22.9
+        },
+        {
+          "municipio": "Benito Juárez",
+          "x": 26.9,
+          "y": 25.5
+        },
+        {
+          "municipio": "Berazategui",
+          "x": 25.3,
+          "y": 19.6
+        },
+        {
+          "municipio": "Berisso",
+          "x": 27.9,
+          "y": 21.4
+        },
+        {
+          "municipio": "Bolívar",
+          "x": 37.5,
+          "y": 33.7
+        },
+        {
+          "municipio": "Bragado",
+          "x": 35.7,
+          "y": 30.8
+        },
+        {
+          "municipio": "Brandsen",
+          "x": 32.7,
+          "y": 27.3
+        },
+        {
+          "municipio": "Campana",
+          "x": 35.3,
+          "y": 27.1
+        },
+        {
+          "municipio": "Cañuelas",
+          "x": 27.6,
+          "y": 23.6
+        },
+        {
+          "municipio": "Capitán Sarmiento",
+          "x": 39.2,
+          "y": 32.7
+        },
+        {
+          "municipio": "Carlos Casares",
+          "x": 32.8,
+          "y": 29.5
+        },
+        {
+          "municipio": "Carlos Tejedor",
+          "x": 34.7,
+          "y": 30.9
+        },
+        {
+          "municipio": "Carmen de Areco",
+          "x": 30.7,
+          "y": 28.8
+        },
+        {
+          "municipio": "Castelli",
+          "x": 32.1,
+          "y": 31.2
+        },
+        {
+          "municipio": "Chacabuco",
+          "x": 30.6,
+          "y": 25.2
+        },
+        {
+          "municipio": "Chascomús",
+          "x": 39,
+          "y": 32.9
+        },
+        {
+          "municipio": "Chivilcoy",
+          "x": 35.6,
+          "y": 27.5
+        },
+        {
+          "municipio": "Colón",
+          "x": 32.1,
+          "y": 27.9
+        },
+        {
+          "municipio": "Coronel Dorrego",
+          "x": 39.2,
+          "y": 34.8
+        },
+        {
+          "municipio": "Coronel Pringles",
+          "x": 37.7,
+          "y": 32.4
+        },
+        {
+          "municipio": "Coronel Suárez",
+          "x": 37.2,
+          "y": 33.9
+        },
+        {
+          "municipio": "Daireaux",
+          "x": 34.3,
+          "y": 32.7
+        },
+        {
+          "municipio": "Dolores",
+          "x": 38.3,
+          "y": 34.6
+        },
+        {
+          "municipio": "Ensenada",
+          "x": 22.9,
+          "y": 17.2
+        },
+        {
+          "municipio": "Escobar",
+          "x": 26.1,
+          "y": 23.4
+        },
+        {
+          "municipio": "Esteban Echeverría",
+          "x": 26,
+          "y": 20.7
+        },
+        {
+          "municipio": "Exaltación de la Cruz",
+          "x": 31.5,
+          "y": 27.6
+        },
+        {
+          "municipio": "Ezeiza",
+          "x": 22.1,
+          "y": 19.3
+        },
+        {
+          "municipio": "Florencio Varela",
+          "x": 19,
+          "y": 13.6
+        },
+        {
+          "municipio": "Florentino Ameghino",
+          "x": 37.4,
+          "y": 36
+        },
+        {
+          "municipio": "General Alvarado",
+          "x": 34.5,
+          "y": 29.4
+        },
+        {
+          "municipio": "General Alvear",
+          "x": 38.1,
+          "y": 36.1
+        },
+        {
+          "municipio": "General Arenales",
+          "x": 37.7,
+          "y": 34.9
+        },
+        {
+          "municipio": "General Belgrano",
+          "x": 39.3,
+          "y": 33.9
+        },
+        {
+          "municipio": "General Guido",
+          "x": 35.8,
+          "y": 31.6
+        },
+        {
+          "municipio": "General Juan Madariaga",
+          "x": 39.2,
+          "y": 33.5
+        },
+        {
+          "municipio": "General La Madrid",
+          "x": 36.1,
+          "y": 32.2
+        },
+        {
+          "municipio": "General Las Heras",
+          "x": 31.7,
+          "y": 26.1
+        },
+        {
+          "municipio": "General Lavalle",
+          "x": 38.6,
+          "y": 36.6
+        },
+        {
+          "municipio": "General Paz",
+          "x": 29.6,
+          "y": 26.5
+        },
+        {
+          "municipio": "General Pinto",
+          "x": 32.4,
+          "y": 30.7
+        },
+        {
+          "municipio": "General Pueyrredón",
+          "x": 36.1,
+          "y": 29.8
+        },
+        {
+          "municipio": "General Rodríguez",
+          "x": 23.8,
+          "y": 19.8
+        },
+        {
+          "municipio": "General San Martín",
+          "x": 30.7,
+          "y": 24
+        },
+        {
+          "municipio": "General Viamonte",
+          "x": 35.6,
+          "y": 29.3
+        },
+        {
+          "municipio": "General Villegas",
+          "x": 37.5,
+          "y": 33.8
+        },
+        {
+          "municipio": "Guaminí",
+          "x": 33.5,
+          "y": 31.5
+        },
+        {
+          "municipio": "Hipólito Yrigoyen",
+          "x": 35,
+          "y": 32.1
+        },
+        {
+          "municipio": "Hurlingham",
+          "x": 29.2,
+          "y": 22.6
+        },
+        {
+          "municipio": "Ituzaingó",
+          "x": 32.8,
+          "y": 25.2
+        },
+        {
+          "municipio": "José C. Paz",
+          "x": 20.6,
+          "y": 16.1
+        },
+        {
+          "municipio": "Junín",
+          "x": 36.7,
+          "y": 30.7
+        },
+        {
+          "municipio": "La Costa",
+          "x": 33.3,
+          "y": 27.4
+        },
+        {
+          "municipio": "La Matanza",
+          "x": 23.4,
+          "y": 17
+        },
+        {
+          "municipio": "La Plata",
+          "x": 36.4,
+          "y": 28.4
+        },
+        {
+          "municipio": "Lanús",
+          "x": 32.6,
+          "y": 24.1
+        },
+        {
+          "municipio": "Laprida",
+          "x": 31.6,
+          "y": 28.3
+        },
+        {
+          "municipio": "Las Flores",
+          "x": 33.7,
+          "y": 30
+        },
+        {
+          "municipio": "Leandro N. Alem",
+          "x": 31.2,
+          "y": 29.2
+        },
+        {
+          "municipio": "Lezama",
+          "x": 40.5,
+          "y": 34.9
+        },
+        {
+          "municipio": "Lincoln",
+          "x": 39.7,
+          "y": 35.5
+        },
+        {
+          "municipio": "Lobería",
+          "x": 34.8,
+          "y": 28.1
+        },
+        {
+          "municipio": "Lobos",
+          "x": 40,
+          "y": 34.9
+        },
+        {
+          "municipio": "Lomas de Zamora",
+          "x": 27.7,
+          "y": 20.3
+        },
+        {
+          "municipio": "Luján",
+          "x": 33.6,
+          "y": 29.9
+        },
+        {
+          "municipio": "Magdalena",
+          "x": 37.4,
+          "y": 30.8
+        },
+        {
+          "municipio": "Maipú",
+          "x": 41.5,
+          "y": 34.4
+        },
+        {
+          "municipio": "Malvinas Argentinas",
+          "x": 22.7,
+          "y": 18
+        },
+        {
+          "municipio": "Mar Chiquita",
+          "x": 31,
+          "y": 26.5
+        },
+        {
+          "municipio": "Marcos Paz",
+          "x": 22.6,
+          "y": 18.4
+        },
+        {
+          "municipio": "Mercedes",
+          "x": 35.4,
+          "y": 31.8
+        },
+        {
+          "municipio": "Merlo",
+          "x": 22.3,
+          "y": 16.6
+        },
+        {
+          "municipio": "Monte",
+          "x": 37.7,
+          "y": 31.8
+        },
+        {
+          "municipio": "Monte Hermoso",
+          "x": 27.3,
+          "y": 24.4
+        },
+        {
+          "municipio": "Moreno",
+          "x": 20.8,
+          "y": 15.5
+        },
+        {
+          "municipio": "Morón",
+          "x": 36.2,
+          "y": 28.4
+        },
+        {
+          "municipio": "Navarro",
+          "x": 33.5,
+          "y": 32
+        },
+        {
+          "municipio": "Necochea",
+          "x": 36,
+          "y": 31.4
+        },
+        {
+          "municipio": "Olavarría",
+          "x": 34.1,
+          "y": 27.7
+        },
+        {
+          "municipio": "Patagones",
+          "x": 32.7,
+          "y": 27.7
+        },
+        {
+          "municipio": "Pehuajó",
+          "x": 34.1,
+          "y": 31.4
+        },
+        {
+          "municipio": "Pellegrini",
+          "x": 37.5,
+          "y": 38.5
+        },
+        {
+          "municipio": "Pergamino",
+          "x": 38.5,
+          "y": 32.9
+        },
+        {
+          "municipio": "Pila",
+          "x": 28.4,
+          "y": 27.6
+        },
+        {
+          "municipio": "Pilar",
+          "x": 26,
+          "y": 23.2
+        },
+        {
+          "municipio": "Pinamar",
+          "x": 33.8,
+          "y": 30.1
+        },
+        {
+          "municipio": "Presidente Perón",
+          "x": 19.3,
+          "y": 14.9
+        },
+        {
+          "municipio": "Puán",
+          "x": 43.1,
+          "y": 38
+        },
+        {
+          "municipio": "Punta Indio",
+          "x": 34.6,
+          "y": 31.1
+        },
+        {
+          "municipio": "Quilmes",
+          "x": 28.3,
+          "y": 21.8
+        },
+        {
+          "municipio": "Ramallo",
+          "x": 31.5,
+          "y": 27.5
+        },
+        {
+          "municipio": "Rauch",
+          "x": 34,
+          "y": 28.7
+        },
+        {
+          "municipio": "Rivadavia",
+          "x": 35.6,
+          "y": 31.8
+        },
+        {
+          "municipio": "Rojas",
+          "x": 40.7,
+          "y": 33.4
+        },
+        {
+          "municipio": "Roque Pérez",
+          "x": 38.4,
+          "y": 34.9
+        },
+        {
+          "municipio": "Saavedra",
+          "x": 37.8,
+          "y": 34.7
+        },
+        {
+          "municipio": "Saladillo",
+          "x": 37.4,
+          "y": 33
+        },
+        {
+          "municipio": "Salliqueló",
+          "x": 37,
+          "y": 33.7
+        },
+        {
+          "municipio": "Salto",
+          "x": 33.2,
+          "y": 28.9
+        },
+        {
+          "municipio": "San Andrés de Giles",
+          "x": 33,
+          "y": 28.5
+        },
+        {
+          "municipio": "San Antonio de Areco",
+          "x": 38.9,
+          "y": 36
+        },
+        {
+          "municipio": "San Cayetano",
+          "x": 46,
+          "y": 37.8
+        },
+        {
+          "municipio": "San Fernando",
+          "x": 30.6,
+          "y": 25.5
+        },
+        {
+          "municipio": "San Isidro",
+          "x": 47,
+          "y": 41.3
+        },
+        {
+          "municipio": "San Miguel",
+          "x": 32.3,
+          "y": 25.8
+        },
+        {
+          "municipio": "San Nicolás",
+          "x": 34.2,
+          "y": 28.3
+        },
+        {
+          "municipio": "San Pedro",
+          "x": 31.1,
+          "y": 27.9
+        },
+        {
+          "municipio": "San Vicente",
+          "x": 21.9,
+          "y": 19.6
+        },
+        {
+          "municipio": "Suipacha",
+          "x": 33.7,
+          "y": 28.8
+        },
+        {
+          "municipio": "Tandil",
+          "x": 38.7,
+          "y": 32.8
+        },
+        {
+          "municipio": "Tapalqué",
+          "x": 35.4,
+          "y": 31.7
+        },
+        {
+          "municipio": "Tigre",
+          "x": 30.4,
+          "y": 25.9
+        },
+        {
+          "municipio": "Tordillo",
+          "x": 31.3,
+          "y": 32.3
+        },
+        {
+          "municipio": "Tornquist",
+          "x": 34.2,
+          "y": 31
+        },
+        {
+          "municipio": "Trenque Lauquen",
+          "x": 38.3,
+          "y": 33.7
+        },
+        {
+          "municipio": "Tres Arroyos",
+          "x": 35.3,
+          "y": 29.8
+        },
+        {
+          "municipio": "Tres de Febrero",
+          "x": 34.3,
+          "y": 26.6
+        },
+        {
+          "municipio": "Tres Lomas",
+          "x": 32.8,
+          "y": 31.6
+        },
+        {
+          "municipio": "Vicente López",
+          "x": 49,
+          "y": 41.1
+        },
+        {
+          "municipio": "Villa Gesell",
+          "x": 32.2,
+          "y": 28
+        },
+        {
+          "municipio": "Villarino",
+          "x": 29.8,
+          "y": 29.1
+        },
+        {
+          "municipio": "Zárate",
+          "x": 29.3,
+          "y": 24
+        }
+      ],
+      "config": {
+        "xAxis": "% Bullrich + Schiaretti + otros (1ra vuelta)",
+        "yAxis": "Δ LLA (ballotage − 1ra vuelta) (pp)",
+        "regression": {
+          "r2": 0.881,
+          "slope": 0.942,
+          "intercept": -2.62,
+          "n": 134
+        }
+      }
+    },
+    {
+      "id": "aporte-bars-2023",
+      "type": "bar",
+      "title": "Composición del voto presidencial PBA · 1ra vuelta vs ballotage 2023 (votos absolutos)",
+      "sectionId": "decomposicion",
+      "data": [
+        {
+          "etapa": "1ra vuelta",
+          "LLA": 2581930,
+          "UxP": 4313969,
+          "Bullrich/Schiaretti/etc": 3145895
+        },
+        {
+          "etapa": "Ballotage",
+          "LLA": 4776711,
+          "UxP": 4919211,
+          "Bullrich/Schiaretti/etc": 0
+        }
+      ],
+      "config": {
+        "xAxis": "etapa",
+        "grouped": true
+      }
+    },
+    {
+      "id": "blanco-nulo-ballotage",
+      "type": "bar",
+      "title": "Voto blanco, nulo e impugnado · ballotages 2015 y 2023 (% sobre total)",
+      "sectionId": "blancos",
+      "data": [
+        {
+          "año": 2015,
+          "% Blanco": 0,
+          "% Nulo": 1.1,
+          "% Recurr./Impugn.": 1.4
+        },
+        {
+          "año": 2023,
+          "% Blanco": 0,
+          "% Nulo": 1.4,
+          "% Recurr./Impugn.": 1.8
+        }
+      ],
+      "config": {
+        "xAxis": "año",
+        "grouped": true
+      }
+    },
+    {
+      "id": "mapa-blanco-nulo-2023",
+      "type": "map",
+      "title": "% Blanco + Nulo por municipio · ballotage 2023",
+      "sectionId": "blancos",
+      "data": [
+        {
+          "municipioId": "ADOLFO ALSINA",
+          "municipioNombre": "Adolfo Alsina",
+          "value": 1.4,
+          "label": "Blanco+Nulo 1.4% (B: 0 / N: 145 / Pos: 10117)"
+        },
+        {
+          "municipioId": "ALBERTI",
+          "municipioNombre": "Alberti",
+          "value": 0.1,
+          "label": "Blanco+Nulo 0.1% (B: 0 / N: 6 / Pos: 7410)"
+        },
+        {
+          "municipioId": "ALMIRANTE BROWN",
+          "municipioNombre": "Almirante Brown",
+          "value": 1.4,
+          "label": "Blanco+Nulo 1.4% (B: 0 / N: 4842 / Pos: 341680)"
+        },
+        {
+          "municipioId": "AVELLANEDA",
+          "municipioNombre": "Avellaneda",
+          "value": 1.1,
+          "label": "Blanco+Nulo 1.1% (B: 0 / N: 2508 / Pos: 220583)"
+        },
+        {
+          "municipioId": "AYACUCHO",
+          "municipioNombre": "Ayacucho",
+          "value": 2.1,
+          "label": "Blanco+Nulo 2.1% (B: 0 / N: 270 / Pos: 12791)"
+        },
+        {
+          "municipioId": "AZUL",
+          "municipioNombre": "Azul",
+          "value": 2.5,
+          "label": "Blanco+Nulo 2.5% (B: 0 / N: 1071 / Pos: 41796)"
+        },
+        {
+          "municipioId": "BAHIA BLANCA",
+          "municipioNombre": "Bahía Blanca",
+          "value": 2,
+          "label": "Blanco+Nulo 2% (B: 0 / N: 3710 / Pos: 180997)"
+        },
+        {
+          "municipioId": "BALCARCE",
+          "municipioNombre": "Balcarce",
+          "value": 2,
+          "label": "Blanco+Nulo 2% (B: 0 / N: 619 / Pos: 29936)"
+        },
+        {
+          "municipioId": "BARADERO",
+          "municipioNombre": "Baradero",
+          "value": 2,
+          "label": "Blanco+Nulo 2% (B: 0 / N: 468 / Pos: 23145)"
+        },
+        {
+          "municipioId": "ARRECIFES",
+          "municipioNombre": "Arrecifes",
+          "value": 1,
+          "label": "Blanco+Nulo 1% (B: 0 / N: 203 / Pos: 19496)"
+        },
+        {
+          "municipioId": "BERAZATEGUI",
+          "municipioNombre": "Berazategui",
+          "value": 1.1,
+          "label": "Blanco+Nulo 1.1% (B: 0 / N: 2311 / Pos: 212575)"
+        },
+        {
+          "municipioId": "BERISSO",
+          "municipioNombre": "Berisso",
+          "value": 0.9,
+          "label": "Blanco+Nulo 0.9% (B: 0 / N: 577 / Pos: 62165)"
+        },
+        {
+          "municipioId": "BOLIVAR",
+          "municipioNombre": "Bolívar",
+          "value": 1.7,
+          "label": "Blanco+Nulo 1.7% (B: 0 / N: 399 / Pos: 22886)"
+        },
+        {
+          "municipioId": "BRAGADO",
+          "municipioNombre": "Bragado",
+          "value": 1.7,
+          "label": "Blanco+Nulo 1.7% (B: 0 / N: 483 / Pos: 27745)"
+        },
+        {
+          "municipioId": "BRANDSEN",
+          "municipioNombre": "Brandsen",
+          "value": 1.7,
+          "label": "Blanco+Nulo 1.7% (B: 0 / N: 333 / Pos: 19793)"
+        },
+        {
+          "municipioId": "CAMPANA",
+          "municipioNombre": "Campana",
+          "value": 1.6,
+          "label": "Blanco+Nulo 1.6% (B: 0 / N: 1034 / Pos: 64244)"
+        },
+        {
+          "municipioId": "CANUELAS",
+          "municipioNombre": "Cañuelas",
+          "value": 1,
+          "label": "Blanco+Nulo 1% (B: 0 / N: 374 / Pos: 38280)"
+        },
+        {
+          "municipioId": "CAPITAN SARMIENTO",
+          "municipioNombre": "Capitán Sarmiento",
+          "value": 0.8,
+          "label": "Blanco+Nulo 0.8% (B: 0 / N: 85 / Pos: 10220)"
+        },
+        {
+          "municipioId": "CARLOS CASARES",
+          "municipioNombre": "Carlos Casares",
+          "value": 0.5,
+          "label": "Blanco+Nulo 0.5% (B: 0 / N: 79 / Pos: 15011)"
+        },
+        {
+          "municipioId": "CARLOS TEJEDOR",
+          "municipioNombre": "Carlos Tejedor",
+          "value": 0.9,
+          "label": "Blanco+Nulo 0.9% (B: 0 / N: 73 / Pos: 7789)"
+        },
+        {
+          "municipioId": "CARMEN DE ARECO",
+          "municipioNombre": "Carmen de Areco",
+          "value": 0.5,
+          "label": "Blanco+Nulo 0.5% (B: 0 / N: 47 / Pos: 10254)"
+        },
+        {
+          "municipioId": "PATAGONES",
+          "municipioNombre": "Patagones",
+          "value": 1.7,
+          "label": "Blanco+Nulo 1.7% (B: 0 / N: 355 / Pos: 20306)"
+        },
+        {
+          "municipioId": "CASTELLI",
+          "municipioNombre": "Castelli",
+          "value": 2,
+          "label": "Blanco+Nulo 2% (B: 0 / N: 124 / Pos: 6127)"
+        },
+        {
+          "municipioId": "COLON",
+          "municipioNombre": "Colón",
+          "value": 1.2,
+          "label": "Blanco+Nulo 1.2% (B: 0 / N: 204 / Pos: 16705)"
+        },
+        {
+          "municipioId": "CORONEL DORREGO",
+          "municipioNombre": "Coronel Dorrego",
+          "value": 1.8,
+          "label": "Blanco+Nulo 1.8% (B: 0 / N: 186 / Pos: 10113)"
+        },
+        {
+          "municipioId": "CORONEL PRINGLES",
+          "municipioNombre": "Coronel Pringles",
+          "value": 2.2,
+          "label": "Blanco+Nulo 2.2% (B: 0 / N: 316 / Pos: 14315)"
+        },
+        {
+          "municipioId": "CORONEL DE MARINA L ROSALES",
+          "municipioNombre": "Coronel de Marina L. Rosales",
+          "value": 1.4,
+          "label": "Blanco+Nulo 1.4% (B: 0 / N: 517 / Pos: 36911)"
+        },
+        {
+          "municipioId": "CORONEL SUAREZ",
+          "municipioNombre": "Coronel Suárez",
+          "value": 2.7,
+          "label": "Blanco+Nulo 2.7% (B: 0 / N: 700 / Pos: 24969)"
+        },
+        {
+          "municipioId": "CHACABUCO",
+          "municipioNombre": "Chacabuco",
+          "value": 1.7,
+          "label": "Blanco+Nulo 1.7% (B: 0 / N: 571 / Pos: 33043)"
+        },
+        {
+          "municipioId": "CHASCOMUS",
+          "municipioNombre": "Chascomús",
+          "value": 1,
+          "label": "Blanco+Nulo 1% (B: 0 / N: 266 / Pos: 25601)"
+        },
+        {
+          "municipioId": "CHIVILCOY",
+          "municipioNombre": "Chivilcoy",
+          "value": 1.6,
+          "label": "Blanco+Nulo 1.6% (B: 0 / N: 732 / Pos: 44906)"
+        },
+        {
+          "municipioId": "DAIREAUX",
+          "municipioNombre": "Daireaux",
+          "value": 1.4,
+          "label": "Blanco+Nulo 1.4% (B: 0 / N: 149 / Pos: 10828)"
+        },
+        {
+          "municipioId": "DOLORES",
+          "municipioNombre": "Dolores",
+          "value": 2,
+          "label": "Blanco+Nulo 2% (B: 0 / N: 384 / Pos: 18495)"
+        },
+        {
+          "municipioId": "ENSENADA",
+          "municipioNombre": "Ensenada",
+          "value": 0.7,
+          "label": "Blanco+Nulo 0.7% (B: 0 / N: 321 / Pos: 43930)"
+        },
+        {
+          "municipioId": "ESCOBAR",
+          "municipioNombre": "Escobar",
+          "value": 1.1,
+          "label": "Blanco+Nulo 1.1% (B: 0 / N: 1622 / Pos: 147412)"
+        },
+        {
+          "municipioId": "ESTEBAN ECHEVERRIA",
+          "municipioNombre": "Esteban Echeverría",
+          "value": 1.5,
+          "label": "Blanco+Nulo 1.5% (B: 0 / N: 2786 / Pos: 181265)"
+        },
+        {
+          "municipioId": "EXALTACION DE LA CRUZ",
+          "municipioNombre": "Exaltación de la Cruz",
+          "value": 1.5,
+          "label": "Blanco+Nulo 1.5% (B: 0 / N: 367 / Pos: 24273)"
+        },
+        {
+          "municipioId": "FLORENCIO VARELA",
+          "municipioNombre": "Florencio Varela",
+          "value": 0.6,
+          "label": "Blanco+Nulo 0.6% (B: 0 / N: 1417 / Pos: 248765)"
+        },
+        {
+          "municipioId": "GENERAL ALVARADO",
+          "municipioNombre": "General Alvarado",
+          "value": 1.4,
+          "label": "Blanco+Nulo 1.4% (B: 0 / N: 400 / Pos: 28044)"
+        },
+        {
+          "municipioId": "GENERAL ALVEAR",
+          "municipioNombre": "General Alvear",
+          "value": 0.7,
+          "label": "Blanco+Nulo 0.7% (B: 0 / N: 43 / Pos: 6413)"
+        },
+        {
+          "municipioId": "GENERAL ARENALES",
+          "municipioNombre": "General Arenales",
+          "value": 0.9,
+          "label": "Blanco+Nulo 0.9% (B: 0 / N: 102 / Pos: 11318)"
+        },
+        {
+          "municipioId": "GENERAL BELGRANO",
+          "municipioNombre": "General Belgrano",
+          "value": 0.8,
+          "label": "Blanco+Nulo 0.8% (B: 0 / N: 104 / Pos: 12510)"
+        },
+        {
+          "municipioId": "GENERAL GUIDO",
+          "municipioNombre": "General Guido",
+          "value": 2.3,
+          "label": "Blanco+Nulo 2.3% (B: 0 / N: 44 / Pos: 1892)"
+        },
+        {
+          "municipioId": "GENERAL LA MADRID",
+          "municipioNombre": "General La Madrid",
+          "value": 2.6,
+          "label": "Blanco+Nulo 2.6% (B: 0 / N: 194 / Pos: 7133)"
+        },
+        {
+          "municipioId": "GENERAL LAS HERAS",
+          "municipioNombre": "General Las Heras",
+          "value": 1.5,
+          "label": "Blanco+Nulo 1.5% (B: 0 / N: 164 / Pos: 11057)"
+        },
+        {
+          "municipioId": "GENERAL LAVALLE",
+          "municipioNombre": "General Lavalle",
+          "value": 1.2,
+          "label": "Blanco+Nulo 1.2% (B: 0 / N: 42 / Pos: 3398)"
+        },
+        {
+          "municipioId": "GENERAL JUAN MADARIAGA",
+          "municipioNombre": "General Juan Madariaga",
+          "value": 1.2,
+          "label": "Blanco+Nulo 1.2% (B: 0 / N: 169 / Pos: 13490)"
+        },
+        {
+          "municipioId": "GENERAL PAZ",
+          "municipioNombre": "General Paz",
+          "value": 1,
+          "label": "Blanco+Nulo 1% (B: 0 / N: 89 / Pos: 9082)"
+        },
+        {
+          "municipioId": "GENERAL PINTO",
+          "municipioNombre": "General Pinto",
+          "value": 1.2,
+          "label": "Blanco+Nulo 1.2% (B: 0 / N: 93 / Pos: 7898)"
+        },
+        {
+          "municipioId": "GENERAL PUEYRREDON",
+          "municipioNombre": "General Pueyrredón",
+          "value": 2.2,
+          "label": "Blanco+Nulo 2.2% (B: 0 / N: 8887 / Pos: 393422)"
+        },
+        {
+          "municipioId": "GENERAL RODRIGUEZ",
+          "municipioNombre": "General Rodríguez",
+          "value": 0.8,
+          "label": "Blanco+Nulo 0.8% (B: 0 / N: 537 / Pos: 66019)"
+        },
+        {
+          "municipioId": "GENERAL SAN MARTIN",
+          "municipioNombre": "General San Martín",
+          "value": 1.4,
+          "label": "Blanco+Nulo 1.4% (B: 0 / N: 3552 / Pos: 256531)"
+        },
+        {
+          "municipioId": "SAN MIGUEL",
+          "municipioNombre": "San Miguel",
+          "value": 1.4,
+          "label": "Blanco+Nulo 1.4% (B: 0 / N: 2653 / Pos: 181749)"
+        },
+        {
+          "municipioId": "GENERAL VIAMONTE",
+          "municipioNombre": "General Viamonte",
+          "value": 1.5,
+          "label": "Blanco+Nulo 1.5% (B: 0 / N: 190 / Pos: 12087)"
+        },
+        {
+          "municipioId": "GENERAL VILLEGAS",
+          "municipioNombre": "General Villegas",
+          "value": 1.3,
+          "label": "Blanco+Nulo 1.3% (B: 0 / N: 240 / Pos: 18486)"
+        },
+        {
+          "municipioId": "ADOLFO GONZALES CHAVES",
+          "municipioNombre": "Adolfo Gonzales Chaves",
+          "value": 2.2,
+          "label": "Blanco+Nulo 2.2% (B: 0 / N: 170 / Pos: 7662)"
+        },
+        {
+          "municipioId": "GUAMINI",
+          "municipioNombre": "Guaminí",
+          "value": 0.4,
+          "label": "Blanco+Nulo 0.4% (B: 0 / N: 30 / Pos: 7518)"
+        },
+        {
+          "municipioId": "HIPOLITO YRIGOYEN",
+          "municipioNombre": "Hipólito Yrigoyen",
+          "value": 1.5,
+          "label": "Blanco+Nulo 1.5% (B: 0 / N: 90 / Pos: 5834)"
+        },
+        {
+          "municipioId": "BENITO JUAREZ",
+          "municipioNombre": "Benito Juárez",
+          "value": 2.1,
+          "label": "Blanco+Nulo 2.1% (B: 0 / N: 271 / Pos: 12343)"
+        },
+        {
+          "municipioId": "JUNIN",
+          "municipioNombre": "Junín",
+          "value": 1.6,
+          "label": "Blanco+Nulo 1.6% (B: 0 / N: 973 / Pos: 60709)"
+        },
+        {
+          "municipioId": "LA MATANZA",
+          "municipioNombre": "La Matanza",
+          "value": 1.1,
+          "label": "Blanco+Nulo 1.1% (B: 0 / N: 8748 / Pos: 782505)"
+        },
+        {
+          "municipioId": "LANUS",
+          "municipioNombre": "Lanús",
+          "value": 1.3,
+          "label": "Blanco+Nulo 1.3% (B: 0 / N: 3608 / Pos: 280362)"
+        },
+        {
+          "municipioId": "LA PLATA",
+          "municipioNombre": "La Plata",
+          "value": 1.8,
+          "label": "Blanco+Nulo 1.8% (B: 0 / N: 7640 / Pos: 413228)"
+        },
+        {
+          "municipioId": "LAPRIDA",
+          "municipioNombre": "Laprida",
+          "value": 2.3,
+          "label": "Blanco+Nulo 2.3% (B: 0 / N: 166 / Pos: 7095)"
+        },
+        {
+          "municipioId": "LAS FLORES",
+          "municipioNombre": "Las Flores",
+          "value": 1.6,
+          "label": "Blanco+Nulo 1.6% (B: 0 / N: 268 / Pos: 16639)"
+        },
+        {
+          "municipioId": "LEANDRO N ALEM",
+          "municipioNombre": "Leandro N. Alem",
+          "value": 1.3,
+          "label": "Blanco+Nulo 1.3% (B: 0 / N: 150 / Pos: 11179)"
+        },
+        {
+          "municipioId": "LINCOLN",
+          "municipioNombre": "Lincoln",
+          "value": 1.3,
+          "label": "Blanco+Nulo 1.3% (B: 0 / N: 368 / Pos: 28149)"
+        },
+        {
+          "municipioId": "LOBERIA",
+          "municipioNombre": "Lobería",
+          "value": 2.8,
+          "label": "Blanco+Nulo 2.8% (B: 0 / N: 303 / Pos: 10421)"
+        },
+        {
+          "municipioId": "LOBOS",
+          "municipioNombre": "Lobos",
+          "value": 0.8,
+          "label": "Blanco+Nulo 0.8% (B: 0 / N: 192 / Pos: 24898)"
+        },
+        {
+          "municipioId": "LOMAS DE ZAMORA",
+          "municipioNombre": "Lomas de Zamora",
+          "value": 1.4,
+          "label": "Blanco+Nulo 1.4% (B: 0 / N: 5451 / Pos: 388485)"
+        },
+        {
+          "municipioId": "LUJAN",
+          "municipioNombre": "Luján",
+          "value": 1.6,
+          "label": "Blanco+Nulo 1.6% (B: 0 / N: 1130 / Pos: 70308)"
+        },
+        {
+          "municipioId": "MAGDALENA",
+          "municipioNombre": "Magdalena",
+          "value": 1,
+          "label": "Blanco+Nulo 1% (B: 0 / N: 117 / Pos: 11829)"
+        },
+        {
+          "municipioId": "MAIPU",
+          "municipioNombre": "Maipú",
+          "value": 2.3,
+          "label": "Blanco+Nulo 2.3% (B: 0 / N: 172 / Pos: 7174)"
+        },
+        {
+          "municipioId": "MAR CHIQUITA",
+          "municipioNombre": "Mar Chiquita",
+          "value": 1.1,
+          "label": "Blanco+Nulo 1.1% (B: 0 / N: 254 / Pos: 22364)"
+        },
+        {
+          "municipioId": "MARCOS PAZ",
+          "municipioNombre": "Marcos Paz",
+          "value": 1.1,
+          "label": "Blanco+Nulo 1.1% (B: 0 / N: 394 / Pos: 36424)"
+        },
+        {
+          "municipioId": "MERCEDES",
+          "municipioNombre": "Mercedes",
+          "value": 1.9,
+          "label": "Blanco+Nulo 1.9% (B: 0 / N: 855 / Pos: 44138)"
+        },
+        {
+          "municipioId": "MERLO",
+          "municipioNombre": "Merlo",
+          "value": 1.1,
+          "label": "Blanco+Nulo 1.1% (B: 0 / N: 3450 / Pos: 306669)"
+        },
+        {
+          "municipioId": "MONTE",
+          "municipioNombre": "Monte",
+          "value": 1.5,
+          "label": "Blanco+Nulo 1.5% (B: 0 / N: 228 / Pos: 14537)"
+        },
+        {
+          "municipioId": "MORENO",
+          "municipioNombre": "Moreno",
+          "value": 0.9,
+          "label": "Blanco+Nulo 0.9% (B: 0 / N: 2376 / Pos: 266955)"
+        },
+        {
+          "municipioId": "MORON",
+          "municipioNombre": "Morón",
+          "value": 1.8,
+          "label": "Blanco+Nulo 1.8% (B: 0 / N: 3825 / Pos: 208190)"
+        },
+        {
+          "municipioId": "NAVARRO",
+          "municipioNombre": "Navarro",
+          "value": 1.5,
+          "label": "Blanco+Nulo 1.5% (B: 0 / N: 179 / Pos: 11750)"
+        },
+        {
+          "municipioId": "NECOCHEA",
+          "municipioNombre": "Necochea",
+          "value": 1.8,
+          "label": "Blanco+Nulo 1.8% (B: 0 / N: 1079 / Pos: 60460)"
+        },
+        {
+          "municipioId": "9 DE JULIO",
+          "municipioNombre": "9 de Julio",
+          "value": 1.4,
+          "label": "Blanco+Nulo 1.4% (B: 0 / N: 443 / Pos: 31903)"
+        },
+        {
+          "municipioId": "OLAVARRIA",
+          "municipioNombre": "Olavarría",
+          "value": 2.2,
+          "label": "Blanco+Nulo 2.2% (B: 0 / N: 1560 / Pos: 70767)"
+        },
+        {
+          "municipioId": "PEHUAJO",
+          "municipioNombre": "Pehuajó",
+          "value": 2,
+          "label": "Blanco+Nulo 2% (B: 0 / N: 541 / Pos: 26942)"
+        },
+        {
+          "municipioId": "PELLEGRINI",
+          "municipioNombre": "Pellegrini",
+          "value": 1.1,
+          "label": "Blanco+Nulo 1.1% (B: 0 / N: 41 / Pos: 3821)"
+        },
+        {
+          "municipioId": "PERGAMINO",
+          "municipioNombre": "Pergamino",
+          "value": 1.7,
+          "label": "Blanco+Nulo 1.7% (B: 0 / N: 1128 / Pos: 66897)"
+        },
+        {
+          "municipioId": "PILA",
+          "municipioNombre": "Pila",
+          "value": 2,
+          "label": "Blanco+Nulo 2% (B: 0 / N: 55 / Pos: 2727)"
+        },
+        {
+          "municipioId": "PILAR",
+          "municipioNombre": "Pilar",
+          "value": 1.3,
+          "label": "Blanco+Nulo 1.3% (B: 0 / N: 2700 / Pos: 207738)"
+        },
+        {
+          "municipioId": "PINAMAR",
+          "municipioNombre": "Pinamar",
+          "value": 1.7,
+          "label": "Blanco+Nulo 1.7% (B: 0 / N: 368 / Pos: 20831)"
+        },
+        {
+          "municipioId": "PUAN",
+          "municipioNombre": "Puan",
+          "value": 2.1,
+          "label": "Blanco+Nulo 2.1% (B: 0 / N: 215 / Pos: 9961)"
+        },
+        {
+          "municipioId": "QUILMES",
+          "municipioNombre": "Quilmes",
+          "value": 0.9,
+          "label": "Blanco+Nulo 0.9% (B: 0 / N: 3381 / Pos: 360982)"
+        },
+        {
+          "municipioId": "RAMALLO",
+          "municipioNombre": "Ramallo",
+          "value": 0.7,
+          "label": "Blanco+Nulo 0.7% (B: 0 / N: 168 / Pos: 23868)"
+        },
+        {
+          "municipioId": "RAUCH",
+          "municipioNombre": "Rauch",
+          "value": 1.6,
+          "label": "Blanco+Nulo 1.6% (B: 0 / N: 161 / Pos: 10167)"
+        },
+        {
+          "municipioId": "RIVADAVIA",
+          "municipioNombre": "Rivadavia",
+          "value": 0.8,
+          "label": "Blanco+Nulo 0.8% (B: 0 / N: 84 / Pos: 10973)"
+        },
+        {
+          "municipioId": "ROJAS",
+          "municipioNombre": "Rojas",
+          "value": 1.9,
+          "label": "Blanco+Nulo 1.9% (B: 0 / N: 296 / Pos: 15311)"
+        },
+        {
+          "municipioId": "ROQUE PEREZ",
+          "municipioNombre": "Roque Pérez",
+          "value": 1.3,
+          "label": "Blanco+Nulo 1.3% (B: 0 / N: 114 / Pos: 8643)"
+        },
+        {
+          "municipioId": "SAAVEDRA",
+          "municipioNombre": "Saavedra",
+          "value": 2.6,
+          "label": "Blanco+Nulo 2.6% (B: 0 / N: 341 / Pos: 12907)"
+        },
+        {
+          "municipioId": "SALADILLO",
+          "municipioNombre": "Saladillo",
+          "value": 2.5,
+          "label": "Blanco+Nulo 2.5% (B: 0 / N: 539 / Pos: 21442)"
+        },
+        {
+          "municipioId": "SALLIQUELO",
+          "municipioNombre": "Salliqueló",
+          "value": 1.2,
+          "label": "Blanco+Nulo 1.2% (B: 0 / N: 71 / Pos: 5642)"
+        },
+        {
+          "municipioId": "SALTO",
+          "municipioNombre": "Salto",
+          "value": 0.6,
+          "label": "Blanco+Nulo 0.6% (B: 0 / N: 140 / Pos: 22600)"
+        },
+        {
+          "municipioId": "SAN ANDRES DE GILES",
+          "municipioNombre": "San Andrés de Giles",
+          "value": 0.6,
+          "label": "Blanco+Nulo 0.6% (B: 0 / N: 89 / Pos: 15595)"
+        },
+        {
+          "municipioId": "SAN ANTONIO DE ARECO",
+          "municipioNombre": "San Antonio de Areco",
+          "value": 2,
+          "label": "Blanco+Nulo 2% (B: 0 / N: 329 / Pos: 16149)"
+        },
+        {
+          "municipioId": "SAN CAYETANO",
+          "municipioNombre": "San Cayetano",
+          "value": 1.3,
+          "label": "Blanco+Nulo 1.3% (B: 0 / N: 68 / Pos: 5262)"
+        },
+        {
+          "municipioId": "SAN FERNANDO",
+          "municipioNombre": "San Fernando",
+          "value": 0.8,
+          "label": "Blanco+Nulo 0.8% (B: 0 / N: 844 / Pos: 100046)"
+        },
+        {
+          "municipioId": "SAN ISIDRO",
+          "municipioNombre": "San Isidro",
+          "value": 1.7,
+          "label": "Blanco+Nulo 1.7% (B: 0 / N: 3505 / Pos: 201163)"
+        },
+        {
+          "municipioId": "SAN NICOLAS",
+          "municipioNombre": "San Nicolás",
+          "value": 1.1,
+          "label": "Blanco+Nulo 1.1% (B: 0 / N: 1079 / Pos: 96034)"
+        },
+        {
+          "municipioId": "SAN PEDRO",
+          "municipioNombre": "San Pedro",
+          "value": 1.5,
+          "label": "Blanco+Nulo 1.5% (B: 0 / N: 600 / Pos: 39804)"
+        },
+        {
+          "municipioId": "SAN VICENTE",
+          "municipioNombre": "San Vicente",
+          "value": 1.2,
+          "label": "Blanco+Nulo 1.2% (B: 0 / N: 528 / Pos: 44847)"
+        },
+        {
+          "municipioId": "SUIPACHA",
+          "municipioNombre": "Suipacha",
+          "value": 1.1,
+          "label": "Blanco+Nulo 1.1% (B: 0 / N: 85 / Pos: 7664)"
+        },
+        {
+          "municipioId": "TANDIL",
+          "municipioNombre": "Tandil",
+          "value": 2.3,
+          "label": "Blanco+Nulo 2.3% (B: 0 / N: 1968 / Pos: 82867)"
+        },
+        {
+          "municipioId": "TAPALQUE",
+          "municipioNombre": "Tapalqué",
+          "value": 0.8,
+          "label": "Blanco+Nulo 0.8% (B: 0 / N: 50 / Pos: 6373)"
+        },
+        {
+          "municipioId": "TIGRE",
+          "municipioNombre": "Tigre",
+          "value": 1.4,
+          "label": "Blanco+Nulo 1.4% (B: 0 / N: 3624 / Pos: 246908)"
+        },
+        {
+          "municipioId": "TORNQUIST",
+          "municipioNombre": "Tornquist",
+          "value": 1.3,
+          "label": "Blanco+Nulo 1.3% (B: 0 / N: 143 / Pos: 10526)"
+        },
+        {
+          "municipioId": "TRENQUE LAUQUEN",
+          "municipioNombre": "Trenque Lauquen",
+          "value": 1.8,
+          "label": "Blanco+Nulo 1.8% (B: 0 / N: 517 / Pos: 28968)"
+        },
+        {
+          "municipioId": "TORDILLO",
+          "municipioNombre": "Tordillo",
+          "value": 1.6,
+          "label": "Blanco+Nulo 1.6% (B: 0 / N: 28 / Pos: 1751)"
+        },
+        {
+          "municipioId": "TRES ARROYOS",
+          "municipioNombre": "Tres Arroyos",
+          "value": 1.9,
+          "label": "Blanco+Nulo 1.9% (B: 0 / N: 725 / Pos: 37682)"
+        },
+        {
+          "municipioId": "TRES DE FEBRERO",
+          "municipioNombre": "Tres de Febrero",
+          "value": 1.7,
+          "label": "Blanco+Nulo 1.7% (B: 0 / N: 3566 / Pos: 211020)"
+        },
+        {
+          "municipioId": "LA COSTA",
+          "municipioNombre": "La Costa",
+          "value": 1,
+          "label": "Blanco+Nulo 1% (B: 0 / N: 580 / Pos: 55412)"
+        },
+        {
+          "municipioId": "MONTE HERMOSO",
+          "municipioNombre": "Monte Hermoso",
+          "value": 1,
+          "label": "Blanco+Nulo 1% (B: 0 / N: 63 / Pos: 6266)"
+        },
+        {
+          "municipioId": "25 DE MAYO",
+          "municipioNombre": "25 de Mayo",
+          "value": 1.5,
+          "label": "Blanco+Nulo 1.5% (B: 0 / N: 352 / Pos: 22802)"
+        },
+        {
+          "municipioId": "VICENTE LOPEZ",
+          "municipioNombre": "Vicente López",
+          "value": 2.1,
+          "label": "Blanco+Nulo 2.1% (B: 0 / N: 3643 / Pos: 169440)"
+        },
+        {
+          "municipioId": "VILLA GESELL",
+          "municipioNombre": "Villa Gesell",
+          "value": 1.6,
+          "label": "Blanco+Nulo 1.6% (B: 0 / N: 359 / Pos: 21740)"
+        },
+        {
+          "municipioId": "VILLARINO",
+          "municipioNombre": "Villarino",
+          "value": 2,
+          "label": "Blanco+Nulo 2% (B: 0 / N: 369 / Pos: 17732)"
+        },
+        {
+          "municipioId": "ZARATE",
+          "municipioNombre": "Zárate",
+          "value": 1.2,
+          "label": "Blanco+Nulo 1.2% (B: 0 / N: 954 / Pos: 76183)"
+        },
+        {
+          "municipioId": "TRES LOMAS",
+          "municipioNombre": "Tres Lomas",
+          "value": 1.5,
+          "label": "Blanco+Nulo 1.5% (B: 0 / N: 76 / Pos: 4849)"
+        },
+        {
+          "municipioId": "FLORENTINO AMEGHINO",
+          "municipioNombre": "Florentino Ameghino",
+          "value": 1.5,
+          "label": "Blanco+Nulo 1.5% (B: 0 / N: 95 / Pos: 6146)"
+        },
+        {
+          "municipioId": "PRESIDENTE PERON",
+          "municipioNombre": "Presidente Perón",
+          "value": 1.5,
+          "label": "Blanco+Nulo 1.5% (B: 0 / N: 817 / Pos: 53248)"
+        },
+        {
+          "municipioId": "JOSE C PAZ",
+          "municipioNombre": "José C. Paz",
+          "value": 1.2,
+          "label": "Blanco+Nulo 1.2% (B: 0 / N: 2123 / Pos: 167855)"
+        },
+        {
+          "municipioId": "MALVINAS ARGENTINAS",
+          "municipioNombre": "Malvinas Argentinas",
+          "value": 1.1,
+          "label": "Blanco+Nulo 1.1% (B: 0 / N: 2295 / Pos: 212728)"
+        },
+        {
+          "municipioId": "PUNTA INDIO",
+          "municipioNombre": "Punta Indio",
+          "value": 1.5,
+          "label": "Blanco+Nulo 1.5% (B: 0 / N: 113 / Pos: 7457)"
+        },
+        {
+          "municipioId": "EZEIZA",
+          "municipioNombre": "Ezeiza",
+          "value": 0.7,
+          "label": "Blanco+Nulo 0.7% (B: 0 / N: 824 / Pos: 110156)"
+        },
+        {
+          "municipioId": "ITUZAINGO",
+          "municipioNombre": "Ituzaingó",
+          "value": 1.3,
+          "label": "Blanco+Nulo 1.3% (B: 0 / N: 1498 / Pos: 110871)"
+        },
+        {
+          "municipioId": "HURLINGHAM",
+          "municipioNombre": "Hurlingham",
+          "value": 1.6,
+          "label": "Blanco+Nulo 1.6% (B: 0 / N: 1943 / Pos: 117304)"
+        },
+        {
+          "municipioId": "LEZAMA",
+          "municipioNombre": "Lezama",
+          "value": 1.6,
+          "label": "Blanco+Nulo 1.6% (B: 0 / N: 62 / Pos: 3721)"
+        }
+      ]
+    }
+  ],
+  "rankings": [],
+  "mapData": [
+    {
+      "municipioId": "ADOLFO ALSINA",
+      "municipioNombre": "Adolfo Alsina",
+      "value": 1.4,
+      "label": "Blanco+Nulo 1.4% (B: 0 / N: 145 / Pos: 10117)"
+    },
+    {
+      "municipioId": "ALBERTI",
+      "municipioNombre": "Alberti",
+      "value": 0.1,
+      "label": "Blanco+Nulo 0.1% (B: 0 / N: 6 / Pos: 7410)"
+    },
+    {
+      "municipioId": "ALMIRANTE BROWN",
+      "municipioNombre": "Almirante Brown",
+      "value": 1.4,
+      "label": "Blanco+Nulo 1.4% (B: 0 / N: 4842 / Pos: 341680)"
+    },
+    {
+      "municipioId": "AVELLANEDA",
+      "municipioNombre": "Avellaneda",
+      "value": 1.1,
+      "label": "Blanco+Nulo 1.1% (B: 0 / N: 2508 / Pos: 220583)"
+    },
+    {
+      "municipioId": "AYACUCHO",
+      "municipioNombre": "Ayacucho",
+      "value": 2.1,
+      "label": "Blanco+Nulo 2.1% (B: 0 / N: 270 / Pos: 12791)"
+    },
+    {
+      "municipioId": "AZUL",
+      "municipioNombre": "Azul",
+      "value": 2.5,
+      "label": "Blanco+Nulo 2.5% (B: 0 / N: 1071 / Pos: 41796)"
+    },
+    {
+      "municipioId": "BAHIA BLANCA",
+      "municipioNombre": "Bahía Blanca",
+      "value": 2,
+      "label": "Blanco+Nulo 2% (B: 0 / N: 3710 / Pos: 180997)"
+    },
+    {
+      "municipioId": "BALCARCE",
+      "municipioNombre": "Balcarce",
+      "value": 2,
+      "label": "Blanco+Nulo 2% (B: 0 / N: 619 / Pos: 29936)"
+    },
+    {
+      "municipioId": "BARADERO",
+      "municipioNombre": "Baradero",
+      "value": 2,
+      "label": "Blanco+Nulo 2% (B: 0 / N: 468 / Pos: 23145)"
+    },
+    {
+      "municipioId": "ARRECIFES",
+      "municipioNombre": "Arrecifes",
+      "value": 1,
+      "label": "Blanco+Nulo 1% (B: 0 / N: 203 / Pos: 19496)"
+    },
+    {
+      "municipioId": "BERAZATEGUI",
+      "municipioNombre": "Berazategui",
+      "value": 1.1,
+      "label": "Blanco+Nulo 1.1% (B: 0 / N: 2311 / Pos: 212575)"
+    },
+    {
+      "municipioId": "BERISSO",
+      "municipioNombre": "Berisso",
+      "value": 0.9,
+      "label": "Blanco+Nulo 0.9% (B: 0 / N: 577 / Pos: 62165)"
+    },
+    {
+      "municipioId": "BOLIVAR",
+      "municipioNombre": "Bolívar",
+      "value": 1.7,
+      "label": "Blanco+Nulo 1.7% (B: 0 / N: 399 / Pos: 22886)"
+    },
+    {
+      "municipioId": "BRAGADO",
+      "municipioNombre": "Bragado",
+      "value": 1.7,
+      "label": "Blanco+Nulo 1.7% (B: 0 / N: 483 / Pos: 27745)"
+    },
+    {
+      "municipioId": "BRANDSEN",
+      "municipioNombre": "Brandsen",
+      "value": 1.7,
+      "label": "Blanco+Nulo 1.7% (B: 0 / N: 333 / Pos: 19793)"
+    },
+    {
+      "municipioId": "CAMPANA",
+      "municipioNombre": "Campana",
+      "value": 1.6,
+      "label": "Blanco+Nulo 1.6% (B: 0 / N: 1034 / Pos: 64244)"
+    },
+    {
+      "municipioId": "CANUELAS",
+      "municipioNombre": "Cañuelas",
+      "value": 1,
+      "label": "Blanco+Nulo 1% (B: 0 / N: 374 / Pos: 38280)"
+    },
+    {
+      "municipioId": "CAPITAN SARMIENTO",
+      "municipioNombre": "Capitán Sarmiento",
+      "value": 0.8,
+      "label": "Blanco+Nulo 0.8% (B: 0 / N: 85 / Pos: 10220)"
+    },
+    {
+      "municipioId": "CARLOS CASARES",
+      "municipioNombre": "Carlos Casares",
+      "value": 0.5,
+      "label": "Blanco+Nulo 0.5% (B: 0 / N: 79 / Pos: 15011)"
+    },
+    {
+      "municipioId": "CARLOS TEJEDOR",
+      "municipioNombre": "Carlos Tejedor",
+      "value": 0.9,
+      "label": "Blanco+Nulo 0.9% (B: 0 / N: 73 / Pos: 7789)"
+    },
+    {
+      "municipioId": "CARMEN DE ARECO",
+      "municipioNombre": "Carmen de Areco",
+      "value": 0.5,
+      "label": "Blanco+Nulo 0.5% (B: 0 / N: 47 / Pos: 10254)"
+    },
+    {
+      "municipioId": "PATAGONES",
+      "municipioNombre": "Patagones",
+      "value": 1.7,
+      "label": "Blanco+Nulo 1.7% (B: 0 / N: 355 / Pos: 20306)"
+    },
+    {
+      "municipioId": "CASTELLI",
+      "municipioNombre": "Castelli",
+      "value": 2,
+      "label": "Blanco+Nulo 2% (B: 0 / N: 124 / Pos: 6127)"
+    },
+    {
+      "municipioId": "COLON",
+      "municipioNombre": "Colón",
+      "value": 1.2,
+      "label": "Blanco+Nulo 1.2% (B: 0 / N: 204 / Pos: 16705)"
+    },
+    {
+      "municipioId": "CORONEL DORREGO",
+      "municipioNombre": "Coronel Dorrego",
+      "value": 1.8,
+      "label": "Blanco+Nulo 1.8% (B: 0 / N: 186 / Pos: 10113)"
+    },
+    {
+      "municipioId": "CORONEL PRINGLES",
+      "municipioNombre": "Coronel Pringles",
+      "value": 2.2,
+      "label": "Blanco+Nulo 2.2% (B: 0 / N: 316 / Pos: 14315)"
+    },
+    {
+      "municipioId": "CORONEL DE MARINA L ROSALES",
+      "municipioNombre": "Coronel de Marina L. Rosales",
+      "value": 1.4,
+      "label": "Blanco+Nulo 1.4% (B: 0 / N: 517 / Pos: 36911)"
+    },
+    {
+      "municipioId": "CORONEL SUAREZ",
+      "municipioNombre": "Coronel Suárez",
+      "value": 2.7,
+      "label": "Blanco+Nulo 2.7% (B: 0 / N: 700 / Pos: 24969)"
+    },
+    {
+      "municipioId": "CHACABUCO",
+      "municipioNombre": "Chacabuco",
+      "value": 1.7,
+      "label": "Blanco+Nulo 1.7% (B: 0 / N: 571 / Pos: 33043)"
+    },
+    {
+      "municipioId": "CHASCOMUS",
+      "municipioNombre": "Chascomús",
+      "value": 1,
+      "label": "Blanco+Nulo 1% (B: 0 / N: 266 / Pos: 25601)"
+    },
+    {
+      "municipioId": "CHIVILCOY",
+      "municipioNombre": "Chivilcoy",
+      "value": 1.6,
+      "label": "Blanco+Nulo 1.6% (B: 0 / N: 732 / Pos: 44906)"
+    },
+    {
+      "municipioId": "DAIREAUX",
+      "municipioNombre": "Daireaux",
+      "value": 1.4,
+      "label": "Blanco+Nulo 1.4% (B: 0 / N: 149 / Pos: 10828)"
+    },
+    {
+      "municipioId": "DOLORES",
+      "municipioNombre": "Dolores",
+      "value": 2,
+      "label": "Blanco+Nulo 2% (B: 0 / N: 384 / Pos: 18495)"
+    },
+    {
+      "municipioId": "ENSENADA",
+      "municipioNombre": "Ensenada",
+      "value": 0.7,
+      "label": "Blanco+Nulo 0.7% (B: 0 / N: 321 / Pos: 43930)"
+    },
+    {
+      "municipioId": "ESCOBAR",
+      "municipioNombre": "Escobar",
+      "value": 1.1,
+      "label": "Blanco+Nulo 1.1% (B: 0 / N: 1622 / Pos: 147412)"
+    },
+    {
+      "municipioId": "ESTEBAN ECHEVERRIA",
+      "municipioNombre": "Esteban Echeverría",
+      "value": 1.5,
+      "label": "Blanco+Nulo 1.5% (B: 0 / N: 2786 / Pos: 181265)"
+    },
+    {
+      "municipioId": "EXALTACION DE LA CRUZ",
+      "municipioNombre": "Exaltación de la Cruz",
+      "value": 1.5,
+      "label": "Blanco+Nulo 1.5% (B: 0 / N: 367 / Pos: 24273)"
+    },
+    {
+      "municipioId": "FLORENCIO VARELA",
+      "municipioNombre": "Florencio Varela",
+      "value": 0.6,
+      "label": "Blanco+Nulo 0.6% (B: 0 / N: 1417 / Pos: 248765)"
+    },
+    {
+      "municipioId": "GENERAL ALVARADO",
+      "municipioNombre": "General Alvarado",
+      "value": 1.4,
+      "label": "Blanco+Nulo 1.4% (B: 0 / N: 400 / Pos: 28044)"
+    },
+    {
+      "municipioId": "GENERAL ALVEAR",
+      "municipioNombre": "General Alvear",
+      "value": 0.7,
+      "label": "Blanco+Nulo 0.7% (B: 0 / N: 43 / Pos: 6413)"
+    },
+    {
+      "municipioId": "GENERAL ARENALES",
+      "municipioNombre": "General Arenales",
+      "value": 0.9,
+      "label": "Blanco+Nulo 0.9% (B: 0 / N: 102 / Pos: 11318)"
+    },
+    {
+      "municipioId": "GENERAL BELGRANO",
+      "municipioNombre": "General Belgrano",
+      "value": 0.8,
+      "label": "Blanco+Nulo 0.8% (B: 0 / N: 104 / Pos: 12510)"
+    },
+    {
+      "municipioId": "GENERAL GUIDO",
+      "municipioNombre": "General Guido",
+      "value": 2.3,
+      "label": "Blanco+Nulo 2.3% (B: 0 / N: 44 / Pos: 1892)"
+    },
+    {
+      "municipioId": "GENERAL LA MADRID",
+      "municipioNombre": "General La Madrid",
+      "value": 2.6,
+      "label": "Blanco+Nulo 2.6% (B: 0 / N: 194 / Pos: 7133)"
+    },
+    {
+      "municipioId": "GENERAL LAS HERAS",
+      "municipioNombre": "General Las Heras",
+      "value": 1.5,
+      "label": "Blanco+Nulo 1.5% (B: 0 / N: 164 / Pos: 11057)"
+    },
+    {
+      "municipioId": "GENERAL LAVALLE",
+      "municipioNombre": "General Lavalle",
+      "value": 1.2,
+      "label": "Blanco+Nulo 1.2% (B: 0 / N: 42 / Pos: 3398)"
+    },
+    {
+      "municipioId": "GENERAL JUAN MADARIAGA",
+      "municipioNombre": "General Juan Madariaga",
+      "value": 1.2,
+      "label": "Blanco+Nulo 1.2% (B: 0 / N: 169 / Pos: 13490)"
+    },
+    {
+      "municipioId": "GENERAL PAZ",
+      "municipioNombre": "General Paz",
+      "value": 1,
+      "label": "Blanco+Nulo 1% (B: 0 / N: 89 / Pos: 9082)"
+    },
+    {
+      "municipioId": "GENERAL PINTO",
+      "municipioNombre": "General Pinto",
+      "value": 1.2,
+      "label": "Blanco+Nulo 1.2% (B: 0 / N: 93 / Pos: 7898)"
+    },
+    {
+      "municipioId": "GENERAL PUEYRREDON",
+      "municipioNombre": "General Pueyrredón",
+      "value": 2.2,
+      "label": "Blanco+Nulo 2.2% (B: 0 / N: 8887 / Pos: 393422)"
+    },
+    {
+      "municipioId": "GENERAL RODRIGUEZ",
+      "municipioNombre": "General Rodríguez",
+      "value": 0.8,
+      "label": "Blanco+Nulo 0.8% (B: 0 / N: 537 / Pos: 66019)"
+    },
+    {
+      "municipioId": "GENERAL SAN MARTIN",
+      "municipioNombre": "General San Martín",
+      "value": 1.4,
+      "label": "Blanco+Nulo 1.4% (B: 0 / N: 3552 / Pos: 256531)"
+    },
+    {
+      "municipioId": "SAN MIGUEL",
+      "municipioNombre": "San Miguel",
+      "value": 1.4,
+      "label": "Blanco+Nulo 1.4% (B: 0 / N: 2653 / Pos: 181749)"
+    },
+    {
+      "municipioId": "GENERAL VIAMONTE",
+      "municipioNombre": "General Viamonte",
+      "value": 1.5,
+      "label": "Blanco+Nulo 1.5% (B: 0 / N: 190 / Pos: 12087)"
+    },
+    {
+      "municipioId": "GENERAL VILLEGAS",
+      "municipioNombre": "General Villegas",
+      "value": 1.3,
+      "label": "Blanco+Nulo 1.3% (B: 0 / N: 240 / Pos: 18486)"
+    },
+    {
+      "municipioId": "ADOLFO GONZALES CHAVES",
+      "municipioNombre": "Adolfo Gonzales Chaves",
+      "value": 2.2,
+      "label": "Blanco+Nulo 2.2% (B: 0 / N: 170 / Pos: 7662)"
+    },
+    {
+      "municipioId": "GUAMINI",
+      "municipioNombre": "Guaminí",
+      "value": 0.4,
+      "label": "Blanco+Nulo 0.4% (B: 0 / N: 30 / Pos: 7518)"
+    },
+    {
+      "municipioId": "HIPOLITO YRIGOYEN",
+      "municipioNombre": "Hipólito Yrigoyen",
+      "value": 1.5,
+      "label": "Blanco+Nulo 1.5% (B: 0 / N: 90 / Pos: 5834)"
+    },
+    {
+      "municipioId": "BENITO JUAREZ",
+      "municipioNombre": "Benito Juárez",
+      "value": 2.1,
+      "label": "Blanco+Nulo 2.1% (B: 0 / N: 271 / Pos: 12343)"
+    },
+    {
+      "municipioId": "JUNIN",
+      "municipioNombre": "Junín",
+      "value": 1.6,
+      "label": "Blanco+Nulo 1.6% (B: 0 / N: 973 / Pos: 60709)"
+    },
+    {
+      "municipioId": "LA MATANZA",
+      "municipioNombre": "La Matanza",
+      "value": 1.1,
+      "label": "Blanco+Nulo 1.1% (B: 0 / N: 8748 / Pos: 782505)"
+    },
+    {
+      "municipioId": "LANUS",
+      "municipioNombre": "Lanús",
+      "value": 1.3,
+      "label": "Blanco+Nulo 1.3% (B: 0 / N: 3608 / Pos: 280362)"
+    },
+    {
+      "municipioId": "LA PLATA",
+      "municipioNombre": "La Plata",
+      "value": 1.8,
+      "label": "Blanco+Nulo 1.8% (B: 0 / N: 7640 / Pos: 413228)"
+    },
+    {
+      "municipioId": "LAPRIDA",
+      "municipioNombre": "Laprida",
+      "value": 2.3,
+      "label": "Blanco+Nulo 2.3% (B: 0 / N: 166 / Pos: 7095)"
+    },
+    {
+      "municipioId": "LAS FLORES",
+      "municipioNombre": "Las Flores",
+      "value": 1.6,
+      "label": "Blanco+Nulo 1.6% (B: 0 / N: 268 / Pos: 16639)"
+    },
+    {
+      "municipioId": "LEANDRO N ALEM",
+      "municipioNombre": "Leandro N. Alem",
+      "value": 1.3,
+      "label": "Blanco+Nulo 1.3% (B: 0 / N: 150 / Pos: 11179)"
+    },
+    {
+      "municipioId": "LINCOLN",
+      "municipioNombre": "Lincoln",
+      "value": 1.3,
+      "label": "Blanco+Nulo 1.3% (B: 0 / N: 368 / Pos: 28149)"
+    },
+    {
+      "municipioId": "LOBERIA",
+      "municipioNombre": "Lobería",
+      "value": 2.8,
+      "label": "Blanco+Nulo 2.8% (B: 0 / N: 303 / Pos: 10421)"
+    },
+    {
+      "municipioId": "LOBOS",
+      "municipioNombre": "Lobos",
+      "value": 0.8,
+      "label": "Blanco+Nulo 0.8% (B: 0 / N: 192 / Pos: 24898)"
+    },
+    {
+      "municipioId": "LOMAS DE ZAMORA",
+      "municipioNombre": "Lomas de Zamora",
+      "value": 1.4,
+      "label": "Blanco+Nulo 1.4% (B: 0 / N: 5451 / Pos: 388485)"
+    },
+    {
+      "municipioId": "LUJAN",
+      "municipioNombre": "Luján",
+      "value": 1.6,
+      "label": "Blanco+Nulo 1.6% (B: 0 / N: 1130 / Pos: 70308)"
+    },
+    {
+      "municipioId": "MAGDALENA",
+      "municipioNombre": "Magdalena",
+      "value": 1,
+      "label": "Blanco+Nulo 1% (B: 0 / N: 117 / Pos: 11829)"
+    },
+    {
+      "municipioId": "MAIPU",
+      "municipioNombre": "Maipú",
+      "value": 2.3,
+      "label": "Blanco+Nulo 2.3% (B: 0 / N: 172 / Pos: 7174)"
+    },
+    {
+      "municipioId": "MAR CHIQUITA",
+      "municipioNombre": "Mar Chiquita",
+      "value": 1.1,
+      "label": "Blanco+Nulo 1.1% (B: 0 / N: 254 / Pos: 22364)"
+    },
+    {
+      "municipioId": "MARCOS PAZ",
+      "municipioNombre": "Marcos Paz",
+      "value": 1.1,
+      "label": "Blanco+Nulo 1.1% (B: 0 / N: 394 / Pos: 36424)"
+    },
+    {
+      "municipioId": "MERCEDES",
+      "municipioNombre": "Mercedes",
+      "value": 1.9,
+      "label": "Blanco+Nulo 1.9% (B: 0 / N: 855 / Pos: 44138)"
+    },
+    {
+      "municipioId": "MERLO",
+      "municipioNombre": "Merlo",
+      "value": 1.1,
+      "label": "Blanco+Nulo 1.1% (B: 0 / N: 3450 / Pos: 306669)"
+    },
+    {
+      "municipioId": "MONTE",
+      "municipioNombre": "Monte",
+      "value": 1.5,
+      "label": "Blanco+Nulo 1.5% (B: 0 / N: 228 / Pos: 14537)"
+    },
+    {
+      "municipioId": "MORENO",
+      "municipioNombre": "Moreno",
+      "value": 0.9,
+      "label": "Blanco+Nulo 0.9% (B: 0 / N: 2376 / Pos: 266955)"
+    },
+    {
+      "municipioId": "MORON",
+      "municipioNombre": "Morón",
+      "value": 1.8,
+      "label": "Blanco+Nulo 1.8% (B: 0 / N: 3825 / Pos: 208190)"
+    },
+    {
+      "municipioId": "NAVARRO",
+      "municipioNombre": "Navarro",
+      "value": 1.5,
+      "label": "Blanco+Nulo 1.5% (B: 0 / N: 179 / Pos: 11750)"
+    },
+    {
+      "municipioId": "NECOCHEA",
+      "municipioNombre": "Necochea",
+      "value": 1.8,
+      "label": "Blanco+Nulo 1.8% (B: 0 / N: 1079 / Pos: 60460)"
+    },
+    {
+      "municipioId": "9 DE JULIO",
+      "municipioNombre": "9 de Julio",
+      "value": 1.4,
+      "label": "Blanco+Nulo 1.4% (B: 0 / N: 443 / Pos: 31903)"
+    },
+    {
+      "municipioId": "OLAVARRIA",
+      "municipioNombre": "Olavarría",
+      "value": 2.2,
+      "label": "Blanco+Nulo 2.2% (B: 0 / N: 1560 / Pos: 70767)"
+    },
+    {
+      "municipioId": "PEHUAJO",
+      "municipioNombre": "Pehuajó",
+      "value": 2,
+      "label": "Blanco+Nulo 2% (B: 0 / N: 541 / Pos: 26942)"
+    },
+    {
+      "municipioId": "PELLEGRINI",
+      "municipioNombre": "Pellegrini",
+      "value": 1.1,
+      "label": "Blanco+Nulo 1.1% (B: 0 / N: 41 / Pos: 3821)"
+    },
+    {
+      "municipioId": "PERGAMINO",
+      "municipioNombre": "Pergamino",
+      "value": 1.7,
+      "label": "Blanco+Nulo 1.7% (B: 0 / N: 1128 / Pos: 66897)"
+    },
+    {
+      "municipioId": "PILA",
+      "municipioNombre": "Pila",
+      "value": 2,
+      "label": "Blanco+Nulo 2% (B: 0 / N: 55 / Pos: 2727)"
+    },
+    {
+      "municipioId": "PILAR",
+      "municipioNombre": "Pilar",
+      "value": 1.3,
+      "label": "Blanco+Nulo 1.3% (B: 0 / N: 2700 / Pos: 207738)"
+    },
+    {
+      "municipioId": "PINAMAR",
+      "municipioNombre": "Pinamar",
+      "value": 1.7,
+      "label": "Blanco+Nulo 1.7% (B: 0 / N: 368 / Pos: 20831)"
+    },
+    {
+      "municipioId": "PUAN",
+      "municipioNombre": "Puan",
+      "value": 2.1,
+      "label": "Blanco+Nulo 2.1% (B: 0 / N: 215 / Pos: 9961)"
+    },
+    {
+      "municipioId": "QUILMES",
+      "municipioNombre": "Quilmes",
+      "value": 0.9,
+      "label": "Blanco+Nulo 0.9% (B: 0 / N: 3381 / Pos: 360982)"
+    },
+    {
+      "municipioId": "RAMALLO",
+      "municipioNombre": "Ramallo",
+      "value": 0.7,
+      "label": "Blanco+Nulo 0.7% (B: 0 / N: 168 / Pos: 23868)"
+    },
+    {
+      "municipioId": "RAUCH",
+      "municipioNombre": "Rauch",
+      "value": 1.6,
+      "label": "Blanco+Nulo 1.6% (B: 0 / N: 161 / Pos: 10167)"
+    },
+    {
+      "municipioId": "RIVADAVIA",
+      "municipioNombre": "Rivadavia",
+      "value": 0.8,
+      "label": "Blanco+Nulo 0.8% (B: 0 / N: 84 / Pos: 10973)"
+    },
+    {
+      "municipioId": "ROJAS",
+      "municipioNombre": "Rojas",
+      "value": 1.9,
+      "label": "Blanco+Nulo 1.9% (B: 0 / N: 296 / Pos: 15311)"
+    },
+    {
+      "municipioId": "ROQUE PEREZ",
+      "municipioNombre": "Roque Pérez",
+      "value": 1.3,
+      "label": "Blanco+Nulo 1.3% (B: 0 / N: 114 / Pos: 8643)"
+    },
+    {
+      "municipioId": "SAAVEDRA",
+      "municipioNombre": "Saavedra",
+      "value": 2.6,
+      "label": "Blanco+Nulo 2.6% (B: 0 / N: 341 / Pos: 12907)"
+    },
+    {
+      "municipioId": "SALADILLO",
+      "municipioNombre": "Saladillo",
+      "value": 2.5,
+      "label": "Blanco+Nulo 2.5% (B: 0 / N: 539 / Pos: 21442)"
+    },
+    {
+      "municipioId": "SALLIQUELO",
+      "municipioNombre": "Salliqueló",
+      "value": 1.2,
+      "label": "Blanco+Nulo 1.2% (B: 0 / N: 71 / Pos: 5642)"
+    },
+    {
+      "municipioId": "SALTO",
+      "municipioNombre": "Salto",
+      "value": 0.6,
+      "label": "Blanco+Nulo 0.6% (B: 0 / N: 140 / Pos: 22600)"
+    },
+    {
+      "municipioId": "SAN ANDRES DE GILES",
+      "municipioNombre": "San Andrés de Giles",
+      "value": 0.6,
+      "label": "Blanco+Nulo 0.6% (B: 0 / N: 89 / Pos: 15595)"
+    },
+    {
+      "municipioId": "SAN ANTONIO DE ARECO",
+      "municipioNombre": "San Antonio de Areco",
+      "value": 2,
+      "label": "Blanco+Nulo 2% (B: 0 / N: 329 / Pos: 16149)"
+    },
+    {
+      "municipioId": "SAN CAYETANO",
+      "municipioNombre": "San Cayetano",
+      "value": 1.3,
+      "label": "Blanco+Nulo 1.3% (B: 0 / N: 68 / Pos: 5262)"
+    },
+    {
+      "municipioId": "SAN FERNANDO",
+      "municipioNombre": "San Fernando",
+      "value": 0.8,
+      "label": "Blanco+Nulo 0.8% (B: 0 / N: 844 / Pos: 100046)"
+    },
+    {
+      "municipioId": "SAN ISIDRO",
+      "municipioNombre": "San Isidro",
+      "value": 1.7,
+      "label": "Blanco+Nulo 1.7% (B: 0 / N: 3505 / Pos: 201163)"
+    },
+    {
+      "municipioId": "SAN NICOLAS",
+      "municipioNombre": "San Nicolás",
+      "value": 1.1,
+      "label": "Blanco+Nulo 1.1% (B: 0 / N: 1079 / Pos: 96034)"
+    },
+    {
+      "municipioId": "SAN PEDRO",
+      "municipioNombre": "San Pedro",
+      "value": 1.5,
+      "label": "Blanco+Nulo 1.5% (B: 0 / N: 600 / Pos: 39804)"
+    },
+    {
+      "municipioId": "SAN VICENTE",
+      "municipioNombre": "San Vicente",
+      "value": 1.2,
+      "label": "Blanco+Nulo 1.2% (B: 0 / N: 528 / Pos: 44847)"
+    },
+    {
+      "municipioId": "SUIPACHA",
+      "municipioNombre": "Suipacha",
+      "value": 1.1,
+      "label": "Blanco+Nulo 1.1% (B: 0 / N: 85 / Pos: 7664)"
+    },
+    {
+      "municipioId": "TANDIL",
+      "municipioNombre": "Tandil",
+      "value": 2.3,
+      "label": "Blanco+Nulo 2.3% (B: 0 / N: 1968 / Pos: 82867)"
+    },
+    {
+      "municipioId": "TAPALQUE",
+      "municipioNombre": "Tapalqué",
+      "value": 0.8,
+      "label": "Blanco+Nulo 0.8% (B: 0 / N: 50 / Pos: 6373)"
+    },
+    {
+      "municipioId": "TIGRE",
+      "municipioNombre": "Tigre",
+      "value": 1.4,
+      "label": "Blanco+Nulo 1.4% (B: 0 / N: 3624 / Pos: 246908)"
+    },
+    {
+      "municipioId": "TORNQUIST",
+      "municipioNombre": "Tornquist",
+      "value": 1.3,
+      "label": "Blanco+Nulo 1.3% (B: 0 / N: 143 / Pos: 10526)"
+    },
+    {
+      "municipioId": "TRENQUE LAUQUEN",
+      "municipioNombre": "Trenque Lauquen",
+      "value": 1.8,
+      "label": "Blanco+Nulo 1.8% (B: 0 / N: 517 / Pos: 28968)"
+    },
+    {
+      "municipioId": "TORDILLO",
+      "municipioNombre": "Tordillo",
+      "value": 1.6,
+      "label": "Blanco+Nulo 1.6% (B: 0 / N: 28 / Pos: 1751)"
+    },
+    {
+      "municipioId": "TRES ARROYOS",
+      "municipioNombre": "Tres Arroyos",
+      "value": 1.9,
+      "label": "Blanco+Nulo 1.9% (B: 0 / N: 725 / Pos: 37682)"
+    },
+    {
+      "municipioId": "TRES DE FEBRERO",
+      "municipioNombre": "Tres de Febrero",
+      "value": 1.7,
+      "label": "Blanco+Nulo 1.7% (B: 0 / N: 3566 / Pos: 211020)"
+    },
+    {
+      "municipioId": "LA COSTA",
+      "municipioNombre": "La Costa",
+      "value": 1,
+      "label": "Blanco+Nulo 1% (B: 0 / N: 580 / Pos: 55412)"
+    },
+    {
+      "municipioId": "MONTE HERMOSO",
+      "municipioNombre": "Monte Hermoso",
+      "value": 1,
+      "label": "Blanco+Nulo 1% (B: 0 / N: 63 / Pos: 6266)"
+    },
+    {
+      "municipioId": "25 DE MAYO",
+      "municipioNombre": "25 de Mayo",
+      "value": 1.5,
+      "label": "Blanco+Nulo 1.5% (B: 0 / N: 352 / Pos: 22802)"
+    },
+    {
+      "municipioId": "VICENTE LOPEZ",
+      "municipioNombre": "Vicente López",
+      "value": 2.1,
+      "label": "Blanco+Nulo 2.1% (B: 0 / N: 3643 / Pos: 169440)"
+    },
+    {
+      "municipioId": "VILLA GESELL",
+      "municipioNombre": "Villa Gesell",
+      "value": 1.6,
+      "label": "Blanco+Nulo 1.6% (B: 0 / N: 359 / Pos: 21740)"
+    },
+    {
+      "municipioId": "VILLARINO",
+      "municipioNombre": "Villarino",
+      "value": 2,
+      "label": "Blanco+Nulo 2% (B: 0 / N: 369 / Pos: 17732)"
+    },
+    {
+      "municipioId": "ZARATE",
+      "municipioNombre": "Zárate",
+      "value": 1.2,
+      "label": "Blanco+Nulo 1.2% (B: 0 / N: 954 / Pos: 76183)"
+    },
+    {
+      "municipioId": "TRES LOMAS",
+      "municipioNombre": "Tres Lomas",
+      "value": 1.5,
+      "label": "Blanco+Nulo 1.5% (B: 0 / N: 76 / Pos: 4849)"
+    },
+    {
+      "municipioId": "FLORENTINO AMEGHINO",
+      "municipioNombre": "Florentino Ameghino",
+      "value": 1.5,
+      "label": "Blanco+Nulo 1.5% (B: 0 / N: 95 / Pos: 6146)"
+    },
+    {
+      "municipioId": "PRESIDENTE PERON",
+      "municipioNombre": "Presidente Perón",
+      "value": 1.5,
+      "label": "Blanco+Nulo 1.5% (B: 0 / N: 817 / Pos: 53248)"
+    },
+    {
+      "municipioId": "JOSE C PAZ",
+      "municipioNombre": "José C. Paz",
+      "value": 1.2,
+      "label": "Blanco+Nulo 1.2% (B: 0 / N: 2123 / Pos: 167855)"
+    },
+    {
+      "municipioId": "MALVINAS ARGENTINAS",
+      "municipioNombre": "Malvinas Argentinas",
+      "value": 1.1,
+      "label": "Blanco+Nulo 1.1% (B: 0 / N: 2295 / Pos: 212728)"
+    },
+    {
+      "municipioId": "PUNTA INDIO",
+      "municipioNombre": "Punta Indio",
+      "value": 1.5,
+      "label": "Blanco+Nulo 1.5% (B: 0 / N: 113 / Pos: 7457)"
+    },
+    {
+      "municipioId": "EZEIZA",
+      "municipioNombre": "Ezeiza",
+      "value": 0.7,
+      "label": "Blanco+Nulo 0.7% (B: 0 / N: 824 / Pos: 110156)"
+    },
+    {
+      "municipioId": "ITUZAINGO",
+      "municipioNombre": "Ituzaingó",
+      "value": 1.3,
+      "label": "Blanco+Nulo 1.3% (B: 0 / N: 1498 / Pos: 110871)"
+    },
+    {
+      "municipioId": "HURLINGHAM",
+      "municipioNombre": "Hurlingham",
+      "value": 1.6,
+      "label": "Blanco+Nulo 1.6% (B: 0 / N: 1943 / Pos: 117304)"
+    },
+    {
+      "municipioId": "LEZAMA",
+      "municipioNombre": "Lezama",
+      "value": 1.6,
+      "label": "Blanco+Nulo 1.6% (B: 0 / N: 62 / Pos: 3721)"
+    }
+  ]
+}
