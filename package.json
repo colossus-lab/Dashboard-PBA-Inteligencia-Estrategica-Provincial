@@ -36,6 +36,8 @@
     "@nivo/heatmap": "^0.88.0",
     "@nivo/line": "^0.88.0",
     "@nivo/pie": "^0.88.0",
+    "@nivo/sankey": "^0.99.0",
+    "@nivo/scatterplot": "^0.99.0",
     "@nivo/tooltip": "^0.88.0",
     "@types/d3-geo": "^3.1.0",
     "@types/d3-scale": "^4.0.9",

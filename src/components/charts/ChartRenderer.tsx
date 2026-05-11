@@ -5,6 +5,10 @@ import { useStore } from '../../store/useStore';
 import { useIsMobile } from '../../lib/useIsMobile';
 import { MapaPBA } from './MapaPBA';
 import { MapaSecciones } from './MapaSecciones';
+import { MapaTimelineMunicipios } from './MapaTimelineMunicipios';
+import { ScatterChart } from './ScatterChart';
+import { HeatmapChart } from './HeatmapChart';
+import { SankeyChart } from './SankeyChart';
 import type { ChartConfig } from '../../types/report';
 
 // ═══════════════════════════════════════════════════════════════
@@ -63,6 +67,14 @@ export function ChartRenderer({ chart, height = 400 }: ChartRendererProps) {
       return <MapaPBA mapData={chart.data} title={chart.title} height={height} />;
     case 'mapa-secciones':
       return <MapaSecciones data={chart.data} title={chart.title} height={height} />;
+    case 'mapa-timeline':
+      return <MapaTimelineMunicipios chart={chart} height={height} />;
+    case 'scatter':
+      return <ScatterChart chart={chart} height={height} />;
+    case 'heatmap':
+      return <HeatmapChart chart={chart} height={height} />;
+    case 'sankey':
+      return <SankeyChart chart={chart} height={height} />;
     default:
       return <BarChartView chart={chart} height={height} />;
   }
@@ -222,7 +234,7 @@ function LineChartView({ chart, height }: { chart: ChartConfig; height: number }
   const lineData = yKeys.map((key, i) => ({
     id: key,
     color: COLORS[i % COLORS.length],
-    data: chart.data.map(d => ({ x: d[xKey], y: d[key] })),
+    data: chart.data.map((d: Record<string, unknown>) => ({ x: d[xKey], y: d[key] })),
   }));
 
   // On mobile with many data points, show only every Nth tick to avoid overlap

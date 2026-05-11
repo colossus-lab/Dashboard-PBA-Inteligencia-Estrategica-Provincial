@@ -691,6 +691,741 @@ function main() {
     gobAggMuni.filter((r) => r.año === 2023)
   );
 
+  // ═══════════════════════════════════════════════════════════════════════
+  // ANÁLISIS AVANZADOS (Batches A, B, C, D)
+  // ═══════════════════════════════════════════════════════════════════════
+  console.log("\nCalculando análisis avanzados...");
+
+  const PERONISMO_RX =
+    /uni(o|ó)n por la patria|frente de todos|frente para la victoria|fuerza patria|frente patria/i;
+  const LLA_RX = /libertad avanza/i;
+  const JXC_RX =
+    /juntos por el cambio|cambiemos|propuesta republicana|union civica radical|juntos|alianza propuesta|alianza cambia bs/i;
+  const SECCIONES_ORDEN = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII"];
+
+  // Mapeo "familia política" para que el índice de Pedersen no marque como
+  // cambios totales lo que en realidad es renombre de coaliciones.
+  // (LLA se trata aparte; en 2007-2019 no existía y ese delta neto SÍ es real.)
+  const familiaPolitica = (s) => {
+    if (PERONISMO_RX.test(s)) return "Peronismo";
+    if (LLA_RX.test(s)) return "LLA";
+    if (JXC_RX.test(s)) return "Cambiemos/JxC/UCR";
+    if (/frente de izquierda|izquierda|fit|partido obrero|mst|partido de los trabajadores/i.test(s))
+      return "Izquierda";
+    if (/socialista|gen|progresista|libres del sur/i.test(s))
+      return "Progresismo/Socialismo";
+    if (/peronismo federal|consenso|alternativa federal|massa|frente renovador|tercera posicion/i.test(s))
+      return "Peronismo Federal/Renovador";
+    return "Otros";
+  };
+
+  function aggsByYear(rowsAggMuni, useFamilia = false) {
+    const m = new Map();
+    for (const r of rowsAggMuni) {
+      if (!r.año) continue;
+      if (!m.has(r.año)) m.set(r.año, new Map());
+      const inner = m.get(r.año);
+      const key = useFamilia ? familiaPolitica(r.agrupacion || "") : r.agrupacion;
+      inner.set(key, (inner.get(key) || 0) + (r.votos || 0));
+    }
+    const out = new Map();
+    for (const [year, inner] of m) {
+      out.set(
+        year,
+        [...inner.entries()].map(([a, v]) => ({ agrupacion: a, votos: v }))
+      );
+    }
+    return out;
+  }
+
+  function aggsBySeccionYear(rowsAggMuni, year, useFamilia = false) {
+    const bySec = new Map();
+    for (const r of rowsAggMuni) {
+      if (r.año !== year) continue;
+      const sec = muniToSeccion[normalizeName(r.municipio || "")];
+      if (!sec) continue;
+      if (!bySec.has(sec)) bySec.set(sec, new Map());
+      const inner = bySec.get(sec);
+      const key = useFamilia ? familiaPolitica(r.agrupacion || "") : r.agrupacion;
+      inner.set(key, (inner.get(key) || 0) + (r.votos || 0));
+    }
+    const out = new Map();
+    for (const [sec, inner] of bySec) {
+      out.set(
+        sec,
+        [...inner.entries()].map(([a, v]) => ({ agrupacion: a, votos: v }))
+      );
+    }
+    return out;
+  }
+
+  // ─── A1. PEDERSEN ──────────────────────────────────────────────────────
+  function pedersen(aggs1, aggs2) {
+    const sum1 = aggs1.reduce((s, x) => s + (x.votos || 0), 0) || 1;
+    const sum2 = aggs2.reduce((s, x) => s + (x.votos || 0), 0) || 1;
+    const p1 = new Map(
+      aggs1.map((x) => [prettyAgrupacion(x.agrupacion), (x.votos || 0) / sum1])
+    );
+    const p2 = new Map(
+      aggs2.map((x) => [prettyAgrupacion(x.agrupacion), (x.votos || 0) / sum2])
+    );
+    const keys = new Set([...p1.keys(), ...p2.keys()]);
+    let v = 0;
+    for (const k of keys) v += Math.abs((p1.get(k) || 0) - (p2.get(k) || 0));
+    return Math.round(v * 50 * 10) / 10; // (1/2 * v) * 100 → puntos porcentuales
+  }
+
+  // Para Pedersen usamos agregación por FAMILIA (Peronismo, JxC, LLA, etc.)
+  // para no contar como "cambios" los renombres de coaliciones.
+  // Para NEP mantenemos la agregación cruda — refleja la fragmentación que
+  // ve el votante en la boleta.
+  const presAggsByYearFamilia = aggsByYear(presPrimeraAggMuni, true);
+  const gobAggsByYearFamilia = aggsByYear(gobAggMuni, true);
+  const presAggsByYear = aggsByYear(presPrimeraAggMuni);
+  const gobAggsByYear = aggsByYear(gobAggMuni);
+
+  const presYears = [...presAggsByYearFamilia.keys()].sort();
+  const gobYears = [...gobAggsByYearFamilia.keys()].sort();
+
+  const pedersenSerie = []; // [{transicion, Presidente?, Gobernador?}]
+  {
+    const transiciones = new Set();
+    for (let i = 1; i < presYears.length; i++)
+      transiciones.add(`${presYears[i - 1]}→${presYears[i]}`);
+    for (let i = 1; i < gobYears.length; i++)
+      transiciones.add(`${gobYears[i - 1]}→${gobYears[i]}`);
+    const all = [...transiciones].sort();
+    for (const t of all) {
+      const [y1, y2] = t.split("→").map((s) => parseInt(s, 10));
+      const row = { transicion: t };
+      if (presAggsByYearFamilia.has(y1) && presAggsByYearFamilia.has(y2)) {
+        row.Presidente = pedersen(
+          presAggsByYearFamilia.get(y1),
+          presAggsByYearFamilia.get(y2)
+        );
+      }
+      if (gobAggsByYearFamilia.has(y1) && gobAggsByYearFamilia.has(y2)) {
+        row.Gobernador = pedersen(
+          gobAggsByYearFamilia.get(y1),
+          gobAggsByYearFamilia.get(y2)
+        );
+      }
+      pedersenSerie.push(row);
+    }
+  }
+
+  const pedersenSeccionGob = []; // [{seccion, Volatilidad}]
+  {
+    const sec19 = aggsBySeccionYear(gobAggMuni, 2019, true);
+    const sec23 = aggsBySeccionYear(gobAggMuni, 2023, true);
+    for (const sec of SECCIONES_ORDEN) {
+      const a = sec19.get(sec), b = sec23.get(sec);
+      if (a && b && a.length && b.length) {
+        pedersenSeccionGob.push({
+          seccion: sec,
+          Volatilidad: pedersen(a, b),
+        });
+      }
+    }
+  }
+
+  const pedersenPres1923 =
+    presAggsByYearFamilia.has(2019) && presAggsByYearFamilia.has(2023)
+      ? pedersen(
+          presAggsByYearFamilia.get(2019),
+          presAggsByYearFamilia.get(2023)
+        )
+      : null;
+
+  // ─── A2. NEP (Laakso-Taagepera) ────────────────────────────────────────
+  function nep(aggs) {
+    const total = aggs.reduce((s, x) => s + (x.votos || 0), 0) || 1;
+    const sumSq = aggs.reduce(
+      (s, x) => s + Math.pow((x.votos || 0) / total, 2),
+      0
+    );
+    return Math.round((1 / sumSq) * 100) / 100;
+  }
+
+  const nepEvolucion = [];
+  {
+    const allYrs = [...new Set([...presYears, ...gobYears])].sort();
+    for (const año of allYrs) {
+      const row = { año };
+      if (presAggsByYear.has(año))
+        row.Presidente = nep(presAggsByYear.get(año));
+      if (gobAggsByYear.has(año))
+        row.Gobernador = nep(gobAggsByYear.get(año));
+      nepEvolucion.push(row);
+    }
+  }
+
+  const nepBySeccion2023 = [];
+  {
+    const sec23 = aggsBySeccionYear(gobAggMuni, 2023);
+    for (const sec of SECCIONES_ORDEN) {
+      if (sec23.has(sec))
+        nepBySeccion2023.push({ seccion: sec, NEP: nep(sec23.get(sec)) });
+    }
+  }
+
+  const nep2023Gob =
+    gobAggsByYear.has(2023) ? nep(gobAggsByYear.get(2023)) : null;
+
+  // ─── A3. MARGEN DE VICTORIA ────────────────────────────────────────────
+  function marginByMuni(rowsAggMuni, year) {
+    const byMuni = new Map();
+    for (const r of rowsAggMuni) {
+      if (r.año !== year || !r.municipio) continue;
+      if (!byMuni.has(r.municipio)) byMuni.set(r.municipio, []);
+      byMuni
+        .get(r.municipio)
+        .push({ agrupacion: r.agrupacion, votos: r.votos });
+    }
+    const out = [];
+    for (const [muni, lst] of byMuni) {
+      const total = lst.reduce((s, x) => s + (x.votos || 0), 0);
+      if (!total) continue;
+      const sorted = lst.sort((a, b) => b.votos - a.votos);
+      const first = sorted[0];
+      const second = sorted[1] || { votos: 0, agrupacion: "" };
+      const margen = pct(first.votos - second.votos, total);
+      out.push({
+        municipio: muni,
+        ganador: prettyAgrupacion(first.agrupacion),
+        segundo: prettyAgrupacion(second.agrupacion || ""),
+        margen,
+        pctGanador: pct(first.votos, total),
+      });
+    }
+    return out;
+  }
+
+  const margenGob2023 = marginByMuni(gobAggMuni, 2023);
+  const competitivos2023 = margenGob2023.filter((r) => r.margen < 5).length;
+
+  const mapDataMargen = margenGob2023.map((r) => ({
+    municipioId: normalizeName(r.municipio),
+    municipioNombre: r.municipio,
+    value: r.margen,
+    label: `${r.ganador} vs ${r.segundo} · margen ${r.margen}pp`,
+  }));
+
+  const margenCategorias = (() => {
+    const counts = { "Muy competitivo (<5pp)": 0, "Competitivo (5–15pp)": 0, "Holgado (15–30pp)": 0, "Abrumador (>30pp)": 0 };
+    for (const r of margenGob2023) {
+      if (r.margen < 5) counts["Muy competitivo (<5pp)"]++;
+      else if (r.margen < 15) counts["Competitivo (5–15pp)"]++;
+      else if (r.margen < 30) counts["Holgado (15–30pp)"]++;
+      else counts["Abrumador (>30pp)"]++;
+    }
+    return Object.entries(counts).map(([cat, n]) => ({ id: cat, value: n }));
+  })();
+
+  // ─── A4. SWING 2019→2023 (Peronismo) ───────────────────────────────────
+  function pctByMuniFuerzaYear(rowsAggMuni, fuerzaRegex, year) {
+    const byMuni = new Map();
+    for (const r of rowsAggMuni) {
+      if (year != null && r.año !== year) continue;
+      const muniNorm = normalizeName(r.municipio || "");
+      if (!muniNorm) continue;
+      if (!byMuni.has(muniNorm))
+        byMuni.set(muniNorm, { name: r.municipio, total: 0, ours: 0 });
+      const e = byMuni.get(muniNorm);
+      e.total += r.votos || 0;
+      if (fuerzaRegex.test(r.agrupacion || "")) e.ours += r.votos || 0;
+    }
+    const out = new Map();
+    for (const [m, e] of byMuni) {
+      if (e.total > 0)
+        out.set(m, { name: e.name, pct: pct(e.ours, e.total), votos: e.ours, total: e.total });
+    }
+    return out;
+  }
+
+  const uxpGob2019 = pctByMuniFuerzaYear(gobAggMuni, PERONISMO_RX, 2019);
+  const uxpGob2023 = pctByMuniFuerzaYear(gobAggMuni, PERONISMO_RX, 2023);
+
+  const swingMapData = [];
+  const swingScatter = [];
+  let swingPositivo = 0, swingNegativo = 0;
+  for (const [muni, e23] of uxpGob2023) {
+    const e19 = uxpGob2019.get(muni);
+    if (!e19) continue;
+    const sw = Math.round((e23.pct - e19.pct) * 10) / 10;
+    swingMapData.push({
+      municipioId: muni,
+      municipioNombre: e23.name,
+      value: sw,
+      label: `Peronismo · 2019: ${e19.pct}% → 2023: ${e23.pct}% (Δ ${sw > 0 ? "+" : ""}${sw}pp)`,
+    });
+    swingScatter.push({
+      municipio: e23.name,
+      "2019 (% peronismo)": e19.pct,
+      "2023 (% peronismo)": e23.pct,
+    });
+    if (sw > 0) swingPositivo++;
+    else if (sw < 0) swingNegativo++;
+  }
+
+  // ─── B5. CORTE DE BOLETA 2023 ──────────────────────────────────────────
+  const corteUxPPres = pctByMuniFuerzaYear(
+    presPrimeraAggMuni,
+    PERONISMO_RX,
+    2023
+  );
+  const corteUxPGob = pctByMuniFuerzaYear(gobAggMuni, PERONISMO_RX, 2023);
+
+  const corteData = [];
+  for (const [muni, ePres] of corteUxPPres) {
+    const eGob = corteUxPGob.get(muni);
+    if (!eGob) continue;
+    const dif = Math.round(Math.abs(ePres.pct - eGob.pct) * 10) / 10;
+    corteData.push({
+      municipioId: muni,
+      municipioNombre: ePres.name,
+      value: dif,
+      label: `Peronismo · Presidente ${ePres.pct}% vs Gobernador ${eGob.pct}% (|Δ| ${dif}pp)`,
+      presPct: ePres.pct,
+      gobPct: eGob.pct,
+    });
+  }
+  const corteMayor5 = corteData.filter((r) => r.value > 5).length;
+  const corteTop10 = [...corteData]
+    .sort((a, b) => b.value - a.value)
+    .slice(0, 10)
+    .map((r) => ({
+      name: r.municipioNombre,
+      value: r.value,
+      meta: `Pres ${r.presPct}% · Gob ${r.gobPct}%`,
+    }));
+
+  // ─── B6. BRECHA PASO → GENERALES 2023 (PRESIDENCIAL) ───────────────────
+  const presPaso = nacionales.filter(
+    (r) =>
+      /presidente/i.test(r.cargo) && /^ELECCIONES PASO$/i.test(r.eleccion)
+  );
+  const presPaso2023Agg = aggregate(
+    presPaso.filter((r) => r.año === 2023),
+    ["agrupacion"]
+  );
+  const presGen2023Agg = aggregate(
+    presPrimera.filter((r) => r.año === 2023),
+    ["agrupacion"]
+  );
+
+  function pctList(aggs, n) {
+    const tot = aggs.reduce((s, x) => s + (x.votos || 0), 0) || 1;
+    return aggs
+      .map((a) => ({
+        agrupacion: prettyAgrupacion(a.agrupacion),
+        pct: pct(a.votos, tot),
+        votos: a.votos,
+      }))
+      .sort((a, b) => b.pct - a.pct)
+      .slice(0, n || 5);
+  }
+
+  const presPaso2023Pcts = pctList(presPaso2023Agg, 5);
+  const presGen2023Pcts = pctList(presGen2023Agg, 5);
+
+  const brechaChart = [];
+  {
+    const allF = new Set([
+      ...presPaso2023Pcts.map((x) => x.agrupacion),
+      ...presGen2023Pcts.map((x) => x.agrupacion),
+    ]);
+    const pasoMap = new Map(presPaso2023Pcts.map((x) => [x.agrupacion, x.pct]));
+    const genMap = new Map(presGen2023Pcts.map((x) => [x.agrupacion, x.pct]));
+    for (const f of allF) {
+      brechaChart.push({
+        agrupacion: f,
+        PASO: pasoMap.get(f) || 0,
+        Generales: genMap.get(f) || 0,
+      });
+    }
+    brechaChart.sort(
+      (a, b) =>
+        Math.max(b.PASO, b.Generales) - Math.max(a.PASO, a.Generales)
+    );
+  }
+
+  // ─── B7. PESO ELECTORAL POR SECCIÓN ────────────────────────────────────
+  const habByMuni2023 = new Map();
+  {
+    const raw = provGen.filter((r) => /gobernador/i.test(r.cargo) && r.año === 2023);
+    for (const r of raw) {
+      const m = normalizeName(r.municipio || "");
+      if (r.habilitados)
+        habByMuni2023.set(m, Math.max(habByMuni2023.get(m) || 0, r.habilitados));
+    }
+  }
+  const padronPorSec = new Map();
+  const munisPorSec = new Map();
+  for (const [muniNorm, sec] of Object.entries(muniToSeccion)) {
+    munisPorSec.set(sec, (munisPorSec.get(sec) || 0) + 1);
+  }
+  for (const [muniNorm, h] of habByMuni2023) {
+    const sec = muniToSeccion[muniNorm];
+    if (!sec) continue;
+    padronPorSec.set(sec, (padronPorSec.get(sec) || 0) + h);
+  }
+  const padronTot =
+    [...padronPorSec.values()].reduce((s, x) => s + x, 0) || 1;
+  const pesoData = SECCIONES_ORDEN.filter((s) => padronPorSec.has(s)).map(
+    (sec) => ({
+      seccion: `Sección ${sec}`,
+      municipios: munisPorSec.get(sec) || 0,
+      padron: padronPorSec.get(sec),
+      "% del padrón": Math.round((padronPorSec.get(sec) / padronTot) * 1000) / 10,
+    })
+  );
+
+  // ─── B15. PERSISTENCIA DE INTENDENTES ──────────────────────────────────
+  const intendentesRows = provGen.filter((r) => /intendente/i.test(r.cargo));
+  const familia = (s) => {
+    if (PERONISMO_RX.test(s)) return "Peronismo";
+    if (LLA_RX.test(s)) return "LLA";
+    if (JXC_RX.test(s)) return "Cambiemos/JxC/UCR";
+    if (/frente de izquierda|izquierda|fit|partido obrero/i.test(s))
+      return "Izquierda";
+    if (/vecinal|vecinos|frente vecinal|comunitario/i.test(s)) return "Vecinales";
+    return "Otros";
+  };
+
+  const intendByMuni = new Map(); // muniNorm → [{año, familiaGanadora, label}]
+  {
+    const byKey = new Map();
+    for (const r of intendentesRows) {
+      if (!r.municipio || !r.año) continue;
+      const key = `${r.municipio}|${r.año}`;
+      if (!byKey.has(key)) byKey.set(key, new Map());
+      byKey.get(key).set(r.agrupacion, (byKey.get(key).get(r.agrupacion) || 0) + (r.votos || 0));
+    }
+    for (const [key, inner] of byKey) {
+      const [muni, añoStr] = key.split("|");
+      const año = parseInt(añoStr, 10);
+      const sorted = [...inner.entries()].sort((a, b) => b[1] - a[1]);
+      const ganador = sorted[0]?.[0] || "";
+      const muniNorm = normalizeName(muni);
+      if (!intendByMuni.has(muniNorm))
+        intendByMuni.set(muniNorm, { name: muni, list: [] });
+      intendByMuni.get(muniNorm).list.push({
+        año,
+        ganador,
+        familia: familia(ganador),
+      });
+    }
+  }
+  const persistData = [];
+  for (const [muniNorm, e] of intendByMuni) {
+    e.list.sort((a, b) => a.año - b.año);
+    const familias = e.list.map((x) => x.familia);
+    let maxRacha = 1, cur = 1;
+    for (let i = 1; i < familias.length; i++) {
+      if (familias[i] === familias[i - 1]) {
+        cur++;
+        maxRacha = Math.max(maxRacha, cur);
+      } else cur = 1;
+    }
+    persistData.push({
+      municipioId: muniNorm,
+      municipioNombre: e.name,
+      value: maxRacha,
+      label: `${maxRacha} elecc. consecutivas (de ${e.list.length}) · familias: ${[
+        ...new Set(familias),
+      ].join(", ")}`,
+      elecciones: e.list.length,
+    });
+  }
+  const persistRacha5 = persistData.filter((r) => r.value >= 5).length;
+
+  // ─── C8-C11. CRUCES SOCIOECONÓMICOS ────────────────────────────────────
+  function safeRead(p) {
+    try {
+      return JSON.parse(fs.readFileSync(p, "utf-8"));
+    } catch (e) {
+      console.warn(`  ⚠ no se pudo leer ${p}: ${e.message}`);
+      return null;
+    }
+  }
+
+  function regression(points) {
+    if (points.length < 3) return { r2: 0, slope: 0, intercept: 0, n: points.length };
+    const n = points.length;
+    const sumX = points.reduce((s, p) => s + p.x, 0);
+    const sumY = points.reduce((s, p) => s + p.y, 0);
+    const sumXX = points.reduce((s, p) => s + p.x * p.x, 0);
+    const sumXY = points.reduce((s, p) => s + p.x * p.y, 0);
+    const sumYY = points.reduce((s, p) => s + p.y * p.y, 0);
+    const denomX = n * sumXX - sumX * sumX;
+    const slope = denomX === 0 ? 0 : (n * sumXY - sumX * sumY) / denomX;
+    const intercept = (sumY - slope * sumX) / n;
+    const ssTot = sumYY - (sumY * sumY) / n;
+    const ssRes = points.reduce((s, p) => {
+      const yhat = slope * p.x + intercept;
+      return s + (p.y - yhat) * (p.y - yhat);
+    }, 0);
+    const r2 = ssTot === 0 ? 0 : 1 - ssRes / ssTot;
+    return {
+      r2: Math.round(r2 * 1000) / 1000,
+      slope: Math.round(slope * 1000) / 1000,
+      intercept: Math.round(intercept * 100) / 100,
+      n,
+    };
+  }
+
+  function buildScatter(yData /* Map muni → {name, pct} */, xByMuni /* Map muni → number */, xLabel, yLabel) {
+    const points = [];
+    for (const [muni, e] of yData) {
+      const v = xByMuni.get(muni);
+      if (v != null && isFinite(v)) {
+        points.push({ x: v, y: e.pct, municipio: e.name });
+      }
+    }
+    const reg = regression(points);
+    return {
+      points: points.map((p) => ({
+        x: p.x,
+        y: p.y,
+        id: p.municipio,
+      })),
+      regression: reg,
+      xLabel,
+      yLabel,
+    };
+  }
+
+  // C8. Voto vs producción agrícola (stock bovino per cápita 2023 last available)
+  const stockBov = safeRead(
+    path.join(DASHBOARD_ROOT, "public", "data", "agricultura", "stock_bovino.json")
+  ) || [];
+  const stockByMuni = new Map();
+  {
+    const byMuni = new Map();
+    for (const r of stockBov) {
+      if (!r.municipio_nombre) continue;
+      const k = normalizeName(r.municipio_nombre);
+      if (!byMuni.has(k) || (r.anio || 0) > byMuni.get(k).anio) {
+        byMuni.set(k, { anio: r.anio, val: r.stock || 0, name: r.municipio_nombre });
+      }
+    }
+    for (const [k, v] of byMuni) {
+      const padron = habByMuni2023.get(k);
+      if (padron && padron > 0) stockByMuni.set(k, v.val / padron);
+    }
+  }
+  const llaPres2023 = pctByMuniFuerzaYear(presPrimeraAggMuni, LLA_RX, 2023);
+  const scatterAgro = buildScatter(
+    llaPres2023,
+    new Map([...stockByMuni].map(([k, v]) => [k, Math.log10(v + 0.01)])),
+    "Stock bovino per cápita (log₁₀)",
+    "% LLA · Presidente 2023"
+  );
+
+  // C9. Voto vs trayectoria escolar (sobreedad secundaria — último año disponible)
+  const trayectoria =
+    safeRead(
+      path.join(DASHBOARD_ROOT, "public", "data", "educacion", "trayectoria.json")
+    ) || [];
+  const trayBymuni = new Map();
+  {
+    const byMuni = new Map();
+    for (const r of trayectoria) {
+      if (!r.municipio_nombre || r.sobreedad_secundaria == null) continue;
+      const k = normalizeName(r.municipio_nombre);
+      const a = r.anio || 0;
+      if (!byMuni.has(k) || a > byMuni.get(k).anio)
+        byMuni.set(k, {
+          anio: a,
+          val: r.sobreedad_secundaria,
+          name: r.municipio_nombre,
+        });
+    }
+    for (const [k, v] of byMuni) trayBymuni.set(k, v.val);
+  }
+  const uxpGob23ForCross = pctByMuniFuerzaYear(gobAggMuni, PERONISMO_RX, 2023);
+  const scatterEdu = buildScatter(
+    uxpGob23ForCross,
+    trayBymuni,
+    "% Sobreedad secundaria",
+    "% Peronismo · Gobernador 2023"
+  );
+
+  // C10. Voto vs seguridad — usar tasa_hechos del mapData de seguridad.json
+  const seguridadJson = safeRead(
+    path.join(DASHBOARD_ROOT, "public", "data", "seguridad.json")
+  );
+  const tasaByMuni = new Map();
+  if (seguridadJson && Array.isArray(seguridadJson.mapData)) {
+    for (const m of seguridadJson.mapData) {
+      tasaByMuni.set(normalizeName(m.municipioNombre || m.municipioId || ""), m.value);
+    }
+  }
+  const scatterSeg = buildScatter(
+    llaPres2023,
+    tasaByMuni,
+    "Tasa hechos delictivos /100k (2024)",
+    "% LLA · Presidente 2023"
+  );
+
+  // C11. Voto vs transferencias per cápita 2023
+  const transferencias =
+    safeRead(
+      path.join(DASHBOARD_ROOT, "public", "data", "economia", "transferencias.json")
+    ) || [];
+  const transByMuni = new Map();
+  {
+    const byMuni = new Map();
+    for (const r of transferencias) {
+      if (!r.municipio_nombre || r.anio !== 2023) continue;
+      const k = normalizeName(r.municipio_nombre);
+      byMuni.set(k, (byMuni.get(k) || 0) + (r.monto || 0));
+    }
+    for (const [k, monto] of byMuni) {
+      const padron = habByMuni2023.get(k);
+      if (padron && padron > 0) transByMuni.set(k, monto / padron / 1000); // miles de $ per elector
+    }
+  }
+  const scatterTrans = buildScatter(
+    uxpGob23ForCross,
+    transByMuni,
+    "Transferencias 2023 / elector (miles $)",
+    "% Peronismo · Gobernador 2023"
+  );
+
+  // ─── D12. HEATMAP PARTICIPACIÓN MUNICIPIOS × AÑOS ──────────────────────
+  const heatmapData = []; // formato Nivo: [{id, data:[{x,y}]}]
+  {
+    const raw = provGen.filter((r) => /gobernador/i.test(r.cargo));
+    const tmpHab = new Map();
+    const tmpVot = new Map();
+    for (const r of raw) {
+      if (!r.municipio || !r.año) continue;
+      const k = `${normalizeName(r.municipio)}|${r.año}`;
+      if (r.habilitados)
+        tmpHab.set(k, Math.max(tmpHab.get(k) || 0, r.habilitados));
+      if (r.votantes)
+        tmpVot.set(k, Math.max(tmpVot.get(k) || 0, r.votantes));
+    }
+    const munis = new Map(); // muniNorm → name
+    const years = new Set();
+    for (const [muniNorm, _] of Object.entries(muniToSeccion)) {
+      munis.set(muniNorm, muniNorm);
+    }
+    for (const r of raw) {
+      if (!r.municipio) continue;
+      munis.set(normalizeName(r.municipio), r.municipio);
+    }
+    for (const k of tmpHab.keys()) years.add(parseInt(k.split("|")[1], 10));
+    const yearList = [...years].sort();
+    const muniList = [...munis.entries()].sort((a, b) => {
+      const sa = muniToSeccion[a[0]] || "Z";
+      const sb = muniToSeccion[b[0]] || "Z";
+      const ia = SECCIONES_ORDEN.indexOf(sa);
+      const ib = SECCIONES_ORDEN.indexOf(sb);
+      if (ia !== ib) return ia - ib;
+      return a[1].localeCompare(b[1]);
+    });
+    for (const [muniNorm, name] of muniList) {
+      const sec = muniToSeccion[muniNorm] || "?";
+      const dataRow = [];
+      for (const y of yearList) {
+        const k = `${muniNorm}|${y}`;
+        const h = tmpHab.get(k), v = tmpVot.get(k);
+        const p = h && v ? pct(v, h) : null;
+        dataRow.push({ x: String(y), y: p });
+      }
+      heatmapData.push({
+        id: `${sec}·${name}`,
+        municipio: name,
+        seccion: sec,
+        data: dataRow,
+      });
+    }
+  }
+
+  // ─── D13. MAPA MUNICIPAL TIMELINE (ganador gobernador por año) ──────────
+  const timelineMuniGob = {}; // {año: [mapData items]}
+  {
+    for (const año of gobYears) {
+      const items = ganadorPorMunicipio(
+        gobAggMuni.filter((r) => r.año === año)
+      );
+      const allWinners = [...new Set(items.map((x) => prettyAgrupacion(x.ganador)))];
+      const winnerCode = new Map(allWinners.map((w, i) => [w, i + 1]));
+      timelineMuniGob[String(año)] = items.map((it) => ({
+        municipioId: normalizeName(it.municipio),
+        municipioNombre: it.municipio,
+        value: winnerCode.get(prettyAgrupacion(it.ganador)) || 0,
+        label: `${prettyAgrupacion(it.ganador)} · ${it.porcentaje}%`,
+        winner: prettyAgrupacion(it.ganador),
+      }));
+    }
+  }
+
+  // ─── D14. SANKEY PASO → GENERALES 2023 (PRESIDENTE) ────────────────────
+  // Modelo simple: para cada fuerza top-5 común a PASO y Generales, el flujo
+  // mismo→mismo = min(votosPaso, votosGen). El "residual" (la fuerza creció)
+  // se asigna desde un nodo "Otros · PASO". Si decreció, va a "Otros · Gen".
+  const sankeyNodes = [];
+  const sankeyLinks = [];
+  {
+    const allFs = new Set([
+      ...presPaso2023Pcts.map((x) => x.agrupacion),
+      ...presGen2023Pcts.map((x) => x.agrupacion),
+    ]);
+    const pasoVotos = new Map(
+      presPaso2023Agg.map((a) => [prettyAgrupacion(a.agrupacion), a.votos])
+    );
+    const genVotos = new Map(
+      presGen2023Agg.map((a) => [prettyAgrupacion(a.agrupacion), a.votos])
+    );
+
+    sankeyNodes.push({ id: "PASO · Otros / no votó" });
+    for (const f of allFs) sankeyNodes.push({ id: `PASO · ${f}` });
+    for (const f of allFs) sankeyNodes.push({ id: `Gen · ${f}` });
+    sankeyNodes.push({ id: "Gen · Otros / no votó" });
+
+    for (const f of allFs) {
+      const pv = pasoVotos.get(f) || 0;
+      const gv = genVotos.get(f) || 0;
+      const stay = Math.min(pv, gv);
+      if (stay > 1000)
+        sankeyLinks.push({
+          source: `PASO · ${f}`,
+          target: `Gen · ${f}`,
+          value: stay,
+        });
+      if (gv > pv) {
+        // creció: viene desde "Otros · PASO"
+        sankeyLinks.push({
+          source: "PASO · Otros / no votó",
+          target: `Gen · ${f}`,
+          value: gv - pv,
+        });
+      } else if (pv > gv) {
+        // decreció: va hacia "Otros · Gen"
+        sankeyLinks.push({
+          source: `PASO · ${f}`,
+          target: "Gen · Otros / no votó",
+          value: pv - gv,
+        });
+      }
+    }
+    // dedupe nodes
+    const seen = new Set();
+    const uniqueNodes = [];
+    for (const n of sankeyNodes) {
+      if (!seen.has(n.id)) {
+        uniqueNodes.push(n);
+        seen.add(n.id);
+      }
+    }
+    sankeyNodes.length = 0;
+    sankeyNodes.push(...uniqueNodes);
+  }
+
   // ─── ARMADO DEL JSON FINAL ────────────────────────────────────────────────
   console.log("\nArmando politica.json...");
 
@@ -774,7 +1509,44 @@ function main() {
       formatted: String(Object.keys(muniToSeccion).length),
       unit: "municipios",
     },
-  ];
+    // KPIs avanzados
+    pedersenPres1923 != null && {
+      id: "volatilidad-pres-1923",
+      label: "Volatilidad Pedersen presidente 2019→2023",
+      value: pedersenPres1923,
+      formatted: `${pedersenPres1923}`,
+      unit: "puntos porcentuales",
+      status: pedersenPres1923 > 10 ? "warning" : undefined,
+    },
+    nep2023Gob != null && {
+      id: "nep-gob-2023",
+      label: "Número Efectivo de Partidos (gobernador 2023)",
+      value: nep2023Gob,
+      formatted: `${nep2023Gob}`,
+      unit: "partidos efectivos",
+    },
+    {
+      id: "competitivos-2023",
+      label: "Municipios competitivos 2023 (margen <5pp)",
+      value: competitivos2023,
+      formatted: String(competitivos2023),
+      unit: "municipios",
+    },
+    {
+      id: "corte-boleta",
+      label: "Municipios con corte de boleta >5pp (2023)",
+      value: corteMayor5,
+      formatted: String(corteMayor5),
+      unit: "municipios",
+    },
+    {
+      id: "persist-intendentes",
+      label: "Municipios con misma familia política ≥5 elecciones consecutivas",
+      value: persistRacha5,
+      formatted: String(persistRacha5),
+      unit: "municipios",
+    },
+  ].filter(Boolean);
 
   // Charts
   const charts = [];
@@ -904,6 +1676,242 @@ function main() {
     });
   }
 
+  // ─── A1. Volatilidad / Pedersen ───────────────────────────────────────
+  if (pedersenSerie.length) {
+    charts.push({
+      id: "pedersen-evolucion",
+      type: "line",
+      title:
+        "Volatilidad electoral (Índice de Pedersen) entre elecciones consecutivas",
+      sectionId: "volatilidad",
+      data: pedersenSerie,
+      config: { xAxis: "transicion" },
+    });
+  }
+  if (pedersenSeccionGob.length) {
+    charts.push({
+      id: "pedersen-seccion-gob-1923",
+      type: "bar",
+      title:
+        "Volatilidad gobernador 2019→2023 por sección electoral (puntos porcentuales)",
+      sectionId: "volatilidad",
+      data: pedersenSeccionGob,
+      config: { xAxis: "seccion", layout: "horizontal" },
+    });
+  }
+
+  // ─── A2. NEP ──────────────────────────────────────────────────────────
+  if (nepEvolucion.length) {
+    charts.push({
+      id: "nep-evolucion",
+      type: "line",
+      title:
+        "Número Efectivo de Partidos · Laakso-Taagepera (PBA, presidente vs gobernador)",
+      sectionId: "fragmentacion",
+      data: nepEvolucion,
+      config: { xAxis: "año" },
+    });
+  }
+  if (nepBySeccion2023.length) {
+    charts.push({
+      id: "nep-seccion-2023",
+      type: "bar",
+      title: "Fragmentación por sección · NEP gobernador 2023",
+      sectionId: "fragmentacion",
+      data: nepBySeccion2023,
+      config: { xAxis: "seccion", layout: "horizontal" },
+    });
+  }
+
+  // ─── A3. Margen de victoria ───────────────────────────────────────────
+  if (mapDataMargen.length) {
+    charts.push({
+      id: "mapa-margen-gob-2023",
+      type: "map",
+      title: "Competitividad · margen de victoria gobernador 2023 (pp)",
+      sectionId: "competitividad",
+      data: mapDataMargen,
+    });
+  }
+  if (margenCategorias.length) {
+    charts.push({
+      id: "margen-categorias-2023",
+      type: "pie",
+      title:
+        "Distribución de municipios por nivel de competitividad (gobernador 2023)",
+      sectionId: "competitividad",
+      data: margenCategorias,
+    });
+  }
+
+  // ─── A4. Swing 2019→2023 ──────────────────────────────────────────────
+  if (swingMapData.length) {
+    charts.push({
+      id: "mapa-swing-uxp-1923",
+      type: "map",
+      title:
+        "Swing 2019→2023 del peronismo a gobernador (Δ pp) — divergente",
+      sectionId: "swing",
+      data: swingMapData,
+    });
+  }
+  if (swingScatter.length) {
+    charts.push({
+      id: "scatter-swing-uxp",
+      type: "scatter",
+      title:
+        "Peronismo · 2019 vs 2023 (gobernador) — cada punto un municipio",
+      sectionId: "swing",
+      data: swingScatter,
+      config: {
+        xAxis: "2019 (% peronismo)",
+        yAxis: "2023 (% peronismo)",
+        diagonal: true,
+      },
+    });
+  }
+
+  // ─── B5. Corte de boleta ──────────────────────────────────────────────
+  if (corteData.length) {
+    charts.push({
+      id: "mapa-corte-boleta-2023",
+      type: "map",
+      title:
+        "Corte de boleta 2023 · |% peronismo presidente − % peronismo gobernador| por municipio (pp)",
+      sectionId: "corte",
+      data: corteData,
+    });
+  }
+
+  // ─── B6. Brecha PASO → Generales ──────────────────────────────────────
+  if (brechaChart.length) {
+    charts.push({
+      id: "brecha-paso-generales-2023",
+      type: "bar",
+      title: "Brecha PASO → Generales 2023 (presidente, top 5 fuerzas)",
+      sectionId: "brecha",
+      data: brechaChart,
+      config: { xAxis: "agrupacion", layout: "horizontal", grouped: true },
+    });
+  }
+
+  // ─── B7. Peso por sección ─────────────────────────────────────────────
+  if (pesoData.length) {
+    charts.push({
+      id: "peso-secciones",
+      type: "bar",
+      title: "Peso del padrón por sección electoral (2023)",
+      sectionId: "peso",
+      data: pesoData,
+      config: { xAxis: "seccion", layout: "horizontal" },
+    });
+    charts.push({
+      id: "peso-pie",
+      type: "pie",
+      title: "% del padrón provincial por sección (2023)",
+      sectionId: "peso",
+      data: pesoData.map((d) => ({
+        id: d.seccion,
+        value: d["% del padrón"],
+      })),
+    });
+  }
+
+  // ─── B15. Persistencia de intendentes ─────────────────────────────────
+  if (persistData.length) {
+    charts.push({
+      id: "mapa-persistencia-intendentes",
+      type: "map",
+      title:
+        "Persistencia de intendentes · cantidad máxima de elecciones consecutivas con la misma familia política (2007–2023)",
+      sectionId: "intendentes",
+      data: persistData,
+    });
+  }
+
+  // ─── C8-C11. Cruces socioeconómicos ───────────────────────────────────
+  const scatterDefs = [
+    {
+      id: "scatter-voto-agro",
+      title:
+        "¿Voto rural distintivo? · Stock bovino per cápita vs % LLA en presidente 2023",
+      sec: "agro",
+      payload: scatterAgro,
+    },
+    {
+      id: "scatter-voto-edu",
+      title:
+        "Voto vs trayectoria escolar · % sobreedad secundaria vs % peronismo a gobernador 2023",
+      sec: "trayectoria",
+      payload: scatterEdu,
+    },
+    {
+      id: "scatter-voto-seg",
+      title:
+        "Voto vs seguridad · tasa hechos delictivos 2024 vs % LLA en presidente 2023",
+      sec: "inseguridad",
+      payload: scatterSeg,
+    },
+    {
+      id: "scatter-voto-trans",
+      title:
+        "Voto vs dependencia fiscal · transferencias 2023/elector vs % peronismo a gobernador 2023",
+      sec: "transferencias",
+      payload: scatterTrans,
+    },
+  ];
+  for (const s of scatterDefs) {
+    if (s.payload.points.length >= 5) {
+      charts.push({
+        id: s.id,
+        type: "scatter",
+        title: s.title,
+        sectionId: s.sec,
+        data: s.payload.points,
+        config: {
+          xAxis: s.payload.xLabel,
+          yAxis: s.payload.yLabel,
+          regression: s.payload.regression,
+        },
+      });
+    }
+  }
+
+  // ─── D12. Heatmap participación ───────────────────────────────────────
+  if (heatmapData.length) {
+    charts.push({
+      id: "heatmap-participacion",
+      type: "heatmap",
+      title:
+        "Participación electoral por municipio × año (gobernador, % votantes / habilitados)",
+      sectionId: "heatmap",
+      data: heatmapData,
+    });
+  }
+
+  // ─── D13. Timeline mapa municipal gobernador ──────────────────────────
+  if (Object.keys(timelineMuniGob).length) {
+    charts.push({
+      id: "timeline-municipal-gob",
+      type: "mapa-timeline",
+      title: "Recorrido 2007→2023 · ganador a gobernador por municipio",
+      sectionId: "timeline",
+      data: timelineMuniGob, // {año: [items]}
+    });
+  }
+
+  // ─── D14. Sankey PASO → Generales ─────────────────────────────────────
+  if (sankeyLinks.length) {
+    charts.push({
+      id: "sankey-paso-gen-2023",
+      type: "sankey",
+      title:
+        "Transferencia de votos PASO → Generales 2023 (presidente, modelo agregado)",
+      sectionId: "sankey",
+      data: { nodes: sankeyNodes, links: sankeyLinks },
+    });
+  }
+
   // Rankings: municipios por porcentaje del ganador en ballotage 2023
   const ranking = mapaPresBallotage2023
     .map((r) => ({
@@ -941,6 +1949,14 @@ function main() {
           "Municipios — % del ganador en el ballotage 2023 (de mayor a menor)",
         sectionId: "geografia",
         items: ranking,
+        order: "desc",
+      },
+      {
+        id: "ranking-corte-boleta-2023",
+        title:
+          "Top 10 municipios — mayor corte de boleta peronismo presidente vs gobernador 2023",
+        sectionId: "corte",
+        items: corteTop10,
         order: "desc",
       },
     ],
