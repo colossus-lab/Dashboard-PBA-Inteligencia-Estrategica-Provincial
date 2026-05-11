@@ -90,15 +90,6 @@
     "file": "industria-parques.json"
   },
   {
-    "id": "politica",
-    "title": "Resultados Electorales por Municipio",
-    "source": "Junta Electoral PBA · Cámara Nacional Electoral · Datos Abiertos PBA",
-    "rows": 92894,
-    "columns": 6,
-    "municipios": 112,
-    "file": "politica.json"
-  },
-  {
     "id": "salud-defunciones",
     "title": "Defunciones Neonatales",
     "source": "DEIS — Ministerio de Salud",
