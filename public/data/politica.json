@@ -1,0 +1,1875 @@
+{
+  "meta": {
+    "id": "politica",
+    "title": "Política y Elecciones",
+    "category": "politica",
+    "source": "Junta Electoral PBA · Cámara Nacional Electoral · Datos Abiertos PBA",
+    "date": "2023"
+  },
+  "kpis": [
+    {
+      "id": "elecciones-cubiertas",
+      "label": "Años con datos",
+      "value": 10,
+      "formatted": "10",
+      "unit": "años electorales"
+    },
+    {
+      "id": "padron-2023",
+      "label": "Padrón electoral PBA (2023)",
+      "value": 14059933,
+      "formatted": "14.059.933",
+      "unit": "electores habilitados"
+    },
+    {
+      "id": "participacion-prom",
+      "label": "Participación promedio (2013–2023)",
+      "value": 78.7,
+      "formatted": "78.7%",
+      "unit": "votos / habilitados"
+    },
+    {
+      "id": "fuerzas-relevantes",
+      "label": "Fuerzas con presencia top-5",
+      "value": 27,
+      "formatted": "27",
+      "unit": "agrupaciones"
+    },
+    {
+      "id": "secciones-electorales",
+      "label": "Secciones electorales PBA",
+      "value": 8,
+      "formatted": "8",
+      "unit": "secciones"
+    },
+    {
+      "id": "municipios-mapeados",
+      "label": "Municipios con sección asignada",
+      "value": 135,
+      "formatted": "135",
+      "unit": "municipios"
+    }
+  ],
+  "charts": [
+    {
+      "id": "participacion-historica",
+      "type": "line",
+      "title": "Participación electoral PBA · 2005–2023",
+      "sectionId": "participacion",
+      "data": [
+        {
+          "año": 2007,
+          "Generales": 77.3,
+          "PASO": null
+        },
+        {
+          "año": 2011,
+          "Generales": 80.8,
+          "PASO": 88.6
+        },
+        {
+          "año": 2015,
+          "Generales": 80.5,
+          "PASO": 77
+        },
+        {
+          "año": 2019,
+          "Generales": 80,
+          "PASO": 75.5
+        },
+        {
+          "año": 2023,
+          "Generales": 75.5,
+          "PASO": null
+        }
+      ],
+      "config": {
+        "xAxis": "año"
+      }
+    },
+    {
+      "id": "pres-primera-2023",
+      "type": "bar",
+      "title": "Presidente — Primera vuelta 2023 (% sobre top 5)",
+      "sectionId": "presidente",
+      "data": [
+        {
+          "agrupacion": "Union por la Patria",
+          "% votos": 41.5
+        },
+        {
+          "agrupacion": "La Libertad Avanza",
+          "% votos": 24.9
+        },
+        {
+          "agrupacion": "Juntos por el Cambio",
+          "% votos": 23.2
+        },
+        {
+          "agrupacion": "Hacemos por Nuestro Pais",
+          "% votos": 3.6
+        },
+        {
+          "agrupacion": "Fte. de Izquierda y de Trabaj-unidad",
+          "% votos": 3.5
+        }
+      ],
+      "config": {
+        "xAxis": "agrupacion",
+        "layout": "horizontal"
+      }
+    },
+    {
+      "id": "pres-ballotage-2023",
+      "type": "bar",
+      "title": "Presidente — Ballotage 2023 (% sobre positivos)",
+      "sectionId": "presidente",
+      "data": [
+        {
+          "agrupacion": "Union por la Patria",
+          "% votos": 50.7
+        },
+        {
+          "agrupacion": "La Libertad Avanza",
+          "% votos": 49.3
+        }
+      ],
+      "config": {
+        "xAxis": "agrupacion",
+        "layout": "horizontal"
+      }
+    },
+    {
+      "id": "pres-ballotage-2015",
+      "type": "bar",
+      "title": "Presidente — Ballotage 2015 (% sobre positivos)",
+      "sectionId": "presidente",
+      "data": [
+        {
+          "agrupacion": "Frente Para la Victoria",
+          "% votos": 51.1
+        },
+        {
+          "agrupacion": "Cambiemos",
+          "% votos": 48.9
+        }
+      ],
+      "config": {
+        "xAxis": "agrupacion",
+        "layout": "horizontal"
+      }
+    },
+    {
+      "id": "evol-presidencial",
+      "type": "line",
+      "title": "Evolución del voto presidencial (primera vuelta) · top 5 fuerzas",
+      "sectionId": "presidente",
+      "data": [
+        {
+          "año": 2015,
+          "Alianza Frente Para la Victoria": 36.2,
+          "Alianza Cambiemos Buenos Aires": 31.8
+        },
+        {
+          "año": 2019,
+          "Frente de Todos": 51.1,
+          "Juntos por el Cambio": 35.1
+        },
+        {
+          "año": 2023,
+          "Union por la Patria": 41.5,
+          "Juntos por el Cambio": 23.2
+        }
+      ],
+      "config": {
+        "xAxis": "año"
+      }
+    },
+    {
+      "id": "gob-2023",
+      "type": "bar",
+      "title": "Gobernador 2023 (% sobre top 5)",
+      "sectionId": "gobernador",
+      "data": [
+        {
+          "agrupacion": "Union por la Patria",
+          "% votos": 40.8
+        },
+        {
+          "agrupacion": "Juntos por el Cambio",
+          "% votos": 24.1
+        },
+        {
+          "agrupacion": "La Libertad Avanza",
+          "% votos": 22.3
+        },
+        {
+          "agrupacion": "Voto en Blanco",
+          "% votos": 9.2
+        },
+        {
+          "agrupacion": "Frente de Izquierda y Trabajadores Unidad",
+          "% votos": 3.5
+        }
+      ],
+      "config": {
+        "xAxis": "agrupacion",
+        "layout": "horizontal"
+      }
+    },
+    {
+      "id": "evol-gobernador",
+      "type": "line",
+      "title": "Evolución del voto a Gobernador · top 5 fuerzas",
+      "sectionId": "gobernador",
+      "data": [
+        {
+          "año": 2007,
+          "Frente Para la Victoria": 42.3
+        },
+        {
+          "año": 2011,
+          "Frente Para la Victoria": 47.6
+        },
+        {
+          "año": 2015,
+          "Alianza Cambiemos Buenos Aires": 36.1
+        },
+        {
+          "año": 2019,
+          "Frente de Todos": 50,
+          "Juntos por el Cambio": 36.5
+        },
+        {
+          "año": 2023,
+          "Union por la Patria": 40.8,
+          "Juntos por el Cambio": 24.1
+        }
+      ],
+      "config": {
+        "xAxis": "año"
+      }
+    },
+    {
+      "id": "mapa-secciones-gob-2023",
+      "type": "mapa-secciones",
+      "title": "Geografía electoral · Gobernador 2023 por sección",
+      "sectionId": "geografia",
+      "data": [
+        {
+          "seccion": "VI",
+          "ganador": "Juntos por el Cambio",
+          "porcentaje": 29.1,
+          "votos_total": 499393
+        },
+        {
+          "seccion": "IV",
+          "ganador": "Union por la Patria",
+          "porcentaje": 32.2,
+          "votos_total": 429527
+        },
+        {
+          "seccion": "III",
+          "ganador": "Union por la Patria",
+          "porcentaje": 47.4,
+          "votos_total": 3772801
+        },
+        {
+          "seccion": "II",
+          "ganador": "Union por la Patria",
+          "porcentaje": 33.1,
+          "votos_total": 512987
+        },
+        {
+          "seccion": "V",
+          "ganador": "Union por la Patria",
+          "porcentaje": 32,
+          "votos_total": 970937
+        },
+        {
+          "seccion": "VII",
+          "ganador": "Union por la Patria",
+          "porcentaje": 31.7,
+          "votos_total": 218508
+        },
+        {
+          "seccion": "I",
+          "ganador": "Union por la Patria",
+          "porcentaje": 40.8,
+          "votos_total": 3733415
+        },
+        {
+          "seccion": "VIII",
+          "ganador": "Union por la Patria",
+          "porcentaje": 39.6,
+          "votos_total": 471695
+        }
+      ]
+    },
+    {
+      "id": "mapa-secciones-pres-2023",
+      "type": "mapa-secciones",
+      "title": "Geografía electoral · Ballotage 2023 por sección",
+      "sectionId": "geografia",
+      "data": [
+        {
+          "seccion": "VI",
+          "ganador": "La Libertad Avanza",
+          "porcentaje": 63.4,
+          "votos_total": 452560
+        },
+        {
+          "seccion": "IV",
+          "ganador": "La Libertad Avanza",
+          "porcentaje": 58.7,
+          "votos_total": 364593
+        },
+        {
+          "seccion": "III",
+          "ganador": "Union por la Patria",
+          "porcentaje": 58.1,
+          "votos_total": 3395525
+        },
+        {
+          "seccion": "V",
+          "ganador": "La Libertad Avanza",
+          "porcentaje": 58.3,
+          "votos_total": 821959
+        },
+        {
+          "seccion": "VII",
+          "ganador": "La Libertad Avanza",
+          "porcentaje": 60,
+          "votos_total": 201122
+        },
+        {
+          "seccion": "II",
+          "ganador": "La Libertad Avanza",
+          "porcentaje": 57,
+          "votos_total": 476534
+        },
+        {
+          "seccion": "I",
+          "ganador": "Union por la Patria",
+          "porcentaje": 50.7,
+          "votos_total": 3424183
+        },
+        {
+          "seccion": "VIII",
+          "ganador": "La Libertad Avanza",
+          "porcentaje": 50.5,
+          "votos_total": 413228
+        }
+      ]
+    }
+  ],
+  "rankings": [
+    {
+      "id": "ranking-ballotage-2023",
+      "title": "Municipios — % del ganador en el ballotage 2023 (de mayor a menor)",
+      "sectionId": "geografia",
+      "items": [
+        {
+          "name": "Coronel de Marina L. Rosales",
+          "value": 72.9,
+          "meta": "La Libertad Avanza · 26.9k votos"
+        },
+        {
+          "name": "Villarino",
+          "value": 70.7,
+          "meta": "La Libertad Avanza · 12.5k votos"
+        },
+        {
+          "name": "Puan",
+          "value": 70.6,
+          "meta": "La Libertad Avanza · 7.0k votos"
+        },
+        {
+          "name": "Pellegrini",
+          "value": 69.5,
+          "meta": "La Libertad Avanza · 2.7k votos"
+        },
+        {
+          "name": "Saavedra",
+          "value": 68.9,
+          "meta": "La Libertad Avanza · 8.9k votos"
+        },
+        {
+          "name": "General Villegas",
+          "value": 68,
+          "meta": "La Libertad Avanza · 12.6k votos"
+        },
+        {
+          "name": "Adolfo Alsina",
+          "value": 66.5,
+          "meta": "La Libertad Avanza · 6.7k votos"
+        },
+        {
+          "name": "General Arenales",
+          "value": 66.2,
+          "meta": "La Libertad Avanza · 7.5k votos"
+        },
+        {
+          "name": "Coronel Pringles",
+          "value": 66.1,
+          "meta": "La Libertad Avanza · 9.5k votos"
+        },
+        {
+          "name": "Coronel Suárez",
+          "value": 65.8,
+          "meta": "La Libertad Avanza · 16.4k votos"
+        },
+        {
+          "name": "San Cayetano",
+          "value": 65.7,
+          "meta": "La Libertad Avanza · 3.5k votos"
+        },
+        {
+          "name": "Balcarce",
+          "value": 65.3,
+          "meta": "La Libertad Avanza · 19.6k votos"
+        },
+        {
+          "name": "Pinamar",
+          "value": 65.3,
+          "meta": "La Libertad Avanza · 13.6k votos"
+        },
+        {
+          "name": "San Isidro",
+          "value": 64.7,
+          "meta": "La Libertad Avanza · 130.1k votos"
+        },
+        {
+          "name": "Tornquist",
+          "value": 64.7,
+          "meta": "La Libertad Avanza · 6.8k votos"
+        },
+        {
+          "name": "Capitán Sarmiento",
+          "value": 64.4,
+          "meta": "La Libertad Avanza · 6.6k votos"
+        },
+        {
+          "name": "Saladillo",
+          "value": 64.1,
+          "meta": "La Libertad Avanza · 13.7k votos"
+        },
+        {
+          "name": "9 de Julio",
+          "value": 64,
+          "meta": "La Libertad Avanza · 20.4k votos"
+        },
+        {
+          "name": "Rivadavia",
+          "value": 63.7,
+          "meta": "La Libertad Avanza · 7.0k votos"
+        },
+        {
+          "name": "San Antonio de Areco",
+          "value": 63.7,
+          "meta": "La Libertad Avanza · 10.3k votos"
+        },
+        {
+          "name": "Trenque Lauquen",
+          "value": 63.7,
+          "meta": "La Libertad Avanza · 18.4k votos"
+        },
+        {
+          "name": "25 de Mayo",
+          "value": 63.7,
+          "meta": "La Libertad Avanza · 14.5k votos"
+        },
+        {
+          "name": "Coronel Dorrego",
+          "value": 63.5,
+          "meta": "La Libertad Avanza · 6.4k votos"
+        },
+        {
+          "name": "Bahía Blanca",
+          "value": 63.3,
+          "meta": "La Libertad Avanza · 114.5k votos"
+        },
+        {
+          "name": "Lincoln",
+          "value": 63.2,
+          "meta": "La Libertad Avanza · 17.8k votos"
+        },
+        {
+          "name": "Florencio Varela",
+          "value": 63.1,
+          "meta": "Union por la Patria · 157.1k votos"
+        },
+        {
+          "name": "Daireaux",
+          "value": 62.7,
+          "meta": "La Libertad Avanza · 6.8k votos"
+        },
+        {
+          "name": "General Alvear",
+          "value": 62.7,
+          "meta": "La Libertad Avanza · 4.0k votos"
+        },
+        {
+          "name": "General Lavalle",
+          "value": 62.6,
+          "meta": "La Libertad Avanza · 2.1k votos"
+        },
+        {
+          "name": "Necochea",
+          "value": 62.6,
+          "meta": "La Libertad Avanza · 37.8k votos"
+        },
+        {
+          "name": "Pergamino",
+          "value": 62.6,
+          "meta": "La Libertad Avanza · 41.8k votos"
+        },
+        {
+          "name": "Vicente López",
+          "value": 62.6,
+          "meta": "La Libertad Avanza · 106.1k votos"
+        },
+        {
+          "name": "General Juan Madariaga",
+          "value": 62.5,
+          "meta": "La Libertad Avanza · 8.4k votos"
+        },
+        {
+          "name": "Carlos Casares",
+          "value": 62.4,
+          "meta": "La Libertad Avanza · 9.4k votos"
+        },
+        {
+          "name": "Lobos",
+          "value": 62.3,
+          "meta": "La Libertad Avanza · 15.5k votos"
+        },
+        {
+          "name": "Ensenada",
+          "value": 62.2,
+          "meta": "Union por la Patria · 27.3k votos"
+        },
+        {
+          "name": "General La Madrid",
+          "value": 61.9,
+          "meta": "La Libertad Avanza · 4.4k votos"
+        },
+        {
+          "name": "Navarro",
+          "value": 61.9,
+          "meta": "La Libertad Avanza · 7.3k votos"
+        },
+        {
+          "name": "Rojas",
+          "value": 61.9,
+          "meta": "La Libertad Avanza · 9.5k votos"
+        },
+        {
+          "name": "Tandil",
+          "value": 61.8,
+          "meta": "La Libertad Avanza · 51.2k votos"
+        },
+        {
+          "name": "Bolívar",
+          "value": 61.6,
+          "meta": "La Libertad Avanza · 14.1k votos"
+        },
+        {
+          "name": "Florentino Ameghino",
+          "value": 61.6,
+          "meta": "La Libertad Avanza · 3.8k votos"
+        },
+        {
+          "name": "La Matanza",
+          "value": 61.2,
+          "meta": "Union por la Patria · 478.8k votos"
+        },
+        {
+          "name": "Lezama",
+          "value": 60.8,
+          "meta": "La Libertad Avanza · 2.3k votos"
+        },
+        {
+          "name": "Dolores",
+          "value": 60.6,
+          "meta": "La Libertad Avanza · 11.2k votos"
+        },
+        {
+          "name": "Roque Pérez",
+          "value": 60.4,
+          "meta": "La Libertad Avanza · 5.2k votos"
+        },
+        {
+          "name": "Hipólito Yrigoyen",
+          "value": 60.1,
+          "meta": "La Libertad Avanza · 3.5k votos"
+        },
+        {
+          "name": "Salto",
+          "value": 60.1,
+          "meta": "La Libertad Avanza · 13.6k votos"
+        },
+        {
+          "name": "Presidente Perón",
+          "value": 60.1,
+          "meta": "Union por la Patria · 32.0k votos"
+        },
+        {
+          "name": "Merlo",
+          "value": 59.9,
+          "meta": "Union por la Patria · 183.8k votos"
+        },
+        {
+          "name": "José C. Paz",
+          "value": 59.9,
+          "meta": "Union por la Patria · 100.5k votos"
+        },
+        {
+          "name": "Exaltación de la Cruz",
+          "value": 59.7,
+          "meta": "La Libertad Avanza · 14.5k votos"
+        },
+        {
+          "name": "Moreno",
+          "value": 59.5,
+          "meta": "Union por la Patria · 158.8k votos"
+        },
+        {
+          "name": "Mercedes",
+          "value": 59.4,
+          "meta": "La Libertad Avanza · 26.2k votos"
+        },
+        {
+          "name": "General Belgrano",
+          "value": 59.2,
+          "meta": "La Libertad Avanza · 7.4k votos"
+        },
+        {
+          "name": "Salliqueló",
+          "value": 59,
+          "meta": "La Libertad Avanza · 3.3k votos"
+        },
+        {
+          "name": "Almirante Brown",
+          "value": 58.9,
+          "meta": "Union por la Patria · 201.2k votos"
+        },
+        {
+          "name": "San Pedro",
+          "value": 58.8,
+          "meta": "La Libertad Avanza · 23.4k votos"
+        },
+        {
+          "name": "Chascomús",
+          "value": 58.7,
+          "meta": "La Libertad Avanza · 15.0k votos"
+        },
+        {
+          "name": "Lomas de Zamora",
+          "value": 58.6,
+          "meta": "Union por la Patria · 227.5k votos"
+        },
+        {
+          "name": "Guaminí",
+          "value": 58.5,
+          "meta": "La Libertad Avanza · 4.4k votos"
+        },
+        {
+          "name": "Monte",
+          "value": 58.5,
+          "meta": "La Libertad Avanza · 8.5k votos"
+        },
+        {
+          "name": "Olavarría",
+          "value": 58.5,
+          "meta": "La Libertad Avanza · 41.4k votos"
+        },
+        {
+          "name": "Pehuajó",
+          "value": 58.5,
+          "meta": "La Libertad Avanza · 15.8k votos"
+        },
+        {
+          "name": "Arrecifes",
+          "value": 58.4,
+          "meta": "La Libertad Avanza · 11.4k votos"
+        },
+        {
+          "name": "Tres Lomas",
+          "value": 58.4,
+          "meta": "La Libertad Avanza · 2.8k votos"
+        },
+        {
+          "name": "Marcos Paz",
+          "value": 58.3,
+          "meta": "Union por la Patria · 21.2k votos"
+        },
+        {
+          "name": "Alberti",
+          "value": 58.2,
+          "meta": "La Libertad Avanza · 4.3k votos"
+        },
+        {
+          "name": "Patagones",
+          "value": 58.2,
+          "meta": "La Libertad Avanza · 11.8k votos"
+        },
+        {
+          "name": "Punta Indio",
+          "value": 58.2,
+          "meta": "La Libertad Avanza · 4.3k votos"
+        },
+        {
+          "name": "Carmen de Areco",
+          "value": 58,
+          "meta": "La Libertad Avanza · 5.9k votos"
+        },
+        {
+          "name": "Las Flores",
+          "value": 57.9,
+          "meta": "La Libertad Avanza · 9.6k votos"
+        },
+        {
+          "name": "Leandro N. Alem",
+          "value": 57.8,
+          "meta": "La Libertad Avanza · 6.5k votos"
+        },
+        {
+          "name": "San Andrés de Giles",
+          "value": 57.8,
+          "meta": "La Libertad Avanza · 9.0k votos"
+        },
+        {
+          "name": "Avellaneda",
+          "value": 57.6,
+          "meta": "Union por la Patria · 127.1k votos"
+        },
+        {
+          "name": "Tordillo",
+          "value": 57.6,
+          "meta": "La Libertad Avanza · 1.0k votos"
+        },
+        {
+          "name": "Azul",
+          "value": 57.5,
+          "meta": "La Libertad Avanza · 24.0k votos"
+        },
+        {
+          "name": "Bragado",
+          "value": 57.5,
+          "meta": "La Libertad Avanza · 15.9k votos"
+        },
+        {
+          "name": "Tres Arroyos",
+          "value": 57.3,
+          "meta": "La Libertad Avanza · 21.6k votos"
+        },
+        {
+          "name": "La Costa",
+          "value": 57.3,
+          "meta": "La Libertad Avanza · 31.7k votos"
+        },
+        {
+          "name": "Junín",
+          "value": 57,
+          "meta": "La Libertad Avanza · 34.6k votos"
+        },
+        {
+          "name": "Maipú",
+          "value": 57,
+          "meta": "La Libertad Avanza · 4.1k votos"
+        },
+        {
+          "name": "Villa Gesell",
+          "value": 57,
+          "meta": "La Libertad Avanza · 12.4k votos"
+        },
+        {
+          "name": "Tapalqué",
+          "value": 56.9,
+          "meta": "La Libertad Avanza · 3.6k votos"
+        },
+        {
+          "name": "Pila",
+          "value": 56.8,
+          "meta": "La Libertad Avanza · 1.6k votos"
+        },
+        {
+          "name": "General Pueyrredón",
+          "value": 56.7,
+          "meta": "La Libertad Avanza · 223.2k votos"
+        },
+        {
+          "name": "Luján",
+          "value": 56.7,
+          "meta": "La Libertad Avanza · 39.9k votos"
+        },
+        {
+          "name": "Malvinas Argentinas",
+          "value": 56.7,
+          "meta": "Union por la Patria · 120.5k votos"
+        },
+        {
+          "name": "Quilmes",
+          "value": 56.6,
+          "meta": "Union por la Patria · 204.4k votos"
+        },
+        {
+          "name": "San Nicolás",
+          "value": 56.6,
+          "meta": "La Libertad Avanza · 54.4k votos"
+        },
+        {
+          "name": "Berisso",
+          "value": 56.4,
+          "meta": "Union por la Patria · 35.1k votos"
+        },
+        {
+          "name": "Magdalena",
+          "value": 56.4,
+          "meta": "La Libertad Avanza · 6.7k votos"
+        },
+        {
+          "name": "Lobería",
+          "value": 56.3,
+          "meta": "La Libertad Avanza · 5.9k votos"
+        },
+        {
+          "name": "General Pinto",
+          "value": 56.2,
+          "meta": "La Libertad Avanza · 4.4k votos"
+        },
+        {
+          "name": "Lanús",
+          "value": 56.1,
+          "meta": "Union por la Patria · 157.3k votos"
+        },
+        {
+          "name": "General Alvarado",
+          "value": 55.9,
+          "meta": "La Libertad Avanza · 15.7k votos"
+        },
+        {
+          "name": "Berazategui",
+          "value": 55.7,
+          "meta": "Union por la Patria · 118.5k votos"
+        },
+        {
+          "name": "San Vicente",
+          "value": 55.5,
+          "meta": "Union por la Patria · 24.9k votos"
+        },
+        {
+          "name": "Castelli",
+          "value": 55.4,
+          "meta": "La Libertad Avanza · 3.4k votos"
+        },
+        {
+          "name": "Ayacucho",
+          "value": 55,
+          "meta": "La Libertad Avanza · 7.0k votos"
+        },
+        {
+          "name": "Brandsen",
+          "value": 55,
+          "meta": "La Libertad Avanza · 10.9k votos"
+        },
+        {
+          "name": "General Viamonte",
+          "value": 54.6,
+          "meta": "La Libertad Avanza · 6.6k votos"
+        },
+        {
+          "name": "Adolfo Gonzales Chaves",
+          "value": 54.5,
+          "meta": "La Libertad Avanza · 4.2k votos"
+        },
+        {
+          "name": "Laprida",
+          "value": 54.3,
+          "meta": "La Libertad Avanza · 3.9k votos"
+        },
+        {
+          "name": "Suipacha",
+          "value": 54.3,
+          "meta": "La Libertad Avanza · 4.2k votos"
+        },
+        {
+          "name": "Ramallo",
+          "value": 54.1,
+          "meta": "La Libertad Avanza · 12.9k votos"
+        },
+        {
+          "name": "Chacabuco",
+          "value": 53.9,
+          "meta": "La Libertad Avanza · 17.8k votos"
+        },
+        {
+          "name": "Mar Chiquita",
+          "value": 53.9,
+          "meta": "La Libertad Avanza · 12.1k votos"
+        },
+        {
+          "name": "General Paz",
+          "value": 53.8,
+          "meta": "La Libertad Avanza · 4.9k votos"
+        },
+        {
+          "name": "Chivilcoy",
+          "value": 53.6,
+          "meta": "La Libertad Avanza · 24.1k votos"
+        },
+        {
+          "name": "Hurlingham",
+          "value": 53.6,
+          "meta": "Union por la Patria · 62.9k votos"
+        },
+        {
+          "name": "Rauch",
+          "value": 53.2,
+          "meta": "La Libertad Avanza · 5.4k votos"
+        },
+        {
+          "name": "Esteban Echeverría",
+          "value": 53.1,
+          "meta": "Union por la Patria · 96.3k votos"
+        },
+        {
+          "name": "Monte Hermoso",
+          "value": 53,
+          "meta": "La Libertad Avanza · 3.3k votos"
+        },
+        {
+          "name": "Colón",
+          "value": 52.6,
+          "meta": "La Libertad Avanza · 8.8k votos"
+        },
+        {
+          "name": "General Rodríguez",
+          "value": 52.6,
+          "meta": "Union por la Patria · 34.7k votos"
+        },
+        {
+          "name": "Campana",
+          "value": 52.4,
+          "meta": "La Libertad Avanza · 33.7k votos"
+        },
+        {
+          "name": "Escobar",
+          "value": 52.4,
+          "meta": "La Libertad Avanza · 77.2k votos"
+        },
+        {
+          "name": "Ituzaingó",
+          "value": 52.3,
+          "meta": "Union por la Patria · 58.0k votos"
+        },
+        {
+          "name": "General San Martín",
+          "value": 52.2,
+          "meta": "Union por la Patria · 133.8k votos"
+        },
+        {
+          "name": "Pilar",
+          "value": 52.1,
+          "meta": "La Libertad Avanza · 108.3k votos"
+        },
+        {
+          "name": "Tigre",
+          "value": 52.1,
+          "meta": "La Libertad Avanza · 128.5k votos"
+        },
+        {
+          "name": "Ezeiza",
+          "value": 51.9,
+          "meta": "Union por la Patria · 57.2k votos"
+        },
+        {
+          "name": "Carlos Tejedor",
+          "value": 51.8,
+          "meta": "La Libertad Avanza · 4.0k votos"
+        },
+        {
+          "name": "Benito Juárez",
+          "value": 51.7,
+          "meta": "La Libertad Avanza · 6.4k votos"
+        },
+        {
+          "name": "Cañuelas",
+          "value": 51.4,
+          "meta": "La Libertad Avanza · 19.7k votos"
+        },
+        {
+          "name": "General Guido",
+          "value": 51.4,
+          "meta": "Union por la Patria · 1.0k votos"
+        },
+        {
+          "name": "Baradero",
+          "value": 51.3,
+          "meta": "Union por la Patria · 11.9k votos"
+        },
+        {
+          "name": "San Miguel",
+          "value": 51,
+          "meta": "La Libertad Avanza · 92.7k votos"
+        },
+        {
+          "name": "General Las Heras",
+          "value": 50.5,
+          "meta": "La Libertad Avanza · 5.6k votos"
+        },
+        {
+          "name": "La Plata",
+          "value": 50.5,
+          "meta": "La Libertad Avanza · 208.5k votos"
+        },
+        {
+          "name": "Morón",
+          "value": 50.5,
+          "meta": "La Libertad Avanza · 105.2k votos"
+        },
+        {
+          "name": "San Fernando",
+          "value": 50.2,
+          "meta": "Union por la Patria · 50.2k votos"
+        },
+        {
+          "name": "Zárate",
+          "value": 50.2,
+          "meta": "La Libertad Avanza · 38.2k votos"
+        },
+        {
+          "name": "Tres de Febrero",
+          "value": 50.1,
+          "meta": "Union por la Patria · 105.7k votos"
+        }
+      ],
+      "order": "desc"
+    }
+  ],
+  "mapData": [
+    {
+      "municipioId": "ADOLFO ALSINA",
+      "municipioNombre": "Adolfo Alsina",
+      "value": 1,
+      "label": "La Libertad Avanza — 66.5% (6.7k votos)"
+    },
+    {
+      "municipioId": "ALBERTI",
+      "municipioNombre": "Alberti",
+      "value": 1,
+      "label": "La Libertad Avanza — 58.2% (4.3k votos)"
+    },
+    {
+      "municipioId": "ALMIRANTE BROWN",
+      "municipioNombre": "Almirante Brown",
+      "value": 2,
+      "label": "Union por la Patria — 58.9% (201.2k votos)"
+    },
+    {
+      "municipioId": "AVELLANEDA",
+      "municipioNombre": "Avellaneda",
+      "value": 2,
+      "label": "Union por la Patria — 57.6% (127.1k votos)"
+    },
+    {
+      "municipioId": "AYACUCHO",
+      "municipioNombre": "Ayacucho",
+      "value": 1,
+      "label": "La Libertad Avanza — 55% (7.0k votos)"
+    },
+    {
+      "municipioId": "AZUL",
+      "municipioNombre": "Azul",
+      "value": 1,
+      "label": "La Libertad Avanza — 57.5% (24.0k votos)"
+    },
+    {
+      "municipioId": "BAHIA BLANCA",
+      "municipioNombre": "Bahía Blanca",
+      "value": 1,
+      "label": "La Libertad Avanza — 63.3% (114.5k votos)"
+    },
+    {
+      "municipioId": "BALCARCE",
+      "municipioNombre": "Balcarce",
+      "value": 1,
+      "label": "La Libertad Avanza — 65.3% (19.6k votos)"
+    },
+    {
+      "municipioId": "BARADERO",
+      "municipioNombre": "Baradero",
+      "value": 2,
+      "label": "Union por la Patria — 51.3% (11.9k votos)"
+    },
+    {
+      "municipioId": "ARRECIFES",
+      "municipioNombre": "Arrecifes",
+      "value": 1,
+      "label": "La Libertad Avanza — 58.4% (11.4k votos)"
+    },
+    {
+      "municipioId": "BERAZATEGUI",
+      "municipioNombre": "Berazategui",
+      "value": 2,
+      "label": "Union por la Patria — 55.7% (118.5k votos)"
+    },
+    {
+      "municipioId": "BERISSO",
+      "municipioNombre": "Berisso",
+      "value": 2,
+      "label": "Union por la Patria — 56.4% (35.1k votos)"
+    },
+    {
+      "municipioId": "BOLIVAR",
+      "municipioNombre": "Bolívar",
+      "value": 1,
+      "label": "La Libertad Avanza — 61.6% (14.1k votos)"
+    },
+    {
+      "municipioId": "BRAGADO",
+      "municipioNombre": "Bragado",
+      "value": 1,
+      "label": "La Libertad Avanza — 57.5% (15.9k votos)"
+    },
+    {
+      "municipioId": "BRANDSEN",
+      "municipioNombre": "Brandsen",
+      "value": 1,
+      "label": "La Libertad Avanza — 55% (10.9k votos)"
+    },
+    {
+      "municipioId": "CAMPANA",
+      "municipioNombre": "Campana",
+      "value": 1,
+      "label": "La Libertad Avanza — 52.4% (33.7k votos)"
+    },
+    {
+      "municipioId": "CANUELAS",
+      "municipioNombre": "Cañuelas",
+      "value": 1,
+      "label": "La Libertad Avanza — 51.4% (19.7k votos)"
+    },
+    {
+      "municipioId": "CAPITAN SARMIENTO",
+      "municipioNombre": "Capitán Sarmiento",
+      "value": 1,
+      "label": "La Libertad Avanza — 64.4% (6.6k votos)"
+    },
+    {
+      "municipioId": "CARLOS CASARES",
+      "municipioNombre": "Carlos Casares",
+      "value": 1,
+      "label": "La Libertad Avanza — 62.4% (9.4k votos)"
+    },
+    {
+      "municipioId": "CARLOS TEJEDOR",
+      "municipioNombre": "Carlos Tejedor",
+      "value": 1,
+      "label": "La Libertad Avanza — 51.8% (4.0k votos)"
+    },
+    {
+      "municipioId": "CARMEN DE ARECO",
+      "municipioNombre": "Carmen de Areco",
+      "value": 1,
+      "label": "La Libertad Avanza — 58% (5.9k votos)"
+    },
+    {
+      "municipioId": "PATAGONES",
+      "municipioNombre": "Patagones",
+      "value": 1,
+      "label": "La Libertad Avanza — 58.2% (11.8k votos)"
+    },
+    {
+      "municipioId": "CASTELLI",
+      "municipioNombre": "Castelli",
+      "value": 1,
+      "label": "La Libertad Avanza — 55.4% (3.4k votos)"
+    },
+    {
+      "municipioId": "COLON",
+      "municipioNombre": "Colón",
+      "value": 1,
+      "label": "La Libertad Avanza — 52.6% (8.8k votos)"
+    },
+    {
+      "municipioId": "CORONEL DORREGO",
+      "municipioNombre": "Coronel Dorrego",
+      "value": 1,
+      "label": "La Libertad Avanza — 63.5% (6.4k votos)"
+    },
+    {
+      "municipioId": "CORONEL PRINGLES",
+      "municipioNombre": "Coronel Pringles",
+      "value": 1,
+      "label": "La Libertad Avanza — 66.1% (9.5k votos)"
+    },
+    {
+      "municipioId": "CORONEL DE MARINA L ROSALES",
+      "municipioNombre": "Coronel de Marina L. Rosales",
+      "value": 1,
+      "label": "La Libertad Avanza — 72.9% (26.9k votos)"
+    },
+    {
+      "municipioId": "CORONEL SUAREZ",
+      "municipioNombre": "Coronel Suárez",
+      "value": 1,
+      "label": "La Libertad Avanza — 65.8% (16.4k votos)"
+    },
+    {
+      "municipioId": "CHACABUCO",
+      "municipioNombre": "Chacabuco",
+      "value": 1,
+      "label": "La Libertad Avanza — 53.9% (17.8k votos)"
+    },
+    {
+      "municipioId": "CHASCOMUS",
+      "municipioNombre": "Chascomús",
+      "value": 1,
+      "label": "La Libertad Avanza — 58.7% (15.0k votos)"
+    },
+    {
+      "municipioId": "CHIVILCOY",
+      "municipioNombre": "Chivilcoy",
+      "value": 1,
+      "label": "La Libertad Avanza — 53.6% (24.1k votos)"
+    },
+    {
+      "municipioId": "DAIREAUX",
+      "municipioNombre": "Daireaux",
+      "value": 1,
+      "label": "La Libertad Avanza — 62.7% (6.8k votos)"
+    },
+    {
+      "municipioId": "DOLORES",
+      "municipioNombre": "Dolores",
+      "value": 1,
+      "label": "La Libertad Avanza — 60.6% (11.2k votos)"
+    },
+    {
+      "municipioId": "ENSENADA",
+      "municipioNombre": "Ensenada",
+      "value": 2,
+      "label": "Union por la Patria — 62.2% (27.3k votos)"
+    },
+    {
+      "municipioId": "ESCOBAR",
+      "municipioNombre": "Escobar",
+      "value": 1,
+      "label": "La Libertad Avanza — 52.4% (77.2k votos)"
+    },
+    {
+      "municipioId": "ESTEBAN ECHEVERRIA",
+      "municipioNombre": "Esteban Echeverría",
+      "value": 2,
+      "label": "Union por la Patria — 53.1% (96.3k votos)"
+    },
+    {
+      "municipioId": "EXALTACION DE LA CRUZ",
+      "municipioNombre": "Exaltación de la Cruz",
+      "value": 1,
+      "label": "La Libertad Avanza — 59.7% (14.5k votos)"
+    },
+    {
+      "municipioId": "FLORENCIO VARELA",
+      "municipioNombre": "Florencio Varela",
+      "value": 2,
+      "label": "Union por la Patria — 63.1% (157.1k votos)"
+    },
+    {
+      "municipioId": "GENERAL ALVARADO",
+      "municipioNombre": "General Alvarado",
+      "value": 1,
+      "label": "La Libertad Avanza — 55.9% (15.7k votos)"
+    },
+    {
+      "municipioId": "GENERAL ALVEAR",
+      "municipioNombre": "General Alvear",
+      "value": 1,
+      "label": "La Libertad Avanza — 62.7% (4.0k votos)"
+    },
+    {
+      "municipioId": "GENERAL ARENALES",
+      "municipioNombre": "General Arenales",
+      "value": 1,
+      "label": "La Libertad Avanza — 66.2% (7.5k votos)"
+    },
+    {
+      "municipioId": "GENERAL BELGRANO",
+      "municipioNombre": "General Belgrano",
+      "value": 1,
+      "label": "La Libertad Avanza — 59.2% (7.4k votos)"
+    },
+    {
+      "municipioId": "GENERAL GUIDO",
+      "municipioNombre": "General Guido",
+      "value": 2,
+      "label": "Union por la Patria — 51.4% (1.0k votos)"
+    },
+    {
+      "municipioId": "GENERAL LA MADRID",
+      "municipioNombre": "General La Madrid",
+      "value": 1,
+      "label": "La Libertad Avanza — 61.9% (4.4k votos)"
+    },
+    {
+      "municipioId": "GENERAL LAS HERAS",
+      "municipioNombre": "General Las Heras",
+      "value": 1,
+      "label": "La Libertad Avanza — 50.5% (5.6k votos)"
+    },
+    {
+      "municipioId": "GENERAL LAVALLE",
+      "municipioNombre": "General Lavalle",
+      "value": 1,
+      "label": "La Libertad Avanza — 62.6% (2.1k votos)"
+    },
+    {
+      "municipioId": "GENERAL JUAN MADARIAGA",
+      "municipioNombre": "General Juan Madariaga",
+      "value": 1,
+      "label": "La Libertad Avanza — 62.5% (8.4k votos)"
+    },
+    {
+      "municipioId": "GENERAL PAZ",
+      "municipioNombre": "General Paz",
+      "value": 1,
+      "label": "La Libertad Avanza — 53.8% (4.9k votos)"
+    },
+    {
+      "municipioId": "GENERAL PINTO",
+      "municipioNombre": "General Pinto",
+      "value": 1,
+      "label": "La Libertad Avanza — 56.2% (4.4k votos)"
+    },
+    {
+      "municipioId": "GENERAL PUEYRREDON",
+      "municipioNombre": "General Pueyrredón",
+      "value": 1,
+      "label": "La Libertad Avanza — 56.7% (223.2k votos)"
+    },
+    {
+      "municipioId": "GENERAL RODRIGUEZ",
+      "municipioNombre": "General Rodríguez",
+      "value": 2,
+      "label": "Union por la Patria — 52.6% (34.7k votos)"
+    },
+    {
+      "municipioId": "GENERAL SAN MARTIN",
+      "municipioNombre": "General San Martín",
+      "value": 2,
+      "label": "Union por la Patria — 52.2% (133.8k votos)"
+    },
+    {
+      "municipioId": "SAN MIGUEL",
+      "municipioNombre": "San Miguel",
+      "value": 1,
+      "label": "La Libertad Avanza — 51% (92.7k votos)"
+    },
+    {
+      "municipioId": "GENERAL VIAMONTE",
+      "municipioNombre": "General Viamonte",
+      "value": 1,
+      "label": "La Libertad Avanza — 54.6% (6.6k votos)"
+    },
+    {
+      "municipioId": "GENERAL VILLEGAS",
+      "municipioNombre": "General Villegas",
+      "value": 1,
+      "label": "La Libertad Avanza — 68% (12.6k votos)"
+    },
+    {
+      "municipioId": "ADOLFO GONZALES CHAVES",
+      "municipioNombre": "Adolfo Gonzales Chaves",
+      "value": 1,
+      "label": "La Libertad Avanza — 54.5% (4.2k votos)"
+    },
+    {
+      "municipioId": "GUAMINI",
+      "municipioNombre": "Guaminí",
+      "value": 1,
+      "label": "La Libertad Avanza — 58.5% (4.4k votos)"
+    },
+    {
+      "municipioId": "HIPOLITO YRIGOYEN",
+      "municipioNombre": "Hipólito Yrigoyen",
+      "value": 1,
+      "label": "La Libertad Avanza — 60.1% (3.5k votos)"
+    },
+    {
+      "municipioId": "BENITO JUAREZ",
+      "municipioNombre": "Benito Juárez",
+      "value": 1,
+      "label": "La Libertad Avanza — 51.7% (6.4k votos)"
+    },
+    {
+      "municipioId": "JUNIN",
+      "municipioNombre": "Junín",
+      "value": 1,
+      "label": "La Libertad Avanza — 57% (34.6k votos)"
+    },
+    {
+      "municipioId": "LA MATANZA",
+      "municipioNombre": "La Matanza",
+      "value": 2,
+      "label": "Union por la Patria — 61.2% (478.8k votos)"
+    },
+    {
+      "municipioId": "LANUS",
+      "municipioNombre": "Lanús",
+      "value": 2,
+      "label": "Union por la Patria — 56.1% (157.3k votos)"
+    },
+    {
+      "municipioId": "LA PLATA",
+      "municipioNombre": "La Plata",
+      "value": 1,
+      "label": "La Libertad Avanza — 50.5% (208.5k votos)"
+    },
+    {
+      "municipioId": "LAPRIDA",
+      "municipioNombre": "Laprida",
+      "value": 1,
+      "label": "La Libertad Avanza — 54.3% (3.9k votos)"
+    },
+    {
+      "municipioId": "LAS FLORES",
+      "municipioNombre": "Las Flores",
+      "value": 1,
+      "label": "La Libertad Avanza — 57.9% (9.6k votos)"
+    },
+    {
+      "municipioId": "LEANDRO N ALEM",
+      "municipioNombre": "Leandro N. Alem",
+      "value": 1,
+      "label": "La Libertad Avanza — 57.8% (6.5k votos)"
+    },
+    {
+      "municipioId": "LINCOLN",
+      "municipioNombre": "Lincoln",
+      "value": 1,
+      "label": "La Libertad Avanza — 63.2% (17.8k votos)"
+    },
+    {
+      "municipioId": "LOBERIA",
+      "municipioNombre": "Lobería",
+      "value": 1,
+      "label": "La Libertad Avanza — 56.3% (5.9k votos)"
+    },
+    {
+      "municipioId": "LOBOS",
+      "municipioNombre": "Lobos",
+      "value": 1,
+      "label": "La Libertad Avanza — 62.3% (15.5k votos)"
+    },
+    {
+      "municipioId": "LOMAS DE ZAMORA",
+      "municipioNombre": "Lomas de Zamora",
+      "value": 2,
+      "label": "Union por la Patria — 58.6% (227.5k votos)"
+    },
+    {
+      "municipioId": "LUJAN",
+      "municipioNombre": "Luján",
+      "value": 1,
+      "label": "La Libertad Avanza — 56.7% (39.9k votos)"
+    },
+    {
+      "municipioId": "MAGDALENA",
+      "municipioNombre": "Magdalena",
+      "value": 1,
+      "label": "La Libertad Avanza — 56.4% (6.7k votos)"
+    },
+    {
+      "municipioId": "MAIPU",
+      "municipioNombre": "Maipú",
+      "value": 1,
+      "label": "La Libertad Avanza — 57% (4.1k votos)"
+    },
+    {
+      "municipioId": "MAR CHIQUITA",
+      "municipioNombre": "Mar Chiquita",
+      "value": 1,
+      "label": "La Libertad Avanza — 53.9% (12.1k votos)"
+    },
+    {
+      "municipioId": "MARCOS PAZ",
+      "municipioNombre": "Marcos Paz",
+      "value": 2,
+      "label": "Union por la Patria — 58.3% (21.2k votos)"
+    },
+    {
+      "municipioId": "MERCEDES",
+      "municipioNombre": "Mercedes",
+      "value": 1,
+      "label": "La Libertad Avanza — 59.4% (26.2k votos)"
+    },
+    {
+      "municipioId": "MERLO",
+      "municipioNombre": "Merlo",
+      "value": 2,
+      "label": "Union por la Patria — 59.9% (183.8k votos)"
+    },
+    {
+      "municipioId": "MONTE",
+      "municipioNombre": "Monte",
+      "value": 1,
+      "label": "La Libertad Avanza — 58.5% (8.5k votos)"
+    },
+    {
+      "municipioId": "MORENO",
+      "municipioNombre": "Moreno",
+      "value": 2,
+      "label": "Union por la Patria — 59.5% (158.8k votos)"
+    },
+    {
+      "municipioId": "MORON",
+      "municipioNombre": "Morón",
+      "value": 1,
+      "label": "La Libertad Avanza — 50.5% (105.2k votos)"
+    },
+    {
+      "municipioId": "NAVARRO",
+      "municipioNombre": "Navarro",
+      "value": 1,
+      "label": "La Libertad Avanza — 61.9% (7.3k votos)"
+    },
+    {
+      "municipioId": "NECOCHEA",
+      "municipioNombre": "Necochea",
+      "value": 1,
+      "label": "La Libertad Avanza — 62.6% (37.8k votos)"
+    },
+    {
+      "municipioId": "9 DE JULIO",
+      "municipioNombre": "9 de Julio",
+      "value": 1,
+      "label": "La Libertad Avanza — 64% (20.4k votos)"
+    },
+    {
+      "municipioId": "OLAVARRIA",
+      "municipioNombre": "Olavarría",
+      "value": 1,
+      "label": "La Libertad Avanza — 58.5% (41.4k votos)"
+    },
+    {
+      "municipioId": "PEHUAJO",
+      "municipioNombre": "Pehuajó",
+      "value": 1,
+      "label": "La Libertad Avanza — 58.5% (15.8k votos)"
+    },
+    {
+      "municipioId": "PELLEGRINI",
+      "municipioNombre": "Pellegrini",
+      "value": 1,
+      "label": "La Libertad Avanza — 69.5% (2.7k votos)"
+    },
+    {
+      "municipioId": "PERGAMINO",
+      "municipioNombre": "Pergamino",
+      "value": 1,
+      "label": "La Libertad Avanza — 62.6% (41.8k votos)"
+    },
+    {
+      "municipioId": "PILA",
+      "municipioNombre": "Pila",
+      "value": 1,
+      "label": "La Libertad Avanza — 56.8% (1.6k votos)"
+    },
+    {
+      "municipioId": "PILAR",
+      "municipioNombre": "Pilar",
+      "value": 1,
+      "label": "La Libertad Avanza — 52.1% (108.3k votos)"
+    },
+    {
+      "municipioId": "PINAMAR",
+      "municipioNombre": "Pinamar",
+      "value": 1,
+      "label": "La Libertad Avanza — 65.3% (13.6k votos)"
+    },
+    {
+      "municipioId": "PUAN",
+      "municipioNombre": "Puan",
+      "value": 1,
+      "label": "La Libertad Avanza — 70.6% (7.0k votos)"
+    },
+    {
+      "municipioId": "QUILMES",
+      "municipioNombre": "Quilmes",
+      "value": 2,
+      "label": "Union por la Patria — 56.6% (204.4k votos)"
+    },
+    {
+      "municipioId": "RAMALLO",
+      "municipioNombre": "Ramallo",
+      "value": 1,
+      "label": "La Libertad Avanza — 54.1% (12.9k votos)"
+    },
+    {
+      "municipioId": "RAUCH",
+      "municipioNombre": "Rauch",
+      "value": 1,
+      "label": "La Libertad Avanza — 53.2% (5.4k votos)"
+    },
+    {
+      "municipioId": "RIVADAVIA",
+      "municipioNombre": "Rivadavia",
+      "value": 1,
+      "label": "La Libertad Avanza — 63.7% (7.0k votos)"
+    },
+    {
+      "municipioId": "ROJAS",
+      "municipioNombre": "Rojas",
+      "value": 1,
+      "label": "La Libertad Avanza — 61.9% (9.5k votos)"
+    },
+    {
+      "municipioId": "ROQUE PEREZ",
+      "municipioNombre": "Roque Pérez",
+      "value": 1,
+      "label": "La Libertad Avanza — 60.4% (5.2k votos)"
+    },
+    {
+      "municipioId": "SAAVEDRA",
+      "municipioNombre": "Saavedra",
+      "value": 1,
+      "label": "La Libertad Avanza — 68.9% (8.9k votos)"
+    },
+    {
+      "municipioId": "SALADILLO",
+      "municipioNombre": "Saladillo",
+      "value": 1,
+      "label": "La Libertad Avanza — 64.1% (13.7k votos)"
+    },
+    {
+      "municipioId": "SALLIQUELO",
+      "municipioNombre": "Salliqueló",
+      "value": 1,
+      "label": "La Libertad Avanza — 59% (3.3k votos)"
+    },
+    {
+      "municipioId": "SALTO",
+      "municipioNombre": "Salto",
+      "value": 1,
+      "label": "La Libertad Avanza — 60.1% (13.6k votos)"
+    },
+    {
+      "municipioId": "SAN ANDRES DE GILES",
+      "municipioNombre": "San Andrés de Giles",
+      "value": 1,
+      "label": "La Libertad Avanza — 57.8% (9.0k votos)"
+    },
+    {
+      "municipioId": "SAN ANTONIO DE ARECO",
+      "municipioNombre": "San Antonio de Areco",
+      "value": 1,
+      "label": "La Libertad Avanza — 63.7% (10.3k votos)"
+    },
+    {
+      "municipioId": "SAN CAYETANO",
+      "municipioNombre": "San Cayetano",
+      "value": 1,
+      "label": "La Libertad Avanza — 65.7% (3.5k votos)"
+    },
+    {
+      "municipioId": "SAN FERNANDO",
+      "municipioNombre": "San Fernando",
+      "value": 2,
+      "label": "Union por la Patria — 50.2% (50.2k votos)"
+    },
+    {
+      "municipioId": "SAN ISIDRO",
+      "municipioNombre": "San Isidro",
+      "value": 1,
+      "label": "La Libertad Avanza — 64.7% (130.1k votos)"
+    },
+    {
+      "municipioId": "SAN NICOLAS",
+      "municipioNombre": "San Nicolás",
+      "value": 1,
+      "label": "La Libertad Avanza — 56.6% (54.4k votos)"
+    },
+    {
+      "municipioId": "SAN PEDRO",
+      "municipioNombre": "San Pedro",
+      "value": 1,
+      "label": "La Libertad Avanza — 58.8% (23.4k votos)"
+    },
+    {
+      "municipioId": "SAN VICENTE",
+      "municipioNombre": "San Vicente",
+      "value": 2,
+      "label": "Union por la Patria — 55.5% (24.9k votos)"
+    },
+    {
+      "municipioId": "SUIPACHA",
+      "municipioNombre": "Suipacha",
+      "value": 1,
+      "label": "La Libertad Avanza — 54.3% (4.2k votos)"
+    },
+    {
+      "municipioId": "TANDIL",
+      "municipioNombre": "Tandil",
+      "value": 1,
+      "label": "La Libertad Avanza — 61.8% (51.2k votos)"
+    },
+    {
+      "municipioId": "TAPALQUE",
+      "municipioNombre": "Tapalqué",
+      "value": 1,
+      "label": "La Libertad Avanza — 56.9% (3.6k votos)"
+    },
+    {
+      "municipioId": "TIGRE",
+      "municipioNombre": "Tigre",
+      "value": 1,
+      "label": "La Libertad Avanza — 52.1% (128.5k votos)"
+    },
+    {
+      "municipioId": "TORNQUIST",
+      "municipioNombre": "Tornquist",
+      "value": 1,
+      "label": "La Libertad Avanza — 64.7% (6.8k votos)"
+    },
+    {
+      "municipioId": "TRENQUE LAUQUEN",
+      "municipioNombre": "Trenque Lauquen",
+      "value": 1,
+      "label": "La Libertad Avanza — 63.7% (18.4k votos)"
+    },
+    {
+      "municipioId": "TORDILLO",
+      "municipioNombre": "Tordillo",
+      "value": 1,
+      "label": "La Libertad Avanza — 57.6% (1.0k votos)"
+    },
+    {
+      "municipioId": "TRES ARROYOS",
+      "municipioNombre": "Tres Arroyos",
+      "value": 1,
+      "label": "La Libertad Avanza — 57.3% (21.6k votos)"
+    },
+    {
+      "municipioId": "TRES DE FEBRERO",
+      "municipioNombre": "Tres de Febrero",
+      "value": 2,
+      "label": "Union por la Patria — 50.1% (105.7k votos)"
+    },
+    {
+      "municipioId": "LA COSTA",
+      "municipioNombre": "La Costa",
+      "value": 1,
+      "label": "La Libertad Avanza — 57.3% (31.7k votos)"
+    },
+    {
+      "municipioId": "MONTE HERMOSO",
+      "municipioNombre": "Monte Hermoso",
+      "value": 1,
+      "label": "La Libertad Avanza — 53% (3.3k votos)"
+    },
+    {
+      "municipioId": "25 DE MAYO",
+      "municipioNombre": "25 de Mayo",
+      "value": 1,
+      "label": "La Libertad Avanza — 63.7% (14.5k votos)"
+    },
+    {
+      "municipioId": "VICENTE LOPEZ",
+      "municipioNombre": "Vicente López",
+      "value": 1,
+      "label": "La Libertad Avanza — 62.6% (106.1k votos)"
+    },
+    {
+      "municipioId": "VILLA GESELL",
+      "municipioNombre": "Villa Gesell",
+      "value": 1,
+      "label": "La Libertad Avanza — 57% (12.4k votos)"
+    },
+    {
+      "municipioId": "VILLARINO",
+      "municipioNombre": "Villarino",
+      "value": 1,
+      "label": "La Libertad Avanza — 70.7% (12.5k votos)"
+    },
+    {
+      "municipioId": "ZARATE",
+      "municipioNombre": "Zárate",
+      "value": 1,
+      "label": "La Libertad Avanza — 50.2% (38.2k votos)"
+    },
+    {
+      "municipioId": "TRES LOMAS",
+      "municipioNombre": "Tres Lomas",
+      "value": 1,
+      "label": "La Libertad Avanza — 58.4% (2.8k votos)"
+    },
+    {
+      "municipioId": "FLORENTINO AMEGHINO",
+      "municipioNombre": "Florentino Ameghino",
+      "value": 1,
+      "label": "La Libertad Avanza — 61.6% (3.8k votos)"
+    },
+    {
+      "municipioId": "PRESIDENTE PERON",
+      "municipioNombre": "Presidente Perón",
+      "value": 2,
+      "label": "Union por la Patria — 60.1% (32.0k votos)"
+    },
+    {
+      "municipioId": "JOSE C PAZ",
+      "municipioNombre": "José C. Paz",
+      "value": 2,
+      "label": "Union por la Patria — 59.9% (100.5k votos)"
+    },
+    {
+      "municipioId": "MALVINAS ARGENTINAS",
+      "municipioNombre": "Malvinas Argentinas",
+      "value": 2,
+      "label": "Union por la Patria — 56.7% (120.5k votos)"
+    },
+    {
+      "municipioId": "PUNTA INDIO",
+      "municipioNombre": "Punta Indio",
+      "value": 1,
+      "label": "La Libertad Avanza — 58.2% (4.3k votos)"
+    },
+    {
+      "municipioId": "EZEIZA",
+      "municipioNombre": "Ezeiza",
+      "value": 2,
+      "label": "Union por la Patria — 51.9% (57.2k votos)"
+    },
+    {
+      "municipioId": "ITUZAINGO",
+      "municipioNombre": "Ituzaingó",
+      "value": 2,
+      "label": "Union por la Patria — 52.3% (58.0k votos)"
+    },
+    {
+      "municipioId": "HURLINGHAM",
+      "municipioNombre": "Hurlingham",
+      "value": 2,
+      "label": "Union por la Patria — 53.6% (62.9k votos)"
+    },
+    {
+      "municipioId": "LEZAMA",
+      "municipioNombre": "Lezama",
+      "value": 1,
+      "label": "La Libertad Avanza — 60.8% (2.3k votos)"
+    }
+  ],
+  "legend": {
+    "mapaPresBallotage2023": [
+      {
+        "agrupacion": "La Libertad Avanza",
+        "code": 1
+      },
+      {
+        "agrupacion": "Union por la Patria",
+        "code": 2
+      }
+    ]
+  }
+}

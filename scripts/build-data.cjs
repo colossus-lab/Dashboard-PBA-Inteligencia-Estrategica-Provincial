@@ -21,6 +21,7 @@ const PIPELINE = [
   "process-educacion.cjs",
   "process-industria.cjs",
   "process-salud.cjs",
+  "process-politica.cjs",
   // Step 2: Generate final data.json + explorer
   "generate-report-data.cjs",
 ];

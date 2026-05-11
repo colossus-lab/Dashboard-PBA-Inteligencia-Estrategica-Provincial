@@ -4,6 +4,7 @@ import { ResponsiveLine } from '@nivo/line';
 import { useStore } from '../../store/useStore';
 import { useIsMobile } from '../../lib/useIsMobile';
 import { MapaPBA } from './MapaPBA';
+import { MapaSecciones } from './MapaSecciones';
 import type { ChartConfig } from '../../types/report';
 
 // ═══════════════════════════════════════════════════════════════
@@ -60,6 +61,8 @@ export function ChartRenderer({ chart, height = 400 }: ChartRendererProps) {
       return <PyramidChartView chart={chart} height={height} />;
     case 'map':
       return <MapaPBA mapData={chart.data} title={chart.title} height={height} />;
+    case 'mapa-secciones':
+      return <MapaSecciones data={chart.data} title={chart.title} height={height} />;
     default:
       return <BarChartView chart={chart} height={height} />;
   }
