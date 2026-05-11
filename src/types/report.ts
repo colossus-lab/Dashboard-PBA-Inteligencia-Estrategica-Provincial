@@ -21,7 +21,7 @@ export interface KPI {
   comparison?: string;
 }
 
-export type ChartType = 'bar' | 'line' | 'pie' | 'pyramid' | 'scatter' | 'radar' | 'treemap' | 'heatmap' | 'map' | 'mapa-secciones';
+export type ChartType = 'bar' | 'line' | 'pie' | 'pyramid' | 'scatter' | 'radar' | 'treemap' | 'heatmap' | 'map';
 
 export interface ChartConfig {
   id: string;
