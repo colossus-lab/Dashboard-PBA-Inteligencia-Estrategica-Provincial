@@ -1,0 +1,7821 @@
+{
+  "meta": {
+    "id": "politica-cruces",
+    "title": "Cruces socioeconómicos, heatmap y tipologías",
+    "category": "politica",
+    "source": "Junta Electoral PBA · Cámara Nacional Electoral · Datos Abiertos PBA",
+    "date": "2023"
+  },
+  "kpis": [
+    {
+      "id": "clusters-detectados",
+      "label": "Tipologías electorales (k-means, k=5)",
+      "value": 5,
+      "formatted": "5",
+      "unit": "clusters"
+    }
+  ],
+  "charts": [
+    {
+      "id": "scatter-voto-agro",
+      "type": "scatter",
+      "title": "¿Voto rural distintivo? · Stock bovino per cápita vs % LLA en presidente 2023",
+      "sectionId": "agro",
+      "data": [
+        {
+          "x": 1.0294068620157482,
+          "y": 28.5,
+          "id": "25 de Mayo"
+        },
+        {
+          "x": 1.2689284869176443,
+          "y": 32.2,
+          "id": "Adolfo Alsina"
+        },
+        {
+          "x": 1.3722014592420348,
+          "y": 27.6,
+          "id": "Adolfo Gonzales Chaves"
+        },
+        {
+          "x": 0.615154080728592,
+          "y": 27.5,
+          "id": "Alberti"
+        },
+        {
+          "x": -1.9787288117820157,
+          "y": 22.3,
+          "id": "Almirante Brown"
+        },
+        {
+          "x": 0.25707221063404223,
+          "y": 28.9,
+          "id": "Arrecifes"
+        },
+        {
+          "x": -2,
+          "y": 19.9,
+          "id": "Avellaneda"
+        },
+        {
+          "x": 1.6414120061592465,
+          "y": 25.4,
+          "id": "Ayacucho"
+        },
+        {
+          "x": 1.0028447116150476,
+          "y": 29.3,
+          "id": "Azul"
+        },
+        {
+          "x": -0.4559228088630325,
+          "y": 31.7,
+          "id": "Bahía Blanca"
+        },
+        {
+          "x": 0.9055203121055659,
+          "y": 31.9,
+          "id": "Balcarce"
+        },
+        {
+          "x": 0.20005955639755715,
+          "y": 25.8,
+          "id": "Baradero"
+        },
+        {
+          "x": 1.426260905988875,
+          "y": 26.2,
+          "id": "Benito Juárez"
+        },
+        {
+          "x": -1.8227415327260892,
+          "y": 24.7,
+          "id": "Berazategui"
+        },
+        {
+          "x": -1.4054534682313469,
+          "y": 22.2,
+          "id": "Berisso"
+        },
+        {
+          "x": 1.1107031822126021,
+          "y": 27.9,
+          "id": "Bolívar"
+        },
+        {
+          "x": 0.40503988382880607,
+          "y": 26.7,
+          "id": "Bragado"
+        },
+        {
+          "x": 0.6504993496022807,
+          "y": 27.7,
+          "id": "Brandsen"
+        },
+        {
+          "x": -0.5560395712872955,
+          "y": 25.3,
+          "id": "Campana"
+        },
+        {
+          "x": 0.010700043991392516,
+          "y": 31.7,
+          "id": "Capitán Sarmiento"
+        },
+        {
+          "x": 0.9385276482498512,
+          "y": 32.9,
+          "id": "Carlos Casares"
+        },
+        {
+          "x": 1.4164418755555754,
+          "y": 20.9,
+          "id": "Carlos Tejedor"
+        },
+        {
+          "x": 0.7455873076586075,
+          "y": 29.2,
+          "id": "Carmen de Areco"
+        },
+        {
+          "x": 1.3544586813532813,
+          "y": 24.2,
+          "id": "Castelli"
+        },
+        {
+          "x": 0.3094124669183486,
+          "y": 28.7,
+          "id": "Chacabuco"
+        },
+        {
+          "x": 1.0230469517153642,
+          "y": 25.8,
+          "id": "Chascomús"
+        },
+        {
+          "x": 0.14710000331351572,
+          "y": 26.1,
+          "id": "Chivilcoy"
+        },
+        {
+          "x": 0.2316110325699069,
+          "y": 24.7,
+          "id": "Colón"
+        },
+        {
+          "x": 1.2413097821383499,
+          "y": 28.7,
+          "id": "Coronel Dorrego"
+        },
+        {
+          "x": 1.1973613182842695,
+          "y": 33.7,
+          "id": "Coronel Pringles"
+        },
+        {
+          "x": 0.9925204643172829,
+          "y": 31.9,
+          "id": "Coronel Suárez"
+        },
+        {
+          "x": 1.1785632854904116,
+          "y": 30,
+          "id": "Daireaux"
+        },
+        {
+          "x": 0.8122935745332638,
+          "y": 26,
+          "id": "Dolores"
+        },
+        {
+          "x": -1.660789043212948,
+          "y": 20.6,
+          "id": "Ensenada"
+        },
+        {
+          "x": -1.3563296754287921,
+          "y": 29,
+          "id": "Escobar"
+        },
+        {
+          "x": -1.9347269399432445,
+          "y": 26.2,
+          "id": "Esteban Echeverría"
+        },
+        {
+          "x": -0.17572740747001978,
+          "y": 32.1,
+          "id": "Exaltación de la Cruz"
+        },
+        {
+          "x": -1.736797547579284,
+          "y": 28.8,
+          "id": "Ezeiza"
+        },
+        {
+          "x": -1.6107225437969541,
+          "y": 23.3,
+          "id": "Florencio Varela"
+        },
+        {
+          "x": 1.2269908935260672,
+          "y": 25.6,
+          "id": "Florentino Ameghino"
+        },
+        {
+          "x": 0.25096559508566063,
+          "y": 26.5,
+          "id": "General Alvarado"
+        },
+        {
+          "x": 1.5910256295155225,
+          "y": 26.6,
+          "id": "General Alvear"
+        },
+        {
+          "x": 0.3635633024020026,
+          "y": 31.3,
+          "id": "General Arenales"
+        },
+        {
+          "x": 0.9596985249042704,
+          "y": 25.3,
+          "id": "General Belgrano"
+        },
+        {
+          "x": 1.861472801787182,
+          "y": 17,
+          "id": "General Guido"
+        },
+        {
+          "x": 0.7400619281215328,
+          "y": 24.4,
+          "id": "General Las Heras"
+        },
+        {
+          "x": 1.569313966541514,
+          "y": 26,
+          "id": "General Lavalle"
+        },
+        {
+          "x": 1.0247568804061906,
+          "y": 27.3,
+          "id": "General Paz"
+        },
+        {
+          "x": 1.1857407810340859,
+          "y": 25.5,
+          "id": "General Pinto"
+        },
+        {
+          "x": -1.0063347871453625,
+          "y": 26.9,
+          "id": "General Pueyrredón"
+        },
+        {
+          "x": -0.8616052322239102,
+          "y": 27.6,
+          "id": "General Rodríguez"
+        },
+        {
+          "x": -2,
+          "y": 23.8,
+          "id": "General San Martín"
+        },
+        {
+          "x": 0.8893697754613615,
+          "y": 25.3,
+          "id": "General Viamonte"
+        },
+        {
+          "x": 1.1730069739916815,
+          "y": 34.2,
+          "id": "General Villegas"
+        },
+        {
+          "x": 1.435625080344608,
+          "y": 27,
+          "id": "Guaminí"
+        },
+        {
+          "x": 1.0391747217330731,
+          "y": 28,
+          "id": "Hipólito Yrigoyen"
+        },
+        {
+          "x": -2,
+          "y": 23.8,
+          "id": "Hurlingham"
+        },
+        {
+          "x": -2,
+          "y": 22.5,
+          "id": "Ituzaingó"
+        },
+        {
+          "x": -1.982558239177698,
+          "y": 24,
+          "id": "José C. Paz"
+        },
+        {
+          "x": 0.030400655755152668,
+          "y": 26.3,
+          "id": "Junín"
+        },
+        {
+          "x": -1.9618002185454095,
+          "y": 21.8,
+          "id": "La Matanza"
+        },
+        {
+          "x": -1.1084087935378175,
+          "y": 22.1,
+          "id": "La Plata"
+        },
+        {
+          "x": -2,
+          "y": 19.8,
+          "id": "Lanús"
+        },
+        {
+          "x": 1.5638742522479943,
+          "y": 26,
+          "id": "Laprida"
+        },
+        {
+          "x": 1.142847220916709,
+          "y": 27.9,
+          "id": "Las Flores"
+        },
+        {
+          "x": 0.6535238635555928,
+          "y": 28.6,
+          "id": "Leandro N. Alem"
+        },
+        {
+          "x": 0.25658547750628496,
+          "y": 25.9,
+          "id": "Lezama"
+        },
+        {
+          "x": 1.0470885807778063,
+          "y": 27.7,
+          "id": "Lincoln"
+        },
+        {
+          "x": 1.233088266458204,
+          "y": 28.2,
+          "id": "Lobería"
+        },
+        {
+          "x": 0.6537699977525222,
+          "y": 27.4,
+          "id": "Lobos"
+        },
+        {
+          "x": -1.9842978650728698,
+          "y": 21.1,
+          "id": "Lomas de Zamora"
+        },
+        {
+          "x": -0.45654804567363905,
+          "y": 26.8,
+          "id": "Luján"
+        },
+        {
+          "x": 1.0256016674539095,
+          "y": 25.6,
+          "id": "Magdalena"
+        },
+        {
+          "x": 1.3497081621557336,
+          "y": 22.6,
+          "id": "Maipú"
+        },
+        {
+          "x": -2,
+          "y": 25.3,
+          "id": "Malvinas Argentinas"
+        },
+        {
+          "x": 1.0399868088231827,
+          "y": 27.4,
+          "id": "Mar Chiquita"
+        },
+        {
+          "x": -0.06409558350327121,
+          "y": 23.3,
+          "id": "Marcos Paz"
+        },
+        {
+          "x": 0.16225438676739617,
+          "y": 27.6,
+          "id": "Mercedes"
+        },
+        {
+          "x": -1.966086173938356,
+          "y": 23.5,
+          "id": "Merlo"
+        },
+        {
+          "x": 0.8372351760240917,
+          "y": 26.7,
+          "id": "Monte"
+        },
+        {
+          "x": -2,
+          "y": 28.6,
+          "id": "Monte Hermoso"
+        },
+        {
+          "x": -1.9724657251350797,
+          "y": 25,
+          "id": "Moreno"
+        },
+        {
+          "x": -2,
+          "y": 22.1,
+          "id": "Morón"
+        },
+        {
+          "x": 0.9330501455135191,
+          "y": 29.9,
+          "id": "Navarro"
+        },
+        {
+          "x": 0.36004617059800115,
+          "y": 31.2,
+          "id": "Necochea"
+        },
+        {
+          "x": 0.8665686224085909,
+          "y": 30.8,
+          "id": "Olavarría"
+        },
+        {
+          "x": 0.9690453052319692,
+          "y": 30.5,
+          "id": "Patagones"
+        },
+        {
+          "x": 0.8574081546135114,
+          "y": 27.1,
+          "id": "Pehuajó"
+        },
+        {
+          "x": 1.1851029210379607,
+          "y": 31,
+          "id": "Pellegrini"
+        },
+        {
+          "x": 0.10181464149538864,
+          "y": 29.7,
+          "id": "Pergamino"
+        },
+        {
+          "x": 1.8789489241384505,
+          "y": 29.2,
+          "id": "Pila"
+        },
+        {
+          "x": -1.6704198509455779,
+          "y": 28.9,
+          "id": "Pilar"
+        },
+        {
+          "x": -2,
+          "y": 35.2,
+          "id": "Pinamar"
+        },
+        {
+          "x": -1.4425112273278726,
+          "y": 25,
+          "id": "Presidente Perón"
+        },
+        {
+          "x": 1.3042441125153534,
+          "y": 32.6,
+          "id": "Puán"
+        },
+        {
+          "x": 1.1342029770634354,
+          "y": 27.1,
+          "id": "Punta Indio"
+        },
+        {
+          "x": -1.9953367747909596,
+          "y": 21.6,
+          "id": "Quilmes"
+        },
+        {
+          "x": 0.03892326482215234,
+          "y": 26.6,
+          "id": "Ramallo"
+        },
+        {
+          "x": 1.4831599597299299,
+          "y": 24.5,
+          "id": "Rauch"
+        },
+        {
+          "x": 1.1186611422326775,
+          "y": 31.9,
+          "id": "Rivadavia"
+        },
+        {
+          "x": 0.552664296141962,
+          "y": 28.5,
+          "id": "Rojas"
+        },
+        {
+          "x": 1.0573356373761156,
+          "y": 25.5,
+          "id": "Roque Pérez"
+        },
+        {
+          "x": 1.0107267268737985,
+          "y": 34.2,
+          "id": "Saavedra"
+        },
+        {
+          "x": 0.9496719975683586,
+          "y": 31.1,
+          "id": "Saladillo"
+        },
+        {
+          "x": 0.9068254444249013,
+          "y": 25.3,
+          "id": "Salliqueló"
+        },
+        {
+          "x": 0.1608062216874972,
+          "y": 31.2,
+          "id": "Salto"
+        },
+        {
+          "x": 0.4350433348087459,
+          "y": 29.3,
+          "id": "San Andrés de Giles"
+        },
+        {
+          "x": 0.2096821588617341,
+          "y": 27.7,
+          "id": "San Antonio de Areco"
+        },
+        {
+          "x": 1.3134222134704325,
+          "y": 27.9,
+          "id": "San Cayetano"
+        },
+        {
+          "x": -1.0620983723451387,
+          "y": 24.3,
+          "id": "San Fernando"
+        },
+        {
+          "x": -2,
+          "y": 23.4,
+          "id": "San Isidro"
+        },
+        {
+          "x": -2,
+          "y": 25.2,
+          "id": "San Miguel"
+        },
+        {
+          "x": -0.8313139333746301,
+          "y": 28.3,
+          "id": "San Nicolás"
+        },
+        {
+          "x": 0.06378208475103397,
+          "y": 30.9,
+          "id": "San Pedro"
+        },
+        {
+          "x": -0.1137967096775415,
+          "y": 24.9,
+          "id": "San Vicente"
+        },
+        {
+          "x": 0.8674158179371229,
+          "y": 25.5,
+          "id": "Suipacha"
+        },
+        {
+          "x": 0.4727334907270854,
+          "y": 29,
+          "id": "Tandil"
+        },
+        {
+          "x": 1.6359602903779125,
+          "y": 25.2,
+          "id": "Tapalqué"
+        },
+        {
+          "x": -1.979719841389124,
+          "y": 26.2,
+          "id": "Tigre"
+        },
+        {
+          "x": 1.7594473368698091,
+          "y": 25.3,
+          "id": "Tordillo"
+        },
+        {
+          "x": 1.1453821056694387,
+          "y": 33.7,
+          "id": "Tornquist"
+        },
+        {
+          "x": 0.9490600073284221,
+          "y": 30,
+          "id": "Trenque Lauquen"
+        },
+        {
+          "x": 0.680783022236858,
+          "y": 27.5,
+          "id": "Tres Arroyos"
+        },
+        {
+          "x": -2,
+          "y": 23.3,
+          "id": "Tres de Febrero"
+        },
+        {
+          "x": 1.0330189907809975,
+          "y": 26.8,
+          "id": "Tres Lomas"
+        },
+        {
+          "x": -2,
+          "y": 21.5,
+          "id": "Vicente López"
+        },
+        {
+          "x": -2,
+          "y": 29,
+          "id": "Villa Gesell"
+        },
+        {
+          "x": 1.1471141848570352,
+          "y": 41.6,
+          "id": "Villarino"
+        },
+        {
+          "x": -0.464606280629062,
+          "y": 26.2,
+          "id": "Zárate"
+        }
+      ],
+      "config": {
+        "xAxis": "Stock bovino per cápita (log₁₀)",
+        "yAxis": "% LLA · Presidente 2023",
+        "regression": {
+          "r2": 0.143,
+          "slope": 1.078,
+          "intercept": 26.97,
+          "n": 129
+        }
+      }
+    },
+    {
+      "id": "scatter-voto-edu",
+      "type": "scatter",
+      "title": "Voto vs trayectoria escolar · % sobreedad secundaria vs % peronismo a gobernador 2023",
+      "sectionId": "trayectoria",
+      "data": [
+        {
+          "x": 12.94,
+          "y": 25.3,
+          "id": "ADOLFO ALSINA"
+        },
+        {
+          "x": 19.15,
+          "y": 35.6,
+          "id": "ALBERTI"
+        },
+        {
+          "x": 20.24,
+          "y": 48,
+          "id": "ALMIRANTE BROWN"
+        },
+        {
+          "x": 32.6,
+          "y": 34.3,
+          "id": "ARRECIFES"
+        },
+        {
+          "x": 25.29,
+          "y": 47.6,
+          "id": "AVELLANEDA"
+        },
+        {
+          "x": 13.65,
+          "y": 29,
+          "id": "AYACUCHO"
+        },
+        {
+          "x": 22.96,
+          "y": 31.5,
+          "id": "AZUL"
+        },
+        {
+          "x": 17.57,
+          "y": 23.2,
+          "id": "BALCARCE"
+        },
+        {
+          "x": 20.45,
+          "y": 43.4,
+          "id": "BARADERO"
+        },
+        {
+          "x": 21.5,
+          "y": 46.4,
+          "id": "BERAZATEGUI"
+        },
+        {
+          "x": 26.73,
+          "y": 46.3,
+          "id": "BERISSO"
+        },
+        {
+          "x": 25.39,
+          "y": 34,
+          "id": "BRAGADO"
+        },
+        {
+          "x": 19.38,
+          "y": 35.7,
+          "id": "BRANDSEN"
+        },
+        {
+          "x": 20.54,
+          "y": 31.4,
+          "id": "CAMPANA"
+        },
+        {
+          "x": 23.49,
+          "y": 41.8,
+          "id": "CA�UELAS"
+        },
+        {
+          "x": 20.72,
+          "y": 31.7,
+          "id": "CARLOS CASARES"
+        },
+        {
+          "x": 18.75,
+          "y": 43.4,
+          "id": "CARLOS TEJEDOR"
+        },
+        {
+          "x": 12.86,
+          "y": 38,
+          "id": "CARMEN DE ARECO"
+        },
+        {
+          "x": 19.21,
+          "y": 43.1,
+          "id": "CASTELLI"
+        },
+        {
+          "x": 14.99,
+          "y": 39.2,
+          "id": "CHACABUCO"
+        },
+        {
+          "x": 18.59,
+          "y": 32.5,
+          "id": "CHIVILCOY"
+        },
+        {
+          "x": 9.41,
+          "y": 27.5,
+          "id": "CORONEL DORREGO"
+        },
+        {
+          "x": 12.65,
+          "y": 22.5,
+          "id": "CORONEL PRINGLES"
+        },
+        {
+          "x": 13.38,
+          "y": 32.9,
+          "id": "DAIREAUX"
+        },
+        {
+          "x": 13.3,
+          "y": 42.2,
+          "id": "PILAR"
+        },
+        {
+          "x": 16.21,
+          "y": 33,
+          "id": "DOLORES"
+        },
+        {
+          "x": 22.54,
+          "y": 54,
+          "id": "ENSENADA"
+        },
+        {
+          "x": 21.34,
+          "y": 40.5,
+          "id": "ESCOBAR"
+        },
+        {
+          "x": 17.54,
+          "y": 45.1,
+          "id": "EZEIZA"
+        },
+        {
+          "x": 24.97,
+          "y": 51.3,
+          "id": "FLORENCIO VARELA"
+        },
+        {
+          "x": 22.41,
+          "y": 35.2,
+          "id": "FLORENTINO AMEGHINO"
+        },
+        {
+          "x": 22.46,
+          "y": 35.8,
+          "id": "GENERAL ALVARADO"
+        },
+        {
+          "x": 12.94,
+          "y": 34,
+          "id": "GENERAL ALVEAR"
+        },
+        {
+          "x": 12.86,
+          "y": 27,
+          "id": "GENERAL ARENALES"
+        },
+        {
+          "x": 13.61,
+          "y": 31.5,
+          "id": "GENERAL BELGRANO"
+        },
+        {
+          "x": 12.32,
+          "y": 43.8,
+          "id": "GENERAL GUIDO"
+        },
+        {
+          "x": 17.71,
+          "y": 40.7,
+          "id": "GENERAL LAS HERAS"
+        },
+        {
+          "x": 26.71,
+          "y": 34.7,
+          "id": "GENERAL LAVALLE"
+        },
+        {
+          "x": 24.82,
+          "y": 41.2,
+          "id": "GENERAL PAZ"
+        },
+        {
+          "x": 15.3,
+          "y": 39.7,
+          "id": "GENERAL PINTO"
+        },
+        {
+          "x": 18.43,
+          "y": 35.7,
+          "id": "GENERAL VIAMONTE"
+        },
+        {
+          "x": 17.47,
+          "y": 21.8,
+          "id": "GENERAL VILLEGAS"
+        },
+        {
+          "x": 18.62,
+          "y": 35.5,
+          "id": "ADOLFO GONZALES CHAVES"
+        },
+        {
+          "x": 20.88,
+          "y": 43.4,
+          "id": "HURLINGHAM"
+        },
+        {
+          "x": 20.93,
+          "y": 50.4,
+          "id": "LA MATANZA"
+        },
+        {
+          "x": 21.66,
+          "y": 39.6,
+          "id": "LA PLATA"
+        },
+        {
+          "x": 23.69,
+          "y": 40.1,
+          "id": "LAPRIDA"
+        },
+        {
+          "x": 20.75,
+          "y": 34.6,
+          "id": "LAS FLORES"
+        },
+        {
+          "x": 17.67,
+          "y": 38.1,
+          "id": "LEANDRO N. ALEM"
+        },
+        {
+          "x": 21.43,
+          "y": 29.9,
+          "id": "LEZAMA"
+        },
+        {
+          "x": 15.13,
+          "y": 29.1,
+          "id": "LINCOLN"
+        },
+        {
+          "x": 27.76,
+          "y": 28.3,
+          "id": "LOBOS"
+        },
+        {
+          "x": 20.12,
+          "y": 47.7,
+          "id": "LOMAS DE ZAMORA"
+        },
+        {
+          "x": 20.25,
+          "y": 30.1,
+          "id": "MAGDALENA"
+        },
+        {
+          "x": 22.29,
+          "y": 48.4,
+          "id": "MALVINAS ARGENTINAS"
+        },
+        {
+          "x": 22.38,
+          "y": 39.8,
+          "id": "MAR CHIQUITA"
+        },
+        {
+          "x": 24.37,
+          "y": 47.9,
+          "id": "MARCOS PAZ"
+        },
+        {
+          "x": 29.94,
+          "y": 34.6,
+          "id": "MERCEDES"
+        },
+        {
+          "x": 20.93,
+          "y": 48.4,
+          "id": "MERLO"
+        },
+        {
+          "x": 19.18,
+          "y": 30,
+          "id": "MONTE"
+        },
+        {
+          "x": 21.71,
+          "y": 49.3,
+          "id": "MORENO"
+        },
+        {
+          "x": 26.3,
+          "y": 30.3,
+          "id": "NAVARRO"
+        },
+        {
+          "x": 23.71,
+          "y": 25.3,
+          "id": "NECOCHEA"
+        },
+        {
+          "x": 21.33,
+          "y": 43.7,
+          "id": "MONTE HERMOSO"
+        },
+        {
+          "x": 24.19,
+          "y": 30,
+          "id": "PINAMAR"
+        },
+        {
+          "x": 15.2,
+          "y": 37.2,
+          "id": "VILLA GESELL"
+        },
+        {
+          "x": 29.45,
+          "y": 33.3,
+          "id": "PATAGONES"
+        },
+        {
+          "x": 25.47,
+          "y": 29.5,
+          "id": "PELLEGRINI"
+        },
+        {
+          "x": 27.16,
+          "y": 27.2,
+          "id": "PERGAMINO"
+        },
+        {
+          "x": 19.26,
+          "y": 40.6,
+          "id": "PILA"
+        },
+        {
+          "x": 18.37,
+          "y": 35.9,
+          "id": "PUNTA INDIO"
+        },
+        {
+          "x": 24.5,
+          "y": 46.4,
+          "id": "QUILMES"
+        },
+        {
+          "x": 13.99,
+          "y": 36.9,
+          "id": "RAMALLO"
+        },
+        {
+          "x": 21.56,
+          "y": 36.6,
+          "id": "RAUCH"
+        },
+        {
+          "x": 18.1,
+          "y": 28.4,
+          "id": "RIVADAVIA"
+        },
+        {
+          "x": 18.41,
+          "y": 23.8,
+          "id": "ROJAS"
+        },
+        {
+          "x": 22.12,
+          "y": 21.4,
+          "id": "SAAVEDRA"
+        },
+        {
+          "x": 19.13,
+          "y": 26.4,
+          "id": "SALADILLO"
+        },
+        {
+          "x": 24.44,
+          "y": 33.2,
+          "id": "SALTO"
+        },
+        {
+          "x": 16.65,
+          "y": 30.1,
+          "id": "SAN ANTONIO DE ARECO"
+        },
+        {
+          "x": 6.36,
+          "y": 22.5,
+          "id": "SAN CAYETANO"
+        },
+        {
+          "x": 18.54,
+          "y": 40.9,
+          "id": "SAN FERNANDO"
+        },
+        {
+          "x": 16.44,
+          "y": 26.2,
+          "id": "SAN ISIDRO"
+        },
+        {
+          "x": 20.24,
+          "y": 36.8,
+          "id": "SAN MIGUEL"
+        },
+        {
+          "x": 23.09,
+          "y": 32.1,
+          "id": "SAN PEDRO"
+        },
+        {
+          "x": 20.66,
+          "y": 49.2,
+          "id": "SAN VICENTE"
+        },
+        {
+          "x": 24.42,
+          "y": 38.1,
+          "id": "SUIPACHA"
+        },
+        {
+          "x": 15.94,
+          "y": 28.4,
+          "id": "TANDIL"
+        },
+        {
+          "x": 20.55,
+          "y": 38.3,
+          "id": "TIGRE"
+        },
+        {
+          "x": 9.18,
+          "y": 39.8,
+          "id": "TORDILLO"
+        },
+        {
+          "x": 22.27,
+          "y": 31.4,
+          "id": "TORNQUIST"
+        },
+        {
+          "x": 21.23,
+          "y": 26.1,
+          "id": "TRENQUE LAUQUEN"
+        },
+        {
+          "x": 11.06,
+          "y": 32.6,
+          "id": "TRES ARROYOS"
+        },
+        {
+          "x": 19.49,
+          "y": 37.9,
+          "id": "TRES DE FEBRERO"
+        },
+        {
+          "x": 17.22,
+          "y": 33.7,
+          "id": "TRES LOMAS"
+        },
+        {
+          "x": 15.04,
+          "y": 30.8,
+          "id": "25 DE MAYO"
+        },
+        {
+          "x": 25.15,
+          "y": 19.1,
+          "id": "VILLARINO"
+        }
+      ],
+      "config": {
+        "xAxis": "% Sobreedad secundaria",
+        "yAxis": "% Peronismo · Gobernador 2023",
+        "regression": {
+          "r2": 0.037,
+          "slope": 0.316,
+          "intercept": 29.59,
+          "n": 97
+        }
+      }
+    },
+    {
+      "id": "scatter-voto-seg",
+      "type": "scatter",
+      "title": "Voto vs seguridad · tasa hechos delictivos 2024 vs % LLA en presidente 2023",
+      "sectionId": "inseguridad",
+      "data": [
+        {
+          "x": 2190,
+          "y": 28.5,
+          "id": "25 de Mayo"
+        },
+        {
+          "x": 2949,
+          "y": 30.3,
+          "id": "9 de Julio"
+        },
+        {
+          "x": 1624,
+          "y": 32.2,
+          "id": "Adolfo Alsina"
+        },
+        {
+          "x": 4159,
+          "y": 27.6,
+          "id": "Adolfo Gonzales Chaves"
+        },
+        {
+          "x": 2463,
+          "y": 27.5,
+          "id": "Alberti"
+        },
+        {
+          "x": 2740,
+          "y": 22.3,
+          "id": "Almirante Brown"
+        },
+        {
+          "x": 3162,
+          "y": 28.9,
+          "id": "Arrecifes"
+        },
+        {
+          "x": 3385,
+          "y": 19.9,
+          "id": "Avellaneda"
+        },
+        {
+          "x": 2880,
+          "y": 25.4,
+          "id": "Ayacucho"
+        },
+        {
+          "x": 3047,
+          "y": 29.3,
+          "id": "Azul"
+        },
+        {
+          "x": 3466,
+          "y": 31.7,
+          "id": "Bahía Blanca"
+        },
+        {
+          "x": 3961,
+          "y": 31.9,
+          "id": "Balcarce"
+        },
+        {
+          "x": 4274,
+          "y": 25.8,
+          "id": "Baradero"
+        },
+        {
+          "x": 3768,
+          "y": 26.2,
+          "id": "Benito Juárez"
+        },
+        {
+          "x": 2944,
+          "y": 24.7,
+          "id": "Berazategui"
+        },
+        {
+          "x": 3463,
+          "y": 22.2,
+          "id": "Berisso"
+        },
+        {
+          "x": 2912,
+          "y": 27.9,
+          "id": "Bolívar"
+        },
+        {
+          "x": 2918,
+          "y": 26.7,
+          "id": "Bragado"
+        },
+        {
+          "x": 3900,
+          "y": 27.7,
+          "id": "Brandsen"
+        },
+        {
+          "x": 3616,
+          "y": 25.3,
+          "id": "Campana"
+        },
+        {
+          "x": 4586,
+          "y": 27.8,
+          "id": "Cañuelas"
+        },
+        {
+          "x": 2958,
+          "y": 31.7,
+          "id": "Capitán Sarmiento"
+        },
+        {
+          "x": 2127,
+          "y": 32.9,
+          "id": "Carlos Casares"
+        },
+        {
+          "x": 1432,
+          "y": 20.9,
+          "id": "Carlos Tejedor"
+        },
+        {
+          "x": 5035,
+          "y": 29.2,
+          "id": "Carmen de Areco"
+        },
+        {
+          "x": 9382,
+          "y": 24.2,
+          "id": "Castelli"
+        },
+        {
+          "x": 3106,
+          "y": 28.7,
+          "id": "Chacabuco"
+        },
+        {
+          "x": 4775,
+          "y": 25.8,
+          "id": "Chascomús"
+        },
+        {
+          "x": 2395,
+          "y": 26.1,
+          "id": "Chivilcoy"
+        },
+        {
+          "x": 4237,
+          "y": 24.7,
+          "id": "Colón"
+        },
+        {
+          "x": 2493,
+          "y": 28.7,
+          "id": "Coronel Dorrego"
+        },
+        {
+          "x": 3817,
+          "y": 33.7,
+          "id": "Coronel Pringles"
+        },
+        {
+          "x": 1897,
+          "y": 31.9,
+          "id": "Coronel Suárez"
+        },
+        {
+          "x": 1691,
+          "y": 30,
+          "id": "Daireaux"
+        },
+        {
+          "x": 9519,
+          "y": 26,
+          "id": "Dolores"
+        },
+        {
+          "x": 3351,
+          "y": 20.6,
+          "id": "Ensenada"
+        },
+        {
+          "x": 2793,
+          "y": 29,
+          "id": "Escobar"
+        },
+        {
+          "x": 2935,
+          "y": 26.2,
+          "id": "Esteban Echeverría"
+        },
+        {
+          "x": 3276,
+          "y": 32.1,
+          "id": "Exaltación de la Cruz"
+        },
+        {
+          "x": 2909,
+          "y": 28.8,
+          "id": "Ezeiza"
+        },
+        {
+          "x": 2252,
+          "y": 23.3,
+          "id": "Florencio Varela"
+        },
+        {
+          "x": 3627,
+          "y": 25.6,
+          "id": "Florentino Ameghino"
+        },
+        {
+          "x": 6185,
+          "y": 26.5,
+          "id": "General Alvarado"
+        },
+        {
+          "x": 10236,
+          "y": 26.6,
+          "id": "General Alvear"
+        },
+        {
+          "x": 1680,
+          "y": 31.3,
+          "id": "General Arenales"
+        },
+        {
+          "x": 3168,
+          "y": 25.3,
+          "id": "General Belgrano"
+        },
+        {
+          "x": 19175,
+          "y": 17,
+          "id": "General Guido"
+        },
+        {
+          "x": 4335,
+          "y": 29,
+          "id": "General Juan Madariaga"
+        },
+        {
+          "x": 4171,
+          "y": 29.7,
+          "id": "General La Madrid"
+        },
+        {
+          "x": 2231,
+          "y": 24.4,
+          "id": "General Las Heras"
+        },
+        {
+          "x": 19604,
+          "y": 26,
+          "id": "General Lavalle"
+        },
+        {
+          "x": 1677,
+          "y": 27.3,
+          "id": "General Paz"
+        },
+        {
+          "x": 4593,
+          "y": 25.5,
+          "id": "General Pinto"
+        },
+        {
+          "x": 3769,
+          "y": 26.9,
+          "id": "General Pueyrredón"
+        },
+        {
+          "x": 3727,
+          "y": 27.6,
+          "id": "General Rodríguez"
+        },
+        {
+          "x": 3627,
+          "y": 23.8,
+          "id": "General San Martín"
+        },
+        {
+          "x": 2243,
+          "y": 25.3,
+          "id": "General Viamonte"
+        },
+        {
+          "x": 2300,
+          "y": 34.2,
+          "id": "General Villegas"
+        },
+        {
+          "x": 2238,
+          "y": 27,
+          "id": "Guaminí"
+        },
+        {
+          "x": 1765,
+          "y": 28,
+          "id": "Hipólito Yrigoyen"
+        },
+        {
+          "x": 2458,
+          "y": 23.8,
+          "id": "Hurlingham"
+        },
+        {
+          "x": 3138,
+          "y": 22.5,
+          "id": "Ituzaingó"
+        },
+        {
+          "x": 3148,
+          "y": 24,
+          "id": "José C. Paz"
+        },
+        {
+          "x": 5997,
+          "y": 26.3,
+          "id": "Junín"
+        },
+        {
+          "x": 7384,
+          "y": 29.9,
+          "id": "La Costa"
+        },
+        {
+          "x": 2064,
+          "y": 21.8,
+          "id": "La Matanza"
+        },
+        {
+          "x": 3143,
+          "y": 22.1,
+          "id": "La Plata"
+        },
+        {
+          "x": 3496,
+          "y": 19.8,
+          "id": "Lanús"
+        },
+        {
+          "x": 3254,
+          "y": 26,
+          "id": "Laprida"
+        },
+        {
+          "x": 3565,
+          "y": 27.9,
+          "id": "Las Flores"
+        },
+        {
+          "x": 2389,
+          "y": 28.6,
+          "id": "Leandro N. Alem"
+        },
+        {
+          "x": 6440,
+          "y": 25.9,
+          "id": "Lezama"
+        },
+        {
+          "x": 2684,
+          "y": 27.7,
+          "id": "Lincoln"
+        },
+        {
+          "x": 4135,
+          "y": 28.2,
+          "id": "Lobería"
+        },
+        {
+          "x": 3046,
+          "y": 27.4,
+          "id": "Lobos"
+        },
+        {
+          "x": 2764,
+          "y": 21.1,
+          "id": "Lomas de Zamora"
+        },
+        {
+          "x": 3884,
+          "y": 26.8,
+          "id": "Luján"
+        },
+        {
+          "x": 3145,
+          "y": 25.6,
+          "id": "Magdalena"
+        },
+        {
+          "x": 10384,
+          "y": 22.6,
+          "id": "Maipú"
+        },
+        {
+          "x": 3114,
+          "y": 25.3,
+          "id": "Malvinas Argentinas"
+        },
+        {
+          "x": 6315,
+          "y": 27.4,
+          "id": "Mar Chiquita"
+        },
+        {
+          "x": 3166,
+          "y": 23.3,
+          "id": "Marcos Paz"
+        },
+        {
+          "x": 4126,
+          "y": 27.6,
+          "id": "Mercedes"
+        },
+        {
+          "x": 2495,
+          "y": 23.5,
+          "id": "Merlo"
+        },
+        {
+          "x": 3028,
+          "y": 26.7,
+          "id": "Monte"
+        },
+        {
+          "x": 6980,
+          "y": 28.6,
+          "id": "Monte Hermoso"
+        },
+        {
+          "x": 2634,
+          "y": 25,
+          "id": "Moreno"
+        },
+        {
+          "x": 4230,
+          "y": 22.1,
+          "id": "Morón"
+        },
+        {
+          "x": 3472,
+          "y": 29.9,
+          "id": "Navarro"
+        },
+        {
+          "x": 4280,
+          "y": 31.2,
+          "id": "Necochea"
+        },
+        {
+          "x": 3135,
+          "y": 30.8,
+          "id": "Olavarría"
+        },
+        {
+          "x": 3821,
+          "y": 30.5,
+          "id": "Patagones"
+        },
+        {
+          "x": 3633,
+          "y": 27.1,
+          "id": "Pehuajó"
+        },
+        {
+          "x": 2601,
+          "y": 31,
+          "id": "Pellegrini"
+        },
+        {
+          "x": 4796,
+          "y": 29.7,
+          "id": "Pergamino"
+        },
+        {
+          "x": 3633,
+          "y": 29.2,
+          "id": "Pila"
+        },
+        {
+          "x": 2607,
+          "y": 28.9,
+          "id": "Pilar"
+        },
+        {
+          "x": 10961,
+          "y": 35.2,
+          "id": "Pinamar"
+        },
+        {
+          "x": 2820,
+          "y": 25,
+          "id": "Presidente Perón"
+        },
+        {
+          "x": 2335,
+          "y": 32.6,
+          "id": "Puán"
+        },
+        {
+          "x": 2704,
+          "y": 27.1,
+          "id": "Punta Indio"
+        },
+        {
+          "x": 2683,
+          "y": 21.6,
+          "id": "Quilmes"
+        },
+        {
+          "x": 5914,
+          "y": 26.6,
+          "id": "Ramallo"
+        },
+        {
+          "x": 2707,
+          "y": 24.5,
+          "id": "Rauch"
+        },
+        {
+          "x": 3214,
+          "y": 31.9,
+          "id": "Rivadavia"
+        },
+        {
+          "x": 4259,
+          "y": 28.5,
+          "id": "Rojas"
+        },
+        {
+          "x": 2085,
+          "y": 25.5,
+          "id": "Roque Pérez"
+        },
+        {
+          "x": 2480,
+          "y": 34.2,
+          "id": "Saavedra"
+        },
+        {
+          "x": 2779,
+          "y": 31.1,
+          "id": "Saladillo"
+        },
+        {
+          "x": 1639,
+          "y": 25.3,
+          "id": "Salliqueló"
+        },
+        {
+          "x": 2157,
+          "y": 31.2,
+          "id": "Salto"
+        },
+        {
+          "x": 2666,
+          "y": 29.3,
+          "id": "San Andrés de Giles"
+        },
+        {
+          "x": 3294,
+          "y": 27.7,
+          "id": "San Antonio de Areco"
+        },
+        {
+          "x": 2131,
+          "y": 27.9,
+          "id": "San Cayetano"
+        },
+        {
+          "x": 2101,
+          "y": 24.3,
+          "id": "San Fernando"
+        },
+        {
+          "x": 2937,
+          "y": 23.4,
+          "id": "San Isidro"
+        },
+        {
+          "x": 2694,
+          "y": 25.2,
+          "id": "San Miguel"
+        },
+        {
+          "x": 4492,
+          "y": 28.3,
+          "id": "San Nicolás"
+        },
+        {
+          "x": 6867,
+          "y": 30.9,
+          "id": "San Pedro"
+        },
+        {
+          "x": 3786,
+          "y": 24.9,
+          "id": "San Vicente"
+        },
+        {
+          "x": 2740,
+          "y": 25.5,
+          "id": "Suipacha"
+        },
+        {
+          "x": 2828,
+          "y": 29,
+          "id": "Tandil"
+        },
+        {
+          "x": 2095,
+          "y": 25.2,
+          "id": "Tapalqué"
+        },
+        {
+          "x": 2550,
+          "y": 26.2,
+          "id": "Tigre"
+        },
+        {
+          "x": 52648,
+          "y": 25.3,
+          "id": "Tordillo"
+        },
+        {
+          "x": 2601,
+          "y": 33.7,
+          "id": "Tornquist"
+        },
+        {
+          "x": 3393,
+          "y": 30,
+          "id": "Trenque Lauquen"
+        },
+        {
+          "x": 4438,
+          "y": 27.5,
+          "id": "Tres Arroyos"
+        },
+        {
+          "x": 3294,
+          "y": 23.3,
+          "id": "Tres de Febrero"
+        },
+        {
+          "x": 2365,
+          "y": 26.8,
+          "id": "Tres Lomas"
+        },
+        {
+          "x": 2372,
+          "y": 21.5,
+          "id": "Vicente López"
+        },
+        {
+          "x": 8203,
+          "y": 29,
+          "id": "Villa Gesell"
+        },
+        {
+          "x": 2508,
+          "y": 41.6,
+          "id": "Villarino"
+        },
+        {
+          "x": 2659,
+          "y": 26.2,
+          "id": "Zárate"
+        }
+      ],
+      "config": {
+        "xAxis": "Tasa hechos delictivos /100k (2024)",
+        "yAxis": "% LLA · Presidente 2023",
+        "regression": {
+          "r2": 0.011,
+          "slope": 0,
+          "intercept": 27.48,
+          "n": 134
+        }
+      }
+    },
+    {
+      "id": "scatter-voto-trans",
+      "type": "scatter",
+      "title": "Voto vs dependencia fiscal · transferencias 2023/elector vs % peronismo a gobernador 2023",
+      "sectionId": "transferencias",
+      "data": [
+        {
+          "x": 298.1507557601941,
+          "y": 25.3,
+          "id": "ADOLFO ALSINA"
+        },
+        {
+          "x": 247.8973749237597,
+          "y": 35.6,
+          "id": "ALBERTI"
+        },
+        {
+          "x": 49.16112037755911,
+          "y": 48,
+          "id": "ALMIRANTE BROWN"
+        },
+        {
+          "x": 111.74561268322644,
+          "y": 34.3,
+          "id": "ARRECIFES"
+        },
+        {
+          "x": 43.76567554990318,
+          "y": 47.6,
+          "id": "AVELLANEDA"
+        },
+        {
+          "x": 241.46993827884614,
+          "y": 29,
+          "id": "AYACUCHO"
+        },
+        {
+          "x": 127.79485064009269,
+          "y": 31.5,
+          "id": "AZUL"
+        },
+        {
+          "x": 54.8107650514342,
+          "y": 27.8,
+          "id": "BAHIA BLANCA"
+        },
+        {
+          "x": 125.59070544406339,
+          "y": 23.2,
+          "id": "BALCARCE"
+        },
+        {
+          "x": 93.29273253007635,
+          "y": 43.4,
+          "id": "BARADERO"
+        },
+        {
+          "x": 264.23056808214216,
+          "y": 38.8,
+          "id": "BENITO JUAREZ"
+        },
+        {
+          "x": 61.58334229207285,
+          "y": 46.4,
+          "id": "BERAZATEGUI"
+        },
+        {
+          "x": 83.58164751316926,
+          "y": 46.3,
+          "id": "BERISSO"
+        },
+        {
+          "x": 172.7685154256066,
+          "y": 32.4,
+          "id": "BOLIVAR"
+        },
+        {
+          "x": 143.71322201857973,
+          "y": 34,
+          "id": "BRAGADO"
+        },
+        {
+          "x": 70.61550134133519,
+          "y": 35.7,
+          "id": "BRANDSEN"
+        },
+        {
+          "x": 86.57703711155611,
+          "y": 31.4,
+          "id": "CAMPANA"
+        },
+        {
+          "x": 113.81370776047133,
+          "y": 24.7,
+          "id": "CAPITAN SARMIENTO"
+        },
+        {
+          "x": 244.40871367815404,
+          "y": 31.7,
+          "id": "CARLOS CASARES"
+        },
+        {
+          "x": 329.93374098966757,
+          "y": 43.4,
+          "id": "CARLOS TEJEDOR"
+        },
+        {
+          "x": 87.10405944742229,
+          "y": 38,
+          "id": "CARMEN DE ARECO"
+        },
+        {
+          "x": 235.17206689302543,
+          "y": 43.1,
+          "id": "CASTELLI"
+        },
+        {
+          "x": 180.38135955078687,
+          "y": 39.2,
+          "id": "CHACABUCO"
+        },
+        {
+          "x": 151.03790832355617,
+          "y": 30,
+          "id": "CHASCOMUS"
+        },
+        {
+          "x": 111.54336066849059,
+          "y": 32.5,
+          "id": "CHIVILCOY"
+        },
+        {
+          "x": 154.2387136921632,
+          "y": 39.3,
+          "id": "COLON"
+        },
+        {
+          "x": 271.9568354790835,
+          "y": 27.5,
+          "id": "CORONEL DORREGO"
+        },
+        {
+          "x": 209.05192408856968,
+          "y": 22.5,
+          "id": "CORONEL PRINGLES"
+        },
+        {
+          "x": 185.7698956128414,
+          "y": 28.2,
+          "id": "CORONEL SUAREZ"
+        },
+        {
+          "x": 281.43970846359366,
+          "y": 32.9,
+          "id": "DAIREAUX"
+        },
+        {
+          "x": 72.51980702280956,
+          "y": 42.2,
+          "id": "PILAR"
+        },
+        {
+          "x": 170.42646751962997,
+          "y": 33,
+          "id": "DOLORES"
+        },
+        {
+          "x": 50.46154732720844,
+          "y": 54,
+          "id": "ENSENADA"
+        },
+        {
+          "x": 70.51011651703375,
+          "y": 40.5,
+          "id": "ESCOBAR"
+        },
+        {
+          "x": 55.55075391284464,
+          "y": 43.7,
+          "id": "ESTEBAN ECHEVERRIA"
+        },
+        {
+          "x": 114.32578319795272,
+          "y": 33.3,
+          "id": "EXALTACION DE LA CRUZ"
+        },
+        {
+          "x": 45.0559189415451,
+          "y": 45.1,
+          "id": "EZEIZA"
+        },
+        {
+          "x": 59.14151366367626,
+          "y": 51.3,
+          "id": "FLORENCIO VARELA"
+        },
+        {
+          "x": 246.0925994107564,
+          "y": 35.2,
+          "id": "FLORENTINO AMEGHINO"
+        },
+        {
+          "x": 92.55213530599194,
+          "y": 35.8,
+          "id": "GENERAL ALVARADO"
+        },
+        {
+          "x": 283.866375594578,
+          "y": 34,
+          "id": "GENERAL ALVEAR"
+        },
+        {
+          "x": 158.93173607034012,
+          "y": 27,
+          "id": "GENERAL ARENALES"
+        },
+        {
+          "x": 164.34192166194038,
+          "y": 31.5,
+          "id": "GENERAL BELGRANO"
+        },
+        {
+          "x": 380.71348377770664,
+          "y": 43.8,
+          "id": "GENERAL GUIDO"
+        },
+        {
+          "x": 118.15342570144573,
+          "y": 40.7,
+          "id": "GENERAL LAS HERAS"
+        },
+        {
+          "x": 240.30489961685714,
+          "y": 34.7,
+          "id": "GENERAL LAVALLE"
+        },
+        {
+          "x": 216.56503886497583,
+          "y": 41.2,
+          "id": "GENERAL PAZ"
+        },
+        {
+          "x": 308.0593862957299,
+          "y": 39.7,
+          "id": "GENERAL PINTO"
+        },
+        {
+          "x": 42.78022313698969,
+          "y": 33.1,
+          "id": "GENERAL PUEYRREDON"
+        },
+        {
+          "x": 40.98899532503376,
+          "y": 44,
+          "id": "GENERAL RODRIGUEZ"
+        },
+        {
+          "x": 61.87334505736202,
+          "y": 42.2,
+          "id": "GENERAL SAN MARTIN"
+        },
+        {
+          "x": 237.19684745358722,
+          "y": 35.7,
+          "id": "GENERAL VIAMONTE"
+        },
+        {
+          "x": 252.7812892145908,
+          "y": 21.8,
+          "id": "GENERAL VILLEGAS"
+        },
+        {
+          "x": 224.4825644651586,
+          "y": 35.5,
+          "id": "ADOLFO GONZALES CHAVES"
+        },
+        {
+          "x": 341.8087602965612,
+          "y": 37.6,
+          "id": "GUAMINI"
+        },
+        {
+          "x": 234.65992179738083,
+          "y": 35.3,
+          "id": "HIPOLITO YRIGOYEN"
+        },
+        {
+          "x": 54.46319260553355,
+          "y": 43.4,
+          "id": "HURLINGHAM"
+        },
+        {
+          "x": 40.11504465080184,
+          "y": 41.5,
+          "id": "ITUZAINGO"
+        },
+        {
+          "x": 74.67202848568033,
+          "y": 49.7,
+          "id": "JOSE C. PAZ"
+        },
+        {
+          "x": 55.10355007568554,
+          "y": 33,
+          "id": "JUNIN"
+        },
+        {
+          "x": 66.56186912099169,
+          "y": 50.4,
+          "id": "LA MATANZA"
+        },
+        {
+          "x": 51.544947030070865,
+          "y": 39.6,
+          "id": "LA PLATA"
+        },
+        {
+          "x": 48.324524077837964,
+          "y": 43.2,
+          "id": "LANUS"
+        },
+        {
+          "x": 284.6511334070116,
+          "y": 40.1,
+          "id": "LAPRIDA"
+        },
+        {
+          "x": 129.63076964757758,
+          "y": 34.6,
+          "id": "LAS FLORES"
+        },
+        {
+          "x": 223.8355941750548,
+          "y": 38.1,
+          "id": "LEANDRO N. ALEM"
+        },
+        {
+          "x": 262.9182937329607,
+          "y": 29.9,
+          "id": "LEZAMA"
+        },
+        {
+          "x": 156.6821853176262,
+          "y": 29.1,
+          "id": "LINCOLN"
+        },
+        {
+          "x": 244.7649203745801,
+          "y": 32.4,
+          "id": "LOBERIA"
+        },
+        {
+          "x": 62.39509281106771,
+          "y": 28.3,
+          "id": "LOBOS"
+        },
+        {
+          "x": 53.34671673016484,
+          "y": 47.7,
+          "id": "LOMAS DE ZAMORA"
+        },
+        {
+          "x": 88.25187300169051,
+          "y": 35.3,
+          "id": "LUJAN"
+        },
+        {
+          "x": 185.56375266613298,
+          "y": 30.1,
+          "id": "MAGDALENA"
+        },
+        {
+          "x": 252.76891041137915,
+          "y": 32,
+          "id": "MAIPU"
+        },
+        {
+          "x": 111.47988700516389,
+          "y": 48.4,
+          "id": "MALVINAS ARGENTINAS"
+        },
+        {
+          "x": 140.41842030982184,
+          "y": 39.8,
+          "id": "MAR CHIQUITA"
+        },
+        {
+          "x": 77.6965695371051,
+          "y": 47.9,
+          "id": "MARCOS PAZ"
+        },
+        {
+          "x": 110.2191827329643,
+          "y": 34.6,
+          "id": "MERCEDES"
+        },
+        {
+          "x": 74.35418815666505,
+          "y": 48.4,
+          "id": "MERLO"
+        },
+        {
+          "x": 73.03420872258285,
+          "y": 30,
+          "id": "MONTE"
+        },
+        {
+          "x": 51.55480718728082,
+          "y": 49.3,
+          "id": "MORENO"
+        },
+        {
+          "x": 45.080546063262005,
+          "y": 38.8,
+          "id": "MORON"
+        },
+        {
+          "x": 143.14494880340655,
+          "y": 30.3,
+          "id": "NAVARRO"
+        },
+        {
+          "x": 85.30492473268637,
+          "y": 25.3,
+          "id": "NECOCHEA"
+        },
+        {
+          "x": 101.17928303301926,
+          "y": 32.7,
+          "id": "OLAVARRIA"
+        },
+        {
+          "x": 186.26367293379855,
+          "y": 43.7,
+          "id": "MONTE HERMOSO"
+        },
+        {
+          "x": 110.81464139398828,
+          "y": 30,
+          "id": "PINAMAR"
+        },
+        {
+          "x": 133.36111565770102,
+          "y": 37.2,
+          "id": "VILLA GESELL"
+        },
+        {
+          "x": 235.0045413216932,
+          "y": 33.3,
+          "id": "PATAGONES"
+        },
+        {
+          "x": 213.89357485785172,
+          "y": 36.2,
+          "id": "PEHUAJO"
+        },
+        {
+          "x": 295.78582541167975,
+          "y": 29.5,
+          "id": "PELLEGRINI"
+        },
+        {
+          "x": 55.049855007001504,
+          "y": 27.2,
+          "id": "PERGAMINO"
+        },
+        {
+          "x": 442.7944245901502,
+          "y": 40.6,
+          "id": "PILA"
+        },
+        {
+          "x": 55.21528437778759,
+          "y": 47.7,
+          "id": "PRESIDENTE PERON"
+        },
+        {
+          "x": 388.52003118360255,
+          "y": 21.7,
+          "id": "PUAN"
+        },
+        {
+          "x": 189.91150518272596,
+          "y": 35.9,
+          "id": "PUNTA INDIO"
+        },
+        {
+          "x": 45.584437375896364,
+          "y": 46.4,
+          "id": "QUILMES"
+        },
+        {
+          "x": 80.92750108553312,
+          "y": 36.9,
+          "id": "RAMALLO"
+        },
+        {
+          "x": 199.79483289493012,
+          "y": 36.6,
+          "id": "RAUCH"
+        },
+        {
+          "x": 262.56845315774154,
+          "y": 28.4,
+          "id": "RIVADAVIA"
+        },
+        {
+          "x": 152.76490519237333,
+          "y": 23.8,
+          "id": "ROJAS"
+        },
+        {
+          "x": 178.9554350966908,
+          "y": 32.2,
+          "id": "ROQUE PEREZ"
+        },
+        {
+          "x": 264.3879750567413,
+          "y": 21.4,
+          "id": "SAAVEDRA"
+        },
+        {
+          "x": 108.29700714741365,
+          "y": 26.4,
+          "id": "SALADILLO"
+        },
+        {
+          "x": 190.19855937305735,
+          "y": 35.1,
+          "id": "SALLIQUELO"
+        },
+        {
+          "x": 92.76260653472919,
+          "y": 33.2,
+          "id": "SALTO"
+        },
+        {
+          "x": 170.34139767680242,
+          "y": 32.1,
+          "id": "SAN ANDRES DE GILES"
+        },
+        {
+          "x": 114.44864197712411,
+          "y": 30.1,
+          "id": "SAN ANTONIO DE ARECO"
+        },
+        {
+          "x": 366.6808657196666,
+          "y": 22.5,
+          "id": "SAN CAYETANO"
+        },
+        {
+          "x": 64.92324437545446,
+          "y": 40.9,
+          "id": "SAN FERNANDO"
+        },
+        {
+          "x": 69.19491534256441,
+          "y": 26.2,
+          "id": "SAN ISIDRO"
+        },
+        {
+          "x": 65.0987983158839,
+          "y": 36.8,
+          "id": "SAN MIGUEL"
+        },
+        {
+          "x": 49.04162726360526,
+          "y": 31.4,
+          "id": "SAN NICOLAS"
+        },
+        {
+          "x": 120.48994835063431,
+          "y": 32.1,
+          "id": "SAN PEDRO"
+        },
+        {
+          "x": 57.26960435108449,
+          "y": 49.2,
+          "id": "SAN VICENTE"
+        },
+        {
+          "x": 177.42771837902762,
+          "y": 38.1,
+          "id": "SUIPACHA"
+        },
+        {
+          "x": 92.9425830212433,
+          "y": 28.4,
+          "id": "TANDIL"
+        },
+        {
+          "x": 340.6927633739927,
+          "y": 36.9,
+          "id": "TAPALQUE"
+        },
+        {
+          "x": 52.03588873148522,
+          "y": 38.3,
+          "id": "TIGRE"
+        },
+        {
+          "x": 286.52806257799153,
+          "y": 39.8,
+          "id": "TORDILLO"
+        },
+        {
+          "x": 257.3020330431246,
+          "y": 31.4,
+          "id": "TORNQUIST"
+        },
+        {
+          "x": 188.7563853853371,
+          "y": 26.1,
+          "id": "TRENQUE LAUQUEN"
+        },
+        {
+          "x": 123.45133883231105,
+          "y": 32.6,
+          "id": "TRES ARROYOS"
+        },
+        {
+          "x": 37.359365480181665,
+          "y": 37.9,
+          "id": "TRES DE FEBRERO"
+        },
+        {
+          "x": 245.88044871839782,
+          "y": 33.7,
+          "id": "TRES LOMAS"
+        },
+        {
+          "x": 145.65236665267727,
+          "y": 30.8,
+          "id": "25 DE MAYO"
+        },
+        {
+          "x": 65.79648809379935,
+          "y": 26.1,
+          "id": "VICENTE LOPEZ"
+        },
+        {
+          "x": 198.97543829897094,
+          "y": 19.1,
+          "id": "VILLARINO"
+        },
+        {
+          "x": 58.06973590365355,
+          "y": 37.9,
+          "id": "ZARATE"
+        }
+      ],
+      "config": {
+        "xAxis": "Transferencias 2023 / elector (miles $)",
+        "yAxis": "% Peronismo · Gobernador 2023",
+        "regression": {
+          "r2": 0.107,
+          "slope": -0.026,
+          "intercept": 39.65,
+          "n": 129
+        }
+      }
+    },
+    {
+      "id": "heatmap-participacion",
+      "type": "heatmap",
+      "title": "Participación electoral por municipio × año (gobernador, % votantes / habilitados)",
+      "sectionId": "heatmap",
+      "data": [
+        {
+          "id": "I·CAMPANA",
+          "municipio": "CAMPANA",
+          "seccion": "I",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "I·ESCOBAR",
+          "municipio": "ESCOBAR",
+          "seccion": "I",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "I·GENERAL LAS HERAS",
+          "municipio": "GENERAL LAS HERAS",
+          "seccion": "I",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "I·GENERAL RODRIGUEZ",
+          "municipio": "GENERAL RODRIGUEZ",
+          "seccion": "I",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "I·GENERAL SAN MARTIN",
+          "municipio": "GENERAL SAN MARTIN",
+          "seccion": "I",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "I·HURLINGHAM",
+          "municipio": "HURLINGHAM",
+          "seccion": "I",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "I·ITUZAINGO",
+          "municipio": "ITUZAINGO",
+          "seccion": "I",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "I·JOSE C. PAZ",
+          "municipio": "JOSE C. PAZ",
+          "seccion": "I",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "I·LUJAN",
+          "municipio": "LUJAN",
+          "seccion": "I",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "I·MALVINAS ARGENTINAS",
+          "municipio": "MALVINAS ARGENTINAS",
+          "seccion": "I",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "I·MARCOS PAZ",
+          "municipio": "MARCOS PAZ",
+          "seccion": "I",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "I·MERCEDES",
+          "municipio": "MERCEDES",
+          "seccion": "I",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "I·MERLO",
+          "municipio": "MERLO",
+          "seccion": "I",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "I·MORENO",
+          "municipio": "MORENO",
+          "seccion": "I",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "I·MORON",
+          "municipio": "MORON",
+          "seccion": "I",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "I·NAVARRO",
+          "municipio": "NAVARRO",
+          "seccion": "I",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "I·PILAR",
+          "municipio": "PILAR",
+          "seccion": "I",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "I·SAN FERNANDO",
+          "municipio": "SAN FERNANDO",
+          "seccion": "I",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "I·SAN ISIDRO",
+          "municipio": "SAN ISIDRO",
+          "seccion": "I",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "I·SAN MIGUEL",
+          "municipio": "SAN MIGUEL",
+          "seccion": "I",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "I·SUIPACHA",
+          "municipio": "SUIPACHA",
+          "seccion": "I",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "I·TIGRE",
+          "municipio": "TIGRE",
+          "seccion": "I",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "I·TRES DE FEBRERO",
+          "municipio": "TRES DE FEBRERO",
+          "seccion": "I",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "I·VICENTE LOPEZ",
+          "municipio": "VICENTE LOPEZ",
+          "seccion": "I",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "II·ARRECIFES",
+          "municipio": "ARRECIFES",
+          "seccion": "II",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "II·BARADERO",
+          "municipio": "BARADERO",
+          "seccion": "II",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "II·CAPITAN SARMIENTO",
+          "municipio": "CAPITAN SARMIENTO",
+          "seccion": "II",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "II·CARMEN DE ARECO",
+          "municipio": "CARMEN DE ARECO",
+          "seccion": "II",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "II·COLON",
+          "municipio": "COLON",
+          "seccion": "II",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "II·EXALTACION DE LA CRUZ",
+          "municipio": "EXALTACION DE LA CRUZ",
+          "seccion": "II",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "II·PERGAMINO",
+          "municipio": "PERGAMINO",
+          "seccion": "II",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "II·RAMALLO",
+          "municipio": "RAMALLO",
+          "seccion": "II",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "II·ROJAS",
+          "municipio": "ROJAS",
+          "seccion": "II",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "II·SALTO",
+          "municipio": "SALTO",
+          "seccion": "II",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "II·SAN ANDRES DE GILES",
+          "municipio": "SAN ANDRES DE GILES",
+          "seccion": "II",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "II·SAN ANTONIO DE ARECO",
+          "municipio": "SAN ANTONIO DE ARECO",
+          "seccion": "II",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "II·SAN NICOLAS",
+          "municipio": "SAN NICOLAS",
+          "seccion": "II",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "II·SAN PEDRO",
+          "municipio": "SAN PEDRO",
+          "seccion": "II",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "II·ZARATE",
+          "municipio": "ZARATE",
+          "seccion": "II",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "III·ALMIRANTE BROWN",
+          "municipio": "ALMIRANTE BROWN",
+          "seccion": "III",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "III·AVELLANEDA",
+          "municipio": "AVELLANEDA",
+          "seccion": "III",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "III·BERAZATEGUI",
+          "municipio": "BERAZATEGUI",
+          "seccion": "III",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "III·BERISSO",
+          "municipio": "BERISSO",
+          "seccion": "III",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "III·BRANDSEN",
+          "municipio": "BRANDSEN",
+          "seccion": "III",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "III·CA�UELAS",
+          "municipio": "CA�UELAS",
+          "seccion": "III",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "III·ENSENADA",
+          "municipio": "ENSENADA",
+          "seccion": "III",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "III·ESTEBAN ECHEVERRIA",
+          "municipio": "ESTEBAN ECHEVERRIA",
+          "seccion": "III",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "III·EZEIZA",
+          "municipio": "EZEIZA",
+          "seccion": "III",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "III·FLORENCIO VARELA",
+          "municipio": "FLORENCIO VARELA",
+          "seccion": "III",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "III·LA MATANZA",
+          "municipio": "LA MATANZA",
+          "seccion": "III",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "III·LANUS",
+          "municipio": "LANUS",
+          "seccion": "III",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "III·LOBOS",
+          "municipio": "LOBOS",
+          "seccion": "III",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "III·LOMAS DE ZAMORA",
+          "municipio": "LOMAS DE ZAMORA",
+          "seccion": "III",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "III·MAGDALENA",
+          "municipio": "MAGDALENA",
+          "seccion": "III",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "III·PRESIDENTE PERON",
+          "municipio": "PRESIDENTE PERON",
+          "seccion": "III",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "III·PUNTA INDIO",
+          "municipio": "PUNTA INDIO",
+          "seccion": "III",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "III·QUILMES",
+          "municipio": "QUILMES",
+          "seccion": "III",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "III·SAN VICENTE",
+          "municipio": "SAN VICENTE",
+          "seccion": "III",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "IV·ALBERTI",
+          "municipio": "ALBERTI",
+          "seccion": "IV",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "IV·BRAGADO",
+          "municipio": "BRAGADO",
+          "seccion": "IV",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "IV·CARLOS CASARES",
+          "municipio": "CARLOS CASARES",
+          "seccion": "IV",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "IV·CARLOS TEJEDOR",
+          "municipio": "CARLOS TEJEDOR",
+          "seccion": "IV",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "IV·CHACABUCO",
+          "municipio": "CHACABUCO",
+          "seccion": "IV",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "IV·CHIVILCOY",
+          "municipio": "CHIVILCOY",
+          "seccion": "IV",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "IV·FLORENTINO AMEGHINO",
+          "municipio": "FLORENTINO AMEGHINO",
+          "seccion": "IV",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "IV·GENERAL ARENALES",
+          "municipio": "GENERAL ARENALES",
+          "seccion": "IV",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "IV·GENERAL PINTO",
+          "municipio": "GENERAL PINTO",
+          "seccion": "IV",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "IV·GENERAL VIAMONTE",
+          "municipio": "GENERAL VIAMONTE",
+          "seccion": "IV",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "IV·GENERAL VILLEGAS",
+          "municipio": "GENERAL VILLEGAS",
+          "seccion": "IV",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "IV·HIPOLITO YRIGOYEN",
+          "municipio": "HIPOLITO YRIGOYEN",
+          "seccion": "IV",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "IV·JUNIN",
+          "municipio": "JUNIN",
+          "seccion": "IV",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "IV·LEANDRO N. ALEM",
+          "municipio": "LEANDRO N. ALEM",
+          "seccion": "IV",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "IV·LINCOLN",
+          "municipio": "LINCOLN",
+          "seccion": "IV",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "IV·NUEVE DE JULIO",
+          "municipio": "NUEVE DE JULIO",
+          "seccion": "IV",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "IV·PEHUAJO",
+          "municipio": "PEHUAJO",
+          "seccion": "IV",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "IV·RIVADAVIA",
+          "municipio": "RIVADAVIA",
+          "seccion": "IV",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "IV·TRENQUE LAUQUEN",
+          "municipio": "TRENQUE LAUQUEN",
+          "seccion": "IV",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "V·AYACUCHO",
+          "municipio": "AYACUCHO",
+          "seccion": "V",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "V·BALCARCE",
+          "municipio": "BALCARCE",
+          "seccion": "V",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "V·CASTELLI",
+          "municipio": "CASTELLI",
+          "seccion": "V",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "V·CHASCOMUS",
+          "municipio": "CHASCOMUS",
+          "seccion": "V",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "V·DOLORES",
+          "municipio": "DOLORES",
+          "seccion": "V",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "V·GENERAL ALVARADO",
+          "municipio": "GENERAL ALVARADO",
+          "seccion": "V",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "V·GENERAL BELGRANO",
+          "municipio": "GENERAL BELGRANO",
+          "seccion": "V",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "V·GENERAL GUIDO",
+          "municipio": "GENERAL GUIDO",
+          "seccion": "V",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "V·GENERAL LAVALLE",
+          "municipio": "GENERAL LAVALLE",
+          "seccion": "V",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "V·GENERAL MADARIAGA",
+          "municipio": "GENERAL MADARIAGA",
+          "seccion": "V",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "V·GENERAL PAZ",
+          "municipio": "GENERAL PAZ",
+          "seccion": "V",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "V·GENERAL PUEYRREDON",
+          "municipio": "GENERAL PUEYRREDON",
+          "seccion": "V",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "V·LAS FLORES",
+          "municipio": "LAS FLORES",
+          "seccion": "V",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "V·LEZAMA",
+          "municipio": "LEZAMA",
+          "seccion": "V",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "V·LOBERIA",
+          "municipio": "LOBERIA",
+          "seccion": "V",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "V·MAIPU",
+          "municipio": "MAIPU",
+          "seccion": "V",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "V·MAR CHIQUITA",
+          "municipio": "MAR CHIQUITA",
+          "seccion": "V",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "V·MONTE",
+          "municipio": "MONTE",
+          "seccion": "V",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "V·NECOCHEA",
+          "municipio": "NECOCHEA",
+          "seccion": "V",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "V·PARTIDO DE LA COSTA",
+          "municipio": "PARTIDO DE LA COSTA",
+          "seccion": "V",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "V·PILA",
+          "municipio": "PILA",
+          "seccion": "V",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "V·PINAMAR",
+          "municipio": "PINAMAR",
+          "seccion": "V",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "V·RAUCH",
+          "municipio": "RAUCH",
+          "seccion": "V",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "V·SAN CAYETANO",
+          "municipio": "SAN CAYETANO",
+          "seccion": "V",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "V·TANDIL",
+          "municipio": "TANDIL",
+          "seccion": "V",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "V·TORDILLO",
+          "municipio": "TORDILLO",
+          "seccion": "V",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "V·VILLA GESELL",
+          "municipio": "VILLA GESELL",
+          "seccion": "V",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "VI·ADOLFO ALSINA",
+          "municipio": "ADOLFO ALSINA",
+          "seccion": "VI",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "VI·ADOLFO GONZALES CHAVES",
+          "municipio": "ADOLFO GONZALES CHAVES",
+          "seccion": "VI",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "VI·BAHIA BLANCA",
+          "municipio": "BAHIA BLANCA",
+          "seccion": "VI",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "VI·BENITO JUAREZ",
+          "municipio": "BENITO JUAREZ",
+          "seccion": "VI",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "VI·CORONEL DE MARINA L. ROSALES",
+          "municipio": "CORONEL DE MARINA L. ROSALES",
+          "seccion": "VI",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "VI·CORONEL DORREGO",
+          "municipio": "CORONEL DORREGO",
+          "seccion": "VI",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "VI·CORONEL PRINGLES",
+          "municipio": "CORONEL PRINGLES",
+          "seccion": "VI",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "VI·CORONEL SUAREZ",
+          "municipio": "CORONEL SUAREZ",
+          "seccion": "VI",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "VI·DAIREAUX",
+          "municipio": "DAIREAUX",
+          "seccion": "VI",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "VI·GENERAL LAMADRID",
+          "municipio": "GENERAL LAMADRID",
+          "seccion": "VI",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "VI·GUAMINI",
+          "municipio": "GUAMINI",
+          "seccion": "VI",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "VI·LAPRIDA",
+          "municipio": "LAPRIDA",
+          "seccion": "VI",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "VI·MONTE HERMOSO",
+          "municipio": "MONTE HERMOSO",
+          "seccion": "VI",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "VI·PATAGONES",
+          "municipio": "PATAGONES",
+          "seccion": "VI",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "VI·PELLEGRINI",
+          "municipio": "PELLEGRINI",
+          "seccion": "VI",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "VI·PUAN",
+          "municipio": "PUAN",
+          "seccion": "VI",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "VI·SAAVEDRA",
+          "municipio": "SAAVEDRA",
+          "seccion": "VI",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "VI·SALLIQUELO",
+          "municipio": "SALLIQUELO",
+          "seccion": "VI",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "VI·TORNQUIST",
+          "municipio": "TORNQUIST",
+          "seccion": "VI",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "VI·TRES ARROYOS",
+          "municipio": "TRES ARROYOS",
+          "seccion": "VI",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "VI·TRES LOMAS",
+          "municipio": "TRES LOMAS",
+          "seccion": "VI",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "VI·VILLARINO",
+          "municipio": "VILLARINO",
+          "seccion": "VI",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "VII·25 DE MAYO",
+          "municipio": "25 DE MAYO",
+          "seccion": "VII",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "VII·AZUL",
+          "municipio": "AZUL",
+          "seccion": "VII",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "VII·BOLIVAR",
+          "municipio": "BOLIVAR",
+          "seccion": "VII",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "VII·GENERAL ALVEAR",
+          "municipio": "GENERAL ALVEAR",
+          "seccion": "VII",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "VII·OLAVARRIA",
+          "municipio": "OLAVARRIA",
+          "seccion": "VII",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "VII·ROQUE PEREZ",
+          "municipio": "ROQUE PEREZ",
+          "seccion": "VII",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "VII·SALADILLO",
+          "municipio": "SALADILLO",
+          "seccion": "VII",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "VII·TAPALQUE",
+          "municipio": "TAPALQUE",
+          "seccion": "VII",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        },
+        {
+          "id": "VIII·LA PLATA",
+          "municipio": "LA PLATA",
+          "seccion": "VIII",
+          "data": [
+            {
+              "x": "2007",
+              "y": null
+            },
+            {
+              "x": "2011",
+              "y": null
+            },
+            {
+              "x": "2015",
+              "y": null
+            },
+            {
+              "x": "2019",
+              "y": null
+            },
+            {
+              "x": "2023",
+              "y": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mapa-clusters",
+      "type": "map",
+      "title": "Tipologías electorales · clusters k-means (k=5) sobre voto a gobernador 2023",
+      "sectionId": "clusters",
+      "data": [
+        {
+          "municipioId": "ALMIRANTE BROWN",
+          "municipioNombre": "ALMIRANTE BROWN",
+          "value": 1,
+          "label": "Cluster 1 · dom. Peronismo (Peronismo 48%, JxC 18%, LLA 21%, Otros 13%)"
+        },
+        {
+          "municipioId": "AVELLANEDA",
+          "municipioNombre": "AVELLANEDA",
+          "value": 1,
+          "label": "Cluster 1 · dom. Peronismo (Peronismo 48%, JxC 23%, LLA 19%, Otros 10%)"
+        },
+        {
+          "municipioId": "BARADERO",
+          "municipioNombre": "BARADERO",
+          "value": 1,
+          "label": "Cluster 1 · dom. Peronismo (Peronismo 43%, JxC 19%, LLA 23%, Otros 15%)"
+        },
+        {
+          "municipioId": "BENITO JUAREZ",
+          "municipioNombre": "BENITO JUAREZ",
+          "value": 1,
+          "label": "Cluster 1 · dom. Peronismo (Peronismo 39%, JxC 18%, LLA 21%, Otros 22%)"
+        },
+        {
+          "municipioId": "BERAZATEGUI",
+          "municipioNombre": "BERAZATEGUI",
+          "value": 1,
+          "label": "Cluster 1 · dom. Peronismo (Peronismo 46%, JxC 18%, LLA 23%, Otros 13%)"
+        },
+        {
+          "municipioId": "BERISSO",
+          "municipioNombre": "BERISSO",
+          "value": 1,
+          "label": "Cluster 1 · dom. Peronismo (Peronismo 46%, JxC 21%, LLA 20%, Otros 13%)"
+        },
+        {
+          "municipioId": "CA�UELAS",
+          "municipioNombre": "CA�UELAS",
+          "value": 1,
+          "label": "Cluster 1 · dom. Peronismo (Peronismo 42%, JxC 21%, LLA 25%, Otros 12%)"
+        },
+        {
+          "municipioId": "PILAR",
+          "municipioNombre": "PILAR",
+          "value": 1,
+          "label": "Cluster 1 · dom. Peronismo (Peronismo 42%, JxC 19%, LLA 26%, Otros 13%)"
+        },
+        {
+          "municipioId": "ENSENADA",
+          "municipioNombre": "ENSENADA",
+          "value": 1,
+          "label": "Cluster 1 · dom. Peronismo (Peronismo 54%, JxC 17%, LLA 18%, Otros 11%)"
+        },
+        {
+          "municipioId": "ESCOBAR",
+          "municipioNombre": "ESCOBAR",
+          "value": 1,
+          "label": "Cluster 1 · dom. Peronismo (Peronismo 41%, JxC 19%, LLA 27%, Otros 14%)"
+        },
+        {
+          "municipioId": "ESTEBAN ECHEVERRIA",
+          "municipioNombre": "ESTEBAN ECHEVERRIA",
+          "value": 1,
+          "label": "Cluster 1 · dom. Peronismo (Peronismo 44%, JxC 19%, LLA 24%, Otros 13%)"
+        },
+        {
+          "municipioId": "EZEIZA",
+          "municipioNombre": "EZEIZA",
+          "value": 1,
+          "label": "Cluster 1 · dom. Peronismo (Peronismo 45%, JxC 15%, LLA 26%, Otros 14%)"
+        },
+        {
+          "municipioId": "FLORENCIO VARELA",
+          "municipioNombre": "FLORENCIO VARELA",
+          "value": 1,
+          "label": "Cluster 1 · dom. Peronismo (Peronismo 51%, JxC 12%, LLA 22%, Otros 15%)"
+        },
+        {
+          "municipioId": "GENERAL RODRIGUEZ",
+          "municipioNombre": "GENERAL RODRIGUEZ",
+          "value": 1,
+          "label": "Cluster 1 · dom. Peronismo (Peronismo 44%, JxC 18%, LLA 24%, Otros 14%)"
+        },
+        {
+          "municipioId": "HURLINGHAM",
+          "municipioNombre": "HURLINGHAM",
+          "value": 1,
+          "label": "Cluster 1 · dom. Peronismo (Peronismo 43%, JxC 23%, LLA 22%, Otros 11%)"
+        },
+        {
+          "municipioId": "JOSE C PAZ",
+          "municipioNombre": "JOSE C. PAZ",
+          "value": 1,
+          "label": "Cluster 1 · dom. Peronismo (Peronismo 50%, JxC 14%, LLA 22%, Otros 14%)"
+        },
+        {
+          "municipioId": "LA MATANZA",
+          "municipioNombre": "LA MATANZA",
+          "value": 1,
+          "label": "Cluster 1 · dom. Peronismo (Peronismo 50%, JxC 16%, LLA 21%, Otros 13%)"
+        },
+        {
+          "municipioId": "LOMAS DE ZAMORA",
+          "municipioNombre": "LOMAS DE ZAMORA",
+          "value": 1,
+          "label": "Cluster 1 · dom. Peronismo (Peronismo 48%, JxC 21%, LLA 20%, Otros 11%)"
+        },
+        {
+          "municipioId": "MALVINAS ARGENTINAS",
+          "municipioNombre": "MALVINAS ARGENTINAS",
+          "value": 1,
+          "label": "Cluster 1 · dom. Peronismo (Peronismo 48%, JxC 16%, LLA 24%, Otros 12%)"
+        },
+        {
+          "municipioId": "MARCOS PAZ",
+          "municipioNombre": "MARCOS PAZ",
+          "value": 1,
+          "label": "Cluster 1 · dom. Peronismo (Peronismo 48%, JxC 16%, LLA 21%, Otros 15%)"
+        },
+        {
+          "municipioId": "MERLO",
+          "municipioNombre": "MERLO",
+          "value": 1,
+          "label": "Cluster 1 · dom. Peronismo (Peronismo 48%, JxC 15%, LLA 22%, Otros 14%)"
+        },
+        {
+          "municipioId": "MORENO",
+          "municipioNombre": "MORENO",
+          "value": 1,
+          "label": "Cluster 1 · dom. Peronismo (Peronismo 49%, JxC 14%, LLA 23%, Otros 14%)"
+        },
+        {
+          "municipioId": "MONTE HERMOSO",
+          "municipioNombre": "MONTE HERMOSO",
+          "value": 1,
+          "label": "Cluster 1 · dom. Peronismo (Peronismo 44%, JxC 22%, LLA 23%, Otros 11%)"
+        },
+        {
+          "municipioId": "PRESIDENTE PERON",
+          "municipioNombre": "PRESIDENTE PERON",
+          "value": 1,
+          "label": "Cluster 1 · dom. Peronismo (Peronismo 48%, JxC 12%, LLA 22%, Otros 18%)"
+        },
+        {
+          "municipioId": "QUILMES",
+          "municipioNombre": "QUILMES",
+          "value": 1,
+          "label": "Cluster 1 · dom. Peronismo (Peronismo 46%, JxC 23%, LLA 20%, Otros 11%)"
+        },
+        {
+          "municipioId": "SAN VICENTE",
+          "municipioNombre": "SAN VICENTE",
+          "value": 1,
+          "label": "Cluster 1 · dom. Peronismo (Peronismo 49%, JxC 16%, LLA 22%, Otros 14%)"
+        },
+        {
+          "municipioId": "ALBERTI",
+          "municipioNombre": "ALBERTI",
+          "value": 2,
+          "label": "Cluster 2 · dom. Peronismo (Peronismo 36%, JxC 30%, LLA 21%, Otros 13%)"
+        },
+        {
+          "municipioId": "ARRECIFES",
+          "municipioNombre": "ARRECIFES",
+          "value": 2,
+          "label": "Cluster 2 · dom. Peronismo (Peronismo 34%, JxC 29%, LLA 22%, Otros 14%)"
+        },
+        {
+          "municipioId": "AZUL",
+          "municipioNombre": "AZUL",
+          "value": 2,
+          "label": "Cluster 2 · dom. Peronismo (Peronismo 31%, JxC 27%, LLA 27%, Otros 15%)"
+        },
+        {
+          "municipioId": "BRAGADO",
+          "municipioNombre": "BRAGADO",
+          "value": 2,
+          "label": "Cluster 2 · dom. Peronismo (Peronismo 34%, JxC 30%, LLA 22%, Otros 14%)"
+        },
+        {
+          "municipioId": "BRANDSEN",
+          "municipioNombre": "BRANDSEN",
+          "value": 2,
+          "label": "Cluster 2 · dom. Peronismo (Peronismo 36%, JxC 29%, LLA 23%, Otros 12%)"
+        },
+        {
+          "municipioId": "CARLOS CASARES",
+          "municipioNombre": "CARLOS CASARES",
+          "value": 2,
+          "label": "Cluster 2 · dom. Peronismo (Peronismo 32%, JxC 26%, LLA 27%, Otros 16%)"
+        },
+        {
+          "municipioId": "CARLOS TEJEDOR",
+          "municipioNombre": "CARLOS TEJEDOR",
+          "value": 2,
+          "label": "Cluster 2 · dom. Peronismo (Peronismo 43%, JxC 29%, LLA 15%, Otros 13%)"
+        },
+        {
+          "municipioId": "CARMEN DE ARECO",
+          "municipioNombre": "CARMEN DE ARECO",
+          "value": 2,
+          "label": "Cluster 2 · dom. Peronismo (Peronismo 38%, JxC 25%, LLA 22%, Otros 15%)"
+        },
+        {
+          "municipioId": "CASTELLI",
+          "municipioNombre": "CASTELLI",
+          "value": 2,
+          "label": "Cluster 2 · dom. Peronismo (Peronismo 43%, JxC 27%, LLA 18%, Otros 12%)"
+        },
+        {
+          "municipioId": "CHACABUCO",
+          "municipioNombre": "CHACABUCO",
+          "value": 2,
+          "label": "Cluster 2 · dom. Peronismo (Peronismo 39%, JxC 24%, LLA 25%, Otros 11%)"
+        },
+        {
+          "municipioId": "CHIVILCOY",
+          "municipioNombre": "CHIVILCOY",
+          "value": 2,
+          "label": "Cluster 2 · dom. Peronismo (Peronismo 33%, JxC 22%, LLA 22%, Otros 23%)"
+        },
+        {
+          "municipioId": "COLON",
+          "municipioNombre": "COLON",
+          "value": 2,
+          "label": "Cluster 2 · dom. Peronismo (Peronismo 39%, JxC 26%, LLA 19%, Otros 16%)"
+        },
+        {
+          "municipioId": "DAIREAUX",
+          "municipioNombre": "DAIREAUX",
+          "value": 2,
+          "label": "Cluster 2 · dom. Peronismo (Peronismo 33%, JxC 31%, LLA 22%, Otros 14%)"
+        },
+        {
+          "municipioId": "EXALTACION DE LA CRUZ",
+          "municipioNombre": "EXALTACION DE LA CRUZ",
+          "value": 2,
+          "label": "Cluster 2 · dom. Peronismo (Peronismo 33%, JxC 26%, LLA 27%, Otros 14%)"
+        },
+        {
+          "municipioId": "GENERAL ALVARADO",
+          "municipioNombre": "GENERAL ALVARADO",
+          "value": 2,
+          "label": "Cluster 2 · dom. Peronismo (Peronismo 36%, JxC 30%, LLA 22%, Otros 12%)"
+        },
+        {
+          "municipioId": "GENERAL GUIDO",
+          "municipioNombre": "GENERAL GUIDO",
+          "value": 2,
+          "label": "Cluster 2 · dom. Peronismo (Peronismo 44%, JxC 34%, LLA 10%, Otros 13%)"
+        },
+        {
+          "municipioId": "GENERAL LAS HERAS",
+          "municipioNombre": "GENERAL LAS HERAS",
+          "value": 2,
+          "label": "Cluster 2 · dom. Peronismo (Peronismo 41%, JxC 26%, LLA 20%, Otros 13%)"
+        },
+        {
+          "municipioId": "GENERAL PAZ",
+          "municipioNombre": "GENERAL PAZ",
+          "value": 2,
+          "label": "Cluster 2 · dom. Peronismo (Peronismo 41%, JxC 26%, LLA 23%, Otros 10%)"
+        },
+        {
+          "municipioId": "GENERAL PINTO",
+          "municipioNombre": "GENERAL PINTO",
+          "value": 2,
+          "label": "Cluster 2 · dom. Peronismo (Peronismo 40%, JxC 30%, LLA 18%, Otros 12%)"
+        },
+        {
+          "municipioId": "GENERAL PUEYRREDON",
+          "municipioNombre": "GENERAL PUEYRREDON",
+          "value": 2,
+          "label": "Cluster 2 · dom. Peronismo (Peronismo 33%, JxC 31%, LLA 24%, Otros 12%)"
+        },
+        {
+          "municipioId": "GENERAL SAN MARTIN",
+          "municipioNombre": "GENERAL SAN MARTIN",
+          "value": 2,
+          "label": "Cluster 2 · dom. Peronismo (Peronismo 42%, JxC 24%, LLA 23%, Otros 11%)"
+        },
+        {
+          "municipioId": "GENERAL VIAMONTE",
+          "municipioNombre": "GENERAL VIAMONTE",
+          "value": 2,
+          "label": "Cluster 2 · dom. Peronismo (Peronismo 36%, JxC 33%, LLA 20%, Otros 12%)"
+        },
+        {
+          "municipioId": "ADOLFO GONZALES CHAVES",
+          "municipioNombre": "ADOLFO GONZALES CHAVES",
+          "value": 2,
+          "label": "Cluster 2 · dom. Peronismo (Peronismo 36%, JxC 24%, LLA 21%, Otros 20%)"
+        },
+        {
+          "municipioId": "GUAMINI",
+          "municipioNombre": "GUAMINI",
+          "value": 2,
+          "label": "Cluster 2 · dom. Peronismo (Peronismo 38%, JxC 31%, LLA 19%, Otros 12%)"
+        },
+        {
+          "municipioId": "HIPOLITO YRIGOYEN",
+          "municipioNombre": "HIPOLITO YRIGOYEN",
+          "value": 2,
+          "label": "Cluster 2 · dom. Peronismo (Peronismo 35%, JxC 30%, LLA 21%, Otros 14%)"
+        },
+        {
+          "municipioId": "ITUZAINGO",
+          "municipioNombre": "ITUZAINGO",
+          "value": 2,
+          "label": "Cluster 2 · dom. Peronismo (Peronismo 42%, JxC 27%, LLA 21%, Otros 11%)"
+        },
+        {
+          "municipioId": "JUNIN",
+          "municipioNombre": "JUNIN",
+          "value": 2,
+          "label": "Cluster 2 · dom. Peronismo (Peronismo 33%, JxC 31%, LLA 23%, Otros 13%)"
+        },
+        {
+          "municipioId": "LA PLATA",
+          "municipioNombre": "LA PLATA",
+          "value": 2,
+          "label": "Cluster 2 · dom. Peronismo (Peronismo 40%, JxC 30%, LLA 19%, Otros 11%)"
+        },
+        {
+          "municipioId": "LANUS",
+          "municipioNombre": "LANUS",
+          "value": 2,
+          "label": "Cluster 2 · dom. Peronismo (Peronismo 43%, JxC 30%, LLA 17%, Otros 10%)"
+        },
+        {
+          "municipioId": "LAPRIDA",
+          "municipioNombre": "LAPRIDA",
+          "value": 2,
+          "label": "Cluster 2 · dom. Peronismo (Peronismo 40%, JxC 30%, LLA 18%, Otros 11%)"
+        },
+        {
+          "municipioId": "LAS FLORES",
+          "municipioNombre": "LAS FLORES",
+          "value": 2,
+          "label": "Cluster 2 · dom. Peronismo (Peronismo 35%, JxC 26%, LLA 23%, Otros 16%)"
+        },
+        {
+          "municipioId": "LEANDRO N ALEM",
+          "municipioNombre": "LEANDRO N. ALEM",
+          "value": 2,
+          "label": "Cluster 2 · dom. Peronismo (Peronismo 38%, JxC 27%, LLA 21%, Otros 13%)"
+        },
+        {
+          "municipioId": "LUJAN",
+          "municipioNombre": "LUJAN",
+          "value": 2,
+          "label": "Cluster 2 · dom. Peronismo (Peronismo 35%, JxC 27%, LLA 24%, Otros 14%)"
+        },
+        {
+          "municipioId": "MAR CHIQUITA",
+          "municipioNombre": "MAR CHIQUITA",
+          "value": 2,
+          "label": "Cluster 2 · dom. Peronismo (Peronismo 40%, JxC 25%, LLA 24%, Otros 11%)"
+        },
+        {
+          "municipioId": "MERCEDES",
+          "municipioNombre": "MERCEDES",
+          "value": 2,
+          "label": "Cluster 2 · dom. Peronismo (Peronismo 35%, JxC 29%, LLA 25%, Otros 11%)"
+        },
+        {
+          "municipioId": "MORON",
+          "municipioNombre": "MORON",
+          "value": 2,
+          "label": "Cluster 2 · dom. Peronismo (Peronismo 39%, JxC 30%, LLA 21%, Otros 11%)"
+        },
+        {
+          "municipioId": "OLAVARRIA",
+          "municipioNombre": "OLAVARRIA",
+          "value": 2,
+          "label": "Cluster 2 · dom. Peronismo (Peronismo 33%, JxC 26%, LLA 28%, Otros 14%)"
+        },
+        {
+          "municipioId": "PARTIDO DE LA COSTA",
+          "municipioNombre": "PARTIDO DE LA COSTA",
+          "value": 2,
+          "label": "Cluster 2 · dom. Peronismo (Peronismo 34%, JxC 27%, LLA 27%, Otros 13%)"
+        },
+        {
+          "municipioId": "VILLA GESELL",
+          "municipioNombre": "VILLA GESELL",
+          "value": 2,
+          "label": "Cluster 2 · dom. Peronismo (Peronismo 37%, JxC 27%, LLA 24%, Otros 11%)"
+        },
+        {
+          "municipioId": "PATAGONES",
+          "municipioNombre": "PATAGONES",
+          "value": 2,
+          "label": "Cluster 2 · dom. Peronismo (Peronismo 33%, JxC 27%, LLA 27%, Otros 13%)"
+        },
+        {
+          "municipioId": "PEHUAJO",
+          "municipioNombre": "PEHUAJO",
+          "value": 2,
+          "label": "Cluster 2 · dom. Peronismo (Peronismo 36%, JxC 30%, LLA 20%, Otros 14%)"
+        },
+        {
+          "municipioId": "PILA",
+          "municipioNombre": "PILA",
+          "value": 2,
+          "label": "Cluster 2 · dom. Peronismo (Peronismo 41%, JxC 24%, LLA 21%, Otros 14%)"
+        },
+        {
+          "municipioId": "PUNTA INDIO",
+          "municipioNombre": "PUNTA INDIO",
+          "value": 2,
+          "label": "Cluster 2 · dom. Peronismo (Peronismo 36%, JxC 29%, LLA 23%, Otros 12%)"
+        },
+        {
+          "municipioId": "RAMALLO",
+          "municipioNombre": "RAMALLO",
+          "value": 2,
+          "label": "Cluster 2 · dom. Peronismo (Peronismo 37%, JxC 27%, LLA 20%, Otros 16%)"
+        },
+        {
+          "municipioId": "RAUCH",
+          "municipioNombre": "RAUCH",
+          "value": 2,
+          "label": "Cluster 2 · dom. Peronismo (Peronismo 37%, JxC 30%, LLA 16%, Otros 17%)"
+        },
+        {
+          "municipioId": "SALTO",
+          "municipioNombre": "SALTO",
+          "value": 2,
+          "label": "Cluster 2 · dom. Peronismo (Peronismo 33%, JxC 25%, LLA 28%, Otros 15%)"
+        },
+        {
+          "municipioId": "SAN ANDRES DE GILES",
+          "municipioNombre": "SAN ANDRES DE GILES",
+          "value": 2,
+          "label": "Cluster 2 · dom. Peronismo (Peronismo 32%, JxC 25%, LLA 25%, Otros 18%)"
+        },
+        {
+          "municipioId": "SAN FERNANDO",
+          "municipioNombre": "SAN FERNANDO",
+          "value": 2,
+          "label": "Cluster 2 · dom. Peronismo (Peronismo 41%, JxC 24%, LLA 22%, Otros 12%)"
+        },
+        {
+          "municipioId": "SAN MIGUEL",
+          "municipioNombre": "SAN MIGUEL",
+          "value": 2,
+          "label": "Cluster 2 · dom. Peronismo (Peronismo 37%, JxC 28%, LLA 22%, Otros 13%)"
+        },
+        {
+          "municipioId": "SAN NICOLAS",
+          "municipioNombre": "SAN NICOLAS",
+          "value": 2,
+          "label": "Cluster 2 · dom. Peronismo (Peronismo 31%, JxC 28%, LLA 25%, Otros 16%)"
+        },
+        {
+          "municipioId": "SAN PEDRO",
+          "municipioNombre": "SAN PEDRO",
+          "value": 2,
+          "label": "Cluster 2 · dom. Peronismo (Peronismo 32%, JxC 24%, LLA 28%, Otros 16%)"
+        },
+        {
+          "municipioId": "SUIPACHA",
+          "municipioNombre": "SUIPACHA",
+          "value": 2,
+          "label": "Cluster 2 · dom. Peronismo (Peronismo 38%, JxC 31%, LLA 19%, Otros 12%)"
+        },
+        {
+          "municipioId": "TAPALQUE",
+          "municipioNombre": "TAPALQUE",
+          "value": 2,
+          "label": "Cluster 2 · dom. Peronismo (Peronismo 37%, JxC 33%, LLA 16%, Otros 13%)"
+        },
+        {
+          "municipioId": "TIGRE",
+          "municipioNombre": "TIGRE",
+          "value": 2,
+          "label": "Cluster 2 · dom. Peronismo (Peronismo 38%, JxC 24%, LLA 24%, Otros 14%)"
+        },
+        {
+          "municipioId": "TORDILLO",
+          "municipioNombre": "TORDILLO",
+          "value": 2,
+          "label": "Cluster 2 · dom. Peronismo (Peronismo 40%, JxC 31%, LLA 15%, Otros 14%)"
+        },
+        {
+          "municipioId": "TRES ARROYOS",
+          "municipioNombre": "TRES ARROYOS",
+          "value": 2,
+          "label": "Cluster 2 · dom. Peronismo (Peronismo 33%, JxC 27%, LLA 23%, Otros 17%)"
+        },
+        {
+          "municipioId": "TRES DE FEBRERO",
+          "municipioNombre": "TRES DE FEBRERO",
+          "value": 2,
+          "label": "Cluster 2 · dom. Peronismo (Peronismo 38%, JxC 29%, LLA 21%, Otros 11%)"
+        },
+        {
+          "municipioId": "ZARATE",
+          "municipioNombre": "ZARATE",
+          "value": 2,
+          "label": "Cluster 2 · dom. Peronismo (Peronismo 38%, JxC 25%, LLA 23%, Otros 14%)"
+        },
+        {
+          "municipioId": "AYACUCHO",
+          "municipioNombre": "AYACUCHO",
+          "value": 3,
+          "label": "Cluster 3 · dom. JxC (Peronismo 29%, JxC 32%, LLA 19%, Otros 20%)"
+        },
+        {
+          "municipioId": "BOLIVAR",
+          "municipioNombre": "BOLIVAR",
+          "value": 3,
+          "label": "Cluster 3 · dom. JxC (Peronismo 32%, JxC 33%, LLA 21%, Otros 13%)"
+        },
+        {
+          "municipioId": "CAMPANA",
+          "municipioNombre": "CAMPANA",
+          "value": 3,
+          "label": "Cluster 3 · dom. JxC (Peronismo 31%, JxC 32%, LLA 21%, Otros 16%)"
+        },
+        {
+          "municipioId": "CHASCOMUS",
+          "municipioNombre": "CHASCOMUS",
+          "value": 3,
+          "label": "Cluster 3 · dom. JxC (Peronismo 30%, JxC 33%, LLA 20%, Otros 18%)"
+        },
+        {
+          "municipioId": "CORONEL DORREGO",
+          "municipioNombre": "CORONEL DORREGO",
+          "value": 3,
+          "label": "Cluster 3 · dom. JxC (Peronismo 27%, JxC 37%, LLA 20%, Otros 16%)"
+        },
+        {
+          "municipioId": "DOLORES",
+          "municipioNombre": "DOLORES",
+          "value": 3,
+          "label": "Cluster 3 · dom. JxC (Peronismo 33%, JxC 36%, LLA 18%, Otros 13%)"
+        },
+        {
+          "municipioId": "FLORENTINO AMEGHINO",
+          "municipioNombre": "FLORENTINO AMEGHINO",
+          "value": 3,
+          "label": "Cluster 3 · dom. JxC (Peronismo 35%, JxC 39%, LLA 18%, Otros 8%)"
+        },
+        {
+          "municipioId": "GENERAL ALVEAR",
+          "municipioNombre": "GENERAL ALVEAR",
+          "value": 3,
+          "label": "Cluster 3 · dom. JxC (Peronismo 34%, JxC 35%, LLA 18%, Otros 13%)"
+        },
+        {
+          "municipioId": "GENERAL ARENALES",
+          "municipioNombre": "GENERAL ARENALES",
+          "value": 3,
+          "label": "Cluster 3 · dom. JxC (Peronismo 27%, JxC 37%, LLA 24%, Otros 12%)"
+        },
+        {
+          "municipioId": "GENERAL BELGRANO",
+          "municipioNombre": "GENERAL BELGRANO",
+          "value": 3,
+          "label": "Cluster 3 · dom. JxC (Peronismo 32%, JxC 35%, LLA 19%, Otros 14%)"
+        },
+        {
+          "municipioId": "GENERAL LAMADRID",
+          "municipioNombre": "GENERAL LAMADRID",
+          "value": 3,
+          "label": "Cluster 3 · dom. JxC (Peronismo 28%, JxC 34%, LLA 23%, Otros 15%)"
+        },
+        {
+          "municipioId": "GENERAL LAVALLE",
+          "municipioNombre": "GENERAL LAVALLE",
+          "value": 3,
+          "label": "Cluster 3 · dom. JxC (Peronismo 35%, JxC 37%, LLA 18%, Otros 10%)"
+        },
+        {
+          "municipioId": "GENERAL MADARIAGA",
+          "municipioNombre": "GENERAL MADARIAGA",
+          "value": 3,
+          "label": "Cluster 3 · dom. JxC (Peronismo 28%, JxC 33%, LLA 22%, Otros 18%)"
+        },
+        {
+          "municipioId": "LEZAMA",
+          "municipioNombre": "LEZAMA",
+          "value": 3,
+          "label": "Cluster 3 · dom. JxC (Peronismo 30%, JxC 37%, LLA 19%, Otros 14%)"
+        },
+        {
+          "municipioId": "LINCOLN",
+          "municipioNombre": "LINCOLN",
+          "value": 3,
+          "label": "Cluster 3 · dom. JxC (Peronismo 29%, JxC 35%, LLA 22%, Otros 14%)"
+        },
+        {
+          "municipioId": "LOBERIA",
+          "municipioNombre": "LOBERIA",
+          "value": 3,
+          "label": "Cluster 3 · dom. JxC (Peronismo 32%, JxC 32%, LLA 22%, Otros 14%)"
+        },
+        {
+          "municipioId": "LOBOS",
+          "municipioNombre": "LOBOS",
+          "value": 3,
+          "label": "Cluster 3 · dom. JxC (Peronismo 28%, JxC 34%, LLA 23%, Otros 15%)"
+        },
+        {
+          "municipioId": "MAGDALENA",
+          "municipioNombre": "MAGDALENA",
+          "value": 3,
+          "label": "Cluster 3 · dom. JxC (Peronismo 30%, JxC 33%, LLA 21%, Otros 16%)"
+        },
+        {
+          "municipioId": "MAIPU",
+          "municipioNombre": "MAIPU",
+          "value": 3,
+          "label": "Cluster 3 · dom. JxC (Peronismo 32%, JxC 40%, LLA 18%, Otros 10%)"
+        },
+        {
+          "municipioId": "MONTE",
+          "municipioNombre": "MONTE",
+          "value": 3,
+          "label": "Cluster 3 · dom. JxC (Peronismo 30%, JxC 33%, LLA 21%, Otros 15%)"
+        },
+        {
+          "municipioId": "PELLEGRINI",
+          "municipioNombre": "PELLEGRINI",
+          "value": 3,
+          "label": "Cluster 3 · dom. JxC (Peronismo 30%, JxC 38%, LLA 17%, Otros 15%)"
+        },
+        {
+          "municipioId": "RIVADAVIA",
+          "municipioNombre": "RIVADAVIA",
+          "value": 3,
+          "label": "Cluster 3 · dom. JxC (Peronismo 28%, JxC 34%, LLA 19%, Otros 19%)"
+        },
+        {
+          "municipioId": "ROQUE PEREZ",
+          "municipioNombre": "ROQUE PEREZ",
+          "value": 3,
+          "label": "Cluster 3 · dom. JxC (Peronismo 32%, JxC 34%, LLA 19%, Otros 14%)"
+        },
+        {
+          "municipioId": "SALLIQUELO",
+          "municipioNombre": "SALLIQUELO",
+          "value": 3,
+          "label": "Cluster 3 · dom. JxC (Peronismo 35%, JxC 35%, LLA 17%, Otros 14%)"
+        },
+        {
+          "municipioId": "SAN ANTONIO DE ARECO",
+          "municipioNombre": "SAN ANTONIO DE ARECO",
+          "value": 3,
+          "label": "Cluster 3 · dom. JxC (Peronismo 30%, JxC 35%, LLA 23%, Otros 12%)"
+        },
+        {
+          "municipioId": "SAN CAYETANO",
+          "municipioNombre": "SAN CAYETANO",
+          "value": 3,
+          "label": "Cluster 3 · dom. JxC (Peronismo 22%, JxC 43%, LLA 22%, Otros 13%)"
+        },
+        {
+          "municipioId": "SAN ISIDRO",
+          "municipioNombre": "SAN ISIDRO",
+          "value": 3,
+          "label": "Cluster 3 · dom. JxC (Peronismo 26%, JxC 44%, LLA 21%, Otros 9%)"
+        },
+        {
+          "municipioId": "TRENQUE LAUQUEN",
+          "municipioNombre": "TRENQUE LAUQUEN",
+          "value": 3,
+          "label": "Cluster 3 · dom. JxC (Peronismo 26%, JxC 39%, LLA 22%, Otros 13%)"
+        },
+        {
+          "municipioId": "TRES LOMAS",
+          "municipioNombre": "TRES LOMAS",
+          "value": 3,
+          "label": "Cluster 3 · dom. JxC (Peronismo 34%, JxC 32%, LLA 18%, Otros 17%)"
+        },
+        {
+          "municipioId": "25 DE MAYO",
+          "municipioNombre": "25 DE MAYO",
+          "value": 3,
+          "label": "Cluster 3 · dom. JxC (Peronismo 31%, JxC 32%, LLA 23%, Otros 14%)"
+        },
+        {
+          "municipioId": "VICENTE LOPEZ",
+          "municipioNombre": "VICENTE LOPEZ",
+          "value": 3,
+          "label": "Cluster 3 · dom. JxC (Peronismo 26%, JxC 45%, LLA 20%, Otros 9%)"
+        },
+        {
+          "municipioId": "ADOLFO ALSINA",
+          "municipioNombre": "ADOLFO ALSINA",
+          "value": 4,
+          "label": "Cluster 4 · dom. JxC (Peronismo 25%, JxC 34%, LLA 27%, Otros 14%)"
+        },
+        {
+          "municipioId": "BAHIA BLANCA",
+          "municipioNombre": "BAHIA BLANCA",
+          "value": 4,
+          "label": "Cluster 4 · dom. JxC (Peronismo 28%, JxC 28%, LLA 30%, Otros 14%)"
+        },
+        {
+          "municipioId": "BALCARCE",
+          "municipioNombre": "BALCARCE",
+          "value": 4,
+          "label": "Cluster 4 · dom. JxC (Peronismo 23%, JxC 34%, LLA 27%, Otros 16%)"
+        },
+        {
+          "municipioId": "CAPITAN SARMIENTO",
+          "municipioNombre": "CAPITAN SARMIENTO",
+          "value": 4,
+          "label": "Cluster 4 · dom. JxC (Peronismo 25%, JxC 35%, LLA 26%, Otros 15%)"
+        },
+        {
+          "municipioId": "CORONEL PRINGLES",
+          "municipioNombre": "CORONEL PRINGLES",
+          "value": 4,
+          "label": "Cluster 4 · dom. JxC (Peronismo 22%, JxC 33%, LLA 27%, Otros 17%)"
+        },
+        {
+          "municipioId": "CORONEL SUAREZ",
+          "municipioNombre": "CORONEL SUAREZ",
+          "value": 4,
+          "label": "Cluster 4 · dom. JxC (Peronismo 28%, JxC 29%, LLA 26%, Otros 16%)"
+        },
+        {
+          "municipioId": "GENERAL VILLEGAS",
+          "municipioNombre": "GENERAL VILLEGAS",
+          "value": 4,
+          "label": "Cluster 4 · dom. JxC (Peronismo 22%, JxC 32%, LLA 28%, Otros 19%)"
+        },
+        {
+          "municipioId": "NAVARRO",
+          "municipioNombre": "NAVARRO",
+          "value": 4,
+          "label": "Cluster 4 · dom. JxC (Peronismo 30%, JxC 29%, LLA 25%, Otros 16%)"
+        },
+        {
+          "municipioId": "NECOCHEA",
+          "municipioNombre": "NECOCHEA",
+          "value": 4,
+          "label": "Cluster 4 · dom. JxC (Peronismo 25%, JxC 28%, LLA 27%, Otros 19%)"
+        },
+        {
+          "municipioId": "NUEVE DE JULIO",
+          "municipioNombre": "NUEVE DE JULIO",
+          "value": 4,
+          "label": "Cluster 4 · dom. JxC (Peronismo 25%, JxC 35%, LLA 27%, Otros 13%)"
+        },
+        {
+          "municipioId": "PINAMAR",
+          "municipioNombre": "PINAMAR",
+          "value": 4,
+          "label": "Cluster 4 · dom. JxC (Peronismo 30%, JxC 29%, LLA 29%, Otros 12%)"
+        },
+        {
+          "municipioId": "PERGAMINO",
+          "municipioNombre": "PERGAMINO",
+          "value": 4,
+          "label": "Cluster 4 · dom. JxC (Peronismo 27%, JxC 33%, LLA 27%, Otros 14%)"
+        },
+        {
+          "municipioId": "PUAN",
+          "municipioNombre": "PUAN",
+          "value": 4,
+          "label": "Cluster 4 · dom. JxC (Peronismo 22%, JxC 37%, LLA 29%, Otros 13%)"
+        },
+        {
+          "municipioId": "ROJAS",
+          "municipioNombre": "ROJAS",
+          "value": 4,
+          "label": "Cluster 4 · dom. JxC (Peronismo 24%, JxC 35%, LLA 23%, Otros 17%)"
+        },
+        {
+          "municipioId": "SAAVEDRA",
+          "municipioNombre": "SAAVEDRA",
+          "value": 4,
+          "label": "Cluster 4 · dom. JxC (Peronismo 21%, JxC 32%, LLA 28%, Otros 19%)"
+        },
+        {
+          "municipioId": "SALADILLO",
+          "municipioNombre": "SALADILLO",
+          "value": 4,
+          "label": "Cluster 4 · dom. JxC (Peronismo 26%, JxC 35%, LLA 25%, Otros 14%)"
+        },
+        {
+          "municipioId": "TANDIL",
+          "municipioNombre": "TANDIL",
+          "value": 4,
+          "label": "Cluster 4 · dom. JxC (Peronismo 28%, JxC 32%, LLA 25%, Otros 14%)"
+        },
+        {
+          "municipioId": "TORNQUIST",
+          "municipioNombre": "TORNQUIST",
+          "value": 4,
+          "label": "Cluster 4 · dom. JxC (Peronismo 31%, JxC 27%, LLA 28%, Otros 13%)"
+        },
+        {
+          "municipioId": "CORONEL DE MARINA L ROSALES",
+          "municipioNombre": "CORONEL DE MARINA L. ROSALES",
+          "value": 5,
+          "label": "Cluster 5 · dom. LLA (Peronismo 20%, JxC 31%, LLA 36%, Otros 14%)"
+        },
+        {
+          "municipioId": "VILLARINO",
+          "municipioNombre": "VILLARINO",
+          "value": 5,
+          "label": "Cluster 5 · dom. LLA (Peronismo 19%, JxC 24%, LLA 34%, Otros 23%)"
+        }
+      ]
+    }
+  ],
+  "rankings": [],
+  "mapData": [
+    {
+      "municipioId": "ALMIRANTE BROWN",
+      "municipioNombre": "ALMIRANTE BROWN",
+      "value": 1,
+      "label": "Cluster 1 · dom. Peronismo (Peronismo 48%, JxC 18%, LLA 21%, Otros 13%)"
+    },
+    {
+      "municipioId": "AVELLANEDA",
+      "municipioNombre": "AVELLANEDA",
+      "value": 1,
+      "label": "Cluster 1 · dom. Peronismo (Peronismo 48%, JxC 23%, LLA 19%, Otros 10%)"
+    },
+    {
+      "municipioId": "BARADERO",
+      "municipioNombre": "BARADERO",
+      "value": 1,
+      "label": "Cluster 1 · dom. Peronismo (Peronismo 43%, JxC 19%, LLA 23%, Otros 15%)"
+    },
+    {
+      "municipioId": "BENITO JUAREZ",
+      "municipioNombre": "BENITO JUAREZ",
+      "value": 1,
+      "label": "Cluster 1 · dom. Peronismo (Peronismo 39%, JxC 18%, LLA 21%, Otros 22%)"
+    },
+    {
+      "municipioId": "BERAZATEGUI",
+      "municipioNombre": "BERAZATEGUI",
+      "value": 1,
+      "label": "Cluster 1 · dom. Peronismo (Peronismo 46%, JxC 18%, LLA 23%, Otros 13%)"
+    },
+    {
+      "municipioId": "BERISSO",
+      "municipioNombre": "BERISSO",
+      "value": 1,
+      "label": "Cluster 1 · dom. Peronismo (Peronismo 46%, JxC 21%, LLA 20%, Otros 13%)"
+    },
+    {
+      "municipioId": "CA�UELAS",
+      "municipioNombre": "CA�UELAS",
+      "value": 1,
+      "label": "Cluster 1 · dom. Peronismo (Peronismo 42%, JxC 21%, LLA 25%, Otros 12%)"
+    },
+    {
+      "municipioId": "PILAR",
+      "municipioNombre": "PILAR",
+      "value": 1,
+      "label": "Cluster 1 · dom. Peronismo (Peronismo 42%, JxC 19%, LLA 26%, Otros 13%)"
+    },
+    {
+      "municipioId": "ENSENADA",
+      "municipioNombre": "ENSENADA",
+      "value": 1,
+      "label": "Cluster 1 · dom. Peronismo (Peronismo 54%, JxC 17%, LLA 18%, Otros 11%)"
+    },
+    {
+      "municipioId": "ESCOBAR",
+      "municipioNombre": "ESCOBAR",
+      "value": 1,
+      "label": "Cluster 1 · dom. Peronismo (Peronismo 41%, JxC 19%, LLA 27%, Otros 14%)"
+    },
+    {
+      "municipioId": "ESTEBAN ECHEVERRIA",
+      "municipioNombre": "ESTEBAN ECHEVERRIA",
+      "value": 1,
+      "label": "Cluster 1 · dom. Peronismo (Peronismo 44%, JxC 19%, LLA 24%, Otros 13%)"
+    },
+    {
+      "municipioId": "EZEIZA",
+      "municipioNombre": "EZEIZA",
+      "value": 1,
+      "label": "Cluster 1 · dom. Peronismo (Peronismo 45%, JxC 15%, LLA 26%, Otros 14%)"
+    },
+    {
+      "municipioId": "FLORENCIO VARELA",
+      "municipioNombre": "FLORENCIO VARELA",
+      "value": 1,
+      "label": "Cluster 1 · dom. Peronismo (Peronismo 51%, JxC 12%, LLA 22%, Otros 15%)"
+    },
+    {
+      "municipioId": "GENERAL RODRIGUEZ",
+      "municipioNombre": "GENERAL RODRIGUEZ",
+      "value": 1,
+      "label": "Cluster 1 · dom. Peronismo (Peronismo 44%, JxC 18%, LLA 24%, Otros 14%)"
+    },
+    {
+      "municipioId": "HURLINGHAM",
+      "municipioNombre": "HURLINGHAM",
+      "value": 1,
+      "label": "Cluster 1 · dom. Peronismo (Peronismo 43%, JxC 23%, LLA 22%, Otros 11%)"
+    },
+    {
+      "municipioId": "JOSE C PAZ",
+      "municipioNombre": "JOSE C. PAZ",
+      "value": 1,
+      "label": "Cluster 1 · dom. Peronismo (Peronismo 50%, JxC 14%, LLA 22%, Otros 14%)"
+    },
+    {
+      "municipioId": "LA MATANZA",
+      "municipioNombre": "LA MATANZA",
+      "value": 1,
+      "label": "Cluster 1 · dom. Peronismo (Peronismo 50%, JxC 16%, LLA 21%, Otros 13%)"
+    },
+    {
+      "municipioId": "LOMAS DE ZAMORA",
+      "municipioNombre": "LOMAS DE ZAMORA",
+      "value": 1,
+      "label": "Cluster 1 · dom. Peronismo (Peronismo 48%, JxC 21%, LLA 20%, Otros 11%)"
+    },
+    {
+      "municipioId": "MALVINAS ARGENTINAS",
+      "municipioNombre": "MALVINAS ARGENTINAS",
+      "value": 1,
+      "label": "Cluster 1 · dom. Peronismo (Peronismo 48%, JxC 16%, LLA 24%, Otros 12%)"
+    },
+    {
+      "municipioId": "MARCOS PAZ",
+      "municipioNombre": "MARCOS PAZ",
+      "value": 1,
+      "label": "Cluster 1 · dom. Peronismo (Peronismo 48%, JxC 16%, LLA 21%, Otros 15%)"
+    },
+    {
+      "municipioId": "MERLO",
+      "municipioNombre": "MERLO",
+      "value": 1,
+      "label": "Cluster 1 · dom. Peronismo (Peronismo 48%, JxC 15%, LLA 22%, Otros 14%)"
+    },
+    {
+      "municipioId": "MORENO",
+      "municipioNombre": "MORENO",
+      "value": 1,
+      "label": "Cluster 1 · dom. Peronismo (Peronismo 49%, JxC 14%, LLA 23%, Otros 14%)"
+    },
+    {
+      "municipioId": "MONTE HERMOSO",
+      "municipioNombre": "MONTE HERMOSO",
+      "value": 1,
+      "label": "Cluster 1 · dom. Peronismo (Peronismo 44%, JxC 22%, LLA 23%, Otros 11%)"
+    },
+    {
+      "municipioId": "PRESIDENTE PERON",
+      "municipioNombre": "PRESIDENTE PERON",
+      "value": 1,
+      "label": "Cluster 1 · dom. Peronismo (Peronismo 48%, JxC 12%, LLA 22%, Otros 18%)"
+    },
+    {
+      "municipioId": "QUILMES",
+      "municipioNombre": "QUILMES",
+      "value": 1,
+      "label": "Cluster 1 · dom. Peronismo (Peronismo 46%, JxC 23%, LLA 20%, Otros 11%)"
+    },
+    {
+      "municipioId": "SAN VICENTE",
+      "municipioNombre": "SAN VICENTE",
+      "value": 1,
+      "label": "Cluster 1 · dom. Peronismo (Peronismo 49%, JxC 16%, LLA 22%, Otros 14%)"
+    },
+    {
+      "municipioId": "ALBERTI",
+      "municipioNombre": "ALBERTI",
+      "value": 2,
+      "label": "Cluster 2 · dom. Peronismo (Peronismo 36%, JxC 30%, LLA 21%, Otros 13%)"
+    },
+    {
+      "municipioId": "ARRECIFES",
+      "municipioNombre": "ARRECIFES",
+      "value": 2,
+      "label": "Cluster 2 · dom. Peronismo (Peronismo 34%, JxC 29%, LLA 22%, Otros 14%)"
+    },
+    {
+      "municipioId": "AZUL",
+      "municipioNombre": "AZUL",
+      "value": 2,
+      "label": "Cluster 2 · dom. Peronismo (Peronismo 31%, JxC 27%, LLA 27%, Otros 15%)"
+    },
+    {
+      "municipioId": "BRAGADO",
+      "municipioNombre": "BRAGADO",
+      "value": 2,
+      "label": "Cluster 2 · dom. Peronismo (Peronismo 34%, JxC 30%, LLA 22%, Otros 14%)"
+    },
+    {
+      "municipioId": "BRANDSEN",
+      "municipioNombre": "BRANDSEN",
+      "value": 2,
+      "label": "Cluster 2 · dom. Peronismo (Peronismo 36%, JxC 29%, LLA 23%, Otros 12%)"
+    },
+    {
+      "municipioId": "CARLOS CASARES",
+      "municipioNombre": "CARLOS CASARES",
+      "value": 2,
+      "label": "Cluster 2 · dom. Peronismo (Peronismo 32%, JxC 26%, LLA 27%, Otros 16%)"
+    },
+    {
+      "municipioId": "CARLOS TEJEDOR",
+      "municipioNombre": "CARLOS TEJEDOR",
+      "value": 2,
+      "label": "Cluster 2 · dom. Peronismo (Peronismo 43%, JxC 29%, LLA 15%, Otros 13%)"
+    },
+    {
+      "municipioId": "CARMEN DE ARECO",
+      "municipioNombre": "CARMEN DE ARECO",
+      "value": 2,
+      "label": "Cluster 2 · dom. Peronismo (Peronismo 38%, JxC 25%, LLA 22%, Otros 15%)"
+    },
+    {
+      "municipioId": "CASTELLI",
+      "municipioNombre": "CASTELLI",
+      "value": 2,
+      "label": "Cluster 2 · dom. Peronismo (Peronismo 43%, JxC 27%, LLA 18%, Otros 12%)"
+    },
+    {
+      "municipioId": "CHACABUCO",
+      "municipioNombre": "CHACABUCO",
+      "value": 2,
+      "label": "Cluster 2 · dom. Peronismo (Peronismo 39%, JxC 24%, LLA 25%, Otros 11%)"
+    },
+    {
+      "municipioId": "CHIVILCOY",
+      "municipioNombre": "CHIVILCOY",
+      "value": 2,
+      "label": "Cluster 2 · dom. Peronismo (Peronismo 33%, JxC 22%, LLA 22%, Otros 23%)"
+    },
+    {
+      "municipioId": "COLON",
+      "municipioNombre": "COLON",
+      "value": 2,
+      "label": "Cluster 2 · dom. Peronismo (Peronismo 39%, JxC 26%, LLA 19%, Otros 16%)"
+    },
+    {
+      "municipioId": "DAIREAUX",
+      "municipioNombre": "DAIREAUX",
+      "value": 2,
+      "label": "Cluster 2 · dom. Peronismo (Peronismo 33%, JxC 31%, LLA 22%, Otros 14%)"
+    },
+    {
+      "municipioId": "EXALTACION DE LA CRUZ",
+      "municipioNombre": "EXALTACION DE LA CRUZ",
+      "value": 2,
+      "label": "Cluster 2 · dom. Peronismo (Peronismo 33%, JxC 26%, LLA 27%, Otros 14%)"
+    },
+    {
+      "municipioId": "GENERAL ALVARADO",
+      "municipioNombre": "GENERAL ALVARADO",
+      "value": 2,
+      "label": "Cluster 2 · dom. Peronismo (Peronismo 36%, JxC 30%, LLA 22%, Otros 12%)"
+    },
+    {
+      "municipioId": "GENERAL GUIDO",
+      "municipioNombre": "GENERAL GUIDO",
+      "value": 2,
+      "label": "Cluster 2 · dom. Peronismo (Peronismo 44%, JxC 34%, LLA 10%, Otros 13%)"
+    },
+    {
+      "municipioId": "GENERAL LAS HERAS",
+      "municipioNombre": "GENERAL LAS HERAS",
+      "value": 2,
+      "label": "Cluster 2 · dom. Peronismo (Peronismo 41%, JxC 26%, LLA 20%, Otros 13%)"
+    },
+    {
+      "municipioId": "GENERAL PAZ",
+      "municipioNombre": "GENERAL PAZ",
+      "value": 2,
+      "label": "Cluster 2 · dom. Peronismo (Peronismo 41%, JxC 26%, LLA 23%, Otros 10%)"
+    },
+    {
+      "municipioId": "GENERAL PINTO",
+      "municipioNombre": "GENERAL PINTO",
+      "value": 2,
+      "label": "Cluster 2 · dom. Peronismo (Peronismo 40%, JxC 30%, LLA 18%, Otros 12%)"
+    },
+    {
+      "municipioId": "GENERAL PUEYRREDON",
+      "municipioNombre": "GENERAL PUEYRREDON",
+      "value": 2,
+      "label": "Cluster 2 · dom. Peronismo (Peronismo 33%, JxC 31%, LLA 24%, Otros 12%)"
+    },
+    {
+      "municipioId": "GENERAL SAN MARTIN",
+      "municipioNombre": "GENERAL SAN MARTIN",
+      "value": 2,
+      "label": "Cluster 2 · dom. Peronismo (Peronismo 42%, JxC 24%, LLA 23%, Otros 11%)"
+    },
+    {
+      "municipioId": "GENERAL VIAMONTE",
+      "municipioNombre": "GENERAL VIAMONTE",
+      "value": 2,
+      "label": "Cluster 2 · dom. Peronismo (Peronismo 36%, JxC 33%, LLA 20%, Otros 12%)"
+    },
+    {
+      "municipioId": "ADOLFO GONZALES CHAVES",
+      "municipioNombre": "ADOLFO GONZALES CHAVES",
+      "value": 2,
+      "label": "Cluster 2 · dom. Peronismo (Peronismo 36%, JxC 24%, LLA 21%, Otros 20%)"
+    },
+    {
+      "municipioId": "GUAMINI",
+      "municipioNombre": "GUAMINI",
+      "value": 2,
+      "label": "Cluster 2 · dom. Peronismo (Peronismo 38%, JxC 31%, LLA 19%, Otros 12%)"
+    },
+    {
+      "municipioId": "HIPOLITO YRIGOYEN",
+      "municipioNombre": "HIPOLITO YRIGOYEN",
+      "value": 2,
+      "label": "Cluster 2 · dom. Peronismo (Peronismo 35%, JxC 30%, LLA 21%, Otros 14%)"
+    },
+    {
+      "municipioId": "ITUZAINGO",
+      "municipioNombre": "ITUZAINGO",
+      "value": 2,
+      "label": "Cluster 2 · dom. Peronismo (Peronismo 42%, JxC 27%, LLA 21%, Otros 11%)"
+    },
+    {
+      "municipioId": "JUNIN",
+      "municipioNombre": "JUNIN",
+      "value": 2,
+      "label": "Cluster 2 · dom. Peronismo (Peronismo 33%, JxC 31%, LLA 23%, Otros 13%)"
+    },
+    {
+      "municipioId": "LA PLATA",
+      "municipioNombre": "LA PLATA",
+      "value": 2,
+      "label": "Cluster 2 · dom. Peronismo (Peronismo 40%, JxC 30%, LLA 19%, Otros 11%)"
+    },
+    {
+      "municipioId": "LANUS",
+      "municipioNombre": "LANUS",
+      "value": 2,
+      "label": "Cluster 2 · dom. Peronismo (Peronismo 43%, JxC 30%, LLA 17%, Otros 10%)"
+    },
+    {
+      "municipioId": "LAPRIDA",
+      "municipioNombre": "LAPRIDA",
+      "value": 2,
+      "label": "Cluster 2 · dom. Peronismo (Peronismo 40%, JxC 30%, LLA 18%, Otros 11%)"
+    },
+    {
+      "municipioId": "LAS FLORES",
+      "municipioNombre": "LAS FLORES",
+      "value": 2,
+      "label": "Cluster 2 · dom. Peronismo (Peronismo 35%, JxC 26%, LLA 23%, Otros 16%)"
+    },
+    {
+      "municipioId": "LEANDRO N ALEM",
+      "municipioNombre": "LEANDRO N. ALEM",
+      "value": 2,
+      "label": "Cluster 2 · dom. Peronismo (Peronismo 38%, JxC 27%, LLA 21%, Otros 13%)"
+    },
+    {
+      "municipioId": "LUJAN",
+      "municipioNombre": "LUJAN",
+      "value": 2,
+      "label": "Cluster 2 · dom. Peronismo (Peronismo 35%, JxC 27%, LLA 24%, Otros 14%)"
+    },
+    {
+      "municipioId": "MAR CHIQUITA",
+      "municipioNombre": "MAR CHIQUITA",
+      "value": 2,
+      "label": "Cluster 2 · dom. Peronismo (Peronismo 40%, JxC 25%, LLA 24%, Otros 11%)"
+    },
+    {
+      "municipioId": "MERCEDES",
+      "municipioNombre": "MERCEDES",
+      "value": 2,
+      "label": "Cluster 2 · dom. Peronismo (Peronismo 35%, JxC 29%, LLA 25%, Otros 11%)"
+    },
+    {
+      "municipioId": "MORON",
+      "municipioNombre": "MORON",
+      "value": 2,
+      "label": "Cluster 2 · dom. Peronismo (Peronismo 39%, JxC 30%, LLA 21%, Otros 11%)"
+    },
+    {
+      "municipioId": "OLAVARRIA",
+      "municipioNombre": "OLAVARRIA",
+      "value": 2,
+      "label": "Cluster 2 · dom. Peronismo (Peronismo 33%, JxC 26%, LLA 28%, Otros 14%)"
+    },
+    {
+      "municipioId": "PARTIDO DE LA COSTA",
+      "municipioNombre": "PARTIDO DE LA COSTA",
+      "value": 2,
+      "label": "Cluster 2 · dom. Peronismo (Peronismo 34%, JxC 27%, LLA 27%, Otros 13%)"
+    },
+    {
+      "municipioId": "VILLA GESELL",
+      "municipioNombre": "VILLA GESELL",
+      "value": 2,
+      "label": "Cluster 2 · dom. Peronismo (Peronismo 37%, JxC 27%, LLA 24%, Otros 11%)"
+    },
+    {
+      "municipioId": "PATAGONES",
+      "municipioNombre": "PATAGONES",
+      "value": 2,
+      "label": "Cluster 2 · dom. Peronismo (Peronismo 33%, JxC 27%, LLA 27%, Otros 13%)"
+    },
+    {
+      "municipioId": "PEHUAJO",
+      "municipioNombre": "PEHUAJO",
+      "value": 2,
+      "label": "Cluster 2 · dom. Peronismo (Peronismo 36%, JxC 30%, LLA 20%, Otros 14%)"
+    },
+    {
+      "municipioId": "PILA",
+      "municipioNombre": "PILA",
+      "value": 2,
+      "label": "Cluster 2 · dom. Peronismo (Peronismo 41%, JxC 24%, LLA 21%, Otros 14%)"
+    },
+    {
+      "municipioId": "PUNTA INDIO",
+      "municipioNombre": "PUNTA INDIO",
+      "value": 2,
+      "label": "Cluster 2 · dom. Peronismo (Peronismo 36%, JxC 29%, LLA 23%, Otros 12%)"
+    },
+    {
+      "municipioId": "RAMALLO",
+      "municipioNombre": "RAMALLO",
+      "value": 2,
+      "label": "Cluster 2 · dom. Peronismo (Peronismo 37%, JxC 27%, LLA 20%, Otros 16%)"
+    },
+    {
+      "municipioId": "RAUCH",
+      "municipioNombre": "RAUCH",
+      "value": 2,
+      "label": "Cluster 2 · dom. Peronismo (Peronismo 37%, JxC 30%, LLA 16%, Otros 17%)"
+    },
+    {
+      "municipioId": "SALTO",
+      "municipioNombre": "SALTO",
+      "value": 2,
+      "label": "Cluster 2 · dom. Peronismo (Peronismo 33%, JxC 25%, LLA 28%, Otros 15%)"
+    },
+    {
+      "municipioId": "SAN ANDRES DE GILES",
+      "municipioNombre": "SAN ANDRES DE GILES",
+      "value": 2,
+      "label": "Cluster 2 · dom. Peronismo (Peronismo 32%, JxC 25%, LLA 25%, Otros 18%)"
+    },
+    {
+      "municipioId": "SAN FERNANDO",
+      "municipioNombre": "SAN FERNANDO",
+      "value": 2,
+      "label": "Cluster 2 · dom. Peronismo (Peronismo 41%, JxC 24%, LLA 22%, Otros 12%)"
+    },
+    {
+      "municipioId": "SAN MIGUEL",
+      "municipioNombre": "SAN MIGUEL",
+      "value": 2,
+      "label": "Cluster 2 · dom. Peronismo (Peronismo 37%, JxC 28%, LLA 22%, Otros 13%)"
+    },
+    {
+      "municipioId": "SAN NICOLAS",
+      "municipioNombre": "SAN NICOLAS",
+      "value": 2,
+      "label": "Cluster 2 · dom. Peronismo (Peronismo 31%, JxC 28%, LLA 25%, Otros 16%)"
+    },
+    {
+      "municipioId": "SAN PEDRO",
+      "municipioNombre": "SAN PEDRO",
+      "value": 2,
+      "label": "Cluster 2 · dom. Peronismo (Peronismo 32%, JxC 24%, LLA 28%, Otros 16%)"
+    },
+    {
+      "municipioId": "SUIPACHA",
+      "municipioNombre": "SUIPACHA",
+      "value": 2,
+      "label": "Cluster 2 · dom. Peronismo (Peronismo 38%, JxC 31%, LLA 19%, Otros 12%)"
+    },
+    {
+      "municipioId": "TAPALQUE",
+      "municipioNombre": "TAPALQUE",
+      "value": 2,
+      "label": "Cluster 2 · dom. Peronismo (Peronismo 37%, JxC 33%, LLA 16%, Otros 13%)"
+    },
+    {
+      "municipioId": "TIGRE",
+      "municipioNombre": "TIGRE",
+      "value": 2,
+      "label": "Cluster 2 · dom. Peronismo (Peronismo 38%, JxC 24%, LLA 24%, Otros 14%)"
+    },
+    {
+      "municipioId": "TORDILLO",
+      "municipioNombre": "TORDILLO",
+      "value": 2,
+      "label": "Cluster 2 · dom. Peronismo (Peronismo 40%, JxC 31%, LLA 15%, Otros 14%)"
+    },
+    {
+      "municipioId": "TRES ARROYOS",
+      "municipioNombre": "TRES ARROYOS",
+      "value": 2,
+      "label": "Cluster 2 · dom. Peronismo (Peronismo 33%, JxC 27%, LLA 23%, Otros 17%)"
+    },
+    {
+      "municipioId": "TRES DE FEBRERO",
+      "municipioNombre": "TRES DE FEBRERO",
+      "value": 2,
+      "label": "Cluster 2 · dom. Peronismo (Peronismo 38%, JxC 29%, LLA 21%, Otros 11%)"
+    },
+    {
+      "municipioId": "ZARATE",
+      "municipioNombre": "ZARATE",
+      "value": 2,
+      "label": "Cluster 2 · dom. Peronismo (Peronismo 38%, JxC 25%, LLA 23%, Otros 14%)"
+    },
+    {
+      "municipioId": "AYACUCHO",
+      "municipioNombre": "AYACUCHO",
+      "value": 3,
+      "label": "Cluster 3 · dom. JxC (Peronismo 29%, JxC 32%, LLA 19%, Otros 20%)"
+    },
+    {
+      "municipioId": "BOLIVAR",
+      "municipioNombre": "BOLIVAR",
+      "value": 3,
+      "label": "Cluster 3 · dom. JxC (Peronismo 32%, JxC 33%, LLA 21%, Otros 13%)"
+    },
+    {
+      "municipioId": "CAMPANA",
+      "municipioNombre": "CAMPANA",
+      "value": 3,
+      "label": "Cluster 3 · dom. JxC (Peronismo 31%, JxC 32%, LLA 21%, Otros 16%)"
+    },
+    {
+      "municipioId": "CHASCOMUS",
+      "municipioNombre": "CHASCOMUS",
+      "value": 3,
+      "label": "Cluster 3 · dom. JxC (Peronismo 30%, JxC 33%, LLA 20%, Otros 18%)"
+    },
+    {
+      "municipioId": "CORONEL DORREGO",
+      "municipioNombre": "CORONEL DORREGO",
+      "value": 3,
+      "label": "Cluster 3 · dom. JxC (Peronismo 27%, JxC 37%, LLA 20%, Otros 16%)"
+    },
+    {
+      "municipioId": "DOLORES",
+      "municipioNombre": "DOLORES",
+      "value": 3,
+      "label": "Cluster 3 · dom. JxC (Peronismo 33%, JxC 36%, LLA 18%, Otros 13%)"
+    },
+    {
+      "municipioId": "FLORENTINO AMEGHINO",
+      "municipioNombre": "FLORENTINO AMEGHINO",
+      "value": 3,
+      "label": "Cluster 3 · dom. JxC (Peronismo 35%, JxC 39%, LLA 18%, Otros 8%)"
+    },
+    {
+      "municipioId": "GENERAL ALVEAR",
+      "municipioNombre": "GENERAL ALVEAR",
+      "value": 3,
+      "label": "Cluster 3 · dom. JxC (Peronismo 34%, JxC 35%, LLA 18%, Otros 13%)"
+    },
+    {
+      "municipioId": "GENERAL ARENALES",
+      "municipioNombre": "GENERAL ARENALES",
+      "value": 3,
+      "label": "Cluster 3 · dom. JxC (Peronismo 27%, JxC 37%, LLA 24%, Otros 12%)"
+    },
+    {
+      "municipioId": "GENERAL BELGRANO",
+      "municipioNombre": "GENERAL BELGRANO",
+      "value": 3,
+      "label": "Cluster 3 · dom. JxC (Peronismo 32%, JxC 35%, LLA 19%, Otros 14%)"
+    },
+    {
+      "municipioId": "GENERAL LAMADRID",
+      "municipioNombre": "GENERAL LAMADRID",
+      "value": 3,
+      "label": "Cluster 3 · dom. JxC (Peronismo 28%, JxC 34%, LLA 23%, Otros 15%)"
+    },
+    {
+      "municipioId": "GENERAL LAVALLE",
+      "municipioNombre": "GENERAL LAVALLE",
+      "value": 3,
+      "label": "Cluster 3 · dom. JxC (Peronismo 35%, JxC 37%, LLA 18%, Otros 10%)"
+    },
+    {
+      "municipioId": "GENERAL MADARIAGA",
+      "municipioNombre": "GENERAL MADARIAGA",
+      "value": 3,
+      "label": "Cluster 3 · dom. JxC (Peronismo 28%, JxC 33%, LLA 22%, Otros 18%)"
+    },
+    {
+      "municipioId": "LEZAMA",
+      "municipioNombre": "LEZAMA",
+      "value": 3,
+      "label": "Cluster 3 · dom. JxC (Peronismo 30%, JxC 37%, LLA 19%, Otros 14%)"
+    },
+    {
+      "municipioId": "LINCOLN",
+      "municipioNombre": "LINCOLN",
+      "value": 3,
+      "label": "Cluster 3 · dom. JxC (Peronismo 29%, JxC 35%, LLA 22%, Otros 14%)"
+    },
+    {
+      "municipioId": "LOBERIA",
+      "municipioNombre": "LOBERIA",
+      "value": 3,
+      "label": "Cluster 3 · dom. JxC (Peronismo 32%, JxC 32%, LLA 22%, Otros 14%)"
+    },
+    {
+      "municipioId": "LOBOS",
+      "municipioNombre": "LOBOS",
+      "value": 3,
+      "label": "Cluster 3 · dom. JxC (Peronismo 28%, JxC 34%, LLA 23%, Otros 15%)"
+    },
+    {
+      "municipioId": "MAGDALENA",
+      "municipioNombre": "MAGDALENA",
+      "value": 3,
+      "label": "Cluster 3 · dom. JxC (Peronismo 30%, JxC 33%, LLA 21%, Otros 16%)"
+    },
+    {
+      "municipioId": "MAIPU",
+      "municipioNombre": "MAIPU",
+      "value": 3,
+      "label": "Cluster 3 · dom. JxC (Peronismo 32%, JxC 40%, LLA 18%, Otros 10%)"
+    },
+    {
+      "municipioId": "MONTE",
+      "municipioNombre": "MONTE",
+      "value": 3,
+      "label": "Cluster 3 · dom. JxC (Peronismo 30%, JxC 33%, LLA 21%, Otros 15%)"
+    },
+    {
+      "municipioId": "PELLEGRINI",
+      "municipioNombre": "PELLEGRINI",
+      "value": 3,
+      "label": "Cluster 3 · dom. JxC (Peronismo 30%, JxC 38%, LLA 17%, Otros 15%)"
+    },
+    {
+      "municipioId": "RIVADAVIA",
+      "municipioNombre": "RIVADAVIA",
+      "value": 3,
+      "label": "Cluster 3 · dom. JxC (Peronismo 28%, JxC 34%, LLA 19%, Otros 19%)"
+    },
+    {
+      "municipioId": "ROQUE PEREZ",
+      "municipioNombre": "ROQUE PEREZ",
+      "value": 3,
+      "label": "Cluster 3 · dom. JxC (Peronismo 32%, JxC 34%, LLA 19%, Otros 14%)"
+    },
+    {
+      "municipioId": "SALLIQUELO",
+      "municipioNombre": "SALLIQUELO",
+      "value": 3,
+      "label": "Cluster 3 · dom. JxC (Peronismo 35%, JxC 35%, LLA 17%, Otros 14%)"
+    },
+    {
+      "municipioId": "SAN ANTONIO DE ARECO",
+      "municipioNombre": "SAN ANTONIO DE ARECO",
+      "value": 3,
+      "label": "Cluster 3 · dom. JxC (Peronismo 30%, JxC 35%, LLA 23%, Otros 12%)"
+    },
+    {
+      "municipioId": "SAN CAYETANO",
+      "municipioNombre": "SAN CAYETANO",
+      "value": 3,
+      "label": "Cluster 3 · dom. JxC (Peronismo 22%, JxC 43%, LLA 22%, Otros 13%)"
+    },
+    {
+      "municipioId": "SAN ISIDRO",
+      "municipioNombre": "SAN ISIDRO",
+      "value": 3,
+      "label": "Cluster 3 · dom. JxC (Peronismo 26%, JxC 44%, LLA 21%, Otros 9%)"
+    },
+    {
+      "municipioId": "TRENQUE LAUQUEN",
+      "municipioNombre": "TRENQUE LAUQUEN",
+      "value": 3,
+      "label": "Cluster 3 · dom. JxC (Peronismo 26%, JxC 39%, LLA 22%, Otros 13%)"
+    },
+    {
+      "municipioId": "TRES LOMAS",
+      "municipioNombre": "TRES LOMAS",
+      "value": 3,
+      "label": "Cluster 3 · dom. JxC (Peronismo 34%, JxC 32%, LLA 18%, Otros 17%)"
+    },
+    {
+      "municipioId": "25 DE MAYO",
+      "municipioNombre": "25 DE MAYO",
+      "value": 3,
+      "label": "Cluster 3 · dom. JxC (Peronismo 31%, JxC 32%, LLA 23%, Otros 14%)"
+    },
+    {
+      "municipioId": "VICENTE LOPEZ",
+      "municipioNombre": "VICENTE LOPEZ",
+      "value": 3,
+      "label": "Cluster 3 · dom. JxC (Peronismo 26%, JxC 45%, LLA 20%, Otros 9%)"
+    },
+    {
+      "municipioId": "ADOLFO ALSINA",
+      "municipioNombre": "ADOLFO ALSINA",
+      "value": 4,
+      "label": "Cluster 4 · dom. JxC (Peronismo 25%, JxC 34%, LLA 27%, Otros 14%)"
+    },
+    {
+      "municipioId": "BAHIA BLANCA",
+      "municipioNombre": "BAHIA BLANCA",
+      "value": 4,
+      "label": "Cluster 4 · dom. JxC (Peronismo 28%, JxC 28%, LLA 30%, Otros 14%)"
+    },
+    {
+      "municipioId": "BALCARCE",
+      "municipioNombre": "BALCARCE",
+      "value": 4,
+      "label": "Cluster 4 · dom. JxC (Peronismo 23%, JxC 34%, LLA 27%, Otros 16%)"
+    },
+    {
+      "municipioId": "CAPITAN SARMIENTO",
+      "municipioNombre": "CAPITAN SARMIENTO",
+      "value": 4,
+      "label": "Cluster 4 · dom. JxC (Peronismo 25%, JxC 35%, LLA 26%, Otros 15%)"
+    },
+    {
+      "municipioId": "CORONEL PRINGLES",
+      "municipioNombre": "CORONEL PRINGLES",
+      "value": 4,
+      "label": "Cluster 4 · dom. JxC (Peronismo 22%, JxC 33%, LLA 27%, Otros 17%)"
+    },
+    {
+      "municipioId": "CORONEL SUAREZ",
+      "municipioNombre": "CORONEL SUAREZ",
+      "value": 4,
+      "label": "Cluster 4 · dom. JxC (Peronismo 28%, JxC 29%, LLA 26%, Otros 16%)"
+    },
+    {
+      "municipioId": "GENERAL VILLEGAS",
+      "municipioNombre": "GENERAL VILLEGAS",
+      "value": 4,
+      "label": "Cluster 4 · dom. JxC (Peronismo 22%, JxC 32%, LLA 28%, Otros 19%)"
+    },
+    {
+      "municipioId": "NAVARRO",
+      "municipioNombre": "NAVARRO",
+      "value": 4,
+      "label": "Cluster 4 · dom. JxC (Peronismo 30%, JxC 29%, LLA 25%, Otros 16%)"
+    },
+    {
+      "municipioId": "NECOCHEA",
+      "municipioNombre": "NECOCHEA",
+      "value": 4,
+      "label": "Cluster 4 · dom. JxC (Peronismo 25%, JxC 28%, LLA 27%, Otros 19%)"
+    },
+    {
+      "municipioId": "NUEVE DE JULIO",
+      "municipioNombre": "NUEVE DE JULIO",
+      "value": 4,
+      "label": "Cluster 4 · dom. JxC (Peronismo 25%, JxC 35%, LLA 27%, Otros 13%)"
+    },
+    {
+      "municipioId": "PINAMAR",
+      "municipioNombre": "PINAMAR",
+      "value": 4,
+      "label": "Cluster 4 · dom. JxC (Peronismo 30%, JxC 29%, LLA 29%, Otros 12%)"
+    },
+    {
+      "municipioId": "PERGAMINO",
+      "municipioNombre": "PERGAMINO",
+      "value": 4,
+      "label": "Cluster 4 · dom. JxC (Peronismo 27%, JxC 33%, LLA 27%, Otros 14%)"
+    },
+    {
+      "municipioId": "PUAN",
+      "municipioNombre": "PUAN",
+      "value": 4,
+      "label": "Cluster 4 · dom. JxC (Peronismo 22%, JxC 37%, LLA 29%, Otros 13%)"
+    },
+    {
+      "municipioId": "ROJAS",
+      "municipioNombre": "ROJAS",
+      "value": 4,
+      "label": "Cluster 4 · dom. JxC (Peronismo 24%, JxC 35%, LLA 23%, Otros 17%)"
+    },
+    {
+      "municipioId": "SAAVEDRA",
+      "municipioNombre": "SAAVEDRA",
+      "value": 4,
+      "label": "Cluster 4 · dom. JxC (Peronismo 21%, JxC 32%, LLA 28%, Otros 19%)"
+    },
+    {
+      "municipioId": "SALADILLO",
+      "municipioNombre": "SALADILLO",
+      "value": 4,
+      "label": "Cluster 4 · dom. JxC (Peronismo 26%, JxC 35%, LLA 25%, Otros 14%)"
+    },
+    {
+      "municipioId": "TANDIL",
+      "municipioNombre": "TANDIL",
+      "value": 4,
+      "label": "Cluster 4 · dom. JxC (Peronismo 28%, JxC 32%, LLA 25%, Otros 14%)"
+    },
+    {
+      "municipioId": "TORNQUIST",
+      "municipioNombre": "TORNQUIST",
+      "value": 4,
+      "label": "Cluster 4 · dom. JxC (Peronismo 31%, JxC 27%, LLA 28%, Otros 13%)"
+    },
+    {
+      "municipioId": "CORONEL DE MARINA L ROSALES",
+      "municipioNombre": "CORONEL DE MARINA L. ROSALES",
+      "value": 5,
+      "label": "Cluster 5 · dom. LLA (Peronismo 20%, JxC 31%, LLA 36%, Otros 14%)"
+    },
+    {
+      "municipioId": "VILLARINO",
+      "municipioNombre": "VILLARINO",
+      "value": 5,
+      "label": "Cluster 5 · dom. LLA (Peronismo 19%, JxC 24%, LLA 34%, Otros 23%)"
+    }
+  ]
+}

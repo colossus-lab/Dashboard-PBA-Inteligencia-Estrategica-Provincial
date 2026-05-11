@@ -21,14 +21,28 @@ export interface KPI {
   comparison?: string;
 }
 
-export type ChartType = 'bar' | 'line' | 'pie' | 'pyramid' | 'scatter' | 'radar' | 'treemap' | 'heatmap' | 'map' | 'mapa-secciones';
+export type ChartType =
+  | 'bar'
+  | 'line'
+  | 'pie'
+  | 'pyramid'
+  | 'scatter'
+  | 'radar'
+  | 'treemap'
+  | 'heatmap'
+  | 'map'
+  | 'mapa-secciones'
+  | 'mapa-timeline'
+  | 'sankey';
 
 export interface ChartConfig {
   id: string;
   type: ChartType;
   title: string;
   sectionId: string;
-  data: any[];
+  // Para sankey/mapa-timeline, `data` puede ser un objeto (no array). Cada
+  // renderer interpreta su shape específico.
+  data: any;
   config?: {
     xAxis?: string;
     yAxis?: string;
@@ -36,6 +50,13 @@ export interface ChartConfig {
     stacked?: boolean;
     grouped?: boolean;
     layout?: 'horizontal' | 'vertical';
+    diagonal?: boolean;
+    regression?: {
+      r2: number;
+      slope: number;
+      intercept: number;
+      n: number;
+    };
   };
 }
 
