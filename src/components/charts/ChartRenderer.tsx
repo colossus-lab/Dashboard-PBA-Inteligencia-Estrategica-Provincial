@@ -46,7 +46,8 @@ function useChartTheme() {
   };
 }
 
-const COLORS = ['#00d4ff', '#8b5cf6', '#10b981', '#f59e0b', '#ef4444', '#ec4899', '#06b6d4', '#84cc16', '#f97316', '#6366f1'];
+/* OpenArg Editorial: cobalt / vermilion / chrome / celeste-bright / ink / etc. */
+const COLORS = ['#74ACDF', '#F6B40E', '#FFD04A', '#93C5F8', '#E8ECF4', '#6BBF59', '#D9534F', '#274C77', '#A88B6F', '#4A8ABF'];
 
 export function ChartRenderer({ chart, height = 400 }: ChartRendererProps) {
   switch (chart.type) {

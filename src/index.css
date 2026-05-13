@@ -146,20 +146,21 @@
 /* â”€â”€â”€ Theme Variables â”€â”€â”€ */
 :root {
   --font-body: 'Inter', system-ui, sans-serif;
-  --font-heading: 'Outfit', 'Inter', system-ui, sans-serif;
+  --font-heading: 'Familjen Grotesk', 'Outfit', 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
 
-  /* Accent colors (shared) */
-  --accent-cyan: #00d4ff;
-  --accent-cyan-dim: #00d4ff33;
-  --accent-orange: #ff6b35;
-  --accent-orange-dim: #ff6b3533;
-  --accent-green: #10b981;
-  --accent-green-dim: #10b98133;
-  --accent-red: #ef4444;
-  --accent-red-dim: #ef444433;
-  --accent-yellow: #f59e0b;
-  --accent-yellow-dim: #f59e0b33;
-  --accent-purple: #8b5cf6;
+  /* Accent colors (shared) — OpenArg Editorial */
+  --accent-cyan: #74ACDF;           /* cobalt — celeste Argentina */
+  --accent-cyan-dim: rgba(116, 172, 223, 0.20);
+  --accent-orange: #F6B40E;         /* vermilion — sol Argentina */
+  --accent-orange-dim: rgba(246, 180, 14, 0.20);
+  --accent-green: #6BBF59;
+  --accent-green-dim: rgba(107, 191, 89, 0.20);
+  --accent-red: #D9534F;
+  --accent-red-dim: rgba(217, 83, 79, 0.20);
+  --accent-yellow: #FFD04A;         /* chrome — sol bright */
+  --accent-yellow-dim: rgba(255, 208, 74, 0.20);
+  --accent-purple: #93C5F8;         /* celeste-bright (sustituye violeta) */
 
   /* Transition */
   --transition-fast: 150ms ease;
@@ -173,42 +174,50 @@
   --radius-xl: 24px;
 }
 
-/* Dark theme (default) */
+/* Dark theme (default) — OpenArg Editorial: paper + ink */
 [data-theme="dark"] {
-  --bg-primary: #0a0f1c;
-  --bg-secondary: #111827;
-  --bg-tertiary: #1a2236;
-  --bg-card: rgba(17, 24, 39, 0.7);
-  --bg-glass: rgba(255, 255, 255, 0.04);
-  --border-glass: rgba(255, 255, 255, 0.08);
-  --border-subtle: rgba(255, 255, 255, 0.06);
-  --text-primary: #f1f5f9;
-  --text-secondary: #94a3b8;
-  --text-tertiary: #64748b;
-  --text-accent: #00d4ff;
-  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.4);
-  --shadow-glow: 0 0 20px rgba(0, 212, 255, 0.15);
-  --scrollbar-track: #0a0f1c;
-  --scrollbar-thumb: #1e293b;
+  --bg-primary: #06090F;             /* ed-paper */
+  --bg-secondary: #0D1117;           /* ed-paper-2 */
+  --bg-tertiary: #1A2030;            /* ed-paper-3 */
+  --bg-card: rgba(13, 17, 23, 0.72);
+  --bg-glass: rgba(232, 236, 244, 0.04);
+  --border-glass: rgba(232, 236, 244, 0.10);
+  --border-subtle: rgba(232, 236, 244, 0.06);
+  --text-primary: #E8ECF4;           /* ed-ink */
+  --text-secondary: #8892A8;         /* ed-ink-2 */
+  --text-tertiary: #5A6378;
+  --text-accent: #74ACDF;            /* ed-cobalt */
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.55);
+  --shadow-glow: 0 0 20px rgba(116, 172, 223, 0.18);
+  --scrollbar-track: #06090F;
+  --scrollbar-thumb: #1A2030;
 }
 
-/* Light theme */
+/* Light theme — OpenArg Editorial: cream + ink */
 [data-theme="light"] {
-  --bg-primary: #f0f4f8;
-  --bg-secondary: #ffffff;
-  --bg-tertiary: #e8edf2;
-  --bg-card: rgba(255, 255, 255, 0.85);
-  --bg-glass: rgba(255, 255, 255, 0.6);
-  --border-glass: rgba(0, 0, 0, 0.08);
-  --border-subtle: rgba(0, 0, 0, 0.05);
-  --text-primary: #0f172a;
-  --text-secondary: #475569;
-  --text-tertiary: #94a3b8;
-  --text-accent: #0284c7;
-  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.08);
-  --shadow-glow: 0 0 20px rgba(2, 132, 199, 0.1);
-  --scrollbar-track: #f0f4f8;
-  --scrollbar-thumb: #cbd5e1;
+  --bg-primary: #F2EDE2;             /* ed-paper light (cream editorial) */
+  --bg-secondary: #E6DECC;
+  --bg-tertiary: #D8CFB8;
+  --bg-card: rgba(255, 255, 255, 0.78);
+  --bg-glass: rgba(17, 20, 46, 0.04);
+  --border-glass: rgba(17, 20, 46, 0.12);
+  --border-subtle: rgba(17, 20, 46, 0.06);
+  --text-primary: #11142E;
+  --text-secondary: #4A5170;
+  --text-tertiary: #6B7080;
+  --text-accent: #1F4E89;            /* cobalt darkened */
+  --shadow-card: 0 4px 24px rgba(17, 20, 46, 0.10);
+  --shadow-glow: 0 0 20px rgba(31, 78, 137, 0.12);
+  --scrollbar-track: #F2EDE2;
+  --scrollbar-thumb: #C8BFA5;
+  /* Acentos darkened para contraste AA sobre cream */
+  --accent-cyan: #1F4E89;
+  --accent-cyan-dim: rgba(31, 78, 137, 0.18);
+  --accent-orange: #C03A18;
+  --accent-orange-dim: rgba(192, 58, 24, 0.16);
+  --accent-yellow: #D9A20E;
+  --accent-yellow-dim: rgba(217, 162, 14, 0.18);
+  --accent-purple: #4A8ABF;
 }
 
 /* â”€â”€â”€ Base Styles â”€â”€â”€ */
@@ -222,7 +231,13 @@ html {
 
 body {
   font-family: var(--font-body);
-  background: var(--bg-primary);
+  position: relative;
+  background-color: var(--bg-primary);
+  background-image:
+    radial-gradient(ellipse 1400px 900px at 12% -10%, rgba(116, 172, 223, 0.12), transparent 55%),
+    radial-gradient(ellipse 1100px 800px at 100% 105%, rgba(246, 180, 14, 0.07), transparent 60%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.025), transparent 40%);
+  background-attachment: fixed;
   color: var(--text-primary);
   margin: 0;
   padding: 0;
@@ -230,6 +245,58 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transition: background-color var(--transition-base), color var(--transition-base);
+}
+
+/* ─── Grilla arquitectónica fija (OpenArg Editorial) ─── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(116, 172, 223, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(116, 172, 223, 0.06) 1px, transparent 1px),
+    linear-gradient(rgba(232, 236, 244, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(232, 236, 244, 0.035) 1px, transparent 1px);
+  background-size: 240px 240px, 240px 240px, 80px 80px, 80px 80px;
+  -webkit-mask-image: radial-gradient(ellipse 90% 75% at 50% 40%, black 0%, rgba(0,0,0,0.6) 50%, transparent 90%);
+          mask-image: radial-gradient(ellipse 90% 75% at 50% 40%, black 0%, rgba(0,0,0,0.6) 50%, transparent 90%);
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse 120% 100% at 50% 50%, transparent 55%, rgba(0,0,0,0.45) 100%);
+}
+
+#root { position: relative; z-index: 1; }
+
+/* Light mode: cobalt + vermilion darkened + cream vignette */
+[data-theme="light"] body {
+  background-image:
+    radial-gradient(ellipse 1400px 900px at 12% -10%, rgba(31, 78, 137, 0.10), transparent 55%),
+    radial-gradient(ellipse 1100px 800px at 100% 105%, rgba(192, 58, 24, 0.06), transparent 60%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.35), transparent 35%);
+}
+[data-theme="light"] body::before {
+  background-image:
+    linear-gradient(rgba(31, 78, 137, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(31, 78, 137, 0.07) 1px, transparent 1px),
+    linear-gradient(rgba(17, 20, 46, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(17, 20, 46, 0.04) 1px, transparent 1px);
+}
+[data-theme="light"] body::after {
+  background: radial-gradient(ellipse 120% 100% at 50% 50%, transparent 55%, rgba(17, 20, 46, 0.14) 100%);
+}
+
+/* En mobile el background-attachment fixed puede causar lag — degrada a scroll */
+@media (max-width: 720px) {
+  body { background-attachment: scroll; }
+  body::before, body::after { position: absolute; }
 }
 
 h1, h2, h3, h4, h5, h6 {

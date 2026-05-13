@@ -1,13 +1,14 @@
 import { scaleQuantile } from 'd3-scale';
 
-const PALETTE = ['#f3f0ea', '#f2e1b8', '#edb200', '#e66a00', '#ef4444'];
+/* OpenArg Editorial: ink-deep → cobalt → cobalt → vermilion → chrome */
+const PALETTE = ['#1A2030', '#274C77', '#74ACDF', '#F6B40E', '#FFD04A'];
 
 export function buildChoroplethScale(values: number[]) {
   const positive = values.filter((v) => Number.isFinite(v) && v > 0);
   if (positive.length === 0) {
     return {
-      stops: [[0, '#f3f0ea'] as [number, string]],
-      legend: [['sin datos', '#f3f0ea'] as [string, string]],
+      stops: [[0, '#1A2030'] as [number, string]],
+      legend: [['sin datos', '#1A2030'] as [string, string]],
       max: 0,
     };
   }
