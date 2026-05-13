@@ -167,11 +167,11 @@
   --transition-base: 250ms ease;
   --transition-slow: 400ms cubic-bezier(0.16, 1, 0.3, 1);
 
-  /* Radius */
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 16px;
-  --radius-xl: 24px;
+  /* Radius — OpenArg Editorial: rectangular / print */
+  --radius-sm: 2px;
+  --radius-md: 3px;
+  --radius-lg: 4px;
+  --radius-xl: 4px;
 }
 
 /* Dark theme (default) — OpenArg Editorial: paper + ink */
@@ -4627,3 +4627,280 @@ body[data-route="presentacion"] main {
   }
 }
 
+/* ═══════════════════════════════════════════════════════════════
+   OPENARG EDITORIAL — FORMA (overrides editoriales)
+   Reescribe primitivas SaaS → editorial print. Sin tocar markup.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ─── Tipografía: disciplina editorial ─── */
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+h1 { letter-spacing: -0.035em; }
+h2 { letter-spacing: -0.022em; }
+
+em {
+  font-style: italic;
+  color: var(--accent-orange);
+}
+
+.kpi-value, .hero-stat-value, .report-card-number,
+.report-card-stat-value, .section-number {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ─── Glass card → hairline editorial ─── */
+.glass-card {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: none;
+  border-top: 1px solid var(--border-glass);
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  transition: background-color var(--transition-base) ease;
+}
+.glass-card:hover {
+  transform: none !important;
+  box-shadow: none !important;
+  border-color: var(--border-glass) !important;
+  background: var(--bg-secondary) !important;
+}
+.glass-card.p-5, .glass-card.p-6 {
+  border-bottom: 1px solid var(--border-glass);
+}
+
+/* ─── Insight card → blockquote editorial ─── */
+.insight-card {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border-left-width: 4px;
+  border-left-color: var(--accent-orange) !important;
+  border-radius: 0 !important;
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--text-primary);
+}
+.insight-card:hover {
+  background: transparent !important;
+  border-left-color: var(--accent-cyan) !important;
+}
+
+/* ─── Badges → rectángulos hairline ─── */
+.badge {
+  border-radius: 0 !important;
+  padding: 2px 8px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  border: 1px solid currentColor;
+  background: transparent !important;
+}
+.badge-good { color: var(--accent-green); border-color: var(--accent-green); }
+.badge-warning { color: var(--accent-yellow); border-color: var(--accent-yellow); }
+.badge-critical { color: var(--accent-red); border-color: var(--accent-red); }
+
+/* ─── KPI value → numeral, sin gradient text ─── */
+.kpi-value {
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  -webkit-text-fill-color: var(--accent-cyan) !important;
+  background-clip: initial !important;
+  color: var(--accent-cyan);
+  letter-spacing: -0.04em;
+  font-weight: 700;
+}
+.kpi-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+/* ─── Hero landing → composición editorial estática ─── */
+.landing-hero {
+  border-radius: 0 !important;
+  border: none !important;
+  border-top: 1px solid var(--border-glass) !important;
+  border-bottom: 1px solid var(--border-glass) !important;
+  background: transparent !important;
+  animation: none !important;
+  padding: 4rem 1.5rem 3.5rem;
+}
+.hero-particles, .hero-particle {
+  display: none !important;
+}
+.hero-title {
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  -webkit-text-fill-color: var(--text-primary) !important;
+  background-clip: initial !important;
+  color: var(--text-primary);
+  letter-spacing: -0.04em;
+  font-family: var(--font-heading);
+}
+.hero-title-light {
+  -webkit-text-fill-color: var(--text-secondary) !important;
+  font-style: italic;
+}
+.hero-badge {
+  border-radius: 0 !important;
+  border: 1px solid var(--accent-cyan);
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  font-family: var(--font-mono);
+  letter-spacing: 0.12em;
+  padding: 4px 12px;
+}
+.hero-badge-dot { display: none !important; }
+
+.hero-stat-value {
+  color: var(--accent-cyan);
+  letter-spacing: -0.04em;
+}
+.hero-stat-label {
+  font-family: var(--font-mono);
+  letter-spacing: 0.12em;
+}
+.hero-stat-divider { background: var(--border-glass); }
+
+/* ─── Section headers → eyebrow numerado editorial ─── */
+.section-header {
+  align-items: baseline;
+}
+.section-number {
+  font-family: var(--font-mono) !important;
+  font-size: 0.72rem !important;
+  font-weight: 500 !important;
+  color: var(--accent-orange) !important;
+  opacity: 1 !important;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  line-height: 1.4 !important;
+  min-width: auto !important;
+  padding-top: 6px;
+}
+.section-title {
+  letter-spacing: -0.022em;
+  font-weight: 700;
+}
+.section-desc {
+  font-style: italic;
+  color: var(--text-secondary);
+}
+
+/* ─── Report card → hairline sin glow ─── */
+.report-card {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: none !important;
+  border-top: 1px solid var(--border-glass) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 1.5rem 1.25rem;
+  animation: none !important;
+}
+.report-card:hover {
+  transform: none !important;
+  border-color: var(--border-glass) !important;
+  box-shadow: none !important;
+  background: var(--bg-secondary) !important;
+}
+.report-card-glow { display: none !important; }
+.report-card-number {
+  font-family: var(--font-mono) !important;
+  font-size: 0.72rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.12em !important;
+  opacity: 1 !important;
+  color: var(--accent-orange) !important;
+}
+.report-card-arrow {
+  opacity: 1;
+  transform: none;
+  color: var(--text-tertiary);
+}
+.report-card:hover .report-card-arrow {
+  transform: translateX(4px);
+  color: var(--accent-orange);
+}
+.report-card-title {
+  letter-spacing: -0.018em;
+}
+.report-card:hover .report-card-title {
+  color: var(--text-primary);
+}
+.report-card-stat {
+  border-top: 1px solid var(--border-subtle);
+}
+.report-card-stat-value {
+  font-family: var(--font-mono);
+  letter-spacing: 0.05em;
+}
+
+/* ─── Explorer banner → bloque editorial sin glow ─── */
+.explorer-banner {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: none !important;
+  border-top: 1px solid var(--border-glass) !important;
+  border-bottom: 1px solid var(--border-glass) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+.explorer-banner:hover {
+  transform: none !important;
+  border-color: var(--border-glass) !important;
+  box-shadow: none !important;
+  background: var(--bg-secondary) !important;
+}
+.explorer-banner-glow { display: none !important; }
+.explorer-banner-title { letter-spacing: -0.018em; }
+
+/* ─── Progress + focus rings: sin glow ─── */
+.progress-bar { border-radius: 0 !important; }
+.progress-bar-fill { border-radius: 0 !important; box-shadow: none !important; }
+.focus\:ring-2:focus { box-shadow: 0 0 0 2px var(--accent-orange) !important; }
+
+/* ─── Footer rule ─── */
+.footer-rule { border-top: 1px solid var(--border-glass); }
+
+/* ─── Links → underline editorial ─── */
+.hero-link, a.hero-link {
+  border-bottom: 1px solid currentColor;
+  text-decoration: none;
+}
+.hero-link:hover {
+  color: var(--accent-orange);
+  text-decoration: none;
+}
+
+/* ─── Conurbano: rectangular y plano ─── */
+.conu-pill, .conu-chip-btn, .conu-select { border-radius: 0 !important; }
+.conu-3d-help, .conu-3d-reset { box-shadow: none !important; border-radius: 0 !important; }
+
+/* ─── Animaciones ambient OFF ─── */
+@keyframes heroGradient { from { background-position: 0% 50%; } to { background-position: 0% 50%; } }
+@keyframes particleFloat { from { transform: none; } to { transform: none; } }
+@keyframes explorerGlow { from { background-position: 0% 50%; } to { background-position: 0% 50%; } }
+@keyframes cardEntrance { from { opacity: 1; } to { opacity: 1; } }
+
+/* ─── Pulse-red → blink editorial discreto (sin glow ring) ─── */
+@keyframes pulseRed {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+.pulse-critical { box-shadow: none !important; animation: pulseRed 2s ease infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .pulse-critical { animation: none !important; }
+}
