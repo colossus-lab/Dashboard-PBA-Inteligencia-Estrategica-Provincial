@@ -872,8 +872,15 @@ h1, h2, h3, h4, h5, h6 {
 /* ═══════ REPORT CARDS GRID ═══════ */
 .report-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(160px, auto);
   gap: 14px;
+}
+
+/* Layout asimétrico editorial: primer card = hero 2×2 */
+.report-grid > .report-card:first-child {
+  grid-column: span 2;
+  grid-row: span 2;
 }
 
 .report-card {
@@ -1116,6 +1123,11 @@ h1, h2, h3, h4, h5, h6 {
   .report-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  /* Hero pierde span vertical pero ocupa la fila completa */
+  .report-grid > .report-card:first-child {
+    grid-column: span 2;
+    grid-row: auto;
+  }
 }
 
 @media (max-width: 640px) {
@@ -1165,6 +1177,11 @@ h1, h2, h3, h4, h5, h6 {
   .report-grid {
     grid-template-columns: 1fr;
     gap: 10px;
+  }
+  /* En mobile chico, el hero se reabsorbe como una card más */
+  .report-grid > .report-card:first-child {
+    grid-column: auto;
+    grid-row: auto;
   }
 
   .report-card {
@@ -4903,4 +4920,63 @@ em {
 
 @media (prefers-reduced-motion: reduce) {
   .pulse-critical { animation: none !important; }
+}
+
+/* ─── Hero card de la portada editorial (primer hijo del grid) ─── */
+.report-grid > .report-card:first-child {
+  padding: 2.5rem 2rem !important;
+  border-top-width: 2px !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.report-grid > .report-card:first-child .report-card-number {
+  font-size: 0.85rem !important;
+  letter-spacing: 0.18em !important;
+}
+.report-grid > .report-card:first-child .report-card-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  margin-bottom: 0.5rem;
+}
+.report-grid > .report-card:first-child .report-card-desc {
+  -webkit-line-clamp: 6;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--text-secondary);
+}
+.report-grid > .report-card:first-child .report-card-stat-value {
+  font-size: 1.05rem;
+}
+.report-grid > .report-card:first-child .report-card-arrow {
+  font-size: 1.4rem;
+}
+
+/* En tablet (≤900px) el hero se relaja: row completa, sin tanto padding extra */
+@media (max-width: 900px) {
+  .report-grid > .report-card:first-child {
+    padding: 2rem 1.5rem !important;
+  }
+  .report-grid > .report-card:first-child .report-card-title {
+    font-size: 1.35rem;
+  }
+}
+
+/* En mobile (≤640px) el hero pierde su look especial — uniforme con el resto */
+@media (max-width: 640px) {
+  .report-grid > .report-card:first-child {
+    padding: 1rem !important;
+    border-top-width: 1px !important;
+  }
+  .report-grid > .report-card:first-child .report-card-title {
+    font-size: 0.95rem;
+  }
+  .report-grid > .report-card:first-child .report-card-desc {
+    display: none;
+  }
+  .report-grid > .report-card:first-child .report-card-arrow {
+    display: none;
+  }
 }
