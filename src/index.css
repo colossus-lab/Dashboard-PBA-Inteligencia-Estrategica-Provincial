@@ -146,69 +146,78 @@
 /* â”€â”€â”€ Theme Variables â”€â”€â”€ */
 :root {
   --font-body: 'Inter', system-ui, sans-serif;
-  --font-heading: 'Outfit', 'Inter', system-ui, sans-serif;
+  --font-heading: 'Familjen Grotesk', 'Outfit', 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
 
-  /* Accent colors (shared) */
-  --accent-cyan: #00d4ff;
-  --accent-cyan-dim: #00d4ff33;
-  --accent-orange: #ff6b35;
-  --accent-orange-dim: #ff6b3533;
-  --accent-green: #10b981;
-  --accent-green-dim: #10b98133;
-  --accent-red: #ef4444;
-  --accent-red-dim: #ef444433;
-  --accent-yellow: #f59e0b;
-  --accent-yellow-dim: #f59e0b33;
-  --accent-purple: #8b5cf6;
+  /* Accent colors (shared) — OpenArg Editorial */
+  --accent-cyan: #74ACDF;           /* cobalt — celeste Argentina */
+  --accent-cyan-dim: rgba(116, 172, 223, 0.20);
+  --accent-orange: #F6B40E;         /* vermilion — sol Argentina */
+  --accent-orange-dim: rgba(246, 180, 14, 0.20);
+  --accent-green: #6BBF59;
+  --accent-green-dim: rgba(107, 191, 89, 0.20);
+  --accent-red: #D9534F;
+  --accent-red-dim: rgba(217, 83, 79, 0.20);
+  --accent-yellow: #FFD04A;         /* chrome — sol bright */
+  --accent-yellow-dim: rgba(255, 208, 74, 0.20);
+  --accent-purple: #93C5F8;         /* celeste-bright (sustituye violeta) */
 
   /* Transition */
   --transition-fast: 150ms ease;
   --transition-base: 250ms ease;
   --transition-slow: 400ms cubic-bezier(0.16, 1, 0.3, 1);
 
-  /* Radius */
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 16px;
-  --radius-xl: 24px;
+  /* Radius — OpenArg Editorial: rectangular / print */
+  --radius-sm: 2px;
+  --radius-md: 3px;
+  --radius-lg: 4px;
+  --radius-xl: 4px;
 }
 
-/* Dark theme (default) */
+/* Dark theme (default) — OpenArg Editorial: paper + ink */
 [data-theme="dark"] {
-  --bg-primary: #0a0f1c;
-  --bg-secondary: #111827;
-  --bg-tertiary: #1a2236;
-  --bg-card: rgba(17, 24, 39, 0.7);
-  --bg-glass: rgba(255, 255, 255, 0.04);
-  --border-glass: rgba(255, 255, 255, 0.08);
-  --border-subtle: rgba(255, 255, 255, 0.06);
-  --text-primary: #f1f5f9;
-  --text-secondary: #94a3b8;
-  --text-tertiary: #64748b;
-  --text-accent: #00d4ff;
-  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.4);
-  --shadow-glow: 0 0 20px rgba(0, 212, 255, 0.15);
-  --scrollbar-track: #0a0f1c;
-  --scrollbar-thumb: #1e293b;
+  --bg-primary: #06090F;             /* ed-paper */
+  --bg-secondary: #0D1117;           /* ed-paper-2 */
+  --bg-tertiary: #1A2030;            /* ed-paper-3 */
+  --bg-card: rgba(13, 17, 23, 0.72);
+  --bg-glass: rgba(232, 236, 244, 0.04);
+  --border-glass: rgba(232, 236, 244, 0.10);
+  --border-subtle: rgba(232, 236, 244, 0.06);
+  --text-primary: #E8ECF4;           /* ed-ink */
+  --text-secondary: #8892A8;         /* ed-ink-2 */
+  --text-tertiary: #5A6378;
+  --text-accent: #74ACDF;            /* ed-cobalt */
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.55);
+  --shadow-glow: 0 0 20px rgba(116, 172, 223, 0.18);
+  --scrollbar-track: #06090F;
+  --scrollbar-thumb: #1A2030;
 }
 
-/* Light theme */
+/* Light theme — OpenArg Editorial: cream + ink */
 [data-theme="light"] {
-  --bg-primary: #f0f4f8;
-  --bg-secondary: #ffffff;
-  --bg-tertiary: #e8edf2;
-  --bg-card: rgba(255, 255, 255, 0.85);
-  --bg-glass: rgba(255, 255, 255, 0.6);
-  --border-glass: rgba(0, 0, 0, 0.08);
-  --border-subtle: rgba(0, 0, 0, 0.05);
-  --text-primary: #0f172a;
-  --text-secondary: #475569;
-  --text-tertiary: #94a3b8;
-  --text-accent: #0284c7;
-  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.08);
-  --shadow-glow: 0 0 20px rgba(2, 132, 199, 0.1);
-  --scrollbar-track: #f0f4f8;
-  --scrollbar-thumb: #cbd5e1;
+  --bg-primary: #F2EDE2;             /* ed-paper light (cream editorial) */
+  --bg-secondary: #E6DECC;
+  --bg-tertiary: #D8CFB8;
+  --bg-card: rgba(255, 255, 255, 0.78);
+  --bg-glass: rgba(17, 20, 46, 0.04);
+  --border-glass: rgba(17, 20, 46, 0.12);
+  --border-subtle: rgba(17, 20, 46, 0.06);
+  --text-primary: #11142E;
+  --text-secondary: #4A5170;
+  --text-tertiary: #6B7080;
+  --text-accent: #1F4E89;            /* cobalt darkened */
+  --shadow-card: 0 4px 24px rgba(17, 20, 46, 0.10);
+  --shadow-glow: 0 0 20px rgba(31, 78, 137, 0.12);
+  --scrollbar-track: #F2EDE2;
+  --scrollbar-thumb: #C8BFA5;
+  /* Acentos darkened para contraste AA sobre cream */
+  --accent-cyan: #1F4E89;
+  --accent-cyan-dim: rgba(31, 78, 137, 0.18);
+  --accent-orange: #C03A18;
+  --accent-orange-dim: rgba(192, 58, 24, 0.16);
+  --accent-yellow: #D9A20E;
+  --accent-yellow-dim: rgba(217, 162, 14, 0.18);
+  --accent-purple: #4A8ABF;
 }
 
 /* â”€â”€â”€ Base Styles â”€â”€â”€ */
@@ -222,7 +231,13 @@ html {
 
 body {
   font-family: var(--font-body);
-  background: var(--bg-primary);
+  position: relative;
+  background-color: var(--bg-primary);
+  background-image:
+    radial-gradient(ellipse 1400px 900px at 12% -10%, rgba(116, 172, 223, 0.12), transparent 55%),
+    radial-gradient(ellipse 1100px 800px at 100% 105%, rgba(246, 180, 14, 0.07), transparent 60%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.025), transparent 40%);
+  background-attachment: fixed;
   color: var(--text-primary);
   margin: 0;
   padding: 0;
@@ -230,6 +245,58 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transition: background-color var(--transition-base), color var(--transition-base);
+}
+
+/* ─── Grilla arquitectónica fija (OpenArg Editorial) ─── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(116, 172, 223, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(116, 172, 223, 0.06) 1px, transparent 1px),
+    linear-gradient(rgba(232, 236, 244, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(232, 236, 244, 0.035) 1px, transparent 1px);
+  background-size: 240px 240px, 240px 240px, 80px 80px, 80px 80px;
+  -webkit-mask-image: radial-gradient(ellipse 90% 75% at 50% 40%, black 0%, rgba(0,0,0,0.6) 50%, transparent 90%);
+          mask-image: radial-gradient(ellipse 90% 75% at 50% 40%, black 0%, rgba(0,0,0,0.6) 50%, transparent 90%);
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse 120% 100% at 50% 50%, transparent 55%, rgba(0,0,0,0.45) 100%);
+}
+
+#root { position: relative; z-index: 1; }
+
+/* Light mode: cobalt + vermilion darkened + cream vignette */
+[data-theme="light"] body {
+  background-image:
+    radial-gradient(ellipse 1400px 900px at 12% -10%, rgba(31, 78, 137, 0.10), transparent 55%),
+    radial-gradient(ellipse 1100px 800px at 100% 105%, rgba(192, 58, 24, 0.06), transparent 60%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.35), transparent 35%);
+}
+[data-theme="light"] body::before {
+  background-image:
+    linear-gradient(rgba(31, 78, 137, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(31, 78, 137, 0.07) 1px, transparent 1px),
+    linear-gradient(rgba(17, 20, 46, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(17, 20, 46, 0.04) 1px, transparent 1px);
+}
+[data-theme="light"] body::after {
+  background: radial-gradient(ellipse 120% 100% at 50% 50%, transparent 55%, rgba(17, 20, 46, 0.14) 100%);
+}
+
+/* En mobile el background-attachment fixed puede causar lag — degrada a scroll */
+@media (max-width: 720px) {
+  body { background-attachment: scroll; }
+  body::before, body::after { position: absolute; }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -805,8 +872,15 @@ h1, h2, h3, h4, h5, h6 {
 /* ═══════ REPORT CARDS GRID ═══════ */
 .report-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(160px, auto);
   gap: 14px;
+}
+
+/* Layout asimétrico editorial: primer card = hero 2×2 */
+.report-grid > .report-card:first-child {
+  grid-column: span 2;
+  grid-row: span 2;
 }
 
 .report-card {
@@ -1049,6 +1123,11 @@ h1, h2, h3, h4, h5, h6 {
   .report-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  /* Hero pierde span vertical pero ocupa la fila completa */
+  .report-grid > .report-card:first-child {
+    grid-column: span 2;
+    grid-row: auto;
+  }
 }
 
 @media (max-width: 640px) {
@@ -1098,6 +1177,11 @@ h1, h2, h3, h4, h5, h6 {
   .report-grid {
     grid-template-columns: 1fr;
     gap: 10px;
+  }
+  /* En mobile chico, el hero se reabsorbe como una card más */
+  .report-grid > .report-card:first-child {
+    grid-column: auto;
+    grid-row: auto;
   }
 
   .report-card {
@@ -4560,3 +4644,671 @@ body[data-route="presentacion"] main {
   }
 }
 
+/* ═══════════════════════════════════════════════════════════════
+   OPENARG EDITORIAL — FORMA (overrides editoriales)
+   Reescribe primitivas SaaS → editorial print. Sin tocar markup.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ─── Tipografía: disciplina editorial ─── */
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+h1 { letter-spacing: -0.035em; }
+h2 { letter-spacing: -0.022em; }
+
+em {
+  font-style: italic;
+  color: var(--accent-orange);
+}
+
+.kpi-value, .hero-stat-value, .report-card-number,
+.report-card-stat-value, .section-number {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ─── Glass card → hairline editorial ─── */
+.glass-card {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: none;
+  border-top: 1px solid var(--border-glass);
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  transition: background-color var(--transition-base) ease;
+}
+.glass-card:hover {
+  transform: none !important;
+  box-shadow: none !important;
+  border-color: var(--border-glass) !important;
+  background: var(--bg-secondary) !important;
+}
+.glass-card.p-5, .glass-card.p-6 {
+  border-bottom: 1px solid var(--border-glass);
+}
+
+/* ─── Insight card → blockquote editorial ─── */
+.insight-card {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border-left-width: 4px;
+  border-left-color: var(--accent-orange) !important;
+  border-radius: 0 !important;
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--text-primary);
+}
+.insight-card:hover {
+  background: transparent !important;
+  border-left-color: var(--accent-cyan) !important;
+}
+
+/* ─── Badges → rectángulos hairline ─── */
+.badge {
+  border-radius: 0 !important;
+  padding: 2px 8px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  border: 1px solid currentColor;
+  background: transparent !important;
+}
+.badge-good { color: var(--accent-green); border-color: var(--accent-green); }
+.badge-warning { color: var(--accent-yellow); border-color: var(--accent-yellow); }
+.badge-critical { color: var(--accent-red); border-color: var(--accent-red); }
+
+/* ─── KPI value → numeral, sin gradient text ─── */
+.kpi-value {
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  -webkit-text-fill-color: var(--accent-cyan) !important;
+  background-clip: initial !important;
+  color: var(--accent-cyan);
+  letter-spacing: -0.04em;
+  font-weight: 700;
+}
+.kpi-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+/* ─── Hero landing → composición editorial estática ─── */
+.landing-hero {
+  border-radius: 0 !important;
+  border: none !important;
+  border-top: 1px solid var(--border-glass) !important;
+  border-bottom: 1px solid var(--border-glass) !important;
+  background: transparent !important;
+  animation: none !important;
+  padding: 4rem 1.5rem 3.5rem;
+}
+.hero-particles, .hero-particle {
+  display: none !important;
+}
+.hero-title {
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  -webkit-text-fill-color: var(--text-primary) !important;
+  background-clip: initial !important;
+  color: var(--text-primary);
+  letter-spacing: -0.04em;
+  font-family: var(--font-heading);
+}
+.hero-title-light {
+  -webkit-text-fill-color: var(--text-secondary) !important;
+  font-style: italic;
+}
+.hero-badge {
+  border-radius: 0 !important;
+  border: 1px solid var(--accent-cyan);
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  font-family: var(--font-mono);
+  letter-spacing: 0.12em;
+  padding: 4px 12px;
+}
+.hero-badge-dot { display: none !important; }
+
+.hero-stat-value {
+  color: var(--accent-cyan);
+  letter-spacing: -0.04em;
+}
+.hero-stat-label {
+  font-family: var(--font-mono);
+  letter-spacing: 0.12em;
+}
+.hero-stat-divider { background: var(--border-glass); }
+
+/* ─── Section headers → eyebrow numerado editorial ─── */
+.section-header {
+  align-items: baseline;
+}
+.section-number {
+  font-family: var(--font-mono) !important;
+  font-size: 0.72rem !important;
+  font-weight: 500 !important;
+  color: var(--accent-orange) !important;
+  opacity: 1 !important;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  line-height: 1.4 !important;
+  min-width: auto !important;
+  padding-top: 6px;
+}
+.section-title {
+  letter-spacing: -0.022em;
+  font-weight: 700;
+}
+.section-desc {
+  font-style: italic;
+  color: var(--text-secondary);
+}
+
+/* ─── Report card → hairline sin glow ─── */
+.report-card {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: none !important;
+  border-top: 1px solid var(--border-glass) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 1.5rem 1.25rem;
+  animation: none !important;
+}
+.report-card:hover {
+  transform: none !important;
+  border-color: var(--border-glass) !important;
+  box-shadow: none !important;
+  background: var(--bg-secondary) !important;
+}
+.report-card-glow { display: none !important; }
+.report-card-number {
+  font-family: var(--font-mono) !important;
+  font-size: 0.72rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.12em !important;
+  opacity: 1 !important;
+  color: var(--accent-orange) !important;
+}
+.report-card-arrow {
+  opacity: 1;
+  transform: none;
+  color: var(--text-tertiary);
+}
+.report-card:hover .report-card-arrow {
+  transform: translateX(4px);
+  color: var(--accent-orange);
+}
+.report-card-title {
+  letter-spacing: -0.018em;
+}
+.report-card:hover .report-card-title {
+  color: var(--text-primary);
+}
+.report-card-stat {
+  border-top: 1px solid var(--border-subtle);
+}
+.report-card-stat-value {
+  font-family: var(--font-mono);
+  letter-spacing: 0.05em;
+}
+
+/* ─── Explorer banner → bloque editorial sin glow ─── */
+.explorer-banner {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: none !important;
+  border-top: 1px solid var(--border-glass) !important;
+  border-bottom: 1px solid var(--border-glass) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+.explorer-banner:hover {
+  transform: none !important;
+  border-color: var(--border-glass) !important;
+  box-shadow: none !important;
+  background: var(--bg-secondary) !important;
+}
+.explorer-banner-glow { display: none !important; }
+.explorer-banner-title { letter-spacing: -0.018em; }
+
+/* ─── Progress + focus rings: sin glow ─── */
+.progress-bar { border-radius: 0 !important; }
+.progress-bar-fill { border-radius: 0 !important; box-shadow: none !important; }
+.focus\:ring-2:focus { box-shadow: 0 0 0 2px var(--accent-orange) !important; }
+
+/* ─── Footer rule ─── */
+.footer-rule { border-top: 1px solid var(--border-glass); }
+
+/* ─── Links → underline editorial ─── */
+.hero-link, a.hero-link {
+  border-bottom: 1px solid currentColor;
+  text-decoration: none;
+}
+.hero-link:hover {
+  color: var(--accent-orange);
+  text-decoration: none;
+}
+
+/* ─── Conurbano: rectangular y plano ─── */
+.conu-pill, .conu-chip-btn, .conu-select { border-radius: 0 !important; }
+.conu-3d-help, .conu-3d-reset { box-shadow: none !important; border-radius: 0 !important; }
+
+/* ─── Animaciones ambient OFF ─── */
+@keyframes heroGradient { from { background-position: 0% 50%; } to { background-position: 0% 50%; } }
+@keyframes particleFloat { from { transform: none; } to { transform: none; } }
+@keyframes explorerGlow { from { background-position: 0% 50%; } to { background-position: 0% 50%; } }
+@keyframes cardEntrance { from { opacity: 1; } to { opacity: 1; } }
+
+/* ─── Pulse-red → blink editorial discreto (sin glow ring) ─── */
+@keyframes pulseRed {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+.pulse-critical { box-shadow: none !important; animation: pulseRed 2s ease infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .pulse-critical { animation: none !important; }
+}
+
+/* ─── Hero card de la portada editorial (primer hijo del grid) ─── */
+.report-grid > .report-card:first-child {
+  padding: 2.5rem 2rem !important;
+  border-top-width: 2px !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.report-grid > .report-card:first-child .report-card-number {
+  font-size: 0.85rem !important;
+  letter-spacing: 0.18em !important;
+}
+.report-grid > .report-card:first-child .report-card-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  margin-bottom: 0.5rem;
+}
+.report-grid > .report-card:first-child .report-card-desc {
+  -webkit-line-clamp: 6;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--text-secondary);
+}
+.report-grid > .report-card:first-child .report-card-stat-value {
+  font-size: 1.05rem;
+}
+.report-grid > .report-card:first-child .report-card-arrow {
+  font-size: 1.4rem;
+}
+
+/* En tablet (≤900px) el hero se relaja: row completa, sin tanto padding extra */
+@media (max-width: 900px) {
+  .report-grid > .report-card:first-child {
+    padding: 2rem 1.5rem !important;
+  }
+  .report-grid > .report-card:first-child .report-card-title {
+    font-size: 1.35rem;
+  }
+}
+
+/* En mobile (≤640px) el hero pierde su look especial — uniforme con el resto */
+@media (max-width: 640px) {
+  .report-grid > .report-card:first-child {
+    padding: 1rem !important;
+    border-top-width: 1px !important;
+  }
+  .report-grid > .report-card:first-child .report-card-title {
+    font-size: 0.95rem;
+  }
+  .report-grid > .report-card:first-child .report-card-desc {
+    display: none;
+  }
+  .report-grid > .report-card:first-child .report-card-arrow {
+    display: none;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   OPENARG EDITORIAL — DENSIDAD (llenar de contenido la portada)
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ─── Section header: masthead editorial con numeral grande ─── */
+.section-header {
+  display: grid !important;
+  grid-template-columns: auto 1fr !important;
+  gap: 1.75rem !important;
+  align-items: baseline !important;
+  padding: 1.5rem 0 1.25rem !important;
+  border-top: 2px solid var(--text-primary) !important;
+  border-bottom: 1px solid var(--border-glass) !important;
+  margin-bottom: 1.75rem !important;
+}
+.section-number {
+  font-family: var(--font-mono) !important;
+  font-size: 3.2rem !important;
+  font-weight: 700 !important;
+  color: var(--accent-orange) !important;
+  opacity: 1 !important;
+  letter-spacing: -0.02em !important;
+  text-transform: none !important;
+  line-height: 0.85 !important;
+  min-width: auto !important;
+  padding-top: 0 !important;
+  font-variant-numeric: tabular-nums;
+}
+.section-header > div:last-child::before {
+  content: 'Nº';
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent-orange);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.section-title {
+  font-size: 1.6rem !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.025em !important;
+  line-height: 1.15 !important;
+  margin: 0 !important;
+}
+.section-desc {
+  font-size: 0.95rem !important;
+  line-height: 1.6 !important;
+  margin-top: 0.6rem !important;
+  font-style: italic;
+  color: var(--text-secondary);
+  max-width: 70ch;
+}
+
+/* ─── Report cards: contenedor completo + descripción extendida ─── */
+.report-card {
+  border: 1px solid var(--border-glass) !important;
+  padding: 1.5rem 1.4rem !important;
+  gap: 0.85rem;
+}
+.report-card-body { gap: 0.4rem !important; }
+.report-card-desc {
+  -webkit-line-clamp: 3 !important;
+  font-size: 0.8rem !important;
+  line-height: 1.5 !important;
+  color: var(--text-secondary) !important;
+}
+.report-card-title {
+  font-size: 1rem;
+  line-height: 1.3;
+  font-weight: 700;
+}
+.report-card:hover {
+  border-color: var(--accent-cyan) !important;
+  background: var(--bg-secondary) !important;
+}
+.report-card-stat {
+  margin-top: 0.85rem !important;
+  padding-top: 0.7rem !important;
+}
+
+/* ─── Hero card: marca editorial + chrome ─── */
+.report-grid > .report-card:first-child {
+  border-width: 2px !important;
+  border-color: var(--text-primary) !important;
+  padding: 2.5rem 2rem !important;
+  position: relative;
+}
+.report-grid > .report-card:first-child::before {
+  content: 'INFORME DESTACADO · LEAD';
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  color: var(--accent-orange);
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid var(--border-glass);
+}
+.report-grid > .report-card:first-child:hover {
+  border-color: var(--accent-cyan) !important;
+  background: var(--bg-secondary) !important;
+}
+.report-grid > .report-card:first-child .report-card-desc {
+  -webkit-line-clamp: 8 !important;
+  font-size: 0.95rem !important;
+}
+
+/* ─── Landing hero: chrome editorial (eyebrow + colophon) ─── */
+.landing-hero::before {
+  content: 'EDICIÓN 2026 · INTELIGENCIA SOBRE DATOS PÚBLICOS · LA PROVINCIA EN CIFRAS';
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  color: var(--accent-orange);
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-glass);
+}
+.landing-hero::after {
+  content: 'PROVINCIA DE BUENOS AIRES — RELEVAMIENTO ESTRATÉGICO · COMPUESTO EN FAMILJEN GROTESK · COLOSSUS LAB · BA MMXXVI';
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  color: var(--text-tertiary);
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-glass);
+}
+
+/* ─── Conurbano highlight: titular de diario editorial ─── */
+.conurbano-highlight {
+  margin: 3rem 0 4rem !important;
+  padding: 0 !important;
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+}
+.conurbano-highlight::before {
+  display: none !important;
+}
+
+.conurbano-highlight-header {
+  border-top: 2px solid var(--text-primary) !important;
+  padding-top: 1.5rem !important;
+  margin-bottom: 1.75rem !important;
+  max-width: 100% !important;
+  position: relative;
+}
+/* Marca de sección sobre el título: "Nº 00 · ANÁLISIS ESPECIAL" */
+.conurbano-highlight-header::before {
+  content: 'Nº 00 · ANÁLISIS ESPECIAL · CONURBANO BONAERENSE';
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  color: var(--accent-orange);
+  margin-bottom: 1rem;
+}
+
+.conurbano-highlight-badge {
+  display: none !important;  /* reemplazado por la marca via ::before */
+}
+
+.conurbano-highlight-title {
+  font-family: var(--font-heading) !important;
+  font-size: clamp(2.5rem, 5vw, 3.75rem) !important;
+  font-weight: 700 !important;
+  line-height: 0.98 !important;
+  letter-spacing: -0.04em !important;
+  margin: 0 0 0.85rem !important;
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  background-clip: initial !important;
+  -webkit-text-fill-color: var(--text-primary) !important;
+  color: var(--text-primary) !important;
+  text-wrap: balance;
+}
+
+.conurbano-highlight-desc {
+  font-family: var(--font-heading) !important;
+  font-size: 1.1rem !important;
+  font-style: italic !important;
+  line-height: 1.5 !important;
+  color: var(--text-secondary) !important;
+  max-width: 70ch !important;
+  margin: 0 0 0.5rem !important;
+}
+
+.conurbano-highlight-grid {
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 0 !important;
+  border-top: 1px solid var(--border-glass);
+}
+.conurbano-highlight-grid > .report-card-featured + .report-card-featured {
+  border-left: 1px solid var(--border-glass) !important;
+}
+
+/* ─── Report card · featured (Conurbano) → bloque editorial pleno ─── */
+.report-card-featured {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 2rem 1.75rem !important;
+  min-height: 0 !important;
+  position: relative;
+}
+.report-card-featured::before {
+  content: 'INFORME ESPECIAL · CONURBANO';
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  color: var(--accent-orange);
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid var(--border-glass);
+}
+.report-card-featured:hover {
+  background: var(--bg-secondary) !important;
+  border: none !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+.report-card-featured .report-card-number {
+  font-family: var(--font-mono) !important;
+  font-size: 0.8rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.18em !important;
+  color: var(--accent-orange) !important;
+  opacity: 1 !important;
+}
+.report-card-featured .report-card-title {
+  font-family: var(--font-heading) !important;
+  font-size: 1.5rem !important;
+  font-weight: 700 !important;
+  line-height: 1.15 !important;
+  letter-spacing: -0.025em !important;
+  margin-bottom: 0.4rem !important;
+}
+.report-card-featured .report-card-desc {
+  -webkit-line-clamp: 5 !important;
+  font-size: 0.9rem !important;
+  line-height: 1.55 !important;
+  color: var(--text-secondary) !important;
+}
+.report-card-featured .report-card-arrow {
+  font-size: 1.3rem;
+}
+.report-card-featured .report-card-stat {
+  border-top: 1px solid var(--border-subtle);
+  margin-top: 1rem !important;
+  padding-top: 0.75rem !important;
+}
+
+/* Responsive: stack en mobile */
+@media (max-width: 900px) {
+  .conurbano-highlight-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .conurbano-highlight-grid > .report-card-featured + .report-card-featured {
+    border-left: none !important;
+    border-top: 1px solid var(--border-glass) !important;
+  }
+}
+@media (max-width: 640px) {
+  .conurbano-highlight-title {
+    font-size: 2rem !important;
+  }
+  .conurbano-highlight-desc {
+    font-size: 0.98rem !important;
+  }
+  .conurbano-highlight-header::before {
+    font-size: 0.62rem;
+    letter-spacing: 0.16em;
+  }
+  .report-card-featured {
+    padding: 1.5rem 1.25rem !important;
+  }
+  .report-card-featured .report-card-title {
+    font-size: 1.2rem !important;
+  }
+}
+
+/* ─── Explorer banner: densidad editorial ─── */
+.explorer-banner { padding: 2rem 2.25rem !important; }
+.explorer-banner-title { font-size: 1.25rem; }
+.explorer-banner-desc {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--text-secondary);
+  margin-top: 0.35rem;
+}
+
+/* ─── Mobile (≤640px): masthead se compacta pero conserva jerarquía ─── */
+@media (max-width: 640px) {
+  .section-header {
+    gap: 1rem !important;
+    padding: 1rem 0 0.85rem !important;
+  }
+  .section-number {
+    font-size: 2.2rem !important;
+  }
+  .section-title {
+    font-size: 1.15rem !important;
+  }
+  .report-card { padding: 1rem !important; }
+  .landing-hero::before, .landing-hero::after {
+    font-size: 0.6rem;
+    letter-spacing: 0.16em;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .report-grid > .report-card:first-child::before {
+    font-size: 0.6rem;
+    margin-bottom: 0.75rem;
+  }
+}
