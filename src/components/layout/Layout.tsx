@@ -101,8 +101,13 @@ function TopBar() {
           <button
             onClick={toggleSidebar}
             aria-label="Abrir menú de navegación"
-            className="p-2 rounded-lg hover:opacity-80 transition-opacity lg:hidden"
-            style={{ color: 'var(--text-secondary)' }}
+            className="p-2 hover:opacity-80 transition-opacity lg:hidden"
+            style={{
+              color: 'var(--text-secondary)',
+              borderRadius: 0,
+              border: '1px solid var(--border-glass)',
+              background: 'transparent',
+            }}
           >
             <Menu size={20} strokeLinecap="square" aria-hidden="true" />
           </button>
