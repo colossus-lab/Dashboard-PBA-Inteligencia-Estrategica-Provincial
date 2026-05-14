@@ -4850,23 +4850,36 @@ em {
   color: var(--text-secondary);
 }
 
-/* ─── Report card → hairline sin glow ─── */
+/* ─── Report card → caja editorial sólida con profundidad ─── */
 .report-card {
-  background: transparent !important;
+  background: var(--bg-tertiary) !important;
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
-  border: none !important;
-  border-top: 1px solid var(--border-glass) !important;
+  border: 1px solid var(--border-glass) !important;
   border-radius: 0 !important;
-  box-shadow: none !important;
+  box-shadow:
+    5px 5px 0 0 var(--card-depth-shadow, rgba(0, 0, 0, 0.55)),
+    0 2px 8px rgba(0, 0, 0, 0.25) !important;
   padding: 1.5rem 1.25rem;
   animation: none !important;
+  transition: transform 200ms cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 200ms cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 200ms ease !important;
 }
 .report-card:hover {
-  transform: none !important;
-  border-color: var(--border-glass) !important;
-  box-shadow: none !important;
-  background: var(--bg-secondary) !important;
+  transform: translate(-2px, -2px) !important;
+  border-color: var(--card-color, var(--border-glass)) !important;
+  box-shadow:
+    8px 8px 0 0 var(--card-depth-shadow, rgba(0, 0, 0, 0.65)),
+    0 6px 16px rgba(0, 0, 0, 0.3) !important;
+  background: var(--bg-tertiary) !important;
+}
+[data-theme="light"] .report-card {
+  --card-depth-shadow: rgba(17, 20, 46, 0.18);
+}
+[data-theme="dark"] .report-card,
+:root:not([data-theme]) .report-card {
+  --card-depth-shadow: rgba(0, 0, 0, 0.55);
 }
 .report-card-glow { display: none !important; }
 .report-card-number {
@@ -5227,17 +5240,25 @@ em {
   border-left: 1px solid var(--border-glass) !important;
 }
 
-/* ─── Report card · featured (Conurbano) → bloque editorial pleno ─── */
+/* ─── Report card · featured (Conurbano) → caja editorial con profundidad ─── */
 .report-card-featured {
-  background: transparent !important;
+  background: var(--bg-tertiary) !important;
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
-  border: none !important;
+  border: 1px solid var(--border-glass) !important;
   border-radius: 0 !important;
-  box-shadow: none !important;
+  box-shadow:
+    6px 6px 0 0 var(--card-depth-shadow, rgba(0, 0, 0, 0.6)),
+    0 3px 10px rgba(0, 0, 0, 0.28) !important;
   padding: 2rem 1.75rem !important;
   min-height: 0 !important;
   position: relative;
+}
+.report-card-featured:hover {
+  transform: translate(-2px, -2px) !important;
+  box-shadow:
+    9px 9px 0 0 var(--card-depth-shadow, rgba(0, 0, 0, 0.7)),
+    0 8px 20px rgba(0, 0, 0, 0.32) !important;
 }
 .report-card-featured::before {
   content: 'INFORME ESPECIAL · CONURBANO';
@@ -5515,6 +5536,14 @@ em {
     gap: 0.4rem !important;
     min-height: 0 !important;
     border: 1px solid var(--border-glass) !important;
+    box-shadow:
+      3px 3px 0 0 var(--card-depth-shadow, rgba(0, 0, 0, 0.5)),
+      0 2px 6px rgba(0, 0, 0, 0.2) !important;
+  }
+  .report-card-featured {
+    box-shadow:
+      3px 3px 0 0 var(--card-depth-shadow, rgba(0, 0, 0, 0.55)),
+      0 2px 6px rgba(0, 0, 0, 0.22) !important;
   }
   .report-card-header {
     margin-bottom: 0;
