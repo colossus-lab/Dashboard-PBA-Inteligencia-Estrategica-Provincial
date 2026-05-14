@@ -253,22 +253,23 @@ body::before {
   position: fixed;
   left: 0;
   right: 0;
-  top: -100vh;
-  height: 220vh;
+  bottom: 0;
+  top: auto;
+  height: 200vh;  /* extiende hacia arriba; tras tilt 55° cubre el viewport */
   z-index: 0;
   pointer-events: none;
   background-image:
-    linear-gradient(rgba(116, 172, 223, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(116, 172, 223, 0.05) 1px, transparent 1px),
-    linear-gradient(rgba(232, 236, 244, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(232, 236, 244, 0.03) 1px, transparent 1px);
+    linear-gradient(rgba(116, 172, 223, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(116, 172, 223, 0.07) 1px, transparent 1px),
+    linear-gradient(rgba(232, 236, 244, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(232, 236, 244, 0.04) 1px, transparent 1px);
   background-size: 240px 240px, 240px 240px, 80px 80px, 80px 80px;
-  /* Piso arquitectónico anclado al borde inferior del viewport */
+  /* Piso arquitectónico — origen en el borde inferior del viewport */
   transform: perspective(1500px) rotateX(55deg);
   transform-origin: 50% 100%;
   /* Fade vertical: intenso abajo, se difumina hacia el horizonte */
-  -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.45) 45%, transparent 85%);
-          mask-image: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.45) 45%, transparent 85%);
+  -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.5) 35%, transparent 75%);
+          mask-image: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.5) 35%, transparent 75%);
 }
 
 body::after {
@@ -309,6 +310,7 @@ body::after {
     transform: none;
     height: 100vh;
     top: 0;
+    bottom: auto;
     -webkit-mask-image: radial-gradient(ellipse 90% 75% at 50% 40%, black 0%, rgba(0,0,0,0.6) 50%, transparent 90%);
             mask-image: radial-gradient(ellipse 90% 75% at 50% 40%, black 0%, rgba(0,0,0,0.6) 50%, transparent 90%);
   }
@@ -5086,7 +5088,7 @@ em {
   position: relative;
 }
 .report-grid > .report-card:first-child::before {
-  content: 'INFORME DESTACADO · LEAD';
+  content: 'INFORME DESTACADO';
   display: block;
   font-family: var(--font-mono);
   font-size: 0.68rem;
@@ -5335,22 +5337,31 @@ em {
    una barra cobalt que carga sección por sección (25/50/75/100%).
    ═══════════════════════════════════════════════════════════════ */
 
+/* Bar transicionable: el cobalt crece de 0 a target via background-size
+   cuando el SectionReveal padre gana la clase .visible */
 .section-header::after,
-.conurbano-highlight-header::after {
+.conurbano-highlight-header::after,
+.landing-page > .section-reveal:nth-of-type(5) .explorer-banner::after {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(
-    to right,
-    var(--accent-cyan) 0%,
-    var(--accent-cyan) var(--progress, 50%),
-    var(--border-glass) var(--progress, 50%),
-    var(--border-glass) 100%
-  );
+  background-color: var(--border-glass);
+  background-image: linear-gradient(to right, var(--accent-cyan), var(--accent-cyan));
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 0% 100%;
+  transition: background-size 1.2s cubic-bezier(0.16, 1, 0.3, 1);
   pointer-events: none;
+}
+
+/* Al revelar la sección, el bar dibuja desde 0% hasta --progress */
+.section-reveal.visible .section-header::after,
+.section-reveal.visible .conurbano-highlight-header::after,
+.section-reveal.visible .explorer-banner::after {
+  background-size: var(--progress, 50%) 100%;
 }
 
 /* Fill % por sección, vía :nth-of-type del SectionReveal padre.
@@ -5372,20 +5383,40 @@ em {
   margin-top: 2.5rem;
   padding-top: 3rem !important;
 }
-.landing-page > .section-reveal:nth-of-type(5) .explorer-banner::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(
-    to right,
-    var(--accent-cyan) 0%,
-    var(--accent-cyan) var(--progress, 100%),
-    var(--border-glass) var(--progress, 100%),
-    var(--border-glass) 100%
-  );
-  pointer-events: none;
+
+/* ═══════════════════════════════════════════════════════════════
+   BLUR REVEAL — Titulares editoriales entrando en foco
+   Aplica solo a la Landing. Otras páginas conservan el reveal normal.
+   ═══════════════════════════════════════════════════════════════ */
+
+.landing-page .section-reveal .hero-title,
+.landing-page .section-reveal .conurbano-highlight-title,
+.landing-page .section-reveal .section-title {
+  filter: blur(10px);
+  transition: filter 900ms cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 150ms;
+  will-change: filter;
+}
+
+.landing-page .section-reveal.visible .hero-title,
+.landing-page .section-reveal.visible .conurbano-highlight-title,
+.landing-page .section-reveal.visible .section-title {
+  filter: blur(0);
+}
+
+/* Respeta preferencia de reducción de movimiento del SO */
+@media (prefers-reduced-motion: reduce) {
+  .section-header::after,
+  .conurbano-highlight-header::after,
+  .landing-page > .section-reveal:nth-of-type(5) .explorer-banner::after {
+    transition: none !important;
+    background-size: var(--progress, 50%) 100% !important;
+  }
+  .landing-page .section-reveal .hero-title,
+  .landing-page .section-reveal .conurbano-highlight-title,
+  .landing-page .section-reveal .section-title {
+    filter: none !important;
+    transition: none !important;
+  }
 }
 
