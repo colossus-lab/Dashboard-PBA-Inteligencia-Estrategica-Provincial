@@ -5596,3 +5596,37 @@ em {
   }
 }
 
+/* ═══════════════════════════════════════════════════════════════
+   MINI CHARTS — sparkline + bars editoriales en cada report card
+   ═══════════════════════════════════════════════════════════════ */
+
+.report-card-mini-chart {
+  display: block;
+  margin: 0;
+  max-width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+/* El span legacy .report-card-stat-value queda fuera de uso —
+   garantizo que no aparezca text con color vermilion legado */
+.report-card-stat-value {
+  display: none !important;
+}
+
+/* En cards mobile compactas, el SVG escala al ancho real de la celda */
+@media (max-width: 640px) {
+  .report-card-mini-chart {
+    width: 100% !important;
+    max-height: 22px;
+  }
+  /* Hero card de cada grid: un poco más alto */
+  .report-grid > .report-card:first-child .report-card-mini-chart {
+    max-height: 28px;
+  }
+  /* Conurbano featured cards en mobile: el size lg de 140px se acomoda al 50% width */
+  .report-card-featured .report-card-mini-chart {
+    max-height: 24px;
+  }
+}
+
