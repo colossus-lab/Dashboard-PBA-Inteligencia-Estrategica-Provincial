@@ -323,7 +323,10 @@ body::after {
    los gradientes se anclan al body de 6000px y desaparecen del viewport. */
 @media (max-width: 720px) {
   body::before {
-    transform: perspective(1200px) rotateX(35deg);
+    /* Celdas a la mitad → grid se lee como "denso y lejano" en viewport angosto */
+    background-size: 120px 120px, 120px 120px, 40px 40px, 40px 40px;
+    /* Perspectiva más corta + tilt mayor → punto de fuga más marcado, sensación de horizonte */
+    transform: perspective(1000px) rotateX(42deg);
     animation: none;
     /* Mask simplificado: sólo horizon fade (sin radial central — en
        un viewport angosto el central mask oculta demasiado). */
