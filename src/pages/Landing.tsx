@@ -128,7 +128,9 @@ export function Landing() {
             <div className="section-number">01</div>
             <div>
               <h2 className="section-title">Población — Censo 2022</h2>
-              <p className="section-desc">Análisis demográfico integral de la Provincia de Buenos Aires con datos del censo nacional.</p>
+              <p className="section-desc">
+                Ocho dimensiones del último censo nacional: estructura por sexo y edad, hábitat, hogares, stock de viviendas, asistencia educativa, características económicas, salud y previsión, y fecundidad.
+              </p>
             </div>
           </div>
           <div className="report-grid">

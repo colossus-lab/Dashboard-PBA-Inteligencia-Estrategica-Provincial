@@ -5462,3 +5462,137 @@ em {
   }
 }
 
+/* ═══════════════════════════════════════════════════════════════
+   MOBILE REORG (≤640px) — grids 2-col, Conurbano special,
+   cards compactas, safe area, marker DESTACADO/ESPECIAL.
+   ═══════════════════════════════════════════════════════════════ */
+@media (max-width: 640px) {
+  /* Safe area un poco mayor */
+  .landing-page {
+    padding: 1rem 1.25rem 3rem !important;
+  }
+
+  /* Description un poco más chica + balance */
+  .section-desc {
+    font-size: 0.78rem !important;
+    line-height: 1.5 !important;
+  }
+
+  /* Población + Sectoriales: 2 cols (era 1 col) */
+  .report-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-auto-rows: auto !important;
+    gap: 0.5rem !important;
+  }
+  .report-grid > .report-card:first-child {
+    grid-column: span 2 !important;
+    grid-row: auto !important;
+    padding: 1.25rem 1.1rem !important;
+    border-top-width: 2px !important;
+  }
+  .report-grid > .report-card:first-child::before {
+    content: 'DESTACADO';
+    font-size: 0.55rem !important;
+    letter-spacing: 0.18em !important;
+    margin-bottom: 0.55rem !important;
+    padding-bottom: 0.4rem !important;
+  }
+  .report-grid > .report-card:first-child .report-card-title {
+    font-size: 1rem !important;
+  }
+  .report-grid > .report-card:first-child .report-card-desc {
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    font-size: 0.75rem !important;
+    line-height: 1.4 !important;
+  }
+
+  /* Cards regulares mobile: compactas, columna, sin desc/arrow */
+  .report-card {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    padding: 0.85rem 0.75rem !important;
+    gap: 0.4rem !important;
+    min-height: 0 !important;
+    border: 1px solid var(--border-glass) !important;
+  }
+  .report-card-header {
+    margin-bottom: 0;
+    width: 100%;
+  }
+  .report-card-number {
+    font-size: 0.6rem !important;
+    letter-spacing: 0.14em !important;
+  }
+  .report-card-arrow {
+    display: none !important;
+  }
+  .report-card-body {
+    flex: none !important;
+    gap: 0.2rem !important;
+  }
+  .report-card-title {
+    font-size: 0.82rem !important;
+    line-height: 1.25 !important;
+    font-weight: 700 !important;
+  }
+  .report-card-desc {
+    display: none !important;  /* No entra en 50% ancho */
+  }
+  .report-card-stat {
+    margin-top: 0.4rem !important;
+    padding-top: 0.4rem !important;
+    padding-left: 0 !important;
+    border-top: 1px solid var(--border-subtle) !important;
+    border-left: none !important;
+    width: 100%;
+  }
+  .report-card-stat-value {
+    font-size: 0.7rem !important;
+    letter-spacing: 0.03em !important;
+  }
+
+  /* Conurbano: 2-col (era 1-col), divisor vertical, marca ESPECIAL */
+  .conurbano-highlight {
+    margin: 2rem 0 3rem !important;
+  }
+  .conurbano-highlight-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0 !important;
+  }
+  .conurbano-highlight-grid > .report-card-featured + .report-card-featured {
+    border-left: 1px solid var(--border-glass) !important;
+    border-top: 2px solid var(--accent-orange) !important;
+  }
+  .report-card-featured {
+    padding: 1rem 0.85rem !important;
+    min-height: 0 !important;
+    /* Marca "special": border-top 2px vermilion */
+    border-top: 2px solid var(--accent-orange) !important;
+  }
+  .report-card-featured::before {
+    content: 'ESPECIAL' !important;
+    font-size: 0.55rem !important;
+    letter-spacing: 0.18em !important;
+    margin-bottom: 0.5rem !important;
+    padding-bottom: 0.4rem !important;
+  }
+  .report-card-featured .report-card-number {
+    font-size: 0.6rem !important;
+  }
+  .report-card-featured .report-card-title {
+    font-size: 0.95rem !important;
+    line-height: 1.2 !important;
+  }
+  .report-card-featured .report-card-desc {
+    display: none !important;
+  }
+  .report-card-featured .report-card-arrow {
+    display: none !important;
+  }
+  .report-card-featured .report-card-stat {
+    margin-top: 0.55rem !important;
+    padding-top: 0.4rem !important;
+  }
+}
+
