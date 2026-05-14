@@ -914,10 +914,9 @@ h1, h2, h3, h4, h5, h6 {
   gap: 14px;
 }
 
-/* Layout asimétrico editorial: primer card = hero 2×2 */
+/* Layout asimétrico editorial: primer card = hero ancho (2 cols, alto natural) */
 .report-grid > .report-card:first-child {
   grid-column: span 2;
-  grid-row: span 2;
 }
 
 .report-card {
@@ -5117,7 +5116,7 @@ em {
 .report-grid > .report-card:first-child {
   border-width: 2px !important;
   border-color: var(--text-primary) !important;
-  padding: 2.5rem 2rem !important;
+  padding: 1.75rem 1.5rem !important;
   position: relative;
 }
 .report-grid > .report-card:first-child::before {
@@ -5127,8 +5126,8 @@ em {
   font-size: 0.68rem;
   letter-spacing: 0.22em;
   color: var(--accent-orange);
-  margin-bottom: 1.25rem;
-  padding-bottom: 0.85rem;
+  margin-bottom: 0.85rem;
+  padding-bottom: 0.6rem;
   border-bottom: 1px solid var(--border-glass);
 }
 .report-grid > .report-card:first-child:hover {
