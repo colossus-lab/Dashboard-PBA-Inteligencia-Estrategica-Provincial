@@ -316,19 +316,21 @@ body::after {
   background: radial-gradient(ellipse 120% 100% at 50% 50%, transparent 55%, rgba(17, 20, 46, 0.14) 100%);
 }
 
-/* En mobile el background-attachment fixed puede causar lag — degrada a scroll
-   y la perspectiva del grid se desactiva para no abrumar */
+/* Mobile: el background-attachment fixed de body causa lag, lo degradamos
+   a scroll. El grid en perspectiva se conserva con tilt más sutil (35°)
+   y la animación de drift se desactiva para preservar batería. */
 @media (max-width: 720px) {
   body { background-attachment: scroll; }
-  body::before, body::after { position: absolute; }
+  body::after { position: absolute; }
+  /* body::before sigue position: fixed para que el "piso" quede anclado
+     al viewport y mantenga el efecto de perspectiva mientras scrolle. */
   body::before {
-    transform: none;
-    height: 100vh;
-    top: 0;
-    bottom: auto;
+    transform: perspective(1200px) rotateX(35deg);
     animation: none;
-    -webkit-mask-image: radial-gradient(ellipse 90% 75% at 50% 40%, black 0%, rgba(0,0,0,0.6) 50%, transparent 90%);
-            mask-image: radial-gradient(ellipse 90% 75% at 50% 40%, black 0%, rgba(0,0,0,0.6) 50%, transparent 90%);
+    /* Mask simplificado: sólo horizon fade (sin radial central — en
+       un viewport angosto el central mask oculta demasiado). */
+    -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.55) 40%, transparent 90%);
+            mask-image: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.55) 40%, transparent 90%);
     -webkit-mask-composite: source-over;
             mask-composite: add;
   }
