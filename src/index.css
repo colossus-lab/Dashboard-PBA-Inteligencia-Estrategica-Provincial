@@ -5597,36 +5597,69 @@ em {
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   MINI CHARTS — sparkline + bars editoriales en cada report card
+   REPORT CARD TICKER — cifras reales rotando derecha→izquierda
    ═══════════════════════════════════════════════════════════════ */
+.report-card-ticker {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 24px;
+  font-family: var(--font-mono);
+}
+.report-card-ticker--sm { height: 24px; }
+.report-card-ticker--md { height: 28px; }
+.report-card-ticker--lg { height: 32px; }
 
-.report-card-mini-chart {
-  display: block;
-  margin: 0;
-  max-width: 100%;
-  height: auto;
-  overflow: visible;
+.report-card-ticker-item {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  animation: ticker-slide 4s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
-/* El span legacy .report-card-stat-value queda fuera de uso —
-   garantizo que no aparezca text con color vermilion legado */
+.report-card-ticker-value {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--accent-cyan);
+  letter-spacing: -0.01em;
+  flex-shrink: 0;
+}
+.report-card-ticker--md .report-card-ticker-value { font-size: 1rem; }
+.report-card-ticker--lg .report-card-ticker-value { font-size: 1.1rem; }
+
+.report-card-ticker-label {
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+
+@keyframes ticker-slide {
+  0%   { transform: translateX(100%); opacity: 0; }
+  20%  { transform: translateX(0);    opacity: 1; }
+  80%  { transform: translateX(0);    opacity: 1; }
+  100% { transform: translateX(-100%); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .report-card-ticker-item { animation: none; }
+}
+
+@media (max-width: 640px) {
+  .report-card-ticker-value { font-size: 0.85rem; }
+  .report-card-ticker--md .report-card-ticker-value { font-size: 0.9rem; }
+  .report-card-ticker-label { font-size: 0.65rem; }
+}
+
 .report-card-stat-value {
   display: none !important;
-}
-
-/* En cards mobile compactas, el SVG escala al ancho real de la celda */
-@media (max-width: 640px) {
-  .report-card-mini-chart {
-    width: 100% !important;
-    max-height: 22px;
-  }
-  /* Hero card de cada grid: un poco más alto */
-  .report-grid > .report-card:first-child .report-card-mini-chart {
-    max-height: 28px;
-  }
-  /* Conurbano featured cards en mobile: el size lg de 140px se acomoda al 50% width */
-  .report-card-featured .report-card-mini-chart {
-    max-height: 24px;
-  }
 }
 

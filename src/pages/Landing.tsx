@@ -15,31 +15,109 @@ const HERO_STATS = [
   { value: 16, label: 'Informes', suffix: '', tooltip: '16 informes ejecutivos basados en datos abiertos' },
 ];
 
-// ─── Mini gráficos por reporte: spark (evolución) o bar (ranking) ───
-type MiniChartSpec =
-  | { type: 'spark'; data: number[] }
-  | { type: 'bar'; data: number[] };
+// ─── Stats reales por informe — sourced de los markdowns / JSONs en /public ───
+type StatItem = { value: string; label: string };
 
-const MINI_CHARTS: Record<string, MiniChartSpec> = {
-  // Población — distribuciones (bar) + fecundidad / salud-previsión (spark)
-  'poblacion-estructura':          { type: 'bar',   data: [8, 14, 20, 24, 22, 17, 11, 5] }, // grupos etarios
-  'poblacion-habitacional-personas':{ type: 'bar',  data: [12, 18, 22, 25, 16, 7] },
-  'poblacion-salud-prevision':     { type: 'spark', data: [78, 80, 82, 81, 83, 84, 84] },
-  'poblacion-habitacional-hogares':{ type: 'bar',   data: [22, 28, 24, 16, 6, 4] },
-  'poblacion-viviendas':           { type: 'bar',   data: [25, 32, 28, 12, 6] },
-  'poblacion-educacion-censal':    { type: 'bar',   data: [98, 95, 88, 65, 32] },
-  'poblacion-economia':            { type: 'bar',   data: [42, 28, 18, 12] },
-  'poblacion-fecundidad':          { type: 'spark', data: [3.2, 2.8, 2.4, 2.0, 1.8, 1.6, 1.4] },
+const REPORT_STATS: Record<string, StatItem[]> = {
+  // Población
+  'poblacion-estructura': [
+    { value: '17,5M', label: 'habitantes' },
+    { value: '+12,2%', label: 'var. 2010-22' },
+    { value: '57,3', label: 'hab/km²' },
+    { value: '38,1%', label: 'del país' },
+  ],
+  'poblacion-habitacional-personas': [
+    { value: '83,9%', label: 'piso calidad' },
+    { value: '41,8%', label: 'techo chapa' },
+    { value: '74,3%', label: 'agua de red' },
+    { value: '55,4%', label: 'con cloacas' },
+  ],
+  'poblacion-salud-prevision': [
+    { value: '62,3%', label: 'obra social' },
+    { value: '35,1%', label: 'sin cobertura' },
+    { value: '18,3%', label: 'percibe jub.' },
+    { value: '3,2M', label: 'sin previsión' },
+  ],
+  'poblacion-habitacional-hogares': [
+    { value: '86,3%', label: 'piso calidad' },
+    { value: '59,4%', label: 'con cloaca' },
+    { value: '33,3%', label: 'cocina garrafa' },
+    { value: '10,7%', label: '1 habitación' },
+  ],
+  'poblacion-viviendas': [
+    { value: '6,7M', label: 'viviendas' },
+    { value: '88,5%', label: 'ocupadas' },
+    { value: '81,3%', label: 'son casas' },
+    { value: '1,2%', label: 'densificadas' },
+  ],
+  'poblacion-educacion-censal': [
+    { value: '5,9M', label: 'asistentes' },
+    { value: '50,4%', label: 'nivel inicial' },
+    { value: '97,5%', label: 'primario' },
+    { value: '55,7%', label: 'sec. 19 años' },
+  ],
+  'poblacion-economia': [
+    { value: '8,1M', label: 'ocupados' },
+    { value: '9,2%', label: 'desocupación' },
+    { value: '64,5%', label: 'tasa activ.' },
+    { value: '35,5%', label: 'inactivos' },
+  ],
+  'poblacion-fecundidad': [
+    { value: '1,4', label: 'hijos/mujer' },
+    { value: '43,8%', label: 'sin hijos' },
+    { value: '0,9', label: 'mín. V. López' },
+    { value: '1,7', label: 'máx. Varela' },
+  ],
   // Sectoriales
-  'educacion':                     { type: 'spark', data: [85, 87, 89, 88, 90, 92, 93] },
-  'salud':                         { type: 'spark', data: [240, 235, 232, 230, 228, 232, 235] },
-  'seguridad':                     { type: 'bar',   data: [45, 38, 28, 18, 12, 8] },
-  'economia-fiscal':               { type: 'spark', data: [8.2, 8.8, 9.5, 10.1, 10.8, 11.3, 11.8] },
-  'agricultura':                   { type: 'bar',   data: [38, 28, 18, 10, 6] },
-  'industria':                     { type: 'spark', data: [28, 30, 32, 34, 36, 38] },
+  'educacion': [
+    { value: '5,0M', label: 'matrícula' },
+    { value: '21.668', label: 'establecim.' },
+    { value: '55,2%', label: 'bajo básico' },
+    { value: '16,9%', label: 'satisfactorio' },
+  ],
+  'salud': [
+    { value: '147K', label: 'nacidos 2024' },
+    { value: '−50%', label: 'natalidad' },
+    { value: '8,4‰', label: 'TMI 2024' },
+    { value: '39,4', label: 'RMM /100K' },
+  ],
+  'seguridad': [
+    { value: '678K', label: 'hechos' },
+    { value: '157K', label: 'víctimas' },
+    { value: '663', label: 'robos /100K' },
+    { value: '790', label: 'homicidios' },
+  ],
+  'economia-fiscal': [
+    { value: '13,0B', label: 'recaudación' },
+    { value: '4,3B', label: 'transferencias' },
+    { value: '76,2%', label: 'Ing. Brutos' },
+    { value: '66,6M', label: 'tn producción' },
+  ],
+  'agricultura': [
+    { value: '20,9M', label: 'ha sembradas' },
+    { value: '66,6M', label: 'toneladas' },
+    { value: '20,3M', label: 'cab. ganado' },
+    { value: '211K', label: 'tn merluza' },
+  ],
+  'industria': [
+    { value: '251K', label: 'empresas' },
+    { value: '177K', label: 'PyMEs' },
+    { value: '238', label: 'parques ind.' },
+    { value: '−26K', label: 'PyMEs 12-21' },
+  ],
   // Conurbano
-  'conurbano-educacion':           { type: 'bar',   data: [12, 18, 22, 24, 20, 16, 12, 8] },
-  'conurbano-seguridad':           { type: 'spark', data: [55, 62, 70, 68, 60, 52, 48, 45] },
+  'conurbano-educacion': [
+    { value: '11,9M', label: 'pob. GBA' },
+    { value: '96,6%', label: 'asist. 5-17' },
+    { value: '40,6%', label: 'asist. 18-24' },
+    { value: '13,7%', label: 'superior c.' },
+  ],
+  'conurbano-seguridad': [
+    { value: '24', label: 'partidos GBA' },
+    { value: '10,8M', label: 'habitantes' },
+    { value: '9.189', label: 'hab/km² Lanús' },
+    { value: '32', label: 'tipos delito' },
+  ],
 };
 
 export function Landing() {
@@ -204,8 +282,8 @@ function ReportCard({ report, index, variant = 'default' }: {
   index: number;
   variant?: 'default' | 'featured';
 }) {
-  const chartSpec = MINI_CHARTS[report.id];
-  const chartSize: 'sm' | 'md' | 'lg' =
+  const stats = REPORT_STATS[report.id];
+  const tickerSize: 'sm' | 'md' | 'lg' =
     variant === 'featured' ? 'lg' :
     index === 0 ? 'md' :
     'sm';
@@ -228,85 +306,35 @@ function ReportCard({ report, index, variant = 'default' }: {
         <span className="report-card-title">{report.shortTitle}</span>
         <span className="report-card-desc">{report.title}</span>
       </div>
-      {chartSpec && (
+      {stats && stats.length > 0 && (
         <div className="report-card-stat">
-          <MiniChart spec={chartSpec} size={chartSize} />
+          <StatTicker items={stats} size={tickerSize} />
         </div>
       )}
     </Link>
   );
 }
 
-// ─── Mini chart components (editorial sparkline + bars) ───
-function MiniChart({ spec, size = 'sm' }: { spec: MiniChartSpec; size?: 'sm' | 'md' | 'lg' }) {
-  const dims = size === 'lg' ? { w: 140, h: 32 } : size === 'md' ? { w: 110, h: 28 } : { w: 80, h: 24 };
-  if (spec.type === 'spark') return <Sparkline data={spec.data} width={dims.w} height={dims.h} />;
-  return <MiniBars data={spec.data} width={dims.w} height={dims.h} />;
-}
+// ─── Stat ticker: rota cifras reales derecha→izquierda con pausa para leer ───
+function StatTicker({ items, size = 'sm' }: { items: StatItem[]; size?: 'sm' | 'md' | 'lg' }) {
+  const [idx, setIdx] = useState(0);
+  useEffect(() => {
+    if (items.length <= 1) return;
+    const reduce = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+    if (reduce) return;
+    const t = setInterval(() => setIdx(i => (i + 1) % items.length), 4000);
+    return () => clearInterval(t);
+  }, [items.length]);
 
-function Sparkline({ data, width = 80, height = 24 }: { data: number[]; width?: number; height?: number }) {
-  if (data.length < 2) return null;
-  const max = Math.max(...data);
-  const min = Math.min(...data);
-  const range = max - min || 1;
-  const step = width / (data.length - 1);
-  const padding = 3;
-  const points = data
-    .map((v, i) => `${i * step},${height - ((v - min) / range) * (height - padding * 2) - padding}`)
-    .join(' ');
-  const lastX = (data.length - 1) * step;
-  const lastY = height - ((data[data.length - 1] - min) / range) * (height - padding * 2) - padding;
+  if (items.length === 0) return null;
+  const cur = items[idx];
   return (
-    <svg
-      className="report-card-mini-chart"
-      width={width}
-      height={height}
-      viewBox={`0 0 ${width} ${height}`}
-      preserveAspectRatio="none"
-      aria-hidden="true"
-    >
-      <polyline
-        points={points}
-        fill="none"
-        stroke="var(--accent-cyan)"
-        strokeWidth="1.5"
-        strokeLinecap="square"
-        strokeLinejoin="miter"
-        vectorEffect="non-scaling-stroke"
-      />
-      <circle cx={lastX} cy={lastY} r="2" fill="var(--accent-orange)" />
-    </svg>
-  );
-}
-
-function MiniBars({ data, width = 80, height = 24 }: { data: number[]; width?: number; height?: number }) {
-  if (data.length === 0) return null;
-  const max = Math.max(...data);
-  const gap = 1.5;
-  const barWidth = (width - gap * (data.length - 1)) / data.length;
-  return (
-    <svg
-      className="report-card-mini-chart"
-      width={width}
-      height={height}
-      viewBox={`0 0 ${width} ${height}`}
-      preserveAspectRatio="none"
-      aria-hidden="true"
-    >
-      {data.map((v, i) => {
-        const barH = (v / max) * (height - 2);
-        return (
-          <rect
-            key={i}
-            x={i * (barWidth + gap)}
-            y={height - barH}
-            width={barWidth}
-            height={barH}
-            fill={i === data.length - 1 ? 'var(--accent-orange)' : 'var(--accent-cyan)'}
-          />
-        );
-      })}
-    </svg>
+    <div className={`report-card-ticker report-card-ticker--${size}`} aria-hidden="true">
+      <span key={idx} className="report-card-ticker-item">
+        <strong className="report-card-ticker-value">{cur.value}</strong>
+        <span className="report-card-ticker-label">{cur.label}</span>
+      </span>
+    </div>
   );
 }
 
