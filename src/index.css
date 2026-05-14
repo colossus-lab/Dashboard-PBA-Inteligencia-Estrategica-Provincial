@@ -5337,11 +5337,33 @@ em {
     font-size: 1.15rem !important;
   }
   .report-card { padding: 1rem !important; }
-  .landing-hero::before, .landing-hero::after {
+  /* Mobile: captions más cortas para no romper a 3+ líneas */
+  .landing-hero::before {
+    content: 'EDICIÓN 2026 · BUENOS AIRES';
     font-size: 0.6rem;
-    letter-spacing: 0.16em;
+    letter-spacing: 0.14em;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 1rem;
+  }
+  .landing-hero::after {
+    content: 'COLOSSUS LAB · MMXXVI';
+    font-size: 0.58rem;
+    letter-spacing: 0.14em;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    margin-top: 1.25rem;
+    padding-top: 1rem;
+  }
+  /* Hero stats: 2×2 con más respiración */
+  .hero-stats {
+    gap: 0.75rem 1.25rem !important;
+    padding-top: 1.5rem !important;
+    margin-top: 2rem !important;
+  }
+  .hero-stat {
+    padding: 0.25rem 0.75rem !important;
   }
   .report-grid > .report-card:first-child::before {
     font-size: 0.6rem;
