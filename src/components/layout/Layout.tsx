@@ -40,7 +40,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
     : 'max-w-6xl';
 
   return (
-    <div className="min-h-screen" style={{ background: 'var(--bg-primary)' }}>
+    <div className="min-h-screen">
       {/* Skip to content (a11y) */}
       <a href="#main-content" className="skip-to-content">Saltar al contenido</a>
 

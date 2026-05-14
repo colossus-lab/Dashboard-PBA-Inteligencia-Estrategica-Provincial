@@ -255,21 +255,36 @@ body::before {
   right: 0;
   bottom: 0;
   top: auto;
-  height: 200vh;  /* extiende hacia arriba; tras tilt 55° cubre el viewport */
+  height: 200vh;  /* extiende hacia arriba; tras tilt 45° cubre el viewport */
   z-index: 0;
   pointer-events: none;
   background-image:
-    linear-gradient(rgba(116, 172, 223, 0.07) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(116, 172, 223, 0.07) 1px, transparent 1px),
-    linear-gradient(rgba(232, 236, 244, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(232, 236, 244, 0.04) 1px, transparent 1px);
+    linear-gradient(rgba(116, 172, 223, 0.10) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(116, 172, 223, 0.10) 1px, transparent 1px),
+    linear-gradient(rgba(232, 236, 244, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(232, 236, 244, 0.05) 1px, transparent 1px);
   background-size: 240px 240px, 240px 240px, 80px 80px, 80px 80px;
+  background-position: 0 0;
   /* Piso arquitectónico — origen en el borde inferior del viewport */
-  transform: perspective(1500px) rotateX(55deg);
+  transform: perspective(1800px) rotateX(45deg);
   transform-origin: 50% 100%;
-  /* Fade vertical: intenso abajo, se difumina hacia el horizonte */
-  -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.5) 35%, transparent 75%);
-          mask-image: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.5) 35%, transparent 75%);
+  /* Mask multi-capa: visible en márgenes laterales + zona inferior;
+     transparente en la columna central (donde vive el texto) y arriba. */
+  -webkit-mask-image:
+    radial-gradient(ellipse 38% 85% at 50% 50%, transparent 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,1) 100%),
+    linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 40%, transparent 92%);
+  -webkit-mask-composite: source-in;
+          mask-image:
+    radial-gradient(ellipse 38% 85% at 50% 50%, transparent 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,1) 100%),
+    linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 40%, transparent 92%);
+          mask-composite: intersect;
+  /* Drift autónomo lento: panea diagonal en 45s, loop seamless */
+  animation: grid-drift 45s linear infinite;
+}
+
+@keyframes grid-drift {
+  from { background-position: 0 0, 0 0, 0 0, 0 0; }
+  to   { background-position: 240px 240px, 240px 240px, 80px 80px, 80px 80px; }
 }
 
 body::after {
@@ -292,10 +307,10 @@ body::after {
 }
 [data-theme="light"] body::before {
   background-image:
-    linear-gradient(rgba(31, 78, 137, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(31, 78, 137, 0.06) 1px, transparent 1px),
-    linear-gradient(rgba(17, 20, 46, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(17, 20, 46, 0.035) 1px, transparent 1px);
+    linear-gradient(rgba(31, 78, 137, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(31, 78, 137, 0.08) 1px, transparent 1px),
+    linear-gradient(rgba(17, 20, 46, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(17, 20, 46, 0.04) 1px, transparent 1px);
 }
 [data-theme="light"] body::after {
   background: radial-gradient(ellipse 120% 100% at 50% 50%, transparent 55%, rgba(17, 20, 46, 0.14) 100%);
@@ -311,8 +326,11 @@ body::after {
     height: 100vh;
     top: 0;
     bottom: auto;
+    animation: none;
     -webkit-mask-image: radial-gradient(ellipse 90% 75% at 50% 40%, black 0%, rgba(0,0,0,0.6) 50%, transparent 90%);
             mask-image: radial-gradient(ellipse 90% 75% at 50% 40%, black 0%, rgba(0,0,0,0.6) 50%, transparent 90%);
+    -webkit-mask-composite: source-over;
+            mask-composite: add;
   }
 }
 
