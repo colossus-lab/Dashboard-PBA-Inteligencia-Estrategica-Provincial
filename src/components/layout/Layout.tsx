@@ -109,11 +109,8 @@ function TopBar() {
           <Link to="/" className="flex items-center gap-2 no-underline shrink-0" aria-label="Inicio">
             <h1 className="text-lg font-bold" style={{
               fontFamily: 'var(--font-heading)',
-              background: 'linear-gradient(135deg, var(--accent-cyan), var(--accent-purple, #8b5cf6))',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
-              letterSpacing: '0.02em',
+              color: 'var(--text-primary)',
+              letterSpacing: '-0.02em',
             }}>
               Dashboard PBA
             </h1>
