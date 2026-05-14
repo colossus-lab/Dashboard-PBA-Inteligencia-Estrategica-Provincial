@@ -104,7 +104,7 @@ function TopBar() {
             className="p-2 rounded-lg hover:opacity-80 transition-opacity lg:hidden"
             style={{ color: 'var(--text-secondary)' }}
           >
-            <Menu size={20} aria-hidden="true" />
+            <Menu size={20} strokeLinecap="square" aria-hidden="true" />
           </button>
           <Link to="/" className="flex items-center gap-2 no-underline shrink-0" aria-label="Inicio">
             <h1 className="text-lg font-bold" style={{

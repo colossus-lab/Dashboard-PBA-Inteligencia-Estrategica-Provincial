@@ -15,24 +15,31 @@ const HERO_STATS = [
   { value: 16, label: 'Informes', suffix: '', tooltip: '16 informes ejecutivos basados en datos abiertos' },
 ];
 
-// ─── Mini-stats per report (contextual data for cards) ───
-const MINI_STATS: Record<string, string> = {
-  'poblacion-estructura': '17,5M hab',
-  'poblacion-habitacional-personas': '6,2M hogares',
-  'poblacion-salud-prevision': '84% cobertura',
-  'poblacion-habitacional-hogares': '5,6M hogares',
-  'poblacion-viviendas': '6,7M viviendas',
-  'poblacion-educacion-censal': '93% asistencia',
-  'poblacion-economia': '8,1M PEA',
-  'poblacion-fecundidad': '1,4 hijos/mujer',
-  'educacion': '5,1M alumnos',
-  'salud': '235K nacimientos',
-  'seguridad': '135 partidos',
-  'economia-fiscal': '$11,8B PBG',
-  'agricultura': '14,3M hectáreas',
-  'industria': '38% del PBI ind.',
-  'conurbano-educacion': '24 partidos · 8.843 escuelas',
-  'conurbano-seguridad': '24 partidos · 25 años',
+// ─── Mini gráficos por reporte: spark (evolución) o bar (ranking) ───
+type MiniChartSpec =
+  | { type: 'spark'; data: number[] }
+  | { type: 'bar'; data: number[] };
+
+const MINI_CHARTS: Record<string, MiniChartSpec> = {
+  // Población — distribuciones (bar) + fecundidad / salud-previsión (spark)
+  'poblacion-estructura':          { type: 'bar',   data: [8, 14, 20, 24, 22, 17, 11, 5] }, // grupos etarios
+  'poblacion-habitacional-personas':{ type: 'bar',  data: [12, 18, 22, 25, 16, 7] },
+  'poblacion-salud-prevision':     { type: 'spark', data: [78, 80, 82, 81, 83, 84, 84] },
+  'poblacion-habitacional-hogares':{ type: 'bar',   data: [22, 28, 24, 16, 6, 4] },
+  'poblacion-viviendas':           { type: 'bar',   data: [25, 32, 28, 12, 6] },
+  'poblacion-educacion-censal':    { type: 'bar',   data: [98, 95, 88, 65, 32] },
+  'poblacion-economia':            { type: 'bar',   data: [42, 28, 18, 12] },
+  'poblacion-fecundidad':          { type: 'spark', data: [3.2, 2.8, 2.4, 2.0, 1.8, 1.6, 1.4] },
+  // Sectoriales
+  'educacion':                     { type: 'spark', data: [85, 87, 89, 88, 90, 92, 93] },
+  'salud':                         { type: 'spark', data: [240, 235, 232, 230, 228, 232, 235] },
+  'seguridad':                     { type: 'bar',   data: [45, 38, 28, 18, 12, 8] },
+  'economia-fiscal':               { type: 'spark', data: [8.2, 8.8, 9.5, 10.1, 10.8, 11.3, 11.8] },
+  'agricultura':                   { type: 'bar',   data: [38, 28, 18, 10, 6] },
+  'industria':                     { type: 'spark', data: [28, 30, 32, 34, 36, 38] },
+  // Conurbano
+  'conurbano-educacion':           { type: 'bar',   data: [12, 18, 22, 24, 20, 16, 12, 8] },
+  'conurbano-seguridad':           { type: 'spark', data: [55, 62, 70, 68, 60, 52, 48, 45] },
 };
 
 export function Landing() {
@@ -128,7 +135,9 @@ export function Landing() {
             <div className="section-number">01</div>
             <div>
               <h2 className="section-title">Población — Censo 2022</h2>
-              <p className="section-desc">Análisis demográfico integral de la Provincia de Buenos Aires con datos del censo nacional.</p>
+              <p className="section-desc">
+                Ocho dimensiones del último censo nacional: estructura por sexo y edad, hábitat, hogares, stock de viviendas, asistencia educativa, características económicas, salud y previsión, y fecundidad.
+              </p>
             </div>
           </div>
           <div className="report-grid">
@@ -195,7 +204,11 @@ function ReportCard({ report, index, variant = 'default' }: {
   index: number;
   variant?: 'default' | 'featured';
 }) {
-  const miniStat = MINI_STATS[report.id] || '';
+  const chartSpec = MINI_CHARTS[report.id];
+  const chartSize: 'sm' | 'md' | 'lg' =
+    variant === 'featured' ? 'lg' :
+    index === 0 ? 'md' :
+    'sm';
 
   return (
     <Link
@@ -215,12 +228,85 @@ function ReportCard({ report, index, variant = 'default' }: {
         <span className="report-card-title">{report.shortTitle}</span>
         <span className="report-card-desc">{report.title}</span>
       </div>
-      {miniStat && (
+      {chartSpec && (
         <div className="report-card-stat">
-          <span className="report-card-stat-value">{miniStat}</span>
+          <MiniChart spec={chartSpec} size={chartSize} />
         </div>
       )}
     </Link>
+  );
+}
+
+// ─── Mini chart components (editorial sparkline + bars) ───
+function MiniChart({ spec, size = 'sm' }: { spec: MiniChartSpec; size?: 'sm' | 'md' | 'lg' }) {
+  const dims = size === 'lg' ? { w: 140, h: 32 } : size === 'md' ? { w: 110, h: 28 } : { w: 80, h: 24 };
+  if (spec.type === 'spark') return <Sparkline data={spec.data} width={dims.w} height={dims.h} />;
+  return <MiniBars data={spec.data} width={dims.w} height={dims.h} />;
+}
+
+function Sparkline({ data, width = 80, height = 24 }: { data: number[]; width?: number; height?: number }) {
+  if (data.length < 2) return null;
+  const max = Math.max(...data);
+  const min = Math.min(...data);
+  const range = max - min || 1;
+  const step = width / (data.length - 1);
+  const padding = 3;
+  const points = data
+    .map((v, i) => `${i * step},${height - ((v - min) / range) * (height - padding * 2) - padding}`)
+    .join(' ');
+  const lastX = (data.length - 1) * step;
+  const lastY = height - ((data[data.length - 1] - min) / range) * (height - padding * 2) - padding;
+  return (
+    <svg
+      className="report-card-mini-chart"
+      width={width}
+      height={height}
+      viewBox={`0 0 ${width} ${height}`}
+      preserveAspectRatio="none"
+      aria-hidden="true"
+    >
+      <polyline
+        points={points}
+        fill="none"
+        stroke="var(--accent-cyan)"
+        strokeWidth="1.5"
+        strokeLinecap="square"
+        strokeLinejoin="miter"
+        vectorEffect="non-scaling-stroke"
+      />
+      <circle cx={lastX} cy={lastY} r="2" fill="var(--accent-orange)" />
+    </svg>
+  );
+}
+
+function MiniBars({ data, width = 80, height = 24 }: { data: number[]; width?: number; height?: number }) {
+  if (data.length === 0) return null;
+  const max = Math.max(...data);
+  const gap = 1.5;
+  const barWidth = (width - gap * (data.length - 1)) / data.length;
+  return (
+    <svg
+      className="report-card-mini-chart"
+      width={width}
+      height={height}
+      viewBox={`0 0 ${width} ${height}`}
+      preserveAspectRatio="none"
+      aria-hidden="true"
+    >
+      {data.map((v, i) => {
+        const barH = (v / max) * (height - 2);
+        return (
+          <rect
+            key={i}
+            x={i * (barWidth + gap)}
+            y={height - barH}
+            width={barWidth}
+            height={barH}
+            fill={i === data.length - 1 ? 'var(--accent-orange)' : 'var(--accent-cyan)'}
+          />
+        );
+      })}
+    </svg>
   );
 }
 

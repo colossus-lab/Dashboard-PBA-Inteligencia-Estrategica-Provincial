@@ -26,7 +26,7 @@ export function ThemeToggle() {
         }}
         aria-hidden="true"
       >
-        {isDark ? <Moon size={13} /> : <Sun size={13} />}
+        {isDark ? <Moon size={13} strokeLinecap="square" /> : <Sun size={13} strokeLinecap="square" />}
       </span>
     </button>
   );
