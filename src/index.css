@@ -316,16 +316,17 @@ body::after {
   background: radial-gradient(ellipse 120% 100% at 50% 50%, transparent 55%, rgba(17, 20, 46, 0.14) 100%);
 }
 
-/* Mobile: el background-attachment fixed de body causa lag, lo degradamos
-   a scroll. El grid en perspectiva se conserva con tilt más sutil (35°)
-   y la animación de drift se desactiva para preservar batería. */
+/* Mobile: el grid en perspectiva se conserva con tilt más sutil (35°)
+   y la animación de drift se desactiva para preservar batería. Los
+   radial gradients del body y el vignette mantienen position: fixed
+   (igual que desktop) — en hardware moderno no genera jank y sin esto
+   los gradientes se anclan al body de 6000px y desaparecen del viewport. */
 @media (max-width: 720px) {
-  body { background-attachment: scroll; }
-  body::after { position: absolute; }
-  /* body::before sigue position: fixed para que el "piso" quede anclado
-     al viewport y mantenga el efecto de perspectiva mientras scrolle. */
   body::before {
-    transform: perspective(1200px) rotateX(35deg);
+    /* Celdas a la mitad → grid se lee como "denso y lejano" en viewport angosto */
+    background-size: 120px 120px, 120px 120px, 40px 40px, 40px 40px;
+    /* Perspectiva más corta + tilt mayor → punto de fuga más marcado, sensación de horizonte */
+    transform: perspective(1000px) rotateX(42deg);
     animation: none;
     /* Mask simplificado: sólo horizon fade (sin radial central — en
        un viewport angosto el central mask oculta demasiado). */
