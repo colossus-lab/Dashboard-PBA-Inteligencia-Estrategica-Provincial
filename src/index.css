@@ -5116,21 +5116,166 @@ em {
   border-top: 1px solid var(--border-glass);
 }
 
-/* ─── Conurbano highlight: alinear con la densidad editorial ─── */
-.conurbano-highlight-header {
-  border-top: 2px solid var(--text-primary);
-  padding-top: 1.5rem;
-  margin-bottom: 1.75rem;
-}
-.conurbano-highlight-badge {
-  font-family: var(--font-mono) !important;
-  font-size: 0.7rem !important;
-  letter-spacing: 0.2em !important;
-  color: var(--accent-orange) !important;
+/* ─── Conurbano highlight: titular de diario editorial ─── */
+.conurbano-highlight {
+  margin: 3rem 0 4rem !important;
+  padding: 0 !important;
   background: transparent !important;
-  border: 1px solid var(--accent-orange) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: none !important;
   border-radius: 0 !important;
-  padding: 3px 10px !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+}
+.conurbano-highlight::before {
+  display: none !important;
+}
+
+.conurbano-highlight-header {
+  border-top: 2px solid var(--text-primary) !important;
+  padding-top: 1.5rem !important;
+  margin-bottom: 1.75rem !important;
+  max-width: 100% !important;
+  position: relative;
+}
+/* Marca de sección sobre el título: "Nº 00 · ANÁLISIS ESPECIAL" */
+.conurbano-highlight-header::before {
+  content: 'Nº 00 · ANÁLISIS ESPECIAL · CONURBANO BONAERENSE';
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  color: var(--accent-orange);
+  margin-bottom: 1rem;
+}
+
+.conurbano-highlight-badge {
+  display: none !important;  /* reemplazado por la marca via ::before */
+}
+
+.conurbano-highlight-title {
+  font-family: var(--font-heading) !important;
+  font-size: clamp(2.5rem, 5vw, 3.75rem) !important;
+  font-weight: 700 !important;
+  line-height: 0.98 !important;
+  letter-spacing: -0.04em !important;
+  margin: 0 0 0.85rem !important;
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  background-clip: initial !important;
+  -webkit-text-fill-color: var(--text-primary) !important;
+  color: var(--text-primary) !important;
+  text-wrap: balance;
+}
+
+.conurbano-highlight-desc {
+  font-family: var(--font-heading) !important;
+  font-size: 1.1rem !important;
+  font-style: italic !important;
+  line-height: 1.5 !important;
+  color: var(--text-secondary) !important;
+  max-width: 70ch !important;
+  margin: 0 0 0.5rem !important;
+}
+
+.conurbano-highlight-grid {
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 0 !important;
+  border-top: 1px solid var(--border-glass);
+}
+.conurbano-highlight-grid > .report-card-featured + .report-card-featured {
+  border-left: 1px solid var(--border-glass) !important;
+}
+
+/* ─── Report card · featured (Conurbano) → bloque editorial pleno ─── */
+.report-card-featured {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 2rem 1.75rem !important;
+  min-height: 0 !important;
+  position: relative;
+}
+.report-card-featured::before {
+  content: 'INFORME ESPECIAL · CONURBANO';
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  color: var(--accent-orange);
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid var(--border-glass);
+}
+.report-card-featured:hover {
+  background: var(--bg-secondary) !important;
+  border: none !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+.report-card-featured .report-card-number {
+  font-family: var(--font-mono) !important;
+  font-size: 0.8rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.18em !important;
+  color: var(--accent-orange) !important;
+  opacity: 1 !important;
+}
+.report-card-featured .report-card-title {
+  font-family: var(--font-heading) !important;
+  font-size: 1.5rem !important;
+  font-weight: 700 !important;
+  line-height: 1.15 !important;
+  letter-spacing: -0.025em !important;
+  margin-bottom: 0.4rem !important;
+}
+.report-card-featured .report-card-desc {
+  -webkit-line-clamp: 5 !important;
+  font-size: 0.9rem !important;
+  line-height: 1.55 !important;
+  color: var(--text-secondary) !important;
+}
+.report-card-featured .report-card-arrow {
+  font-size: 1.3rem;
+}
+.report-card-featured .report-card-stat {
+  border-top: 1px solid var(--border-subtle);
+  margin-top: 1rem !important;
+  padding-top: 0.75rem !important;
+}
+
+/* Responsive: stack en mobile */
+@media (max-width: 900px) {
+  .conurbano-highlight-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .conurbano-highlight-grid > .report-card-featured + .report-card-featured {
+    border-left: none !important;
+    border-top: 1px solid var(--border-glass) !important;
+  }
+}
+@media (max-width: 640px) {
+  .conurbano-highlight-title {
+    font-size: 2rem !important;
+  }
+  .conurbano-highlight-desc {
+    font-size: 0.98rem !important;
+  }
+  .conurbano-highlight-header::before {
+    font-size: 0.62rem;
+    letter-spacing: 0.16em;
+  }
+  .report-card-featured {
+    padding: 1.5rem 1.25rem !important;
+  }
+  .report-card-featured .report-card-title {
+    font-size: 1.2rem !important;
+  }
 }
 
 /* ─── Explorer banner: densidad editorial ─── */
